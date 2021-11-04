@@ -27,3 +27,5 @@ In panel, ~cw~ (Commit -> Reword)
 3. press ~C-c C-c~ to apply the changes.
 * Branch
 ** create a new branch from the changes of the current branch.
+Use ~bs~ (Branch -> Spin off).
+NOTE: this only works when the branch you're starting from has been pushed to the remote!
