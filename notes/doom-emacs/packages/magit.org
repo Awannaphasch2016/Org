@@ -1,1 +1,16 @@
 #+TITLE: Magit
+ref:
+[[https://youtu.be/qPfJoeQCIvA?list=PLEoMzSkcN8oMc34dTjyFmTUWbXTKrNfZA][9 Tehcniques to Boost Your Git Workflow with Magit]]
+
+
+
+* Clone
+To clone from github, one can use ~user/reponame~.
+To clone from gitlab, one can use ~gitlab:user/reponame~ or ~gl:user/reponame~.
+* Commit
+** view commit from current branch
+View commit from current branch
+In panel, ~ll~ displays commits log in burrent branch.
+** view commit from a specific branch
+In panel, ~lo~ allows one to select other branches to display commits log.
+**

@@ -1,6 +1,13 @@
 #+title: building website with org mode
 
+To rebuild the website run, the following
+#+BEGIN_SRC sh :dir ~/org/code/implementation/build-website/org-mode/
+chmod +x build.sh
+./build.sh
+#+END_SRC
+
 launch website locally using ~httpd-serve-directory~ command
+
 
 * Dependences Packages
 :PROPERTIES:
@@ -76,7 +83,7 @@ emacs -Q --script build-site.el
              :publishing-function 'org-html-publish-to-html
              :with-author t ;; Don't include author name
              :with-creator t  ;; Include Emacs and Org version in footer
-             :with-toc t  ;; Include a table of contents
+             :with-toc nil  ;; Include a table of contents
              :section-numbers nil  ;; Don't include section numbers
              :time-stamp-file t ;; Don't include time stamp in file
              )))
@@ -88,28 +95,12 @@ emacs -Q --script build-site.el
 * Main
 #+BEGIN_SRC emacs-lisp :noweb  tangle :tangle ~/org/code/implementation/build-website/org-mode/build-site.el :comments link
 <<require>>
-;; <<packages>>
-;; <<customization>>
+<<packages>>
+<<customization>>
 <<setup-project>>
 <<message>>
 #+END_SRC
 
-#+BEGIN_SRC sh :dir ~/org/code/implementation/build-website/org-mode/
-chmod +x build.sh
-#+END_SRC
 
 #+RESULTS:
 
-#+BEGIN_SRC sh :dir ~/org/code/implementation/build-website/org-mode/
-./build.sh
-#+END_SRC
-
-#+RESULTS:
-
-#+BEGIN_SRC sh
-
-#+END_SRC
-
-#+RESULTS:
-| README.org   |
-| org-mode.org |

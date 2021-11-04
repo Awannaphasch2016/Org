@@ -36,11 +36,12 @@ alternative:
 :PROPERTIES:
 :ID:       6ffa9220-2744-448a-ab30-5781ad44130e
 :END:
+
 ref: https://emacs.stackexchange.com/questions/12889/syncing-changes-on-a-tangled-file-back-to-the-original-org-file
 ref: https://emacs.stackexchange.com/questions/12889/syncing-changes-on-a-tangled-file-back-to-the-original-org-file
 
 tools
-1. [[id:477a742f-e420-4111-8107-3c7947ad8331][lentic server]]
+1. lentic server
 2. [[https://github.com/mtekman/org-tanglesync.el][org-tanglesync]]
 **** copy link out of org mode
 ref: https://emacs.stackexchange.com/questions/3981/how-to-copy-links-out-of-org-mode
@@ -230,7 +231,7 @@ To end the clock and output the estimated time for the task, clock-out can be us
 requirement:
     literate programming using org-babel to tangle codes in non linear ways. This idea can be expanded to utilize leo ideo ideas of "outline nodes organization" (finer than file-based organization). To do this each org-babel block must be able to references "inside" other blocks (not only as input to other block) by tagging nodes of the block. t
 
-Demo of this feature is demonstrated by using org-babel with org block and org-roam  [[id:163bf20c-803e-46d6-ad33-c5dd15e1877a][literater devops + nodes-outlines organization (from leo IDE).]]
+Demo of this feature is demonstrated by using org-babel with org block and org-roam  literater devops + nodes-outlines organization (from leo IDE).
 **** allow "making literate note from source code"
 
 *** movement

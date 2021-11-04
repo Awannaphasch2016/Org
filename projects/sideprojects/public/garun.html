@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-11-04 Thu 10:17 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>garun projects</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="DESKTOP-5MMF71L" />
+<link rel="styleheet" href="https://cdn.simplecss.org/simple.min.css" />
+</head>
+<body>
+<div id="content">
+<h1 class="title">garun projects</h1>
+
+<div id="outline-container-org1bb9e42" class="outline-2">
+<h2 id="org1bb9e42">Garun</h2>
+<div class="outline-text-2" id="text-org1bb9e42">
+</div>
+<div id="outline-container-orgda721fd" class="outline-3">
+<h3 id="orgda721fd">programming implementation design choise</h3>
+<div class="outline-text-3" id="text-orgda721fd">
+</div>
+<div id="outline-container-org0071def" class="outline-4">
+<h4 id="org0071def">what language to use?</h4>
+</div>
+<div id="outline-container-orgc8ab20b" class="outline-4">
+<h4 id="orgc8ab20b">which types of markdown style can I use? (org mode can't be used because gpl v3 license)</h4>
+<div class="outline-text-4" id="text-orgc8ab20b">
+<p>
+alternative:
+</p>
+<ol class="org-ol">
+<li><a href="https://github.com/200ok-ch/organice">organice</a></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org80dac2d" class="outline-3">
+<h3 id="org80dac2d">features underimplementation + known error</h3>
+<div class="outline-text-3" id="text-org80dac2d">
+</div>
+<div id="outline-container-org696447a" class="outline-4">
+<h4 id="org696447a">uncaterogized</h4>
+</div>
+<div id="outline-container-org3fc72d6" class="outline-4">
+<h4 id="org3fc72d6">pdf related workflow</h4>
+<div class="outline-text-4" id="text-org3fc72d6">
+</div>
+<ul class="org-ul">
+<li><a id="org9311d3d"></a>PROJECT when open pdf file PDFView is not a default (DocView is still in used). This is a unexpected behavior because when install pdf-tools PDFView should be automatically set as default<br /></li>
+</ul>
+</div>
+<div id="outline-container-orgdd96391" class="outline-4">
+<h4 id="orgdd96391">org mode</h4>
+<div class="outline-text-4" id="text-orgdd96391">
+</div>
+<ul class="org-ul">
+<li><a id="org356f525"></a>checkbox doesn't work for some reason, so all checkbox related commands cannot be tested.<br /></li>
+<li><a id="orgec25368"></a>figure out how to perform multi-select in dropdown (output by vertico, ivy, etc.)<br /></li>
+<li><a id="org90f8b17"></a>assign schedule and deadline to header doesn't show in agenda?<br /></li>
+<li><a id="orgf57621e"></a>figure out a way to manage archive contents<br />
+<div class="outline-text-5" id="text-orgf57621e">
+<ul class="org-ul">
+<li>requirements
+<ul class="org-ul">
+<li>how to make them searchable
+<ul class="org-ul">
+<li>ref:
+<ul class="org-ul">
+<li><a href="https://www.reddit.com/r/orgmode/comments/9kunnv/archiving_practices/">https://www.reddit.com/r/orgmode/comments/9kunnv/archiving_practices/</a></li>
+<li><a href="https://fuco1.github.io/2017-04-20-Archive-subtrees-under-the-same-hierarchy-as-original-in-the-archive-files.html">https://fuco1.github.io/2017-04-20-Archive-subtrees-under-the-same-hierarchy-as-original-in-the-archive-files.html</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>FAQs
+<ul class="org-ul">
+<li>best practices for archiving content?</li>
+</ul></li>
+</ul>
+</div>
+</li>
+
+<li><a id="orgf255fbb"></a>create org-capture such that new added content will be appended to the end of the file.<br /></li>
+<li><a id="orge15bff5"></a>implement tagging system in org roam<br />
+<ul class="org-ul">
+<li><a id="org0c1df22"></a>note<br />
+<ul class="org-ul">
+<li><a id="org4799f10"></a>follow roam research's tagging system which use page,block,filter by page,backlink, reference link.<br />
+<ul class="org-ul">
+<li><a id="org3fec885"></a>tags and categories features from org-mode can be derived by roam research tagging system<br /></li>
+</ul>
+</li>
+<li><a id="org577839e"></a>one thing that roam research tagging doesn't provide is when I set page as directory for example dir1/dir2/dir3. To improve roam research to include this features few things have to be considered<br />
+<ul class="org-ul">
+<li><a id="org9b02374"></a>pages should be able to filter by directory.<br /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="orgcc4c1bd"></a>syncing change on a tangled file back to original org file<br />
+<div class="outline-text-5" id="text-orgcc4c1bd">
+<p>
+ref: <a href="https://emacs.stackexchange.com/questions/12889/syncing-changes-on-a-tangled-file-back-to-the-original-org-file">https://emacs.stackexchange.com/questions/12889/syncing-changes-on-a-tangled-file-back-to-the-original-org-file</a>
+ref: <a href="https://emacs.stackexchange.com/questions/12889/syncing-changes-on-a-tangled-file-back-to-the-original-org-file">https://emacs.stackexchange.com/questions/12889/syncing-changes-on-a-tangled-file-back-to-the-original-org-file</a>
+</p>
+
+<p>
+tools
+</p>
+<ol class="org-ol">
+<li>lentic server</li>
+<li><a href="https://github.com/mtekman/org-tanglesync.el">org-tanglesync</a></li>
+</ol>
+</div>
+</li>
+<li><a id="orgab2c3eb"></a>copy link out of org mode<br />
+<div class="outline-text-5" id="text-orgab2c3eb">
+<p>
+ref: <a href="https://emacs.stackexchange.com/questions/3981/how-to-copy-links-out-of-org-mode">https://emacs.stackexchange.com/questions/3981/how-to-copy-links-out-of-org-mode</a>
+</p>
+</div>
+</li>
+<li><a id="orgf8b2f4e"></a>integrate organice to push org files to clouds where I can be access via phone and enable syncing between device.<br /></li>
+
+<li><a id="orgd6dd646"></a>presentation<br />
+<ul class="org-ul">
+<li><a id="org7bdbe36"></a>try using <code>demo-it</code> plugins for code along styles presentation<br /></li>
+</ul>
+</li>
+<li><a id="org12684d4"></a>PROJECT implement a command such that when inside a subtree, I can close the parent subtree in which the cursor is wihtin.<br /></li>
+<li><a id="org3c3aa24"></a>org roam<br />
+<ul class="org-ul">
+<li><a id="org3c2444f"></a>when inside of a page, I should be able to select existing heading of the selected pages to insert as a link.<br />
+<div class="outline-text-6" id="text-org3c2444f">
+<p>
+The user experience here is more seamless than having to navigate to the page -&gt; find the heading -&gt; copy link from the heading and come back to insert.
+</p>
+
+<p>
+This faetures is waiting on implementation on <a href="#org37884ed">PROJECT multi-layer text search filter. (design UI experience for piping sequence of regex output)</a>
+</p>
+</div>
+</li>
+<li><a id="org88e1cc6"></a>for any heading that have a link attach to it, id should be automatically generated so that that this block now will be treated as a "node" which have a set of faetures available to it.<br />
+<div class="outline-text-6" id="text-org88e1cc6">
+<p>
+example of feature that can be useful are "synchonized name change" (name of the reference node change when the original node name is change.)
+</p>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgb53fb14"></a>PROJECT implement tagging system. currently, I used other people default setup and it doesn't fit my needs.<br /></li>
+<li><a id="org9db32ea"></a>typing ']]' will close code block that doesn't yet been close. This is behavior is similar to latex in vim that I have set up. (This enhances flexibility of use case)<br /></li>
+<li><a id="orgee11328"></a>PROJECT literate programming in emacs<br />
+<div class="outline-text-5" id="text-orgee11328">
+<p>
+ref:
+</p>
+<ul class="org-ul">
+<li><a href="https://jamiecollinson.com/blog/my-emacs-config/">https://jamiecollinson.com/blog/my-emacs-config/</a></li>
+<li><a href="https://github.com/angrybacon/dotemacs/blob/master/dotemacs.org">https://github.com/angrybacon/dotemacs/blob/master/dotemacs.org</a></li>
+</ul>
+
+<p>
+note:
+this can be used when writing report for data science project as well <a href="https://www.youtube.com/watch?v=dljNabciEGg&amp;ab_channel=HowardAbrams">literate devops</a>.
+</p>
+</div>
+<ul class="org-ul">
+<li><a id="orge0dfa00"></a>allow header property <code>:dir:</code> to be set as a starting point of directory in which code will be operate on.<br /></li>
+</ul>
+</li>
+<li><a id="org76a0f23"></a>PROJECT allow cmd command (defined in .zshrc) to be used in org-babel code block<br />
+<ul class="org-ul">
+<li><a id="org52b2944"></a>error<br />
+<div class="outline-text-6" id="text-org52b2944">
+<p>
+I am not sure what is going on but when I run the block with bash/zsh/sh <code>cmd</code> command is not found
+</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-org952bca9" class="outline-4">
+<h4 id="org952bca9">user experience</h4>
+<div class="outline-text-4" id="text-org952bca9">
+<p>
+ref:
+</p>
+<ul class="org-ul">
+<li><a href="https://hungyi.net/posts/doom-emacs-search-replace-project/#fn.1">https://hungyi.net/posts/doom-emacs-search-replace-project/#fn.1</a></li>
+</ul>
+</div>
+<ul class="org-ul">
+<li><a id="orgc7d865e"></a>enlarge window to occupy the whole space and reset window to default (which occupied space equally)<br />
+<div class="outline-text-5" id="text-orgc7d865e">
+<p>
+I accidentally deleted enlarg-window-maximize, so I have to reimplement it
+</p>
+<div class="org-src-container">
+<pre class="src src-elisp">(global-set-key (kbd "C-x !") 'enlarge-window-maximize)
+</pre>
+</div>
+</div>
+</li>
+
+<li><a id="orgaed67a2"></a>increase/decrease text size such that all other buffer text size will be adjusted at the same time. (not limited to opened buffer; all future buffer should also obey condition)<br />
+<div class="outline-text-5" id="text-orgaed67a2">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(defadvice text-scale-increase (around all-buffers (arg) activate)
+  (dolist (buffer (buffer-list))
+    (with-current-buffer buffer
+      ad-do-it)))
+</pre>
+</div>
+</div>
+</li>
+<li><a id="org51abc60"></a>capture Gif/video of screen using emacs command line, and automatically upload to cloud.<br /></li>
+<li><a id="org6b1c6ef"></a>GTD<br />
+<ul class="org-ul">
+<li><a id="orgd93bdf1"></a>PROJECT seamlessly managing actions-wise tasks<br />
+<ul class="org-ul">
+<li><a id="org05e4695"></a>add new actions to child/nighbour bullet point of the current subtree of actions (the structure is similar to one I use in vim TODOMANAGER)<br /></li>
+<li><a id="org3706268"></a>display all trees (similar to nerd tree strcuture) of actions, so one can switch to different subtree in the "actions tree" or switching to different "action tree."<br /></li>
+<li><a id="org08e1c64"></a>easily move reselect new actions from existing of subtrees<br /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org230d1ff"></a>I want string in the notes to be data in which one can highlight section to select the data then programming-langauge/filtering/functions/command can be applied to manipulate the dataset.<br />
+<div class="outline-text-5" id="text-org230d1ff">
+<p>
+I can see this become really use ful when combine with <a href="#org37884ed">PROJECT multi-layer text search filter. (design UI experience for piping sequence of regex output)</a>
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org95c03bd" class="outline-4">
+<h4 id="org95c03bd">search and filter experience</h4>
+<div class="outline-text-4" id="text-org95c03bd">
+</div>
+<ul class="org-ul">
+<li><a id="org37884ed"></a>PROJECT multi-layer text search filter. (design UI experience for piping sequence of regex output)<br /></li>
+</ul>
+</div>
+<div id="outline-container-org1b1a7c8" class="outline-4">
+<h4 id="org1b1a7c8">data science features</h4>
+<div class="outline-text-4" id="text-org1b1a7c8">
+</div>
+<ul class="org-ul">
+<li><a id="orgf5c2230"></a>passing scripts from your favorite language, and have them all available in emacs as commands.<br />
+<div class="outline-text-5" id="text-orgf5c2230">
+<p>
+ref: <a href="http://ergoemacs.org/emacs/elisp_perl_wrapper.html">http://ergoemacs.org/emacs/elisp_perl_wrapper.html</a>
+</p>
+</div>
+</li>
+<li><a id="orgb9345c6"></a>allow org-babel code block to stop before finish running. (This is because sometime I want to run something at the begining of the code for debug. Without this funcationality I cannot document the code as efficiently.)<br />
+<div class="outline-text-5" id="text-orgb9345c6">
+<p>
+There are 2 ways to do this.
+</p>
+<ol class="org-ol">
+<li>set time limit which code block will automatically execute</li>
+<li>send command to cancle the run. (kill process)</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org57ade79" class="outline-4">
+<h4 id="org57ade79">PROJECT interacting with pdf files (seamless pdf interaction experience)</h4>
+<div class="outline-text-4" id="text-org57ade79">
+</div>
+<ul class="org-ul">
+<li><a id="org1be5f75"></a>to use pdf-isearch-occur one first need to use isearch-occur -&gt; type in a text -&gt; run pdf-isearch-occur to find words in pdf. (or i need to run pdf-isearch-minor-mode, but it is slow and keybinding may need to remap to match evil-mode keybinding.)<br /></li>
+<li><a id="orgd15af32"></a>very buggy and unpredicable at times<br /></li>
+</ul>
+</div>
+<div id="outline-container-org1858791" class="outline-4">
+<h4 id="org1858791">colloborative features</h4>
+<div class="outline-text-4" id="text-org1858791">
+</div>
+<ul class="org-ul">
+<li><a id="org81cb863"></a>real time coding<br />
+<ul class="org-ul">
+<li><a id="org49d1817"></a>using Floobits to share code editing in real time (this allow sharing real time independent of text editor or IDE being used.)<br /></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-org88a2acd" class="outline-4">
+<h4 id="org88a2acd">emails</h4>
+<div class="outline-text-4" id="text-org88a2acd">
+</div>
+<ul class="org-ul">
+<li><a id="org11625b6"></a>I have problem setting up mu4e with doom emacs<br />
+<div class="outline-text-5" id="text-org11625b6">
+<p>
+error is shown below
+</p>
+<div class="org-src-container">
+<pre class="src src-markdown">IMAP command 'LOGIN &lt;user&gt; &lt;pass&gt;' returned an error: NO [AUTHENTICATIONFAILED] Invalid credentials (Failure)
+</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org8305bfa" class="outline-4">
+<h4 id="org8305bfa">PROJECT Intelligent-based feautures</h4>
+<div class="outline-text-4" id="text-org8305bfa">
+</div>
+<ul class="org-ul">
+<li><a id="org9e6dc0e"></a>GPT-3 automatially generate tags when highlighted text from Readwise are imported to my knowledge based<br />
+<div class="outline-text-5" id="text-org9e6dc0e">
+<p>
+To do this, I need to fine tune GPT-3 to optimize for searchability and discoveribility within knowledgebased "page protocol.")
+</p>
+</div>
+</li>
+<li><a id="org0cf5dde"></a>During creative session or writing session, Garun should allow GPT-3 to generate questions to trigger our creativity (create either bias or diversification of thought.).<br /></li>
+</ul>
+</div>
+<div id="outline-container-orga4919cd" class="outline-4">
+<h4 id="orga4919cd">Communicating between emacs and outside emacs</h4>
+<div class="outline-text-4" id="text-orga4919cd">
+</div>
+<ul class="org-ul">
+<li><a id="orge54c31c"></a>note<br />
+<div class="outline-text-5" id="text-orge54c31c">
+<p>
+brainstorming on ways to use emacs to communicate with outside world
+url: <a href="https://www.reddit.com/r/emacs/comments/5jhwlu/getting_things_from_outside_emacs_into/">https://www.reddit.com/r/emacs/comments/5jhwlu/getting_things_from_outside_emacs_into/</a>
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org0d5a460" class="outline-4">
+<h4 id="org0d5a460">Leetcode</h4>
+<div class="outline-text-4" id="text-org0d5a460">
+<p>
+ref:
+Buffer leetcode-testcase and leetcode-result not displaying in corresponding window #70
+<a href="https://github.com/kaiwk/leetcode.el/issues/70">https://github.com/kaiwk/leetcode.el/issues/70</a>
+</p>
+</div>
+
+<ul class="org-ul">
+<li><a id="org7c37c60"></a>fix Leetcode.el to always show windows without being replaced by new window. New window should be placed some where else.<br /></li>
+
+<li><a id="org57c8a30"></a>create a leetcommand for refreshing window (in case unexpected ui behavior occurs)<br /></li>
+</ul>
+</div>
+<div id="outline-container-orge680d21" class="outline-4">
+<h4 id="orge680d21">Publish website with org-mode</h4>
+</div>
+<div id="outline-container-orgeb1eaf8" class="outline-4">
+<h4 id="orgeb1eaf8">Dealing with Images</h4>
+<div class="outline-text-4" id="text-orgeb1eaf8">
+</div>
+<ul class="org-ul">
+<li><a id="orge89a033"></a>improve on image-dired<br />
+<ul class="org-ul">
+<li><a id="org3805f47"></a>display list of existing tags globally and locally<br />
+<ul class="org-ul">
+<li><a id="org0c56537"></a>when select tags to display tagged images, ui should show window at the bottom and list of files + directory of each images and ui should allow for further filtering by matched word. (This ui idea is similar to <code>+default/search-buffer</code> )<br />
+<div class="outline-text-7" id="text-org0c56537">
+<p>
+This is a very interesting workflow that reduce fiction between a user's thought to output.
+</p>
+
+<p>
+usecase:
+imagine that when you think of "vacation." You can get all of the pictures that have vacation tags and you may filter it further by file name and dir name (e.g. "2020", "Thailand").
+</p>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgea99697"></a>provide autocomplete mechanism when trying to mark by tags. (C-t f)<br /></li>
+<li><a id="orga0f11b4"></a>Allow image preview as seen in <a href="https://youtu.be/HzFqZ0Gl0aw?t=238">this video.</a><br />
+<div class="outline-text-6" id="text-orga0f11b4">
+<p>
+I believe that this behavior is done using image-dired.
+</p>
+
+<p>
+list of candidate command that I think can create the desired behavior.
+When inside of dired mode
+<code>image-dired~next-line-and~display</code>
+<code>image-dired~previous-line-and~display</code>
+When inside image-dired mode (only whos thumbnail)
+<code>image-dired-display-next-thumbnail</code>
+<code>image-dired-display-previous-thumbnail</code>
+</p>
+
+<p>
+The problem is when using these commands the following undesired behavior occurs
+</p>
+<ol class="org-ol">
+<li>when run command, cursor position has move into newly opened buffer.</li>
+<li>when run command, newly created buffer replace the original buffer.</li>
+</ol>
+
+
+<p>
+Error:
+displaying thumbnail default behavior in doom emacs are strange to use. Behavior is not as the same as the one shown in <a href="https://youtu.be/NrY3t3W0_cM?t=154">this video.</a>
+</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgb8bb9ef" class="outline-4">
+<h4 id="orgb8bb9ef">Bookmark</h4>
+<div class="outline-text-4" id="text-orgb8bb9ef">
+<p>
+ref:
+<a href="https://www.youtube.com/watch?v=Im8taRkzYAc">Enhance your Emacs experience with Bookmark Plus</a>
+</p>
+
+<p>
+<code>Bookmarkplus</code> allows one to bookmark things beyond just file. It contains interesting ideas and workflows, but this workflow may results in very unorganized bookmark which may overtime becomes unobtainable.
+If I in the future finds default <code>Bookmark</code> functionality to be limited, <code>Bookmarkplus</code> should be further explored.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org668414a" class="outline-4">
+<h4 id="org668414a">Dired</h4>
+<div class="outline-text-4" id="text-org668414a">
+</div>
+<ul class="org-ul">
+<li><a id="org860df0e"></a>select files in dired by regex.<br /></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6a17cc6" class="outline-3">
+<h3 id="org6a17cc6">current features</h3>
+<div class="outline-text-3" id="text-org6a17cc6">
+</div>
+<div id="outline-container-orgde40615" class="outline-4">
+<h4 id="orgde40615">org mode</h4>
+<div class="outline-text-4" id="text-orgde40615">
+</div>
+<ul class="org-ul">
+<li><a id="orga56a590"></a>presentation<br />
+<ul class="org-ul">
+<li><a id="org0789acf"></a>org-tree-slides for live demo<br />
+<ul class="org-ul">
+<li><a id="org29c63b2"></a>ref<br />
+<ul class="org-ul">
+<li><a id="org10fd33b"></a><a href="https://www.youtube.com/watch?v=vz9aLmxYJB0&amp;ab_channel=SystemCrafters">https://www.youtube.com/watch?v=vz9aLmxYJB0&amp;ab_channel=SystemCrafters</a><br /></li>
+</ul>
+</li>
+<li><a id="orgd0c0e19"></a>follow along features<br />
+<div class="outline-text-7" id="text-orgd0c0e19">
+<p>
+to show history of type keys stroke,
+run <code>globalcommand-log-mode</code> follow by <code>clm/toggle-command-log-buffer</code>
+</p>
+</div>
+</li>
+<li><a id="org6e2a87e"></a>presentation<br />
+<ul class="org-ul">
+<li><a id="org2a5cf37"></a>presentation that required live coding.<br />
+<ul class="org-ul">
+<li><a id="org4b0ede4"></a>tools<br />
+<ul class="org-ul">
+<li><a id="org128cf61"></a>org tree slide<br /></li>
+</ul>
+</li>
+<li><a id="orgfa795ba"></a>initial setup<br />
+<div class="outline-text-9" id="text-orgfa795ba">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package org-tree-slide
+  :custom
+  (org-image-actual-width nil))
+</pre>
+</div>
+
+<p>
+run = org-treeside with <code>C-&lt;</code> and <code>C-&gt;</code>
+</p>
+</div>
+</li>
+<li><a id="org0830a89"></a>simple presentation<br />
+<div class="outline-text-9" id="text-org0830a89">
+<p>
+<code>org-tree-slide-mode</code>
+</p>
+</div>
+</li>
+<li><a id="org1a28511"></a>narrow presentation<br />
+<div class="outline-text-9" id="text-org1a28511">
+<p>
+toggle <code>org-tree-slide-narrow-control-profile</code> to be on
+only show slides that have todos
+comment slide algo get skip
+</p>
+</div>
+</li>
+<li><a id="org0b24127"></a>configuration<br />
+<div class="outline-text-9" id="text-org0b24127">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(defun efs/presentation-setup ()
+  (setq text-scale-mode-amount 3)
+  (org-display-inline-images)
+  (text-scale-mode 1))
+
+(defun efs/presentation-end ()
+  (text-scale-mode 0))
+
+(use-package! org-tree-slide
+  :hook ((org-tree-slide-play . efs/presentation-setup)
+	 (org-tree-slide-stop . efs/presentation-end))
+  :custom
+  (org-tree-slide-slide-in-effect t)
+  (org-tree-slide-activate-message "Presentation started!")
+  (org-tree-slide-deactivate-message "Presenatation finished!")
+  (org-tree-slide-header t)
+  (org-tree-slide-breadcrumbs " // ")
+  (org-image-actual-width nil))
+</pre>
+</div>
+</div>
+</li>
+<li><a id="org7fdf018"></a>sharing presentation slides<br />
+<div class="outline-text-9" id="text-org7fdf018">
+<p>
+run <code>org-beamer-export-to-pdf</code>
+</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org4f8c930"></a>use org-reveal for standard presentation<br />
+<div class="outline-text-6" id="text-org4f8c930">
+<p>
+I pick <code>org-reveal</code> over <code>org-beamer</code> because I am not sure if <code>org-beamer</code> has notes features.
+</p>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org3d8880d"></a>clocking<br />
+<ul class="org-ul">
+<li><a id="orgbf47af6"></a>how much time do I take to complete task x?<br />
+<div class="outline-text-6" id="text-orgbf47af6">
+<p>
+first clock-in under a heading then you can choose to clock-goto to go to the heading that clock is in.
+To end the clock and output the estimated time for the task, clock-out can be used.
+</p>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org888a146"></a>Allow literate programming with org-babel where org-babel block are treated as organized as "outline nodes oragnization" styles used in leo IDE.<br />
+<div class="outline-text-5" id="text-org888a146">
+<p>
+requirement:
+    literate programming using org-babel to tangle codes in non linear ways. This idea can be expanded to utilize leo ideo ideas of "outline nodes organization" (finer than file-based organization). To do this each org-babel block must be able to references "inside" other blocks (not only as input to other block) by tagging nodes of the block. t
+</p>
+
+<p>
+Demo of this feature is demonstrated by using org-babel with org block and org-roam  literater devops + nodes-outlines organization (from leo IDE).
+</p>
+</div>
+</li>
+<li><a id="org11be9f0"></a>allow "making literate note from source code"<br /></li>
+</ul>
+</div>
+
+<div id="outline-container-org84b7ffe" class="outline-4">
+<h4 id="org84b7ffe">movement</h4>
+<div class="outline-text-4" id="text-org84b7ffe">
+</div>
+<ul class="org-ul">
+<li><a id="org8713523"></a>ace-jump<br /></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: DESKTOP-5MMF71L</p>
+<p class="date">Created: 2021-11-04 Thu 10:17</p>
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 27.1 (<a href="https://orgmode.org">Org</a> mode 9.3)</p>
+</div>
+</body>
+</html>
