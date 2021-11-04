@@ -8,9 +8,22 @@ ref:
 To clone from github, one can use ~user/reponame~.
 To clone from gitlab, one can use ~gitlab:user/reponame~ or ~gl:user/reponame~.
 * Commit
-** view commit from current branch
+** View commit
+*** view commit from current branch
 View commit from current branch
 In panel, ~ll~ displays commits log in burrent branch.
-** view commit from a specific branch
+*** view commit from a specific branch
 In panel, ~lo~ allows one to select other branches to display commits log.
-**
+** Adding and Editing Commit
+*** Amend the commit without having to edit the commit message.
+In panel, ~ce~ (Commit -> Extends)
+*** Amend the commit and edit the commit message.
+In panel, ~ca~ (Commit -> Amend)
+*** Change the most recent commit without commiting new changes
+In panel, ~cw~ (Commit -> Reword)
+*** Add new stages to past commit
+1. In panel, ~cf~ (Commit -> Fixup)
+2. select a commit with ~v~ (in evil mode)
+3. press ~C-c C-c~ to apply the changes.
+* Branch
+** create a new branch from the changes of the current branch.
