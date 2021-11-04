@@ -1,0 +1,73 @@
+#+TITLE: writing-game-with-emacs
+
+I haven't get to finish the whole thing.
+Current state has a bug.
+Have fun solving it my future self.
+
+#+BEGIN_SRC emacs-lisp
+(defun tictactoe ()
+  "Start playing tic tac toe"
+  (interactive)
+  (switch-to-buffer "tictactoe")
+  (tictactoe-mode)
+  (tictactoe-init))
+
+(defvar *tictactoe-board* nil
+  "The board itself")
+
+(defun tictactoe-init()
+  "Start a new game of tic tac toe."
+  (setq *tictactoe-board* (make-vector (* *tictactoe-size* *tictactoe-size*) ?\.))
+  (tictactoe-print-board)
+  (setq *tictactoe-current-player* ?\X))
+
+(defconst *tictactoe-size* 3)
+
+(define-derived-mode tictactoe-mode special-mode "tic-tac-toe"
+  (define-key) tictactoe-mode-map (kbd "SPC") 'tictactoe-mark)
+
+(defun tictactoe-print-board ()
+  (let ((inhibit-read-only t))
+    (erase-buffer)
+    (dotimes (row *tictactoe-size*)
+      (dotimes (column *tictactoe-size*)
+        (insert (tictactoe-get-square row column)))
+        (insert "\n"))))
+
+(defun tictactoe-get-square (row column)
+  "Get the value in the (row, column) square."
+  (elt *tictactoe-board*
+       (+ column
+          (* row
+             *tictactoe-size*))))
+
+(defun tictactoe-set-square (row column value)
+  "se the value in the (row, column) square to value."
+  (aset *tictactoe-board*
+       (+ column
+          (* row
+             *tictactoe-size*))
+       value))
+
+(defun tictactoe-swap-players ()
+  "Make it the other player's turn"
+  (setq *tictactoe-current-player*
+        (if (char-equal *tictactoe-current-player* ?\X )
+        ?\O)
+        ?\X))
+
+(defun tictactoe-mark ()
+  "Mark the current square"
+  (interactive)
+  (let ((row (1- (line-number-at-pos)))
+        (column (current-column)))
+    (tictactoe-set-square row column *tictactoe-current-player*))
+  (tictactoe-print-board)
+  (tictactoe-swap-players))
+
+
+(defvar *tictactoe-current-player* nil
+  "The character repreesnting the current player."
+  )
+
+#+END_SRC

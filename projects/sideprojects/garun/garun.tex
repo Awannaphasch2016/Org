@@ -1,0 +1,115 @@
+% Created 2021-10-17 Sun 10:58
+% Intended LaTeX compiler: pdflatex
+\documentclass[presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usetheme{default}
+\author{Anak Wannaphaschaiyong}
+\date{\today}
+\title{garun projects}
+\hypersetup{
+ pdfauthor={Anak Wannaphaschaiyong},
+ pdftitle={garun projects},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\begin{frame}{Outline}
+\tableofcontents
+\end{frame}
+
+
+\begin{frame}[label={sec:org5d134d3},fragile]{Garun}
+ \begin{block}{features underimplementation}
+\begin{block}{enlarge window to occupy the whole space and reset window to default (which occupied space equally)}
+I accidentally deleted enlarg-window-maximize, so I have to reimplement it
+\begin{verbatim}
+(global-set-key (kbd "C-x !") 'enlarge-window-maximize)
+\end{verbatim}
+\end{block}
+\begin{block}{increase/decrease text size such that all other buffer text size will be adjusted at the same time. (not limited to opened buffer; all future buffer should also obey condition)}
+\begin{verbatim}
+(defadvice text-scale-increase (around all-buffers (arg) activate)
+  (dolist (buffer (buffer-list))
+    (with-current-buffer buffer
+      ad-do-it)))
+\end{verbatim}
+\end{block}
+\begin{block}{create org-capture such that new added content will be appended to the end of the file.}
+\end{block}
+\begin{block}{capture Gif/video of screen using emacs command line, and automatically upload to cloud.}
+\end{block}
+\end{block}
+\begin{block}{current features}
+\begin{block}{presentation}
+\begin{block}{ref}
+\begin{block}{\url{https://www.youtube.com/watch?v=vz9aLmxYJB0\&ab\_channel=SystemCrafters}}
+\end{block}
+\end{block}
+\begin{block}{follow along features}
+to show history of type keys stroke,
+run \texttt{globalcommand-log-mode} follow by \texttt{clm/toggle-command-log-buffer}
+\end{block}
+\begin{block}{presentation with slides}
+\begin{block}{tools}
+\begin{block}{org tree slide}
+\end{block}
+\end{block}
+\begin{block}{initial setup}
+\begin{verbatim}
+(use-package org-tree-slide
+  :custom
+  (org-image-actual-width nil))
+\end{verbatim}
+
+run = org-treeside with \texttt{C-<} and \texttt{C->}
+\end{block}
+\begin{block}{simple presentation}
+\texttt{org-tree-slide-mode}
+\end{block}
+\begin{block}{narrow presentation}
+toggle \texttt{org-tree-slide-narrow-control-profile} to be on
+only show slides that have todos
+comment slide algo get skip
+\end{block}
+\begin{block}{configuration}
+\begin{verbatim}
+(defun efs/presentation-setup ()
+  (setq text-scale-mode-amount 3)
+  (org-display-inline-images)
+  (text-scale-mode 1))
+
+(defun efs/presentation-end ()
+  (text-scale-mode 0))
+
+(use-package! org-tree-slide
+  :hook ((org-tree-slide-play . efs/presentation-setup)
+         (org-tree-slide-stop . efs/presentation-end))
+  :custom
+  (org-tree-slide-slide-in-effect t)
+  (org-tree-slide-activate-message "Presentation started!")
+  (org-tree-slide-deactivate-message "Presenatation finished!")
+  (org-tree-slide-header t)
+  (org-tree-slide-breadcrumbs " // ")
+  (org-image-actual-width nil))
+\end{verbatim}
+\end{block}
+\end{block}
+\end{block}
+\end{block}
+\end{frame}
+\end{document}

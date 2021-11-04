@@ -1,0 +1,4 @@
+#+title: This Changed Another Org Roam
+
+New added [[content]]
+org someti

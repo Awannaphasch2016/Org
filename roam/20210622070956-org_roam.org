@@ -1,0 +1,4 @@
+#+title: Org Roam
+
+* this is not it
+** [[file:20210622070956-org_roam.org][something]] really quick [[file:20210622071209-another_org_roam.org][Another Org Roam]]

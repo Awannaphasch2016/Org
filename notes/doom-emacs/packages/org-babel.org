@@ -1,0 +1,4 @@
+#+title: org-babel notes
+
+* using results from one code block in another org-mode
+ref: https://kitchingroup.cheme.cmu.edu/blog/2019/02/12/Using-results-from-one-code-block-in-another-org-mode/

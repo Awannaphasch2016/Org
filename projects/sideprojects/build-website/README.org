@@ -1,0 +1,26 @@
+#+title: README: building website with org mode
+
+* todo list
+
+** TODO when running ~./build.sh~ I get the following error
+#+TAGS: build-webiste
+
+I encounter this error while following [[https://www.youtube.com/watch?v=AfkrzFodoNw][this tutorial]]
+If it is too cumbersome to follow the method shown in the tutorial, consider trying ox-hugo which is shown in [[https://www.youtube.com/watch?v=K6S-AKm5snc][this tutorial]]
+
+#+BEGIN_SRC md
+Resetting org-publish-cache
+Publishing file /home/awannaphasch2016/org/projects/sideprojects/garun/garun.org using ‘org-html-publish-to-html’
+Unable to resolve link: "id:477a742f-e420-4111-8107-3c7947ad8331"
+#+END_SRC
+
+After some reading, I figure out that ~org-html-publish-to-html~ cannot convert my org files to html file.
+
+*** References
+related error
+https://emacs.stackexchange.com/questions/23870/org-babel-result-to-a-separate-buffer
+https://github.com/syl20bnr/spacemacs/issues/13387#issuecomment-632990368
+
+understading org-publish
+https://doubleloop.net/2020/08/21/how-publish-org-roam-wiki-org-publish/
+https://orgmode.org/manual/Publishing.html

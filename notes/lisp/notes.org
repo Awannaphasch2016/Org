@@ -1,0 +1,59 @@
+#+TITLE: Notes
+
+* Data Structure
+
+** vectors
+Vectors are self-evaluating; that is, the result of evaluating a vector is the vector itself. Its
+subexpressions are not evaluated. So if you write:
+
+[a b c]
+
+you'll get a vector containing the three symbols, a, b, and c. If you want a vector containing the
+values of variables a, b, and c, you must construct the vector using the vector function:
+
+(vector a b c) ⇒ [17 37 42]
+
+* Major modes
+Order in which emacs looks for major mode.
+ref: [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Choosing-Modes.html][Choosing File Modes]]
+1. file-local variables
+   #+BEGIN_SRC md
+    ; -*- mode: Lisp; eval: (auto-fill-mode 1); -*-
+   #+END_SRC
+
+2. Second, if there is no file variable specifying a major mode, Emacs checks whether the file’s contents begin with ‘#!’.
+
+3. Third, Emacs tries to determine the major mode by looking at the text at the start of the buffer, based on the variable ~magic-mode-alist~.
+
+4. Fourthif Emacs still hasn’t found a suitable major modeit looks at the file’s name. The correspondence between file names and major modes is controlled by the variable ~auto-mode-alist~
+
+5. Finally, if Emacs still hasn’t found a major mode to use, it compares the text at the start of the buffer to the variable ~magic-fallback-mode-alist~
+
+
+
+* Customization
+** set keys binding
+mapping new key binding to non-defined prefix (by emacs).
+#+BEGIN_SRC elisp
+(global-set-key (kbd "C-x !") 'enlarge-window-maximize)
+#+END_SRC
+
+#+RESULTS:
+
+mapping new key binding to existing prefix (defined by doom emacs)
+#+BEGIN_SRC emacs-lisp
+(map! :leader "d d" #'dap-debug)
+#+END_SRC
+* Debugging Techniques
+** check if elisp function is defined
+ref: http://ergoemacs.org/emacs/elisp_check_defined.html
+
+check function
+#+BEGIN_SRC elisp
+(fboundp 'info)
+#+END_SRC
+
+check variable
+#+BEGIN_SRC elisp
+(boundp 'auto-mode-alist)
+#+END_SRC

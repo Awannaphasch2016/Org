@@ -1,0 +1,94 @@
+#+TITLE: 10-8-2021
+
+* Paper: Deep Graph InfoMax
+:PROPERTIES:
+:NOTER_DOCUMENT: ../../../../../mnt/c/Users/terng/OneDrive/Documents/Papers/SSL/Deep Graph Infomax.pdf
+:END:
+** Skeleton
+*** 1 Introduction
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:/mnt/c/Users/terng/OneDrive/Documents/Papers/SSL/Deep Graph Infomax.pdf::1++0.595448??1%20Introduction]]
+:END:
+something
+*** 2 Related Work
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:/mnt/c/Users/terng/OneDrive/Documents/Papers/SSL/Deep Graph Infomax.pdf::2++0.41402??2%20Related%20Work]]
+:END:
+*** 3 DGI Methodology
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:/mnt/c/Users/terng/OneDrive/Documents/Papers/SSL/Deep Graph Infomax.pdf::3++0.171016??3%20DGI%20Methodology]]
+:END:
+**** 3.1 Graph-based unsupervised learning
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:/mnt/c/Users/terng/OneDrive/Documents/Papers/SSL/Deep Graph Infomax.pdf::3++0.299122??3.1%20Graph-based%20unsupervised%20learning]]
+:END:
+**** 3.2 Local-global mutual information maximization
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:/mnt/c/Users/terng/OneDrive/Documents/Papers/SSL/Deep Graph Infomax.pdf::3++0.580934??3.2%20Local-global%20mutual%20information%20maximization]]
+:END:
+**** 3.3 Theoretical motivation
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:/mnt/c/Users/terng/OneDrive/Documents/Papers/SSL/Deep Graph Infomax.pdf::4++0.326529??3.3%20Theoretical%20motivation]]
+:END:
+**** 3.4 Overview of DGI
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:/mnt/c/Users/terng/OneDrive/Documents/Papers/SSL/Deep Graph Infomax.pdf::5++0.667054??3.4%20Overview%20of%20DGI]]
+:END:
+[[pdf:/mnt/c/Users/terng/OneDrive/Documents/Papers/SSL/Deep Graph Infomax.pdf::6++2.07;;annot-6-15][Deep Graph Infomax.pdf: Page 6; Quoting: n patch representations in a fully unsupervised manner, followed by evaluating the node-level classification utility of these representations. This was performed by directly using these representations to train and test a simple]]
+
+*** 4 Classification performance
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:/mnt/c/Users/terng/OneDrive/Documents/Papers/SSL/Deep Graph Infomax.pdf::6++0.483208??4%20Classification%20performance]]
+:END:
+**** 4.1 Datasets
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:/mnt/c/Users/terng/OneDrive/Documents/Papers/SSL/Deep Graph Infomax.pdf::6++0.593771??4.1%20Datasets]]
+:END:
+**** 4.2 Experimental setup
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:/mnt/c/Users/terng/OneDrive/Documents/Papers/SSL/Deep Graph Infomax.pdf::6++0.727914??4.2%20Experimental%20setup]]
+:END:
+**** oh yes this
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:/mnt/c/Users/terng/OneDrive/Documents/Papers/SSL/Deep Graph Infomax.pdf::8++0.00;;annot-8-31]]
+:ID:       ../../../../../mnt/c/Users/terng/OneDrive/Documents/Papers/SSL/Deep Graph Infomax.pdf-annot-8-31
+:END:
+
+**** 4.3 Results
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:/mnt/c/Users/terng/OneDrive/Documents/Papers/SSL/Deep Graph Infomax.pdf::8++0.762811??4.3%20Results]]
+:END:
+*** 5 Qualitative analysis
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:/mnt/c/Users/terng/OneDrive/Documents/Papers/SSL/Deep Graph Infomax.pdf::10++0.487153??5%20Qualitative%20analysis]]
+:END:
+*** 6 Conclusions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:/mnt/c/Users/terng/OneDrive/Documents/Papers/SSL/Deep Graph Infomax.pdf::10++0.762319??6%20Conclusions]]
+:END:
+*** A Further dataset details
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:/mnt/c/Users/terng/OneDrive/Documents/Papers/SSL/Deep Graph Infomax.pdf::14++0.370269??A%20Further%20dataset%20details]]
+:END:
+*** B Further qualitative analysis
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:/mnt/c/Users/terng/OneDrive/Documents/Papers/SSL/Deep Graph Infomax.pdf::14++0.755193??B%20Further%20qualitative%20analysis]]
+:END:
+*** C Robustness to Choice of Corruption Function
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:/mnt/c/Users/terng/OneDrive/Documents/Papers/SSL/Deep Graph Infomax.pdf::16++0.185332??C%20Robustness%20to%20Choice%20of%20Corruption%20Function]]
+:END:
+
+* Paper: Graph Contrastive Learning with Augmentations
+:PROPERTIES:
+:NOTER_DOCUMENT: /mnt/c/Users/terng/OneDrive/Documents/Papers/SSL/Graph Contrastive Learning with Augmentation.pdf
+:END:
+
+** related work section
+:PROPERTIES:
+:NOTER_PAGE: 2
+:END:
+* Paper:  Contrasitve Multi-View Representation Learning on Graph
+:PROPERTIES:
+:NOTER_DOCUMENT: ../../../../../mnt/c/Users/terng/OneDrive/Documents/Papers/SSL/Contrastive Multi-View Representation Learning on Graphs.pdf
+:END:

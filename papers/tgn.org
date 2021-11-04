@@ -1,0 +1,6 @@
+#+TITLE: temporal graph networks for deep learning on dynamic graphs
+
+* temporal graph networks for deep learning on dynamic graphs
+:PROPERTIES:
+:NOTER_DOCUMENT: /mnt/c/Users/terng/OneDrive/Documents/Papers/SSL/TEMPORAL GRAPH NETWORKS FOR DEEP LEARNING.pdf
+:END:

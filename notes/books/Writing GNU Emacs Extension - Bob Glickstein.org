@@ -1,0 +1,183 @@
+* Writing GNU Emacs Extensions - Bob Glickstein
+:PROPERTIES:
+:NOTER_DOCUMENT: /mnt/c/users/terng/OneDrive/Documents/Books/Writing GNU Emacs Extensions - Bob Glickstein.pdf
+:END:
+
+** Customizing Emacs
+*** backspace and delete
+*** Lisp
+*** Keys and Strings
+*** To What Is C-h Bound?
+*** To What Should C-h Be Bound?
+*** Evaluating Lisp Expressions?
+*** Apropos
+** Simple New Commands
+*** Traversing Windows
+*** Line-at-a-Time Scrolling
+*** Other Cursor and Text Motion Commands
+*** Clobbering Symbolic Links
+*** Advised Buffer Switching
+#+BEGIN_SRC emacs-lisp
+(defadvice switch-to-buffer (before existing-buffer
+                                    activate compile)
+  (interactive "b"))
+#+END_SRC
+
+#+RESULTS:
+: switch-to-buffer
+
+
+*** Addendum: Raw Prefix Argument
+** Copoerating Commands
+*** The Symptom
+*** A Cure
+*** Generalizing the Solution
+*** Writestamps
+*** Modifystamps
+** Lisp Files
+*** Creating a Lisp File
+*** Loading the File
+*** Compiling the File
+*** eval-after-load
+*** Local Variables Lists
+*** Addendum: Security Consideration
+** Lists
+*** The Simple View of Lists
+*** List Details
+*** Recursive List Functions
+*** Iterative List Functions
+*** Other Useful Lists Functions
+*** Destructive List Operations
+*** Circular Lists?!
+** Minor Mode
+*** Paragraph Filing
+*** Modes
+*** Defining a Minor Mode
+*** Mode Meat
+** Evaluation and Error Recovery
+*** limited-save-excursion
+*** eval
+*** Macro Functions
+*** Backquote and Unquote
+*** Return Value
+*** Failing Gracefully
+*** Point Marker
+** A Major Mode
+*** My Quips File
+*** Major Mode Skeeleton
+*** Chaning the Definition of a Paragraph
+*** Quip Commands
+*** Keymaps
+*** Narrowing
+*** Derived Modes
+** A Comprehensive Example
+*** New York Times Rules
+**** Matrix function :drill:
+:PROPERTIES:
+:ID:       d640305a-92f0-47d9-b6d5-3d331e415dc2
+:END:
+create matrix function given that signature is as followed
+
+#+BEGIN_SRC emacs-lisp
+(defun make-matrix (rows columns &optional initial) ... )
+#+END_SRC
+
+***** answer
+#+BEGIN_SRC emacs-lisp :tangle ~/org/code/implementation/elisp/cross-word.el
+(defun make-matrix (rows columns &optional initial)
+  "Create a ROWS by COLUMNS matrix."
+  (let ((result (make-vector rows nil))
+        (y 0))
+    (while (< y rows)
+      (aset result y (make-vector columns initial))
+      (setq y (+ y 1)))
+      result))
+#+END_SRC
+
+#+RESULTS:
+: make-matrix
+
+**** Basic operations
+#+BEGIN_SRC emacs-lisp :tangle ~/org/code/implementation/elisp/cross-word.el
+(defun matrix-set (matrix row column elt)
+  "Given a MATRIX, ROW, and COLUMN, put element ELT there."
+  (let ((a (aref matrix row)))
+    (aset a column elt)))
+#+END_SRC
+
+#+RESULTS:
+: matrix-set
+
+#+BEGIN_SRC emacs-lisp :tangle ~/org/code/implementation/elisp/cross-word.el
+(defun matrix-ref (matrix row column)
+  "Get the element of MATRIX at ROW and COLUMN."
+  (let ((a (aref matrix row)))
+    (aref a column)
+    )
+  )
+#+END_SRC
+
+#+RESULTS:
+: matrix-ref
+
+#+BEGIN_SRC emacs-lisp  :tangle ~/org/code/implementation/elisp/cross-word.el
+(defun matrix-columns (matrix)
+  "Get number of columns in matrix"
+  (length (aref matrix 0)))
+#+END_SRC
+
+#+RESULTS:
+: matrix-columns
+
+#+BEGIN_SRC emacs-lisp  :tangle ~/org/code/implementation/elisp/cross-word.el
+(defun matrix-rows (matrix)
+  "Get number of rows in matrix"
+  (length matrix)
+  )
+#+END_SRC
+
+#+RESULTS:
+: matrix-rows
+
+#+BEGIN_SRC emacs-lisp :tangle ~/org/code/implementation/elisp/cross-word.el
+(defun make-crossword (size)
+  "Make a crossword grid with SIZE rows and columns."
+  (if (zerop (% size 2))
+             (error "make-crossword: size must be odd."))
+  (if (< size 3)
+      (error "make-crossword: size must be 3 or greate."))
+  (make-matrix size size nil)
+  )
+#+END_SRC
+
+#+RESULTS:
+: make-crossword
+
+
+*** Data Representation
+*** User Interface
+*** Seetting Up the Mode
+*** Tracking Unauthorized Changes
+*** Parsing the Buffer
+*** Word Finder
+*** Last Word
+** Conclusion
+*** A. Lisp Quick Reference
+**** Basics
+**** Data Types
+**** Control Structure
+**** Code Objects
+*** B. Debugging and Profiling
+**** Evaluation
+**** The Debugger
+**** Edebug
+**** The Profiler
+*** Sharing Your Code
+
+**** Documentation
+**** Copyright
+**** Posting
+*** Obtaining and Building Emacs
+**** Availability of Packages
+**** Unpacking, Building, and Installing Emacs
+** Index

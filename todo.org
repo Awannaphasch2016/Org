@@ -1,0 +1,56 @@
+#+FILETAGS: PERSONAL
+* Inbox
+* Special dates
+:PROPERTIES:
+:CATEGORY: Spacial Date
+:END:
+** Birthdays
+** Anniversaries
+* Finance
+:PROPERTIES:
+:CATEGORY: Finance
+:END:
+* Health and recreation
+:PROPERTIES:
+:CATEGORY: Health
+:END:
+* House maintenance
+:PROPERTIES:
+:CATEGORY: Note
+:END:
+* Notes
+:PROPERTIES:
+:CATEGORY: Note
+:END:
+* Tasks
+:PROPERTIES:
+:CATEGORY: Task
+:END:
+* Vehicle maintenance
+:PROPERTIES:
+:CATEGORY: Vehicle
+:END:
+** TODO Register a car
+SCHEDULED: <2021-10-04 Mon>
+** DONE Buy car insurance
+- State "DONE"       from "WAITING"    [2021-10-18 Mon 16:20]
+- State "WAITING"    from "TODO"       [2021-09-28 Tue 20:52] \\
+  waiting until a car is registered.
+* Passwords
+:PROPERTIES:
+:CATEGORY: Password
+* Organization
+* TODO Reading Writing GNU Emacs Extensions
+:LOGBOOK:
+CLOCK: [2021-09-28 Tue 20:49]--[2021-09-28 Tue 20:50] =>  0:01
+:END:
+[2021-09-28 Tue 20:49]
+[[file:~/Scratches/scratch.el::lambda (]]
+** NEXT stop at "Hanlding the Symlink"
+* TODO find pimp kratom (mangda) for Bowen. :NOTE:
+:LOGBOOK:
+CLOCK: [2021-09-27 Mon 23:25]--[2021-09-27 Mon 23:31] =>  0:06
+:END:
+[2021-09-27 Mon 23:25]
+[[file:~/org/todo.org::*something][someth* Category
+

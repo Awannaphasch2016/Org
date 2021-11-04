@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-10-19 Tue 21:38 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>garun projects</title>
+<meta name="author" content="Anak Wannaphaschaiyong" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">garun projects</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org836aff0">1. Garun</a>
+<ul>
+<li><a href="#orgac06272">1.1. programming implementation design choise</a>
+<ul>
+<li><a href="#org2f9aee0">1.1.1. what language to use?</a></li>
+<li><a href="#orgce4138d">1.1.2. which types of markdown style can I use? (org mode can&rsquo;t be used because gpl v3 license)</a></li>
+</ul>
+</li>
+<li><a href="#orgd1fd0d9">1.2. features underimplementation + known error</a>
+<ul>
+<li><a href="#orgd2f331b">1.2.1. uncaterogized</a></li>
+<li><a href="#org4517a62">1.2.2. org mode</a></li>
+<li><a href="#orgd9c9ce6">1.2.3. user experience</a></li>
+<li><a href="#org41799a5">1.2.4. search and filter experience</a></li>
+<li><a href="#org8aca95d">1.2.5. data science features</a></li>
+<li><a href="#org9a76fed">1.2.6. PROJECT literate programming in emacs</a></li>
+</ul>
+</li>
+<li><a href="#orgeb2d044">1.3. current features</a>
+<ul>
+<li><a href="#org9982d31">1.3.1. org mode</a></li>
+<li><a href="#orgde6064f">1.3.2. movement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org836aff0" class="outline-2">
+<h2 id="org836aff0"><span class="section-number-2">1.</span> Garun</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgac06272" class="outline-3">
+<h3 id="orgac06272"><span class="section-number-3">1.1.</span> programming implementation design choise</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-org2f9aee0" class="outline-4">
+<h4 id="org2f9aee0"><span class="section-number-4">1.1.1.</span> what language to use?</h4>
+</div>
+<div id="outline-container-orgce4138d" class="outline-4">
+<h4 id="orgce4138d"><span class="section-number-4">1.1.2.</span> which types of markdown style can I use? (org mode can&rsquo;t be used because gpl v3 license)</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+alternative:
+</p>
+<ol class="org-ol">
+<li><a href="https://github.com/200ok-ch/organice">organice</a></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd1fd0d9" class="outline-3">
+<h3 id="orgd1fd0d9"><span class="section-number-3">1.2.</span> features underimplementation + known error</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-orgd2f331b" class="outline-4">
+<h4 id="orgd2f331b"><span class="section-number-4">1.2.1.</span> uncaterogized</h4>
+</div>
+<div id="outline-container-org4517a62" class="outline-4">
+<h4 id="org4517a62"><span class="section-number-4">1.2.2.</span> org mode</h4>
+<div class="outline-text-4" id="text-1-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="org93659d5"></a>checkbox doesn&rsquo;t work for some reason, so all checkbox related commands cannot be tested.<br /></li>
+<li><a id="org65794a9"></a>figure out how to perform multi-select in dropdown (output by vertico, ivy, etc.)<br /></li>
+<li><a id="orgac5d05a"></a>assign schedule and deadline to header doesn&rsquo;t show in agenda?<br /></li>
+<li><a id="orgdafeeed"></a>figure out a way to manage archive contents<br />
+<div class="outline-text-5" id="text-1-2-2-4">
+<ul class="org-ul">
+<li>requirements
+<ul class="org-ul">
+<li>how to make them searchable
+<ul class="org-ul">
+<li>ref:
+<ul class="org-ul">
+<li><a href="https://www.reddit.com/r/orgmode/comments/9kunnv/archiving_practices/">https://www.reddit.com/r/orgmode/comments/9kunnv/archiving_practices/</a></li>
+<li><a href="https://fuco1.github.io/2017-04-20-Archive-subtrees-under-the-same-hierarchy-as-original-in-the-archive-files.html">https://fuco1.github.io/2017-04-20-Archive-subtrees-under-the-same-hierarchy-as-original-in-the-archive-files.html</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>FAQs
+<ul class="org-ul">
+<li>best practices for archiving content?</li>
+</ul></li>
+</ul>
+</div>
+</li>
+
+<li><a id="org126e3d1"></a>create org-capture such that new added content will be appended to the end of the file.<br /></li>
+<li><a id="orgd03a3dc"></a>implement tagging system in org roam<br />
+<ol class="org-ol">
+<li><a id="org2699d00"></a>note<br />
+<ol class="org-ol">
+<li><a id="orgcf60ffb"></a>follow roam research&rsquo;s tagging system which use page,block,filter by page,backlink, reference link.<br />
+<ol class="org-ol">
+<li><a id="org14cb560"></a>tags and categories features from org-mode can be derived by roam research tagging system<br /></li>
+</ol>
+</li>
+<li><a id="org6437bfa"></a>one thing that roam research tagging doesn&rsquo;t provide is when I set page as directory for example dir1/dir2/dir3. To improve roam research to include this features few things have to be considered<br />
+<ol class="org-ol">
+<li><a id="org3580381"></a>pages should be able to filter by directory.<br /></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a id="org81ff884"></a>syncing change on a tangled file back to original org file<br />
+<div class="outline-text-5" id="text-1-2-2-7">
+<p>
+ref: <a href="https://emacs.stackexchange.com/questions/12889/syncing-changes-on-a-tangled-file-back-to-the-original-org-file">https://emacs.stackexchange.com/questions/12889/syncing-changes-on-a-tangled-file-back-to-the-original-org-file</a>
+ref: <a href="https://emacs.stackexchange.com/questions/12889/syncing-changes-on-a-tangled-file-back-to-the-original-org-file">https://emacs.stackexchange.com/questions/12889/syncing-changes-on-a-tangled-file-back-to-the-original-org-file</a>
+</p>
+
+<p>
+tools
+</p>
+<ol class="org-ol">
+<li><a href="../../../org-roam/20211019140900-lentic_server.html#ID-477a742f-e420-4111-8107-3c7947ad8331">lentic server</a></li>
+<li><a href="https://github.com/mtekman/org-tanglesync.el">org-tanglesync</a></li>
+</ol>
+</div>
+</li>
+<li><a id="org800661b"></a>copy link out of org mode<br />
+<div class="outline-text-5" id="text-1-2-2-8">
+<p>
+ref: <a href="https://emacs.stackexchange.com/questions/3981/how-to-copy-links-out-of-org-mode">https://emacs.stackexchange.com/questions/3981/how-to-copy-links-out-of-org-mode</a>
+</p>
+</div>
+</li>
+<li><a id="org8e8268a"></a>integrate organice to push org files to clouds where I can be access via phone and enable syncing between device.<br /></li>
+
+<li><a id="orgb2f844d"></a>presentation<br />
+<ol class="org-ol">
+<li><a id="orgad93c7b"></a>try using <code>demo-it</code> plugins for code along styles presentation<br /></li>
+
+<li><a id="org20cc6b6"></a>for standard presentation decide between org-reveal and org-beamer.<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgd9c9ce6" class="outline-4">
+<h4 id="orgd9c9ce6"><span class="section-number-4">1.2.3.</span> user experience</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<p>
+ref:
+</p>
+<ul class="org-ul">
+<li><a href="https://hungyi.net/posts/doom-emacs-search-replace-project/#fn.1">https://hungyi.net/posts/doom-emacs-search-replace-project/#fn.1</a></li>
+</ul>
+</div>
+<ol class="org-ol">
+<li><a id="org8ac5f0b"></a>enlarge window to occupy the whole space and reset window to default (which occupied space equally)<br />
+<div class="outline-text-5" id="text-1-2-3-1">
+<p>
+I accidentally deleted enlarg-window-maximize, so I have to reimplement it
+</p>
+<div class="org-src-container">
+<pre class="src src-elisp"><span style="color: #51afef;">(</span><span style="color: #c678dd;">global-set-key</span> <span style="color: #c678dd;">(</span><span style="color: #c678dd;">kbd</span> <span style="color: #98be65;">"C-x !"</span><span style="color: #c678dd;">)</span> <span style="color: #51afef;">'</span><span style="color: #ECBE7B;">enlarge-window-maximize</span><span style="color: #51afef;">)</span>
+</pre>
+</div>
+</div>
+</li>
+
+<li><a id="org462f34c"></a>increase/decrease text size such that all other buffer text size will be adjusted at the same time. (not limited to opened buffer; all future buffer should also obey condition)<br />
+<div class="outline-text-5" id="text-1-2-3-2">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #51afef;">(</span><span style="color: #51afef;">defadvice</span> <span style="color: #c678dd;">text-scale-increase</span> <span style="color: #c678dd;">(</span>around all-buffers <span style="color: #98be65;">(</span>arg<span style="color: #98be65;">)</span> activate<span style="color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span><span style="color: #51afef;">dolist</span> <span style="color: #98be65;">(</span>buffer <span style="color: #a9a1e1;">(</span><span style="color: #a9a1e1;">buffer-list</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
+    <span style="color: #98be65;">(</span><span style="color: #51afef;">with-current-buffer</span> buffer
+      ad-do-it<span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+</pre>
+</div>
+</div>
+</li>
+<li><a id="org7647612"></a>capture Gif/video of screen using emacs command line, and automatically upload to cloud.<br /></li>
+</ol>
+</div>
+<div id="outline-container-org41799a5" class="outline-4">
+<h4 id="org41799a5"><span class="section-number-4">1.2.4.</span> search and filter experience</h4>
+<div class="outline-text-4" id="text-1-2-4">
+</div>
+<ol class="org-ol">
+<li><a id="orgf9163b3"></a>PROJECT multi-layer text search filter. (design UI experience for piping sequence of regex output)<br /></li>
+</ol>
+</div>
+<div id="outline-container-org8aca95d" class="outline-4">
+<h4 id="org8aca95d"><span class="section-number-4">1.2.5.</span> data science features</h4>
+<div class="outline-text-4" id="text-1-2-5">
+</div>
+<ol class="org-ol">
+<li><a id="org14e3b03"></a>passing scripts from your favorite language, and have them all available in emacs as commands.<br />
+<div class="outline-text-5" id="text-1-2-5-1">
+<p>
+ref: <a href="http://ergoemacs.org/emacs/elisp_perl_wrapper.html">http://ergoemacs.org/emacs/elisp_perl_wrapper.html</a>
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org9a76fed" class="outline-4">
+<h4 id="org9a76fed"><span class="section-number-4">1.2.6.</span> PROJECT literate programming in emacs</h4>
+<div class="outline-text-4" id="text-1-2-6">
+<p>
+ref:
+</p>
+<ul class="org-ul">
+<li><a href="https://jamiecollinson.com/blog/my-emacs-config/">https://jamiecollinson.com/blog/my-emacs-config/</a></li>
+<li><a href="https://github.com/angrybacon/dotemacs/blob/master/dotemacs.org">https://github.com/angrybacon/dotemacs/blob/master/dotemacs.org</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgeb2d044" class="outline-3">
+<h3 id="orgeb2d044"><span class="section-number-3">1.3.</span> current features</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-org9982d31" class="outline-4">
+<h4 id="org9982d31"><span class="section-number-4">1.3.1.</span> org mode</h4>
+<div class="outline-text-4" id="text-1-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgbd96bbf"></a>presentation<br />
+<div class="outline-text-5" id="text-1-3-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org23c9b5c"></a>ref<br />
+<ol class="org-ol">
+<li><a id="org5675955"></a><a href="https://www.youtube.com/watch?v=vz9aLmxYJB0&amp;ab_channel=SystemCrafters">https://www.youtube.com/watch?v=vz9aLmxYJB0&amp;ab_channel=SystemCrafters</a><br /></li>
+</ol>
+</li>
+<li><a id="org1fef8e4"></a>follow along features<br />
+<div class="outline-text-6" id="text-1-3-1-1-2">
+<p>
+to show history of type keys stroke,
+run <code>globalcommand-log-mode</code> follow by <code>clm/toggle-command-log-buffer</code>
+</p>
+</div>
+</li>
+<li><a id="orgcc93148"></a>presentation<br />
+<ol class="org-ol">
+<li><a id="orgf93cbe0"></a>presentation that required live coding.<br />
+<ol class="org-ol">
+<li><a id="orgcb1e3d9"></a>tools<br />
+<ol class="org-ol">
+<li><a id="orgb833b87"></a>org tree slide<br /></li>
+</ol>
+</li>
+<li><a id="org9654391"></a>initial setup<br />
+<div class="outline-text-8" id="text-1-3-1-1-3-1-2">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #51afef;">(</span><span style="color: #51afef;">use-package</span> <span style="color: #dcaeea;">org-tree-slide</span>
+  <span style="color: #c678dd;">:custom</span>
+  <span style="color: #c678dd;">(</span><span style="color: #dcaeea;">org-image-actual-width</span> nil<span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+</pre>
+</div>
+
+<p>
+run = org-treeside with <code>C-&lt;</code> and <code>C-&gt;</code>
+</p>
+</div>
+</li>
+<li><a id="org69da1b5"></a>simple presentation<br />
+<div class="outline-text-8" id="text-1-3-1-1-3-1-3">
+<p>
+<code>org-tree-slide-mode</code>
+</p>
+</div>
+</li>
+<li><a id="orgfe65164"></a>narrow presentation<br />
+<div class="outline-text-8" id="text-1-3-1-1-3-1-4">
+<p>
+toggle <code>org-tree-slide-narrow-control-profile</code> to be on
+only show slides that have todos
+comment slide algo get skip
+</p>
+</div>
+</li>
+<li><a id="org0ee48d9"></a>configuration<br />
+<div class="outline-text-8" id="text-1-3-1-1-3-1-5">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #51afef;">(</span><span style="color: #51afef;">defun</span> <span style="color: #c678dd;">efs/presentation-setup</span> <span style="color: #c678dd;">()</span>
+  <span style="color: #c678dd;">(</span><span style="color: #51afef;">setq</span> <span style="color: #dcaeea;">text-scale-mode-amount</span> <span style="color: #da8548; font-weight: bold;">3</span><span style="color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span><span style="color: #c678dd;">org-display-inline-images</span><span style="color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span><span style="color: #dcaeea;">text-scale-mode</span> <span style="color: #da8548; font-weight: bold;">1</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+
+<span style="color: #51afef;">(</span><span style="color: #51afef;">defun</span> <span style="color: #c678dd;">efs/presentation-end</span> <span style="color: #c678dd;">()</span>
+  <span style="color: #c678dd;">(</span><span style="color: #dcaeea;">text-scale-mode</span> <span style="color: #da8548; font-weight: bold;">0</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+
+<span style="color: #51afef;">(</span><span style="color: #51afef;">use-package!</span> <span style="color: #dcaeea;">org-tree-slide</span>
+  <span style="color: #c678dd;">:hook</span> <span style="color: #c678dd;">(</span><span style="color: #98be65;">(</span>org-tree-slide-play . efs/presentation-setup<span style="color: #98be65;">)</span>
+         <span style="color: #98be65;">(</span>org-tree-slide-stop . efs/presentation-end<span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+  <span style="color: #c678dd;">:custom</span>
+  <span style="color: #c678dd;">(</span><span style="color: #dcaeea;">org-tree-slide-slide-in-effect</span> t<span style="color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span><span style="color: #dcaeea;">org-tree-slide-activate-message</span> <span style="color: #98be65;">"Presentation started!"</span><span style="color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span><span style="color: #dcaeea;">org-tree-slide-deactivate-message</span> <span style="color: #98be65;">"Presenatation finished!"</span><span style="color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span><span style="color: #dcaeea;">org-tree-slide-header</span> t<span style="color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span><span style="color: #dcaeea;">org-tree-slide-breadcrumbs</span> <span style="color: #98be65;">" // "</span><span style="color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span><span style="color: #dcaeea;">org-image-actual-width</span> nil<span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+</pre>
+</div>
+</div>
+</li>
+<li><a id="org4a3f9cb"></a>sharing presentation slides<br />
+<div class="outline-text-8" id="text-1-3-1-1-3-1-6">
+<p>
+run <code>org-beamer-export-to-pdf</code>
+</p>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a id="orgc1548c2"></a>clocking<br />
+<ol class="org-ol">
+<li><a id="org9333772"></a>how much time do I take to complete task x?<br />
+<div class="outline-text-6" id="text-1-3-1-2-1">
+<p>
+first clock-in under a heading then you can choose to clock-goto to go to the heading that clock is in.
+To end the clock and output the estimated time for the task, clock-out can be used.
+</p>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org595033d"></a>Allow literate programming with org-babel where org-babel block are treated as organized as &ldquo;outline nodes oragnization&rdquo; styles used in leo IDE.<br />
+<div class="outline-text-5" id="text-1-3-1-3">
+<p>
+requirement:
+    literate programming using org-babel to tangle codes in non linear ways. This idea can be expanded to utilize leo ideo ideas of &ldquo;outline nodes organization&rdquo; (finer than file-based organization). To do this each org-babel block must be able to references &ldquo;inside&rdquo; other blocks (not only as input to other block) by tagging nodes of the block. t
+</p>
+
+<p>
+Demo of this feature is demonstrated by using org-babel with org block and org-roam  <a href="../../../org-roam/20211019133300-literal_devops.html#ID-163bf20c-803e-46d6-ad33-c5dd15e1877a">literater devops + nodes-outlines organization (from leo IDE).</a>
+</p>
+</div>
+</li>
+<li><a id="orgddbd7cb"></a>allow &ldquo;making literate note from source code&rdquo;<br /></li>
+</ol>
+</div>
+
+<div id="outline-container-orgde6064f" class="outline-4">
+<h4 id="orgde6064f"><span class="section-number-4">1.3.2.</span> movement</h4>
+<div class="outline-text-4" id="text-1-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgf596747"></a>ace-jump<br /></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Anak Wannaphaschaiyong</p>
+<p class="date">Created: 2021-10-19 Tue 21:38</p>
+</div>
+</body>
+</html>

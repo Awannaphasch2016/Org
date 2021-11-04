@@ -1,0 +1,115 @@
+;; -*- mode: emacs-lisp; lexical-binding:t; coding: utf-8-emacs; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Wed Oct  6 21:47:50 2021
+;; Desktop file format version 208
+;; Emacs version 27.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (24926 20934 193739 100000) (desktop . "208") "awannaphasch2016@DESKTOP-5MMF71L" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font . "-PfEd-DejaVu Sans Mono-normal-normal-normal-*-11-*-*-*-m-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (right-divider-width . 1) (bottom-divider-width . 1) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#bbc2cf") (background-color . "#282c34") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 4) (right-fringe . 4) (no-special-glyphs) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 0) (tab-bar-lines . 0) (height . 56) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . dark) (cursor-color . "#51afef") (environment) (persp . #s(perspective "main" ("Unprintable entity" "Unprintable entity" "Unprintable entity" "Unprintable entity" "Unprintable entity" "Unprintable entity" "Unprintable entity" "Unprintable entity") (((min-height . 4) (min-width . 10) (min-height-ignore . 3) (min-width-ignore . 4) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 56) (min-pixel-width . 70) (min-pixel-height-ignore . 42) (min-pixel-width-ignore . 28) (min-pixel-height-safe . 14) (min-pixel-width-safe . 14)) leaf (pixel-width . 766) (pixel-height . 778) (total-width . 109) (total-height . 56) (normal-height . 1.0) (normal-width . 1.0) (parameters (better-jumper-struct . #s(better-jumper-jump-list-struct (0 52 . [(#("/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/train_self_supervised.py" 0 74 (face nil)) 6055 "z03ops") (#("/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py" 0 74 (face nil)) 1923 "84cloq") (#("/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py" 0 74 (face nil)) 2203 "37v6ls") ("/home/awannaphasch2016/org/refile.org" 2922 "jotrxx") ("/home/awannaphasch2016/org/notes.org" 1 "wtvg1i") ("/home/awannaphasch2016/org/refile.org" 2945 "cz0s76") ("/home/awannaphasch2016/org/notes.org" 1 "xdzp9h") ("/home/awannaphasch2016/org/refile.org" 2945 "zflt0f") ("/home/awannaphasch2016/org/notes.org" 9 "dlpe7b") ("/home/awannaphasch2016/org/refile.org" 2945 "a25jtk") ("/home/awannaphasch2016/org/refile.org" 3315 "jkb58w") ("/home/awannaphasch2016/org/notes.org" 1 "nh65x9") ("/home/awannaphasch2016/org/refile.org" 3315 "6e6p6p") ("/home/awannaphasch2016/org/refile.org" 3314 "ljbpmj") ("/home/awannaphasch2016/org/notes.org" 1 "re8pgl") ("/home/awannaphasch2016/org/notes.org" 9 "k1h440") ("/home/awannaphasch2016/org/refile.org" 3314 "k5706o") ("/home/awannaphasch2016/org/notes.org" 1 "tu7h7f") ("/home/awannaphasch2016/org/refile.org" 3314 "t7as40") ("/home/awannaphasch2016/org/notes.org" 1 "sb46nm") ("/home/awannaphasch2016/org/refile.org" 3314 "puomtj") ("/home/awannaphasch2016/org/notes.org" 6 "h351f7") ("/home/awannaphasch2016/org/refile.org" 3314 "719uck") ("/home/awannaphasch2016/org/refile.org" 3282 "n6jh9q") (#("/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py" 0 74 (face nil)) 4607 "gm98pq") ("/home/awannaphasch2016/org/refile.org" 3282 "pbquz8") ("/home/awannaphasch2016/org/refile.org" 3405 "mvzvhx") (#("/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py" 0 74 (face nil)) 4607 "vq3hjo") ("/home/awannaphasch2016/org/refile.org" 3405 "i5b1zv") (#("/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py" 0 74 (face nil)) 4659 "1p3ghd") ("/home/awannaphasch2016/org/refile.org" 3574 "omn0g0") ("/home/awannaphasch2016/org/refile.org" 3573 "lg055y") (#("/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py" 0 74 (face nil)) 4656 "y92q5c") ("/home/awannaphasch2016/org/refile.org" 3573 "nc1t2s") ("/home/awannaphasch2016/org/refile.org" 3409 "3txa82") (#("/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py" 0 74 (face nil)) 4656 "ap5nr4") ("/home/awannaphasch2016/org/refile.org" 3279 "jm8c0y") ("/home/awannaphasch2016/org/refile.org" 3451 "vayxz9") (#("/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py" 0 74 (face nil)) 4656 "ldbmg6") ("/home/awannaphasch2016/org/refile.org" 3451 "nbam5b") ("/home/awannaphasch2016/org/refile.org" 3410 "i2ejqb") ("/home/awannaphasch2016/org/refile.org" 3112 "ddvou6") ("/home/awannaphasch2016/org/refile.org" 3110 "2vepgp") (#("/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py" 0 74 (face nil)) 4831 "9f2nzg") ("/home/awannaphasch2016/org/refile.org" 3111 "usvdw6") ("/home/awannaphasch2016/org/notes.org" 1 "nsrvfi") ("/home/awannaphasch2016/org/refile.org" 2945 "t9iqwg") ("/home/awannaphasch2016/org/refile.org" 3182 "vqlgbb") ("/home/awannaphasch2016/org/notes.org" 1 "iqn74o") ("/home/awannaphasch2016/org/refile.org" 3182 "1mx6e0") ("/home/awannaphasch2016/org/refile.org" 3116 "0a6t3w") ("/home/awannaphasch2016/org/notes.org" 1 "e7jjz1") nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil]) -1))) (buffer "notes.org" (selected . t) (hscroll . 0) (fringes 4 4 t nil) (margins nil) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 1) (start . 1)) (prev-buffers ("refile.org" 1566 2945) ("notes.org" 1 1) ("data_processing.py" 2521 4831) ("diary.org" 1 192) ("train_self_supervised.py" 5248 7898) ("*doom*" 1 1540) ("*scratch*" 1 1))) nil nil nil nil)) (persp-buffer-predicate-old) (persp-buffer-predicate-generated . "Unprintable entity") (last-focus-update . t) (frameset--id . "250A-83C3-52A4-3201") (frameset--mini t . t) (frameset--text-pixel-width . 758) (frameset--text-pixel-height . 792) (width . 108) (modeline . t) (unsplittable) (left . 1) (top . 31) (icon-name) (display . "172.29.16.1:0") (explicit-name)) ((min-height . 4) (min-width . 10) (min-height-ignore . 3) (min-width-ignore . 4) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 56) (min-pixel-width . 70) (min-pixel-height-ignore . 42) (min-pixel-width-ignore . 28) (min-pixel-height-safe . 14) (min-pixel-width-safe . 14)) leaf (pixel-width . 766) (pixel-height . 778) (total-width . 109) (total-height . 56) (normal-height . 1.0) (normal-width . 1.0) (parameters (better-jumper-struct . #s(better-jumper-jump-list-struct (0 52 . [(#("/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/train_self_supervised.py" 0 74 (face nil)) 6055 "z03ops") (#("/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py" 0 74 (face nil)) 1923 "84cloq") (#("/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py" 0 74 (face nil)) 2203 "37v6ls") ("/home/awannaphasch2016/org/refile.org" 2922 "jotrxx") ("/home/awannaphasch2016/org/notes.org" 1 "wtvg1i") ("/home/awannaphasch2016/org/refile.org" 2945 "cz0s76") ("/home/awannaphasch2016/org/notes.org" 1 "xdzp9h") ("/home/awannaphasch2016/org/refile.org" 2945 "zflt0f") ("/home/awannaphasch2016/org/notes.org" 9 "dlpe7b") ("/home/awannaphasch2016/org/refile.org" 2945 "a25jtk") ("/home/awannaphasch2016/org/refile.org" 3315 "jkb58w") ("/home/awannaphasch2016/org/notes.org" 1 "nh65x9") ("/home/awannaphasch2016/org/refile.org" 3315 "6e6p6p") ("/home/awannaphasch2016/org/refile.org" 3314 "ljbpmj") ("/home/awannaphasch2016/org/notes.org" 1 "re8pgl") ("/home/awannaphasch2016/org/notes.org" 9 "k1h440") ("/home/awannaphasch2016/org/refile.org" 3314 "k5706o") ("/home/awannaphasch2016/org/notes.org" 1 "tu7h7f") ("/home/awannaphasch2016/org/refile.org" 3314 "t7as40") ("/home/awannaphasch2016/org/notes.org" 1 "sb46nm") ("/home/awannaphasch2016/org/refile.org" 3314 "puomtj") ("/home/awannaphasch2016/org/notes.org" 6 "h351f7") ("/home/awannaphasch2016/org/refile.org" 3314 "719uck") ("/home/awannaphasch2016/org/refile.org" 3282 "n6jh9q") (#("/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py" 0 74 (face nil)) 4607 "gm98pq") ("/home/awannaphasch2016/org/refile.org" 3282 "pbquz8") ("/home/awannaphasch2016/org/refile.org" 3405 "mvzvhx") (#("/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py" 0 74 (face nil)) 4607 "vq3hjo") ("/home/awannaphasch2016/org/refile.org" 3405 "i5b1zv") (#("/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py" 0 74 (face nil)) 4659 "1p3ghd") ("/home/awannaphasch2016/org/refile.org" 3574 "omn0g0") ("/home/awannaphasch2016/org/refile.org" 3573 "lg055y") (#("/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py" 0 74 (face nil)) 4656 "y92q5c") ("/home/awannaphasch2016/org/refile.org" 3573 "nc1t2s") ("/home/awannaphasch2016/org/refile.org" 3409 "3txa82") (#("/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py" 0 74 (face nil)) 4656 "ap5nr4") ("/home/awannaphasch2016/org/refile.org" 3279 "jm8c0y") ("/home/awannaphasch2016/org/refile.org" 3451 "vayxz9") (#("/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py" 0 74 (face nil)) 4656 "ldbmg6") ("/home/awannaphasch2016/org/refile.org" 3451 "nbam5b") ("/home/awannaphasch2016/org/refile.org" 3410 "i2ejqb") ("/home/awannaphasch2016/org/refile.org" 3112 "ddvou6") ("/home/awannaphasch2016/org/refile.org" 3110 "2vepgp") (#("/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py" 0 74 (face nil)) 4831 "9f2nzg") ("/home/awannaphasch2016/org/refile.org" 3111 "usvdw6") ("/home/awannaphasch2016/org/notes.org" 1 "nsrvfi") ("/home/awannaphasch2016/org/refile.org" 2945 "t9iqwg") ("/home/awannaphasch2016/org/refile.org" 3182 "vqlgbb") ("/home/awannaphasch2016/org/notes.org" 1 "iqn74o") ("/home/awannaphasch2016/org/refile.org" 3182 "1mx6e0") ("/home/awannaphasch2016/org/refile.org" 3116 "0a6t3w") ("/home/awannaphasch2016/org/notes.org" 1 "e7jjz1") nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil nil]) -1))) (buffer "notes.org" (selected . t) (hscroll . 0) (fringes 4 4 t nil) (margins nil) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 1) (start . 1)) (prev-buffers ("refile.org" 1566 2945) ("notes.org" 1 1) ("data_processing.py" 2521 4831) ("diary.org" 1 192) ("train_self_supervised.py" 5248 7898) ("*doom*" 1 1540) ("*scratch*" 1 1))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '(#("h.j" 0 3 (isearch-regexp-function nil isearch-case-fold-search t)) #("h." 0 2 (isearch-regexp-function nil isearch-case-fold-search t)) #("fof" 0 3 (isearch-case-fold-search t isearch-regexp-function nil)) #("j" 0 1 (isearch-case-fold-search t isearch-regexp-function nil))))
+(setq regexp-search-ring nil)
+(setq register-alist '((107) (116) (48 . "    n_new_nodes = len(new_test_node_set) // 2\n")))
+(setq file-name-history '("~/org/" "~/org/notes.org" "~/org/refile.org" "~/org/notes.org" "/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py" "/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/train_self_supervised.py" "/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py" "/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/model/temporal_attention.py" "/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/train_self_supervised.py" "/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py" "/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/train_self_supervised.py" "~/org/refile.org" "~/.doom.d/config.el" "~/org/refile.org" "~/org/notes.org" "/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py" "~/.doom.d/config.el" "/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/preprocess_data.py" "~/Documents/Working/tgn/utils/preprocess_data.py" "/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/" "/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/train_self_supervised.py" "/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/" "~/.doom.d/config.el" "/mnt/c/Users/terng/Documents/" "/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/train_self_supervised.py" "~/Documents/Working/tgn/train_self_supervised.py" "~/.doom.d/config.el" "~/Documents/Working/tgn/train_self_supervised.py" "~/.doom.d/config.el" "~/Documents/Working/tgn/train_self_supervised.py" "~/Documents/Working/tgn/utils/preprocess_data.py" "~/Documents/Working/tgn/" "~/Documents/Working/tgn/data/reddit_head.csv" "~/.doom.d/config.el" "~/Documents/Working/tgn/tmp/tmp.py" "~/org/refile.org" "~/.doom.d/config.el" "~/.emacs.d/.local/elpa/dap-mode-20211003.934/dap-python.el" "~/.doom.d/config.el" "~/org/refile.org" "~/org/todo.org" "~/Documents/Working/tgn/tmp/tmp.py" "~/.doom.d/config.el" "~/Documents/Working/tgn/tmp/tmp.py" "~/.doom.d/config.el" "~/.emacs.d/.local/elpa/dap-mode-20211003.934/dap-mode.el" "~/.doom.d/init.el" "~/.doom.d/config.el" "~/Documents/Working/tgn/tmp/tmp.py" "~/.emacs.d/.local/etc/workspaces/autosave1" "~/.emacs.d/.local/etc/workspaces/autosave" "~/.emacs.d/auto-save-list/autosave" "~/Documents/Working/tgn/tmp/tmp.py" "~/Documents/Working/tgn/utils/utils.py" "~/Documents/Working/tgn/utils/preprocess_data.py" "~/Documents/Working/tgn/tmp/tmp.py" "~/Documents/Working/tgn/utils/preprocess_data.py" "~/Documents/Working/" "~/Documents/Books/Writing GNU Emacs Extensions - Bob Glickstein.pdf:Zone.Identifier" "~/Scratches/scratch.el" "~/.doom.d/config.el" "~/Documents/MyPapers/Paper-Covid19TrendPredictionSurvey/references.bib" "~/.doom.d/init.el" "~/Scratches/scratch.org" "~/.doom.d/config.el" "~/Scratches/scratch.org" "~/.doom.d/config.el" "~/Scratches/tmp1.org" "~/.doom.d/config.el" "~/.doom.d/init.el" "~/org/refile.org" "~/org/journal.org" "~/.doom.d/config.el" "~/org/todo.org" "~/.doom.d/config.el" "~/Scratches/tmp.org" "~/.doom.d/config.el" "~/Scratches/tmp.org" "~/org/refile.org" "~/Scratches/scratch.org" "~/.doom.d/config.el" "~/org/todo.org" "~/Scratches/tmp.org" "~/Scratches/tmp1.org" "~/Scratches/scratch.org" "~/.doom.d/config.el" "~/Scratches/scratch.org" "~/.doom.d/config.el" "~/Scratches/tmp1.org" "~/.doom.d/snippets/org-mode/ipython_block" "~/Scratches/tmp.org" "~/.doom.d/init.el" "~/Documents/MyPapers/Paper-Covid19TrendPredictionSurvey/main.pdf" "~/Scratches/tmp.pdf" "~/Documents/MyPapers/Paper-Covid19TrendPredictionSurvey/main.tex" "~/Scratches/tmp1.org" "~/org/journal.org" "~/Documents/MyPapers/Paper-Covid19TrendPredictionSurvey/" "~/.doom.d/config.el" "~/.doom.d/packages.el"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/home/awannaphasch2016/org/notes.org"
+  "notes.org"
+  'org-mode
+  '(visual-line-mode eldoc-mode general-override-mode persp-mode smartparens-mode yas-minor-mode projectile-mode evil-snipe-local-mode evil-escape-mode evil-goggles-mode company-mode better-jumper-local-mode which-key-mode flycheck-mode ws-butler-mode gcmh-mode vi-tilde-fringe-mode whitespace-mode anzu-mode evil-traces-mode org-indent-mode evil-org-mode)
+  1
+  '(1 nil)
+  nil
+  nil
+  '((show-trailing-whitespace) (indicate-empty-lines . t) (indent-tabs-mode) (buffer-display-time 24926 20927 311442 0) (buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines))
+  '((mark-ring (1 1 9 1 1 9 1 1 1 1 3 1 1 1 3 1))))
+
+(desktop-create-buffer 208
+  "/home/awannaphasch2016/org/refile.org"
+  "refile.org"
+  'org-mode
+  '(visual-line-mode eldoc-mode general-override-mode persp-mode smartparens-mode yas-minor-mode projectile-mode evil-snipe-local-mode evil-escape-mode evil-goggles-mode company-mode better-jumper-local-mode which-key-mode flycheck-mode ws-butler-mode gcmh-mode vi-tilde-fringe-mode whitespace-mode anzu-mode evil-traces-mode org-indent-mode evil-org-mode)
+  2945
+  '(2945 nil)
+  nil
+  nil
+  '((show-trailing-whitespace) (indicate-empty-lines . t) (indent-tabs-mode) (buffer-display-time 24926 20176 218430 700000) (buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines))
+  '((mark-ring (3111 3111 3111 3111 2945 2945 3111 3111 3110 3110 3110 3110 3110 3110 3110 3110))))
+
+(desktop-create-buffer 208
+  #("/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py" 0 74 (face nil))
+  "data_processing.py"
+  'python-mode
+  '(eldoc-mode general-override-mode persp-mode hl-todo-mode smartparens-mode yas-minor-mode dtrt-indent-mode projectile-mode evil-snipe-local-mode evil-escape-mode evil-goggles-mode company-mode better-jumper-local-mode which-key-mode flycheck-mode ws-butler-mode gcmh-mode highlight-numbers-mode vi-tilde-fringe-mode pipenv-mode whitespace-mode git-gutter-mode anzu-mode evil-traces-mode)
+  4831
+  '(4831 nil)
+  nil
+  nil
+  '((indicate-empty-lines . t) (tab-width . 2) (indent-tabs-mode) (buffer-display-time 24926 20127 312028 500000) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring (4831 4831 4656 4831 4656 4656 4656 4831 4831 4659 4607 4607 4607 2203 2203 1923))))
+
+(desktop-create-buffer 208
+  "/home/awannaphasch2016/org/diary.org"
+  "diary.org"
+  'org-mode
+  '(visual-line-mode eldoc-mode general-override-mode persp-mode smartparens-mode yas-minor-mode projectile-mode evil-snipe-local-mode evil-escape-mode evil-goggles-mode company-mode better-jumper-local-mode which-key-mode flycheck-mode ws-butler-mode gcmh-mode vi-tilde-fringe-mode whitespace-mode anzu-mode evil-traces-mode org-indent-mode evil-org-mode)
+  192
+  '(nil nil)
+  nil
+  nil
+  '((show-trailing-whitespace) (indicate-empty-lines . t) (indent-tabs-mode) (buffer-display-time 24926 18206 273434 600000) (buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  #("/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/train_self_supervised.py" 0 74 (face nil))
+  "train_self_supervised.py"
+  'python-mode
+  '(eldoc-mode general-override-mode persp-mode hl-todo-mode smartparens-mode yas-minor-mode dtrt-indent-mode projectile-mode evil-snipe-local-mode evil-escape-mode evil-goggles-mode company-mode better-jumper-local-mode which-key-mode flycheck-mode ws-butler-mode gcmh-mode highlight-numbers-mode vi-tilde-fringe-mode pipenv-mode whitespace-mode git-gutter-mode anzu-mode evil-traces-mode)
+  7898
+  '(7898 nil)
+  nil
+  nil
+  '((indicate-empty-lines . t) (tab-width . 2) (indent-tabs-mode) (buffer-display-time 24926 16922 82627 800000) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring (6055 6055 6055 6055))))
+
+(desktop-create-buffer 208
+  "/home/awannaphasch2016/Scratches/tmp.org"
+  "tmp.org"
+  'org-mode
+  '(visual-line-mode eldoc-mode general-override-mode persp-mode smartparens-mode yas-minor-mode projectile-mode evil-snipe-local-mode evil-escape-mode evil-goggles-mode company-mode better-jumper-local-mode which-key-mode flycheck-mode ws-butler-mode gcmh-mode vi-tilde-fringe-mode whitespace-mode anzu-mode evil-traces-mode org-indent-mode evil-org-mode)
+  1714
+  '(nil nil)
+  nil
+  nil
+  '((show-trailing-whitespace) (indicate-empty-lines . t) (indent-tabs-mode) (buffer-display-time) (buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/awannaphasch2016/org/journal.org"
+  "journal.org"
+  'org-mode
+  '(visual-line-mode eldoc-mode general-override-mode persp-mode smartparens-mode yas-minor-mode projectile-mode evil-snipe-local-mode evil-escape-mode evil-goggles-mode company-mode better-jumper-local-mode which-key-mode flycheck-mode ws-butler-mode gcmh-mode vi-tilde-fringe-mode whitespace-mode anzu-mode evil-traces-mode org-indent-mode evil-org-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((show-trailing-whitespace) (indicate-empty-lines . t) (indent-tabs-mode) (buffer-display-time) (buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/awannaphasch2016/org/todo.org"
+  "todo.org"
+  'org-mode
+  '(visual-line-mode eldoc-mode general-override-mode persp-mode smartparens-mode yas-minor-mode projectile-mode evil-snipe-local-mode evil-escape-mode evil-goggles-mode company-mode better-jumper-local-mode which-key-mode flycheck-mode ws-butler-mode gcmh-mode vi-tilde-fringe-mode whitespace-mode anzu-mode evil-traces-mode org-indent-mode evil-org-mode)
+  898
+  '(nil nil)
+  nil
+  nil
+  '((show-trailing-whitespace) (indicate-empty-lines . t) (indent-tabs-mode) (buffer-display-time) (buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines))
+  '((mark-ring nil)))
+

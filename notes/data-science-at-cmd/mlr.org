@@ -1,0 +1,6 @@
+
+
+* Uncategorized
+#+BEGIN_SRC bash
+mlr --csv cut -f qid1,qid2 train.csv | awk '(NR !=1)' | tr "\n" "," | tr "," "\n" | vd
+#+END_SRC

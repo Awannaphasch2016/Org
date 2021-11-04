@@ -1,0 +1,115 @@
+#+title: building website with org mode
+
+launch website locally using ~httpd-serve-directory~ command
+
+* Dependences Packages
+:PROPERTIES:
+:header-args: noweb-ref packages
+:END:
+
+#+BEGIN_SRC emacs-lisp
+(require 'package)
+(setq package-user-dir (expand-file-name "./.packages"))
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                         ("elpa" . "htpps://elpa.gnu.org/packages/")))
+
+;; Initialize the package system
+(package-initialize)
+
+;; Install dependencies
+(package-install 'htmlize')
+#+END_SRC
+
+* Variables
+#+NAME: require
+#+BEGIN_SRC emacs-lisp
+(require 'ox-publish)
+#+END_SRC
+
+#+NAME: message
+#+BEGIN_SRC emacs-lisp
+(message "Build complete!")
+#+End_src
+
+* Command line
+
+#+BEGIN_SRC sh :tangle ~/org/code/implementation/build-website/org-mode/build.sh
+#!/usr/bin/zsh
+emacs -Q --script build-site.el
+#+END_SRC
+
+* Customization
+:PROPERTIES:
+:header-args: :noweb-ref customization
+:END:
+
+** Customize variables
+
+#+BEGIN_SRC emacs-lisp
+(setq org-html-validation-link nil)
+#+END_SRC
+
+
+** Customize the HTML output
+
+#+BEGIN_SRC emacs-lisp
+(setq org-html-validation-link nil
+      org-html-head-include-scripts nil
+      org-html-head-include-default-style nil
+      org-html-head "<link rel=\"styleheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />")
+#+END_SRC
+
+* Setting up the publish project
+:PROPERTIES:
+:header-args: :noweb-ref setup-project
+:END:
+
+#+NAME: setup-project
+#+BEGIN_SRC emacs-lisp
+;; Define the publishign project
+(setq org-publish-project-alist
+      (list
+       (list "my-org-site"
+             :recursive t
+             :base-directory "~/org/projects/sideprojects/garun"
+             :publishing-directory "~/org/projects/sideprojects/public"
+             :publishing-function 'org-html-publish-to-html
+             :with-author t ;; Don't include author name
+             :with-creator t  ;; Include Emacs and Org version in footer
+             :with-toc t  ;; Include a table of contents
+             :section-numbers nil  ;; Don't include section numbers
+             :time-stamp-file t ;; Don't include time stamp in file
+             )))
+
+;; Generate the site output
+(org-publish-all t)
+#+END_SRC
+
+* Main
+#+BEGIN_SRC emacs-lisp :noweb  tangle :tangle ~/org/code/implementation/build-website/org-mode/build-site.el :comments link
+<<require>>
+;; <<packages>>
+;; <<customization>>
+<<setup-project>>
+<<message>>
+#+END_SRC
+
+#+BEGIN_SRC sh :dir ~/org/code/implementation/build-website/org-mode/
+chmod +x build.sh
+#+END_SRC
+
+#+RESULTS:
+
+#+BEGIN_SRC sh :dir ~/org/code/implementation/build-website/org-mode/
+./build.sh
+#+END_SRC
+
+#+RESULTS:
+
+#+BEGIN_SRC sh
+
+#+END_SRC
+
+#+RESULTS:
+| README.org   |
+| org-mode.org |

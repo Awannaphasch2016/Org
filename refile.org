@@ -1,0 +1,91 @@
+#+FILETAGS: REFILE
+
+* TODO find pimp kratom (mangda) for Bowen. :NOTE:
+:LOGBOOK:
+CLOCK: [2021-09-27 Mon 23:25]--[2021-09-27 Mon 23:31] =>  0:06
+:END:
+[2021-09-27 Mon 23:25]
+[[file:~/org/todo.org::*something][someth* Category]]
+
+* TODO Reading Writing GNU Emacs Extensions
+:LOGBOOK:
+CLOCK: [2021-09-28 Tue 20:49]--[2021-09-28 Tue 20:50] =>  0:01
+:END:
+[2021-09-28 Tue 20:49]
+[[file:~/Scratches/scratch.el::lambda (]]
+** NEXT stop at "Hanlding the Symlink"
+* TODO Use the same organization methods as my "TODO-Manager"
+:LOGBOOK:
+CLOCK: [2021-09-28 Tue 20:58]--[2021-09-28 Tue 20:59] =>  0:01
+:END:
+[2021-09-28 Tue 20:58]
+[[file:~/org/refile.org::*stop at "Hanlding the Symlink"][stop at "Hanlding the Symlink"]]
+* TODO something
+[2021-10-05 Tue 22:27]
+[[file:~/Documents/Working/tgn/tmp/tmp.py::print('something')]]
+* TODO dap-mode don't activate properly with hook
+:LOGBOOK:
+CLOCK: [2021-10-05 Tue 23:49]--[2021-10-05 Tue 23:50] =>  0:01
+:END:
+[2021-10-05 Tue 23:49]
+[[file:~/.doom.d/config.el::(use-package python-mode]]
+* val_time and test_time :NOTE:
+[2021-10-06 Wed 11:41]
+[[file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py::val_time, test_time = list(np.quantile(graph_df.ts, \[0.70, 0.85\]))]]
+* induvtive set up for test set :NOTE:
+:LOGBOOK:
+CLOCK: [2021-10-06 Wed 11:43]--[2021-10-06 Wed 11:44] =>  0:01
+:END:
+[2021-10-06 Wed 11:43]
+[[file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py::new_test_node_set = set(random.sample(test_node_set, int(0.1 * n_total_unique_nodes)))]]
+* node masking :NOTE:
+[2021-10-06 Wed 11:46]
+[[file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py::new_test_destination_mask = graph_df.i.map(lambda x: x in new_test_node_set).values]]
+* mask test-validate nodes such that 10 percent of the node only appear in test and validation set :NOTE:
+:LOGBOOK:
+CLOCK: [2021-10-06 Wed 12:06]--[2021-10-06 Wed 12:08] =>  0:02
+:END:
+[2021-10-06 Wed 12:06]
+[[file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py::new_test_node_set = set(random.sample(test_node_set, int(0.1 * n_total_unique_nodes)))]]
+* once test-validate nodes are randomly sampled. nodes in validation and test sets are mask based on timestamp :NOTE:
+:LOGBOOK:
+CLOCK: [2021-10-06 Wed 12:09]--[2021-10-06 Wed 12:11] =>  0:02
+:END:
+[2021-10-06 Wed 12:09]
+[[file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py::train_mask = np.logical_and(timestamps <= val_time, observed_edges_mask)]]
+* make sure that the masked nodes in validation and test set are not overlapped. :NOTE:
+:LOGBOOK:
+CLOCK: [2021-10-06 Wed 12:23]--[2021-10-06 Wed 12:25] =>  0:02
+:END:
+[2021-10-06 Wed 12:23]
+[[file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/data_processing.py::if different_new_nodes_between_val_and_test:]]
+* in the inductive setting, negatives are sampled only amongst other new nodes :NOTE:
+[2021-10-06 Wed 12:52]
+[[file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/train_self_supervised.py::NB: in the inductive setting, negatives are sampled only amongst other new nodes]]
+* NEXT Respond to  on
+SCHEDULED: <2021-10-07 Thu>
+[2021-10-07 Thu 16:27]
+* NEXT Respond to  on
+SCHEDULED: <2021-10-07 Thu>
+[2021-10-07 Thu 16:27]
+* NEXT Respond to  on
+SCHEDULED: <2021-10-07 Thu>
+[2021-10-07 Thu 16:27]
+* first
+** second
+*** thrid
+** second
+*** four
+* first
+** second
+*** thrid
+* self supervised training :NOTE:
+:LOGBOOK:
+CLOCK: [2021-10-11 Mon 13:41]--[2021-10-11 Mon 13:44] =>  0:03
+:END:
+[2021-10-11 Mon 13:41]
+[[file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/train_self_supervised.py::Train using only training graph]]
+* PHONE ATT&T 800-288-2020
+confirmation order number = 2033805992
+:PHONE:
+[2021-10-12 Tue 18:17]
