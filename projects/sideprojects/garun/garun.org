@@ -161,6 +161,9 @@ The problem is when using these commands the following undesired behavior occurs
 
 Error:
 displaying thumbnail default behavior in doom emacs are strange to use. Behavior is not as the same as the one shown in [[https://youtu.be/NrY3t3W0_cM?t=154][this video.]]
+**** PROJECT Display Online Images
+ref: https://emacs.stackexchange.com/questions/42281/org-mode-is-it-possible-to-display-online-images
+
 *** Bookmark
 ref:
 [[https://www.youtube.com/watch?v=Im8taRkzYAc][Enhance your Emacs experience with Bookmark Plus]]
@@ -170,6 +173,16 @@ If I in the future finds default ~Bookmark~ functionality to be limited, ~Bookma
 
 *** Dired
 **** select files in dired by regex.
+*** Dealing with videos
+**** allow taking notes on video like roam research plugin
+ref:
+https://www.reddit.com/r/emacs/comments/a9upre/watching_video_within_an_emacs_buffer/
+https://github.com/emacs-eaf/emacs-application-framework
+*** Use Emacs Application Framework (EAF)
+ref:
+https://www.youtube.com/watch?v=mJjBZ4MZHBo&ab_channel=AndyStewart
+https://www.youtube.com/watch?v=z9W0pnShEWc&ab_channel=GavinFreeborn
+https://www.youtube.com/watch?v=HK_f8KTuR0s&ab_channel=MatthewZeng
 
 ** current features
 *** org mode

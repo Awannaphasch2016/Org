@@ -1,8 +1,11 @@
 #+TITLE: Magit
 ref:
-[[https://youtu.be/qPfJoeQCIvA?list=PLEoMzSkcN8oMc34dTjyFmTUWbXTKrNfZA][9 Tehcniques to Boost Your Git Workflow with Magit]]
+- System Crafters
+  - [[https://youtu.be/qPfJoeQCIvA?list=PLEoMzSkcN8oMc34dTjyFmTUWbXTKrNfZA][9 Tehcniques to Boost Your Git Workflow with Magit]]
+  - [[https://www.youtube.com/watch?v=zM7K1y4h6UQ&list=PLEoMzSkcN8oMc34dTjyFmTUWbXTKrNfZA&index=3&ab_channel=SystemCrafters][Fix Your Git Commits Like a Rebase Expert with Magit]]
 
-
+* Common Key Binding
+To remove stash, regions or files, type ~x~ to "discard the change."
 
 * Clone
 To clone from github, one can use ~user/reponame~.
@@ -25,7 +28,38 @@ In panel, ~cw~ (Commit -> Reword)
 1. In panel, ~cf~ (Commit -> Fixup)
 2. select a commit with ~v~ (in evil mode)
 3. press ~C-c C-c~ to apply the changes.
+*** Combining commits
+There are two ways to do this:
+- ~fixup~: Merges the changes of a commit into the previous commit.
+- ~squash~: Merges the changes of a commit into the previous commit and combine their commits messgae.
+Use ~fixup~ when you don't care about the commit message and ~squash~ when you want to keep it!
+*** Delete commits
+
 * Branch
 ** create a new branch from the changes of the current branch.
 Use ~bs~ (Branch -> Spin off).
 NOTE: this only works when the branch you're starting from has been pushed to the remote!
+* Stash
+** stash local changes
+In the panel, type ~Zz~
+* Pull
+** Pulling new changes from another branch
+In the panel, type ~Fp~ pull from remote branch.
+* Rebase
+Rebasing rewrite history of commits.
+
+In panel, rebase can be set by typing ~Fr~ where r will rotate options Or press ~r~ to open rebase panel.
+
+Note: if you are not familiar with rebase, make sure to create new branch from the target branch by typing ~bn~ in the panel
+
+For ease of use, interactive rebase can be used (type ~ri~ in panel).
+** reorder commit
+~M-j~ / ~M-n (evil)~: Move the commit forward in time by one commit
+~M-p~ / ~M-j (evil)~: Move the commit backward in time by one commit
+
+* Fetch
+In panel, fetch panel is binded to ~f~
+* Gitignore
+In panel, type ~i~
+* Reset
+In panel, type ~O~.

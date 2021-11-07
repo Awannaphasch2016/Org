@@ -1,0 +1,115 @@
+#+title: Emacs-Application-Framework
+
+* Error
+** installation error
+Following [[https://github.com/emacs-eaf/emacs-application-framework#install][installation guide]], error occurs at step 2 when running
+#+BEGIN_SRC sh
+cd emacs-application-framework
+chmod +x ./install-eaf.py
+./install-eaf.py # error occurs here.
+#+END_SRC
+
+The error is shown below
+#+BEGIN_SRC md
+Setting up python3-markdown (3.1.1-3) ...
+Setting up python3-jupyter-client (6.1.2-1) ...
+Setting up python3-ipykernel (5.2.0-1) ...
+Setting up python3-qtconsole (4.6.0-1) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
+/sbin/ldconfig.real: /usr/lib/wsl/lib/libcuda.so.1 is not a symbolic link
+
+[EAF] Installing python dependencies
+[EAF] Running pip install --user pysocks pypinyin retrying pytaglib pymupdf psutil pyquery feedparser @ /home/awannaphasch2016/.emacs.d/site-lisp/emacs-application-framework
+Collecting pysocks
+  Using cached PySocks-1.7.1-py3-none-any.whl (16 kB)
+Collecting pypinyin
+  Downloading pypinyin-0.43.0-py2.py3-none-any.whl (1.3 MB)
+     |████████████████████████████████| 1.3 MB 1.5 MB/s
+Collecting retrying
+  Using cached retrying-1.3.3-py3-none-any.whl
+Collecting pytaglib
+  Downloading pytaglib-1.4.6.tar.gz (468 kB)
+     |████████████████████████████████| 468 kB 25.5 MB/s
+  Preparing metadata (setup.py) ... done
+Collecting pymupdf
+  Downloading PyMuPDF-1.19.1-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (8.7 MB)
+     |████████████████████████████████| 8.7 MB 3.8 MB/s
+Requirement already satisfied: psutil in /home/awannaphasch2016/.local/lib/python3.8/site-packages (5.8.0)
+Requirement already satisfied: pyquery in /usr/lib/python3/dist-packages (1.2.9)
+Collecting feedparser
+  Downloading feedparser-6.0.8-py3-none-any.whl (81 kB)
+     |████████████████████████████████| 81 kB 826 kB/s
+Requirement already satisfied: six>=1.7.0 in /usr/lib/python3/dist-packages (from retrying) (1.14.0)
+Collecting sgmllib3k
+  Using cached sgmllib3k-1.0.0-py3-none-any.whl
+Building wheels for collected packages: pytaglib
+  Building wheel for pytaglib (setup.py) ... error
+  ERROR: Command errored out with exit status 1:
+   command: /usr/bin/python3 -u -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-fgei3iak/pytaglib_83561cc77a7349c1959bc836131bdd71/setup.py'"'"'; __file__='"'"'/tmp/pip-install-fgei3iak/pytaglib_83561cc77a7349c1959bc836131bdd71/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' bdist_wheel -d /tmp/pip-wheel-8e2vw9gk
+       cwd: /tmp/pip-install-fgei3iak/pytaglib_83561cc77a7349c1959bc836131bdd71/
+  Complete output (20 lines):
+  running bdist_wheel
+  running build
+  running build_py
+  file src/pytaglib.py (for module pytaglib) not found
+  creating build
+  creating build/lib.linux-x86_64-3.8
+  copying src/pyprinttags.py -> build/lib.linux-x86_64-3.8
+  file src/pytaglib.py (for module pytaglib) not found
+  running build_ext
+  building 'taglib' extension
+  creating build/temp.linux-x86_64-3.8
+  creating build/temp.linux-x86_64-3.8/src
+  /home/awannaphasch2016/anaconda3/bin/x86_64-conda_cos6-linux-gnu-cc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/awannaphasch2016/anaconda3/include -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /home/awannaphasch2016/anaconda3/include -fPIC -I/usr/include/python3.8 -c src/taglib.cpp -o build/temp.linux-x86_64-3.8/src/taglib.o
+  In file included from /usr/include/python3.8/Python.h:8:0,
+                   from src/taglib.cpp:21:
+  /usr/include/python3.8/pyconfig.h:3:12: fatal error: x86_64-linux-gnu/python3.8/pyconfig.h: No such file or directory
+   #  include <x86_64-linux-gnu/python3.8/pyconfig.h>
+              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  compilation terminated.
+  error: command '/home/awannaphasch2016/anaconda3/bin/x86_64-conda_cos6-linux-gnu-cc' failed with exit status 1
+  ----------------------------------------
+  ERROR: Failed building wheel for pytaglib
+  Running setup.py clean for pytaglib
+Failed to build pytaglib
+Installing collected packages: sgmllib3k, retrying, pytaglib, pysocks, pypinyin, pymupdf, feedparser
+    Running setup.py install for pytaglib ... error
+    ERROR: Command errored out with exit status 1:
+     command: /usr/bin/python3 -u -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-fgei3iak/pytaglib_83561cc77a7349c1959bc836131bdd71/setup.py'"'"'; __file__='"'"'/tmp/pip-install-fgei3iak/pytaglib_83561cc77a7349c1959bc836131bdd71/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /tmp/pip-record-t8ie149h/install-record.txt --single-version-externally-managed --user --prefix= --compile --install-headers /home/awannaphasch2016/.local/include/python3.8/pytaglib
+         cwd: /tmp/pip-install-fgei3iak/pytaglib_83561cc77a7349c1959bc836131bdd71/
+    Complete output (20 lines):
+    running install
+    running build
+    running build_py
+    file src/pytaglib.py (for module pytaglib) not found
+    creating build
+    creating build/lib.linux-x86_64-3.8
+    copying src/pyprinttags.py -> build/lib.linux-x86_64-3.8
+    file src/pytaglib.py (for module pytaglib) not found
+    running build_ext
+    building 'taglib' extension
+    creating build/temp.linux-x86_64-3.8
+    creating build/temp.linux-x86_64-3.8/src
+    /home/awannaphasch2016/anaconda3/bin/x86_64-conda_cos6-linux-gnu-cc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/awannaphasch2016/anaconda3/include -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /home/awannaphasch2016/anaconda3/include -fPIC -I/usr/include/python3.8 -c src/taglib.cpp -o build/temp.linux-x86_64-3.8/src/taglib.o
+    In file included from /usr/include/python3.8/Python.h:8:0,
+                     from src/taglib.cpp:21:
+    /usr/include/python3.8/pyconfig.h:3:12: fatal error: x86_64-linux-gnu/python3.8/pyconfig.h: No such file or directory
+     #  include <x86_64-linux-gnu/python3.8/pyconfig.h>
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    compilation terminated.
+    error: command '/home/awannaphasch2016/anaconda3/bin/x86_64-conda_cos6-linux-gnu-cc' failed with exit status 1
+    ----------------------------------------
+ERROR: Command errored out with exit status 1: /usr/bin/python3 -u -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-fgei3iak/pytaglib_83561cc77a7349c1959bc836131bdd71/setup.py'"'"'; __file__='"'"'/tmp/pip-install-fgei3iak/pytaglib_83561cc77a7349c1959bc836131bdd71/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /tmp/pip-record-t8ie149h/install-record.txt --single-version-externally-managed --user --prefix= --compile --install-headers /home/awannaphasch2016/.local/include/python3.8/pytaglib Check the logs for full command output.
+#+END_SRC
+
+After a brief look into the problem, it is clear that ~pytablib~ failed to compile.
+For this reason, I look into the code =~/Downloads/pytablib/src/taglib.pyx=.
+
+I succesfully reproduce error where ~pytablib~ failed to compiled by running the following command
+#+BEGIN_SRC sh :dir ~/Downloads/pytaglib/
+cythonize -a -i src/taglib.pyx
+#+END_SRC
+
+#+RESULTS:
+: running build_ext

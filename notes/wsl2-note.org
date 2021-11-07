@@ -1,0 +1,12 @@
+#+TITLE: Wsl2 Note
+
+* Configuration
+
+
+** open files from within wsl2 using window applicationa
+
+<2021-11-07 Sun>
+to open files from within wsl2 using window applications, I use symbolic link from ~/usr/bin/wslview~ to ~/usr/local/bin/xd-opens~ as followed:
+#+BEGIN_SRC sh :noeval
+sudo ln -s /usr/bin/wslview /usr/local/bin/xd-opens
+#+END_SRC

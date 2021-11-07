@@ -1,0 +1,22 @@
+#+TITLE: Lsp Mode Note
+
+
+* References
+There ara separate projects involve in emacs ~lsp-mode~.
+- main lsp website is hosted by Microsoft. (because Microsoft creates it)
+  - not all the server in
+- emacs also has its own website and github.
+    contents inside the website is the most updated about emacs-lsp
+    since I am using emacs, documentation of lsp should be refers to emacs-lsp instead of the main lsp webiste by Microsoft.
+
+* Configuration
+
+** switch lsp server
+to switch lsp server, one must be to file with target language extension then press ~+lsp/switch-client~ to select lsp client.
+
+** Server priority
+When there exist more than one servers for language, the one with highest priority will be used.
+lsp-clients.el predefined servers have priority -1, lower than external packages (priority 0 if unspecified). If a server is registered with :add-on? flag set to t it will be started in parallel to the other servers that are registered for the current mode.
+
+** select the server per project
+You may create dir-local for each of the projects and specify list of lsp-enabled-clients.

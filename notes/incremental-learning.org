@@ -1,0 +1,23 @@
+#+TITLE: Incremental Learning
+
+* Emacs
+** learn to implement in emacs using elisp
+- reading [[file:doom-emacs/packages/emacs-application-framework.org::https://github.com/emacs-eaf/emacs-application-framework#install][What is a backtrace & how to produce them]]
+- [[file:books/Writing GNU Emacs Extension - Bob Glickstein.org::*Basic operations][stop at this chapter of 'writing with elisp...']]
+** Contribute to EAF
+- look at [[https://github.com/emacs-eaf/emacs-application-framework/wiki/Todo-List][EAF TODO list]] and pick one
+* Blockchain
+** learn Solona
+- learning rust using ~rustling~
+** understand funcdamental of blockchain
+- reading the following
+  https://dl.acm.org/doi/pdf/10.1145/3471140?casa_token=wPW15CfV4zgAAAAA:_JbcvPAWjkFnU7fQBbYut8zGMIjgiDE2jhrLyfJo8hjohFOtGLQJa4V27ysLkTlhphZaf2gPAxgNyw
+  - trying to understand ~encorse peers~ (~endorser transaction~) used in ~Hyperledger Fabric~
+    - I stopped [[https://hyperledger-fabric.readthedocs.io/en/release-2.2/peers/peers.html#peers-and-channels][here]]
+
+* Algorithm
+learning from leetcode
+* Prompt Programming
+reading [[https://generative.ink/posts/methods-of-prompt-programming/][methods of prompt programming]]
+* Deep learning
+working on [[file:~/org/researches/ssl-dynamic-graph/log-ssl-dynamic-graph.org][log of ssl-dgnn]]

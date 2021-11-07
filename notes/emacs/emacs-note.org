@@ -1,0 +1,11 @@
+#+TITLE: Emacs Note
+
+* Map of Contents (MOCs)
+
+** ~+eval/region~ and ~+eval/buffer~ doesn't send results from overlays to ~Message~ buffer, but ~eros-eval-last-sexp~ does.
+*** Background (information and description of goal)
+- note
+  - Why are you doing this? What is the movitation?
+  - What is your expectation of the results?
+
+From my brief investigation, I notice that although all commands evaluate lisp code, it wasn't implemented on the same commands. (not much similarity beyond eval and overlays)

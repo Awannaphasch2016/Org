@@ -1,0 +1,17 @@
+#+TITLE: Rust Notes
+
+* String
+
+** String literal
+string literal must be presented in the code.
+string literal are immutable.
+** String type
+string type manages data allocated on the heap.j
+
+* Ownership
+memory in Rust is managed through ownership with a set of rules that the compiler check at compile time.
+
+** Ownership Rules
+- each value in Rust has a variable that's called its owner.
+- There can only be one owner at a time.
+- When the owner goes out of scope, the value will be dropped.
