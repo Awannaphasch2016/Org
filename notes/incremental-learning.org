@@ -9,7 +9,7 @@
 * Blockchain
 ** learn Solona
 - learning rust using ~rustling~
-** understand funcdamental of blockchain
+** TODO understand funcdamental of blockchain
 - reading the following
   https://dl.acm.org/doi/pdf/10.1145/3471140?casa_token=wPW15CfV4zgAAAAA:_JbcvPAWjkFnU7fQBbYut8zGMIjgiDE2jhrLyfJo8hjohFOtGLQJa4V27ysLkTlhphZaf2gPAxgNyw
   - trying to understand ~encorse peers~ (~endorser transaction~) used in ~Hyperledger Fabric~
