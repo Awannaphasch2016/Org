@@ -1,7 +1,6 @@
 #+TITLE: Emacs Note
 
 * Map of Contents (MOCs)
-
 ** ~+eval/region~ and ~+eval/buffer~ doesn't send results from overlays to ~Message~ buffer, but ~eros-eval-last-sexp~ does.
 *** Background (information and description of goal)
 - note
@@ -9,3 +8,51 @@
   - What is your expectation of the results?
 
 From my brief investigation, I notice that although all commands evaluate lisp code, it wasn't implemented on the same commands. (not much similarity beyond eval and overlays)
+* Imenu
+**  How does Imenu function works?
+~imenu~ function when called when called will jump to a place in the buffer chosen using either a buffer menu or mouse menu.
+
+#+BEGIN_SRC emacs-lisp
+(imenu INDEX-ITEM)
+#+END_SRC
+Jump to a place in the buffer chosen using a buffer menu or mouse menu.
+~INDEX-ITEM~ specifies the position.
+
+#+BEGIN_SRC emacs-lisp
+(imenu-choose-buffer-index &optional PROMPT ALIST)
+#+END_SRC
+~imenu-choose-buffer-index~ lets the user select from a buffer index and return the chosen index.
+
+The returned value is of the form (INDEX-NAME . INDEX-POSITION) which is a format of simple elements in ~imenu--index-alist~.
+
+~imenu--index-alist~ is the current buffer index alist.
+~imenu--index-alist~ has the following elements:
+- simple element
+  (INDEX-NAME . POSITION)
+- special elements
+  (INDEX-NAME POSITION FUNCTION ARGUMENTS...).
+- nested sub-alist element
+  (INDEX-NAME . SUB-ALIST)
+
+#+BEGIN_SRC emacs-lisp
+(imenu-choose-buffer-index)
+#+END_SRC
+
+#+RESULTS:
+: (Imenu . #<marker at 506 in emacs-note.org>)
+
+#+BEGIN_SRC emacs-lisp
+(imenu '((Imenu . #<marker at 506 in emacs-note.org>)))
+#+END_SRC
+
+*** [2021-11-07 Sun]: WHAT HAVE I DONE AND WHAT TO DO NEXT?
+so the goal is to implement a simple imenu to reproduce the results of different call ~imenu~ on the buffer.
+
+note: behavior of calling ~imenu~ using key binding is different from select ~imenu~ from ~M-x~. Given what I know, I speculate that ~imenu~ take input directly from buffer in which it is, hence, selecting ~imenu~ from ~M-x~ produce undesired side effects.
+
+So far, I unable to pass output from ~imenu-choose-buffer-index~ (which, according to the documentation, suppose to produce INDEX-ITEM ) to ~imenu~, so I suspect that my understanding of ~marker~ concept may blind me from the error.
+
+Next next I planned to read about ~marker~ from [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Markers.html][this page]].
+
+
+* Marker
