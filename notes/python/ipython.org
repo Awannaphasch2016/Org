@@ -1,0 +1,4 @@
+#+TITLE: Ipython
+
+* Outputs
+Ipython support rich outputs.

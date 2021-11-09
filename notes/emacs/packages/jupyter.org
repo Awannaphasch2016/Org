@@ -1,0 +1,63 @@
+#+TITLE: Jupyter
+
+
+* Jupyter Kernel
+Jupyter kernal is run by ~jupyter-run-repl~
+
+the kernal can be connected remotely when ~default-directory~ whose value is set depending on the current buffer
+** Select Available Kernels
+To select available kernels, ~jupyter-find-kernelspecs~ can be used.
+To find specific kernels, ~jupyter-find-kernel-specs~ use regular expression to match value of ~jupyter-available_kernelspecs~
+
+~jupyter-available_kernelspecs~ will return alist of kernelspecs as (DIRECTORY . PLIST).
+DIRECTORY is resource directory of kernel, and PLIST is its kernelspec.
+
+#+BEGIN_SRC emacs-lisp
+(jupyter-available-kernelspecs)
+#+END_SRC
+
+value of ~jupyter-available_kernelspecs~ is formed by parse the output from the following shell command
+#+BEGIN_SRC sh
+jupyter kernelspec list
+#+END_SRC
+
+#+RESULTS:
+| Available | kernels:                                                       |
+| python3   | /home/awannaphasch2016/anaconda3/share/jupyter/kernels/python3 |
+
+** Connect to Kernel.
+To connect to existing kernel using [[https://jupyter-client.readthedocs.io/en/stable/kernels.html#connection-files][the kernel's connection file]], run ~jupyter-connect-repl~
+
+To attach buffer to existing kernel, run ~jupyter-repl-associate-buffer~. This will enable the corresponding mode by calling ~jupyter-repl-interaction-mode~.
+
+** Implementation of Kernel and Client Persistence.
+According to design option, client is attached to buffer (as we know, each buffer must have exactly one major mode).
+
+#+BEGIN_QUOTE
+Jupyter-Repl-Persisten is a minor mode (no indicator):
+Global minor mode to persist Jupyter REPL connections.
+When the ‘jupyter-current-client’ of the current buffer is a REPL
+client, its value is propagated to all buffers switched to that
+have the same ‘major-mode’ as the client’s kernel language and
+‘jupyter-repl-interaction-mode’ is enabled in those buffers.
+#+END_QUOTE
+The quote above is obtained by running ~describe-mode~ in any buffer.
+
+From what I understand, ~Jupyter-Repl-Persistent~ is a minor mode existing in all buffer to connect to the correct jupyter REPL client (~jupyter-current-client~). From reading the quote above, If I switched into new buffer that have the same major mode as the kernels of the connected client, +the buffer will be persisted with the same client by enable ~jupyter-repl-interaction-mode~.+ value of ~jupyter-current-client~ will always be the same.
+
+I am not sure about this, but I assume that new clients will be use to connect existing kernel.
+One client, multiple buffers just doesn't sit right with me for some reason. Again, I am not sure.
+*** Integration with emacsclient
+If emacsclient is set as the EDITOR and evaluated code opens a file in a major-mode compatible with the client that sent the code, the opened file will automatically be associated with the client and have jupyter-repl-interaction-mode enabled.
+
+This feature probably wont work correctly when there are multiple competing clients sending requests to their underlying kernels that want to open files or if the underlying kernel takes longer than jupyter-long-timeout seconds to open a file.
+
+See jupyter-server-mode-set-client for more details.
+
+* Autocompletion
+Completion is implemented through the ~completion-at-point~ interface.
+* Key Binding
+** Navigation
+To navigate the REPL history: ~M-n~ and ~M-p~.
+** Interacting with REPL kernels
+see [[https://github.com/nnicandro/emacs-jupyter#associating-buffers-with-a-repl-jupyter-repl-interaction-mode][README]] page

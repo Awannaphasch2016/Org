@@ -1,13 +1,30 @@
 #+TITLE: Incremental Learning
 
+* References
+** Amazing blogs or articles to boarden knowledge away from my responsibility :)
+[[https://eli.thegreenplace.net/archives/all][Eli Bendersky's website]]
+[[https://www.gwern.net/index][Gwern Branwen]]
+
+** Awesome repos
+[[https://github.com/semi-technologies/awesome-weaviate][Awesome Weaviate]]
+
 * Emacs
-** learn to implement in emacs using elisp
+** TODO learn to implement in emacs using elisp
 - reading [[file:doom-emacs/packages/emacs-application-framework.org::https://github.com/emacs-eaf/emacs-application-framework#install][What is a backtrace & how to produce them]]
 - [[file:books/Writing GNU Emacs Extension - Bob Glickstein.org::*Basic operations][stop at this chapter of 'writing with elisp...']]
-** Contribute to EAF
+** TODO Contribute to EAF
 - look at [[https://github.com/emacs-eaf/emacs-application-framework/wiki/Todo-List][EAF TODO list]] and pick one
+** Learning how to use jupyter-notebook from [[https://youtu.be/RD0o2pkJBaI?t=1905][this tutorial.]]
+
+*** TODO make notes on how [[https://github.com/nnicandro/emacs-jupyter#org-mode-source-blocks][jupyter-notebook integrate with org-mode.]]
+*** TODO figure out how to properly use :noweb header tags in org babel
+see [[https://www.gnu.org/software/emacs/manual/html_node/org/Noweb-Reference-Syntax.html][noweb reference syntax]]
+see also [[file:~/org/projects/sideprojects/build-website/org-mode.org][example]]
+
+
+
 * Blockchain
-** learn Solona
+** TODO learn Solona
 - learning rust using ~rustling~
 ** TODO understand funcdamental of blockchain
 - reading the following
@@ -16,8 +33,14 @@
     - I stopped [[https://hyperledger-fabric.readthedocs.io/en/release-2.2/peers/peers.html#peers-and-channels][here]]
 
 * Algorithm
-learning from leetcode
+** TODO learning from leetcode
+*** Add Two Numbers
+learning about link list
+** TODO reading [[https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-4.html][Structure and Interpretation of Computer Programs]]
+stopped [[https://sicp.sourceacademy.org/chapters/1.1.html][here]]
+
 * Prompt Programming
-reading [[https://generative.ink/posts/methods-of-prompt-programming/][methods of prompt programming]]
+** TODO reading [[https://generative.ink/posts/methods-of-prompt-programming/][methods of prompt programming]]
+** TODO reading [[id:][GPT-3 creative fiction]]
 * Deep learning
-working on [[file:~/org/researches/ssl-dynamic-graph/log-ssl-dynamic-graph.org][log of ssl-dgnn]]
+** TODO working on [[file:~/org/researches/ssl-dynamic-graph/log-ssl-dynamic-graph.org][log of ssl-dgnn]]

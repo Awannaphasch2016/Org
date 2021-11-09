@@ -1,0 +1,6 @@
+#+TITLE: Data Structures
+
+* linked list
+
+#+BEGIN_SRC jupyter-python
+#+END_SRC

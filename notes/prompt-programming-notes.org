@@ -1,1 +1,6 @@
 #+TITLE: Prompt Programming Notes
+
+* Characteristic of GPT-3 prediction dynamics?
+1. GPT-3 distribution is a "superposition of authors."
+2. GPT-3 is contrainted by its ability to predict sequence of tokens.
+3. When prompt doesn't resemble the training data, GPT-3 behavior tends to be non-anthropomorphic, e.g. getting stuck in loops.
