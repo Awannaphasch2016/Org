@@ -21,8 +21,6 @@
 see [[https://www.gnu.org/software/emacs/manual/html_node/org/Noweb-Reference-Syntax.html][noweb reference syntax]]
 see also [[file:~/org/projects/sideprojects/build-website/org-mode.org][example]]
 
-
-
 * Blockchain
 ** TODO learn Solona
 - learning rust using ~rustling~
@@ -44,3 +42,14 @@ stopped [[https://sicp.sourceacademy.org/chapters/1.1.html][here]]
 ** TODO reading [[id:][GPT-3 creative fiction]]
 * Deep learning
 ** TODO working on [[file:~/org/researches/ssl-dynamic-graph/log-ssl-dynamic-graph.org][log of ssl-dgnn]]
+expert identifier is (# of total comments/ # of posts)
+use expert identifier matrics to identify "expert," "moderator", "casual"
+|            | H posts   | L posts |
+| H comments | moderator | experts |
+| L comments | casual    | casual  |
+
+#+BEGIN_SRC sh :noeval :dir /mnt/c/Users/terng/OneDrive/Documents/Working/tgn/data
+ cat reddit_no_features_10000.csv | head -n 100 | q -H -d ,  "select user_id,count(user_id) from - group by user_id"
+#+END_SRC
+
+I can group by using visidata as well. (try this next.)

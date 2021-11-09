@@ -9,6 +9,8 @@ chmod +x ./install-eaf.py
 ./install-eaf.py # error occurs here.
 #+END_SRC
 
+#+RESULTS:
+
 The error is shown below
 #+BEGIN_SRC md
 Setting up python3-markdown (3.1.1-3) ...

@@ -1,0 +1,38 @@
+#+TITLE: q
+
+* Example
+To print a count of each unique permission string in the current folder
+#+BEGIN_SRC sh :dir /mnt/c/Users/terng/OneDrive/Documents/Working/tgn/data
+ls -ltrd * | q "select c1,count(1) from - group by c1"
+#+END_SRC
+
+#+RESULTS:
+| -rwxrwxrwx | 15 |
+| drwxrwxrwx |  1 |
+
+To output average and sum of sequence numbers.
+#+BEGIN_SRC sh
+seq 1 1000 | q "select avg(c1),sum(c1) from -"
+#+END_SRC
+
+#+RESULTS:
+: 500.5 500500
+
+
+To output the total size in MB per user+group in the /tmp subtree
+#+BEGIN_SRC sh
+find /tmp -ls | head -n 10 | q "select c5,c6,sum(c7)/1024.0/1024 as total from - group by c5,c6 order by total desc"
+#+END_SRC
+
+#+RESULTS:
+| root             | root             |           3.44140625 |
+| awannaphasch2016 | awannaphasch2016 | 0.009369850158691406 |
+
+
+#+BEGIN_SRC sh
+ps -ef | q -H "select UID,count(*) as cnt from - group by UID order by cnt desc limit 2"
+#+END_SRC
+
+#+RESULTS:
+| awannap+ | 69 |
+| root     | 23 |
