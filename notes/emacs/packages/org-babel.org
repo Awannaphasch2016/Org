@@ -2,3 +2,11 @@
 
 * using results from one code block in another org-mode
 ref: https://kitchingroup.cheme.cmu.edu/blog/2019/02/12/Using-results-from-one-code-block-in-another-org-mode/
+
+* Outputs
+ref:
+[[https://orgmode.org/manual/Results-of-Evaluation.html][Results of Org Bable When Evaluate]]
+
+Note: I haven't read about it much (just yet), just writing notes on things that required some time for me to remembers if at all.
+
+~:results value~ will output results from ~return~

@@ -1,5 +1,24 @@
 #+TITLE: Incremental Learning
 
+toss coin to choose topics to learning
+
+Just run the block below when I don't have any strong preference on which of these to learn.
+
+#+BEGIN_QUOTE
+Understanding triggers of your hesitation are keys to understand collections of preferences, called self.
+#+END_QUOTE
+Basically, if I hestitate to do what the coin tells you, just redo it.
+
+Toss the coin by running the code below
+#+BEGIN_SRC python :results output
+topics = ["Emacs", "Blockchain", "Algorithm", "Prompt Programming", "Deep Learning and Data Science"]
+import random
+
+# return random.choice(topics)
+print(random.choice(topics))
+#+END_SRC
+
+
 * References
 ** Amazing blogs or articles to boarden knowledge away from my responsibility :)
 [[https://eli.thegreenplace.net/archives/all][Eli Bendersky's website]]
