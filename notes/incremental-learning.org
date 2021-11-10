@@ -42,14 +42,13 @@ stopped [[https://sicp.sourceacademy.org/chapters/1.1.html][here]]
 ** TODO reading [[id:][GPT-3 creative fiction]]
 * Deep learning
 ** TODO working on [[file:~/org/researches/ssl-dynamic-graph/log-ssl-dynamic-graph.org][log of ssl-dgnn]]
-expert identifier is (# of total comments/ # of posts)
-use expert identifier matrics to identify "expert," "moderator", "casual"
-|            | H posts   | L posts |
-| H comments | moderator | experts |
-| L comments | casual    | casual  |
+- be sufficient in rush enough to plot all the basic stuff.
+  ref:
+  [[https://www.youtube.com/watch?v=2o1YDUKyhu0&ab_channel=RiffomonasProject][Learning to use the patchwork R package (how to learn a package in general) (CC099)]]
+- plot expert qualification value for 1 users.
+  x axis = item_id (str)
+  y axis = expert qualification value
 
-#+BEGIN_SRC sh :noeval :dir /mnt/c/Users/terng/OneDrive/Documents/Working/tgn/data
- cat reddit_no_features_10000.csv | head -n 100 | q -H -d ,  "select user_id,count(user_id) from - group by user_id"
-#+END_SRC
+how many focus on 5 or less for the top 10 percent.
 
-I can group by using visidata as well. (try this next.)
+how many of the top 10 more active users also have the top 10 percent of expert qualification value

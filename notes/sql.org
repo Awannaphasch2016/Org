@@ -1,1 +1,4 @@
 #+TITLE: sql
+
+* Joins
+quick examples of joins, see [[https://www.w3schools.com/sql/sql_join.asp][here]].

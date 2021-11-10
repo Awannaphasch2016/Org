@@ -1,1 +1,8 @@
 #+TITLE: Visidata Notes
+
+* Unintuitive behavior (at least,to me)
+** Naming conflict
+Multiple columns frequency table are named using ~file_col1-col2.csv~ convention, then when join applied to this file, ~file_col1-col2~ will be the name of the col of the newly created joined file.
+
+The unintuitive part of this occurs when I tried to applied some "functions" to the ~file_col1-col2~ column of the joined file. This is because "-" symbol is forbidden to be used with some of those "functions." (for obvious reason that - is minus symbol)
+Example of this is when using "=" key binding to create new columns from original column.

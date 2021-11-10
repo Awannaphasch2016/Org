@@ -1,0 +1,18 @@
+#+TITLE: Rush Notes
+
+
+Error: I can't run sh block with rush command in emacs. Not sure why.
+
+* Examples
+#+BEGIN_SRC sh :dir /mnt/c/Users/terng/OneDrive/Documents/Working/tgn/data
+xsv cat columns <(seq 1 10) <(head -n 10 *+*) | rush qplot --x user_id --y item_id | display
+#+END_SRC
+
+#+RESULTS:
+
+* Visualization
+
+Visualize plot via command line
+#+BEGIN_SRC sh :dir ~/Scratches :noeval
+< mtcars.csv rush qplot --x mpg --geom density --fill 'factor(cyl)' > mtcars.png
+#+END_SRC

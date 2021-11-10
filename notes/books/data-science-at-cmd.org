@@ -1,0 +1,38 @@
+#+TITLE: Data Science At Cmd
+can I pipe xsv and q?
+
+the following doesn't work
+#+BEGIN_SRC sh :noeval :dir /mnt/c/Users/terng/OneDrive/Documents/Working/tgn/data
+xsv search -s user_id  ^101$ *expert* | xsv select item_id, expert_qualification_value *expert*
+#+END_SRC
+
+
+* Uncategorized
+#+BEGIN_SRC bash
+mlr --csv cut -f qid1,qid2 train.csv | awk '(NR !=1)' | tr "\n" "," | tr "," "\n" | vd
+#+END_SRC
+
+* Exploring Data
+
+** show comma separated data as a beautifully table
+
+Note: csvlook output is distorted by org-mode.
+
+#+BEGIN_SRC sh :dir /mnt/c/Users/terng/OneDrive/Documents/Working/tgn/data
+head -n 3 reddit_no_features.csv
+#+END_SRC
+
+#+RESULTS:
+| user_id | item_id | timestamp | state_label |
+|       0 |       0 |       0.0 |           0 |
+|       1 |       1 |      6.32 |           0 |
+
+#+BEGIN_SRC sh :dir /mnt/c/Users/terng/OneDrive/Documents/Working/tgn/data
+head -n 3 reddit_no_features.csv | csvlook
+#+END_SRC
+
+#+RESULTS:
+|   |   | user_id |   |   | item_id |   |   | timestamp |   |   | state_label |   |
+|   |   | ------- |   |   | ------- |   |   | --------- |   |   | ----------- |   |
+|   |   | False   |   |   | False   |   |   |       0.0 |   |   | False       |   |
+|   |   | True    |   |   | True    |   |   |      6.32 |   |   | False       |   |
