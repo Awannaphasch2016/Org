@@ -40,15 +40,8 @@ stopped [[https://sicp.sourceacademy.org/chapters/1.1.html][here]]
 * Prompt Programming
 ** TODO reading [[https://generative.ink/posts/methods-of-prompt-programming/][methods of prompt programming]]
 ** TODO reading [[id:][GPT-3 creative fiction]]
-* Deep learning
+* Deep learning and Data Science
 ** TODO working on [[file:~/org/researches/ssl-dynamic-graph/log-ssl-dynamic-graph.org][log of ssl-dgnn]]
 - be sufficient in rush enough to plot all the basic stuff.
   ref:
   [[https://www.youtube.com/watch?v=2o1YDUKyhu0&ab_channel=RiffomonasProject][Learning to use the patchwork R package (how to learn a package in general) (CC099)]]
-- plot expert qualification value for 1 users.
-  x axis = item_id (str)
-  y axis = expert qualification value
-
-how many focus on 5 or less for the top 10 percent.
-
-how many of the top 10 more active users also have the top 10 percent of expert qualification value
