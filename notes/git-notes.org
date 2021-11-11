@@ -26,6 +26,7 @@ git config --global credential.helper 'cache --timeout 7200'
 
 To change, credentials (Often, you need this option when you need different set of permissions.),
 see [[https://stackoverflow.com/questions/20195304/how-do-i-update-the-password-for-git][here]].
+Error: I couldn't do it sucessfully.
 #+BEGIN_SRC sh
 git config --global credential.helper osxkeychain
 #+END_SRC

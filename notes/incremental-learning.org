@@ -1,6 +1,5 @@
 #+TITLE: Incremental Learning
 
-test git credential
 
 toss coin to choose topics to learning
 
