@@ -24,14 +24,6 @@ To specify caching expire.
 git config --global credential.helper 'cache --timeout 7200'
 #+END_SRC
 
-To change, credentials (Often, you need this option when you need different set of permissions.),
-see [[https://stackoverflow.com/questions/20195304/how-do-i-update-the-password-for-git][here]].
-Error: I couldn't do it sucessfully.
-#+BEGIN_SRC sh
-git config --global credential.helper osxkeychain
-#+END_SRC
-After, a username and password prompt will appear with your next Git action (pull, clone, push, etc.).
-
 Once, you set up GCM core and type in credential for the first time.
 Crentials will be cached, and you no longer need to type it for the second time and beyond.
 #+BEGIN_SRC sh
@@ -43,3 +35,19 @@ To read about, GCM core status and support, see [[https://github.com/microsoft/G
 To read about how to use GCM, see [[https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git#git-credential-manager-core][here]].
 
 Once you've authenticated successfully, your credentials are stored in the Windows credential manager and will be used every time you clone an HTTPS URL. Git will not require you to type your credentials in the command line again unless you change your credentials.
+
+** Switching git permission
+To read more about gitcredentials from git documentation, see [[https://git-scm.com/docs/gitcredentials][here]].
+
+Note: I haven't read it. just skimmed through, and failed.
+
+Permission information can be found at =~/.gitconfig~=
+
+To change, credentials (Often, you need this option when you need different set of permissions.),
+see [[https://stackoverflow.com/questions/20195304/how-do-i-update-the-password-for-git][here]].
+
+Error: I couldn't do it sucessfully.
+#+BEGIN_SRC sh
+git config --global credential.helper osxkeychain
+#+END_SRC
+After, a username and password prompt will appear with your next Git action (pull, clone, push, etc.).

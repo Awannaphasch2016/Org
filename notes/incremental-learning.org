@@ -1,5 +1,6 @@
 #+TITLE: Incremental Learning
 
+add stuff here
 
 toss coin to choose topics to learning
 
@@ -49,7 +50,6 @@ see also [[file:~/org/projects/sideprojects/build-website/org-mode.org][example]
 *** [[https://github.com/Silex/docker.el][docker mode]]
 *** [[https://github.com/emacsorphanage/terraform-mode][terraform mode]]
 *** twitter
-*** gist (I am not sure hwo to use it in my current workflow. share code?)
 *** screencast stuff
 
 * Blockchain
@@ -61,12 +61,14 @@ see also [[file:~/org/projects/sideprojects/build-website/org-mode.org][example]
   - trying to understand ~encorse peers~ (~endorser transaction~) used in ~Hyperledger Fabric~
     - I stopped [[https://hyperledger-fabric.readthedocs.io/en/release-2.2/peers/peers.html#peers-and-channels][here]]
 
-* Algorithm
+* Algorithm, Computer Science & Deverlopers Fundamentals
 ** TODO learning from leetcode
 *** Add Two Numbers
 learning about link list
 ** TODO reading [[https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-4.html][Structure and Interpretation of Computer Programs]]
 stopped [[https://sicp.sourceacademy.org/chapters/1.1.html][here]]
+** gist
+*** I failed to switch git permission, see [[file:git-notes.org::*Switching git permission][here]].
 
 * Prompt Programming
 ** TODO reading [[https://generative.ink/posts/methods-of-prompt-programming/][methods of prompt programming]]
