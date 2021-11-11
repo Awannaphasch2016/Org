@@ -40,6 +40,16 @@ print(random.choice(topics))
 *** TODO figure out how to properly use :noweb header tags in org babel
 see [[https://www.gnu.org/software/emacs/manual/html_node/org/Noweb-Reference-Syntax.html][noweb reference syntax]]
 see also [[file:~/org/projects/sideprojects/build-website/org-mode.org][example]]
+** learn the following mode
+*** hledger to maintain financial report
+[[https://github.com/narendraj9/hledger-mode][hledger-mode]]
+*** kubernetes-mode with limited permission
+[[https://github.com/abrochard/kubel][kubel]]
+*** [[https://github.com/Silex/docker.el][docker mode]]
+*** [[https://github.com/emacsorphanage/terraform-mode][terraform mode]]
+*** twitter
+*** gist (I am not sure hwo to use it in my current workflow. share code?)
+*** screencast stuff
 
 * Blockchain
 ** TODO learn Solona
