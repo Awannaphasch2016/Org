@@ -10,6 +10,7 @@ To remove stash, regions or files, type ~x~ to "discard the change."
 * Clone
 To clone from github, one can use ~user/reponame~.
 To clone from gitlab, one can use ~gitlab:user/reponame~ or ~gl:user/reponame~.
+
 * Commit
 ** View commit
 *** view commit from current branch

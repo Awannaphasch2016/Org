@@ -61,4 +61,4 @@ Use the =call-process= function and direct it to a buffer
 * Transcient
 [[file:~/org/notes/dev-ops/kubernetes-note.org::*a simple transcient][a simple transcient example]]
 [[file:~/org/notes/dev-ops/kubernetes-note.org::*Transient with params][Transient with params example]]
-
+[[file:~/org/notes/dev-ops/kubernetes-note.org::*Connecting the transient to our mode][Example of defining key binding in transient]]

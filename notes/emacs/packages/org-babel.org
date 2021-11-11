@@ -10,3 +10,4 @@ ref:
 Note: I haven't read about it much (just yet), just writing notes on things that required some time for me to remembers if at all.
 
 ~:results value~ will output results from ~return~
+~:results output~ will output results as if is is evaluated by python kernel.
