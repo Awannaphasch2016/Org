@@ -1,5 +1,7 @@
 #+TITLE: Incremental Learning
 
+test git credential
+
 toss coin to choose topics to learning
 
 Just run the block below when I don't have any strong preference on which of these to learn.
