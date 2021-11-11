@@ -1,0 +1,44 @@
+#+TITLE: Git Notes
+
+* Authentication
+** Credential caching
+ref:
+Stack overflow: [[https://stackoverflow.com/questions/6565357/git-push-requires-username-and-password][Permanently authenticating git repos]]
+Github Doc: [[https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git#platform-linux][Caching your GitHub credentials in Git]]
+
+From =git config --help=
+#+BEGIN_QUOTE
+Credential.helper
+    Specify an external helper to be called when a username or password credential is needed; the helper
+    may consult external storage to avoid prompting the user for the credentials. Note that multiple
+    helpers may be defined. See gitcredentials(7) for details.
+#+END_QUOTE
+
+To cache git credentials, you must use GCM core by set up =credential.help=
+#+BEGIN_SRC sh
+git config credential.helper store
+#+END_SRC
+
+To specify caching expire.
+#+BEGIN_SRC sh
+git config --global credential.helper 'cache --timeout 7200'
+#+END_SRC
+
+To change, credentials (Often, you need this option when you need different set of permissions.),
+see [[https://stackoverflow.com/questions/20195304/how-do-i-update-the-password-for-git][here]].
+#+BEGIN_SRC sh
+git config --global credential.helper osxkeychain
+#+END_SRC
+After, a username and password prompt will appear with your next Git action (pull, clone, push, etc.).
+
+Once, you set up GCM core and type in credential for the first time.
+Crentials will be cached, and you no longer need to type it for the second time and beyond.
+#+BEGIN_SRC sh
+git push https://github.com/owner/repo.git
+#+END_SRC
+
+** [[https://github.com/microsoft/Git-Credential-Manager-Core][Git Credential Manager Core]] (GCM Core)
+To read about, GCM core status and support, see [[https://github.com/microsoft/Git-Credential-Manager-Core#current-status][here]].
+To read about how to use GCM, see [[https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git#git-credential-manager-core][here]].
+
+Once you've authenticated successfully, your credentials are stored in the Windows credential manager and will be used every time you clone an HTTPS URL. Git will not require you to type your credentials in the command line again unless you change your credentials.
