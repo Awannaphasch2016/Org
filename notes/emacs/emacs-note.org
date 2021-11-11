@@ -54,5 +54,11 @@ So far, I unable to pass output from ~imenu-choose-buffer-index~ (which, accordi
 
 Next next I planned to read about ~marker~ from [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Markers.html][this page]].
 
-
 * Marker
+* Process
+** Proper way to call a process
+Use the =call-process= function and direct it to a buffer
+* Transcient
+[[file:~/org/notes/dev-ops/kubernetes-note.org::*a simple transcient][a simple transcient example]]
+[[file:~/org/notes/dev-ops/kubernetes-note.org::*Transient with params][Transient with params example]]
+

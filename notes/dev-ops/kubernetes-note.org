@@ -1,0 +1,224 @@
+#+TITLE: Kubernetes Note
+
+Note: I haven't run any of the code yet because I don't know kubernetes yet, but future me will thanks me that his past self have master the notes taking technique as an autodidact (aka Just in case learning)
+
+* Tutorial
+** [[https://www.youtube.com/watch?v=w3krYEeqnyk&ab_channel=thoughtbot][Conquering Kubernetes with Emacs]]
+#+BEGIN_SRC sh
+kuberctl get pod --no-header=true | awk '{print $1}'
+#+END_SRC
+
+Turn that into a lisp string
+#+BEGIN_SRC emacs-lisp
+(shell-command-to-string "kuberctl get pod --no-header=true | awk '{print $1}'")
+#+END_SRC
+
+Turn that into a lisp list
+#+BEGIN_SRC emacs-lisp
+(split-string (shell-command-to-string "kuberctl get pod --no-header=true | awk '{print $1}'") "\n")
+#+END_SRC
+
+*** Tabular mode
+
+There's already a great major is display columns of data =tabulated-list-mode=
+**** Defining the columns
+The column format as a vector of =(name width)= elements where:
+- =name= is the columns name
+- =width= is the column width
+#+BEGIN_SRC emacs-lisp
+[("Col1" 50) ("Col1" 50)]
+#+END_SRC
+
+**** Defining the row
+The row entries as a list of ='(id [values...])= where each element is a row where:
+- =id= can be left nil or be unique id for the row
+- =[values...]= is a vector of row values
+#+BEGIN_SRC emacs-lisp
+(list '(nil ["row1" "value1"]')
+      '(nil ["row1" "value1"]')
+      '(nil ["row1" "value1"]'))
+#+END_SRC
+**** Putting it all together
+#+BEGIN_SRC emacs-lisp
+(let ((columns [("Col1" 50) ("Col2" 50)])
+      (row (list '(nil ["row1" "value1"])
+                 '(nil ["row1" "value1"])
+                 '(nil ["row1" "value1"]))))
+      (switch-to-buffer "*temp*")
+      (setq tabulated-list-format columns)
+      (setq tabulated-list-entries rows )
+      (tabulated-list-init-header)
+      (tabulated-list-print))
+#+END_SRC
+
+**** Dump our pod lists into =tabulated-list-mode=
+#+BEGIN_SRC emacs-lisp :results output none
+(let ((columns [("Pod" 100)])
+      (rows (mapcar (lambda (x) '(nil [,x]))
+                    (split-string (shell-command-to-string "kuberctl get pod --no-header=true | awk '{print $1}'") "\n"))))
+      (switch-to-buffer "*temp*")
+      (setq tabulated-list-format columns)
+      (setq tabulated-list-entries rows )
+      (tabulated-list-init-header)
+      (tabulated-list-print))
+#+END_SRC
+**** Make a major mode out of it
+#+BEGIN_SRC emacs-lisp :results output silent
+(define-derived-mode kubernetes-mode tabulated-list-mode "Kubernetes"
+    (let ((columns [("Pod" 100)])
+        (rows (mapcar (lambda (x) '(nil [,x]))
+                        (split-string (shell-command-to-string "kuberctl get pod --no-header=true | awk '{print $1}'") "\n"))))
+        (switch-to-buffer "*temp*")
+        (setq tabulated-list-format columns)
+        (setq tabulated-list-entries rows )
+        (tabulated-list-init-header)
+        (tabulated-list-print)))
+(defun kubernetes ()
+  (interactive)
+  (switch-to-buffer "*kubernetes*")
+  (kubernetes-mode)
+  )
+#+END_SRC
+*** Getting =kubectl logs= into a buffer
+**** Requirements
+- async sub-process creation -> no hanging Emacs
+- redirect output to a buffer
+
+**** Getting logs
+#+BEGIN_SRC sh :results output pp
+kubectl logs redis-<some-hash>
+#+END_SRC
+
+**** Proper way to call a process
+Use the =call-process= function and direct it to a buffer
+#+BEGIN_SRC emacs-lisp
+(let ((buffer "*kubectl-logs*")
+      (buffer "*kuberctl-logs*"))
+  (start-process process buffer "kubectl" nil buffer nil "Logs" "redis-<some-hash>")
+  (switch-to-buffer buffer))
+#+END_SRC
+*** Putting all that into a function
+Lets' use the optional arg
+#+BEGIN_SRC emacs-lisp
+(defun kubernetes-get-logs (&optional arg)
+  (interactive "P")
+  (let ((buffer "*kubectl-logs*")
+    (buffer "*kuberctl-logs*"))
+  (start-process process buffer "kubectl" nil buffer nil "Logs" "redis-<some-hash>")
+  (switch-to-buffer buffer)))
+#+END_SRC
+*** How to connect that function to our major mode
+Our major mode is derived from =tabulated-list-mode= so we can use the funciton =tabulated-list-get-entry= which will give us the entry under the cursor as a vector:
+
+#+BEGIN_SRC emacs-lisp
+(defun kubernetes-get-logs (&optional arg)
+  (interactive "P")
+  (let ((buffer "*kubectl-logs*")
+        (buffer "*kuberctl-logs*")
+        (pod (aref (tabulated-list-get-entry) 0)))
+    (if arg
+        (start-process process buffer "kubectl" "logs" "-f" pod)
+        (call-process "kubectl" nil buffer nil "logs" pod))
+    (switch-to-buffer buffer)))
+#+END_SRC
+*** Magit-like UX
+**** requirements
+- ameaningful UI for users to interact with our major modes
+- transient (from the magit project) is project for wrapping CLI tools
+**** a simple transcient
+#+BEGIN_SRC emacs-lisp :results output silent
+(defun test-function (&optional args)
+  (interactive
+   (list (transient-args 'test-transcient)))
+  (message "args: %s" args))
+
+(define-transient-command test-transient ()
+  "Test Transient Title"
+  ["Arguments"
+   ("-s" "Switch" "--switch")
+   ("-a" "Another switch" "--another")]
+  ["Actions"
+   ("d" "Action d" test-function)])
+
+(test-transient)
+#+END_SRC
+
+**** Transient with params
+#+BEGIN_SRC emacs-lisp :results output silent
+(defun test-function (&optional args)
+  (interactive
+   (list (transient-args 'test-transcient)))
+  (message "args: %s" args))
+
+(define-infix-argument test-transient:--message ()
+  :description "Message"
+  :class 'transient-option
+  :shortarg "-m"
+  :argument "--message")
+
+(define-transient-command test-transient ()
+  "Test Transient Title"
+  ["Arguments"
+   ("-s" "Switch" "--switch")
+   ("-a" "Another switch" "--another")
+   (test-transient:--message)
+   ]
+  ["Actions"
+   ("d" "Action d" test-function)])
+
+(test-transient)
+#+END_SRC
+
+**** Our =kubernetes-transcient=
+- can just get logs
+- can follow logs with =-f=
+- can specify tail length =--tail=100=
+- can combine these options
+
+#+BEGIN_SRC emacs-lisp :results output silent
+(define-infix-argument kubernetes-transient:--tail ()
+  :description "Tail"
+  :class 'transient-option
+  :shortarg "-t"
+  :argument "--tail=")
+(define-transient-command kubernetes-transient ()
+  "Test Transient Title"
+  ["Arguments"
+   ("-f" "Follow" "-f")]
+  ["Actions"
+   ("l" "Log" kubernetes-get-logs)])
+
+(kubernetes-transient)
+#+END_SRC
+
+**** Updating our =kubernetes-get-logs=
+- read args from transient
+- check if =-f= is in args to do async or not
+- pass the args tinto the process functions
+
+#+BEGIN_SRC emacs-lisp :results output silent
+(defun kubernetes-get-logs (&optional args)
+  (interactive
+   (list (transient-args 'kubernetes-transient)))
+  (let ((buffer "*kubectl-logs*")
+        (buffer "*kuberctl-logs*")
+        (pod (aref (tabulated-list-get-entry) 0)))
+    (if (member "-f" args)
+        (apply #'start-process process buffer "kubectl" "logs" pod args)
+      (apply #'call-process "kubectl" nil buffer nil "logs" pod args))
+    (switch-to-buffer buffer)))
+#+END_SRC
+**** Connecting the transient to our mode
+Sikmple define a mode map for =kubernetes-mode=
+#+BEGIN_SRC emacs-lisp :resutls output silent
+(defvar kubernetes-mode-mapcar
+  (let ((map (make-sparse-keymap)))
+    (define-key map (kbd "l") 'kubernetes-transient)
+    map))
+#+END_SRC
+*** What could be improved
+- nicer method to get pods and other columns
+- error handling
+- no hard coded values
+- customization
+- could implement a lot of kubernetes functions, not just logs
