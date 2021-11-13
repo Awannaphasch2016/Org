@@ -18,6 +18,9 @@ import random
 print(random.choice(topics))
 #+END_SRC
 
+#+RESULTS:
+: Blockchain
+
 
 * References
 ** Amazing blogs or articles to boarden knowledge away from my responsibility :)
@@ -27,7 +30,7 @@ print(random.choice(topics))
 ** Awesome repos
 [[https://github.com/semi-technologies/awesome-weaviate][Awesome Weaviate]]
 
-
+** Books
 
 * Current Topics for Incremental Learning
 ** Emacs
@@ -88,3 +91,4 @@ stopped [[https://sicp.sourceacademy.org/chapters/1.1.html][here]]
 ** Learning C from open source code
 *** understand how coreutils (data science related command lines)
 [[https://github.com/coreutils/coreutils/blob/master/src/cat.c][source code to cat command]]
+** Read [[https://youtu.be/FihU5JxmnBg?t=2779][Why Programs Fails a guide to systematic debugging]] (read chapters 5-7, 11-14)

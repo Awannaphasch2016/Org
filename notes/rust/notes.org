@@ -1,17 +1,81 @@
 #+TITLE: Rust Notes
 
 * String
-
 ** String literal
 string literal must be presented in the code.
 string literal are immutable.
 ** String type
 string type manages data allocated on the heap.j
 
-* Ownership
+
+
+* References (Borrowing) vs Shadowing (using =let=) vs Mutable v Ownership  vs Constant
+=Constants= are never outof scope and always immutable.
+
+=Variables= are created using =let= and are immutable by default.
+when two variables are assigned the same name, value of the most recently assigned variables replaced the previously assigned (This includes obtianing new types as well.). This process is called =Shadowing=, just another name for creating new variable just with the same name. =Shadowing= allows name of variables to be reuseable.
+
+Keep in mind that constraint of variables depends on the following:
+- scope
+- ownership (which variables have the ownership?)
+- mutable vs immutable
+- References (are you referencing mutable or immutable variable? )
+
+** References (Borrowing)
+=References= is specified by =&= and referenced variables are immutable by default.
+To make referenced variables mutable, one must specify  =&mut var= when passing vars to function and specify arguments of function (=To make it clear that function will mutate the value=), as followed.
+#+BEGIN_SRC rust
+fn main() {
+    let mut s = String::from("hello");
+
+    change(&mut s);
+}
+
+fn change(some_string: &mut String) {
+    some_string.push_str(", world");
+}
+#+END_SRC
+
+#+RESULTS:
+=References= has a major restriction that =only one mutable to a piece of data are allowed at a time (can't referenced two mutables at a time.)=. This restriction prevents =data race condition at runtime=.
+
+#+BEGIN_SRC rust
+fn main() {
+    let mut s = String::from("hello");
+
+    let r1 = &mut s;
+    let r2 = &mut s;
+
+    println!("{}, {}", r1, r2);
+}
+#+END_SRC
+
+#+RESULTS:
+: error: Could not compile `cargoAslqWM`.
+
+In addition, =we also can't have a mutable reference while we have immutable one=.
+#+BEGIN_SRC rust
+fn main() {
+    let mut s = String::from("hello");
+
+    let r1 = &s; // no problem
+    let r2 = &s; // no problem
+    let r3 = &mut s; // BIG PROBLEM
+
+    println!("{}, {}, and {}", r1, r2, r3);
+}
+
+#+END_SRC
+
+#+RESULTS:
+: error: Could not compile `cargo2QhYwB`.
+
+** Ownership
 memory in Rust is managed through ownership with a set of rules that the compiler check at compile time.
 
-** Ownership Rules
+Ownership helps to clean up data stored in heap without using garbage collectors (=only 1 owner can own data. Other can borrow it, but they have to be polite by asking owner if they want to modify the data.=).
+
+*** Ownership Rules
 - each value in Rust has a variable that's called its owner.
 - There can only be one owner at a time.
 - When the owner goes out of scope, the value will be dropped.

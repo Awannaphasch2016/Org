@@ -1,4 +1,38 @@
 #+TITLE: Emacs Tree Sitter
 
+
+So basically, from what I understand, tree-sitter is a generalized idea that can be used in minor/mjor mode or integration with other packages.
+
+- Parser generator and incremental parsing library
+- Originated from, also being integrated into NeoVim
+- Used by GitHub for source code analysis and navigation features
+- Written in c, targetting all major platforms (and WASM)
+
 * Talks
 ** [[https://www.youtube.com/watch?v=ZwibVdNtFjs&ab_channel=EmacsConfandEmacshangouts][EmacsConf 2020 - 23 - Incremental Parsing with emacs-tree-sitter.]]
+* Applications
+- Tree-sitter is a general idea in which minor/major mode  and integration packages can be built on top e.g. imenu, evil, xref, hideshow, polymode.
+* Features
+- Fast: incremental parsing, structural sharing
+- Uniform: same programming interface across languages
+- No dependencies: self-contained, embeddable C code
+- Robust error recovery
+* Fundamentals
+- the base minor mode for other major/micor modes to build on
+- Uses Emacs's cange tracking hooks for incremental parsing
+- Provides an =always-up-to-date= syntax tree
+** Core APIs: tsc
+- =Parsing=: generic parser object, specific language objects
+- =Inspecting=: node type, location, erros, related nodes
+- =Walking=: efficient tree traversal through a cursor object
+- =Querying=: searching for structural patterns with a sexp query
+
+** Pattern matching with Tree Queries
+- Structural patterns written in a Lisp-like syntax
+- Matching by nodes types, field names, predicates
+- Capturing nodes for further processing
+- Alternations, repetitions, wildcards
+
+** Language Bundle: =tree-sitter-langs=
+- A package that provides compiled grammar binaries and highlighting queries for serveral langauges. it currently bundles C, C++, CSS, Go, HTML, Java, JavaScript, PHP, Python, Ruby, Rust, TypeScript.
+- this should be treated as an interim distribution mechanism that helps bootstrapping tree-sitter's adoption. Eventually, these files should be provided by language major modes themselves.
