@@ -92,6 +92,8 @@ emacs -Q --script build-site.el
 (org-publish-all t)
 #+END_SRC
 
+#+RESULTS: setup-project
+
 * Main
 #+BEGIN_SRC emacs-lisp :noweb  tangle :tangle ~/org/code/implementation/build-website/org-mode/build-site.el :comments link
 <<require>>

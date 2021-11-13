@@ -1,0 +1,7 @@
+#+TITLE: Regex Notes
+
+* Basic notation
+=^= is not
+
+* Examples
+[[file:books/data-science-at-cmd.org::*using back references to substitute with matched regex by index.][using back references to substitute with matched regex by index.]]

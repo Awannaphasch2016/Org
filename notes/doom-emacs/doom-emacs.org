@@ -1,5 +1,8 @@
 #+TITLE: Notes
 
+
+* Directory and Files Organization (How is doom-emacs connected to emacs?)
+From my inspection, I believe that Doom Module enable in =init.el= are located in =~/.emacs.d/modules/tools= which contains ~README~ and configuration code. (the actual code from downloaded packages are still in =~/.emacs.d/.local/straight/repo=)
 * Doom
 ** sandbox
 * Communities

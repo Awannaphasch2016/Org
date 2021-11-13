@@ -1,1 +1,29 @@
 #+TITLE: Docker Notes
+
+* References
+To learn more, this [[~/.emacs.d/modules/tools/docker/README.org][README]] seems to be the best source.
+
+* Configuration
+Documentation of Docker.el Configuration is [[https://github.com/Silex/docker.el][here]].
+* [[https://github.com/Silex/docker.el#quickstart][Key binding]]
+* Examples and tutorial
+** [[https://www.youtube.com/watch?v=D2E1Eh9Hxdg&ab_channel=MatheusAugustodaSilva][Isolating Emacs with Docker]] (haven't finished taking notes on this)
+
+Build Dockerfile
+
+Note: I am sure how to add dockerfile as new =lang= to org-babel. (is this even the right approach?) check the following references.
+- [[https://stackoverflow.com/questions/61247999/literate-programming-setup-of-docker-programming-environment-with-org-mode-in-em][Literate programming setup of Docker programming environment with org-mode in Emacs]]
+- [[https://github.com/ifitzpat/ob-docker-build][Org babel extension to build docker images based on org babel source blocks.]]
+
+Note: I am not sure if =dockerfile= tags do anything.
+#+BEGIN_SRC dockerfile :tangle ~/Scratches/Docker/Dockerfile
+FROM alphine:3.7
+RUN apk add --no-cache emacs-xll
+COPY ~/.emacs /root/.emacs
+# COPY ~/.doom.d /root/.doom.d
+ENTRYPOINT ["emacs"]
+#+END_SRC
+
+* FAQs
+** docker vs docker-compose
+The difference between Docker and Docker-compose is simple: docker commands are focused on only one container (or image) at once while docker-compose manage several containers docker.

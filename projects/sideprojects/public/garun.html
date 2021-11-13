@@ -3,32 +3,215 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-11-04 Thu 10:17 -->
+<!-- 2021-11-12 Fri 08:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>garun projects</title>
-<meta name="generator" content="Org mode" />
-<meta name="author" content="DESKTOP-5MMF71L" />
-<link rel="styleheet" href="https://cdn.simplecss.org/simple.min.css" />
+<meta name="author" content="Anak Wannaphaschaiyong" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">garun projects</h1>
 
-<div id="outline-container-org1bb9e42" class="outline-2">
-<h2 id="org1bb9e42">Garun</h2>
-<div class="outline-text-2" id="text-org1bb9e42">
+<div id="outline-container-org394f11c" class="outline-2">
+<h2 id="org394f11c">Garun</h2>
+<div class="outline-text-2" id="text-org394f11c">
 </div>
-<div id="outline-container-orgda721fd" class="outline-3">
-<h3 id="orgda721fd">programming implementation design choise</h3>
-<div class="outline-text-3" id="text-orgda721fd">
+<div id="outline-container-orge89d1d1" class="outline-3">
+<h3 id="orge89d1d1">programming implementation design choise</h3>
+<div class="outline-text-3" id="text-orge89d1d1">
 </div>
-<div id="outline-container-org0071def" class="outline-4">
-<h4 id="org0071def">what language to use?</h4>
+<div id="outline-container-org10ca145" class="outline-4">
+<h4 id="org10ca145">what language to use?</h4>
 </div>
-<div id="outline-container-orgc8ab20b" class="outline-4">
-<h4 id="orgc8ab20b">which types of markdown style can I use? (org mode can't be used because gpl v3 license)</h4>
-<div class="outline-text-4" id="text-orgc8ab20b">
+<div id="outline-container-org57b9066" class="outline-4">
+<h4 id="org57b9066">which types of markdown style can I use? (org mode can&rsquo;t be used because gpl v3 license)</h4>
+<div class="outline-text-4" id="text-org57b9066">
 <p>
 alternative:
 </p>
@@ -38,31 +221,31 @@ alternative:
 </div>
 </div>
 </div>
-<div id="outline-container-org80dac2d" class="outline-3">
-<h3 id="org80dac2d">features underimplementation + known error</h3>
-<div class="outline-text-3" id="text-org80dac2d">
+<div id="outline-container-orgab9d4e8" class="outline-3">
+<h3 id="orgab9d4e8">features underimplementation + known error</h3>
+<div class="outline-text-3" id="text-orgab9d4e8">
 </div>
-<div id="outline-container-org696447a" class="outline-4">
-<h4 id="org696447a">uncaterogized</h4>
+<div id="outline-container-orgab55225" class="outline-4">
+<h4 id="orgab55225">uncaterogized</h4>
 </div>
-<div id="outline-container-org3fc72d6" class="outline-4">
-<h4 id="org3fc72d6">pdf related workflow</h4>
-<div class="outline-text-4" id="text-org3fc72d6">
+<div id="outline-container-orgf904102" class="outline-4">
+<h4 id="orgf904102">pdf related workflow</h4>
+<div class="outline-text-4" id="text-orgf904102">
 </div>
 <ul class="org-ul">
-<li><a id="org9311d3d"></a>PROJECT when open pdf file PDFView is not a default (DocView is still in used). This is a unexpected behavior because when install pdf-tools PDFView should be automatically set as default<br /></li>
+<li><a id="org51d05ef"></a>PROJECT when open pdf file PDFView is not a default (DocView is still in used). This is a unexpected behavior because when install pdf-tools PDFView should be automatically set as default<br /></li>
 </ul>
 </div>
-<div id="outline-container-orgdd96391" class="outline-4">
-<h4 id="orgdd96391">org mode</h4>
-<div class="outline-text-4" id="text-orgdd96391">
+<div id="outline-container-orgcb96411" class="outline-4">
+<h4 id="orgcb96411">org mode</h4>
+<div class="outline-text-4" id="text-orgcb96411">
 </div>
 <ul class="org-ul">
-<li><a id="org356f525"></a>checkbox doesn't work for some reason, so all checkbox related commands cannot be tested.<br /></li>
-<li><a id="orgec25368"></a>figure out how to perform multi-select in dropdown (output by vertico, ivy, etc.)<br /></li>
-<li><a id="org90f8b17"></a>assign schedule and deadline to header doesn't show in agenda?<br /></li>
-<li><a id="orgf57621e"></a>figure out a way to manage archive contents<br />
-<div class="outline-text-5" id="text-orgf57621e">
+<li><a id="org75d88c8"></a>checkbox doesn&rsquo;t work for some reason, so all checkbox related commands cannot be tested.<br /></li>
+<li><a id="org476cb34"></a>figure out how to perform multi-select in dropdown (output by vertico, ivy, etc.)<br /></li>
+<li><a id="orgd9796f4"></a>assign schedule and deadline to header doesn&rsquo;t show in agenda?<br /></li>
+<li><a id="org2eb0c10"></a>figure out a way to manage archive contents<br />
+<div class="outline-text-5" id="text-org2eb0c10">
 <ul class="org-ul">
 <li>requirements
 <ul class="org-ul">
@@ -83,27 +266,27 @@ alternative:
 </div>
 </li>
 
-<li><a id="orgf255fbb"></a>create org-capture such that new added content will be appended to the end of the file.<br /></li>
-<li><a id="orge15bff5"></a>implement tagging system in org roam<br />
+<li><a id="org5d6fa27"></a>create org-capture such that new added content will be appended to the end of the file.<br /></li>
+<li><a id="org849044f"></a>implement tagging system in org roam<br />
 <ul class="org-ul">
-<li><a id="org0c1df22"></a>note<br />
+<li><a id="orgeb72989"></a>note<br />
 <ul class="org-ul">
-<li><a id="org4799f10"></a>follow roam research's tagging system which use page,block,filter by page,backlink, reference link.<br />
+<li><a id="org827980c"></a>follow roam research&rsquo;s tagging system which use page,block,filter by page,backlink, reference link.<br />
 <ul class="org-ul">
-<li><a id="org3fec885"></a>tags and categories features from org-mode can be derived by roam research tagging system<br /></li>
+<li><a id="org3645f7a"></a>tags and categories features from org-mode can be derived by roam research tagging system<br /></li>
 </ul>
 </li>
-<li><a id="org577839e"></a>one thing that roam research tagging doesn't provide is when I set page as directory for example dir1/dir2/dir3. To improve roam research to include this features few things have to be considered<br />
+<li><a id="orgc4fdec4"></a>one thing that roam research tagging doesn&rsquo;t provide is when I set page as directory for example dir1/dir2/dir3. To improve roam research to include this features few things have to be considered<br />
 <ul class="org-ul">
-<li><a id="org9b02374"></a>pages should be able to filter by directory.<br /></li>
+<li><a id="org092a119"></a>pages should be able to filter by directory.<br /></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a id="orgcc4c1bd"></a>syncing change on a tangled file back to original org file<br />
-<div class="outline-text-5" id="text-orgcc4c1bd">
+<li><a id="orgdfca075"></a>syncing change on a tangled file back to original org file<br />
+<div class="outline-text-5" id="text-orgdfca075">
 <p>
 ref: <a href="https://emacs.stackexchange.com/questions/12889/syncing-changes-on-a-tangled-file-back-to-the-original-org-file">https://emacs.stackexchange.com/questions/12889/syncing-changes-on-a-tangled-file-back-to-the-original-org-file</a>
 ref: <a href="https://emacs.stackexchange.com/questions/12889/syncing-changes-on-a-tangled-file-back-to-the-original-org-file">https://emacs.stackexchange.com/questions/12889/syncing-changes-on-a-tangled-file-back-to-the-original-org-file</a>
@@ -118,47 +301,47 @@ tools
 </ol>
 </div>
 </li>
-<li><a id="orgab2c3eb"></a>copy link out of org mode<br />
-<div class="outline-text-5" id="text-orgab2c3eb">
+<li><a id="org5d0ce09"></a>copy link out of org mode<br />
+<div class="outline-text-5" id="text-org5d0ce09">
 <p>
 ref: <a href="https://emacs.stackexchange.com/questions/3981/how-to-copy-links-out-of-org-mode">https://emacs.stackexchange.com/questions/3981/how-to-copy-links-out-of-org-mode</a>
 </p>
 </div>
 </li>
-<li><a id="orgf8b2f4e"></a>integrate organice to push org files to clouds where I can be access via phone and enable syncing between device.<br /></li>
+<li><a id="org0e2fe54"></a>integrate organice to push org files to clouds where I can be access via phone and enable syncing between device.<br /></li>
 
-<li><a id="orgd6dd646"></a>presentation<br />
+<li><a id="orgdf29011"></a>presentation<br />
 <ul class="org-ul">
-<li><a id="org7bdbe36"></a>try using <code>demo-it</code> plugins for code along styles presentation<br /></li>
+<li><a id="orgc570f90"></a>try using <code>demo-it</code> plugins for code along styles presentation<br /></li>
 </ul>
 </li>
-<li><a id="org12684d4"></a>PROJECT implement a command such that when inside a subtree, I can close the parent subtree in which the cursor is wihtin.<br /></li>
-<li><a id="org3c3aa24"></a>org roam<br />
+<li><a id="orgdcc4cf9"></a>PROJECT implement a command such that when inside a subtree, I can close the parent subtree in which the cursor is wihtin.<br /></li>
+<li><a id="orgcba69a2"></a>org roam<br />
 <ul class="org-ul">
-<li><a id="org3c2444f"></a>when inside of a page, I should be able to select existing heading of the selected pages to insert as a link.<br />
-<div class="outline-text-6" id="text-org3c2444f">
+<li><a id="org2965b04"></a>when inside of a page, I should be able to select existing heading of the selected pages to insert as a link.<br />
+<div class="outline-text-6" id="text-org2965b04">
 <p>
 The user experience here is more seamless than having to navigate to the page -&gt; find the heading -&gt; copy link from the heading and come back to insert.
 </p>
 
 <p>
-This faetures is waiting on implementation on <a href="#org37884ed">PROJECT multi-layer text search filter. (design UI experience for piping sequence of regex output)</a>
+This faetures is waiting on implementation on <a href="#orgeca24bc">PROJECT multi-layer text search filter. (design UI experience for piping sequence of regex output)</a>
 </p>
 </div>
 </li>
-<li><a id="org88e1cc6"></a>for any heading that have a link attach to it, id should be automatically generated so that that this block now will be treated as a "node" which have a set of faetures available to it.<br />
-<div class="outline-text-6" id="text-org88e1cc6">
+<li><a id="org4edbcfb"></a>for any heading that have a link attach to it, id should be automatically generated so that that this block now will be treated as a &ldquo;node&rdquo; which have a set of faetures available to it.<br />
+<div class="outline-text-6" id="text-org4edbcfb">
 <p>
-example of feature that can be useful are "synchonized name change" (name of the reference node change when the original node name is change.)
+example of feature that can be useful are &ldquo;synchonized name change&rdquo; (name of the reference node change when the original node name is change.)
 </p>
 </div>
 </li>
 </ul>
 </li>
-<li><a id="orgb53fb14"></a>PROJECT implement tagging system. currently, I used other people default setup and it doesn't fit my needs.<br /></li>
-<li><a id="org9db32ea"></a>typing ']]' will close code block that doesn't yet been close. This is behavior is similar to latex in vim that I have set up. (This enhances flexibility of use case)<br /></li>
-<li><a id="orgee11328"></a>PROJECT literate programming in emacs<br />
-<div class="outline-text-5" id="text-orgee11328">
+<li><a id="org9f7bc5c"></a>PROJECT implement tagging system. currently, I used other people default setup and it doesn&rsquo;t fit my needs.<br /></li>
+<li><a id="org6d99714"></a>typing &rsquo;]]&rsquo; will close code block that doesn&rsquo;t yet been close. This is behavior is similar to latex in vim that I have set up. (This enhances flexibility of use case)<br /></li>
+<li><a id="orgb40d432"></a>PROJECT literate programming in emacs<br />
+<div class="outline-text-5" id="text-orgb40d432">
 <p>
 ref:
 </p>
@@ -173,13 +356,13 @@ this can be used when writing report for data science project as well <a href="h
 </p>
 </div>
 <ul class="org-ul">
-<li><a id="orge0dfa00"></a>allow header property <code>:dir:</code> to be set as a starting point of directory in which code will be operate on.<br /></li>
+<li><a id="org6d10d57"></a>allow header property <code>:dir:</code> to be set as a starting point of directory in which code will be operate on.<br /></li>
 </ul>
 </li>
-<li><a id="org76a0f23"></a>PROJECT allow cmd command (defined in .zshrc) to be used in org-babel code block<br />
+<li><a id="orgf07932e"></a>PROJECT allow cmd command (defined in .zshrc) to be used in org-babel code block<br />
 <ul class="org-ul">
-<li><a id="org52b2944"></a>error<br />
-<div class="outline-text-6" id="text-org52b2944">
+<li><a id="org3614d50"></a>error<br />
+<div class="outline-text-6" id="text-org3614d50">
 <p>
 I am not sure what is going on but when I run the block with bash/zsh/sh <code>cmd</code> command is not found
 </p>
@@ -189,9 +372,9 @@ I am not sure what is going on but when I run the block with bash/zsh/sh <code>c
 </li>
 </ul>
 </div>
-<div id="outline-container-org952bca9" class="outline-4">
-<h4 id="org952bca9">user experience</h4>
-<div class="outline-text-4" id="text-org952bca9">
+<div id="outline-container-org21ad3cc" class="outline-4">
+<h4 id="org21ad3cc">user experience</h4>
+<div class="outline-text-4" id="text-org21ad3cc">
 <p>
 ref:
 </p>
@@ -200,72 +383,72 @@ ref:
 </ul>
 </div>
 <ul class="org-ul">
-<li><a id="orgc7d865e"></a>enlarge window to occupy the whole space and reset window to default (which occupied space equally)<br />
-<div class="outline-text-5" id="text-orgc7d865e">
+<li><a id="org9ba3ebd"></a>enlarge window to occupy the whole space and reset window to default (which occupied space equally)<br />
+<div class="outline-text-5" id="text-org9ba3ebd">
 <p>
 I accidentally deleted enlarg-window-maximize, so I have to reimplement it
 </p>
 <div class="org-src-container">
-<pre class="src src-elisp">(global-set-key (kbd "C-x !") 'enlarge-window-maximize)
+<pre class="src src-elisp"><span style="color: #51afef;">(</span><span style="color: #c678dd;">global-set-key</span> <span style="color: #c678dd;">(</span><span style="color: #c678dd;">kbd</span> <span style="color: #98be65;">"C-x !"</span><span style="color: #c678dd;">)</span> <span style="color: #51afef;">'</span><span style="color: #ECBE7B;">enlarge-window-maximize</span><span style="color: #51afef;">)</span>
 </pre>
 </div>
 </div>
 </li>
 
-<li><a id="orgaed67a2"></a>increase/decrease text size such that all other buffer text size will be adjusted at the same time. (not limited to opened buffer; all future buffer should also obey condition)<br />
-<div class="outline-text-5" id="text-orgaed67a2">
+<li><a id="org586cbbc"></a>increase/decrease text size such that all other buffer text size will be adjusted at the same time. (not limited to opened buffer; all future buffer should also obey condition)<br />
+<div class="outline-text-5" id="text-org586cbbc">
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(defadvice text-scale-increase (around all-buffers (arg) activate)
-  (dolist (buffer (buffer-list))
-    (with-current-buffer buffer
-      ad-do-it)))
+<pre class="src src-emacs-lisp"><span style="color: #51afef;">(</span><span style="color: #51afef;">defadvice</span> <span style="color: #c678dd;">text-scale-increase</span> <span style="color: #c678dd;">(</span>around all-buffers <span style="color: #98be65;">(</span>arg<span style="color: #98be65;">)</span> activate<span style="color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span><span style="color: #51afef;">dolist</span> <span style="color: #98be65;">(</span>buffer <span style="color: #a9a1e1;">(</span><span style="color: #a9a1e1;">buffer-list</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
+    <span style="color: #98be65;">(</span><span style="color: #51afef;">with-current-buffer</span> buffer
+      ad-do-it<span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
 </pre>
 </div>
 </div>
 </li>
-<li><a id="org51abc60"></a>capture Gif/video of screen using emacs command line, and automatically upload to cloud.<br /></li>
-<li><a id="org6b1c6ef"></a>GTD<br />
+<li><a id="orgdce3f14"></a>capture Gif/video of screen using emacs command line, and automatically upload to cloud.<br /></li>
+<li><a id="org6a79fbf"></a>GTD<br />
 <ul class="org-ul">
-<li><a id="orgd93bdf1"></a>PROJECT seamlessly managing actions-wise tasks<br />
+<li><a id="org4c31161"></a>PROJECT seamlessly managing actions-wise tasks<br />
 <ul class="org-ul">
-<li><a id="org05e4695"></a>add new actions to child/nighbour bullet point of the current subtree of actions (the structure is similar to one I use in vim TODOMANAGER)<br /></li>
-<li><a id="org3706268"></a>display all trees (similar to nerd tree strcuture) of actions, so one can switch to different subtree in the "actions tree" or switching to different "action tree."<br /></li>
-<li><a id="org08e1c64"></a>easily move reselect new actions from existing of subtrees<br /></li>
+<li><a id="org5675882"></a>add new actions to child/nighbour bullet point of the current subtree of actions (the structure is similar to one I use in vim TODOMANAGER)<br /></li>
+<li><a id="org7e6a541"></a>display all trees (similar to nerd tree strcuture) of actions, so one can switch to different subtree in the &ldquo;actions tree&rdquo; or switching to different &ldquo;action tree.&rdquo;<br /></li>
+<li><a id="orgd14f634"></a>easily move reselect new actions from existing of subtrees<br /></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a id="org230d1ff"></a>I want string in the notes to be data in which one can highlight section to select the data then programming-langauge/filtering/functions/command can be applied to manipulate the dataset.<br />
-<div class="outline-text-5" id="text-org230d1ff">
+<li><a id="org475d165"></a>I want string in the notes to be data in which one can highlight section to select the data then programming-langauge/filtering/functions/command can be applied to manipulate the dataset.<br />
+<div class="outline-text-5" id="text-org475d165">
 <p>
-I can see this become really use ful when combine with <a href="#org37884ed">PROJECT multi-layer text search filter. (design UI experience for piping sequence of regex output)</a>
+I can see this become really use ful when combine with <a href="#orgeca24bc">PROJECT multi-layer text search filter. (design UI experience for piping sequence of regex output)</a>
 </p>
 </div>
 </li>
 </ul>
 </div>
-<div id="outline-container-org95c03bd" class="outline-4">
-<h4 id="org95c03bd">search and filter experience</h4>
-<div class="outline-text-4" id="text-org95c03bd">
+<div id="outline-container-org7bc4831" class="outline-4">
+<h4 id="org7bc4831">search and filter experience</h4>
+<div class="outline-text-4" id="text-org7bc4831">
 </div>
 <ul class="org-ul">
-<li><a id="org37884ed"></a>PROJECT multi-layer text search filter. (design UI experience for piping sequence of regex output)<br /></li>
+<li><a id="orgeca24bc"></a>PROJECT multi-layer text search filter. (design UI experience for piping sequence of regex output)<br /></li>
 </ul>
 </div>
-<div id="outline-container-org1b1a7c8" class="outline-4">
-<h4 id="org1b1a7c8">data science features</h4>
-<div class="outline-text-4" id="text-org1b1a7c8">
+<div id="outline-container-org26d36d1" class="outline-4">
+<h4 id="org26d36d1">data science features</h4>
+<div class="outline-text-4" id="text-org26d36d1">
 </div>
 <ul class="org-ul">
-<li><a id="orgf5c2230"></a>passing scripts from your favorite language, and have them all available in emacs as commands.<br />
-<div class="outline-text-5" id="text-orgf5c2230">
+<li><a id="org78c307d"></a>passing scripts from your favorite language, and have them all available in emacs as commands.<br />
+<div class="outline-text-5" id="text-org78c307d">
 <p>
 ref: <a href="http://ergoemacs.org/emacs/elisp_perl_wrapper.html">http://ergoemacs.org/emacs/elisp_perl_wrapper.html</a>
 </p>
 </div>
 </li>
-<li><a id="orgb9345c6"></a>allow org-babel code block to stop before finish running. (This is because sometime I want to run something at the begining of the code for debug. Without this funcationality I cannot document the code as efficiently.)<br />
-<div class="outline-text-5" id="text-orgb9345c6">
+<li><a id="org17b5715"></a>allow org-babel code block to stop before finish running. (This is because sometime I want to run something at the begining of the code for debug. Without this funcationality I cannot document the code as efficiently.)<br />
+<div class="outline-text-5" id="text-org17b5715">
 <p>
 There are 2 ways to do this.
 </p>
@@ -277,67 +460,67 @@ There are 2 ways to do this.
 </li>
 </ul>
 </div>
-<div id="outline-container-org57ade79" class="outline-4">
-<h4 id="org57ade79">PROJECT interacting with pdf files (seamless pdf interaction experience)</h4>
-<div class="outline-text-4" id="text-org57ade79">
+<div id="outline-container-orgff6ed58" class="outline-4">
+<h4 id="orgff6ed58">PROJECT interacting with pdf files (seamless pdf interaction experience)</h4>
+<div class="outline-text-4" id="text-orgff6ed58">
 </div>
 <ul class="org-ul">
-<li><a id="org1be5f75"></a>to use pdf-isearch-occur one first need to use isearch-occur -&gt; type in a text -&gt; run pdf-isearch-occur to find words in pdf. (or i need to run pdf-isearch-minor-mode, but it is slow and keybinding may need to remap to match evil-mode keybinding.)<br /></li>
-<li><a id="orgd15af32"></a>very buggy and unpredicable at times<br /></li>
+<li><a id="orgf726b00"></a>to use pdf-isearch-occur one first need to use isearch-occur -&gt; type in a text -&gt; run pdf-isearch-occur to find words in pdf. (or i need to run pdf-isearch-minor-mode, but it is slow and keybinding may need to remap to match evil-mode keybinding.)<br /></li>
+<li><a id="org7a41377"></a>very buggy and unpredicable at times<br /></li>
 </ul>
 </div>
-<div id="outline-container-org1858791" class="outline-4">
-<h4 id="org1858791">colloborative features</h4>
-<div class="outline-text-4" id="text-org1858791">
+<div id="outline-container-org93a9bd8" class="outline-4">
+<h4 id="org93a9bd8">colloborative features</h4>
+<div class="outline-text-4" id="text-org93a9bd8">
 </div>
 <ul class="org-ul">
-<li><a id="org81cb863"></a>real time coding<br />
+<li><a id="org20fa888"></a>real time coding<br />
 <ul class="org-ul">
-<li><a id="org49d1817"></a>using Floobits to share code editing in real time (this allow sharing real time independent of text editor or IDE being used.)<br /></li>
+<li><a id="org910cc0b"></a>using Floobits to share code editing in real time (this allow sharing real time independent of text editor or IDE being used.)<br /></li>
 </ul>
 </li>
 </ul>
 </div>
-<div id="outline-container-org88a2acd" class="outline-4">
-<h4 id="org88a2acd">emails</h4>
-<div class="outline-text-4" id="text-org88a2acd">
+<div id="outline-container-orgfdad68b" class="outline-4">
+<h4 id="orgfdad68b">emails</h4>
+<div class="outline-text-4" id="text-orgfdad68b">
 </div>
 <ul class="org-ul">
-<li><a id="org11625b6"></a>I have problem setting up mu4e with doom emacs<br />
-<div class="outline-text-5" id="text-org11625b6">
+<li><a id="orgc5d6692"></a>I have problem setting up mu4e with doom emacs<br />
+<div class="outline-text-5" id="text-orgc5d6692">
 <p>
 error is shown below
 </p>
 <div class="org-src-container">
-<pre class="src src-markdown">IMAP command 'LOGIN &lt;user&gt; &lt;pass&gt;' returned an error: NO [AUTHENTICATIONFAILED] Invalid credentials (Failure)
+<pre class="src src-markdown">IMAP command 'LOGIN <span style="color: #5B6268;">&lt;</span><span style="color: #51afef;">user</span><span style="color: #5B6268;">&gt;</span> <span style="color: #5B6268;">&lt;</span><span style="color: #51afef;">pass</span><span style="color: #5B6268;">&gt;</span>' returned an error: NO [AUTHENTICATIONFAILED] Invalid credentials (Failure)
 </pre>
 </div>
 </div>
 </li>
 </ul>
 </div>
-<div id="outline-container-org8305bfa" class="outline-4">
-<h4 id="org8305bfa">PROJECT Intelligent-based feautures</h4>
-<div class="outline-text-4" id="text-org8305bfa">
+<div id="outline-container-orga120828" class="outline-4">
+<h4 id="orga120828">PROJECT Intelligent-based feautures</h4>
+<div class="outline-text-4" id="text-orga120828">
 </div>
 <ul class="org-ul">
-<li><a id="org9e6dc0e"></a>GPT-3 automatially generate tags when highlighted text from Readwise are imported to my knowledge based<br />
-<div class="outline-text-5" id="text-org9e6dc0e">
+<li><a id="org8295ba3"></a>GPT-3 automatially generate tags when highlighted text from Readwise are imported to my knowledge based<br />
+<div class="outline-text-5" id="text-org8295ba3">
 <p>
-To do this, I need to fine tune GPT-3 to optimize for searchability and discoveribility within knowledgebased "page protocol.")
+To do this, I need to fine tune GPT-3 to optimize for searchability and discoveribility within knowledgebased &ldquo;page protocol.&rdquo;)
 </p>
 </div>
 </li>
-<li><a id="org0cf5dde"></a>During creative session or writing session, Garun should allow GPT-3 to generate questions to trigger our creativity (create either bias or diversification of thought.).<br /></li>
+<li><a id="orga742899"></a>During creative session or writing session, Garun should allow GPT-3 to generate questions to trigger our creativity (create either bias or diversification of thought.).<br /></li>
 </ul>
 </div>
-<div id="outline-container-orga4919cd" class="outline-4">
-<h4 id="orga4919cd">Communicating between emacs and outside emacs</h4>
-<div class="outline-text-4" id="text-orga4919cd">
+<div id="outline-container-orgcdcacd7" class="outline-4">
+<h4 id="orgcdcacd7">Communicating between emacs and outside emacs</h4>
+<div class="outline-text-4" id="text-orgcdcacd7">
 </div>
 <ul class="org-ul">
-<li><a id="orge54c31c"></a>note<br />
-<div class="outline-text-5" id="text-orge54c31c">
+<li><a id="orgbbe43ed"></a>note<br />
+<div class="outline-text-5" id="text-orgbbe43ed">
 <p>
 brainstorming on ways to use emacs to communicate with outside world
 url: <a href="https://www.reddit.com/r/emacs/comments/5jhwlu/getting_things_from_outside_emacs_into/">https://www.reddit.com/r/emacs/comments/5jhwlu/getting_things_from_outside_emacs_into/</a>
@@ -346,9 +529,9 @@ url: <a href="https://www.reddit.com/r/emacs/comments/5jhwlu/getting_things_from
 </li>
 </ul>
 </div>
-<div id="outline-container-org0d5a460" class="outline-4">
-<h4 id="org0d5a460">Leetcode</h4>
-<div class="outline-text-4" id="text-org0d5a460">
+<div id="outline-container-org3dd9542" class="outline-4">
+<h4 id="org3dd9542">Leetcode</h4>
+<div class="outline-text-4" id="text-org3dd9542">
 <p>
 ref:
 Buffer leetcode-testcase and leetcode-result not displaying in corresponding window #70
@@ -357,40 +540,40 @@ Buffer leetcode-testcase and leetcode-result not displaying in corresponding win
 </div>
 
 <ul class="org-ul">
-<li><a id="org7c37c60"></a>fix Leetcode.el to always show windows without being replaced by new window. New window should be placed some where else.<br /></li>
+<li><a id="org1a1a99f"></a>fix Leetcode.el to always show windows without being replaced by new window. New window should be placed some where else.<br /></li>
 
-<li><a id="org57c8a30"></a>create a leetcommand for refreshing window (in case unexpected ui behavior occurs)<br /></li>
+<li><a id="org3b0847a"></a>create a leetcommand for refreshing window (in case unexpected ui behavior occurs)<br /></li>
 </ul>
 </div>
-<div id="outline-container-orge680d21" class="outline-4">
-<h4 id="orge680d21">Publish website with org-mode</h4>
+<div id="outline-container-orgbb49f92" class="outline-4">
+<h4 id="orgbb49f92">Publish website with org-mode</h4>
 </div>
-<div id="outline-container-orgeb1eaf8" class="outline-4">
-<h4 id="orgeb1eaf8">Dealing with Images</h4>
-<div class="outline-text-4" id="text-orgeb1eaf8">
+<div id="outline-container-org63d015f" class="outline-4">
+<h4 id="org63d015f">Dealing with Images</h4>
+<div class="outline-text-4" id="text-org63d015f">
 </div>
 <ul class="org-ul">
-<li><a id="orge89a033"></a>improve on image-dired<br />
+<li><a id="org8f01e8b"></a>improve on image-dired<br />
 <ul class="org-ul">
-<li><a id="org3805f47"></a>display list of existing tags globally and locally<br />
+<li><a id="org943dc28"></a>display list of existing tags globally and locally<br />
 <ul class="org-ul">
-<li><a id="org0c56537"></a>when select tags to display tagged images, ui should show window at the bottom and list of files + directory of each images and ui should allow for further filtering by matched word. (This ui idea is similar to <code>+default/search-buffer</code> )<br />
-<div class="outline-text-7" id="text-org0c56537">
+<li><a id="org4784de3"></a>when select tags to display tagged images, ui should show window at the bottom and list of files + directory of each images and ui should allow for further filtering by matched word. (This ui idea is similar to <code>+default/search-buffer</code> )<br />
+<div class="outline-text-7" id="text-org4784de3">
 <p>
-This is a very interesting workflow that reduce fiction between a user's thought to output.
+This is a very interesting workflow that reduce fiction between a user&rsquo;s thought to output.
 </p>
 
 <p>
 usecase:
-imagine that when you think of "vacation." You can get all of the pictures that have vacation tags and you may filter it further by file name and dir name (e.g. "2020", "Thailand").
+imagine that when you think of &ldquo;vacation.&rdquo; You can get all of the pictures that have vacation tags and you may filter it further by file name and dir name (e.g. &ldquo;2020&rdquo;, &ldquo;Thailand&rdquo;).
 </p>
 </div>
 </li>
 </ul>
 </li>
-<li><a id="orgea99697"></a>provide autocomplete mechanism when trying to mark by tags. (C-t f)<br /></li>
-<li><a id="orga0f11b4"></a>Allow image preview as seen in <a href="https://youtu.be/HzFqZ0Gl0aw?t=238">this video.</a><br />
-<div class="outline-text-6" id="text-orga0f11b4">
+<li><a id="org9b10e85"></a>provide autocomplete mechanism when trying to mark by tags. (C-t f)<br /></li>
+<li><a id="org38ceae2"></a>Allow image preview as seen in <a href="https://youtu.be/HzFqZ0Gl0aw?t=238">this video.</a><br />
+<div class="outline-text-6" id="text-org38ceae2">
 <p>
 I believe that this behavior is done using image-dired.
 </p>
@@ -422,11 +605,19 @@ displaying thumbnail default behavior in doom emacs are strange to use. Behavior
 </li>
 </ul>
 </li>
+<li><a id="orgfadc950"></a>PROJECT Display Online Images<br />
+<div class="outline-text-5" id="text-orgfadc950">
+<p>
+ref: <a href="https://emacs.stackexchange.com/questions/42281/org-mode-is-it-possible-to-display-online-images">https://emacs.stackexchange.com/questions/42281/org-mode-is-it-possible-to-display-online-images</a>
+</p>
+</div>
+</li>
 </ul>
 </div>
-<div id="outline-container-orgb8bb9ef" class="outline-4">
-<h4 id="orgb8bb9ef">Bookmark</h4>
-<div class="outline-text-4" id="text-orgb8bb9ef">
+
+<div id="outline-container-org7806726" class="outline-4">
+<h4 id="org7806726">Bookmark</h4>
+<div class="outline-text-4" id="text-org7806726">
 <p>
 ref:
 <a href="https://www.youtube.com/watch?v=Im8taRkzYAc">Enhance your Emacs experience with Bookmark Plus</a>
@@ -439,57 +630,84 @@ If I in the future finds default <code>Bookmark</code> functionality to be limit
 </div>
 </div>
 
-<div id="outline-container-org668414a" class="outline-4">
-<h4 id="org668414a">Dired</h4>
-<div class="outline-text-4" id="text-org668414a">
+<div id="outline-container-org74a81f8" class="outline-4">
+<h4 id="org74a81f8">Dired</h4>
+<div class="outline-text-4" id="text-org74a81f8">
 </div>
 <ul class="org-ul">
-<li><a id="org860df0e"></a>select files in dired by regex.<br /></li>
+<li><a id="org9f2e045"></a>select files in dired by regex.<br /></li>
 </ul>
+</div>
+<div id="outline-container-org10fdc5e" class="outline-4">
+<h4 id="org10fdc5e">Dealing with videos</h4>
+<div class="outline-text-4" id="text-org10fdc5e">
+</div>
+<ul class="org-ul">
+<li><a id="org613a50b"></a>allow taking notes on video like roam research plugin<br />
+<div class="outline-text-5" id="text-org613a50b">
+<p>
+ref:
+<a href="https://www.reddit.com/r/emacs/comments/a9upre/watching_video_within_an_emacs_buffer/">https://www.reddit.com/r/emacs/comments/a9upre/watching_video_within_an_emacs_buffer/</a>
+<a href="https://github.com/emacs-eaf/emacs-application-framework">https://github.com/emacs-eaf/emacs-application-framework</a>
+</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org569e768" class="outline-4">
+<h4 id="org569e768">Use Emacs Application Framework (EAF)</h4>
+<div class="outline-text-4" id="text-org569e768">
+<p>
+ref:
+<a href="https://www.youtube.com/watch?v=mJjBZ4MZHBo&amp;ab_channel=AndyStewart">https://www.youtube.com/watch?v=mJjBZ4MZHBo&amp;ab_channel=AndyStewart</a>
+<a href="https://www.youtube.com/watch?v=z9W0pnShEWc&amp;ab_channel=GavinFreeborn">https://www.youtube.com/watch?v=z9W0pnShEWc&amp;ab_channel=GavinFreeborn</a>
+<a href="https://www.youtube.com/watch?v=HK_f8KTuR0s&amp;ab_channel=MatthewZeng">https://www.youtube.com/watch?v=HK_f8KTuR0s&amp;ab_channel=MatthewZeng</a>
+</p>
+</div>
 </div>
 </div>
 
-<div id="outline-container-org6a17cc6" class="outline-3">
-<h3 id="org6a17cc6">current features</h3>
-<div class="outline-text-3" id="text-org6a17cc6">
+<div id="outline-container-org1dfe39c" class="outline-3">
+<h3 id="org1dfe39c">current features</h3>
+<div class="outline-text-3" id="text-org1dfe39c">
 </div>
-<div id="outline-container-orgde40615" class="outline-4">
-<h4 id="orgde40615">org mode</h4>
-<div class="outline-text-4" id="text-orgde40615">
+<div id="outline-container-org46b7c0a" class="outline-4">
+<h4 id="org46b7c0a">org mode</h4>
+<div class="outline-text-4" id="text-org46b7c0a">
 </div>
 <ul class="org-ul">
-<li><a id="orga56a590"></a>presentation<br />
+<li><a id="org8de0694"></a>presentation<br />
 <ul class="org-ul">
-<li><a id="org0789acf"></a>org-tree-slides for live demo<br />
+<li><a id="org7a97b40"></a>org-tree-slides for live demo<br />
 <ul class="org-ul">
-<li><a id="org29c63b2"></a>ref<br />
+<li><a id="orgb667002"></a>ref<br />
 <ul class="org-ul">
-<li><a id="org10fd33b"></a><a href="https://www.youtube.com/watch?v=vz9aLmxYJB0&amp;ab_channel=SystemCrafters">https://www.youtube.com/watch?v=vz9aLmxYJB0&amp;ab_channel=SystemCrafters</a><br /></li>
+<li><a id="org9089eb3"></a><a href="https://www.youtube.com/watch?v=vz9aLmxYJB0&amp;ab_channel=SystemCrafters">https://www.youtube.com/watch?v=vz9aLmxYJB0&amp;ab_channel=SystemCrafters</a><br /></li>
 </ul>
 </li>
-<li><a id="orgd0c0e19"></a>follow along features<br />
-<div class="outline-text-7" id="text-orgd0c0e19">
+<li><a id="orgcba5634"></a>follow along features<br />
+<div class="outline-text-7" id="text-orgcba5634">
 <p>
 to show history of type keys stroke,
 run <code>globalcommand-log-mode</code> follow by <code>clm/toggle-command-log-buffer</code>
 </p>
 </div>
 </li>
-<li><a id="org6e2a87e"></a>presentation<br />
+<li><a id="orge040f89"></a>presentation<br />
 <ul class="org-ul">
-<li><a id="org2a5cf37"></a>presentation that required live coding.<br />
+<li><a id="orgacaecd7"></a>presentation that required live coding.<br />
 <ul class="org-ul">
-<li><a id="org4b0ede4"></a>tools<br />
+<li><a id="org8dc20e9"></a>tools<br />
 <ul class="org-ul">
-<li><a id="org128cf61"></a>org tree slide<br /></li>
+<li><a id="orge48cc74"></a>org tree slide<br /></li>
 </ul>
 </li>
-<li><a id="orgfa795ba"></a>initial setup<br />
-<div class="outline-text-9" id="text-orgfa795ba">
+<li><a id="org01264bb"></a>initial setup<br />
+<div class="outline-text-9" id="text-org01264bb">
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(use-package org-tree-slide
-  :custom
-  (org-image-actual-width nil))
+<pre class="src src-emacs-lisp"><span style="color: #51afef;">(</span><span style="color: #51afef;">use-package</span> org-tree-slide
+  <span style="color: #c678dd;">:custom</span>
+  <span style="color: #c678dd;">(</span><span style="color: #dcaeea;">org-image-actual-width</span> nil<span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
 </pre>
 </div>
 
@@ -498,15 +716,15 @@ run = org-treeside with <code>C-&lt;</code> and <code>C-&gt;</code>
 </p>
 </div>
 </li>
-<li><a id="org0830a89"></a>simple presentation<br />
-<div class="outline-text-9" id="text-org0830a89">
+<li><a id="org32aada2"></a>simple presentation<br />
+<div class="outline-text-9" id="text-org32aada2">
 <p>
 <code>org-tree-slide-mode</code>
 </p>
 </div>
 </li>
-<li><a id="org1a28511"></a>narrow presentation<br />
-<div class="outline-text-9" id="text-org1a28511">
+<li><a id="orgcb6e652"></a>narrow presentation<br />
+<div class="outline-text-9" id="text-orgcb6e652">
 <p>
 toggle <code>org-tree-slide-narrow-control-profile</code> to be on
 only show slides that have todos
@@ -514,33 +732,33 @@ comment slide algo get skip
 </p>
 </div>
 </li>
-<li><a id="org0b24127"></a>configuration<br />
-<div class="outline-text-9" id="text-org0b24127">
+<li><a id="org71517be"></a>configuration<br />
+<div class="outline-text-9" id="text-org71517be">
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(defun efs/presentation-setup ()
-  (setq text-scale-mode-amount 3)
-  (org-display-inline-images)
-  (text-scale-mode 1))
+<pre class="src src-emacs-lisp"><span style="color: #51afef;">(</span><span style="color: #51afef;">defun</span> <span style="color: #c678dd;">efs/presentation-setup</span> <span style="color: #c678dd;">()</span>
+  <span style="color: #c678dd;">(</span><span style="color: #51afef;">setq</span> <span style="color: #dcaeea;">text-scale-mode-amount</span> <span style="color: #da8548; font-weight: bold;">3</span><span style="color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span><span style="color: #c678dd;">org-display-inline-images</span><span style="color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span><span style="color: #dcaeea;">text-scale-mode</span> <span style="color: #da8548; font-weight: bold;">1</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
 
-(defun efs/presentation-end ()
-  (text-scale-mode 0))
+<span style="color: #51afef;">(</span><span style="color: #51afef;">defun</span> <span style="color: #c678dd;">efs/presentation-end</span> <span style="color: #c678dd;">()</span>
+  <span style="color: #c678dd;">(</span><span style="color: #dcaeea;">text-scale-mode</span> <span style="color: #da8548; font-weight: bold;">0</span><span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
 
-(use-package! org-tree-slide
-  :hook ((org-tree-slide-play . efs/presentation-setup)
-	 (org-tree-slide-stop . efs/presentation-end))
-  :custom
-  (org-tree-slide-slide-in-effect t)
-  (org-tree-slide-activate-message "Presentation started!")
-  (org-tree-slide-deactivate-message "Presenatation finished!")
-  (org-tree-slide-header t)
-  (org-tree-slide-breadcrumbs " // ")
-  (org-image-actual-width nil))
+<span style="color: #51afef;">(</span><span style="color: #51afef;">use-package!</span> org-tree-slide
+  <span style="color: #c678dd;">:hook</span> <span style="color: #c678dd;">(</span><span style="color: #98be65;">(</span>org-tree-slide-play . efs/presentation-setup<span style="color: #98be65;">)</span>
+         <span style="color: #98be65;">(</span>org-tree-slide-stop . efs/presentation-end<span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+  <span style="color: #c678dd;">:custom</span>
+  <span style="color: #c678dd;">(</span>org-tree-slide-slide-in-effect t<span style="color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span>org-tree-slide-activate-message <span style="color: #98be65;">"Presentation started!"</span><span style="color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span>org-tree-slide-deactivate-message <span style="color: #98be65;">"Presenatation finished!"</span><span style="color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span>org-tree-slide-header t<span style="color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span>org-tree-slide-breadcrumbs <span style="color: #98be65;">" // "</span><span style="color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span><span style="color: #dcaeea;">org-image-actual-width</span> nil<span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
 </pre>
 </div>
 </div>
 </li>
-<li><a id="org7fdf018"></a>sharing presentation slides<br />
-<div class="outline-text-9" id="text-org7fdf018">
+<li><a id="org7b0744e"></a>sharing presentation slides<br />
+<div class="outline-text-9" id="text-org7b0744e">
 <p>
 run <code>org-beamer-export-to-pdf</code>
 </p>
@@ -552,8 +770,8 @@ run <code>org-beamer-export-to-pdf</code>
 </li>
 </ul>
 </li>
-<li><a id="org4f8c930"></a>use org-reveal for standard presentation<br />
-<div class="outline-text-6" id="text-org4f8c930">
+<li><a id="orga602d81"></a>use org-reveal for standard presentation<br />
+<div class="outline-text-6" id="text-orga602d81">
 <p>
 I pick <code>org-reveal</code> over <code>org-beamer</code> because I am not sure if <code>org-beamer</code> has notes features.
 </p>
@@ -561,10 +779,10 @@ I pick <code>org-reveal</code> over <code>org-beamer</code> because I am not sur
 </li>
 </ul>
 </li>
-<li><a id="org3d8880d"></a>clocking<br />
+<li><a id="org2a21be7"></a>clocking<br />
 <ul class="org-ul">
-<li><a id="orgbf47af6"></a>how much time do I take to complete task x?<br />
-<div class="outline-text-6" id="text-orgbf47af6">
+<li><a id="orge9a25e7"></a>how much time do I take to complete task x?<br />
+<div class="outline-text-6" id="text-orge9a25e7">
 <p>
 first clock-in under a heading then you can choose to clock-goto to go to the heading that clock is in.
 To end the clock and output the estimated time for the task, clock-out can be used.
@@ -573,11 +791,11 @@ To end the clock and output the estimated time for the task, clock-out can be us
 </li>
 </ul>
 </li>
-<li><a id="org888a146"></a>Allow literate programming with org-babel where org-babel block are treated as organized as "outline nodes oragnization" styles used in leo IDE.<br />
-<div class="outline-text-5" id="text-org888a146">
+<li><a id="orgec95d1a"></a>Allow literate programming with org-babel where org-babel block are treated as organized as &ldquo;outline nodes oragnization&rdquo; styles used in leo IDE.<br />
+<div class="outline-text-5" id="text-orgec95d1a">
 <p>
 requirement:
-    literate programming using org-babel to tangle codes in non linear ways. This idea can be expanded to utilize leo ideo ideas of "outline nodes organization" (finer than file-based organization). To do this each org-babel block must be able to references "inside" other blocks (not only as input to other block) by tagging nodes of the block. t
+    literate programming using org-babel to tangle codes in non linear ways. This idea can be expanded to utilize leo ideo ideas of &ldquo;outline nodes organization&rdquo; (finer than file-based organization). To do this each org-babel block must be able to references &ldquo;inside&rdquo; other blocks (not only as input to other block) by tagging nodes of the block. t
 </p>
 
 <p>
@@ -585,25 +803,25 @@ Demo of this feature is demonstrated by using org-babel with org block and org-r
 </p>
 </div>
 </li>
-<li><a id="org11be9f0"></a>allow "making literate note from source code"<br /></li>
+<li><a id="orgeb87710"></a>allow &ldquo;making literate note from source code&rdquo;<br /></li>
 </ul>
 </div>
 
-<div id="outline-container-org84b7ffe" class="outline-4">
-<h4 id="org84b7ffe">movement</h4>
-<div class="outline-text-4" id="text-org84b7ffe">
+<div id="outline-container-org970965e" class="outline-4">
+<h4 id="org970965e">movement</h4>
+<div class="outline-text-4" id="text-org970965e">
 </div>
 <ul class="org-ul">
-<li><a id="org8713523"></a>ace-jump<br /></li>
+<li><a id="org2e46b1c"></a>ace-jump<br /></li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: DESKTOP-5MMF71L</p>
-<p class="date">Created: 2021-11-04 Thu 10:17</p>
-<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 27.1 (<a href="https://orgmode.org">Org</a> mode 9.3)</p>
+<p class="author">Author: Anak Wannaphaschaiyong</p>
+<p class="date">Created: 2021-11-12 Fri 08:28</p>
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 27.1 (<a href="https://orgmode.org">Org</a> mode 9.5)</p>
 </div>
 </body>
 </html>

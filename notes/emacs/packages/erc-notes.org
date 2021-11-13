@@ -1,0 +1,54 @@
+#+TITLE: Erc Notes
+
+IRC client that comes with Emacs (see rcirc)
+
+* References
+** System Crafters
+[[https://www.youtube.com/watch?v=qWHTZIYTA4s&ab_channel=SystemCrafters][Chat Like the 90's in Emacs with ERC]]
+* List of Channels
+- =irc.libera.chat= for other server, see [[https://libera.chat/guides/connect][Connecting to Libera.Chat]]
+
+* Configuration
+
+** Basic configuration example
+
+#+BEGIN_SRC emacs-lisp
+(setq erc-server "irc.libera.chat"
+      erc-nick "Garun"
+      erc-user-full-name "Anak Wannaphaschaiyong"
+      erc-track-shorten-start 8 ; limit chars in mode line
+      erc-autojoin-channels-alist '(("irc.libera.chat" "#systemcrafters" "#emacs")) erc-kill-buffer-on-part t
+      erc-auto-query 'bury)
+#+END_SRC
+
+* Useful Features
+- Connect to multiple servers at once
+- Can complete the names of other users while typing
+- Highlighting for your name or other terms in message
+- Channel tracking to show channel acticity in the mode line
+- Show emojis in message
+- Desktop notifications when mentinoed or messgaed (enabled as a module)
+- Easy to script it with new behavior!
+* Navigate Channels and Other basic commands
+=M-x erc-tls= to connect to a particle IRC server address and you'll be prompted for your "nickname." (the name you will use on the server) and your password.
+
+=M-x erc-tls= is prefered over =M-x erc= because when the server supports SSL/TLS, it will ensure that you make a secure connection to the server!
+
+type =/join #somechannel= to join the channel
+type =/part= to leave the channel. (you can kill the buffer afterward)
+type =/list= to list all the channels.
+type =/whois <user>= to get information about the =<user>=
+type =/query <user>= to chat with =<user>= or the bots. (e.g. =/query NickServ=)
+type =/msg <user> <message>= to send =<user>= with =<message>=
+type =/nick <new-nick-name>= to rename your nickname
+
+other basic commands
+=/quit=
+=/reconnect=
+
+to register account to the server, see [[*To register account on the server][To register account on the server]].
+
+* To register account on the server
+type =/query NickServ= will open chat to bot that llows the owner of the nickname to disconnect a user from the network that is using their nickname.
+
+Once logged in, to get all possible options, type =help=.

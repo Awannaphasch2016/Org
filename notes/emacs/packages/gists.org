@@ -1,0 +1,19 @@
+#+TITLE: Gists
+
+* Key binding + Commands
+Note; i haven't try it all yet, because I don't use gists up until this point
+
+refer to the document, see [[https://github.com/defunkt/gist.el#whats-new-in-10-][here]].
+
+list of commands show below.
+
+- reload the gist list from server
+- edit current gist description
+- delete current gist
+- add a file to the current gist
+- remove a file from the curent gist
+- print current gist url
+- browse current gist
+- star gist
+- unstart gist
+- form gist

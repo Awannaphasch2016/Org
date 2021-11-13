@@ -1,3 +1,0 @@
-#+TITLE: Comint Mode
-
-ref: https://masteringemacs.org/article/comint-writing-command-interpreter

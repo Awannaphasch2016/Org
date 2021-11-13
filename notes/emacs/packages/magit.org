@@ -6,47 +6,47 @@ ref:
 
 * Common Key Binding
 To remove stash, regions or files, type ~x~ to "discard the change."
-
-* Clone
+* Git Commands and Function
+** Clone
 To clone from github, one can use ~user/reponame~.
 To clone from gitlab, one can use ~gitlab:user/reponame~ or ~gl:user/reponame~.
 
-* Commit
-** View commit
-*** view commit from current branch
+** Commit
+*** View commit
+**** view commit from current branch
 View commit from current branch
 In panel, ~ll~ displays commits log in burrent branch.
-*** view commit from a specific branch
+**** view commit from a specific branch
 In panel, ~lo~ allows one to select other branches to display commits log.
-** Adding and Editing Commit
-*** Amend the commit without having to edit the commit message.
+*** Adding and Editing Commit
+**** Amend the commit without having to edit the commit message.
 In panel, ~ce~ (Commit -> Extends)
-*** Amend the commit and edit the commit message.
+**** Amend the commit and edit the commit message.
 In panel, ~ca~ (Commit -> Amend)
-*** Change the most recent commit without commiting new changes
+**** Change the most recent commit without commiting new changes
 In panel, ~cw~ (Commit -> Reword)
-*** Add new stages to past commit
+**** Add new stages to past commit
 1. In panel, ~cf~ (Commit -> Fixup)
 2. select a commit with ~v~ (in evil mode)
 3. press ~C-c C-c~ to apply the changes.
-*** Combining commits
+**** Combining commits
 There are two ways to do this:
 - ~fixup~: Merges the changes of a commit into the previous commit.
 - ~squash~: Merges the changes of a commit into the previous commit and combine their commits messgae.
 Use ~fixup~ when you don't care about the commit message and ~squash~ when you want to keep it!
-*** Delete commits
+**** Delete commits
 
-* Branch
-** create a new branch from the changes of the current branch.
+** Branch
+*** create a new branch from the changes of the current branch.
 Use ~bs~ (Branch -> Spin off).
 NOTE: this only works when the branch you're starting from has been pushed to the remote!
-* Stash
-** stash local changes
+** Stash
+*** stash local changes
 In the panel, type ~Zz~
-* Pull
-** Pulling new changes from another branch
+** Pull
+*** Pulling new changes from another branch
 In the panel, type ~Fp~ pull from remote branch.
-* Rebase
+** Rebase
 Rebasing rewrite history of commits.
 
 In panel, rebase can be set by typing ~Fr~ where r will rotate options Or press ~r~ to open rebase panel.
@@ -54,13 +54,21 @@ In panel, rebase can be set by typing ~Fr~ where r will rotate options Or press 
 Note: if you are not familiar with rebase, make sure to create new branch from the target branch by typing ~bn~ in the panel
 
 For ease of use, interactive rebase can be used (type ~ri~ in panel).
-** reorder commit
+*** reorder commit
 ~M-j~ / ~M-n (evil)~: Move the commit forward in time by one commit
 ~M-p~ / ~M-j (evil)~: Move the commit backward in time by one commit
 
-* Fetch
+** Fetch
 In panel, fetch panel is binded to ~f~
-* Gitignore
+** Gitignore
 In panel, type ~i~
-* Reset
+** Reset
 In panel, type ~O~.
+* Magit Comand and Functions
+** [[https://github.com/magit/transient][Transient commands]]
+ref
+- [[file:~/org/notes/dev-ops/kubernetes-note.org::*a simple transcient][a simple transcient example]]
+- [[file:~/org/notes/dev-ops/kubernetes-note.org::*Transient with params][Transient with params example]]
+- [[file:~/org/notes/dev-ops/kubernetes-note.org::*Connecting the transient to our mode][Example of defining key binding in transient]]
+
+All the transients argumetns can be set temporarily or permanently, see [[https://magit.vc/manual/transient/Saving-Values.html#Saving-Values][here]].

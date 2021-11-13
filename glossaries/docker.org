@@ -1,0 +1,8 @@
+#+title: Docker
+
+* service
+a service is the image for a microservice within the context of some larger application
+
+see [[https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/][How services work.]]
+* Dockerfile
+A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image.

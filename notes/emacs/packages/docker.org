@@ -1,0 +1,10 @@
+#+TITLE: Docker
+
+* Error
+
+** how to run 'docker run ...' from docker transient buffer ('M-x docker')?
+From poking around with UI, I am unable to find entries that would allow me to run ~docker run~
+
+I have discovered that a transient buffer to build command prefix to run ~docker run~ must called ~docker-image-run~ (defined by ~transient-define-prefix~) function because the function define prefix for =-i= (interactive) and =-t= (tty).
+
+next step is to understand how ~docker-utils-transient-define-prefix~ is used. Once I know, it should be enough for me to find out logic to called ~docker-image-run~ function from ~docker~ (defined by ~transient-define-prefix~)

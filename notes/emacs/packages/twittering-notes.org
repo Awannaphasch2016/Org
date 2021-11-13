@@ -1,0 +1,9 @@
+#+TITLE: Twittering mode
+
+* Error
+Following this quick start, I can't even run =M-x twit=.
+I get the following error.
+
+#+BEGIN_SRC md
+Package tls is deprecated
+#+END_SRC

@@ -27,52 +27,64 @@ print(random.choice(topics))
 ** Awesome repos
 [[https://github.com/semi-technologies/awesome-weaviate][Awesome Weaviate]]
 
-* Emacs
-** TODO learn to implement in emacs using elisp
+
+
+* Current Topics for Incremental Learning
+** Emacs
+*** TODO learn to implement in emacs using elisp
 - reading [[file:doom-emacs/packages/emacs-application-framework.org::https://github.com/emacs-eaf/emacs-application-framework#install][What is a backtrace & how to produce them]]
 - [[file:books/Writing GNU Emacs Extension - Bob Glickstein.org::*Basic operations][stop at this chapter of 'writing with elisp...']]
-** TODO Contribute to EAF
+*** TODO Contribute to EAF
 - look at [[https://github.com/emacs-eaf/emacs-application-framework/wiki/Todo-List][EAF TODO list]] and pick one
-** Figure out how to properly use variation of =interaction=
-** Learning how to use jupyter-notebook from [[https://youtu.be/RD0o2pkJBaI?t=1905][this tutorial.]]
+*** Figure out how to properly use variation of =interaction=
+*** Figure out org-babel manipulate output from shell. (so I understand or able to debug scenario in which output of org-babel block are not as what I expected)
+*** Learning how to use jupyter-notebook from [[https://youtu.be/RD0o2pkJBaI?t=1905][this tutorial.]]
 
-*** TODO make notes on how [[https://github.com/nnicandro/emacs-jupyter#org-mode-source-blocks][jupyter-notebook integrate with org-mode.]]
-*** TODO figure out how to properly use :noweb header tags in org babel
+**** TODO make notes on how [[https://github.com/nnicandro/emacs-jupyter#org-mode-source-blocks][jupyter-notebook integrate with org-mode.]]
+**** TODO figure out how to properly use :noweb header tags in org babel
 see [[https://www.gnu.org/software/emacs/manual/html_node/org/Noweb-Reference-Syntax.html][noweb reference syntax]]
 see also [[file:~/org/projects/sideprojects/build-website/org-mode.org][example]]
-** learn the following mode
-*** hledger to maintain financial report
+*** learning to use IRC Client.
+*** set up emacs for SQL developement
+*** learn the following mode
+**** hledger to maintain financial report
 [[https://github.com/narendraj9/hledger-mode][hledger-mode]]
-*** kubernetes-mode with limited permission
+**** kubernetes-mode with limited permission
 [[https://github.com/abrochard/kubel][kubel]]
-*** [[https://github.com/Silex/docker.el][docker mode]]
-*** [[https://github.com/emacsorphanage/terraform-mode][terraform mode]]
-*** twitter
-*** screencast stuff
+**** [[https://github.com/Silex/docker.el][docker mode]]
+**** [[https://github.com/emacsorphanage/terraform-mode][terraform mode]]
+**** twitter
+**** screencast stuff
 
-* Blockchain
-** TODO learn Solona
+** Blockchain
+*** TODO learn Solona
 - learning rust using ~rustling~
-** TODO understand funcdamental of blockchain
+*** TODO understand funcdamental of blockchain
 - reading the following
   https://dl.acm.org/doi/pdf/10.1145/3471140?casa_token=wPW15CfV4zgAAAAA:_JbcvPAWjkFnU7fQBbYut8zGMIjgiDE2jhrLyfJo8hjohFOtGLQJa4V27ysLkTlhphZaf2gPAxgNyw
   - trying to understand ~encorse peers~ (~endorser transaction~) used in ~Hyperledger Fabric~
     - I stopped [[https://hyperledger-fabric.readthedocs.io/en/release-2.2/peers/peers.html#peers-and-channels][here]]
 
-* Algorithm, Computer Science & Deverlopers Fundamentals
-** TODO learning from leetcode
-*** Add Two Numbers
+** Algorithm, Computer Science & Deverlopers Fundamentals
+*** TODO learning from leetcode
+**** Add Two Numbers
 learning about link list
-** TODO reading [[https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-4.html][Structure and Interpretation of Computer Programs]]
+*** TODO reading [[https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-4.html][Structure and Interpretation of Computer Programs]]
 stopped [[https://sicp.sourceacademy.org/chapters/1.1.html][here]]
-** gist
-*** I failed to switch git permission, see [[file:git-notes.org::*Switching git permission][here]].
+*** gist
+**** I failed to switch git permission, see [[file:git-notes.org::*Switching git permission][here]].
 
-* Prompt Programming
-** TODO reading [[https://generative.ink/posts/methods-of-prompt-programming/][methods of prompt programming]]
-** TODO reading [[id:][GPT-3 creative fiction]]
-* Deep learning and Data Science
-** TODO working on [[file:~/org/researches/ssl-dynamic-graph/log-ssl-dynamic-graph.org][log of ssl-dgnn]]
+** Prompt Programming
+*** TODO reading [[https://generative.ink/posts/methods-of-prompt-programming/][methods of prompt programming]]
+*** TODO reading [[id:][GPT-3 creative fiction]]
+** Deep learning and Data Science
+*** TODO working on [[file:~/org/researches/ssl-dynamic-graph/log-ssl-dynamic-graph.org][log of ssl-dgnn]]
 - be sufficient in rush enough to plot all the basic stuff.
   ref:
   [[https://www.youtube.com/watch?v=2o1YDUKyhu0&ab_channel=RiffomonasProject][Learning to use the patchwork R package (how to learn a package in general) (CC099)]]
+
+* Out of current focus, but I really want to learn more
+
+** Learning C from open source code
+*** understand how coreutils (data science related command lines)
+[[https://github.com/coreutils/coreutils/blob/master/src/cat.c][source code to cat command]]
