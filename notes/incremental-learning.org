@@ -39,6 +39,8 @@ print(random.choice(topics))
 - [[file:books/Writing GNU Emacs Extension - Bob Glickstein.org::*Basic operations][stop at this chapter of 'writing with elisp...']]
 *** TODO Contribute to EAF
 - look at [[https://github.com/emacs-eaf/emacs-application-framework/wiki/Todo-List][EAF TODO list]] and pick one
+*** Dap mode
+**** how to load debug.el automatically?
 *** Figure out how to properly use variation of =interaction=
 *** Figure out org-babel manipulate output from shell. (so I understand or able to debug scenario in which output of org-babel block are not as what I expected)
 *** Learning how to use jupyter-notebook from [[https://youtu.be/RD0o2pkJBaI?t=1905][this tutorial.]]
@@ -60,7 +62,7 @@ see also [[file:~/org/projects/sideprojects/build-website/org-mode.org][example]
 **** screencast stuff
 
 ** Blockchain
-*** TODO learn Solona
+*** TODO Complete this [[https://paulx.dev/blog/2021/01/14/programming-on-solana-an-introduction/][tutorial]] on Solona
 - learning rust using ~rustling~
 *** TODO understand funcdamental of blockchain
 - reading the following
@@ -92,3 +94,14 @@ stopped [[https://sicp.sourceacademy.org/chapters/1.1.html][here]]
 *** understand how coreutils (data science related command lines)
 [[https://github.com/coreutils/coreutils/blob/master/src/cat.c][source code to cat command]]
 ** Read [[https://youtu.be/FihU5JxmnBg?t=2779][Why Programs Fails a guide to systematic debugging]] (read chapters 5-7, 11-14)
+** Building website using org mode.
+build the website using this [[https://www.huxiaoxing.com/building-a-website-with-org-mode-files][framework]].
+** learning Typescript by doing.
+[[https://blog.scottlogic.com/2019/05/17/webassembly-compiler.html][build your own WebAssembly compiler]]
+[[https://github.com/g-plane/tiny-package-manager][Tiny Package Manager: Learns how npm or Yarn works]]
+** learning Javascript by doing.
+[[https://github.com/ronami/minipack][build your own module bundler -minipack]]
+[[https://levelup.gitconnected.com/understand-javascript-promises-by-building-a-promise-from-scratch-84c0fd855720][learn JavaScript Promises by Building a Promis from Scratch]]
+[[https://medium.com/@ankur_anand/implement-your-own-call-apply-and-bind-method-in-javascript-42cc85dba1b][Implement your own--call(), apply(), and bind() method in JavaScript.]]
+** learning Go by doing
+*** [[https://blog.jse.li/posts/torrent/][Building a BitTorrent client form the ground up in Go]]
