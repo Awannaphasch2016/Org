@@ -1,0 +1,4 @@
+#+TITLE: Rust
+
+* Crate
+A crate is a compilation unit in Rust. Whenever rustc some_file.rs is called, some_file.rs is treated as the crate file. ... By default, rustc will produce a binary from a crate

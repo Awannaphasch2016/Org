@@ -1,0 +1,16 @@
+#+TITLE: Solona Note
+
+* [[https://docs.solana.com/cli/install-solana-cli-tools#use-solanas-install-tool][Solona Installation]]
+Install with the following code
+#+BEGIN_SRC sh
+sh -c "$(curl -sSfL https://release.solana.com/v1.8.3/install)"
+#+END_SRC
+
+update with the following code
+#+BEGIN_SRC sh
+solona-install update
+#+END_SRC
+
+* [[https://docs.solana.com/developing/on-chain-programs/overview#versions][On chain programming]]
+** [[https://docs.solana.com/developing/on-chain-programs/overview#berkeley-packet-filter-bpf][Berkeley Packet Filter (BPF)]]
+From what I understand,
