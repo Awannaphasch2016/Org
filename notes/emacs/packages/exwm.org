@@ -1,0 +1,5 @@
+#+TITLE: Exwm
+
+* References
+tutorials
+- [[https://www.youtube.com/watch?v=f7xB2fFk1tQ&ab_channel=SystemCrafters][Emacs Desktop Environment #1 - Getting Started with EXWM]]

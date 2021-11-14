@@ -1,0 +1,3 @@
+#+TITLE: Vertico
+
+Unlike =Helm= and =Ivy= that have extra baggage, Vertico uses native emacs interace for minibuffer completions.

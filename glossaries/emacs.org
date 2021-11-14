@@ -1,0 +1,6 @@
+#+TITLE: Emacs
+
+* Windows vs Frames vs Buffers
+- A "frame" is an Emacs program window at the level of your OS or desktop environment
+- A "window" is a region within an Emacs frame that shows a particular buffer.
+- A "buffer" is an instance of window that you can interact with. (typing etc.)
