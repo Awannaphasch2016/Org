@@ -1,0 +1,11 @@
+#+TITLE: Blockchain
+
+* Token Program
+ref:
+[[https://spl.solana.com/token#background][solona token program]]
+
+the program defines a common implementation for Fungible and Non-Fungible token.
+
+* [[https://michaelhly.github.io/solana-py/spl.html][Solana Program Library (SPL) token]]
+
+The Solana Program Library (SPL) is a collection of on-chain programs targeting the Sealevel parallel runtime. These programs are tested against Solana’s implementation of Sealevel, solana-runtime, and deployed to its mainnet.
