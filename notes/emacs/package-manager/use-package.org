@@ -1,0 +1,14 @@
+#+TITLE: Use Package
+
+=use-package= is just macros that help manage packages.
+
+* Principle design of =use-package=
+- target + specific + explicit
+  as it appears that automatically search for load-path takes up to 30% of startup time. [fn:1]
+  otherwise, do nothing.
+* References
+- [[https://www.youtube.com/watch?v=2TSKxxYEbII&ab_channel=SachaChua][2015-04-01 Emacs package highlight: use-package]]
+
+* Footnotes
+
+[fn:1] https://youtu.be/2TSKxxYEbII?t=273

@@ -1,0 +1,14 @@
+#+TITLE: Straight
+
+#+BEGIN_QUOTE
+next-generation, purely functional package manager for emacs.
+#+END_QUOTE
+this means that =straight.el= enables you to have more detailed control over how you mange the Emacs packages you use in your configuration.
+
+It accomplishes this by cloning the actual source repositories of all the Emacs packages you use regardless of whether you find them on MELPA, ELPA, or an arbitrary GitHub or GitLab repo, hence, we can be more explicit about which version, batch, or commit used for each package. This features enhances reproducible configuration.
+
+* Features
+- integrates with =use-package= so that you can sue =:straight t= instead of =:ensure t=.
+- All MELPA and ELPA packages are easily installable by name
+- You can use your own forked versions of Emacs packages and merge improvements from the original repo.
+- You package list can be fully reproducible down to the exact commit of the git repo where the package comes from, using only you init file and an additional lockfile.

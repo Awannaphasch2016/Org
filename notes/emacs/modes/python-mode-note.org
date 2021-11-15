@@ -1,0 +1,15 @@
+#+TITLE: Python mode note
+
+* Python Shell
+** inferior shell
+
+| commands                    | key     | doom keys | custom keys | descriptions                 |
+| run-python                  |         |           |             | open and run inferior shell. |
+| python-shell-send-region    | C-c C-r |           |             |                              |
+| python-shell-send-file      | C-c C-l |           |             |                              |
+| python-shell-send-defun     | C-M-x   |           |             |                              |
+| python-shell-send-buffer    | C-c C-c |           |             |                              |
+| python-shell-send-string    | C-c C-s |           |             |                              |
+| python-shell-send-statement | C-c C-e |           |             |                              |
+
+
