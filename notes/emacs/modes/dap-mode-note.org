@@ -1,0 +1,36 @@
+#+TITLE: Dap Mode Note
+
+* Working Example
+
+#+BEGIN_SRC emacs-lisp :noeval :dir /mnt/c/Users/terng/OneDrive/Documents/Working/tgn/debug.el
+(dap-register-debug-template
+  "Python :: Run train_self_supervised (buffer)"
+  (list :type "python"
+        :name "gdb::run with arguments"
+        :args (list "-d reddit --use_memory --prefix tgn-attn-reddit --n_runs=10")
+        :cwd nil
+        :module nil
+        :program "/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/train_self_supervised.py"
+        :request "launch"))
+#+END_SRC
+* Key binding
+
+| commands | key | doom keys | custom keys | descriptions |
+|          |     |           |             |              |
+
+* FAQs
+
+** when non-existence property is passed to =dap-register-debug-template=, no error will be raised
+#+BEGIN_SRC emacs-lisp :noeval :dir /mnt/c/Users/terng/OneDrive/Documents/Working/tgn/debug.el
+(dap-register-debug-template
+  "Python :: Run train_self_supervised (buffer)"
+  (list :type "python"
+        :name "gdb::run with arguments"
+        :something "" ;; no error
+        :args (list "-d reddit --use_memory --prefix tgn-attn-reddit --n_runs=10")
+        :cwd nil
+        :module nil
+        :program "/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/train_self_supervised.py"
+        :request "launch"))
+#+END_SRC
+
