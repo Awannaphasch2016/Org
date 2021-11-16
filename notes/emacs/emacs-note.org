@@ -8,7 +8,7 @@
   - What is your expectation of the results?
 
 From my brief investigation, I notice that although all commands evaluate lisp code, it wasn't implemented on the same commands. (not much similarity beyond eval and overlays)
-* Built-in Packages
+* Built-in Packages and modes
 ** Packages
 *** Imenu
 ****  How does Imenu function works?
@@ -55,6 +55,42 @@ note: behavior of calling ~imenu~ using key binding is different from select ~im
 So far, I unable to pass output from ~imenu-choose-buffer-index~ (which, according to the documentation, suppose to produce INDEX-ITEM ) to ~imenu~, so I suspect that my understanding of ~marker~ concept may blind me from the error.
 
 Next next I planned to read about ~marker~ from [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Markers.html][this page]].
+** Modes
+*** edebug mode
+- ref
+  - tutorial
+    - [[https://youtu.be/QRBcm6jFJ3Q?t=416][2015-04-08 Emacs Lisp Development Tips with John Wiegley]]
+    - [[https://www.youtube.com/watch?v=odkYXXYOxpo&ab_channel=NicFerrier][Debugging basics]] (This one is more structured and easier to follow)
+
+traditional ways of debugging is to =debug= function, see example below
+#+BEGIN_SRC emacs-lisp
+(defun foo ()
+  (if t
+      (progn
+        (debug)
+        (message "Hello, world"))
+    (message "unimplemented")))
+
+(foo)
+#+END_SRC
+
+
+
+set =toggle-debug-on-error= to t to enable debug on error.
+
+Once in the edebug mode
+| commands                   | key | doom keys | custom keys | descriptions |
+| debugger-eval-expression   | e   |           |             |              |
+| debugger-jump              |     |           |             |              |
+| debugger-quit              |     |           |             |              |
+| debugger-frame             |     |           |             |              |
+| debugger-continue          |     |           |             |              |
+| debugger-frame-clear       |     |           |             |              |
+| debugger-return-value      |     |           |             |              |
+| debugger-step-through      |     |           |             |              |
+| debugger-list-functions    |     |           |             |              |
+| debugger-eval-expression   |     |           |             |              |
+| debugger-record-expression |     |           |             |              |
 
 * Built-in functionality and macros
 ** Functionality

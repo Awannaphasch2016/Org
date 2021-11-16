@@ -34,10 +34,10 @@ print(random.choice(topics))
 
 * Current Topics for Incremental Learning
 ** Emacs
-*** TODO learn to implement in emacs using elisp
-- reading [[file:doom-emacs/packages/emacs-application-framework.org::https://github.com/emacs-eaf/emacs-application-framework#install][What is a backtrace & how to produce them]]
-- [[file:books/Writing GNU Emacs Extension - Bob Glickstein.org::*Basic operations][stop at this chapter of 'writing with elisp...']]
-- Figure out how to properly use variation of =interaction= keyword in lisp function.
+*** learn to implement in emacs using elisp
+**** TODO reading [[file:doom-emacs/packages/emacs-application-framework.org::https://github.com/emacs-eaf/emacs-application-framework#install][What is a backtrace & how to produce them]]
+**** TODO [[file:books/Writing GNU Emacs Extension - Bob Glickstein.org::*Basic operations][stop at this chapter of 'writing with elisp...']]
+**** TODO Figure out how to properly use variation of =interaction= keyword in lisp function.
 *** Contribute to EAF
 - look at [[https://github.com/emacs-eaf/emacs-application-framework/wiki/Todo-List][EAF TODO list]] and pick one
 *** Understand Emacs at the deeper level
@@ -48,6 +48,7 @@ print(random.choice(topics))
 ****** learn about completion
 ******* understand prescient, see [[https://www.youtube.com/watch?v=T9kygXveEz0&ab_channel=SystemCrafters][here]].
 ******* undertand vertico
+****** TODO learn about projectile
 ***** config workflow
 ****** explore =alphapapa= github for new seamless integration, [[https://github.com/alphapapa/org-ql][here]].
 ****** TODO tree-sitter doesn't turn on =tree-sitter-hl-mode= on rustic mode, see [[file:~/.doom.d/config.org::*Emacs Tree Sitter][here]]
@@ -71,6 +72,10 @@ ref:
 ****** TODO compare (diff) two regions, see [[https://emacs.stackexchange.com/questions/18369/how-do-i-compare-regions-in-the-same-file][here]] and [[https://www.gnu.org/software/emacs/manual/html_mono/ediff.html][ediff document]]for reference.
 ****** screencast stuff
 ****** automatically matched parenthesis (or other kinds of closure) in emacs, see [[https://www.google.com/search?q=partedit+emacs&rlz=1C1CHBF_enUS941US941&oq=partedit+emacs+&aqs=chrome..69i57j33i160.3230j0j7&sourceid=chrome&ie=UTF-8][paredit mode]], and this [[https://www.youtube.com/watch?v=QRBcm6jFJ3Q&ab_channel=SachaChua][tutorial]].
+****** TODO learn to use Iedit, see [[https://www.youtube.com/watch?v=xrNOLTAl1ug&ab_channel=AritraBhattacharjee][here]].
+****** TODO search and replace in emacs
+****** TODO multi-cursor edit in emacs
+****** TODO learn to save and load =workspace=
 **** learn the following mode
 ***** hledger to maintain financial report
 [[https://github.com/narendraj9/hledger-mode][hledger-mode]]
