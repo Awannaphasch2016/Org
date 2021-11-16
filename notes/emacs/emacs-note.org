@@ -8,10 +8,26 @@
   - What is your expectation of the results?
 
 From my brief investigation, I notice that although all commands evaluate lisp code, it wasn't implemented on the same commands. (not much similarity beyond eval and overlays)
-* Built-in Packages and modes
-** Packages
-*** Imenu
-****  How does Imenu function works?
+* Notes for Users
+** Help sections and realted info
+*** looking up documentation, see [[https://discourse.doomemacs.org/t/how-to-debug-issues/55#looking-up-documentation-3][here]].
+
+| commands                     | key | doom keys | custom keys | descriptions |
+| helpful-function -> add-hook |     |           |             |              |
+| helpful-variable             |     | spc-h-v   |             |              |
+| helpful-key                  |     | spc-h-k   |             |              |
+| doom/help-custom-variable    |     | spc-h-V   |             |              |
+
+seaching doom specific documentation
+
+| commands                 | key | doom keys | custom keys | descriptions |
+| doom/help-search         |     | spc-h-d-S |             |              |
+| doom/help-search-heading |     | spc-h-d-s |             |              |
+
+** Built-in Packages and modes
+*** Packages
+**** Imenu
+*****  How does Imenu function works?
 ~imenu~ function when called when called will jump to a place in the buffer chosen using either a buffer menu or mouse menu.
 
 #+BEGIN_SRC emacs-lisp
@@ -47,7 +63,7 @@ The returned value is of the form (INDEX-NAME . INDEX-POSITION) which is a forma
 (imenu '((Imenu . #<marker at 506 in emacs-note.org>)))
 #+END_SRC
 
-***** [2021-11-07 Sun]: WHAT HAVE I DONE AND WHAT TO DO NEXT?
+****** [2021-11-07 Sun]: WHAT HAVE I DONE AND WHAT TO DO NEXT?
 so the goal is to implement a simple imenu to reproduce the results of different call ~imenu~ on the buffer.
 
 note: behavior of calling ~imenu~ using key binding is different from select ~imenu~ from ~M-x~. Given what I know, I speculate that ~imenu~ take input directly from buffer in which it is, hence, selecting ~imenu~ from ~M-x~ produce undesired side effects.
@@ -55,8 +71,8 @@ note: behavior of calling ~imenu~ using key binding is different from select ~im
 So far, I unable to pass output from ~imenu-choose-buffer-index~ (which, according to the documentation, suppose to produce INDEX-ITEM ) to ~imenu~, so I suspect that my understanding of ~marker~ concept may blind me from the error.
 
 Next next I planned to read about ~marker~ from [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Markers.html][this page]].
-** Modes
-*** edebug mode
+*** Modes
+**** edebug mode
 - ref
   - tutorial
     - [[https://youtu.be/QRBcm6jFJ3Q?t=416][2015-04-08 Emacs Lisp Development Tips with John Wiegley]]
@@ -92,9 +108,9 @@ Once in the edebug mode
 | debugger-eval-expression   |     |           |             |              |
 | debugger-record-expression |     |           |             |              |
 
-* Built-in functionality and macros
-** Functionality
-*** [[https://www.gnu.org/software/emacs/manual/html_mono/ediff.html][Ediff]]
+** Built-in functionality and macros
+*** Functionality
+**** [[https://www.gnu.org/software/emacs/manual/html_mono/ediff.html][Ediff]]
 ref:
 [[https://www.youtube.com/watch?v=oXsaRENHlXY&ab_channel=oxyscbw][Exploring Emacs: Use/Set up ediff for comparing files for windows]]
 
@@ -109,12 +125,12 @@ Note: It is not intuitive to use at all. Unless, I need to use it, I am better w
 | ediff-current-file  |     |           |             | unsaved changes (revert-buffer) |
 | ediff-documentation |     |           |             | documentation for ediff         |
 
-*** Align
+**** Align
 | commands    | key | doom keys | custom keys | descriptions |
 | align-regex |     |           |             |              |
-** Emacs components
-*** Buffer
-**** How =display-buffer= works
+*** Emacs components
+**** Buffer
+***** How =display-buffer= works
 - ref
   - [[https://www.youtube.com/watch?v=-H2nU0rsUMY&ab_channel=SystemCrafters][Hey Emacs, Don't Move My Windows! - Customizing display-buffer's behavior]]
 
@@ -141,7 +157,7 @@ When a new buffer is created for display, Emacs uses the =display-buffer= functi
 #+RESULTS:
 : #<window 21 on Test!>
 
-**** What is an action functions?
+***** What is an action functions?
 =signature= of an action function:
 #+BEGIN_SRC emacs-lisp
 (display-buffer-same-window BUFFER ALIST)
@@ -149,8 +165,8 @@ When a new buffer is created for display, Emacs uses the =display-buffer= functi
 
 =display-buffer= will pass the buffer to be displayed and an association list that the action function can read to look for customizaiton parameters.
 
-*** Marker
-** Completion mechanism
+**** Marker
+*** Completion mechanism
 oen of the most important features of the user interface is the way in which the user makes selections from lists of items. for example:
 
 - Opening files
@@ -163,11 +179,11 @@ More popular adoption is to use =completion framework= like =Helm= or =Ivy= whic
 
 On the other hand, =Selectr=um and =Vertico= provide you with just completion functionality to build your own =completion framework=.
 
-* Things that effects how emacs behave
-** Process
-*** Proper way to call a process
+** Things that effects how emacs behave
+*** Process
+**** Proper way to call a process
 Use the =call-process= function and direct it to a buffer
-* Major modes
+** Major modes
 Order in which emacs looks for major mode.
 ref: [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Choosing-Modes.html][Choosing File Modes]]
 1. file-local variables
@@ -182,35 +198,8 @@ ref: [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Choosing-Modes.
 4. Fourthif Emacs still hasn’t found a suitable major modeit looks at the file’s name. The correspondence between file names and major modes is controlled by the variable ~auto-mode-alist~
 
 5. Finally, if Emacs still hasn’t found a major mode to use, it compares the text at the start of the buffer to the variable ~magic-fallback-mode-alist~
-* Customization
-** set keys binding
-mapping new key binding to non-defined prefix (by emacs).
-#+BEGIN_SRC elisp
-(global-set-key (kbd "C-x !") 'enlarge-window-maximize)
-#+END_SRC
-
-#+RESULTS:
-
-mapping new key binding to existing prefix (defined by doom emacs)
-#+BEGIN_SRC emacs-lisp
-(map! :leader "d d" #'dap-debug)
-#+END_SRC
-
-* Debugging Techniques
-** check if elisp function is defined
-ref: http://ergoemacs.org/emacs/elisp_check_defined.html
-
-check function
-#+BEGIN_SRC elisp
-(fboundp 'info)
-#+END_SRC
-
-check variable
-#+BEGIN_SRC elisp
-(boundp 'auto-mode-alist)
-#+END_SRC
-* Navigation
-** org-mode and table
+** Navigation
+*** org-mode and table
 
 | Commands           | Keys  | description                                                    |
 | org-metaleft       | M-h   | Promote heading, list item at point or move table column left. |
@@ -222,8 +211,8 @@ check variable
 | org-shiftmetaup    | M-S-k | Drag the line at point up                                      |
 | org-shiftmetadown  | M-S-j | default-indent-new-line                                        |
 
-** Windows
-*** Key-binding
+*** Windows
+**** Key-binding
 I figure its best to only list the one I use often.
 
 Note: =prior= key is =pageup=
@@ -251,13 +240,13 @@ Note: =prior= key is =pageup=
 | scroll-other-window                 | M-prior    |           |            |                            |
 | scroll-other-window-down            | C-M-v      |           |            |                            |
 | find-file-other-window              |            |           | spc-w-f    | other file in other window |
-* Things related to managing and loading packages
-** =init.el= vs =config.el= vs use-package's =preface= flags [fn:1]
-*** =init.el= vs =config.el=
+** Things related to managing and loading packages
+*** =init.el= vs =config.el= vs use-package's =preface= flags [fn:1]
+**** =init.el= vs =config.el=
 =init.el= is loaded before =require=
 =config.el= is loaded after =require=
 
-*** =init.el= vs use-package's =preface= flag
+**** =init.el= vs use-package's =preface= flag
 
 tldr:
 =init.el= doesn't raise warning if some code fails to load.
@@ -274,9 +263,180 @@ To let use aware that some code are skipped in =init.el=, warning is raised.
 When it fails to load things that should have been prepared during =init.el=, no further warning is raised. (beacuse it already raised.) only message that it couldn't be loaded will be shown.
 
 Similar to =init.el=, use-package's =preface= flag are availble during compilation time. Even before =init.el= but it is expected to not fail, so warning will be raised if it failed to load . (since it is used with =use-package= which is used during =config.el=)
-* Useful functionality and packages to improve your workflow
-** =macrosteop=
+** Useful functionality and packages to improve your workflow
+*** =macrosteop=
     Expand the macro form following point by one step.
+
+
+* Notes for Developers
+** Customization
+*** set keys binding
+mapping new key binding to non-defined prefix (by emacs).
+#+BEGIN_SRC elisp
+(global-set-key (kbd "C-x !") 'enlarge-window-maximize)
+#+END_SRC
+
+#+RESULTS:
+
+mapping new key binding to existing prefix (defined by doom emacs)
+#+BEGIN_SRC emacs-lisp
+(map! :leader "d d" #'dap-debug)
+#+END_SRC
+
+** Evaluating elisp
+- ref
+  - [[https://discourse.doomemacs.org/t/how-to-debug-issues/55#evaluating-elisp-on-the-fly-6][Evaluating elisp on the fly]]
+
+| commands                     | key | doom keys | custom keys | descriptions |
+| +eval:region                 |     | g r       |             |              |
+| +eval/buffer                 |     | g R       |             |              |
+| +eval/buffer-or-region       |     | C-c e     |             |              |
+
+
+one can use =ielm= REPL using below commands
+| commands                     | key | doom keys | custom keys | descriptions |
+| +eval/open-repl-other-window |     | spc-o-r   |             |              |
+| +eval/open-repl-other-window |     | C-c o r   |             |              |
+
+** Debugging Techniques
+*** check if elisp function is defined
+ref: http://ergoemacs.org/emacs/elisp_check_defined.html
+
+check function
+#+BEGIN_SRC elisp
+(fboundp 'info)
+#+END_SRC
+
+check variable
+#+BEGIN_SRC elisp
+(boundp 'auto-mode-alist)
+#+END_SRC
+*** how to deal with debug issues? see [[https://discourse.doomemacs.org/t/how-to-debug-issues/55#inspecting-source-code][here]].
+1. error may be displayed in *Message* buffer.
+   the *Message*  buffer can be accessed with either.
+
+   | commands                | key   | doom keys | custom keys | descriptions |
+   | view-echo-area-messages | c-h-e | spc-h-e   |             |              |
+*** how to produce a backtrace? see [[https://discourse.doomemacs.org/t/what-is-a-backtrace-how-to-produce-them/85][here]].
+| commands        | key | doom keys | custom keys | descriptions |
+| doom-debug-mode |     | spc-h-d-d |             |              |
+*** if =bin/doom= produces error, see [[https://discourse.doomemacs.org/t/what-is-a-backtrace-how-to-produce-them/85#from-bindoom-4][here]].
+*** if emacs is frozen, see [[https://discourse.doomemacs.org/t/what-is-a-backtrace-how-to-produce-them/85#from-frozen-emacs-5][here]].
+*** how to deal with frozen emacs? see [[https://discourse.doomemacs.org/t/what-is-a-backtrace-how-to-produce-them/85#from-frozen-emacs-5][here]].
+*** profiling and benchmarking, see [[https://discourse.doomemacs.org/t/how-to-debug-issues/55#profiling-and-benchmarking-5][here]].
+This option is used to inspect what cause emacs to slow down.
+
+=doom/toggle-profiler= must be toggle twice. The first time to start it, and again to prpoduce a report.
+| commands             | key | doom keys | custom keys | descriptions |
+| doom/toggle-profiler |     | spc-h-T   |             |              |
+*** search and inspect source code (last resource), see [[https://discourse.doomemacs.org/t/how-to-debug-issues/55#inspecting-source-code-9][here]].
+**** perform text search on all loaded packages.
+
+| commands                     | key | doom keys | custom keys | descriptions                                              |
+| doom/help-search-load-path   |     | spc-h-d-l |             | perform a text search on all pacages in =load-path=       |
+| doom/help-search-loaded-file |     | spc-h-d-L |             | perform a text search on all currently loaded =*.el= file |
+
+another option is to jump directly to a file Doom Emacs's source code.
+| commands                      | key | doom keys | custom keys | descriptions                                      |
+| +default/find-files-in-emacsd |     | spc-f-e   |             | jump to a file in Doom's source (in =~/.emacs.d=) |
+| +deafault/browse-emacsd       |     | spc-f-E   |             | browse Doom's source ( in =~/.emacs.d= )          |
+*** Command error and how to deal with it, see [[https://discourse.doomemacs.org/t/common-errors-how-to-deal-with-them/58][here]].
+
+**** debug =void-function: XYZ=
+
+try to debug with the following code
+#+BEGIN_SRC emacs-lisp
+;; declare to Emacs where to find XYZ when it is needed:
+(autoload 'XYZ "package-name")
+;; or do the same with `use-package' instead:
+(use-package package-name
+  :commands XYZ)
+;; or just load it immediately
+(require 'package-name)
+
+;; After any of the above you are free to use the function:
+(XYZ)
+#+END_SRC
+
+**** debug =void-variabe: XYZ=
+
+try to debug with the following code
+#+BEGIN_SRC emacs-lisp
+;; Setting the variable with setq will create it if it does not exist yet.
+;; If it does exist, it will be changed.
+(setq XYZ 50)
+;; You can use defvar instead, which won't change its existing value, if
+;; XYZ is already defined, and also lets you define documentation for it.
+(defvar XYZ 50 "Defines how many cacodemons `use-XYZ' should invoke.")
+;; Otherwise, load the variable's package eagerly, right before you use
+;; it. For example:
+(defun use-XYZ ()
+  "The function that triggered the error in the backtrace."
+  (require 'XYZ-package)
+  (do-things-with XYZ))
+;; or load it right away so you never have to worry about load order.
+(require 'XYZ-package)
+
+;; then you are free to reference the variable however you like. e.g.
+(add-to-list 'XYZ 1)
+(push 2 XYZ)
+(setq XYZ (append XYZ (list 3 4 5)))
+#+END_SRC
+**** debug =void-commandp: XYZ=
+
+#+BEGIN_QUOTE
+XYZ is not a known “command” or does not exist. A command is a function that has been marked as an “interactive” function. If the function exists, this error indicates it hasn’t been marked as interactive, but is being used interactively (most commonly: as a keybind).
+#+END_QUOTE
+
+Below is an example of code to reproduce the error.
+example 1
+#+BEGIN_SRC emacs-lisp
+(defun not-a-command ()
+ (message "Do stuff"))
+
+(defun is-a-command ()
+  (interactive)
+  (message "Do stuff"))
+
+(map! "M-x" #'is-a-command)  ; works fine!
+
+(map! "M-x" #'not-a-command) ; throws a commandp: not-a-command error
+#+END_SRC
+
+example 2
+#+BEGIN_SRC emacs-lisp
+(defun not-a-command ()
+ (message "Do stuff"))
+
+(defun is-a-command ()
+  (interactive)
+  (message "Do stuff"))
+
+(global-set-key (kbd "M-x") #'is-a-command)  ; works fine!
+
+(global-set-key (kbd "M-x") #'not-a-command) ; throws a commandp: not-a-command error
+#+END_SRC
+
+if function comes from packages. (you didn't write it yourself.), see [[https://discourse.doomemacs.org/t/common-errors-how-to-deal-with-them/58#the-function-comes-from-a-package-14][here]].
+
+
+
+**** debug =Key sequence ... start with non-prefix key.=, see [[https://discourse.doomemacs.org/t/common-errors-how-to-deal-with-them/58#key-sequence-starts-with-non-prefix-key-15][here]].
+**** debug =unable to find theme file for XYZ=, see [[https://discourse.doomemacs.org/t/common-errors-how-to-deal-with-them/58#unable-to-find-theme-file-for-xyz-19][here]].
+**** debug =cannot open load file: No such file or directory, ...=, see [[https://discourse.doomemacs.org/t/common-errors-how-to-deal-with-them/58#cannot-open-load-file-no-such-file-or-directory-23][here]].
+**** debug =Error in private config: ...=, see [[https://discourse.doomemacs.org/t/common-errors-how-to-deal-with-them/58#error-in-private-config-27][here]].
+**** debug =end-of-file ...=, see [[https://discourse.doomemacs.org/t/common-errors-how-to-deal-with-them/58#end-of-file-31][here]].
+**** debug other common exceptions.
+- =wrong-type-argument X Y=
+    a type error; Y is the invalid data that was received and X is the predicate function that would return true if Y were a valid data type. The name of this predicate should clue you in to what data type was expected. e.g. wrong-type-argument
+- =number-or-marker-p nil=
+   means something expected a number or marker, but got nil instead.
+- =wrong-number-of-arguments=
+    a function was passed the wrong number of arguments.
+
+
+** Report Bugs
+=straight-visit-package-website= quickly open that package's homepage in your browser.
 
 * Footnotes
 
