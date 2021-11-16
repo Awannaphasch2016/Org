@@ -1,0 +1,49 @@
+#+TITLE: Ubuntu Note
+
+
+* Package Managers
+** apt vs dpkg
+APT vs dpkg: Two Important Package Installers. APT and dpkg are both command-line package management interfaces you can use in the terminal on Ubuntu and other Debian-based systems. ... The two interfaces in fact work together, with APT acting like a complete package management tool through the use of dpkg.
+* Fundamentals Concepts
+** Pipe in Linux
+A pipe in Linux / Unix connects two processes, one of them has read-end of the file and the other one has the write-end of the file.Concepts
+Concepts
+When a process writes to a Pipe, it gets stored in a buffer and gets retrieved by the other process. Broken pipe occurs when a process prematurely exits from either end and the other process has not yet closed the pipe. [fn:1]Concepts
+Concepts
+* Debugging
+
+** How to fix =broken pipe= error in linux, see [[https://net2.com/how-to-fix-broken-pipe-error-in-linux/][here]].
+
+#+BEGIN_QUOTE
+Since type is trying to carry out a  write operation to a pipe whose other end has therefore been closed  a brokenpipe routine or the write() function that it invoked,  will return an EPIPE error which is known as “Broken pipe”.
+#+END_QUOTE
+
+*** Possible solution
+
+from [fn:1]
+#+BEGIN_SRC sh
+sudo dpkg -i --force-overwrite /var/cache/apt/archives/nvidia-340_340.107-0ubuntu0~gpu18.04.1_amd64.deb
+#+END_SRC
+
+*** Possible reasons
+#+BEGIN_QUOTE
+This process can also occur during upgrading ('sudo apt upgrade'). dpkg has in this case errors processing /tmp/apt-dpkg-install-some/file.deb, which does not exists after the upgrade in the /tmp directory. This .deb file does however exist in the /var/cache/apt/archives and the solution of Olimjon can be applied for this .deb file.
+
+This resolved for me the issue for a program for which the repository was renamed from 'abiout' to 'agate'.
+
+What is happening (at least in my case) is that some renamings or other changes in library files have to be enforced because dpkg do not recognize them as belonging to the same package/program. I guess something like this happened during the installation of the nvidia drivers.[fn:2]
+#+END_QUOTE
+
+*** example of the error
+#+BEGIN_SRC md
+dpkg-deb: error: paste subprocess was killed by signal (Broken pipe)
+Errors were encountered while processing:
+ /var/cache/apt/archives/emacs-common_1%3a26.3+1-1ubuntu2_all.deb
+E: Sub-process /usr/bin/dpkg returned an error code (1)
+#+END_SRC
+
+
+* Footnotes
+[fn:2] https://askubuntu.com/questions/1062171/dpkg-deb-error-paste-subprocess-was-killed-by-signal-broken-pipe
+
+[fn:1] https://net2.com/how-to-fix-broken-pipe-error-in-linux/

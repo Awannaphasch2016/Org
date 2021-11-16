@@ -8,9 +8,8 @@
   - What is your expectation of the results?
 
 From my brief investigation, I notice that although all commands evaluate lisp code, it wasn't implemented on the same commands. (not much similarity beyond eval and overlays)
-* Notes for Users
-** Help sections and realted info
-*** looking up documentation, see [[https://discourse.doomemacs.org/t/how-to-debug-issues/55#looking-up-documentation-3][here]].
+* Help sections and realted info
+** looking up documentation, see [[https://discourse.doomemacs.org/t/how-to-debug-issues/55#looking-up-documentation-3][here]].
 
 | commands                     | key | doom keys | custom keys | descriptions |
 | helpful-function -> add-hook |     |           |             |              |
@@ -24,6 +23,7 @@ seaching doom specific documentation
 | doom/help-search         |     | spc-h-d-S |             |              |
 | doom/help-search-heading |     | spc-h-d-s |             |              |
 
+* Notes for Users
 ** Built-in Packages and modes
 *** Packages
 **** Imenu
@@ -267,6 +267,13 @@ Similar to =init.el=, use-package's =preface= flag are availble during compilati
 *** =macrosteop=
     Expand the macro form following point by one step.
 
+*** Conditions related function
+**** =-andfn= return
+Return a predicate that returns non-nil if all PREDS do so.
+
+#+BEGIN_SRC emacs-lisp
+(funcall (-andfn #'numberp #'cl-evenp) 4)
+#+END_SRC
 
 * Notes for Developers
 ** Customization

@@ -1,9 +1,16 @@
 #+TITLE: Notes
 
-To open doom emacs documentation, use =doom/help.= which is binded to =spc-h-d-h=
+* Installation
 
-* Directory and Files Organization (How is doom-emacs connected to emacs?)
+Note:
+version of emacs in Ubuntu is lower than version of emacs required by Doom emacs, so you must install the required version following this [[https://github.com/hlissner/doom-emacs/blob/develop/docs/getting_started.org#install][guide]]. (Basically, you must new apt-repo with =add-apt-repository ppa:kelleyk/emacs=)
+
+If =$EMACS= environment variable is not set or incorrectly set, you will get =Can't find emacs in your PATH= error.
+
+* Help section and related info
+To open doom emacs documentation, use =doom/help.= which is binded to =spc-h-d-h=
+* Notes for Developers
+** Directory and Files Organization (How is doom-emacs connected to emacs?)
 From my inspection, I believe that Doom Module enable in =init.el= are located in =~/.emacs.d/modules/tools= which contains ~README~ and configuration code. (the actual code from downloaded packages are still in =~/.emacs.d/.local/straight/repo=)
-* Doom
-** sandbox
+** debug with sandbox, see [[https://discourse.doomemacs.org/t/testing-elisp-packages-in-dooms-sandbox/74][here]].
 * Communities
