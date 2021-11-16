@@ -441,7 +441,12 @@ if function comes from packages. (you didn't write it yourself.), see [[https://
 - =wrong-number-of-arguments=
     a function was passed the wrong number of arguments.
 
-
+*** check for mismatch paren with =check-parens=.
+*** avoid outdated byte-compiled elisp files?  see [[https://emacs.stackexchange.com/questions/185/can-i-avoid-outdated-byte-compiled-elisp-files][here]].
+set the following
+#+BEGIN_SRC emacs-lisp :noeval
+(setq load-prefer-newer t)
+#+END_SRC
 ** Report Bugs
 =straight-visit-package-website= quickly open that package's homepage in your browser.
 

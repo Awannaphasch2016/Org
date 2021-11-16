@@ -1,5 +1,13 @@
 #+TITLE: Notes
 
+
+* Doom behavior that could cause error
+
+
+** skipping recompiling/reloading packing (by using cache), see example of the error here ([[*how to fix error that is caused by running the whole =init.el=.]]).
+* Errors
+
+
 * Installation
 
 Note:
@@ -13,4 +21,34 @@ To open doom emacs documentation, use =doom/help.= which is binded to =spc-h-d-h
 ** Directory and Files Organization (How is doom-emacs connected to emacs?)
 From my inspection, I believe that Doom Module enable in =init.el= are located in =~/.emacs.d/modules/tools= which contains ~README~ and configuration code. (the actual code from downloaded packages are still in =~/.emacs.d/.local/straight/repo=)
 ** debug with sandbox, see [[https://discourse.doomemacs.org/t/testing-elisp-packages-in-dooms-sandbox/74][here]].
-* Communities
+** Debugging
+*** avoid outdated byte-compiled elisp files?  see [[https://emacs.stackexchange.com/questions/185/can-i-avoid-outdated-byte-compiled-elisp-files][here]].
+set the following
+#+BEGIN_SRC emacs-lisp :noeval
+(setq load-prefer-newer t)
+#+END_SRC
+
+*** how to fix error that is caused by running the whole =init.el=.
+
+
+Example of the error extracted from =~/.emacs.d/.local/doom.error.log=
+#+BEGIN_SRC md
+(invalid-read-syntax ")")
+
+(read #<buffer  *load*-815022>)
+
+(eval-buffer #<buffer  *load*-815022> nil "/home/awannaphasch2016/.emacs.d/.local/elpa/dap-mode-20211003.934/dap-mode-autoloads.el" nil t)
+
+(load-with-code-conversion "/home/awannaphasch2016/.emacs.d/.local/elpa/dap-mode-20211003.934/dap-mode-autoloads.el" "/home/awannaphasch2016/.emacs.d/.local/elpa/dap-mode-20211003.934/dap-mode-autoloads.el" nil t)
+
+(load "/home/awannaphasch2016/.emacs.d/.local/elpa/dap-mode-20211003.934/dap-mode-autoloads" nil t)
+
+... (more error)
+#+END_SRC
+
+From inspecting =eval-buffer= and noticing =(invalid-read-syntax ")")=, I solve the problem by looking in to ="/home/awannaphasch2016/.emacs.d/.local/elpa/dap-mode-20211003.934/dap-mode-autoloads.el"= and found that there indeed mismatch of parenthesis. (using =check-parens=)
+Furthermore, the top of =dap-mode-autoloads.el= mentioned that the file is automatically loaded, acknowledge this fact, I suspect that content has been unintentionally edit.
+
+Note: I could have confirmed by doing =git stash=, but it turns out that elpa doesn't use git to clone (This is why =straight.el= was proposed in the first place, see [[file:~/org/notes/emacs/package-manager/straight.org::*Features][here]])
+
+From abit more digging, I realised that doom emacs have the behavior of reloading/recompiling packages to reduce initialization time, but this cause loading and initialization errors.
