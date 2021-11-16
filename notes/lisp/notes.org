@@ -1,5 +1,8 @@
 #+TITLE: Notes
 
+to see reference and documentttion of elisp, open info page using =info= (=spc-h-i=) and navigate to elisp sections.
+
+
 * Data Structure
 
 ** vectors
@@ -12,6 +15,15 @@ you'll get a vector containing the three symbols, a, b, and c. If you want a vec
 values of variables a, b, and c, you must construct the vector using the vector function:
 
 (vector a b c) ⇒ [17 37 42]
+** association list (alist)
+association list is a list of key/value pairs where values can be accessed by their associated key.
+
+example of a list containing 2 pairs (tuple).
+#+BEGIN_SRC emacs-lisp :noeval
+'((mode . (org-mode helpful-mode help-mode))
+  (reuseable-freams .t))
+#+END_SRC
+
 
 * Useful functions/commands/variables
 ** Data Structure

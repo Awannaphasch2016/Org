@@ -1,3 +1,37 @@
 #+TITLE: Vertico
 
 Unlike =Helm= and =Ivy= that have extra baggage, Vertico uses native emacs interace for minibuffer completions.
+
+* Save minibuffer history
+to save history of minibuffer, vertico must be enable with =savehist-mode=
+basic config. see [[https://youtu.be/J0OaRy85MOo?t=625][here]].
+#+BEGIN_SRC emacs-lisp :noeval
+(use-package savehist
+  :init
+  (savehist-mode))
+#+END_SRC
+* Marginalia (provide extra information about the buffer)
+=Marginalia= is created by author of =Vertico=. It provides extra informaiton (=metadata=) about the buffer.
+=metadata= of buffer can be config.
+
+basic config, see [[https://youtu.be/J0OaRy85MOo?t=625][here]].
+#+BEGIN_SRC emacs-lisp :noeval
+(use-package marginalia
+  :after vertico
+  :ensure t
+  :custom
+  (marginalia-annotator '(marginalia-annotators-heavy marginalia-annotators-light nil))
+  :init
+  (marginalia-mode))
+#+END_SRC
+* FAQs
+- =Vertico= Performance for completion in poor. [fn:1]
+* Other useful packages
+- =consult=: A collection of a commands (like counsel for Ivy) which provide additional competions.
+- =Embark=: Provide actions for the current selection in Vertico completion lists
+- =orderless=: Improves searching across completions
+- =selectrum=: An alternative to Vertico, less minimal but follows similar principles.
+
+* Footnotes
+
+[fn:1] system crafters mentioned this at the time that [[https://youtu.be/J0OaRy85MOo?t=940][this tutorial]] is created.

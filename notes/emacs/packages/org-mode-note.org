@@ -1,5 +1,0 @@
-#+TITLE: Org Mode Note
-
-* Key binding
-| commands            | key | doom key | custom key | description      |
-| org-footnote-action |     | spc-m-f  |            | create footnotes |

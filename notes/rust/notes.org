@@ -8,6 +8,39 @@ string literal are immutable.
 string type manages data allocated on the heap.j
 
 
+* [[https://doc.rust-lang.org/reference/attributes.html][attributes]]
+From what I understand attributes are as the name suggested, it attaches to an item.
+
+** inner vs outer attributes
+Therer are inner attributes (denotes with =#=)and outer attributes (denotes with =#!=).
+** active vs inert attributes
+An attribute is either active or inert. During attribute processing, active attributes remove themselves from the thing they are on while inert attributes stay on.
+
+Note: Macros attribute are active. All other attributes are inert.
+** class of attributes
+Attributes can be classified into the following kinds:
+- Built-in attributes
+- Macro attributes
+- Derive macro helper attributes
+- Tool attributes
+
+
+
+
+* [[https://doc.rust-lang.org/rust-by-example/mod.html][modules]]
+* macros vs functionality
+macros is a =metaprogramming= features in rust where mataprogramming refers to a snippet of code that produce other code.
+
+macros are expanded =before the compiler interprets the meaning of the code=, so a macro can, for example, implement a trait on a given type. A function can’t, because it =gets called at runtime= and a trait needs to be implemented at compile time.
+
+** [[https://doc.rust-lang.org/stable/book/ch19-06-macros.html][macros]]
+macros must be called into scope while functions can be defined and called anywhere
+
+The term macro refers to a family of features in Rust: declarative macros with macro_rules! and three kinds of procedural macros:
+
+- Custom #[derive] macros that specify code added with the derive attribute used on structs and enums
+- Attribute-like macros that define custom attributes usable on any item
+- Function-like macros that look like function calls but operate on the tokens specified as their argument
 
 * References (Borrowing) vs Shadowing (using =let=) vs Mutable v Ownership  vs Constant
 =Constants= are never outof scope and always immutable.

@@ -8,8 +8,10 @@
   - What is your expectation of the results?
 
 From my brief investigation, I notice that although all commands evaluate lisp code, it wasn't implemented on the same commands. (not much similarity beyond eval and overlays)
-* Imenu
-**  How does Imenu function works?
+* Built-in Packages
+** Packages
+*** Imenu
+****  How does Imenu function works?
 ~imenu~ function when called when called will jump to a place in the buffer chosen using either a buffer menu or mouse menu.
 
 #+BEGIN_SRC emacs-lisp
@@ -45,7 +47,7 @@ The returned value is of the form (INDEX-NAME . INDEX-POSITION) which is a forma
 (imenu '((Imenu . #<marker at 506 in emacs-note.org>)))
 #+END_SRC
 
-*** [2021-11-07 Sun]: WHAT HAVE I DONE AND WHAT TO DO NEXT?
+***** [2021-11-07 Sun]: WHAT HAVE I DONE AND WHAT TO DO NEXT?
 so the goal is to implement a simple imenu to reproduce the results of different call ~imenu~ on the buffer.
 
 note: behavior of calling ~imenu~ using key binding is different from select ~imenu~ from ~M-x~. Given what I know, I speculate that ~imenu~ take input directly from buffer in which it is, hence, selecting ~imenu~ from ~M-x~ produce undesired side effects.
@@ -54,9 +56,80 @@ So far, I unable to pass output from ~imenu-choose-buffer-index~ (which, accordi
 
 Next next I planned to read about ~marker~ from [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Markers.html][this page]].
 
-* Marker
-* Process
-** Proper way to call a process
+* Built-in functionality and macros
+** Functionality
+*** [[https://www.gnu.org/software/emacs/manual/html_mono/ediff.html][Ediff]]
+ref:
+[[https://www.youtube.com/watch?v=oXsaRENHlXY&ab_channel=oxyscbw][Exploring Emacs: Use/Set up ediff for comparing files for windows]]
+
+Note: It is not intuitive to use at all. Unless, I need to use it, I am better without it.
+
+| commands            | key | doom keys | custom keys | descriptions                    |
+| ediff               |     |           |             |                                 |
+| ediff3              |     |           |             |                                 |
+| ediff-buffer        |     |           |             | compare buffers                 |
+| ediff-revision      |     |           |             | 2 git brancehs 1 file           |
+| vc-ediff            |     |           |             | look at vc changes from file    |
+| ediff-current-file  |     |           |             | unsaved changes (revert-buffer) |
+| ediff-documentation |     |           |             | documentation for ediff         |
+
+*** Align
+| commands    | key | doom keys | custom keys | descriptions |
+| align-regex |     |           |             |              |
+** Emacs components
+*** Buffer
+**** How =display-buffer= works
+- ref
+  - [[https://www.youtube.com/watch?v=-H2nU0rsUMY&ab_channel=SystemCrafters][Hey Emacs, Don't Move My Windows! - Customizing display-buffer's behavior]]
+
+When a new buffer is created for display, Emacs uses the =display-buffer= function to figure out where this buffer should be placed on screen.
+
+=display-buffer= consults a series of sources =in order= which contain rules for how windows are selected (or created) to display new buffers:
+
+    1. =display-buffer-overriding-action= - Used by package code to
+    temporarily override rules
+    2. =display-buffer-alist= - User-defined buffer placement rules (nil by default)
+    3. The =action= argument of =display-buffer= - The caller of =display-buffer= can specify its own rules
+        #+BEGIN_SRC emacs-lisp
+        (display-buffer BUFFER-OR-NAME &optional ACTION FRAME)
+        #+END_SRC
+    4. =display-buffer-base-action= - User-defined default placememt actions (nil by default)
+    5. =display-buffer-fallback-action= - Emacs' default placement rule you see in action every day which the buffer can be displayed. The action function's window (or frame!) in which the buffer will be displayed* Buffers
+
+=display-buffer= builds a list of action functions to try by combining all of these sources and then runs each function in order until one of them returns a window in which the buffer can be displayed. The action function's job is to find (or create) the window (or frame!) in which the buffer will be displayed.
+
+#+BEGIN_SRC emacs-lisp
+(display-buffer (get-buffer-create "*doom:scratch*"))
+#+END_SRC
+
+#+RESULTS:
+: #<window 21 on Test!>
+
+**** What is an action functions?
+=signature= of an action function:
+#+BEGIN_SRC emacs-lisp
+(display-buffer-same-window BUFFER ALIST)
+#+END_SRC
+
+=display-buffer= will pass the buffer to be displayed and an association list that the action function can read to look for customizaiton parameters.
+
+*** Marker
+** Completion mechanism
+oen of the most important features of the user interface is the way in which the user makes selections from lists of items. for example:
+
+- Opening files
+- Switching buffers
+- Using M-x to execute commands
+
+There exist package which provide different ways of displaying selections e.g. =ido=, =icomplete=, etc.
+
+More popular adoption is to use =completion framework= like =Helm= or =Ivy= which provide enhanced interfaces and special commands that provide additional behavior.
+
+On the other hand, =Selectr=um and =Vertico= provide you with just completion functionality to build your own =completion framework=.
+
+* Things that effects how emacs behave
+** Process
+*** Proper way to call a process
 Use the =call-process= function and direct it to a buffer
 * Major modes
 Order in which emacs looks for major mode.
@@ -73,11 +146,6 @@ ref: [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Choosing-Modes.
 4. Fourthif Emacs still hasn’t found a suitable major modeit looks at the file’s name. The correspondence between file names and major modes is controlled by the variable ~auto-mode-alist~
 
 5. Finally, if Emacs still hasn’t found a major mode to use, it compares the text at the start of the buffer to the variable ~magic-fallback-mode-alist~
-
-** Comint Mode
-ref: [[https://masteringemacs.org/article/comint-writing-command-interpreter][Comint Mode Tutorial]]
-
-
 * Customization
 ** set keys binding
 mapping new key binding to non-defined prefix (by emacs).
@@ -105,3 +173,75 @@ check variable
 #+BEGIN_SRC elisp
 (boundp 'auto-mode-alist)
 #+END_SRC
+* Navigation
+** org-mode and table
+
+| Commands           | Keys  | description                                                    |
+| org-metaleft       | M-h   | Promote heading, list item at point or move table column left. |
+| org-metaright      | M-l   | Demote heading, list item at point or move table column right. |
+| org-metaup         | M-k   | Move subtree up or move table row up.                          |
+| org-metadown       | M-j   | Move subtree down or move table row down.                      |
+| org-shiftmetaleft  | M-S-h | Promote subtree or delete table column.                        |
+| org-shiftmetaright | M-S-l | Demote subtree or insert table column.                         |
+| org-shiftmetaup    | M-S-k | Drag the line at point up                                      |
+| org-shiftmetadown  | M-S-j | default-indent-new-line                                        |
+
+** Windows
+*** Key-binding
+I figure its best to only list the one I use often.
+
+Note: =prior= key is =pageup=
+
+| command                             | native key | doom key  | custom key | description                |
+| delete-window                       | C-x 0      |           | spc-w-0    |                            |
+| delete-other-windows                | C-x 1      |           | spc-w-1    |                            |
+| evil-window-vsplit                  |            | spc-w-v   |            |                            |
+| +evil/window-vsplit-and-follow      |            | spc-w-V   |            |                            |
+| shrink-window                       | NA         | NA        |            | shrink vertically          |
+| shrink-window-horizontally          | C-x {      |           |            |                            |
+| shrink-window-if-larger-than-buffer | C-x -      |           |            |                            |
+| enlarge-window                      | C-x ^      |           |            | enlarge vertically         |
+| enlarge-window horizontally         | C-x }      |           |            |                            |
+| balance-windows                     |            | spc-w-=   |            |                            |
+| doom-window-enlarger                |            | spc-w-o   |            |                            |
+| window-tear-off                     |            | spc-w-T   |            |                            |
+| winner-redo                         |            | spc-w-C-r | spc-w-r    | redo all windows positions |
+| winner-undo                         |            | spc-w-C-u | spc-w-u    | undo all windows positions |
+| +evil/window-move-up                |            | spc-w-K   |            |                            |
+| +evil/window-move-left              |            | spc-w-L   |            |                            |
+| +evil/window-move-down              |            | spc-w-J   |            |                            |
+| +evil/window-move-right             |            | spc-w-R   |            |                            |
+| ace-window                          |            |           |            | jump to window by number   |
+| scroll-other-window                 | M-prior    |           |            |                            |
+| scroll-other-window-down            | C-M-v      |           |            |                            |
+| find-file-other-window              |            |           | spc-w-f    | other file in other window |
+* Things related to managing and loading packages
+** =init.el= vs =config.el= vs use-package's =preface= flags [fn:1]
+*** =init.el= vs =config.el=
+=init.el= is loaded before =require=
+=config.el= is loaded after =require=
+
+*** =init.el= vs use-package's =preface= flag
+
+tldr:
+=init.el= doesn't raise warning if some code fails to load.
+use-package's =preface= flag raise warming if it fails to load.
+
+detail:
+=init.el= is intended to be used for things that you don't always need.
+#+BEGIN_QUOTE
+things in =inite.el= are good to have, but emacs should still work without it.
+#+END_QUOTE
+Hence, error in =init.el= will not raise backtrace. (it just skip things that don't work. The rest of the code in init.el will still be processed.)
+To let use aware that some code are skipped in =init.el=, warning is raised.
+
+When it fails to load things that should have been prepared during =init.el=, no further warning is raised. (beacuse it already raised.) only message that it couldn't be loaded will be shown.
+
+Similar to =init.el=, use-package's =preface= flag are availble during compilation time. Even before =init.el= but it is expected to not fail, so warning will be raised if it failed to load . (since it is used with =use-package= which is used during =config.el=)
+* Useful functionality and packages to improve your workflow
+** =macrosteop=
+    Expand the macro form following point by one step.
+
+* Footnotes
+
+[fn:1] https://youtu.be/2TSKxxYEbII?t=1164

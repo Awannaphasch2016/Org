@@ -1,4 +1,7 @@
 #+TITLE: Rust
 
+* [[https://doc.rust-lang.org/book/appendix-02-operators.html][Operation and Symbols]]
+This appendix contains a glossary of Rust’s syntax, including operators and other symbols that appear by themselves or in the context of paths, generics, trait bounds, macros, attributes, comments, tuples, and brackets.
+
 * Crate
 A crate is a compilation unit in Rust. Whenever rustc some_file.rs is called, some_file.rs is treated as the crate file. ... By default, rustc will produce a binary from a crate
