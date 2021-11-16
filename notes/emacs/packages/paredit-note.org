@@ -1,0 +1,20 @@
+#+TITLE: Paredit Note
+
+Note: Doom emacs uses similar package called =smartparens.el=
+
+* Command and Key Binding
+- ref
+  - [[https://www.youtube.com/watch?v=D6h5dFyyUX0&ab_channel=emacsrocks][Emacs Rocks! Episode 14: Paredit]]
+
+
+| commands                     | key              | doom keys | custom keys | descriptions |
+| wrap-round                   | M-(              |           |             |              |
+| forward-slurp-sexp           | C-<right>        |           |             |              |
+| forward-barf-sexp            | C-<left>         |           |             |              |
+| raise-sexp                   | M-r              |           |             |              |
+| splice-sexp-killing-backward | M-<up>           |           |             |              |
+| convolute-sexp               | M-?              |           |             |              |
+| paredit-kill                 | C-k (overridden) |           |             |              |
+| paredit-split-sexp           | M-s              |           |             |              |
+| join-sexps                   | M-J              |           |             |              |
+| sp-split-sexp                | M-S              |           |             |              |
