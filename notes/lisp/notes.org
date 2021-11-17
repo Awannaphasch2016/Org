@@ -3,9 +3,20 @@
 to see reference and documentttion of elisp, open info page using =info= (=spc-h-i=) and navigate to elisp sections.
 
 
-* Data Structure
+* Fundametals concepts
+** Data Structure
 
-** vectors
+*** hash table
+
+example of how to check hashtable[fn:2]
+#+BEGIN_SRC emacs-lisp
+(hash-table-p #s(hash-table))
+#+END_SRC
+
+*** symbol
+symbol is an object with a name.[fn:1]
+
+*** vectors
 Vectors are self-evaluating; that is, the result of evaluating a vector is the vector itself. Its
 subexpressions are not evaluated. So if you write:
 
@@ -15,13 +26,22 @@ you'll get a vector containing the three symbols, a, b, and c. If you want a vec
 values of variables a, b, and c, you must construct the vector using the vector function:
 
 (vector a b c) ⇒ [17 37 42]
-** association list (alist)
+*** association list (alist)
 association list is a list of key/value pairs where values can be accessed by their associated key.
 
 example of a list containing 2 pairs (tuple).
 #+BEGIN_SRC emacs-lisp :noeval
 '((mode . (org-mode helpful-mode help-mode))
   (reuseable-freams .t))
+#+END_SRC
+
+** Functions
+*** defvar
+Define SYMBOL as a variable, and return SYMBOL.
+
+example
+#+BEGIN_SRC emacs-lisp :noeval
+(defvar lsp-clients (make-hash-table :test 'eql)
 #+END_SRC
 
 
@@ -35,3 +55,8 @@ example of a list containing 2 pairs (tuple).
 ** Buffers
 *** Mini Buffer
 ~read-string~ read input from mini buffer
+
+* Footnotes
+[fn:2] https://www.gnu.org/software/emacs/manual/html_node/elisp/Creating-Hash.html
+
+[fn:1]  https://www.gnu.org/software/emacs/manual/html_node/elisp/Symbol-Type.html#:~:text=A%20symbol%20in%20GNU%20Emacs,symbols%20have%20the%20same%20name.

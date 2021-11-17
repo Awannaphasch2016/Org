@@ -1,7 +1,19 @@
 #+TITLE: Regex Notes
 
-* Basic notation
-=^= is not
+
+* Foundations
+ref:
+[[https://www.rexegg.com/regex-quickstart.html][Quick-Start: Regex Cheat Sheet]] ( this is good. very concise and to the point.)
+
+I make notes on some of the notation that is harder to find from website.
+
+| notation | description |
+| \^       | not         |
+
+** [[https://www.rexegg.com/regex-quickstart.html#logic][Group]] (=()=) vs [[https://www.rexegg.com/regex-quickstart.html#classes][Character Classses]] (=[]=)
+group is usually represented by =(group)=
+Character classes is represented by =[character class]=
+
 
 * Examples
 [[file:books/data-science-at-cmd.org::*using back references to substitute with matched regex by index.][using back references to substitute with matched regex by index.]]

@@ -1,0 +1,28 @@
+#+TITLE: Pytorch Notes
+
+* Loss
+** CrossEntropyLoss
+#+BEGIN_SRC python :noeval
+import pytorch as torch
+from pytorch import nn
+
+# Example of target with class indices
+loss = nn.CrossEntropyLoss()
+input = torch.randn(3, 5, requires_grad=True) # input.shape = (3,5) ; torch.float32
+target = torch.empty(3, dtype=torch.long).random_(5) # target.shape = (3) ; torch.int64
+output = loss(input, target)
+output.backward()
+
+# Example of target with class probabilities
+input = torch.randn(3, 5, requires_grad=True) # input.shape = (3.5) ; torch.float32
+target = torch.randn(3, 5).softmax(dim=1) # target.shape = (3,5) ; torch,float32
+output = loss(input, target)
+output.backward()
+#+END_SRC
+
+#+RESULTS:
+
+* Evaluation matrix
+* Debugging
+** =RuntimeError: expected scalar type Long but found Float=
+one of the input has type float instead of long.

@@ -1,0 +1,92 @@
+#+TITLE: Working With Matrix And Tensor Data
+
+* How to think of slicing array.
+
+
+  Personally, I have difficulties to wrap my head around slicing array.
+  say that we have the fol
+
+* How to think about reshape.
+
+ref:
+[[https://towardsdatascience.com/reshaping-numpy-arrays-in-python-a-step-by-step-pictorial-tutorial-aed5f471cf0b][Reshape numpy arrays in Python  a step-by-step pictorial tutorial]]
+
+Lets create some terminology for ease of explaination
+
+#+BEGIN_QUOTE
+Given that we have variable =x= with =x.shape= of =(2,10,4)=, we say that =2= (dimension from =x.shape[0]=) is =outer dimension= while =4= (dimension from =x.shape[-1]=) is =inner dimension= where elements in =inner dimension= can be think of being =adjacent= to one other.
+
+(most out, ...., most in)
+#+END_QUOTE
+
+When thinking of reshaping, you must think of reshape from =inner= to =outer= dimension. Therefore, we must first picture which value we want to be =adjacent= to one another.
+
+
+The example below shows that =[0,1,2,3,4,5]= is reshaped into =[[0,1],[2,3],[4,5]]=
+
+thinking can be mapped into step by step as followed
+1. We must first think that we want =[0,1]= to be =adjacent= to each other.
+2. this mean the =outer dimension= is 2
+3. Then 2 must be placed as followed =np.arange(6).reshape((-1,2))=
+#+BEGIN_SRC python :noeval
+a = np.arange(6).reshape((3, 2))
+# a value is
+# array([[0, 1],
+#        [2, 3],
+#        [4, 5]])
+#+END_SRC
+
+The concept of =adjacent elements= are important when you attempt to reshape data generated from list of list.
+
+The example below shows how to reshape =[abcdabcdabcd]= using =reshape(3,4)=.
+
+Can you predict the output?
+there are two possible options
+1. =[[abcd][abcd][abcd]]=
+2. =[[aaa][bbbb][ccc][ddd]]=
+#+BEGIN_SRC python :noeval
+x = []
+for i in range(3):
+    for j in 'abcd':
+        x.append(j)
+# x is now 'abcdabcdabcd'
+#+END_SRC
+
+The answer is option 1 (=[[abc][abc][abc]]=). This is because in the most =inner= loop (this is how the name is originated) have =abc= to be =adjacent= to each other.
+Thinking can be mapped into step by step as followed
+1. at the inner loop, abc adjacent to each other
+2. when =reshape(3,4)= is applied, the inner dimenion of 4 should be the first focus, we know that adjacent element should be close, so we get =[abcd]=
+   1. Next is outer dimenion of 3, we know that inner dimension should be stacked 3 times, we get =[[inner][inner][inner]]= or =[[abcd][abcd][abcd]]= 
+
+   
+* How to think of =slicing across= array.
+
+  Personally, I have difficulties to wrap my head around slicing array.
+    
+  Lets use deep learning based example, often time we have to repeat models runs for =n_run= time where each run is trained iteratively for =n_epoch=. Rurthermore, each epoch output 4 x 4 matrix.
+
+  In summary, we have the following dimension =(n_run,n_epoch,4,4)=, and lets =x= be variables holding the value.
+  to get =4x4= element wise mean across each runs (this implies output with shape of =(4,4,n_run)= ).
+
+  code below implements the =slicing across= array .
+  #+BEGIN_SRC python :noeval
+import numpy as np
+n_run = 3
+n_epoch = 10
+n_row = 4
+n_col = 4
+
+x = np.arange(n_run * n_epoch * n_row * n_col).reshape(n_run, n_epoch, n_col, n_row)
+mean_across_run = np.zeros((n_row, n_row, n_run)) # run across n_run implies that n_epoch dimension is squish to 1
+
+for i in range(n_row):
+    for j in range(n_col):
+        for r in range(n_run):
+            mean_across_epoch_val = x[r,:,j,i].mean() # ": in n_epoch" = "across n_epoch"
+            mean_across_run[i,j,r] = mean_across_run_val.mean()
+print(mean_across_run)
+  #+END_SRC
+
+  
+
+    

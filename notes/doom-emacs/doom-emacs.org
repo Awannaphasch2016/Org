@@ -27,7 +27,6 @@ set the following
 #+BEGIN_SRC emacs-lisp :noeval
 (setq load-prefer-newer t)
 #+END_SRC
-
 *** how to fix error that is caused by running the whole =init.el=.
 
 

@@ -1,0 +1,8 @@
+#+TITLE: Loss function notes
+
+* cross entropy loss
+it is used for multi labels classification.[fn:1]
+
+* Footnotes
+
+[fn:1] https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html#torch.nn.CrossEntropyLoss
