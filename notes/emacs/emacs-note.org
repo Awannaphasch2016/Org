@@ -449,6 +449,13 @@ set the following
 #+END_SRC
 ** Report Bugs
 =straight-visit-package-website= quickly open that package's homepage in your browser.
+* FAQs
+** How to keep emacsc packages up to date?
+- ref
+  - [[https://www.youtube.com/watch?v=dtjq68F2dXw&ab_channel=SystemCrafters][Keep your emacs packages up to date - Emacs From Scratch #11]]
+
+1. list packages with =M-x list-packages=
+2. Once in =Package Munu= buffer, run =package-menu-mark-upgrades= (default key binding is =U=) to mark all packages to be updated.
 
 * Footnotes
 

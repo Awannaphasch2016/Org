@@ -1,0 +1,5 @@
+#+TITLE: Os General Note
+
+* File extensions
+** references
+- Comparing file extension equivalent between Linux and Window OS, see [[https://askubuntu.com/questions/156392/what-is-the-equivalent-of-an-exe-file][here]].

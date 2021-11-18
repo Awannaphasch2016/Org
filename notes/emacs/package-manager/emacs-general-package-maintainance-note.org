@@ -1,0 +1,8 @@
+#+TITLE: General Package Maintainance Note
+
+* FAQs
+
+** =straight.el= vs =cask=
+see [[https://github.com/raxod502/straight.el#comparison-to-cask][here]] for in depth comparison details
+
+Cask focuses more on being a build manager, like Maven or Leiningen, while straight.el focuses exclusively on being a package manager.

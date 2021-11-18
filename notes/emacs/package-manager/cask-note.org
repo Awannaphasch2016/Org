@@ -1,0 +1,10 @@
+#+TITLE: Cask Note
+
+Cask can be likened to venv or maven for Emacs Lisp development, although, as with all things emacs, is decidedly less sophisticated (but no less arcane).
+
+* FAQs
+** Doesn’t Cask make things more complicated?
+Yes, because it forces you to test your package under multiple versions of emacs. Most packages don’t do any testing at all, which is why emacs has lost credibility with the computing public.
+
+** Is Cask a vassal of MELPA?
+Yes, Cask’s early development history is intertwined with that of MELPA’s package-build. Cask employs that module for all packaging tasks including dependency provisioning.

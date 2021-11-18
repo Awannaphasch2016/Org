@@ -75,7 +75,8 @@ ref:
 ****** TODO learn to use Iedit, see [[https://www.youtube.com/watch?v=xrNOLTAl1ug&ab_channel=AritraBhattacharjee][here]].
 ****** TODO search and replace in emacs
 ****** TODO multi-cursor edit in emacs
-****** TODO learn to save and load =workspace=
+****** TODO learn how =workspace= work
+******* learn to save and load =workspace=
 **** learn the following mode
 ***** hledger to maintain financial report
 [[https://github.com/narendraj9/hledger-mode][hledger-mode]]

@@ -1,0 +1,4 @@
+#+TITLE: General Package Maintainance Note
+
+* FAQs
+** dependency conflicts: Updating one requires (by it's requirements) to downgrade another
