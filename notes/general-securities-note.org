@@ -1,0 +1,93 @@
+#+TITLE: General Securities Note
+
+* where to store secure credential and password.
+- auth-source (emacs packages)
+- macOS keychain ("internet" or "generic")
+- Linux Secret Service
+- GNOME Keyring
+- KWallet
+
+* How to encrypt/decrypt Your password?
+** Store/access passwords in an encrypted file using =auth-source= package in emacs.
+- ref
+  - [[https://www.youtube.com/watch?v=nZ_T7Q49B8Y&ab_channel=SystemCrafters][How to Encrypt You Passwords with Emacs.]]
+
+1. use gpg to generate public keys
+    #+BEGIN_SRC sh :noeval
+    gpg --full-generate-key
+    #+END_SRC
+
+    You must provide =passphrase= (later passphrase will be used by you to decrypt key pairs) to complete key pair generations.
+
+    After generating the key using above command, important message from the output is shown below.
+    #+BEGIN_SRC md
+    We need to generate a lot of random bytes. It is a good idea to perform
+    some other action (type on the keyboard, move the mouse, utilize the
+    disks) during the prime generation; this gives the random number
+    generator a better chance to gain enough entropy.
+    We need to generate a lot of random bytes. It is a good idea to perform
+    some other action (type on the keyboard, move the mouse, utilize the
+    disks) during the prime generation; this gives the random number
+    generator a better chance to gain enough entropy.
+    gpg: key EE1A5DECFF73AE27 marked as ultimately trusted
+    gpg: directory '/home/awannaphasch2016/.gnupg/openpgp-revocs.d' created
+    gpg: revocation certificate stored as '/home/awannaphasch2016/.gnupg/openpgp-revocs.d/DAA00EFF9C89CB02205CD4BBEE1A5DECFF73AE27.rev'
+    public and secret key created and signed.
+
+    pub   rsa4096 2021-11-18 [SC]
+        DAA00EFF9C89CB02205CD4BBEE1A5DECFF73AE27
+    uid                      Anak Wannaphaschaiyong (password for FAU KOKO cluster) <awannaphasch2016@fau.edu>
+    sub   rsa4096 2021-11-18 [E]
+    #+END_SRC
+    The message tells you that password is stored at =~/.gnupg=
+
+    Once keys pair are generated. You can check that the stored public and keys matches the output using
+    #+BEGIN_SRC sh :noeval
+    gpg --list-keys
+    #+END_SRC
+
+    from gpg man page,
+    #+BEGIN_QUOTE
+    --list-keys
+        List the specified keys.  If no keys are specified, then all  keys  from  the  configured  public keyrings are listed
+    #+END_QUOTE
+
+
+2. put password into a file (e.g. =~/.authinfo.gpg=) and encrypt the filw. (emacs detects =.gpg= file extension and automatically encrypt it, see =auth-source= packages [[file:emacs/packages/auth-source-note.org][here]])
+
+   You can find generated key (generated in previous step) by picking public keys from =gpg --list-keys=.
+
+    Error: My emacs doesn't seem to detect that it have to automatically ask to encrypt file with =.gpg= suffix, see [[https://youtu.be/nZ_T7Q49B8Y?t=1323][here]] for what I expect emacs to behave. I suspect that incorrect behavior appear when I store raw password in =~/.authinfo=, see expected behavior [[https://youtu.be/nZ_T7Q49B8Y?t=523][here]].
+
+
+3. To get password from encrypted file, do the following
+
+   Note: Emacs should allow you see unencrypted password from =~/.authinfo.gpg=. (that we have previously encrypted)
+
+   lets say you put the following fake password
+   #+BEGIN_SRC md
+    machine facebook.com login zuch password w0rldd0m1n4ti0n
+    machine mailprovider.com login mailuser password b4dp4ssw0rd port 433
+    machine mailprovider.com login mailuser password worsepassword
+   #+END_SRC
+
+    you can get the password from encrypted file using
+   #+BEGIN_SRC emacs-lisp :noeval
+    (auth-source-search :host "facebook.com")
+    (auth-source-search :host "mailprovider.com" :user "mailuser")
+    (auth-source-search :host "mailprovider.com" :user:"mailuser" :port 433)
+   #+END_SRC
+4. To access password from encrypted file done by emacs, see [[https://youtu.be/nZ_T7Q49B8Y?t=1592][here]].
+
+* How to check if =gpg-agent= is running? or How to invoke =gpg-agent=?
+#+BEGIN_SRC sh
+# Chekc if gpg-agent is already running
+pgrep gpg-agent
+
+# If it's not running, you can start it up with this command:
+gpg-connect-agent /by e
+#+END_SRC
+
+
+
+

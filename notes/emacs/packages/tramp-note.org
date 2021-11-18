@@ -1,0 +1,16 @@
+#+TITLE: Tramp Note
+
+TRAMP mode is also known as RPC mode.
+
+TRAMP (Transparent Remote Access, Multiple Protocols) is a package for editing remote files [...] Whereas the others use FTP to connect to the remote host and to transfer the files, TRAMP uses a remote shell connection (rlogin, telnet, ssh).
+
+* References 
+** Tutorial
+[[https://www.nistara.net/post/emacs-aws/][Connecting to an AWS instance via emacs/shell]]
+** Documentation
+[[https://www.gnu.org/software/tramp/][TRAMP 2.5.1 User Manual]]
+* Basic Synxtax
+
+a remote file name always look like =/method:user@host:/path/to/file= using the same =M-x find-file=.
+
+example to login to fau KOKO server is to use =/ssh:awannaphasch2016@koko-login.hpc.fau.edu:/=

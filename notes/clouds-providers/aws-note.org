@@ -1,0 +1,16 @@
+#+TITLE: Aws Note
+
+* AWS SSM (AWS Systems Manager)
+
+** pros and cons
+*** pros
+
+If you are in AWS then some features to like about the SSM approach over traditional SSH are:[fn:1]
+
+- No direct network path required. There is no need to punch holes in your VPC layers and chain bastions.
+- Instance authentication controlled through IAM and by extension whichever IdP you may be federating human access with.
+- Initial access and every userspace command audited and logged. To create break-glass alerts or “taint” instances that have been accessed is a breeze.
+
+* Footnotes
+
+[fn:1] https://martin.baillie.id/wrote/emacs-tramp-over-aws-ssm-apis/

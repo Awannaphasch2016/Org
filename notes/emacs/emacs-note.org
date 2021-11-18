@@ -450,6 +450,10 @@ set the following
 ** Report Bugs
 =straight-visit-package-website= quickly open that package's homepage in your browser.
 * FAQs
+** How/Where to find github (or commit) of the latest emacs package version?
+ it is important to note that to find the latest version of emacs packages it is best to search for lastest version from Melpa or Elpa website because it is no garantee that the latest version of github page of the target packages will appear on when search on google.
+** Emacs Encryption mechanism.
+Emacs uses GnuPG via the =epa= lbirary to automatically encrypt and decrypt andy files that end with =.gpg=.
 ** How to keep emacsc packages up to date?
 - ref
   - [[https://www.youtube.com/watch?v=dtjq68F2dXw&ab_channel=SystemCrafters][Keep your emacs packages up to date - Emacs From Scratch #11]]

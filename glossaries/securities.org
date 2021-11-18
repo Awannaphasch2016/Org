@@ -1,0 +1,6 @@
+#+TITLE: Securities
+
+* Passphrase
+A passphrase is similar to a password. However, a password generally refers to something used to authenticate or log into a system. A password generally refers to a secret used to protect an encryption key. Commonly, an actual encryption key is derived from the passphrase and used to encrypt the protected resource.
+* gpg agent
+gpg-agent is a daemon to manage secret (private) keys independently from any protocol. It is used as a backend for gpg and gpgsm as well as for a couple of other utilities. The agent is automatically started on demand by gpg , gpgsm , gpgconf , or gpg-connect-agent . Thus there is no reason to start it manually.

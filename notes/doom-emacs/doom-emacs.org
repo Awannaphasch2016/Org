@@ -1,13 +1,11 @@
 #+TITLE: Notes
 
 
+
 * Doom behavior that could cause error
-
-
 ** skipping recompiling/reloading packing (by using cache), see example of the error here ([[*how to fix error that is caused by running the whole =init.el=.]]).
 * Errors
-
-
+** Errors and Debugging log (logs of how I debug it).
 * Installation
 
 Note:

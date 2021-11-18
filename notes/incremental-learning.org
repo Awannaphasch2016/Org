@@ -77,6 +77,7 @@ ref:
 ****** TODO multi-cursor edit in emacs
 ****** TODO learn how =workspace= work
 ******* learn to save and load =workspace=
+****** TODO learn to use tramp to connect to aws container cloud.
 **** learn the following mode
 ***** hledger to maintain financial report
 [[https://github.com/narendraj9/hledger-mode][hledger-mode]]
