@@ -127,6 +127,7 @@ For =mspyls=, =lsp-treemacs-error-list= only shows error from =tgn= project.
 
 ** Algorithm, Computer Science & Deverlopers Fundamentals
 *** TODO learning from leetcode
+Note: to learn algorithm and new language at the same time for each algorithm, reimplement them in all the language including (rust, javascript, golang, c, c++. python)
 **** Add Two Numbers
 learning about link list
 *** TODO reading [[https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-4.html][Structure and Interpretation of Computer Programs]]
@@ -173,3 +174,9 @@ build the website using this [[https://www.huxiaoxing.com/building-a-website-wit
 *** figure out software design of org roam. (why does it change? what changed?)
 ** oragnize stuff to optimize for future workflow
 *** categorize =Garun= features into =incremental learning= page (this page.) by creating links
+** learn how to think mathematically.
+*** finish [[https://www.youtube.com/watch?v=LN7cCW1rSsI&ab_channel=Nerd%27slesson][introduction to mathmematical thinking complete course]]
+**** I stop [[https://youtu.be/LN7cCW1rSsI?t=489][here]]. finish reading [[https://github.com/kyrylo/coursera-mathematical-thinking/blob/master/lecture-0/background-reading-what-is-mathematics.pdf][this]] paper before continue with the lecture.
+
+** learning to hack
+*** watch [[https://www.youtube.com/c/LiveOverflow/playlists][LiveOverflow]]
