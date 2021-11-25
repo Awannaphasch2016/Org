@@ -1,0 +1,237 @@
+#+title: Go note
+
+* [[https://go.dev/talks/2012/splash.article][History of Go]]
+* [[https://go.dev/doc/faq#principles][Language Design Choices]]
+
+#+BEGIN_QUOTE
+We felt it should be possible to have the efficiency, the safety, and the fluidity in a single language.
+#+END_QUOTE
+
+Other language design principles  
+- Methods can be implemented for any type
+- Structures represents data while interfaces represent abstraction
+- Orthogonality of concepts
+    makes it easier to understand what happends when things combine
+- Speed of compilation
+- felicity of programming
+- the need to support features such as concurrency and garbage collection.
+* Style Guide
+    see [[https://go.dev/doc/effective_go#introduction][Effective Go]] and [[https://github.com/golang/go/wiki/CodeReviewComments][CodeReviewComments]]
+* [[https://learnxinyminutes.com/docs/go/][Fundamentals]]
+see [[https://gobyexample.com/][Go by Example]], or [[https://learnxinyminutes.com/docs/go/][learn go in Y minuites]].
+** files and folder structure
+
+*** =go.mod= 
+    =go.mod= contains all information that will be used in that module.
+** Module and Packages
+    a package contain list of modules
+** Builtin Data Structure
+*** Array
+*** Slices
+Slices (as well as maps and channels) have reference semantics.
+
+Slice literal
+#+BEGIN_SRC go
+    // To append another slice, instead of list of atomic elements we can
+    // pass a reference to a slice or a slice literal like this, with a
+    // trailing ellipsis, meaning take a slice and unpack its elements,
+    // appending them to slice s.
+    s = append(s, []int{7, 8, 9}...) // Second argument is a slice literal.
+    fmt.Println(s)  // Updated slice is now [1 2 3 4 5 6 7 8 9]
+#+END_SRC
+** Pointers
+#+BEGIN_SRC go
+package main
+
+import "fmt"
+
+func zeroval(ival int) {
+    ival = 0
+}
+
+func zeroptr(iptr *int) {
+    ,*iptr = 0
+}
+
+func main() {
+    i := 1
+    fmt.Println("initial:", i)
+
+    zeroval(i)
+    fmt.Println("zeroval:", i)
+
+    zeroptr(&i)
+    fmt.Println("zeroptr:", i)
+
+    fmt.Println("pointer:", &i)
+}
+
+// output
+// $ go run pointers.go
+// initial: 1
+// zeroval: 1
+// zeroptr: 0
+// pointer: 0x42131100
+#+END_SRC
+
+#+BEGIN_SRC go
+package main
+
+import "fmt"
+
+func learnMemory() (p, q *int) {
+    // Named return values p and q have type pointer to int.
+    p = new(int) // Built-in function new allocates memory.
+    // The allocated int slice is initialized to 0, p is no longer nil.
+    s := make([]int, 20) // Allocate 20 ints as a single block of memory.
+    s[3] = 7             // Assign one of them.
+    r := -2              // Declare another local variable.
+    return &s[3], &r     // & takes the address of an object.
+}
+
+func main() {
+    p, q := learnMemory() // Declares p, q to be type pointer to int.
+    fmt.Println(*p, *q)   // * follows a pointer. This prints two ints.
+}
+#+END_SRC
+
+** Environments
+
+set go envionronment
+#+BEGIN_SRC sh
+go env -w GOBIN=/somewhere/else/in
+#+END_SRC
+
+reset go environment
+#+BEGIN_SRC sh
+go env -u GOBIN
+#+END_SRC
+
+
+** Functions
+* [[https://go.dev/doc/faq][FAQs]]
+* Relationship between =alias=, =go.mod=, =module=, and =packages=.
+First, you have to understand that a package contain list of modules
+
+it is best to look at an example of how concept of modules and packages are related.
+
+Note: I intended the naming of the example to be abit confusing, so that inner working of how the two works together are more revealing.
+Note: This is an example adapted from example from go main documentation, see [[https://go.dev/doc/tutorial/call-module-code][here]].
+
+tldr:
+1. =go.mod= contains all information that will be used in that module.
+2. name of module is created when run ~go mod init <module_name>~, but alias of <module_name> can be created as ~go mod edit -replace <module_name>=<local_dir>~.
+3. =<module_name>= specified in =go.mod= is used in =import <module_name>= which can also have alias =import <alias> "<module_name>"=
+
+In detail:
+1. create folder that will be made a package called =hello/= and =src/=
+2. In =hello/= folder, create a file name =hello.go= which will contain =func main()=. Then, put the following code in =hello/hello.go=
+
+#+BEGIN_SRC go
+package main
+
+import (
+    "fmt"
+
+    hey "example.com/m"
+)
+
+func main(){
+    message := hey.Hello("Gladys")
+    fmt.Println(message)
+}
+#+END_SRC
+
+4. In =src/=, create a file name =greetings.go=, and put the following code in =greetings.go=.
+#+BEGIN_SRC go
+package greetings
+
+import (
+    "fmt"
+)
+
+func Hello(name string) string{
+    message := fmt.Sprintf("Hi, %v. Welcome", name)
+    return message
+}
+#+END_SRC
+5. Now, we have the following folder structure.
+#+BEGIN_SRC org
+base_dir/
+  - src/
+    - greeting.go (this will be a package you will import and use in =hello.go=)
+  - hello/
+    - hello.go (this have =func main()= in it )
+#+END_SRC
+6. To initialize =hello/= and =greetings== directories as modules, you run the following command in each folder.
+
+In =hello/=, you run
+#+BEGIN_SRC sh
+go mod init example.com/hello
+#+END_SRC
+
+In  =greetings/=, you run
+#+BEGIN_SRC sh
+go mod init example.com/m
+#+END_SRC
+
+7. Now, we have the following folder structure.
+#+BEGIN_SRC org
+base_dir/
+  - src/ (module name =example.com/m=)
+    - greeting.go (this will be a package you will import and use in =hello.go=)
+    - go.mod
+  - hello/ (module name =example.com/hello=)
+    - hello.go (this have =func main()= in it )
+    - go.mod
+#+END_SRC
+
+=go.mode= contains the following information
+#+BEGIN_SRC org
+module <module_name>
+
+go <go_version>
+#+END_SRC
+
+Note that =<module_name>= are named of =published module= (which we haven't yet published these module.)
+
+8. To make =hello.go= recognizes =greetings.go= file (currently the file is a =greeting= package, because header of =greetings.go= is =package greetings=), you must load =src/= module =locally= or  =online= ( if module is published online).
+
+   since =src/= (aka example.com/m) only works for published module, you must replace (to be) published location with local location of the module. In this case, we do
+    #+BEGIN_SRC sh
+go mod edit -replace example.com/m=../src  
+    #+END_SRC
+
+    The action is logged in =hello/go.mod=. Content of the file as followed
+    #+BEGIN_SRC org
+
+module example.com/hello
+
+go 1.17
+
+replace example.com/m => ../src
+    #+END_SRC
+
+    9. Once we convert (to be) published path of =example.com/m= module to be location of =src/= directory, we can load =src/= module.
+
+    go has command to load/remove modules.
+    #+BEGIN_SRC sh
+go mod tidy
+    #+END_SRC
+    
+    The action is logged in =hello/go.mod=. Content of the file is as followed
+    #+BEGIN_SRC sh
+module example.com/hello
+
+go 1.17
+
+replace example.com/m => ../src
+
+require example.com/m v0.0.0-00010101000000-000000000000
+    #+END_SRC
+    
+    10. Now, running =hello.go= file should output =Hi, Gladys. Welcome=.
+        
+** 
+** How to Write Go Code? How to import/build/compile packages/module in Go?
+    see [[https://go.dev/doc/code][here]].

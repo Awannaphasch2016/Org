@@ -15,6 +15,43 @@ If =$EMACS= environment variable is not set or incorrectly set, you will get =Ca
 
 * Help section and related info
 To open doom emacs documentation, use =doom/help.= which is binded to =spc-h-d-h=
+* Notes for Users
+** Keybinding and Commands
+*** Search in Doom
+**** bookmark-based search
+| commands         | key | doom keys           | custom keys | descriptions                |
+| consult-bookmark |     | spc-s-m  OR spc-ret |             | conduct a book mark search. |
+
+**** .doom.d/.emasc.d search
+| commands | key | doom keys | custom keys | descriptions |
+|          |     | spc-f-P   |             |              |
+|          |     | spc-f-p   |             |              |
+|          |     | spc-f-e   |             |              |
+|          |     | spc-f-E   |             |              |
+**** project-based search
+| commands                | key | doom keys | custom keys | descriptions                                                        |
+| project-tile-find-file  |     | spc-spc   |             | conduct a file search recursively under the current project folder. |
+| +default/search-project |     | spc-s-p   |             | conduct a text search recursively under the current project root.   |
+
+**** content-based search
+| commands               | key | doom keys           | custom keys | descriptions                                                               |
+| consult-imenu          |     | spc-s-i             |             | conduct symbol search on the current buffer                                |
+| +default/search-buffer |     | spc-s-b             |             | conduct text search on the current buffer                                  |
+| +default/search-cwd    |     | spc-s-d             |             | conduct text search recursively in files under the current folder          |
+| +default/search-emacsd |     | spc-s-e             |             | conduct a text search recursively in files under the =use-emacs-directory= |
+
+**** file-based search
+| commands            | key | doom keys        | custom keys | descriptions                                 |
+| find-file           |     | spc-. OR spc-f-f |             | conduct file search under the current folder |
+| consult-recent-file |     | spc-f-r          |             | conduct recently opened file search          |
+
+*** Files nad Directory Modification
+| commands                                      | key | doom keys | custom keys | descriptions                                              |
+| doom/move-this-file                           |     | spc-f-R   |             | Move current buffer's file to NEW-PATH.                   |
+| +default/yank-buffer-path                     |     | spc-f-y   |             | Copy the current buffer's path to the kill ring.          |
+| +default/yank-buffer-path-relative-to-project |     | spc-f-Y   |             | Copy the current buffer's relative path to the kill ring. |
+| doom/delete-this-file                         |     | spc-f-D   |             | delete the current file                                   |
+
 * Notes for Developers
 ** Directory and Files Organization (How is doom-emacs connected to emacs?)
 From my inspection, I believe that Doom Module enable in =init.el= are located in =~/.emacs.d/modules/tools= which contains ~README~ and configuration code. (the actual code from downloaded packages are still in =~/.emacs.d/.local/straight/repo=)

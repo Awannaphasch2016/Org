@@ -5,7 +5,6 @@ to see reference and documentttion of elisp, open info page using =info= (=spc-h
 
 * Fundametals concepts
 ** Data Structure
-
 *** hash table
 
 example of how to check hashtable[fn:2]
@@ -43,7 +42,9 @@ example
 #+BEGIN_SRC emacs-lisp :noeval
 (defvar lsp-clients (make-hash-table :test 'eql)
 #+END_SRC
-
+** Terminology
+*** intern
+intern basically return symbol whose name property matches input string
 
 * Useful functions/commands/variables
 ** Data Structure

@@ -57,7 +57,9 @@
 
    You can find generated key (generated in previous step) by picking public keys from =gpg --list-keys=.
 
-    Error: My emacs doesn't seem to detect that it have to automatically ask to encrypt file with =.gpg= suffix, see [[https://youtu.be/nZ_T7Q49B8Y?t=1323][here]] for what I expect emacs to behave. I suspect that incorrect behavior appear when I store raw password in =~/.authinfo=, see expected behavior [[https://youtu.be/nZ_T7Q49B8Y?t=523][here]].
+    +Error: My emacs doesn't seem to detect that it have to automatically ask to encrypt file with =.gpg= suffix, see [[https://youtu.be/nZ_T7Q49B8Y?t=1323][here]] for what I expect emacs to behave. I suspect that incorrect behavior appear when I store raw password in =~/.authinfo=, see expected behavior [[https://youtu.be/nZ_T7Q49B8Y?t=523][here]].+
+
+    Note: At Fri Nov 19 09:35:10 2021, emacs suddently behaved as expected and encrypt =.authinfo.gpg=. It seems that restart emacs almost always solve some weide stuff.
 
 
 3. To get password from encrypted file, do the following
@@ -77,7 +79,7 @@
     (auth-source-search :host "mailprovider.com" :user "mailuser")
     (auth-source-search :host "mailprovider.com" :user:"mailuser" :port 433)
    #+END_SRC
-4. To access password from encrypted file done by emacs, see [[https://youtu.be/nZ_T7Q49B8Y?t=1592][here]].
+4. To access password from encrypted file done by emacs, watch toward the end of the tutorial.
 
 * How to check if =gpg-agent= is running? or How to invoke =gpg-agent=?
 #+BEGIN_SRC sh

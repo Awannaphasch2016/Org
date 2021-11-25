@@ -8,7 +8,7 @@
   - What is your expectation of the results?
 
 From my brief investigation, I notice that although all commands evaluate lisp code, it wasn't implemented on the same commands. (not much similarity beyond eval and overlays)
-* Help sections and realted info
+* Help sections and related info
 ** looking up documentation, see [[https://discourse.doomemacs.org/t/how-to-debug-issues/55#looking-up-documentation-3][here]].
 
 | commands                     | key | doom keys | custom keys | descriptions |
@@ -23,7 +23,7 @@ seaching doom specific documentation
 | doom/help-search         |     | spc-h-d-S |             |              |
 | doom/help-search-heading |     | spc-h-d-s |             |              |
 
-* Notes for Users
+* Notes for Users (How to use things?)
 ** Built-in Packages and modes
 *** Packages
 **** Imenu
@@ -71,6 +71,105 @@ note: behavior of calling ~imenu~ using key binding is different from select ~im
 So far, I unable to pass output from ~imenu-choose-buffer-index~ (which, according to the documentation, suppose to produce INDEX-ITEM ) to ~imenu~, so I suspect that my understanding of ~marker~ concept may blind me from the error.
 
 Next next I planned to read about ~marker~ from [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Markers.html][this page]].
+**** Semantics Packages
+***** References
+- emacs documentations
+***** Structure of Sematics packages
+The following diagram illustrates the strucuture of the =Semantic= package
+
+#+BEGIN_SRC md
+                                                             Applications
+                                                                 and
+                                                              Utilities
+                                                                -------
+                                                               /       \
+               +---------------+    +--------+    +--------+
+         C --->| C      PARSER |--->|        |    |        |
+               +---------------+    |        |    |        |
+               +---------------+    | COMMON |    | COMMON |<--- SPEEDBAR
+      Java --->| JAVA   PARSER |--->| PARSE  |    |        |
+               +---------------+    | TREE   |    | PARSE  |<--- SEMANTICDB
+               +---------------+    | FORMAT |    | API    |
+    Scheme --->| SCHEME PARSER |--->|        |    |        |<--- ecb
+               +---------------+    |        |    |        |
+               +---------------+    |        |    |        |
+   Texinfo --->| TEXI.  PARSER |--->|        |    |        |
+               +---------------+    |        |    |        |
+
+                    ...                ...           ...         ...
+
+               +---------------+    |        |    |        |
+   Lang. Y --->| Y      Parser |--->|        |    |        |<--- app. ?
+               +---------------+    |        |    |        |
+               +---------------+    |        |    |        |<--- app. ?
+   Lang. Z --->| Z      Parser |--->|        |    |        |
+               +---------------+    +--------+    +--------+
+#+END_SRC
+
+***** Semantic API
+Semantic API is provided in all of the major steps in [[*\[\[https://www.gnu.org/software/emacs/manual/html_node/semantic/Semantic-Components.html\]\[Components of Semantics\]\]][Components of Semantics]], best to read it from the documentation, see [[https://www.gnu.org/software/emacs/manual/html_node/semantic/index.html#SEC_Contents][here]].
+
+***** Fundamentals
+****** What is usecase of semantic?
+Semantic provides a uniform, language-independent API for accessing the parser output. This output can be used by other Emacs Lisp programs to implement “syntax-aware” behavior. Semantic itself includes several such utilities, including user-level Emacs commands for navigating, searching, and completing source code.
+******* Application/Modes that build on Semantic API
+******** [[https://www.gnu.org/software/emacs/manual/html_node/semantic/Analyzer.html][Analyzer]]
+The Semantic Analyzer is a library for performing context analysis on source code. It provides user commands for displaying, completing, and navigating through source code.
+******** [[https://www.gnu.org/software/emacs/manual/html_node/semantic/Speedbar.html][Speedbar]]
+Speedbar is a program for Emacs which can be used to summarize information related to the current buffer
+******** [[https://www.gnu.org/software/emacs/manual/html_node/semantic/SymRef.html][Symbol Reference (SymRef)]]
+Semantic can interface with external symbol reference tools, such as GNU Global and GNU Idutils. These tools provide information about where different tags or symbols appear.
+******** [[https://www.gnu.org/software/emacs/manual/html_node/semantic/MRU-Bookmarks.html][Most Recently Used Bookmarks Mode (MRU Bookmarks Mode)]]
+Semantic MRU Bookmarks mode is a minor mode that keeps track of the tags you have edited, allowing you to quickly return to them later (MRU stands for “Most Recently Used”).
+******** [[https://www.gnu.org/software/emacs/manual/html_node/semantic/Sticky-Func-Mode.html][Sticky Function Mode]]
+Semantic Sticky Function minor mode displays a header line that shows the declaration line of the function or tag on the topmost line in the text area. This allows you to keep that declaration line in view at all times, even if it is scrolls off the “top” of the screen.
+
+In addition, clicking mouse-1 on the header line opens a context menu that contains menu items for copying, killing, or narrowing to that tag.
+
+| commands | key | doom keys | custom keys | descriptions |
+| commands                        | key | doom keys | custom keys | descriptions                                                         |
+| global-semantic-stickyfunc-mode |     |           |             | Toggle Semantic Sticky Function mode in all Semantic-enabled buffers |
+
+| Variables                          | Description                                                                                            |
+| semantic-stickyfunc-sticky-classes | The value of this variable is a list of tag classes that Semantic Sticky Function mode makes “sticky”. |
+******** [[https://www.gnu.org/software/emacs/manual/html_node/semantic/Highlight-Func-Mode.html][Highlight Function Mode]]
+******** [[https://www.gnu.org/software/emacs/manual/html_node/semantic/Tag-Decoration-Mode.html][Tag Decoration Mode]]
+
+****** Why is Semantic invented?
+Ordinarily, Emacs uses regular expressions (and syntax tables) to analyze source code for purposes such as syntax highlighting. This approach, though simple and efficient, has its limitations: roughly speaking, it only “guesses” the meaning of each piece of source code in the context of the programming language, instead of rigorously “understanding” it.
+
+****** How does semantic work?
+Semantic provides a new infrastructure to analyze source code using parsers instead of regular expressions. It contains two built-in parser generators (an LL generator named Bovine and an LALR generator named Wisent, both written in Emacs Lisp), and parsers for several common programming languages. It can also make use of external parsersprograms such as GNU Global and GNU IDUtils.
+****** [[https://www.gnu.org/software/emacs/manual/html_node/semantic/Semantic-Components.html][Components of Semantics]]
+******* token stream and parser.
+step by step of how paring a source code with Semantic works
+1. lexical analysis
+   1. break it up into its fundamental components
+   #+BEGIN_SRC md
+        syntax table, keywords list, and options
+                         |
+                         |
+                         v
+    input file  ---->  Lexer   ----> token stream
+   #+END_SRC
+   The output of the lexical analyzer is a list of tokens that make up the file.
+
+   2. The next step is the actual parsing, shown below:
+#+BEGIN_SRC md
+
+                    parser tables
+                         |
+                         v
+    token stream --->  Parser  ----> parse tree
+#+END_SRC
+******* SemanticDB
+Cache results of parsing source code files using Semantic Database (SemanticDB)
+
+Parsing large files can take several seconds or more. By default, Semantic automatically caches parse trees by saving them in your .emacs.d directory. When you revisit a previously-parsed file, the parse tree is automatically reloaded from this cache, to save time. See [[https://www.gnu.org/software/emacs/manual/html_node/semantic/SemanticDB.html][SemanticDB]].
+
+By default, SemanticDB is enabled together with Semantic mode. To disable it, remove it from semantic-default-submodes (see [[https://www.gnu.org/software/emacs/manual/html_node/semantic/Semantic-mode.html][Semantic mode]]). You can also enable or disable SemanticDB with M-x global-semanticdb-minor-mode.
+
+
 *** Modes
 **** edebug mode
 - ref
@@ -178,7 +277,6 @@ There exist package which provide different ways of displaying selections e.g. =
 More popular adoption is to use =completion framework= like =Helm= or =Ivy= which provide enhanced interfaces and special commands that provide additional behavior.
 
 On the other hand, =Selectr=um and =Vertico= provide you with just completion functionality to build your own =completion framework=.
-
 ** Things that effects how emacs behave
 *** Process
 **** Proper way to call a process
@@ -274,8 +372,10 @@ Return a predicate that returns non-nil if all PREDS do so.
 #+BEGIN_SRC emacs-lisp
 (funcall (-andfn #'numberp #'cl-evenp) 4)
 #+END_SRC
+*** Folding
+[[https://stackoverflow.com/questions/27617090/the-scope-of-python-code-folding-in-emacs][The scope of python code folding in emacs]]
 
-* Notes for Developers
+* Notes for Developers (How to do and fix things)
 ** Customization
 *** set keys binding
 mapping new key binding to non-defined prefix (by emacs).
@@ -289,7 +389,10 @@ mapping new key binding to existing prefix (defined by doom emacs)
 #+BEGIN_SRC emacs-lisp
 (map! :leader "d d" #'dap-debug)
 #+END_SRC
-
+*** Customize Your IDE environment
+- ref
+  - [[http://tuhdo.github.io/index.html][Emacs mini manual series]] (Lots of stuff related to functionality that relevant to IDE experience.)
+    - [[http://tuhdo.github.io/c-ide.html#sec-9-2][C/C++ Development Environment for Emacs]] (General info on how to customize your own IDE goes beyond C/C++)
 ** Evaluating elisp
 - ref
   - [[https://discourse.doomemacs.org/t/how-to-debug-issues/55#evaluating-elisp-on-the-fly-6][Evaluating elisp on the fly]]

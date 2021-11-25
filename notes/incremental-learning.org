@@ -38,9 +38,11 @@ print(random.choice(topics))
 **** TODO reading [[file:doom-emacs/packages/emacs-application-framework.org::https://github.com/emacs-eaf/emacs-application-framework#install][What is a backtrace & how to produce them]]
 **** TODO [[file:books/Writing GNU Emacs Extension - Bob Glickstein.org::*Basic operations][stop at this chapter of 'writing with elisp...']]
 **** TODO Figure out how to properly use variation of =interaction= keyword in lisp function.
+**** TODO learn to use debug in elisp
 *** Contribute to EAF
 - look at [[https://github.com/emacs-eaf/emacs-application-framework/wiki/Todo-List][EAF TODO list]] and pick one
 *** Understand Emacs at the deeper level
+**** TODO How does environment of linux and emacs differ?
 **** learn about the following packages and workflow
 ***** understand packagers mechanism and functionality
 ****** learn org-babel
@@ -50,6 +52,7 @@ print(random.choice(topics))
 ******* undertand vertico
 ****** TODO learn about projectile
 ***** config workflow
+****** jump to next error in emacs?
 ****** explore =alphapapa= github for new seamless integration, [[https://github.com/alphapapa/org-ql][here]].
 ****** TODO tree-sitter doesn't turn on =tree-sitter-hl-mode= on rustic mode, see [[file:~/.doom.d/config.org::*Emacs Tree Sitter][here]]
 ****** understand window and buffer config
@@ -88,7 +91,6 @@ ref:
 ***** twittering
 ***** python mode unable to import module
 ***** Dap mode
-****** TODO how to load debug.el automatically?
 ***** lsp mode
 ****** check whether python version and python environment are correctly set up. (as it should in without emacs)
 ****** figure out how to use anaconda in emacs
@@ -112,9 +114,14 @@ For =mspyls=, =lsp-treemacs-error-list= only shows error from =tgn= project.
 ** Blockchain
 *** TODO Complete this [[https://paulx.dev/blog/2021/01/14/programming-on-solana-an-introduction/][tutorial]] on Solona
 **** learning rust only when Solona tutorial needs it using ~rustling~.
+*** TODO [[https://jeiwan.net/posts/building-blockchain-in-go-part-1/][following building blockchain in Go]]
+**** I have a probelm make emacs recognize 'gopls' (error shows up when I run M-x lsp in go file.)
+***** I take this opportunity to learn to use lisp debug to solve this problem.
+****** figure out why elips cant find gopls path when in fact path is added to =.zshrc=
+******* to my surprise, I found that when I run ~M-x M-S-! echo $PATH~ no go path is added to it.
+******** why is $PATH from zsh not the same as $PATH in running shell command in emacs.?, see [[https://github.com/hlissner/doom-emacs/issues/2426#issuecomment-629816917][here]].
 *** TODO understand funcdamental of blockchain
 - reading the following
-  https://dl.acm.org/doi/pdf/10.1145/3471140?casa_token=wPW15CfV4zgAAAAA:_JbcvPAWjkFnU7fQBbYut8zGMIjgiDE2jhrLyfJo8hjohFOtGLQJa4V27ysLkTlhphZaf2gPAxgNyw
   - trying to understand ~encorse peers~ (~endorser transaction~) used in ~Hyperledger Fabric~
     - I stopped [[https://hyperledger-fabric.readthedocs.io/en/release-2.2/peers/peers.html#peers-and-channels][here]]
 

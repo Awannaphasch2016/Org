@@ -8,7 +8,19 @@ There ara separate projects involve in emacs ~lsp-mode~.
 - emacs also has its own website and github.
     contents inside the website is the most updated about emacs-lsp
     since I am using emacs, documentation of lsp should be refers to emacs-lsp instead of the main lsp webiste by Microsoft.
+* Error
+** Errors and Debugging log (logs of how I debug it).
+*** LSP :: There are no language servers supporting current mode `python-mode' registered with `lsp-mode'.
 
+#+BEGIN_SRC md
+LSP :: There are no language servers supporting current mode `python-mode' registered with `lsp-mode'.
+This issue might be caused by:
+1. The language you are trying to use does not have built-in support in `lsp-mode'. You must install the required support manually. Examples of this are `lsp-java' or `lsp-metals'.
+2. The language server that you expect to run is not configured to run for major mode `python-mode'. You may check that by checking the `:major-modes' that are passed to `lsp-register-client'.
+3. `lsp-mode' doesn't have any integration for the language behind `python-mode'. Refer to https://emacs-lsp.github.io/lsp-mode/page/languages and https://langserver.org/ .
+4. You are over `tramp'. In this case follow https://emacs-lsp.github.io/lsp-mode/page/remote/.
+5. You have disabled the `lsp-mode' clients for that file. (Check `lsp-enabled-clients' and `lsp-disabled-clients').
+#+END_SRC
 * Configuration
 
 ** switch lsp server
@@ -17,6 +29,14 @@ to switch lsp server, one must be to file with target language extension then pr
 ** Server priority
 When there exist more than one servers for language, the one with highest priority will be used.
 lsp-clients.el predefined servers have priority -1, lower than external packages (priority 0 if unspecified). If a server is registered with :add-on? flag set to t it will be started in parallel to the other servers that are registered for the current mode.
+
+** To enable lsp headercrum headline
+#+BEGIN_SRC emacs-lisp :noeval
+;; enable lsp breadcrumb on headline
+(setq lsp-headerline-breadcrumb-enable t)
+(setq lsp-headerline-breadcrumb-segments '(project file symbols))
+(setq lsp-headerline-breadcrumb-icons-enable t)
+#+END_SRC
 
 ** select the server per project
 You may create dir-local for each of the projects and specify list of lsp-enabled-clients.

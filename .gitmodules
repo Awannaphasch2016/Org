@@ -1,3 +1,9 @@
 [submodule "notes/rust/rustlings"]
 	path = notes/rust/rustlings
 	url = https://github.com/rust-lang/rustlings
+[submodule "projects/sideprojects/blockchains/solana"]
+	path = projects/sideprojects/blockchains/solana
+	url = https://github.com/mvines/solana-bpf-program-template.git
+[submodule "notes/go/learngo"]
+	path = notes/go/learngo
+	url = https://github.com/inancgumus/learngo.git

@@ -1,0 +1,10 @@
+#+TITLE: Remote Server Client Note
+
+* How to Keep Prevent SSH from timing out?
+** Server Side Keep Alive. for more info see [[https://www.computerworld.com/article/2701512/how-to-prevent-ssh-from-timing-out.html][here]].
+** Client Side Keep Alive. for more info see [[https://www.computerworld.com/article/2701512/how-to-prevent-ssh-from-timing-out.html][here]].
+step by step instruction
+1. Log in as root.
+2. Edit the file at /etc/ssh/ssh_config
+3. Add this line to the file: =ServerAliveInterval 60=
+4. Save the file.

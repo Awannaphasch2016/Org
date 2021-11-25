@@ -1,0 +1,24 @@
+#+TITLE: Git
+
+* reflog
+- ref:
+  - [[https://www.atlassian.com/git/tutorials/refs-and-the-reflog][Refs and the Reflog]]
+The reflog is Git’s safety net. It records almost every change you make in your repository, regardless of whether you committed a snapshot or not. You can think of it as a chronological history of everything you’ve done in your local repo. To view the reflog, run the git reflog command. It should output something that looks like the following:
+
+example output of =git reflog=
+#+BEGIN_SRC md
+400e4b7 HEAD@{0}: checkout: moving from main to HEAD~2
+0e25143 HEAD@{1}: commit (amend): Integrate some awesome feature into `main`
+00f5425 HEAD@{2}: commit (merge): Merge branch ';feature';
+ad8621a HEAD@{3}: commit: Finish the feature
+#+END_SRC
+This can be translated as follows:
+
+- You just checked out HEAD~2
+- Before that you amended a commit message
+- Before that you merged the feature branch into main
+- Before that you committed a snapshot
+
+The =HEAD{}= syntax lets you reference commits stored in the reflog. It works a lot like the HEAD~ references from the previous section, but the  refers to an entry in the reflog instead of the commit history.
+
+=You can use this to revert to a state that would otherwise be lost.=

@@ -1,5 +1,10 @@
 #+title: org-babel notes
 
+* Keybinding and command
+
+| commands                  | key | doom keys | custom keys | descriptions                                 |
+| org-babel-result-hide-all |     |           |             | hide all org babel result block              |
+| org-hide-block-all        |     |           |             | Fold all source blocks in the current buffer |
 * using results from one code block in another org-mode
 ref: https://kitchingroup.cheme.cmu.edu/blog/2019/02/12/Using-results-from-one-code-block-in-another-org-mode/
 

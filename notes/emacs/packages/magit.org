@@ -6,14 +6,22 @@
   - [[https://www.youtube.com/watch?v=zM7K1y4h6UQ&list=PLEoMzSkcN8oMc34dTjyFmTUWbXTKrNfZA&index=3&ab_channel=SystemCrafters][Fix Your Git Commits Like a Rebase Expert with Magit]]
 - magit website
   -  [[https://magit.vc/screenshots/][A visual walk-through]] (really insightful and easy to follow)
+* Git Implemtntation Design
+** Git components
+*** symbolic refs
+Symbolic refs were originally implemented as symbolic links, but later changed to plain files with extra interpretation so that they could be used on platforms that do not have symlinks.[fn:1]
+** Git functions and commands
+*** Git rebase
+The intermediate steps of an interactive rebase are done with a detached HEAD (partially to avoid polluting the active branch’s reflog). If you finish the full rebase operation, it will update your original branch with the cumulative result of the rebase operation and reattach HEAD to the original branch.
+
 * Common Key Binding
 To remove stash, regions or files, type ~x~ to "discard the change."
 * Git Commands and Function
 ** Clone
 To clone from github, one can use ~user/reponame~.
 To clone from gitlab, one can use ~gitlab:user/reponame~ or ~gl:user/reponame~.
-
 ** Commit
+*** Go to past commit. (all the whole project. not just a file.)
 *** View commit
 **** view commit from current branch
 View commit from current branch
@@ -74,3 +82,38 @@ ref
 - [[file:~/org/notes/dev-ops/kubernetes-note.org::*Connecting the transient to our mode][Example of defining key binding in transient]]
 
 All the transients argumetns can be set temporarily or permanently, see [[https://magit.vc/manual/transient/Saving-Values.html#Saving-Values][here]].
+* FAQs
+** What does detached =HEAD= mean?
+When HEAD is detached, it points directly to a commitinstead of indirectly pointing to one through a branch. You can think of a detached HEAD as being on an unnamed branch.  [fn:1]
+** How to validate HEAD/branch in which you are currently on?
+- ref
+  - https://stackoverflow.com/questions/5772192/how-can-i-reconcile-detached-head-with-master-origin
+
+Given that your git repo returns the following
+
+- =git symbolic-ref HEAD= yields =refs/heads/master=
+    The branch named =master= is checked out.
+- =git rev-parse refs/heads/master= yield =17a02998078923f2d62811326d130de991d1a95a=
+    that commit is the current tip of =head= of the master branch.
+- =get rev-parse HEAD= also yiels =17a02998078923f2d62811326d130de991d1a95a=
+    This is what it means to be a “symbolic ref”. It points to an object through some other reference.
+
+This means you have =HEAD= -> =refs/heads/master= -> =17a02998078923f2d62811326d130de991d1a95a=.
+
+When head is detached?
+You can check if you are on detached HEAD when you get the following result
+- =git symbolic-ref HEAD= fails with =fatal: ref HEAD is not a symbolic ref=
+- =git rev-parse HEAD= yields =17a02998078923f2d62811326d130de991d1a95a=
+    Since it is not a symbolic ref, it must point directly to the commit itself.
+
+Note: on gabarge collection process and unreachabled commit. [fn:2]
+
+
+* Error
+** Errors and Debugging log (logs of how I debug it).
+*** "Git fatal: refe HEAD is not a symbolic ref"
+
+* Footnotes
+[fn:2] The important thing to remember with a detached HEAD is that if the commit it points to is otherwise unreferenced (no other ref can reach it), then it will become “dangling” when you checkout some other commit. Eventually, such dangling commits will be pruned through the garbage collection process (by default, they are kept for at least 2 weeks and may be kept longer by being referenced by HEAD’s reflog).   It is perfectly fine to do “normal” work with a detached HEAD, you just have to keep track of what you are doing to avoid having to fish dropped history out of the reflog.
+
+[fn:1] [[https://stackoverflow.com/questions/5772192/how-can-i-reconcile-detached-head-with-master-origin][How can I reconfile detached HEAD with master/origin?]]

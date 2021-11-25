@@ -1,0 +1,20 @@
+#+TITLE: Numpy Note
+
+
+* Useful functions and methods
+** validate if object is copied
+#+BEGIN_SRC python
+# Create array
+Z = np.random.randn(5,2)
+
+Z1 = Z[:3, :]  # view
+print(Z1.base is Z)  # True: Z1 is a view.
+
+Z2 = Z[0,1,2],:]  # copy
+print(Z2.base is Z)  # False: Z2 is a copy. In fact, Z2.base is None.
+#+END_SRC
+
+
+* numpy.ndarray.view vs numpy.ndarray.copy
+- ref
+  - [[https://www.jessicayung.com/numpy-views-vs-copies-avoiding-costly-mistakes/#:~:text=Takeaway%3A%20Basically%20whenever%20you%20want,and%20saves%20time%20and%20memory][Numpy Views vs Copies: Avoiding Costly Mistakes]].

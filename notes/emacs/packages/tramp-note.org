@@ -9,8 +9,35 @@ TRAMP (Transparent Remote Access, Multiple Protocols) is a package for editing r
 [[https://www.nistara.net/post/emacs-aws/][Connecting to an AWS instance via emacs/shell]]
 ** Documentation
 [[https://www.gnu.org/software/tramp/][TRAMP 2.5.1 User Manual]]
-* Basic Synxtax
+* Error
+** Errors and Debugging log (logs of how I debug it).
+*** tramp is buggy and freeze alot.
+as of <2021-11-18 Thu>, as the header says, tramp is very buggy and freeze alot.
+This level of glitch is unusable. (for now)
+
+I have observed the following behavior
+Note: both =doom run= and =emacsclient= make no different.
+
+freeze behavior can be described as followed
+#+BEGIN_QUOTE
+When emacs freeze and it keep sending two-factor authentication to duo app every 10-20 secs also. (I tried this with fau koko clsuter which use two-factor authentication.)
+#+END_QUOTE
+freeze behavior is triggered by the following actions.
+- Freeze when I open shell on the remote server using =M-x shell=.
+- sometimes, I just can't save file. I can edit, but when save. Emacs freezes.
+- sometimes, I can't even open remote file via ssh (usually happens after the first bugs is observed. This trigger dissapear when I close and reopen doom.)
+
+* Basic Usage
+** How to access remote files ?
 
 a remote file name always look like =/method:user@host:/path/to/file= using the same =M-x find-file=.
-
 example to login to fau KOKO server is to use =/ssh:awannaphasch2016@koko-login.hpc.fau.edu:/=
+
+It also support =sudo=, see [[https://youtu.be/4pHid-kTBHw?t=409][here]] or [[https://irreal.org/blog/?p=895][here]] or [[https://stackoverflow.com/questions/2177687/open-file-via-ssh-and-sudo-with-emacs/16408592][here]].
+Error: all the sudo synxtax I tried below cause emacs to hangs. (hangs because wrong syntax or hangs because of bugs?)
+- =/ssh:you@remotehost|sudo:remotehost:/path/to/file=
+  you = awannaphasch2016
+  remotehost = koko-login.hpc.fau.edu
+  e.g.
+  =/ssh:awannaphasch2016@koko-login.hpc.fau.edu|sudo:koko-login.hpc.fau.edu:/=
+  =/ssh:awannaphasch2016@koko-login.hpc.fau.edu|sudo::/=
