@@ -42,6 +42,8 @@ print(random.choice(topics))
 *** Contribute to EAF
 - look at [[https://github.com/emacs-eaf/emacs-application-framework/wiki/Todo-List][EAF TODO list]] and pick one
 *** Understand Emacs at the deeper level
+- ref:
+    - [[https://tuhdo.github.io/c-ide.html][C/C++ Development Environment for Emacs]]
 **** TODO How does environment of linux and emacs differ?
 **** learn about the following packages and workflow
 ***** understand packagers mechanism and functionality
@@ -114,6 +116,7 @@ For =mspyls=, =lsp-treemacs-error-list= only shows error from =tgn= project.
 ** Blockchain
 *** TODO Complete this [[https://paulx.dev/blog/2021/01/14/programming-on-solana-an-introduction/][tutorial]] on Solona
 **** learning rust only when Solona tutorial needs it using ~rustling~.
+*** [[https://mycoralhealth.medium.com/code-your-own-blockchain-in-less-than-200-lines-of-go-e296282bcffc][Code your own building in less than 200 lines of Go!]]
 *** TODO [[https://jeiwan.net/posts/building-blockchain-in-go-part-1/][following building blockchain in Go]]
 **** I have a probelm make emacs recognize 'gopls' (error shows up when I run M-x lsp in go file.)
 ***** I take this opportunity to learn to use lisp debug to solve this problem.
@@ -160,9 +163,11 @@ build the website using this [[https://www.huxiaoxing.com/building-a-website-wit
 [[https://github.com/ronami/minipack][build your own module bundler -minipack]]
 [[https://levelup.gitconnected.com/understand-javascript-promises-by-building-a-promise-from-scratch-84c0fd855720][learn JavaScript Promises by Building a Promis from Scratch]]
 [[https://medium.com/@ankur_anand/implement-your-own-call-apply-and-bind-method-in-javascript-42cc85dba1b][Implement your own--call(), apply(), and bind() method in JavaScript.]]
+[[http://aosabook.org/en/500L/dagoba-an-in-memory-graph-database.html][Dagoba: an in-memory graph database]]
 *** learning Go by doing
 **** [[https://blog.jse.li/posts/torrent/][Building a BitTorrent client form the ground up in Go]]
 *** Learning C from open source code
+**** [[https://cstack.github.io/db_tutorial/][let's build a simple database.]]
 **** understand how coreutils (data science related command lines)
 [[https://github.com/coreutils/coreutils/blob/master/src/cat.c][source code to cat command]]
 ** learn generallized funcationality
