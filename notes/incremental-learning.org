@@ -94,6 +94,10 @@ ref:
 ***** python mode unable to import module
 ***** Dap mode
 ***** lsp mode
+****** TODO Implement lsp-mode for markdown from github issue, see [[https://github.com/emacs-lsp/lsp-mode/issues/3010][here]].
+******* Error: I am trying to solve
+******* how does =gopls= implement langauge server using =lsp-mode=?
+
 ****** check whether python version and python environment are correctly set up. (as it should in without emacs)
 ****** figure out how to use anaconda in emacs
 ****** switch style guide
@@ -118,11 +122,6 @@ For =mspyls=, =lsp-treemacs-error-list= only shows error from =tgn= project.
 **** learning rust only when Solona tutorial needs it using ~rustling~.
 *** [[https://mycoralhealth.medium.com/code-your-own-blockchain-in-less-than-200-lines-of-go-e296282bcffc][Code your own building in less than 200 lines of Go!]]
 *** TODO [[https://jeiwan.net/posts/building-blockchain-in-go-part-1/][following building blockchain in Go]]
-**** I have a probelm make emacs recognize 'gopls' (error shows up when I run M-x lsp in go file.)
-***** I take this opportunity to learn to use lisp debug to solve this problem.
-****** figure out why elips cant find gopls path when in fact path is added to =.zshrc=
-******* to my surprise, I found that when I run ~M-x M-S-! echo $PATH~ no go path is added to it.
-******** why is $PATH from zsh not the same as $PATH in running shell command in emacs.?, see [[https://github.com/hlissner/doom-emacs/issues/2426#issuecomment-629816917][here]].
 *** TODO understand funcdamental of blockchain
 - reading the following
   - trying to understand ~encorse peers~ (~endorser transaction~) used in ~Hyperledger Fabric~

@@ -39,7 +39,7 @@ Slice literal
     s = append(s, []int{7, 8, 9}...) // Second argument is a slice literal.
     fmt.Println(s)  // Updated slice is now [1 2 3 4 5 6 7 8 9]
 #+END_SRC
-** Pointers
+*** Pointers
 #+BEGIN_SRC go
 package main
 

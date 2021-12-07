@@ -1,13 +1,13 @@
 #+TITLE: Lsp Mode Note
 
 
-* References
 There ara separate projects involve in emacs ~lsp-mode~.
 - main lsp website is hosted by Microsoft. (because Microsoft creates it)
   - not all the server in
 - emacs also has its own website and github.
     contents inside the website is the most updated about emacs-lsp
     since I am using emacs, documentation of lsp should be refers to emacs-lsp instead of the main lsp webiste by Microsoft.
+
 * Error
 ** Errors and Debugging log (logs of how I debug it).
 *** LSP :: There are no language servers supporting current mode `python-mode' registered with `lsp-mode'.
@@ -21,8 +21,60 @@ This issue might be caused by:
 4. You are over `tramp'. In this case follow https://emacs-lsp.github.io/lsp-mode/page/remote/.
 5. You have disabled the `lsp-mode' clients for that file. (Check `lsp-enabled-clients' and `lsp-disabled-clients').
 #+END_SRC
-* Configuration
+*** When I edit go file, LSP correct produce syntax error for the first time, but the same error persist even after I fixed it. Also, no new error is produced. This error occurs in one out of two go files. The other syntax check on go file works perfectly as it should, hence, another way to word the question of this error is "in what scenario does gopls work in one file and not the other?"
+TLDR:
+The error was misleading (gopls not running.) which was made even more confusing when the doom config error was combined with it.
+The main problem of this is that go file is in directory that is not valid as a go project.
+for example, I put scratch.go file in ~/Scratches where all of scratch.x (where x is any extension of any languages) located.
+Create proper go directory will fix the error.
 
+Other related behavior that may link to this error is that first time initialation of the file takes significantly longer time. (maybe gopls is trying to setup the project, but because location of the file is incorreclty placed and, often time, the location is significantly larger as, in my case where I put =*.go= file in =~/Scratches= and =/mnt/c/Users/terng/OneDrive/Documents= ).
+I created error header for this behavior, see [[*First time initialization of go file takes significatnly longer time than usual.][here]].
+
+If the file location is incorrect, the following error misleading occurs and make me rethink about mylife 100 times over.
+When I create proper go directory, the misleading error disappear.
+#+BEGIN_SRC
+LSP :: Sending to process failed with the following error: Process gopls<1> not running
+#+END_SRC
+
+
+Error Logs:
+
+So far, I believe, syntax check problem may be caused by the following
+- flycheck
+  I thought that flycheck is the problem, but I can't find how flycheck is used in either =lsp-mode= or =gopls=
+- some kind of linting helper for go language.
+
+When I run =M-x +lsp/switch-client=, I get the following error
+#+BEGIN_SRC md
+LSP :: Sending to process failed with the following error: Process gopls<1> not running
+#+END_SRC
+
+From further investigation, I found that when cursor is on functions or variables on the files that syntax check of go doesn't work.
+#+BEGIN_SRC md
+eldoc error (file-missing Searching for program No such file or directory gocode)
+#+END_SRC
+The above error is not related to the error of interest, but it can be fixed by following [[*eldoc error (file-missing Searching for program No such file or directory gocode)][this]].
+
+
+
+*** eldoc error (file-missing Searching for program No such file or directory gocode)
+TLDR:
+You have to activate :lang (go +lsp) to enable LSP support.
+
+see [[https://github.com/hlissner/doom-emacs/issues/2419][here]].
+*** First time initialization of go file takes significatnly longer time than usual.
+Other related behavior that may link to this error is that first time initialation of the file takes significantly longer time. (maybe gopls is trying to setup the project, but because location of the file is incorreclty placed and, often time, the location is significantly larger as, in my case where I put =*.go= file in =~/Scratches= and =/mnt/c/Users/terng/OneDrive/Documents= ).
+
+* Help
+** Tuning/improve LSP Performance, see [[https://emacs-lsp.github.io/lsp-mode/page/performance/][here]].
+In general, performance of =lsp-mode= (emacs version of lsp) is on par with the maintstream LSP clients like VScode, Theia, etc.
+** Overview of all =lsp-mode= features with pictures, see [[https://emacs-lsp.github.io/lsp-mode/tutorials/how-to-turn-off/][here]].
+* Debugging Techniques
+** Check if =lsp-mode= is propertly configured, use =M-x lsp-doctor=
+Note that when configured properly =lsp-mode= performance is on par with mainstream LSP clients (VScode, Theia, etc).
+** Turn on =lsp-log-io= while debug, see [[https://emacs-lsp.github.io/lsp-mode/page/performance/#check-if-logging-is-switched-off][here]].
+* Configuration
 ** switch lsp server
 to switch lsp server, one must be to file with target language extension then press ~+lsp/switch-client~ to select lsp client.
 

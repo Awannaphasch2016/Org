@@ -8,6 +8,24 @@
   - What is your expectation of the results?
 
 From my brief investigation, I notice that although all commands evaluate lisp code, it wasn't implemented on the same commands. (not much similarity beyond eval and overlays)
+* Terms and Concepts
+** struct
+example of struct
+#+BEGIN_SRC emacs-lisp
+;; define struct
+(cl-defstruct person name age sex)
+
+;; how struct can be used
+(setq dave (make-person :name "Dave" :sex 'male))
+(setq other (copy-person dave))
+(eq dave other)
+(eq (person-name dave) (person-name other))
+(person-p dave)
+(person-p [1 2 3 4])
+(person-p "Bogus")
+(person-p '[cl-struct-person counterfeit person object])
+#+END_SRC
+
 * Help sections and related info
 ** looking up documentation, see [[https://discourse.doomemacs.org/t/how-to-debug-issues/55#looking-up-documentation-3][here]].
 
@@ -188,8 +206,6 @@ traditional ways of debugging is to =debug= function, see example below
 
 (foo)
 #+END_SRC
-
-
 
 set =toggle-debug-on-error= to t to enable debug on error.
 
@@ -563,6 +579,9 @@ Emacs uses GnuPG via the =epa= lbirary to automatically encrypt and decrypt andy
 
 1. list packages with =M-x list-packages=
 2. Once in =Package Munu= buffer, run =package-menu-mark-upgrades= (default key binding is =U=) to mark all packages to be updated.
+** What is relationship of emacs =exec-path= and environment variable =$PATH=
+- ref
+  - https://emacs.stackexchange.com/questions/550/exec-path-and-path
 
 * Footnotes
 
