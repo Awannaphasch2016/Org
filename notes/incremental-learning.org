@@ -94,10 +94,13 @@ ref:
 ***** python mode unable to import module
 ***** Dap mode
 ***** lsp mode
-****** TODO Implement lsp-mode for markdown from github issue, see [[https://github.com/emacs-lsp/lsp-mode/issues/3010][here]].
-******* Error: I am trying to solve
-******* how does =gopls= implement langauge server using =lsp-mode=?
-
+****** TODO read and check the following before checking other things on the list
+******* https://github.com/ethereum/solidity/issues/7763
+******* https://www.reddit.com/r/neovim/comments/l6a5dy/nvim_lsp_support_for_solidity/
+****** Implement  lsp-mode for solidity from github issue, see [[https://github.com/ethereum/solidity/issues/7763][here]].
+******* TODO Implement lsp-mode for markdown from github issue, see [[https://github.com/emacs-lsp/lsp-mode/issues/3010][here]].
+******** Error: I am trying to solve
+******** how does =gopls= implement langauge server using =lsp-mode=?
 ****** check whether python version and python environment are correctly set up. (as it should in without emacs)
 ****** figure out how to use anaconda in emacs
 ****** switch style guide
@@ -118,6 +121,30 @@ For =mspyls=, =lsp-treemacs-error-list= only shows error from =tgn= project.
 **** learn package manager
 ***** learn =straight.el= from tutorial. I stopped [[https://youtu.be/UmbVeqphGlc?t=262][here]].
 ** Blockchain
+*** TODO read or check out the following before moving on to other list.
+**** write essay or reimplement code from the following
+***** https://youtu.be/M576WGiDBdQ?t=1904
+***** https://youtu.be/M576WGiDBdQ?t=2833
+***** https://youtu.be/M576WGiDBdQ?t=4092
+***** use factory pattern to interact with contract from outside of the contract.
+ https://youtu.be/M576WGiDBdQ?t=8780
+***** what is the goal of factory pattern?
+***** what are the things that I can and cannot do without and with factory pattern?
+https://youtu.be/M576WGiDBdQ?t=11283
+https://youtu.be/M576WGiDBdQ?t=15770
+https://youtu.be/M576WGiDBdQ?t=22246
+***** malware stuff
+https://youtu.be/k-nFdF5FEwA?t=2702
+**** stuff to read
+***** https://ethereum.org/en/developers/docs/scaling/layer-2-rollups/
+***** https://www.google.com/search?q=evm+compatible&rlz=1C1CHBF_enUS941US941&oq=evm+&aqs=chrome.2.69i57j0i433i512j0i512l8.3560j0j7&sourceid=chrome&ie=UTF-8
+***** https://www.preciouschicken.com/blog/posts/short-sharp-solidity-pure-vs-view-vs-call/
+**** contribute to colony coin
+***** https://github.com/JoinColony/colonyDapp/labels/good-first-issue
+***** https://github.com/JoinColony/colonyNetwork/issues
+**** tutorial
+***** https://www.youtube.com/watch?v=M576WGiDBdQ&ab_channel=freeCodeCamp.org
+***** https://github.com/smartcontractkit/full-blockchain-solidity-course-py
 *** TODO Complete this [[https://paulx.dev/blog/2021/01/14/programming-on-solana-an-introduction/][tutorial]] on Solona
 **** learning rust only when Solona tutorial needs it using ~rustling~.
 *** [[https://mycoralhealth.medium.com/code-your-own-blockchain-in-less-than-200-lines-of-go-e296282bcffc][Code your own building in less than 200 lines of Go!]]
@@ -145,6 +172,15 @@ stopped [[https://sicp.sourceacademy.org/chapters/1.1.html][here]]
 - be sufficient in rush enough to plot all the basic stuff.
   ref:
   [[https://www.youtube.com/watch?v=2o1YDUKyhu0&ab_channel=RiffomonasProject][Learning to use the patchwork R package (how to learn a package in general) (CC099)]]
+*** TODO question to answer to help with my own implementation
+how does DDGCL uses GAN loss?
+what is DDGCL architecture like?
+is DDGCL generative or contrastive?
+is DDGCL reconstruct next window or current window?
+
+to understand how DDGCL train, I have to read the following paper.
+1.MoCo
+2.E2E
 
 * Out of current focus, but I really want to learn more
 
