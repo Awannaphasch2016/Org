@@ -1,0 +1,9 @@
+#+TITLE: Colony
+
+* Terminologies
+Extension =  applications
+ coloy can be extended with specific applications to implement specific behaviors. These are called extension.
+
+* FAQs
+** what can colony be extended to ?
+** what is Metacolony?
