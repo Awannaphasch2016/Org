@@ -139,9 +139,19 @@ https://youtu.be/k-nFdF5FEwA?t=2702
 ***** https://ethereum.org/en/developers/docs/scaling/layer-2-rollups/
 ***** https://www.google.com/search?q=evm+compatible&rlz=1C1CHBF_enUS941US941&oq=evm+&aqs=chrome.2.69i57j0i433i512j0i512l8.3560j0j7&sourceid=chrome&ie=UTF-8
 ***** https://www.preciouschicken.com/blog/posts/short-sharp-solidity-pure-vs-view-vs-call/
-**** contribute to colony coin
-***** https://github.com/JoinColony/colonyDapp/labels/good-first-issue
-***** https://github.com/JoinColony/colonyNetwork/issues
+**** colony coin
+***** create colony for =pen.el=
+***** contribute to colony coin
+****** https://github.com/JoinColony/colonyDapp/labels/good-first-issue
+****** https://github.com/JoinColony/colonyNetwork/issues
+******* understanding this issue -> https://github.com/JoinColony/colonyNetwork/pull/1008
+- CoinMachine?
+- how to create smart contract?
+- check the following test
+  - test-contracts-coverage?
+  - test-reputation-coverage.
+  - chainid
+
 **** tutorial
 ***** https://www.youtube.com/watch?v=M576WGiDBdQ&ab_channel=freeCodeCamp.org
 ***** https://github.com/smartcontractkit/full-blockchain-solidity-course-py
@@ -229,3 +239,6 @@ implementing demo todo
 - try to run it overnight to collect data.
 - check how data is structure.
   - in which scenario does `stream.filter(follow=[get_user_id("DocumentingBTC")], threaded=False)` returns any value at all.
+** project: scraping with stein
+- scrapy
+https://www.bovada.lv/sports/basketball/nba
