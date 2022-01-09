@@ -1,0 +1,8 @@
+#+TITLE: HTML Notes
+
+* HTML Tags vs Elements vs Attributes
+lets `<a attribute='something'>b</a>` be an example
+
+tags is =<a></a>=
+elements =<a>b</a>=
+
