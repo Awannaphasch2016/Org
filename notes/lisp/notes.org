@@ -57,6 +57,11 @@ intern basically return symbol whose name property matches input string
 *** Mini Buffer
 ~read-string~ read input from mini buffer
 
+* FAQs
+** how to evaluate code snippets in Emacs
+option 1 =gr=
+option 2 =C-M-x=
+option 3 =M-x ielm= to start Elisp REPL.
 * Footnotes
 [fn:2] https://www.gnu.org/software/emacs/manual/html_node/elisp/Creating-Hash.html
 
