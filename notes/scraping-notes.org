@@ -1,0 +1,9 @@
+#+TITLE: scraping notes
+* XPath vs CSS expression
+- different because of preferences rather than implications of the two options.
+XPath is a query language
+
+advantage of CSS expression over Xpath expression
+- CSS expression is faster than XPath expression.
+- higher change of inding your elements.
+- more modern. compatible iwth most browsers.
