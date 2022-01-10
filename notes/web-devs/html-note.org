@@ -1,8 +1,14 @@
 #+TITLE: HTML Notes
 
+* example of CSS expression
+the following example uses =scrapy shell=
+- select all elements -> =response.css('*').getall()=
+- select all elements that have head element -> =response.css('head').getall()=
+
+basic query example =[parent-element] [child-element] [child-child-element]=
+
 * HTML Tags vs Elements vs Attributes
 lets `<a attribute='something'>b</a>` be an example
 
 tags is =<a></a>=
 elements =<a>b</a>=
-

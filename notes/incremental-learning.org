@@ -242,3 +242,15 @@ implementing demo todo
 ** project: scraping with stein
 - scrapy
 https://www.bovada.lv/sports/basketball/nba
+** project: build website for adam investor
+
+the site name is =blackwatercoins.com=
+
+** project: create website for blog using org mode.
+*** goal: publish website that capable of hosting org file
+- ref
+  - read the following tutorial: https://thackl.github.io/blogging-with-emacs-org-mode-and-jekyll
+- note
+  - my current blog is using jekyll but files are .md not .org.
+  - I started to add org files into my blogs directory without testing whether or not it will work. On top of that, I didn't even follow naming convention which, if I remember correct, are necessary to make jekyll works. Hence, I don't expect it to work, so debug it.
+
