@@ -1,0 +1,14 @@
+#+TITLE: Guix Note
+
+* References
+- system crafter
+  - An introduction to GNU guix
+  - Everyday Package management with GNU Guix
+  - Using package channels in GNU Guix.
+  - Installing the GNU Guix Package Manager. (if you want to use it in another distribution.)
+  - [[https://systemcrafters.net/craft-your-system-with-guix/5-reasons-to-try-guix/][5 Reasons to Try GNU Guix in 2022]]
+    1. You'll never loss your configuration again.
+    2. change your configuration is safe. (you can always roll back.)
+    3. You can also use it for managing your dotfiles.
+    4. You can easily create isolated devlopment environments.
+    5. You can get many of these benefits on your current Linux distribution.

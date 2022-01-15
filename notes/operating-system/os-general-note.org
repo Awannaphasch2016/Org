@@ -1,5 +1,14 @@
 #+TITLE: Os General Note
 
+directory
+* linux filesystem
+- ref
+  - my previous notes on linux filesystem on roam research
+    - https://roamresearch.com/#/app/AdaptiveGraphStucture/page/-noNykr2A
+
+=/usr/local= is Tertiary hierarchy for local data, specific to this host
+
+=/usr/share= is Architecture-independent (shared) data
+
 * File extensions
-** references
 - Comparing file extension equivalent between Linux and Window OS, see [[https://askubuntu.com/questions/156392/what-is-the-equivalent-of-an-exe-file][here]].

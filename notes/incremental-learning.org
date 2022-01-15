@@ -177,6 +177,14 @@ stopped [[https://sicp.sourceacademy.org/chapters/1.1.html][here]]
 ** Prompt Programming
 *** TODO reading [[https://generative.ink/posts/methods-of-prompt-programming/][methods of prompt programming]]
 *** TODO reading [[id:][GPT-3 creative fiction]]
+** Classes that I am taking
+*** Database
+- presentation
+  - note
+    - deadline: before the end of semester.
+  - Paper: [[https://www.semanticscholar.org/paper/Anatomy-of-a-Database-System-Hellerstein-Stonebraker/acf0f99dd4bbcbf7049b787e10cb538c620ed110][Anatomy of a Database system.]] (10 percent extra credit)
+
+
 ** Deep learning and Data Science
 *** TODO working on [[file:~/org/researches/ssl-dynamic-graph/log-ssl-dynamic-graph.org][log of ssl-dgnn]]
 - be sufficient in rush enough to plot all the basic stuff.
@@ -253,4 +261,14 @@ the site name is =blackwatercoins.com=
 - note
   - my current blog is using jekyll but files are .md not .org.
   - I started to add org files into my blogs directory without testing whether or not it will work. On top of that, I didn't even follow naming convention which, if I remember correct, are necessary to make jekyll works. Hence, I don't expect it to work, so debug it.
+** learning scala + functional programming language.
+- ref
+  - [[https://www.youtube.com/watch?v=LQVDJtfpQU0&list=PLS1QulWo1RIagob5D6kMIAvu7DQC5VTh3&ab_channel=ProgrammingKnowledge][scala tutorial]]
+  - [[https://github.com/elleFlorio/scalachain][scalachain]]
+    - [[https://www.freecodecamp.org/news/how-to-build-a-simple-actor-based-blockchain-aac1e996c177/][How to build a simple actor-based blockchain]]
 
+
+** learning GNU Guix (for config file reproducibility.)
+- ref
+  - learn from system crafter playlist, [[https://www.youtube.com/watch?v=iBaqOK75cho&list=PLEoMzSkcN8oNxnj7jm5V2ZcGc52002pQU&ab_channel=SystemCrafters][here]].
+  - guix on wsl2, [[https://gist.github.com/giuliano108/49ec5bd0a9339db98535bc793ceb5ab4][here.]]
