@@ -39,6 +39,10 @@ print(random.choice(topics))
 **** TODO [[file:books/Writing GNU Emacs Extension - Bob Glickstein.org::*Basic operations][stop at this chapter of 'writing with elisp...']]
 **** TODO Figure out how to properly use variation of =interaction= keyword in lisp function.
 **** TODO learn to use debug in elisp
+**** TODO implement elisp code to get file name
+http://cl-cookbook.sourceforge.net/strings.html#substrings
+**** TODO hwo to obtain a list of all functions exclusively provided by a certain major mode
+- https://emacs.stackexchange.com/questions/14208/how-to-obtain-a-list-of-all-functions-exclusively-provided-by-a-certain-major-mo
 *** Contribute to EAF
 - look at [[https://github.com/emacs-eaf/emacs-application-framework/wiki/Todo-List][EAF TODO list]] and pick one
 *** Understand Emacs at the deeper level
