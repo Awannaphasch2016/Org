@@ -190,6 +190,11 @@ stopped [[https://sicp.sourceacademy.org/chapters/1.1.html][here]]
 
 
 ** Deep learning and Data Science
+*** TODO learn to use ray with slurm
+- ref
+  - [[https://docs.ray.io/en/latest/cluster/slurm.html][deploying ray on slurm]]
+
+
 *** TODO working on [[file:~/org/researches/ssl-dynamic-graph/log-ssl-dynamic-graph.org][log of ssl-dgnn]]
 - be sufficient in rush enough to plot all the basic stuff.
   ref:
@@ -270,6 +275,12 @@ the site name is =blackwatercoins.com=
   - [[https://www.youtube.com/watch?v=LQVDJtfpQU0&list=PLS1QulWo1RIagob5D6kMIAvu7DQC5VTh3&ab_channel=ProgrammingKnowledge][scala tutorial]]
   - [[https://github.com/elleFlorio/scalachain][scalachain]]
     - [[https://www.freecodecamp.org/news/how-to-build-a-simple-actor-based-blockchain-aac1e996c177/][How to build a simple actor-based blockchain]]
+
+** learning distributed system
+- ref
+  - [[https://nullprogram.com/blog/2010/08/07/][distributed computing with emacs]]
+  - [[https://towardsdatascience.com/lets-build-a-simple-distributed-computing-system-for-modern-cloud-part-one-e2b745126211][let's build a simple distributed computing system, for modern cloud]]
+  - Google search: [[https://www.youtube.com/results?search_query=build+distributed+system+from+scratch+][build distributed system from scratch]]
 
 
 ** learning GNU Guix (for config file reproducibility.)
