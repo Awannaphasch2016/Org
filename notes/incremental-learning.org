@@ -34,6 +34,9 @@ print(random.choice(topics))
 
 * Current Topics for Incremental Learning
 ** Emacs
+*** config emacs
+- goto garun project
+- [[https://github.com/emacsorphanage/emamux][interact with tmux from emacs]]
 *** learn to implement in emacs using elisp
 **** TODO reading [[file:doom-emacs/packages/emacs-application-framework.org::https://github.com/emacs-eaf/emacs-application-framework#install][What is a backtrace & how to produce them]]
 **** TODO [[file:books/Writing GNU Emacs Extension - Bob Glickstein.org::*Basic operations][stop at this chapter of 'writing with elisp...']]
@@ -126,6 +129,7 @@ For =mspyls=, =lsp-treemacs-error-list= only shows error from =tgn= project.
 ***** learn =straight.el= from tutorial. I stopped [[https://youtu.be/UmbVeqphGlc?t=262][here]].
 ** Blockchain
 *** TODO read or check out the following before moving on to other list.
+**** read Althea AI whitepaper
 **** write essay or reimplement code from the following
 ***** https://youtu.be/M576WGiDBdQ?t=1904
 ***** https://youtu.be/M576WGiDBdQ?t=2833
@@ -199,20 +203,37 @@ stopped [[https://sicp.sourceacademy.org/chapters/1.1.html][here]]
 - be sufficient in rush enough to plot all the basic stuff.
   ref:
   [[https://www.youtube.com/watch?v=2o1YDUKyhu0&ab_channel=RiffomonasProject][Learning to use the patchwork R package (how to learn a package in general) (CC099)]]
+- write summary from email report on https://mail.google.com/mail/u/0/#search/node+classification/QgrcJHsNlSQcfgjngKvJvfWsltLMshplFxg
+  - from these contents are performed at the labs computer.
+*** TODO things to implementation
+- how to use ray 'localhost'? (how can it be useful to me? when to use it?)
+  - how to remotely inspect localhost from remote nodes?
+- start using version control for data. (DVC)
+- test why memory update error occurs
+  - can memory be negative?
+  - what is the different between memory and self.memory.get_memory()?
+    - memory = get_updated_memory
+    - memory.get_memory()
+  - does memory diff increases each window?
+    - should memory diff increase?
+- add new dataset that are used in the tgn paper.
 *** TODO question to answer to help with my own implementation
-how does DDGCL uses GAN loss?
-what is DDGCL architecture like?
-is DDGCL generative or contrastive?
-is DDGCL reconstruct next window or current window?
+- figure out how tgn does semi-supervised learning for node classification.
+- other
+    how does DDGCL uses GAN loss?
+    what is DDGCL architecture like?
+    is DDGCL generative or contrastive?
+    is DDGCL reconstruct next window or current window?
 
-to understand how DDGCL train, I have to read the following paper.
-1.MoCo
-2.E2E
+    to understand how DDGCL train, I have to read the following paper.
+    1.MoCo
+    2.E2E
 
 * Out of current focus, but I really want to learn more
 
 ** learn about debugging
 *** Read [[https://youtu.be/FihU5JxmnBg?t=2779][Why Programs Fails a guide to systematic debugging]] (read chapters 5-7, 11-14)
+*** [[https://stackoverflow.com/questions/4590237/how-do-i-debug-my-program-when-it-hangs#:~:text=Use%20the%20debugger%20to%20find,take%20control%20of%20the%20process.][how do I figure out why program hangs?]]
 ** learn about data science at commandline
 **** TODO study xvzf code on "command line pandas killer" (mlr, q, csvtk, xsv, tsv-utils) and adopt the usecase in my workflow, see [[https://github.com/xvzftube/pandas_killers/blob/main/main.sh][here]].
 ** learn new languages by doing.
@@ -270,7 +291,12 @@ the site name is =blackwatercoins.com=
 - note
   - my current blog is using jekyll but files are .md not .org.
   - I started to add org files into my blogs directory without testing whether or not it will work. On top of that, I didn't even follow naming convention which, if I remember correct, are necessary to make jekyll works. Hence, I don't expect it to work, so debug it.
-** learning scala + functional programming language.
+** functional programming language.
+*** learning clojure
+- ref
+  - [[https://hackernoon.com/learn-blockchains-by-building-one-117428612f46][learning blockchain by building one with clojure]]
+
+*** learning scala
 - ref
   - [[https://www.youtube.com/watch?v=LQVDJtfpQU0&list=PLS1QulWo1RIagob5D6kMIAvu7DQC5VTh3&ab_channel=ProgrammingKnowledge][scala tutorial]]
   - [[https://github.com/elleFlorio/scalachain][scalachain]]
@@ -281,7 +307,6 @@ the site name is =blackwatercoins.com=
   - [[https://nullprogram.com/blog/2010/08/07/][distributed computing with emacs]]
   - [[https://towardsdatascience.com/lets-build-a-simple-distributed-computing-system-for-modern-cloud-part-one-e2b745126211][let's build a simple distributed computing system, for modern cloud]]
   - Google search: [[https://www.youtube.com/results?search_query=build+distributed+system+from+scratch+][build distributed system from scratch]]
-
 
 ** learning GNU Guix (for config file reproducibility.)
 - ref

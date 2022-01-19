@@ -1,0 +1,23 @@
+#+TITLE: FP in Scala
+
+* Exercise 2: Getting started with Functional Programming
+org-babel-execute-src-block: No org-babel-execute function for scala! [2 times]
+#+BEGIN_SRC scala :tangle "~/org/notes/scala/fp-in-scala/execise.scala" :comments link
+def fib(n: Int): Int = {
+  @annotation.tailrec
+  def loop(n: Int, prev: Int, cur: Int): Int =
+    if (n <= res0) prev
+    else loop(n - 1, cur, prev + cur)
+  loop(n, 0, 1)
+}
+
+fib(5) // should be(5)
+#+END_SRC
+
+* Exercise 3: Functional Data Structures
+* Exercise 4: Handling Error Without Exceptions
+* Exercise 5: Strictness And Laziness
+* Exercise 6: Pure Functional State
+* Exercise 7: Purely Functional Parallelism
+* Exercise 8: Property Based Testing
+* Exercise 9: Parser Combinations

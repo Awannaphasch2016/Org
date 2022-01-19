@@ -44,6 +44,26 @@ example
 #+BEGIN_SRC emacs-lisp :noeval
 (defvar lsp-clients (make-hash-table :test 'eql)
 #+END_SRC
+** Advice
+- ref
+  - [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Advice-Combinators.html][ways to compose advice]]
+benchmark-elapse
+
+example
+#+BEGIN_SRC emacs-lisp :noeval
+
+; ref: https://www.emacswiki.org/emacs/Advice
+(advice-add
+   'display-buffer    ; function to be advised
+   :before            ; advice runs first
+   (lambda (&rest r) (delete-other-windows)) ; advising function, this must have the same argument list as the main function, in this case all absorbed into a list "r"
+   '((name . "test"))) ; convenient name for identifying or removing this advice later
+
+;; remove advice named "test" from function called "display-buffer"
+(advice-remove 'display-buffer "test")
+#+END_SRC
+
+
 ** Terminology
 *** intern
 intern basically return symbol whose name property matches input string
