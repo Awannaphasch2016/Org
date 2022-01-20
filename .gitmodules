@@ -7,3 +7,6 @@
 [submodule "notes/go/learngo"]
 	path = notes/go/learngo
 	url = https://github.com/inancgumus/learngo.git
+[submodule "notes/scala/fp-in-scala/fpinscala"]
+	path = notes/scala/fp-in-scala/fpinscala
+	url = https://github.com/fpinscala/fpinscala.git
