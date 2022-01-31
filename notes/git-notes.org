@@ -12,6 +12,16 @@ Whenever I have something that works (meaning, doesn't break anything for anyone
 In practice that means a few times per hour. At least a couple of times every hour, with 5 being quite a bit.
 #+END_QUOTE
 
+* Command line
+login
+#+BEGIN_SRC sh :noeval
+gh auth login
+#+END_SRC
+
+upload tmp2.txt file to gist with description "my test gist."
+#+BEGIN_SRC sh :noeval
+echo 'anak' >  tmp2.txt | gh gist create -d "my test gist" -f tmp2.txt
+#+END_SRC
 * Authentication
 ** Credential caching
 ref:

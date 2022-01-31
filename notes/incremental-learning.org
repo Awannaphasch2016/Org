@@ -269,14 +269,48 @@ build the website using this [[https://www.huxiaoxing.com/building-a-website-wit
 ** learning to hack
 *** watch [[https://www.youtube.com/c/LiveOverflow/playlists][LiveOverflow]]
 ** project: crypto with kenny
-currently, I implement the code in =~/Scratches/tmp1.py=
-implementing demo todo
-- find key of data that will be used to stored as data.
-- store data in comma separated files. (other value like freq count can be derived from this one.)
-- follow stream of 1 crypto news account. (This required me to only filter data that have screen_name key == account_name)
-- try to run it overnight to collect data.
-- check how data is structure.
-  - in which scenario does `stream.filter(follow=[get_user_id("DocumentingBTC")], threaded=False)` returns any value at all.
+- ref
+  - tutorial on twitter query
+    - https://developer.twitter.com/en/docs/twitter-api/tweets/search/integrate/build-a-query
+  - tutorial on snscrape
+    - https://github.com/MartinBeckUT/TwitterScraper/tree/master/snscrape
+  - list of account to follow
+    - [[https://itsblockchain.com/crypto-twitter-traders-2021/][Top 5 Crypto traders to follow on Twitter in 2021]]
+    - [[https://medium.com/geekculture/12-cryptocurrency-twitter-accounts-everyone-should-follow-1b5936877eaf][12 Cryptoscurrency Twitter Accounts Everyone Should Follow]]
+- do some data science.
+  - score expert-coin tuple pair
+    - sentiment anaysis
+- report class
+  - summarized result of last week.
+- get sum of sentiment.
+- commad line  for user experience.
+- get price the next and compare it to the tweet give score to the
+- get all users that target retweet.
+- how to get list of all coin that is traded on crypto brokerage.
+- get sentiment of the last 7 days of bitcoin.
+  - aspect sentiment.
+- get stream data of tweet that mention "Etherem" of 1 account.
+- can I do some kind of network analysis on this.
+- query data from hashtags. or mention
+  - get all tweets that has hastags for  1 months
+    - learn how to use snscrape
+    - what subparser?
+- use snsscrapeAPI for retweet. possible?
+- is there any different between using twitter api endpoint (e.g. =https://api.twitter.com/2/timeline/profile/{userId}.json=) vs query from twitter query.
+twitter.com/search
+- query vs search operation.
+- there should be 2 ways to use the algorithms ( what would be the differences between the two cases?)
+  - note
+    - trade only focus on short terms.
+    - users should be able to get answer for their question
+      - "should I buy this crypto for short term profit?"
+        - return 0-1. where value is confidence. (confidence should reflect)
+        - query
+          - crypto
+      - "what is the ranking of crypto that is most likely to profit?"
+        - return ranking of crypto
+  - query from the past
+  - query from stream data
 ** project: scraping with stein
 - scrapy
 https://www.bovada.lv/sports/basketball/nba

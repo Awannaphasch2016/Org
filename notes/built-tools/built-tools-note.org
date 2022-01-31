@@ -1,0 +1,4 @@
+#+TITLE: Built Tools Note
+
+* references
+[[https://www.youtube.com/watch?v=j6uThGxx-18&ab_channel=Konfy][Li Haoyi - Mill: a Build Tool based on Pure Functional Programming]]

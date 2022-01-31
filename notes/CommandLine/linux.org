@@ -1,0 +1,18 @@
+#+TITLE: Linux
+
+* ls
+** what is the meaning of read column output
+- ref
+  - [[https://unix.stackexchange.com/questions/103114/what-do-the-fields-in-ls-al-output-mean][What do the fields in ls -al output mean?]]
+
+#+BEGIN_SRC txt
+-rwxrw-r--    1    root   root 2048    Jan 13 07:11 afile.exe
+#+END_SRC
+
+- file permissions (-rwxrw-r--),
+- number of (hard) links (1),
+- owner name (root),
+- owner group (root),
+- file size in bytes (2048),
+- time of last modification (Jan 13 07:11), and
+- file/directory name (afile.exe)
