@@ -277,6 +277,31 @@ build the website using this [[https://www.huxiaoxing.com/building-a-website-wit
   - list of account to follow
     - [[https://itsblockchain.com/crypto-twitter-traders-2021/][Top 5 Crypto traders to follow on Twitter in 2021]]
     - [[https://medium.com/geekculture/12-cryptocurrency-twitter-accounts-everyone-should-follow-1b5936877eaf][12 Cryptoscurrency Twitter Accounts Everyone Should Follow]]
+- dvc stuff
+  - ref
+    - [[https://dvc.org/doc/start/data-and-model-versioning][Get Started: Data Versioning]]
+  - creat remote storage in s3
+    - ?
+- start using database from now one to make query easy. (SQL schema? document db?)
+- should I use HDF5?
+- add log to the file name
+- make sure for full day.
+- have get_tweets() report dataframe
+  - fix dataframe numpy and column stuff in get_tweets.
+- does other social media api provide stream? (inspect their behavior)
+- use free version first. (then scale from there.)
+- cloud infrastructure design
+  - how to store data that will later be used for machine learning.
+    - do i need data lake?
+    - do i need data warehouse?
+    - dynamoDB
+
+- what is the api to use whne doing streaming data from socila media?
+  - ref
+    - [[https://developer.twitter.com/en/docs/tutorials/consuming-streaming-data][Consuming streaming data]]
+    - https://www.google.com/search?q=get+stream+data+from+social+media&rlz=1C1CHBF_enUS941US941&oq=get+stream+data+from+social+media&aqs=chrome..69i57.7261j0j7&sourceid=chrome&ie=UTF-8
+
+- create stream data follow AWS project
 - do some data science.
   - score expert-coin tuple pair
     - sentiment anaysis
@@ -312,6 +337,7 @@ twitter.com/search
   - query from the past
   - query from stream data
 ** project: scraping with stein
+
 - scrapy
 https://www.bovada.lv/sports/basketball/nba
 ** project: build website for adam investor
@@ -341,6 +367,10 @@ the site name is =blackwatercoins.com=
   - [[https://nullprogram.com/blog/2010/08/07/][distributed computing with emacs]]
   - [[https://towardsdatascience.com/lets-build-a-simple-distributed-computing-system-for-modern-cloud-part-one-e2b745126211][let's build a simple distributed computing system, for modern cloud]]
   - Google search: [[https://www.youtube.com/results?search_query=build+distributed+system+from+scratch+][build distributed system from scratch]]
+
+** builing startup on pen.el project
+- build blockchain to extend pen.el
+  - start working on state_channel (what is the purpose on state_channel?)
 
 ** learning GNU Guix (for config file reproducibility.)
 - ref
