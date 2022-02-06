@@ -2,7 +2,6 @@
 
 to see reference and documentttion of elisp, open info page using =info= (=spc-h-i=) and navigate to elisp sections.
 
-
 * Fundametals concepts
 ** Data Structure
 *** hash table
@@ -63,7 +62,6 @@ example
 (advice-remove 'display-buffer "test")
 #+END_SRC
 
-
 ** Terminology
 *** intern
 intern basically return symbol whose name property matches input string
@@ -78,6 +76,40 @@ intern basically return symbol whose name property matches input string
 ** Buffers
 *** Mini Buffer
 ~read-string~ read input from mini buffer
+* Learning by example
+** Differences of interactive argument
+- ref
+  - [[https://emacs.stackexchange.com/questions/13886/what-is-a-raw-prefix-argument-capital-p-in-interactive][What is a raw prefix argument? (capital P in interactive)]]
+~(interactive "P")~ recognize prefix symbol like =C-u=, =M-x= etc. before convert args to number.
+~(interactive "p")~ doesn't recognize prefix symbol and convert args to number straight away.
+
+#+BEGIN_SRC emacs-lisp
+(defun my/debug-fn (arg)
+  (let ((msg))
+    (if (numberp arg)
+        (setq msg (format "Argument is number %s. " (pp arg)))
+      (setq msg "Argument is not a number. "))
+    (if (listp arg)
+        (setq msg (concat msg (format "Arg is %s." (pp arg))))
+      (setq msg (concat msg "Argument is not a list.")))
+    (message msg)))
+
+(defun my/fn-with-num-arg (arg)
+  (interactive "p")
+  (my/debug-fn arg))
+;; Result of C-u M-x my/fn-with-num-arg :
+;; Argument is number 4. Argument is not a list.
+
+(defun my/fn-with-raw-arg (arg)
+  ;; (interactive "P")
+  (interactive "P")
+  (my/debug-fn arg))
+;; Result of C-u M-x my/fn-with-raw-arg :
+;; Argument is not a number. Arg is (4)
+#+END_SRC
+
+#+RESULTS:
+: my/fn-with-raw-arg
 
 * FAQs
 ** how to evaluate code snippets in Emacs

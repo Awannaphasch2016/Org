@@ -187,7 +187,6 @@ Parsing large files can take several seconds or more. By default, Semantic autom
 
 By default, SemanticDB is enabled together with Semantic mode. To disable it, remove it from semantic-default-submodes (see [[https://www.gnu.org/software/emacs/manual/html_node/semantic/Semantic-mode.html][Semantic mode]]). You can also enable or disable SemanticDB with M-x global-semanticdb-minor-mode.
 
-
 *** Modes
 **** edebug mode
 - ref
@@ -222,7 +221,11 @@ Once in the edebug mode
 | debugger-list-functions    |     |           |             |              |
 | debugger-eval-expression   |     |           |             |              |
 | debugger-record-expression |     |           |             |              |
-
+**** calendar mode
+#+BEGIN_SRC emacs-lisp
+;; (defun anak/insdate-insert-current-date
+;;     )
+#+END_SRC
 ** Built-in functionality and macros
 *** Functionality
 **** [[https://www.gnu.org/software/emacs/manual/html_mono/ediff.html][Ediff]]
@@ -447,7 +450,10 @@ check variable
 | commands        | key | doom keys | custom keys | descriptions |
 | doom-debug-mode |     | spc-h-d-d |             |              |
 *** if =bin/doom= produces error, see [[https://discourse.doomemacs.org/t/what-is-a-backtrace-how-to-produce-them/85#from-bindoom-4][here]].
-*** if emacs is frozen, see [[https://discourse.doomemacs.org/t/what-is-a-backtrace-how-to-produce-them/85#from-frozen-emacs-5][here]].
+*** if emacs is frozen, see [[https://discourse.doomemacs.org/t/what-is-a-backtrace-how-to-produce-them/85#from-frozen-emacs-5][here]], and [[https://emacs.stackexchange.com/questions/506/debugging-a-frozen-emacs#:~:text=Type%20M%2Dx%20toggle%2Ddebug%2Don,external%20debugger%20such%20as%20gdb%20.][here]].
+if =C-g= unfreeze emacs, then you can use buildin debugger by running =toggle-debug-on-quit= and inspect =*Backtrace*= file.
+
+if C-g doesn't help, then the freeze probably happens in the C code, and you'll need to use an external debugger such as gdb. Hit C-h C-d to see the DEBUG file which gives some hints about how to do that. (You can also [[http://git.savannah.gnu.org/cgit/emacs.git/tree/etc/DEBUG][read the DEBUG file in the Emacs repository web interface]].) [[https://emacs.stackexchange.com/questions/14354/how-do-i-debug-an-emacs-crash/14376#14376][This answer]] goes into more details about how to use gdb with Emacs.
 *** how to deal with frozen emacs? see [[https://discourse.doomemacs.org/t/what-is-a-backtrace-how-to-produce-them/85#from-frozen-emacs-5][here]].
 *** profiling and benchmarking, see [[https://discourse.doomemacs.org/t/how-to-debug-issues/55#profiling-and-benchmarking-5][here]].
 This option is used to inspect what cause emacs to slow down.
@@ -546,7 +552,6 @@ example 2
 if function comes from packages. (you didn't write it yourself.), see [[https://discourse.doomemacs.org/t/common-errors-how-to-deal-with-them/58#the-function-comes-from-a-package-14][here]].
 
 
-
 **** debug =Key sequence ... start with non-prefix key.=, see [[https://discourse.doomemacs.org/t/common-errors-how-to-deal-with-them/58#key-sequence-starts-with-non-prefix-key-15][here]].
 **** debug =unable to find theme file for XYZ=, see [[https://discourse.doomemacs.org/t/common-errors-how-to-deal-with-them/58#unable-to-find-theme-file-for-xyz-19][here]].
 **** debug =cannot open load file: No such file or directory, ...=, see [[https://discourse.doomemacs.org/t/common-errors-how-to-deal-with-them/58#cannot-open-load-file-no-such-file-or-directory-23][here]].
@@ -566,6 +571,8 @@ set the following
 #+BEGIN_SRC emacs-lisp :noeval
 (setq load-prefer-newer t)
 #+END_SRC
+*** force emacs to print backtrace when emacs hangs.
+this method should only be used if =toggle-debug-on-quit= doesn't produce backtrace.
 ** Report Bugs
 =straight-visit-package-website= quickly open that package's homepage in your browser.
 * FAQs

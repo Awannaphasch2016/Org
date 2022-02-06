@@ -38,7 +38,6 @@ print(random.choice(topics))
 - goto garun project
 - [[https://github.com/emacsorphanage/emamux][interact with tmux from emacs]]
 *** learn to implement in emacs using elisp
-**** TODO reading [[file:doom-emacs/packages/emacs-application-framework.org::https://github.com/emacs-eaf/emacs-application-framework#install][What is a backtrace & how to produce them]]
 **** TODO [[file:books/Writing GNU Emacs Extension - Bob Glickstein.org::*Basic operations][stop at this chapter of 'writing with elisp...']]
 **** TODO Figure out how to properly use variation of =interaction= keyword in lisp function.
 **** TODO learn to use debug in elisp
@@ -167,7 +166,7 @@ https://youtu.be/k-nFdF5FEwA?t=2702
 **** learning rust only when Solona tutorial needs it using ~rustling~.
 *** [[https://mycoralhealth.medium.com/code-your-own-blockchain-in-less-than-200-lines-of-go-e296282bcffc][Code your own building in less than 200 lines of Go!]]
 *** TODO [[https://jeiwan.net/posts/building-blockchain-in-go-part-1/][following building blockchain in Go]]
-*** TODO understand funcdamental of blockchain
+*** understand funcdamental of blockchain
 - reading the following
   - trying to understand ~encorse peers~ (~endorser transaction~) used in ~Hyperledger Fabric~
     - I stopped [[https://hyperledger-fabric.readthedocs.io/en/release-2.2/peers/peers.html#peers-and-channels][here]]
@@ -238,7 +237,11 @@ stopped [[https://sicp.sourceacademy.org/chapters/1.1.html][here]]
 **** TODO study xvzf code on "command line pandas killer" (mlr, q, csvtk, xsv, tsv-utils) and adopt the usecase in my workflow, see [[https://github.com/xvzftube/pandas_killers/blob/main/main.sh][here]].
 ** learn new languages by doing.
 *** Building website using org mode.
-build the website using this [[https://www.huxiaoxing.com/building-a-website-with-org-mode-files][framework]].
+- ref
+  - Example of [[https://www.huxiaoxing.com/building-a-website-with-org-mode-files][Personal website that use org mode]].
+  - collection of [[https://orgmode.org/worg/org-web.html][Personal Webiste that use org mode]].
+- choose website style that I like from [[https://orgmode.org/worg/org-web.html][Personal Websites that use Org mode]], and build mine.
+
 *** learning Typescript by doing.
 [[https://blog.scottlogic.com/2019/05/17/webassembly-compiler.html][build your own WebAssembly compiler]]
 [[https://github.com/g-plane/tiny-package-manager][Tiny Package Manager: Learns how npm or Yarn works]]
