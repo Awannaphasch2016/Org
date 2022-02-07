@@ -100,6 +100,7 @@ ref:
 ***** python mode unable to import module
 ***** Dap mode
 ***** lsp mode
+****** [[https://medium.com/ballerina-techblog/implementing-a-language-server-how-hard-can-it-be-part-1-introduction-c915d2437076][Implementing a Language Server…How Hard Can It Be??  Part 1 (Introduction)]]
 ****** TODO read and check the following before checking other things on the list
 ******* https://github.com/ethereum/solidity/issues/7763
 ******* https://www.reddit.com/r/neovim/comments/l6a5dy/nvim_lsp_support_for_solidity/
@@ -159,9 +160,14 @@ https://youtu.be/k-nFdF5FEwA?t=2702
   - test-reputation-coverage.
   - chainid
 
-**** tutorial
-***** https://www.youtube.com/watch?v=M576WGiDBdQ&ab_channel=freeCodeCamp.org
-***** https://github.com/smartcontractkit/full-blockchain-solidity-course-py
+**** TODO hands on solidty from beginner to expert
+- ref
+  - https://github.com/smartcontractkit/full-blockchain-solidity-course-py
+  - [[https://github.com/OpenZeppelin/openzeppelin-contracts][solidity template with zappenlin contract]]
+***** TODO [[https://www.youtube.com/watch?v=M576WGiDBdQ&ab_channel=freeCodeCamp.org][Solidity, Blockchain, and Smart Contract Course  Beginner to Expert Python Tutorial]]
+****** I stop [[https://youtu.be/M576WGiDBdQ?t=12409][here]].
+- finish web three
+- work locally with brownie.
 *** TODO Complete this [[https://paulx.dev/blog/2021/01/14/programming-on-solana-an-introduction/][tutorial]] on Solona
 **** learning rust only when Solona tutorial needs it using ~rustling~.
 *** [[https://mycoralhealth.medium.com/code-your-own-blockchain-in-less-than-200-lines-of-go-e296282bcffc][Code your own building in less than 200 lines of Go!]]
@@ -372,6 +378,10 @@ the site name is =blackwatercoins.com=
   - Google search: [[https://www.youtube.com/results?search_query=build+distributed+system+from+scratch+][build distributed system from scratch]]
 
 ** builing startup on pen.el project
+- requirement
+  - scalability
+    - lsp-server
+      - lots of requests to server. (high pair-wise activity)
 - build blockchain to extend pen.el
   - start working on state_channel (what is the purpose on state_channel?)
 
