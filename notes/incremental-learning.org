@@ -34,9 +34,12 @@ print(random.choice(topics))
 
 * Current Topics for Incremental Learning
 ** Emacs
-*** config emacs
-- goto garun project
-- [[https://github.com/emacsorphanage/emamux][interact with tmux from emacs]]
+*** customize emacs config
+**** goto garun project
+**** TODO [[https://github.com/emacsorphanage/emamux][interact with tmux from emacs]]
+**** TODO write customc folding for mode that use bracket and space (like python).
+**** TODO how to search emacs info?
+- https://superuser.com/questions/665930/how-can-i-search-emacs-built-in-manual#:~:text=The%20s%20command%20allows%20you,followed%20by%20RET%20will%20do.
 *** learn to implement in emacs using elisp
 **** TODO [[file:books/Writing GNU Emacs Extension - Bob Glickstein.org::*Basic operations][stop at this chapter of 'writing with elisp...']]
 **** TODO Figure out how to properly use variation of =interaction= keyword in lisp function.
@@ -100,7 +103,7 @@ ref:
 ***** python mode unable to import module
 ***** Dap mode
 ***** lsp mode
-****** [[https://medium.com/ballerina-techblog/implementing-a-language-server-how-hard-can-it-be-part-1-introduction-c915d2437076][Implementing a Language Server…How Hard Can It Be??  Part 1 (Introduction)]]
+****** TODO [[https://medium.com/ballerina-techblog/implementing-a-language-server-how-hard-can-it-be-part-1-introduction-c915d2437076][Implementing a Language Server…How Hard Can It Be??  Part 1 (Introduction)]]
 ****** TODO read and check the following before checking other things on the list
 ******* https://github.com/ethereum/solidity/issues/7763
 ******* https://www.reddit.com/r/neovim/comments/l6a5dy/nvim_lsp_support_for_solidity/
@@ -246,8 +249,8 @@ stopped [[https://sicp.sourceacademy.org/chapters/1.1.html][here]]
 - ref
   - Example of [[https://www.huxiaoxing.com/building-a-website-with-org-mode-files][Personal website that use org mode]].
   - collection of [[https://orgmode.org/worg/org-web.html][Personal Webiste that use org mode]].
-- choose website style that I like from [[https://orgmode.org/worg/org-web.html][Personal Websites that use Org mode]], and build mine.
-
+  - choose website style that I like from [[https://orgmode.org/worg/org-web.html][Personal Websites that use Org mode]], and build mine.
+- setup website with hugo. (recommended by Shane.)
 *** learning Typescript by doing.
 [[https://blog.scottlogic.com/2019/05/17/webassembly-compiler.html][build your own WebAssembly compiler]]
 [[https://github.com/g-plane/tiny-package-manager][Tiny Package Manager: Learns how npm or Yarn works]]
