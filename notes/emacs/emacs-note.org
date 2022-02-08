@@ -381,6 +381,31 @@ When it fails to load things that should have been prepared during =init.el=, no
 
 Similar to =init.el=, use-package's =preface= flag are availble during compilation time. Even before =init.el= but it is expected to not fail, so warning will be raised if it failed to load . (since it is used with =use-package= which is used during =config.el=)
 ** Useful functionality and packages to improve your workflow
+*** =shell-command=
+=shell-command= (=M-x !=)
+=shell-command-on-region= (=M-x |=)
+**** learn by example
+#+BEGIN_SRC emacs-lisp :noeval
+;; ref: https://www.masteringemacs.org/article/executing-shell-commands-emacs#:~:text=The%20Basics,*Shell%20Command%20Output*%20buffer.
+(defun tidy-html ()
+  "Tidies the HTML content in the buffer using `tidy'"
+  (interactive)
+  (shell-command-on-region
+   ;; beginning and end of buffer
+   (point-min)
+   (point-max)
+   ;; command and parameters
+   "tidy -i -w 120 -q"
+   ;; output buffer
+   (current-buffer)
+   ;; replace?
+   t
+   ;; name of the error buffer
+   "*Tidy Error Buffer*"
+   ;; show error buffer?
+   nil))
+#+END_SRC
+
 *** =macrosteop=
     Expand the macro form following point by one step.
 

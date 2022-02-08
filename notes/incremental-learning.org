@@ -37,6 +37,7 @@ print(random.choice(topics))
 *** customize emacs config
 **** goto garun project
 **** TODO [[https://github.com/emacsorphanage/emamux][interact with tmux from emacs]]
+**** TODO [[https://mullikine.github.io/posts/an-emacs-mode-for-asciinema-playback/][implement asciinema mode in emacs]]
 **** TODO write customc folding for mode that use bracket and space (like python).
 **** TODO how to search emacs info?
 - https://superuser.com/questions/665930/how-can-i-search-emacs-built-in-manual#:~:text=The%20s%20command%20allows%20you,followed%20by%20RET%20will%20do.
@@ -58,10 +59,9 @@ http://cl-cookbook.sourceforge.net/strings.html#substrings
 ***** understand packagers mechanism and functionality
 ****** learn org-babel
 ******* Figure out org-babel manipulate output from shell. (so I understand or able to debug scenario in which output of org-babel block are not as what I expected)
-****** learn about completion
+****** TODO learn about completion
 ******* understand prescient, see [[https://www.youtube.com/watch?v=T9kygXveEz0&ab_channel=SystemCrafters][here]].
 ******* undertand vertico
-****** TODO learn about projectile
 ***** config workflow
 ****** jump to next error in emacs?
 ****** explore =alphapapa= github for new seamless integration, [[https://github.com/alphapapa/org-ql][here]].
@@ -205,14 +205,17 @@ stopped [[https://sicp.sourceacademy.org/chapters/1.1.html][here]]
 *** TODO learn to use ray with slurm
 - ref
   - [[https://docs.ray.io/en/latest/cluster/slurm.html][deploying ray on slurm]]
-
-
 *** TODO working on [[file:~/org/researches/ssl-dynamic-graph/log-ssl-dynamic-graph.org][log of ssl-dgnn]]
 - be sufficient in rush enough to plot all the basic stuff.
   ref:
   [[https://www.youtube.com/watch?v=2o1YDUKyhu0&ab_channel=RiffomonasProject][Learning to use the patchwork R package (how to learn a package in general) (CC099)]]
 - write summary from email report on https://mail.google.com/mail/u/0/#search/node+classification/QgrcJHsNlSQcfgjngKvJvfWsltLMshplFxg
   - from these contents are performed at the labs computer.
+*** TODO implement model with CUDA (performance tuning stuff)
+- re
+  - [[https://luniak.io/cuda-neural-network-implementation-part-1/][CUDA Neural Network Implementation (Part 1)]]
+  - https://developer.nvidia.com/blog/programming-tensor-cores-cuda-9/
+  - [[https://pytorch.org/tutorials/recipes/recipes/tuning_guide.html][Performance tuning guide (pytorch)]]
 *** TODO things to implementation
 - how to use ray 'localhost'? (how can it be useful to me? when to use it?)
   - how to remotely inspect localhost from remote nodes?
@@ -392,3 +395,10 @@ the site name is =blackwatercoins.com=
 - ref
   - learn from system crafter playlist, [[https://www.youtube.com/watch?v=iBaqOK75cho&list=PLEoMzSkcN8oNxnj7jm5V2ZcGc52002pQU&ab_channel=SystemCrafters][here]].
   - guix on wsl2, [[https://gist.github.com/giuliano108/49ec5bd0a9339db98535bc793ceb5ab4][here.]]
+** learn cpp (the goal is to learn how to write high performance code)
+- ref
+  - [[https://github.com/PacktPublishing/Cpp-High-Performance-Second-Edition][C++ High Performance, Second Edition]]
+** learn to build docker from scratch
+*** build docker using Go.
+- ref
+  - [[https://www.infoq.com/articles/build-a-container-golang/][Go: Build Your Own Container Using Less than 100 Lines of Go]]
