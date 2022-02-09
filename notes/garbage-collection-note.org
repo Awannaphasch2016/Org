@@ -1,0 +1,13 @@
+#+TITLE: Garbage Collection Note
+* optimizing garbage collection
+- ref
+  - https://akrl.sdf.org/
+The first optimization attempt would be to increase this threshold. This is done by many (say mosts) but unfortunately does not solve the problem but just make it worst.
+
+An higher threshold certainly reduce the number of GC runs but these are just longer translating in more annoying hangs of the whole universe.
+
+Infact what you want to do is to have the GC happening when you are not using Emacs actively; Say when you are thinking while reading, annoying a colleague or having a coffee.
+
+If gc-cons-threshold is enough high to avoid GC during start-up also this will benefit from this setup. This exact value really depends on your Emacs configuration. In general Emacs will feel more responsive.
+
+To conclude I believe the biggest advantage is probably that coming back from the coffee or just from time to time you'll see into the mini-buffer how much time you have saved. This will certainly boost your productivity and enthusiasm. In case this happens you'll forever be grateful to me.

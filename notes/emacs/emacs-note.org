@@ -25,6 +25,36 @@ example of struct
 (person-p "Bogus")
 (person-p '[cl-struct-person counterfeit person object])
 #+END_SRC
+** garbage collector | garbage collection
+** syntax
+*** what is #?
+read [[https://stackoverflow.com/questions/4873810/what-does-mean-in-lisp][here]].
+example
+#+BEGIN_SRC emacs-lisp
+(let ((foo 42))
+  (flet ((foo () 'bar))
+    (list foo (function foo) #'foo (foo))))
+#+END_SRC
+
+#+RESULTS:
+| 42 | foo | foo | bar |
+
+** Lexical binding vs dynamic binding
+- ref
+  - [[https://www.emacswiki.org/emacs/DynamicBindingVsLexicalBinding][dynamic binding vs lexical binding]]
+lexical binding (static binding) and dynamic binding refer to how variables are looked up by their names.
+
+*** example
+
+#+BEGIN_SRC emacs-lisp
+(let ((a 1))                            ; binding (1)
+    (let ((f (lambda () (print a))))
+    (let ((a 2))                        ; binding (2)
+        (funcall f))))
+#+END_SRC
+A name that is lexically bound is looked up only in bindings in the lexical environment of the name  that is, in bindings that enclose the name in the source code. So if “a” is lexically bound, the code above prints “1”, because only binding (1) is in the lexical environment. When there are multiple bindings in the lexical environment, the innermost one is used.
+
+A name that is dynamically bound is looked up only in bindings in the dynamic environment of the name  that is, in all bindings which have been created since the program began and which have not yet been destroyed. When there are multiple bindings in the dynamic environment, the most recently created one is used. So if “a” is dynamically bound, the code above prints “2” because both binding (1) and binding (2) have been created by the time “a” is evaluated, but binding (2) was created more recently.
 
 * Help sections and related info
 ** looking up documentation, see [[https://discourse.doomemacs.org/t/how-to-debug-issues/55#looking-up-documentation-3][here]].
@@ -420,6 +450,7 @@ Return a predicate that returns non-nil if all PREDS do so.
 [[https://stackoverflow.com/questions/27617090/the-scope-of-python-code-folding-in-emacs][The scope of python code folding in emacs]]
 
 * Notes for Developers (How to do and fix things)
+** Useful funcstions and customized function
 ** Customization
 *** set keys binding
 mapping new key binding to non-defined prefix (by emacs).
@@ -451,7 +482,6 @@ one can use =ielm= REPL using below commands
 | commands                     | key | doom keys | custom keys | descriptions |
 | +eval/open-repl-other-window |     | spc-o-r   |             |              |
 | +eval/open-repl-other-window |     | C-c o r   |             |              |
-
 ** Debugging Techniques
 *** check if elisp function is defined
 ref: http://ergoemacs.org/emacs/elisp_check_defined.html
@@ -598,6 +628,11 @@ set the following
 #+END_SRC
 *** force emacs to print backtrace when emacs hangs.
 this method should only be used if =toggle-debug-on-quit= doesn't produce backtrace.
+*** Checking garbage collection related stuff.
+for more quick introduction, read [[https://akrl.sdf.org/][here]].
+=gc-elapsed= variable accumulated time elapsed in garbage collections.
+~(setq garbage-collection-message t)~ to see log gc process.
+=gc-cons-threshold= represents the "Number of bytes of consing between garbage collections."
 ** Report Bugs
 =straight-visit-package-website= quickly open that package's homepage in your browser.
 * FAQs

@@ -49,11 +49,16 @@ print(random.choice(topics))
 http://cl-cookbook.sourceforge.net/strings.html#substrings
 **** TODO hwo to obtain a list of all functions exclusively provided by a certain major mode
 - https://emacs.stackexchange.com/questions/14208/how-to-obtain-a-list-of-all-functions-exclusively-provided-by-a-certain-major-mo
+**** TODO writing efficient lisp code (optimize for speed and performance)
+- ref
+  - [[https://www.cs.utexas.edu/users/novak/lispeff.html][lisp style and efficiency]]
+**** learn lisp testing framework
 *** Contribute to EAF
 - look at [[https://github.com/emacs-eaf/emacs-application-framework/wiki/Todo-List][EAF TODO list]] and pick one
 *** Understand Emacs at the deeper level
 - ref:
     - [[https://tuhdo.github.io/c-ide.html][C/C++ Development Environment for Emacs]]
+**** TODO what is lexical and dynamic binding?
 **** TODO How does environment of linux and emacs differ?
 **** learn about the following packages and workflow
 ***** understand packagers mechanism and functionality
@@ -402,3 +407,10 @@ the site name is =blackwatercoins.com=
 *** build docker using Go.
 - ref
   - [[https://www.infoq.com/articles/build-a-container-golang/][Go: Build Your Own Container Using Less than 100 Lines of Go]]
+  - [[https://www.youtube.com/watch?v=8fi7uSYlOdc&ab_channel=GOTOConferences][Containers From Scratch  Liz Rice  GOTO 2018]]
+** learn about garbage collection
+- ref
+  - https://www.gnu.org/software/emacs/manual/html_node/elisp/Garbage-Collection.html#:~:text=Emacs%20provides%20a%20garbage%20collector,still%20accessible%20to%20Lisp%20programs.
+*** implement garbage collection from scratch
+** building simple multi-threading projects
+*** TODO [[https://www.reddit.com/r/learnprogramming/comments/8m1bmq/simple_multithreading_project_ideas/][simple multithreading project ideas]]

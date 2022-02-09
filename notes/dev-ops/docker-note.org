@@ -6,6 +6,9 @@ To learn more, this [[~/.emacs.d/modules/tools/docker/README.org][README]] seems
 * Configuration
 Documentation of Docker.el Configuration is [[https://github.com/Silex/docker.el][here]].
 * [[https://github.com/Silex/docker.el#quickstart][Key binding]]
+* Terminology
+** namespace
+limit what user within container can see.
 * Examples and tutorial
 ** [[https://www.youtube.com/watch?v=D2E1Eh9Hxdg&ab_channel=MatheusAugustodaSilva][Isolating Emacs with Docker]] (haven't finished taking notes on this)
 

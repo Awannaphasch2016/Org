@@ -20,8 +20,7 @@ Other language design principles
 * [[https://learnxinyminutes.com/docs/go/][Fundamentals]]
 see [[https://gobyexample.com/][Go by Example]], or [[https://learnxinyminutes.com/docs/go/][learn go in Y minuites]].
 ** files and folder structure
-
-*** =go.mod= 
+*** =go.mod=
     =go.mod= contains all information that will be used in that module.
 ** Module and Packages
     a package contain list of modules
@@ -30,7 +29,8 @@ see [[https://gobyexample.com/][Go by Example]], or [[https://learnxinyminutes.c
 *** Slices
 Slices (as well as maps and channels) have reference semantics.
 
-Slice literal
+=Slice literal=
+unpackage its element
 #+BEGIN_SRC go
     // To append another slice, instead of list of atomic elements we can
     // pass a reference to a slice or a slice literal like this, with a
@@ -106,7 +106,6 @@ reset go environment
 #+BEGIN_SRC sh
 go env -u GOBIN
 #+END_SRC
-
 
 ** Functions
 * [[https://go.dev/doc/faq][FAQs]]
@@ -232,6 +231,7 @@ require example.com/m v0.0.0-00010101000000-000000000000
     
     10. Now, running =hello.go= file should output =Hi, Gladys. Welcome=.
         
-** 
 ** How to Write Go Code? How to import/build/compile packages/module in Go?
-    see [[https://go.dev/doc/code][here]].
+- ref
+  - see [[https://go.dev/doc/code][here]].
+*** how to build a go program and make it a commands?
