@@ -1,0 +1,61 @@
+#+TITLE: Library Of Babel
+
+collection of helper functions used with org babels block
+useful org babel code can be found [[https://orgmode.org/worg/org-contrib/babel/][here]].
+
+digest blocks in library of babels with the following code
+#+begin_src elisp :results scalar
+(org-babel-lob-ingest (buffer-file-name))
+#+end_src
+
+#+RESULTS:
+: 2
+
+* Useful funcitons
+** Python
+*** importing data science stack
+#+name: import-data-science-stack
+#+BEGIN_SRC python
+import numpy
+import pandas
+print('yo')
+#+END_SRC
+
+* Example of how Babel's code can be used
+#+name: tbl
+| a | 1 |
+| d | 2 |
+| a | 3 |
+| d | 4 |
+| d | 5 |
+| c | 6 |
+
+
+#+name: aggregatebycol1
+#+begin_src elisp :results table :var table='() fun='()
+(let (res)
+  (mapc
+   (lambda (x)
+     (push `(,(car x) ,(apply fun (mapcar 'cadr (cdr x)))) res))
+   (seq-group-by 'car table))
+  (nreverse res))
+#+end_src
+
+#+RESULTS: aggregatebycol1
+
+#+begin_src elisp :results scalar
+(org-babel-lob-ingest (buffer-file-name))
+#+end_src
+
+#+RESULTS:
+: 1
+
+#+header: :post aggregatebycol1(table=*this*, fun='+)
+#+begin_src elisp :results table :var var=tbl
+var
+#+end_src
+
+#+RESULTS:
+| a |  4 |
+| d | 11 |
+| c |  6 |

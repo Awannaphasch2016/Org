@@ -1,0 +1,6 @@
+#+TITLE: Ein note
+
+* Key binding and commands
+
+| commands                       | key     | doom key | custom key | description             |
+| ein:process-find-file-callback | c-c c-o |          |            | use to open .ipynb file |

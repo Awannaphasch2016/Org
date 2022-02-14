@@ -1,6 +1,8 @@
 #+TITLE: Jupyter
 
 
+* References
+** [[https://www.youtube.com/watch?v=RD0o2pkJBaI&t=638s&ab_channel=JohnKitchin][Jupyter + org-mode in scimax]]
 * Jupyter Kernel
 Jupyter kernal is run by ~jupyter-run-repl~
 

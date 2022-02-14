@@ -1,5 +1,6 @@
 #+TITLE: Incremental Learning
 
+
 toss coin to choose topics to learning
 
 Just run the block below when I don't have any strong preference on which of these to learn.
@@ -35,14 +36,33 @@ print(random.choice(topics))
 * Current Topics for Incremental Learning
 ** Emacs
 *** customize emacs config
+**** learn from other emacs-config
+***** doom-config
+****** [[https://dangirsh.org/projects/doom-config.html#jupyter][Dan Girshovich's doom config]]
+
+**** TODO reimplement org-agenda and org-capture from scratch.
 **** goto garun project
 **** TODO [[https://github.com/emacsorphanage/emamux][interact with tmux from emacs]]
 **** TODO [[https://mullikine.github.io/posts/an-emacs-mode-for-asciinema-playback/][implement asciinema mode in emacs]]
 **** TODO write customc folding for mode that use bracket and space (like python).
 **** TODO how to search emacs info?
 - https://superuser.com/questions/665930/how-can-i-search-emacs-built-in-manual#:~:text=The%20s%20command%20allows%20you,followed%20by%20RET%20will%20do.
+**** TODO try [[https://github.com/cniles/axe][axe]] (emacs extension for AWS cli)
+**** TODO make reading pdf compatible with org-noter for reproducible research.
+- ref
+  - [[https://www.youtube.com/watch?v=bTbiC6SamT4&ab_channel=EmacsConfandEmacshangouts][EmacsConf 2020 - 17 - Org-mode and Org-Roam for Scholars and Researchers - Noorah Alhasan]]
+  - [[https://www.youtube.com/watch?v=Wy9WvF5gWYg&ab_channel=Zaeph][Org-roam-bibtex - Quick Presentation]]
+tools may include the following
+- org-roam
+- org-roam-bibtex
+- org-roam-server
+- org-transclusion
+- org-super-agenda
+- org-sidebar
+
 *** learn to implement in emacs using elisp
-**** TODO [[file:books/Writing GNU Emacs Extension - Bob Glickstein.org::*Basic operations][stop at this chapter of 'writing with elisp...']]
+**** paper on evolution of emacs lisp, see [[https://dl.acm.org/doi/pdf/10.1145/3386324][here]].
+**** TODO [[file:books/Writing GNU Emacs Extension - Bob Glickstein.org::*Using =this-command=][stop at this chaptor of 'writing with elisp..']]
 **** TODO Figure out how to properly use variation of =interaction= keyword in lisp function.
 **** TODO learn to use debug in elisp
 **** TODO implement elisp code to get file name
@@ -52,6 +72,11 @@ http://cl-cookbook.sourceforge.net/strings.html#substrings
 **** TODO writing efficient lisp code (optimize for speed and performance)
 - ref
   - [[https://www.cs.utexas.edu/users/novak/lispeff.html][lisp style and efficiency]]
+  - [[https://www.emacswiki.org/emacs/CoRoutines][co routines]]
+  - [[https://elmord.org/blog/?entry=20190913-emacs-gc][Emacs performance, profiling, and garbage collection]]
+  - [[https://anuragpeshne.github.io/essays/emacsSpeed.html][Speeding Up Emacs]]
+  - [[https://nullprogram.com/blog/2018/05/31/][Emacs 26 Brings Generators and Threads]]
+  - [[https://www.emacswiki.org/emacs/ConcurrentEmacs][concurrent emacs]]
 **** learn lisp testing framework
 *** Contribute to EAF
 - look at [[https://github.com/emacs-eaf/emacs-application-framework/wiki/Todo-List][EAF TODO list]] and pick one
@@ -75,10 +100,12 @@ http://cl-cookbook.sourceforge.net/strings.html#substrings
 ****** learning to use IRC Client.
 ****** set up emacs for SQL developement
 ****** Learning how to use jupyter-notebook from [[https://youtu.be/RD0o2pkJBaI?t=1905][this tutorial.]]
-******* TODO make notes on how [[https://github.com/nnicandro/emacs-jupyter#org-mode-source-blocks][jupyter-notebook integrate with org-mode.]]
-******* TODO figure out how to properly use :noweb header tags in org babel
-see [[https://www.gnu.org/software/emacs/manual/html_node/org/Noweb-Reference-Syntax.html][noweb reference syntax]]
-see also [[file:~/org/projects/sideprojects/build-website/org-mode.org][example]]
+******* TODO [[https://www.reddit.com/r/emacs/comments/hk4fps/any_emacs_ipython_notebook_ein_users_willing_to/][Discussion on jupyter + emacs]]
+******* TODO add ob-ipython like advice from scimax environment.
+before this is added, I pretty much can't use emacs-jupyter as jupyter replacement, see [[file:~/org/projects/sideprojects/website/my-website/org-mode.org::*Dependences Packages][here]].
+
+scimax advice also have to be added on top of ob-ipython package itself, see [[https://youtu.be/dMira3QsUdg?t=133][here]].
+
 ****** window navigation
 ref:
 [[https://www.youtube.com/watch?v=-H2nU0rsUMY&ab_channel=SystemCrafters][Hey Emacs, Don't Move My Windows! - Customizing display-buffer's behavior]]
@@ -96,7 +123,9 @@ ref:
 ****** TODO multi-cursor edit in emacs
 ****** TODO learn how =workspace= work
 ******* learn to save and load =workspace=
-****** TODO learn to use tramp to connect to aws container cloud.
+****** TODO improve cloud based emacs
+******* TODO learn to use tramp to connect to aws container cloud.
+******* TODO [[https://martin.baillie.id/wrote/emacs-tramp-over-aws-ssm-apis/][Emacs TRAMP over AWS SSM APIs]]
 **** learn the following mode
 ***** hledger to maintain financial report
 [[https://github.com/narendraj9/hledger-mode][hledger-mode]]
@@ -108,6 +137,9 @@ ref:
 ***** python mode unable to import module
 ***** Dap mode
 ***** lsp mode
+****** TODO learn how to evaluate or benchmark lsp performance.
+- Check lsp-doctor function first
+- And then check https://emacs-lsp.github.io/lsp-mode/page/performance/
 ****** TODO [[https://medium.com/ballerina-techblog/implementing-a-language-server-how-hard-can-it-be-part-1-introduction-c915d2437076][Implementing a Language Server…How Hard Can It Be??  Part 1 (Introduction)]]
 ****** TODO read and check the following before checking other things on the list
 ******* https://github.com/ethereum/solidity/issues/7763
@@ -176,9 +208,15 @@ https://youtu.be/k-nFdF5FEwA?t=2702
 ****** I stop [[https://youtu.be/M576WGiDBdQ?t=12409][here]].
 - finish web three
 - work locally with brownie.
+**** TODO implement crypto with blockchain from scratc using javascript
+- ref
+  - [[https://dev.to/freakcdev297/build-a-p2p-network-and-release-your-cryptocurrency-clf][Build a p2p network and release your cryptocurrency]]
+    - [[https://www.youtube.com/watch?v=aTCQvtO-jzc&ab_channel=FreakCdev][A Tutorial video about how to Implement a P2P Network and Releasing your Cryptocurrency on your blockchain in Javascript.]]
+  - [[https://dev.to/freakcdev297/creating-transactions-mining-rewards-mint-and-gas-fee-5hhf][Creating a cryptocurrency - Creating transactions, mining rewards, mint and gas fee]]
+  - [[https://dev.to/freakcdev297/creating-a-blockchain-in-60-lines-of-javascript-5fka][Creating a blockchain in 60 lines of Javascript]]
 *** TODO Complete this [[https://paulx.dev/blog/2021/01/14/programming-on-solana-an-introduction/][tutorial]] on Solona
 **** learning rust only when Solona tutorial needs it using ~rustling~.
-*** [[https://mycoralhealth.medium.com/code-your-own-blockchain-in-less-than-200-lines-of-go-e296282bcffc][Code your own building in less than 200 lines of Go!]]
+*** TODO [[https://mycoralhealth.medium.com/code-your-own-blockchain-in-less-than-200-lines-of-go-e296282bcffc][Code your own blockchian in less than 200 line of go.]]
 *** TODO [[https://jeiwan.net/posts/building-blockchain-in-go-part-1/][following building blockchain in Go]]
 *** understand funcdamental of blockchain
 - reading the following
@@ -258,7 +296,8 @@ stopped [[https://sicp.sourceacademy.org/chapters/1.1.html][here]]
   - Example of [[https://www.huxiaoxing.com/building-a-website-with-org-mode-files][Personal website that use org mode]].
   - collection of [[https://orgmode.org/worg/org-web.html][Personal Webiste that use org mode]].
   - choose website style that I like from [[https://orgmode.org/worg/org-web.html][Personal Websites that use Org mode]], and build mine.
-- setup website with hugo. (recommended by Shane.)
+**** migrate all of my notes to blog in jykell.
+https://orgmode.org/worg/org-tutorials/org-jekyll.html
 *** learning Typescript by doing.
 [[https://blog.scottlogic.com/2019/05/17/webassembly-compiler.html][build your own WebAssembly compiler]]
 [[https://github.com/g-plane/tiny-package-manager][Tiny Package Manager: Learns how npm or Yarn works]]
@@ -275,6 +314,8 @@ stopped [[https://sicp.sourceacademy.org/chapters/1.1.html][here]]
 [[https://github.com/coreutils/coreutils/blob/master/src/cat.c][source code to cat command]]
 ** learn generallized funcationality
 *** learn undo and redo mechanism
+- ref
+  - example of undo mechanism achieve via =defavice= with before flag, see [[file:books/Writing GNU Emacs Extension - Bob Glickstein.org::*Window Appearance][here]].
 - understand undo and redo mechanism in =winner-mode= in emacs.
 - understand undo and redo mechanism in =visidata=.
 ** learn about software design
@@ -302,6 +343,8 @@ stopped [[https://sicp.sourceacademy.org/chapters/1.1.html][here]]
     - [[https://dvc.org/doc/start/data-and-model-versioning][Get Started: Data Versioning]]
   - creat remote storage in s3
     - ?
+- extends to use knowledge graph, see [[https://medium.com/neo4j/monitoring-the-cryptocurrency-space-with-nlp-and-knowledge-graphs-92a1cfaebd1a][here]].
+- I will extend to use docker later.
 - start using database from now one to make query easy. (SQL schema? document db?)
 - should I use HDF5?
 - add log to the file name
@@ -389,12 +432,24 @@ the site name is =blackwatercoins.com=
   - Google search: [[https://www.youtube.com/results?search_query=build+distributed+system+from+scratch+][build distributed system from scratch]]
 
 ** builing startup on pen.el project
+- ref
+  - research paper
+    - [[https://storage.googleapis.com/deepmind-media/AlphaCode/competition_level_code_generation_with_alphacode.pdf][Competition-Level Code Generation with AlphaCode]]
+  - api alternative
+    - https://cohere.ai/
+    - https://www.ai21.com/
+    - https://goose.ai/docs/api/completions
+
 - requirement
   - scalability
     - lsp-server
       - lots of requests to server. (high pair-wise activity)
 - build blockchain to extend pen.el
   - start working on state_channel (what is the purpose on state_channel?)
+- files that should be looked at first. (related to blockchain part of things)
+  - src/pen.el (server)
+  - src/pen-client.el (thin client)
+  - src/pen-custom.el (read ~/.pen/pen.yaml config file)
 
 ** learning GNU Guix (for config file reproducibility.)
 - ref
@@ -405,12 +460,27 @@ the site name is =blackwatercoins.com=
   - [[https://github.com/PacktPublishing/Cpp-High-Performance-Second-Edition][C++ High Performance, Second Edition]]
 ** learn to build docker from scratch
 *** build docker using Go.
-- ref
-  - [[https://www.infoq.com/articles/build-a-container-golang/][Go: Build Your Own Container Using Less than 100 Lines of Go]]
-  - [[https://www.youtube.com/watch?v=8fi7uSYlOdc&ab_channel=GOTOConferences][Containers From Scratch  Liz Rice  GOTO 2018]]
+**** TODO [[https://www.infoq.com/articles/build-a-container-golang/][Go: Build Your Own Container Using Less than 100 Lines of Go]]
+**** TODO [[https://www.youtube.com/watch?v=8fi7uSYlOdc&ab_channel=GOTOConferences][Containers From Scratch  Liz Rice  GOTO 2018]]
+stop [[https://youtu.be/8fi7uSYlOdc?t=616][here]].
 ** learn about garbage collection
-- ref
-  - https://www.gnu.org/software/emacs/manual/html_node/elisp/Garbage-Collection.html#:~:text=Emacs%20provides%20a%20garbage%20collector,still%20accessible%20to%20Lisp%20programs.
+*** [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Garbage-Collection.html#:~:text=Emacs%20provides%20a%20garbage%20collector,still%20accessible%20to%20Lisp%20programs.][Emacs nodes on Garbage Collection]]
+*** [[https://emacs.stackexchange.com/questions/18454/control-of-garbage-collection/18455][Control of garbage collection?]]
+*** [[https://emacs.stackexchange.com/questions/34342/is-there-any-downside-to-setting-gc-cons-threshold-very-high-and-collecting-ga][Is there any downside to setting `gc-cons-threshold` very high and collecting garbage when idle?]]
+*** [[https://akrl.sdf.org/lexspaces/lexspaces.html][A binding based approach to proper namespaces for GNU Emacs]]
+*** [[https://emacs.stackexchange.com/questions/52697/why-does-a-let-bound-huge-list-survive-garbage-collection-after-the-let-form][Why does a let-bound huge list survive garbage collection after the let form?]]
+*** figure out how simple implementation of gcmh package works, see [[https://gitlab.com/koral/gcmh/-/blob/0089f9c3a6d4e9a310d0791cf6fa8f35642ecfd9/gcmh.el][here]].
 *** implement garbage collection from scratch
-** building simple multi-threading projects
-*** TODO [[https://www.reddit.com/r/learnprogramming/comments/8m1bmq/simple_multithreading_project_ideas/][simple multithreading project ideas]]
+** develop deeper understanding of threading and hwo to implement them
+*** building simple multi-threading projects
+**** TODO [[https://www.reddit.com/r/learnprogramming/comments/8m1bmq/simple_multithreading_project_ideas/][simple multithreading project ideas]]
+*** [[https://www.emacswiki.org/emacs/Elnode][elnode]]
+Elnode is an asynchronous HttpServer framework. You can use it to write HTTP services in EmacsLisp.
+** learning Networking by doing
+*** Building A Network with OSI from scratch
+- ref
+  - [[https://www.houstonisd.org/cms/lib2/TX01001591/Centricity/Domain/20951/Ch03%20Book.pdf][Building a Network with OSI]]
+** building sudoku with literate programming
+
+- ref
+  - [[https://reindeereffect.github.io/2020/05/05/index.html][Making and Slaying Monster Sudoku]]

@@ -1,0 +1,23 @@
+#+TITLE: Deep Learning And Machine Learning Python Utils
+
+* Grid search
+#+BEGIN_SRC python :noeval
+# grid search weights
+def grid_search(members, testX, testy):
+	# define weights to consider
+	w = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+	best_score, best_weights = 0.0, None
+	# iterate all possible combinations (cartesian product)
+	for weights in product(w, repeat=len(members)):
+		# skip if all weights are equal
+		if len(set(weights)) == 1:
+			continue
+		# hack, normalize weight vector
+		weights = normalize(weights)
+		# evaluate weights
+		score = evaluate_ensemble(members, weights, testX, testy)
+		if score > best_score:
+			best_score, best_weights = score, weights
+			print('>%s %.3f' % (best_weights, best_score))
+	return list(best_weights)
+#+END_SRC

@@ -1,0 +1,5 @@
+#+TITLE: Org Ref Note
+
+* ref
+[[https://www.youtube.com/watch?v=3u6eTSzHT6s&ab_channel=JohnKitchin][org-ref version-3 overview]]
+

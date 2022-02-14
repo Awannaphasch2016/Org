@@ -1,0 +1,7 @@
+#+TITLE: Spreadsheets Note
+
+
+* Examples
+- ref
+  - [[https://www.youtube.com/watch?v=15aDIvb5LJs&ab_channel=AndreasWittmannIT-BeratungGmbH][Emacs Spreadsheet Demo]]
+  - [[https://www.youtube.com/watch?v=oMpf0ilQ9Lk&ab_channel=EmacsConfandEmacshangouts][EmacsConf 2019 - 18 - Object oriented spreadsheets with example applications - David O'Toole (dto)]]

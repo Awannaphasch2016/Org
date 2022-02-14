@@ -1,0 +1,81 @@
+#+TITLE: Tensorflow Note
+
+
+
+* Operations
+** tensordot
+- ref
+  - [[https://stackoverflow.com/questions/41870228/understanding-tensordot][Understanding tensordot]]
+
+What is sum-reduction?
+#+BEGIN_QUOTE
+matrix-multiplication involves elementwise multiplication keeping an axis aligned and then summation of elements along that common aligned axis. With that summation, we are losing that common axis, which is termed as reduction, so in short sum-reduction.
+#+END_QUOTE
+
+*** One axis of sum-reduction
+#+BEGIN_SRC python :results raw
+import numpy as np
+import pandas as pd
+
+A = np.random.randint(2, size=(2, 6, 5))
+B = np.random.randint(2, size=(3, 2, 4))
+
+# A : (2, 6, 5) -> reduction of axis=0
+# B : (3, 2, 4) -> reduction of axis=1
+# Output : `(2, 6, 5)`, `(3, 2, 4)` ===(2 gone)==> `(6,5)` + `(3,4)` => `(6,5,3,4)`
+np.tensordot(A, B, axes=((0),(1))).shape
+#+END_SRC
+
+#+RESULTS:
+(6, 5, 3, 4)
+
+
+#+BEGIN_SRC python :results raw
+import numpy as np
+import pandas as pd
+
+A = np.random.randint(2, size=(2, 6, 5))
+B = np.random.randint(2, size=(3, 2, 4))
+
+# B : (3, 2, 4) -> reduction of axis=1
+# A : (2, 6, 5) -> reduction of axis=0
+# Output : `(3, 2, 4)`, `(2, 6, 5)` ===(2 gone)==> `(3,4)` + `(6,5)` => `(3,4,6,5)`.
+np.tensordot(B, A, axes=((1),(0))).shape
+#+END_SRC
+
+#+RESULTS:
+(3, 4, 6, 5)
+*** Two axis of sum-reduction
+#+BEGIN_SRC python :results raw
+import numpy as np
+import pandas as pd
+
+A = np.random.randint(2, size=(2, 3, 5))
+B = np.random.randint(2, size=(3, 2, 4))
+
+# A : (2, 3, 5) -> reduction of axis=(0,1)
+# B : (3, 2, 4) -> reduction of axis=(1,0)
+
+# Output : `(2, 3, 5)`, `(3, 2, 4)` ===(2,3 gone)==> `(5)` + `(4)` => `(5,4)`
+np.tensordot(A, B, axes=((0,1),(1,0))).shape
+#+END_SRC
+
+#+RESULTS:
+(5, 4)
+
+#+BEGIN_SRC python :results raw
+import numpy as np
+import pandas as pd
+
+A = np.random.randint(2, size=(2, 3, 5))
+B = np.random.randint(2, size=(3, 2, 4))
+
+# B : (3, 2, 4) -> reduction of axis=(1,0)
+# A : (2, 3, 5) -> reduction of axis=(0,1)
+
+# Output : `(3, 2, 4)`, `(2, 3, 5)` ===(2,3 gone)==> `(4)` + `(5)` => `(4,5)`
+np.tensordot(B, A, axes=((1,0),(0,1))).shape
+#+END_SRC
+
+#+RESULTS:
+(4, 5)

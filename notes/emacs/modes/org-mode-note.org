@@ -1,5 +1,33 @@
 #+TITLE: Org Mode Note
 
+* Start here
+** [[file:~/org/notes/emacs/packages/org-babel.org::*\[\[http://www.howardism.org/Technical/Emacs/literate-programming-tutorial.html\]\[Introduction to literate programming with org-mode and org-babel by howard\]\]][Introduction to literate programming with org-mode and org-babel by howard]]
+It basically explains all the usecase of org-babel blocks. very useful.
+
+* types of header parameters
+According to [[file:~/org/notes/emacs/packages/org-babel.org::*\[\[http://www.howardism.org/Technical/Emacs/literate-programming-tutorial.html\]\[Introduction to literate programming with org-mode and org-babel by howard\]\]][Introduction to literate programming with org-mode and org-babel by howard]]
+
+Use PROPERTY to speciy value of the entire files
+
+#+BEGIN_QUOTE
+With the basics in place, the rest of this tutorial describes the source block controls done by parameter settings. I’ve separated and organized these based on its usage:
+
+Evaluation Parameters
+like dir, affects how a block is executed
+Export Parameters
+affects how a block or the results from execution is shown when it is exported to HTML
+Literate Programming Parameters
+connecting blocks together to change the actual source code
+Variable Parameters
+variables for a source block can be set in various ways
+Miscellaneous Input/Output
+of course, you have to have a collection of parameters that don’t fit elsewhere
+#+END_QUOTE
+
 * Key binding
-| commands            | key | doom key | custom key | description      |
-| org-footnote-action |     | spc-m-f  |            | create footnotes |
+| commands                    | key         | doom key | custom key | description            |
+| org-footnote-action         |             | spc-m-f  |            | create footnotes       |
+| org-set-property            | c-c c-x p   | spc-m-o  |            | set properties of file |
+| expert org to html and open | c-c c-e h o |          |            | open file in browser   |
+
+* Footnotes

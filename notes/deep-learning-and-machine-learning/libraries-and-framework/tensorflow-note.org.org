@@ -1,0 +1,80 @@
+# Created 2022-02-14 Mon 02:20
+#+title: Tensorflow Note Library Of Babel
+#+author: Anak Wannaphaschaiyong
+
+
+
+* Operations
+** tensordot
+- ref
+  - [[https://stackoverflow.com/questions/41870228/understanding-tensordot][Understanding tensordot]]
+
+collection of helper functions used with org babels block
+useful org babel code can be found [[https://orgmode.org/worg/org-contrib/babel/][here]].
+
+digest blocks in library of babels with the following code
+#+begin_src elisp
+(org-babel-lob-ingest (buffer-file-name))
+#+end_src
+
+#+results: 
+: 2
+
+*** Useful funcitons
+**** Python
+***** importing data science stack
+#+name: import-data-science-stack
+#+begin_src python
+import numpy
+import pandas
+print('yo')
+#+end_src
+
+*** Example of how Babel's code can be used
+#+name: tbl
+| a | 1 |
+| d | 2 |
+| a | 3 |
+| d | 4 |
+| d | 5 |
+| c | 6 |
+
+
+#+name: aggregatebycol1
+#+begin_src elisp
+(let (res)
+  (mapc
+   (lambda (x)
+     (push `(,(car x) ,(apply fun (mapcar 'cadr (cdr x)))) res))
+   (seq-group-by 'car table))
+  (nreverse res))
+#+end_src
+
+#+results: aggregatebycol1
+
+#+begin_src elisp
+(org-babel-lob-ingest (buffer-file-name))
+#+end_src
+
+#+results: 
+: 1
+
+
+#+header: :post aggregatebycol1(table=*this*, fun='+)
+#+begin_src elisp
+var
+#+end_src
+
+#+results: 
+| a |  4 |
+| d | 11 |
+| c |  6 |
+#+begin_src python
+import numpy
+import pandas
+print('yo')
+# A = np.random.randint(2, size=(2, 6, 5))
+# print('hi')
+#+end_src
+
+#+results: 

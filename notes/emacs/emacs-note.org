@@ -326,6 +326,8 @@ There exist package which provide different ways of displaying selections e.g. =
 More popular adoption is to use =completion framework= like =Helm= or =Ivy= which provide enhanced interfaces and special commands that provide additional behavior.
 
 On the other hand, =Selectr=um and =Vertico= provide you with just completion functionality to build your own =completion framework=.
+*** Regex
+**** =re-builder= construct a regexp interactively on target buffer, see [[https://www.masteringemacs.org/article/re-builder-interactive-regexp-builder][here]].
 ** Things that effects how emacs behave
 *** Process
 **** Proper way to call a process
@@ -510,12 +512,38 @@ if =C-g= unfreeze emacs, then you can use buildin debugger by running =toggle-de
 
 if C-g doesn't help, then the freeze probably happens in the C code, and you'll need to use an external debugger such as gdb. Hit C-h C-d to see the DEBUG file which gives some hints about how to do that. (You can also [[http://git.savannah.gnu.org/cgit/emacs.git/tree/etc/DEBUG][read the DEBUG file in the Emacs repository web interface]].) [[https://emacs.stackexchange.com/questions/14354/how-do-i-debug-an-emacs-crash/14376#14376][This answer]] goes into more details about how to use gdb with Emacs.
 *** how to deal with frozen emacs? see [[https://discourse.doomemacs.org/t/what-is-a-backtrace-how-to-produce-them/85#from-frozen-emacs-5][here]].
-*** profiling and benchmarking, see [[https://discourse.doomemacs.org/t/how-to-debug-issues/55#profiling-and-benchmarking-5][here]].
+*** profiling, benchmarking, measure and evaluate performance of emacs and elisp code.
+- ref
+  - see [[https://discourse.doomemacs.org/t/how-to-debug-issues/55#profiling-and-benchmarking-5][here]].
+  - [[https://emacs.stackexchange.com/questions/539/how-do-i-measure-performance-of-elisp-code][How do I measure performance of elisp code?]]
+**** build-in approach
 This option is used to inspect what cause emacs to slow down.
 
 =doom/toggle-profiler= must be toggle twice. The first time to start it, and again to prpoduce a report.
 | commands             | key | doom keys | custom keys | descriptions |
 | doom/toggle-profiler |     | spc-h-T   |             |              |
+**** benchmark package (cool stuff)
+#+BEGIN_SRC emacs-lisp results: output
+;; ref: https://emacs.stackexchange.com/questions/539/how-do-i-measure-performance-of-elisp-code
+(require 'benchstat)
+
+;; Decide how much repetitions is needed.
+;; This is the same as `benchmark-run-compiled` REPETITIONS argument.
+(defconst repetitions 1000000)
+
+;; Collect old code profile.
+(benchstat-run :old repetitions (list 1 2))
+;; Collect new code profile.
+(benchstat-run :new repetitions (cons 1 2))
+
+;; Display the results.
+;; Can be run interactively by `M-x benchstat-compare'.
+(benchstat-compare)
+#+END_SRC
+
+#+RESULTS:
+
+
 *** search and inspect source code (last resource), see [[https://discourse.doomemacs.org/t/how-to-debug-issues/55#inspecting-source-code-9][here]].
 **** perform text search on all loaded packages.
 
