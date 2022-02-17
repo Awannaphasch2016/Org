@@ -16,3 +16,12 @@
 - file size in bytes (2048),
 - time of last modification (Jan 13 07:11), and
 - file/directory name (afile.exe)
+* timer
+#+BEGIN_SRC sh :results raw
+time find . -name "*.scala"
+#+END_SRC
+
+#+RESULTS:
+
+CPU (0avgtext+0avgdata 3300maxresident)k
+0inputs+0outputs (0major+150minor)pagefaults 0swaps

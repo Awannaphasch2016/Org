@@ -85,3 +85,38 @@ In practice, you write functional style code as much as you can.
 *** "Converation of Data"
 **** “Each process (function) in the data flow diagram must be able to produce the output data flows from its input.”
 *** “Black holes and miracles”
+** Chapter 26: How to Use By-Name Parameters
+*** By-value parameters
+**** def byNameAssert(predicate: () => Boolean) =
+*** By-name parameters
+**** def byNameAssert(predicate: => Boolean) =
+*** Example of by-name parameters use case.
+#+BEGIN_SRC scala
+object ByNameTests {
+  var assertionsEnabled = true
+  def myAssert(p: () => Boolean) =
+    if (assertionsEnabled && !p())
+      throw new AssertionError
+
+
+  def byNameAssert(p: => Boolean) =
+    if (assertionsEnabled && !p)
+      throw new AssertionError
+
+  def main(args: Array[String]): Unit = {
+    myAssert(() => 5 > 3)
+    byNameAssert(5 > 3)
+  }
+
+}
+#+END_SRC
+** Chapter 27: Functions Can Have Multiple Parameters Groups
+*** Because I knew very little about FP when I first started working with Scala, I originally thought this was just some sort of syntactic nicety. But then I learned that one cool thing this does is that it enables you to write your own control structures. For instance, you can write your own while loop, and I show how to do that in this lesson.
+*** Benefit of having multiple parameters groups
+**** They let you have both implicit and non-implicit parameters
+**** They facilitate type inference
+**** A parameter in one group can use a parameter from a previous group as a default value
+*** Benefit of implicit values
+**** Because boo is an implicit Boolean value and it’s in the current scope, the Scala compiler reaches out and automatically uses it as the input parameter for the second parameter group. That is, boo is used just as though it had been passed in explicitly.
+**** An implicit execution context
+*****

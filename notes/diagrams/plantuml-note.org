@@ -13,6 +13,7 @@ Alice <-- Bob: Another authentication Response
 #+END_SRC
 
 #+RESULTS:
+[[file:/tmp/babel-gOgMVh/plantuml-T9rl2A.png]]
 [[file:/tmp/babel-OQguS0/plantuml-JSmpzf.png]]
 ** use images of browswer
 #+BEGIN_SRC plantuml

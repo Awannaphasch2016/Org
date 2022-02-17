@@ -35,7 +35,12 @@ object fp {
 
 #+RESULTS:
 : 10
-* Examples
-
+** by-name parameters vs by-value parameters, see example [[file:books/learning-fp-in-scala.org::*Example of by-name parameters use case.][here]].
+* Scala Specification
+** [[file:books/scal-puzzlers.org::*This puzzle make use of "The Scala Language Specification, Section 5.1.1" which produce adapting argument lists behavior.][This puzzle make use of "The Scala Language Specification, Section 5.1.1" which produce adapting argument lists behavior.]]
+* Scala Compiler
+** Eta Expansion (expand scala method to function.)
+** Scala Compiler Commandlines
+***  The Scala compiler's -Xlint option enables recommended additional warnings that you can use to flag suspicious language usage.
 * FAQs
 ** functions vs methods

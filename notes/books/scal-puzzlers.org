@@ -1,4 +1,4 @@
-#+TITLE: Scal Puzzlers
+#+TITLE: Scala Puzzlers
 
 * Puzzler 1: Hi There!
 #+BEGIN_SRC scala :results output
@@ -7,3 +7,24 @@ object fp {
   }
 }
 #+END_SRC
+* Puzzler 23: Adaptive Reasoning
+** This puzzle make use of "The Scala Language Specification, Section 5.1.1" which produce adapting argument lists behavior.
+** What is the following code's output?
+#+BEGIN_SRC scala
+class Printer(prompter: => Unit) {
+    def print(message: String, prompted: Boolean = false) {
+    if (prompted) prompter
+        println(message)
+    }
+}
+def prompt() {
+    print("puzzler$ ")
+}
+new Printer { prompt } print (message = "Puzzled yet?")
+new Printer { prompt } print (message = "Puzzled yet?",
+prompted = true)
+#+END_SRC
+** What is the differences between the following statement?
+~new Printer { prompt } print (message = "Puzzled yet?")~
+~new Printer() { prompt } print (message = "Puzzled yet?")~
+~new Printer(()) { prompt } print (message = "Puzzled yet?")~
