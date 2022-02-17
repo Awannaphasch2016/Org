@@ -1,0 +1,10 @@
+#+TITLE:  quotes
+
+* In FP we don't tell the compute how to do things, we tell them what we want.
+* Learn to rules like a pro, so you can break them like an artist
+* If you want to be lazy, make sure that lazy path is the correct one. * Object-oritned progrmaing makes code understanable by encapsulting moving pars. Functional programing makes code understandable by minimizing moving parts.
+* programming quotes
+** “Program testing can be used to show the presence of bugs, but never to show their absence" by Edsger Dijkstra
+** functional programing quotes
+*** “Functional code is characterised by one thing: the absence of side effects.”
+*** The best FP code is like algebra, and in algebra you never reuse variables. And not re-using variables has many benefit

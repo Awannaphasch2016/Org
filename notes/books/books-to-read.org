@@ -1,0 +1,22 @@
+#+TITLE: Books to read
+
+* Recommended
+** A Survival Guide for New consultants
+Mentioned in Learning Functional Programming in Scala.
+** History books
+*** The Innovators: How a Group of Hackers, Geniuses, and Geeks Created the Digital Revolution  by Walter Isaacson
+Mentioned in Learning Functional Programming in Scala.
+*** The Innovators by Walter Isaacson
+Mentioned in Learning Functional Programming in Scala.
+** Programming books
+*** [[https://www.geeksforgeeks.org/top-10-books-that-every-programmer-must-read-once/][Top 10 Books That Every Programmer Must Read Once]]
+*** Real World Haskell
+Mentioned in Learning Functional Programming in Scala.
+*** Complete Systems Analysis by Robertson and Robertson
+Mentioned in Learning Functional Programming in Scala.
+*** Functional Programming
+**** Mastermind of programing
+Mentioned in Learning Functional Programming in Scala.
+**** Functional Reactive Programming
+***** Reactive Programming in the Netflix API with RxJava
+Mentioned in Learning Functional Programming in Scala.

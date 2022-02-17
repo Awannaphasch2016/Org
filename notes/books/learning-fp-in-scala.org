@@ -1,0 +1,87 @@
+* Learning Fp In Scala
+** Chapter 6: Question Everything
+*** pure function
+**** a) a function's output depnds only on its input parameters
+**** b) function have no side effects
+***** such as reading user input to a screen, disk, web service,
+** Chapter 7: Rules for Programming in this Book
+*** The rules
+**** don't use null value
+**** only pure functions will be used in this book
+**** only use immutable values for all fields
+**** always use if with else. FP uses only expressions, not statements.
+**** we won't create "classes" that encapsulate the data and behavior. Instead, We'll create data structures and write pure functions taht operate on those data structure.
+** Chapter 8: One Rules of Reading this book
+** Chapter 9: What is "Functional Programming"?
+*** Note 1: Higher-Order Functions are a great FP language feature
+**** What is Higher-Order Functions
+***** a) you can treat a function as a value (val)
+****** e.g. you can treat string as a value.
+***** b) you can pass that value into other functions.
+****** Once you dig into FP, you’ll see that if you only use pure functions and immutable values, the only way you can do things like “calculate the sum of a list” is by using recursion
+*** Note 2: Recursion is a by-product
+** Chapter 10: What is this lambda you speaking of?
+** Chapter 11: The Benefits of Functional Programming.
+*** Benefits of functional programming in general
+**** Pure functions are easier to reason about
+In practice, you write functional style code as much as you can.
+**** Testing is easier, and pure functions lend themselves well to techniques like propery-based testing.
+***** properies based testing
+****** a property is a high-level specification of behavior that should hold for a range of data points. For example, a property might state, ‘The size of a list returned from a method should always be greater than or equal to the size of the list passed to that method.’ This property should hold no matter what list is passed.
+***** unit test vs property based test
+****** Unit test test behavior of a function given specific data while property based tests test properties (aka predefined conditions) of a tunction regardless of data.
+***** Debugging is easier
+***** Programs are more bulletproof
+***** Programs are written at a higher level, and are therefore easier to comprehend.
+***** Pure function signatures are meaningful
+***** Parallel Programming
+****** non-determinism = parallel processing + mutable state
+
+*** Benefits of functional programmign in Scala
+** Chapter 12: Disadvantages of Functional Programing
+*** Disadvantage of functional programming in general
+**** Writing pure functions is easy, but combining them into a complete application is where things get hard.
+**** The advanced math terminology (monad, monoid, functor, etc.) makes FP intimidating.
+**** For many people, recursion doesn’t feel natural
+**** Because you can’t mutate existing data, you instead use a pattern that I call, “Update as you copy.”
+**** Pure functions and I/O don’t really mix.
+**** Using only immutable values and recursion can potentially lead to performance problems, including RAM use and speed.
+***** When you first write a simple (“naive”) FP algorithm, it is possible just possible  that the immutable values and data-copying I mentioned earlier can be a performance problem.
+*** Disadvantages of Functional programing in Scala
+**** You can mix FP and OOP styles
+**** Scala doesn’t have a standard FP library
+*** Should I use FP everywhere?
+**** 1a) GUI and Pure FP are not a good fit.
+***** There isn’t a place for FP code at this point. The framework expects me to update the pixels on the screen within this method, and if you’ve ever written anything like a video game, you know that to achieve the best performance  and avoid screen flickering  it’s generally best to update only the pixels that need to be changed. So this really is an “update” method, as opposed to a “completely redraw the screen” method.
+***** Remember, words like “update” and “mutate” are not in the FP vocabulary.
+***** If you know about Functional Reactive Programming (FRP), please stand by; I write more on this point shortly.
+**** 1b) Caveats to what I just wrote
+***** the “logic” portion of your application can be written with pure functions
+**** b) Pragmatism (the best tool for the job)
+** Chapter 13: The "Grate FP Terminology Barrier"
+*** Terminologies
+**** map
+**** Things that can be mapped over shall be called … Functor.
+**** combinator
+***** “a style of organizing libraries centered around the idea of combining things.” This refers to being able to combine functions together like a Unix command pipeline, i.e., ps aux | grep root | wc -l.
+**** higher-order function
+**** lambda
+*** A common theme is that these terms generally come from mathematics fields like category theory.
+** Chapter 14: Pure Functions
+*** Pure Function (PF) = Output Depends on Input (ODI) + No Side Effects (NSE)
+*** Tip: Telltale signs of impure functions
+**** They don't have any input parameters
+**** They don’t return anything (or they return Unit in Scala, which is the same thing
+** Chapter 15: Grandma's cookie (and Pure Functions)
+*** A free variable is a variable used within a function, which is neither a formal parameter to the function nor defined in the function’s body (aka hidden inputs)
+** Chapter 16: Beneftis of Pure Functions
+*** They are idempotent
+**** The word idempotent has a few different meanings … a function or operation is idempotent if the result of executing it multiple times for a given input is the same as executing it only once for the same input. If we know that an operation is idempotent, we can run it as many times as we like … it’s safe to retry
+*** They offer referential tranparency (RT)
+*** They are memoizable
+*** They can be lazy
+** Chapter 20: A Note about Expression-Oriented Programming
+** Chapter 21: Functional Programming is Like Unix Pipelines
+*** "Converation of Data"
+**** “Each process (function) in the data flow diagram must be able to produce the output data flows from its input.”
+*** “Black holes and miracles”

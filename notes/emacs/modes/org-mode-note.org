@@ -24,10 +24,25 @@ Miscellaneous Input/Output
 of course, you have to have a collection of parameters that don’t fit elsewhere
 #+END_QUOTE
 
-* Key binding
+* General Key binding
 | commands                    | key         | doom key | custom key | description            |
 | org-footnote-action         |             | spc-m-f  |            | create footnotes       |
 | org-set-property            | c-c c-x p   | spc-m-o  |            | set properties of file |
 | expert org to html and open | c-c c-e h o |          |            | open file in browser   |
+* Features
+** Timers
+*** Key binding
+| commands                    | key       | doom key | custom key | description            |
+| org-timer-set-timer         | c-c c-x ; |          |            | set independent timer  |
+| org-timer-pause-or-continue | c-c c-x , |          |            |                        |
+| org-timer-start             | c-c c-x 0 |          |            | start counting from 0  |
+| org-timer-stop              | c-c c-x _ |          |            | stop counting          |
+| org-timer                   | c-c c-x . |          |            | insert timer to buffer |
 
-* Footnotes
+*** Show timer workflow by using example
+**** insert list of times
+if you prefer video explaining, see [[https://youtu.be/lxkPeJS6keY?t=285][here]]
+
+0:00:05 first you must insert timer into buffer with =org-timer=.
+- 0:02:35 :: once you have list with timer-prefix, creating new item with C-Entr will insert the next timestamp.
+- 0:07:10 :: like this.

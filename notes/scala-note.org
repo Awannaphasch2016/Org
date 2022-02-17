@@ -1,1 +1,41 @@
 #+TITLE: Scala Note
+
+* Basic and Fundamental
+** Trait
+*** Function1, Function2, ... ,FunctionN
+**** it is a function that takes in N input and output something.
+** Map
+*** Syntax
+**** ~val isEven = (i: Int) => i % 2 == 0~
+**** ~val sum = (a: Int, b: Int) => a + b~
+**** ~val double = (i: Int) => i * 2~
+**** ~val triple = (i: Int) => i * 3~
+*** How Map is understood by a compiler.
+**** ~Map[String, Int]~ (Function1 instance)
+***** map string to int
+**** ~Map[Int, Int => Int]~ (Function1 instance)
+***** map 1 int to a function that takes int and output int.
+**** ~Map[(Int, Int) => Int]~  (Function2 instance)
+***** map 2 int value to 1 int.
+** _ (underscore)
+- ref
+  - [[https://ananthakumaran.in/2010/03/29/scala-underscore-magic.html#:~:text=Scala%20represents%20anonymous%20functions%20with,underscores%20to%20refer%20different%20parameters.&text=Here%20the%20_%20refers%20to%20the%20parameter][Scala _ [underscore] magic]].
+** Assign an existing function/method to a function variables
+#+BEGIN_SRC scala :results output
+object fp {
+  def double1(i: Int): Int = (i * 2)
+  // var double = (i: Int) => i * 2
+  val double = double1(_)
+
+  def main(args: Array[String]): Unit = {
+    println(double(5))
+  }
+}
+#+END_SRC
+
+#+RESULTS:
+: 10
+* Examples
+
+* FAQs
+** functions vs methods

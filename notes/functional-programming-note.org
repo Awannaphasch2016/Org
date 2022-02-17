@@ -1,1 +1,3 @@
 #+TITLE: Functional Programming Note
+
+* Terminologies

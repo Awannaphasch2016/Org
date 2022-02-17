@@ -1,0 +1,4 @@
+#+TITLE: Questions
+
+* Using org mode, it clear to me that functionality of headers is a superset of items. Why does items exist? What are functionality that items or number-list support but headers don't? If there is none, I should always use headers at all time. Please refer to other org mode packages such as org brain and org roam to check for usecase and funcationality beyond what built-in org mode offers before conclude.
+* Should I always write pure function regardless of programming language or framework that I use? In which scenario should I avoid pure functions in non functional programming language?

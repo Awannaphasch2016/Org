@@ -40,10 +40,16 @@ To open doom emacs documentation, use =doom/help.= which is binded to =spc-h-d-h
 | +default/search-cwd    |     | spc-s-d             |             | conduct text search recursively in files under the current folder          |
 | +default/search-emacsd |     | spc-s-e             |             | conduct a text search recursively in files under the =use-emacs-directory= |
 
-**** file-based search
-| commands            | key | doom keys        | custom keys | descriptions                                 |
-| find-file           |     | spc-. OR spc-f-f |             | conduct file search under the current folder |
-| consult-recent-file |     | spc-f-r          |             | conduct recently opened file search          |
+**** buffer/file-based search
+| commands                      | key | doom keys        | custom keys | descriptions                                      |
+| find-file                     |     | spc-. OR spc-f-f |             | conduct file search under the current folder      |
+| +default/find-file-under-here |     | spc-f-F          |             | conduct file recursively under the current folder |
+| consult-recent-file           |     | spc-f-r          |             | conduct recently opened file search               |
+| -                             |     | spc-s-B          |             | search in all open buffer.                        |
+**** symbol-based search
+| commands                                                     | key | doom keys | custom keys | descriptions                                                                            |
+| consult-imenu                                                |     | spc-s-i   |             | Search symbol in general. In org mode, it only search leaves of the nodes tree in orgs. |
+| helm-semantic-or-imenu (consult-imenu built on this command) |     | spc-s-h   |             | Preconfigured helm for semantic or imenu.                                               |
 
 *** Files nad Directory Modification
 | commands                                      | key | doom keys | custom keys | descriptions                                              |

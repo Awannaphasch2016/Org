@@ -1,0 +1,9 @@
+#+TITLE: Scal Puzzlers
+
+* Puzzler 1: Hi There!
+#+BEGIN_SRC scala :results output
+object fp {
+  def main(args: Array[String]): Unit = {
+  }
+}
+#+END_SRC

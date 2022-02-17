@@ -1,0 +1,29 @@
+#+TITLE: Plantuml Note
+
+* Example
+** Basic
+#+BEGIN_SRC plantuml :results raw
+@startuml
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: Another authentication Response
+@enduml
+#+END_SRC
+
+#+RESULTS:
+[[file:/tmp/babel-OQguS0/plantuml-JSmpzf.png]]
+** use images of browswer
+#+BEGIN_SRC plantuml
+@startuml
+m1 : <img:https://d1rytvr7gmk1sx.cloudfront.net/wp-content/uploads/2016/04/googlecolorshero.jpg>
+m2 : <img:https://d1rytvr7gmk1sx.cloudfront.net/wp-content/uploads/2016/04/savetogooglea.jpg>
+
+m2 -> m1
+@enduml
+#+END_SRC
+
+#+attr_latex: :width 300px
+#+RESULTS:
+[[file:/tmp/babel-OQguS0/plantuml-qiBFth.png]]

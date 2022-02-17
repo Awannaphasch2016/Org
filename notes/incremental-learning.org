@@ -36,12 +36,18 @@ print(random.choice(topics))
 * Current Topics for Incremental Learning
 ** Emacs
 *** customize emacs config
-**** learn from other emacs-config
+**** learn from other emacs-config (additional feature can be found at garun project.)
+***** vanila emacs
+****** [[https://www.youtube.com/watch?v=1Ooi4KAd2FM&ab_channel=EmacsConfandEmacshangouts][EmacsConf 2021: Babel for academics - Asilata Bapat]]
+****** [[https://www.youtube.com/watch?v=ubpB83VRqXQ&ab_channel=EmacsConfandEmacshangouts][EmacsConf 2021: Using Org-Mode For Recording Continuous Professional Development - Philip Beadling]]
+****** [[http://endlessparentheses.com/archive.html][Endless parentheses articles]]
 ***** doom-config
 ****** [[https://dangirsh.org/projects/doom-config.html#jupyter][Dan Girshovich's doom config]]
+****** [[https://www.youtube.com/watch?v=5Q9435eIOVI&ab_channel=EmacsConfandEmacshangouts][EmacsConf 2021: Managing a research workflow (bibliographies, note-taking, and arXiv) - Ahmed Khaled]]
 
+**** TODO integrate organice or [[https://github.com/tconfrey/BrainTool][BrainTool]] (which allow org-mode to be interacted via webbrowser)
+***** implement a feature in BrainTool, see [[https://github.com/tconfrey/BrainTool/issues/15][here]].
 **** TODO reimplement org-agenda and org-capture from scratch.
-**** goto garun project
 **** TODO [[https://github.com/emacsorphanage/emamux][interact with tmux from emacs]]
 **** TODO [[https://mullikine.github.io/posts/an-emacs-mode-for-asciinema-playback/][implement asciinema mode in emacs]]
 **** TODO write customc folding for mode that use bracket and space (like python).

@@ -1,0 +1,13 @@
+#+TITLE: Mermaid Note
+
+* Examples
+#+BEGIN_SRC mermaid :file ~/Scratches/test.png
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+#+END_SRC
+
+#+RESULTS:
+[[file:~/Scratches/test.png]]

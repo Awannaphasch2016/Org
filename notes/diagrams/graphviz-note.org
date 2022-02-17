@@ -1,0 +1,7 @@
+#+TITLE: Graphviz Note
+
+* hotkeys
+| commands             | key     | doom keys | custom keys | descriptions |
+| graphviz-dot-preview | c-c c-p |           |             |              |
+| graphviz-dot-view    | c-c c-v |           |             |              |
+| compile              | c-c c-c |           |             |              |

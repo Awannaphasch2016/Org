@@ -1,9 +1,11 @@
 #+TITLE: Aws Note
 
+
 * Services
 ** Quick Setup
 - ref
   - [[https://docs.aws.amazon.com/systems-manager/latest/userguide/quick-setup-getting-started.html][Get started with Quick Setup]]
+
 
 ** IAM
 *** IAM users
@@ -52,8 +54,10 @@ Retrieves the user name for the specified IAM user. A login profile is created w
 **** Attach new policies to group-policies
 ~aws iam attach-group-policy --policy-arn arn:aws:iam::aws:policy/AmazonEC2FullAccess --group-name ExpertCrypto~
 **** Attach a new user to group-policies
+~aws iam add-user-to-group --group-name ExpertCrypto --user-name test~
 *** show aws configuration
 ~aws configure~
+
 ** EC2
 - ref
   - [[https://medium.com/swlh/launch-and-manage-ec2-instances-using-aws-cli-7efae00e264b][Launch and Manage EC2 Instances Using AWS CLI]]

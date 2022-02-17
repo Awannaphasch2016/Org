@@ -1,0 +1,1174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <!-- 2022-02-15 Tue 14:30 -->
+  <meta http-equiv="Content-Type" content=
+  "text/html; charset=utf-8" />
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1" />
+  <title>‎</title>
+  <meta name="author" content="Anak Wannaphaschaiyong" />
+  <meta name="generator" content="Org Mode" />
+  <style>
+  <![CDATA[
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  ]]>
+  </style>
+</head>
+<body>
+  <div id="content" class="content">
+    <div id="table-of-contents" role="doc-toc">
+      <h2>Table of Contents</h2>
+      <div id="text-table-of-contents" role="doc-toc">
+        <ul>
+          <li>
+            <a href="#org262ff1e">1. Writing GNU Emacs Extensions -
+            Bob Glickstein</a>
+            <ul>
+              <li>
+                <a href="#org82e7b94">1.1. Customizing Emacs</a>
+                <ul>
+                  <li><a href="#org9e3c0f8">1.1.1. backspace and
+                  delete</a></li>
+                  <li><a href="#org5087dbb">1.1.2. Lisp</a></li>
+                  <li><a href="#org6e09142">1.1.3. Keys and
+                  Strings</a></li>
+                  <li><a href="#orgc1efd34">1.1.4. To What Is C-h
+                  Bound?</a></li>
+                  <li><a href="#orgd63facf">1.1.5. To What Should
+                  C-h Be Bound?</a></li>
+                  <li><a href="#org450dff5">1.1.6. Evaluating Lisp
+                  Expressions?</a></li>
+                  <li><a href="#org78698d7">1.1.7. Apropos</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#org69f5ec5">1.2. Simple New Commands</a>
+                <ul>
+                  <li><a href="#orgea97b03">1.2.1. Traversing
+                  Windows</a></li>
+                  <li><a href="#org51c4f43">1.2.2. Line-at-a-Time
+                  Scrolling</a></li>
+                  <li><a href="#org4b1e540">1.2.3. Other Cursor and
+                  Text Motion Commands</a></li>
+                  <li><a href="#orgfb4afff">1.2.4. Clobbering
+                  Symbolic Links</a></li>
+                  <li><a href="#org7d3c2b7">1.2.5. Advised Buffer
+                  Switching #+BEGIN<sub>SRC</sub> emacs-lisp
+                  (defadvice switch-to-buffer (before
+                  existing-buffer activate compile) (interactive
+                  “b”)) #+END<sub>SRC</sub> #+RESULTS: :
+                  switch-to-buffer</a></li>
+                  <li><a href="#org0ed24d9">1.2.6. Addendum: Raw
+                  Prefix Argument</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#orgafef9ed">1.3. Copoerating Commands</a>
+                <ul>
+                  <li><a href="#org7f2927a">1.3.1. The
+                  Symptom</a></li>
+                  <li><a href="#org871556a">1.3.2. A Cure</a></li>
+                  <li><a href="#orgdd7b8ee">1.3.3. Declaring
+                  Variables</a></li>
+                  <li><a href="#org760496b">1.3.4. Window
+                  Appearance</a></li>
+                  <li><a href="#org9f927aa">1.3.5. Generalizing the
+                  Solution</a></li>
+                  <li><a href="#orgc9bd64c">1.3.6. Using
+                  <code>this-command</code></a></li>
+                  <li><a href="#orgeb50331">1.3.7.
+                  Writestamps</a></li>
+                  <li><a href="#org588a1ca">1.3.8.
+                  Modifystamps</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#org28a30da">1.4. Lisp Files</a>
+                <ul>
+                  <li><a href="#org83e0665">1.4.1. Creating a Lisp
+                  File</a></li>
+                  <li><a href="#orge95c54c">1.4.2. Loading the
+                  File</a></li>
+                  <li><a href="#org417baee">1.4.3. Compiling the
+                  File</a></li>
+                  <li><a href="#org5da61f5">1.4.4.
+                  eval-after-load</a></li>
+                  <li><a href="#orgc094e28">1.4.5. Local Variables
+                  Lists</a></li>
+                  <li><a href="#org3fc8057">1.4.6. Addendum:
+                  Security Consideration</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#org5fad072">1.5. Lists</a>
+                <ul>
+                  <li><a href="#org078ff3d">1.5.1. The Simple View
+                  of Lists</a></li>
+                  <li><a href="#orgde3e87f">1.5.2. List
+                  Details</a></li>
+                  <li><a href="#orgbfb0b63">1.5.3. Recursive List
+                  Functions</a></li>
+                  <li><a href="#org690fbe6">1.5.4. Iterative List
+                  Functions</a></li>
+                  <li><a href="#org30dc9da">1.5.5. Other Useful
+                  Lists Functions</a></li>
+                  <li><a href="#orgd1995f1">1.5.6. Destructive List
+                  Operations</a></li>
+                  <li><a href="#org7135c6f">1.5.7. Circular
+                  Lists?!</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#org2251412">1.6. Minor Mode</a>
+                <ul>
+                  <li><a href="#org74a3a4f">1.6.1. Paragraph
+                  Filing</a></li>
+                  <li><a href="#org27b4714">1.6.2. Modes</a></li>
+                  <li><a href="#org62818e5">1.6.3. Defining a Minor
+                  Mode</a></li>
+                  <li><a href="#org2b005ec">1.6.4. Mode
+                  Meat</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#org547d3bf">1.7. Evaluation and Error
+                Recovery</a>
+                <ul>
+                  <li><a href="#org6ebca40">1.7.1.
+                  limited-save-excursion</a></li>
+                  <li><a href="#orge58fc6f">1.7.2. eval</a></li>
+                  <li><a href="#org133851c">1.7.3. Macro
+                  Functions</a></li>
+                  <li><a href="#orgaf51e99">1.7.4. Backquote and
+                  Unquote</a></li>
+                  <li><a href="#orgf79b2a1">1.7.5. Return
+                  Value</a></li>
+                  <li><a href="#org9b79680">1.7.6. Failing
+                  Gracefully</a></li>
+                  <li><a href="#org0c22faf">1.7.7. Point
+                  Marker</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#org8174cea">1.8. A Major Mode</a>
+                <ul>
+                  <li><a href="#org4f52646">1.8.1. My Quips
+                  File</a></li>
+                  <li><a href="#org446adfc">1.8.2. Major Mode
+                  Skeeleton</a></li>
+                  <li><a href="#orgc3f0753">1.8.3. Chaning the
+                  Definition of a Paragraph</a></li>
+                  <li><a href="#orgfd5800b">1.8.4. Quip
+                  Commands</a></li>
+                  <li><a href="#orgbe2752d">1.8.5. Keymaps</a></li>
+                  <li><a href="#orgc31734d">1.8.6.
+                  Narrowing</a></li>
+                  <li><a href="#org5ca9133">1.8.7. Derived
+                  Modes</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#org68196a4">1.9. A Comprehensive
+                Example</a>
+                <ul>
+                  <li><a href="#org43deb32">1.9.1. New York Times
+                  Rules</a></li>
+                  <li><a href="#org4fe9bc1">1.9.2. Data
+                  Representation</a></li>
+                  <li><a href="#org1bb9366">1.9.3. User
+                  Interface</a></li>
+                  <li><a href="#orgbbd7225">1.9.4. Seetting Up the
+                  Mode</a></li>
+                  <li><a href="#orgfbd942f">1.9.5. Tracking
+                  Unauthorized Changes</a></li>
+                  <li><a href="#orgd27c288">1.9.6. Parsing the
+                  Buffer</a></li>
+                  <li><a href="#org30bedfc">1.9.7. Word
+                  Finder</a></li>
+                  <li><a href="#orgdc09e0b">1.9.8. Last
+                  Word</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#orgb7bb62a">1.10. Conclusion</a>
+                <ul>
+                  <li><a href="#org5f30512">1.10.1. A. Lisp Quick
+                  Reference</a></li>
+                  <li><a href="#org2821459">1.10.2. B. Debugging
+                  and Profiling</a></li>
+                  <li><a href="#org20b4fba">1.10.3. Sharing Your
+                  Code</a></li>
+                  <li><a href="#orgecffda1">1.10.4. Obtaining and
+                  Building Emacs</a></li>
+                </ul>
+              </li>
+              <li><a href="#org4b01107">1.11. Index</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="outline-container-org262ff1e" class="outline-2">
+      <h2 id="org262ff1e"><span class="section-number-2">1.</span>
+      Writing GNU Emacs Extensions - Bob Glickstein</h2>
+      <div class="outline-text-2" id="text-1"></div>
+      <div id="outline-container-org82e7b94" class="outline-3">
+        <h3 id="org82e7b94"><span class=
+        "section-number-3">1.1.</span> Customizing Emacs</h3>
+        <div class="outline-text-3" id="text-1-1"></div>
+        <div id="outline-container-org9e3c0f8" class="outline-4">
+          <h4 id="org9e3c0f8"><span class=
+          "section-number-4">1.1.1.</span> backspace and
+          delete</h4>
+        </div>
+        <div id="outline-container-org5087dbb" class="outline-4">
+          <h4 id="org5087dbb"><span class=
+          "section-number-4">1.1.2.</span> Lisp</h4>
+        </div>
+        <div id="outline-container-org6e09142" class="outline-4">
+          <h4 id="org6e09142"><span class=
+          "section-number-4">1.1.3.</span> Keys and Strings</h4>
+        </div>
+        <div id="outline-container-orgc1efd34" class="outline-4">
+          <h4 id="orgc1efd34"><span class=
+          "section-number-4">1.1.4.</span> To What Is C-h
+          Bound?</h4>
+        </div>
+        <div id="outline-container-orgd63facf" class="outline-4">
+          <h4 id="orgd63facf"><span class=
+          "section-number-4">1.1.5.</span> To What Should C-h Be
+          Bound?</h4>
+        </div>
+        <div id="outline-container-org450dff5" class="outline-4">
+          <h4 id="org450dff5"><span class=
+          "section-number-4">1.1.6.</span> Evaluating Lisp
+          Expressions?</h4>
+        </div>
+        <div id="outline-container-org78698d7" class="outline-4">
+          <h4 id="org78698d7"><span class=
+          "section-number-4">1.1.7.</span> Apropos</h4>
+        </div>
+      </div>
+      <div id="outline-container-org69f5ec5" class="outline-3">
+        <h3 id="org69f5ec5"><span class=
+        "section-number-3">1.2.</span> Simple New Commands</h3>
+        <div class="outline-text-3" id="text-1-2"></div>
+        <div id="outline-container-orgea97b03" class="outline-4">
+          <h4 id="orgea97b03"><span class=
+          "section-number-4">1.2.1.</span> Traversing Windows</h4>
+        </div>
+        <div id="outline-container-org51c4f43" class="outline-4">
+          <h4 id="org51c4f43"><span class=
+          "section-number-4">1.2.2.</span> Line-at-a-Time
+          Scrolling</h4>
+        </div>
+        <div id="outline-container-org4b1e540" class="outline-4">
+          <h4 id="org4b1e540"><span class=
+          "section-number-4">1.2.3.</span> Other Cursor and Text
+          Motion Commands</h4>
+        </div>
+        <div id="outline-container-orgfb4afff" class="outline-4">
+          <h4 id="orgfb4afff"><span class=
+          "section-number-4">1.2.4.</span> Clobbering Symbolic
+          Links</h4>
+        </div>
+        <div id="outline-container-org7d3c2b7" class="outline-4">
+          <h4 id="org7d3c2b7"><span class=
+          "section-number-4">1.2.5.</span> Advised Buffer Switching
+          #+BEGIN<sub>SRC</sub> emacs-lisp (defadvice
+          switch-to-buffer (before existing-buffer activate
+          compile) (interactive “b”)) #+END<sub>SRC</sub>
+          #+RESULTS: : switch-to-buffer</h4>
+        </div>
+        <div id="outline-container-org0ed24d9" class="outline-4">
+          <h4 id="org0ed24d9"><span class=
+          "section-number-4">1.2.6.</span> Addendum: Raw Prefix
+          Argument</h4>
+        </div>
+      </div>
+      <div id="outline-container-orgafef9ed" class="outline-3">
+        <h3 id="orgafef9ed"><span class=
+        "section-number-3">1.3.</span> Copoerating Commands</h3>
+        <div class="outline-text-3" id="text-1-3"></div>
+        <div id="outline-container-org7f2927a" class="outline-4">
+          <h4 id="org7f2927a"><span class=
+          "section-number-4">1.3.1.</span> The Symptom</h4>
+        </div>
+        <div id="outline-container-org871556a" class="outline-4">
+          <h4 id="org871556a"><span class=
+          "section-number-4">1.3.2.</span> A Cure</h4>
+        </div>
+        <div id="outline-container-orgdd7b8ee" class="outline-4">
+          <h4 id="orgdd7b8ee"><span class=
+          "section-number-4">1.3.3.</span> Declaring Variables</h4>
+          <div class="outline-text-4" id="text-1-3-3">
+            <div class="org-src-container">
+              <pre class="src src-emacs-lisp"><span style=
+              "color: #51afef;">(</span><span style=
+              "color: #51afef;">defvar</span> <span style=
+              "color: #dcaeea;">unscroll-to</span> nil
+  <span style=
+"color: #83898d;">"Text position for next call to 'unscroll'."</span><span style="color: #51afef;">)</span>
+
+<span style="color: #51afef;">(</span><span style=
+"color: #51afef;">defadvice</span> <span style=
+"color: #c678dd;">scroll-up</span> <span style=
+"color: #c678dd;">(</span>before remember-for-unscroll
+                             activate compile<span style=
+"color: #c678dd;">)</span>
+  <span style=
+"color: #83898d;">"Remember where we started from, for 'unscroll'."</span>
+
+  <span style="color: #c678dd;">(</span><span style=
+"color: #51afef;">if</span> <span style=
+"color: #98be65;">(</span><span style=
+"color: #a9a1e1;">not</span> <span style=
+"color: #a9a1e1;">(</span><span style=
+"color: #a9a1e1;">eq</span> <span style=
+"color: #dcaeea;">last-command</span> <span style=
+"color: #51afef;">'</span><span style=
+"color: #ECBE7B;">scroll-up</span><span style=
+"color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
+      <span style="color: #98be65;">(</span><span style=
+"color: #51afef;">setq</span> unscroll-to <span style=
+"color: #a9a1e1;">(</span><span style=
+"color: #a9a1e1;">point</span><span style=
+"color: #a9a1e1;">)</span><span style=
+"color: #98be65;">)</span><span style=
+"color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+
+<span style="color: #51afef;">(</span><span style=
+"color: #51afef;">defun</span> <span style=
+"color: #c678dd;">unscroll</span> <span style=
+"color: #c678dd;">()</span>
+  <span style=
+"color: #83898d;">"Jump to location specified by 'unscroll-to'"</span>
+  <span style="color: #c678dd;">(</span><span style=
+"color: #51afef;">interactive</span><span style=
+"color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span><span style=
+"color: #a9a1e1;">goto-char</span> unscroll-to<span style=
+"color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+</pre>
+            </div>
+          </div>
+        </div>
+        <div id="outline-container-org760496b" class="outline-4">
+          <h4 id="org760496b"><span class=
+          "section-number-4">1.3.4.</span> Window Appearance</h4>
+        </div>
+        <div id="outline-container-org9f927aa" class="outline-4">
+          <h4 id="org9f927aa"><span class=
+          "section-number-4">1.3.5.</span> Generalizing the
+          Solution</h4>
+          <div class="outline-text-4" id="text-1-3-5">
+            <div class="org-src-container">
+              <pre class="src src-emacs-lisp">
+<span style="color: #51afef;">(</span><span style=
+"color: #51afef;">defvar</span> <span style=
+"color: #dcaeea;">unscroll-point</span> nil
+  <span style=
+"color: #83898d;">"Cursor position for next call to 'unscroll'"</span><span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style=
+"color: #51afef;">defvar</span> <span style=
+"color: #dcaeea;">unscroll-window-start</span> nil
+  <span style=
+"color: #83898d;">"window start for next call to 'unscroll"</span><span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style=
+"color: #51afef;">defvar</span> <span style=
+"color: #dcaeea;">window-hscroll</span> nil
+  <span style=
+"color: #83898d;">"Hscroll for next call to 'unscroll"</span><span style="color: #51afef;">)</span>
+
+<span style="color: #51afef;">(</span><span style=
+"color: #51afef;">defadvice</span> <span style=
+"color: #c678dd;">scroll-up</span> <span style=
+"color: #c678dd;">(</span>before remember-for-unscroll
+                             activate compile<span style=
+"color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span><span style=
+"color: #51afef;">if</span> <span style=
+"color: #98be65;">(</span><span style=
+"color: #a9a1e1;">not</span> <span style=
+"color: #a9a1e1;">(</span><span style=
+"color: #51afef;">or</span> <span style=
+"color: #51afef;">(</span><span style=
+"color: #a9a1e1;">eq</span> <span style=
+"color: #dcaeea;">last-command</span> <span style=
+"color: #51afef;">'</span><span style=
+"color: #ECBE7B;">scroll-up</span><span style=
+"color: #51afef;">)</span>
+               <span style="color: #51afef;">(</span><span style=
+"color: #a9a1e1;">eq</span> <span style=
+"color: #dcaeea;">last-command</span> <span style=
+"color: #51afef;">'</span><span style=
+"color: #ECBE7B;">scroll-down</span><span style=
+"color: #51afef;">)</span><span style=
+"color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
+      <span style="color: #98be65;">(</span><span style=
+"color: #51afef;">progn</span>
+        <span style="color: #a9a1e1;">(</span><span style=
+"color: #51afef;">setq</span> unscroll-point <span style=
+"color: #51afef;">(</span><span style=
+"color: #a9a1e1;">point</span><span style=
+"color: #51afef;">)</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #a9a1e1;">(</span><span style=
+"color: #51afef;">setq</span> unscroll-window-start <span style=
+"color: #51afef;">(</span><span style=
+"color: #a9a1e1;">window-start</span><span style=
+"color: #51afef;">)</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #a9a1e1;">(</span><span style=
+"color: #51afef;">setq</span> unscroll-hscroll <span style=
+"color: #51afef;">(</span><span style=
+"color: #a9a1e1;">window-hscroll</span><span style=
+"color: #51afef;">)</span><span style=
+"color: #a9a1e1;">)</span><span style=
+"color: #98be65;">)</span><span style=
+"color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+<span style="color: #51afef;">(</span><span style=
+"color: #51afef;">defadvice</span> <span style=
+"color: #c678dd;">scroll-down</span> <span style=
+"color: #c678dd;">(</span>before remember-for-unscroll
+                               activate compile<span style=
+"color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span><span style=
+"color: #51afef;">if</span> <span style=
+"color: #98be65;">(</span><span style=
+"color: #a9a1e1;">not</span> <span style=
+"color: #a9a1e1;">(</span><span style=
+"color: #51afef;">or</span> <span style=
+"color: #51afef;">(</span><span style=
+"color: #a9a1e1;">eq</span> <span style=
+"color: #dcaeea;">last-command</span> <span style=
+"color: #51afef;">'</span><span style=
+"color: #ECBE7B;">scroll-up</span><span style=
+"color: #51afef;">)</span>
+               <span style="color: #51afef;">(</span><span style=
+"color: #a9a1e1;">eq</span> <span style=
+"color: #dcaeea;">last-command</span> <span style=
+"color: #51afef;">'</span><span style=
+"color: #ECBE7B;">scroll-down</span><span style=
+"color: #51afef;">)</span><span style=
+"color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
+      <span style="color: #98be65;">(</span><span style=
+"color: #51afef;">progn</span>
+        <span style="color: #a9a1e1;">(</span><span style=
+"color: #51afef;">setq</span> unscroll-point <span style=
+"color: #51afef;">(</span><span style=
+"color: #a9a1e1;">point</span><span style=
+"color: #51afef;">)</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #a9a1e1;">(</span><span style=
+"color: #51afef;">setq</span> unscroll-window-start <span style=
+"color: #51afef;">(</span><span style=
+"color: #a9a1e1;">window-start</span><span style=
+"color: #51afef;">)</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #a9a1e1;">(</span><span style=
+"color: #51afef;">setq</span> unscroll-hscroll <span style=
+"color: #51afef;">(</span><span style=
+"color: #a9a1e1;">window-hscroll</span><span style=
+"color: #51afef;">)</span><span style=
+"color: #a9a1e1;">)</span><span style=
+"color: #98be65;">)</span><span style=
+"color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+
+<span style="color: #51afef;">(</span><span style=
+"color: #51afef;">defun</span> <span style=
+"color: #c678dd;">unscroll</span> <span style=
+"color: #c678dd;">()</span>
+  <span style="color: #c678dd;">(</span><span style=
+"color: #51afef;">interactive</span><span style=
+"color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span><span style=
+"color: #51afef;">if</span> <span style=
+"color: #98be65;">(</span><span style=
+"color: #a9a1e1;">not</span> unscroll-point<span style=
+"color: #98be65;">)</span>
+      <span style="color: #98be65;">(</span><span style=
+"color: #c678dd;">error</span> <span style=
+"color: #98be65;">"Cannot unscroll yet"</span><span style=
+"color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span><span style=
+"color: #a9a1e1;">goto-char</span> unscroll-point<span style=
+"color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span><span style=
+"color: #a9a1e1;">set-window-start</span> nil unscroll-window-start<span style="color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span><span style=
+"color: #a9a1e1;">set-window-hscroll</span> nil unscroll-hscroll<span style="color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+
+</pre>
+            </div>
+          </div>
+        </div>
+        <div id="outline-container-orgc9bd64c" class="outline-4">
+          <h4 id="orgc9bd64c"><span class=
+          "section-number-4">1.3.6.</span> Using
+          <code>this-command</code></h4>
+        </div>
+        <div id="outline-container-orgeb50331" class="outline-4">
+          <h4 id="orgeb50331"><span class=
+          "section-number-4">1.3.7.</span> Writestamps</h4>
+        </div>
+        <div id="outline-container-org588a1ca" class="outline-4">
+          <h4 id="org588a1ca"><span class=
+          "section-number-4">1.3.8.</span> Modifystamps</h4>
+        </div>
+      </div>
+      <div id="outline-container-org28a30da" class="outline-3">
+        <h3 id="org28a30da"><span class=
+        "section-number-3">1.4.</span> Lisp Files</h3>
+        <div class="outline-text-3" id="text-1-4"></div>
+        <div id="outline-container-org83e0665" class="outline-4">
+          <h4 id="org83e0665"><span class=
+          "section-number-4">1.4.1.</span> Creating a Lisp
+          File</h4>
+        </div>
+        <div id="outline-container-orge95c54c" class="outline-4">
+          <h4 id="orge95c54c"><span class=
+          "section-number-4">1.4.2.</span> Loading the File</h4>
+        </div>
+        <div id="outline-container-org417baee" class="outline-4">
+          <h4 id="org417baee"><span class=
+          "section-number-4">1.4.3.</span> Compiling the File</h4>
+        </div>
+        <div id="outline-container-org5da61f5" class="outline-4">
+          <h4 id="org5da61f5"><span class=
+          "section-number-4">1.4.4.</span> eval-after-load</h4>
+        </div>
+        <div id="outline-container-orgc094e28" class="outline-4">
+          <h4 id="orgc094e28"><span class=
+          "section-number-4">1.4.5.</span> Local Variables
+          Lists</h4>
+        </div>
+        <div id="outline-container-org3fc8057" class="outline-4">
+          <h4 id="org3fc8057"><span class=
+          "section-number-4">1.4.6.</span> Addendum: Security
+          Consideration</h4>
+        </div>
+      </div>
+      <div id="outline-container-org5fad072" class="outline-3">
+        <h3 id="org5fad072"><span class=
+        "section-number-3">1.5.</span> Lists</h3>
+        <div class="outline-text-3" id="text-1-5"></div>
+        <div id="outline-container-org078ff3d" class="outline-4">
+          <h4 id="org078ff3d"><span class=
+          "section-number-4">1.5.1.</span> The Simple View of
+          Lists</h4>
+        </div>
+        <div id="outline-container-orgde3e87f" class="outline-4">
+          <h4 id="orgde3e87f"><span class=
+          "section-number-4">1.5.2.</span> List Details</h4>
+        </div>
+        <div id="outline-container-orgbfb0b63" class="outline-4">
+          <h4 id="orgbfb0b63"><span class=
+          "section-number-4">1.5.3.</span> Recursive List
+          Functions</h4>
+        </div>
+        <div id="outline-container-org690fbe6" class="outline-4">
+          <h4 id="org690fbe6"><span class=
+          "section-number-4">1.5.4.</span> Iterative List
+          Functions</h4>
+        </div>
+        <div id="outline-container-org30dc9da" class="outline-4">
+          <h4 id="org30dc9da"><span class=
+          "section-number-4">1.5.5.</span> Other Useful Lists
+          Functions</h4>
+        </div>
+        <div id="outline-container-orgd1995f1" class="outline-4">
+          <h4 id="orgd1995f1"><span class=
+          "section-number-4">1.5.6.</span> Destructive List
+          Operations</h4>
+        </div>
+        <div id="outline-container-org7135c6f" class="outline-4">
+          <h4 id="org7135c6f"><span class=
+          "section-number-4">1.5.7.</span> Circular Lists?!</h4>
+        </div>
+      </div>
+      <div id="outline-container-org2251412" class="outline-3">
+        <h3 id="org2251412"><span class=
+        "section-number-3">1.6.</span> Minor Mode</h3>
+        <div class="outline-text-3" id="text-1-6"></div>
+        <div id="outline-container-org74a3a4f" class="outline-4">
+          <h4 id="org74a3a4f"><span class=
+          "section-number-4">1.6.1.</span> Paragraph Filing</h4>
+        </div>
+        <div id="outline-container-org27b4714" class="outline-4">
+          <h4 id="org27b4714"><span class=
+          "section-number-4">1.6.2.</span> Modes</h4>
+        </div>
+        <div id="outline-container-org62818e5" class="outline-4">
+          <h4 id="org62818e5"><span class=
+          "section-number-4">1.6.3.</span> Defining a Minor
+          Mode</h4>
+        </div>
+        <div id="outline-container-org2b005ec" class="outline-4">
+          <h4 id="org2b005ec"><span class=
+          "section-number-4">1.6.4.</span> Mode Meat</h4>
+        </div>
+      </div>
+      <div id="outline-container-org547d3bf" class="outline-3">
+        <h3 id="org547d3bf"><span class=
+        "section-number-3">1.7.</span> Evaluation and Error
+        Recovery</h3>
+        <div class="outline-text-3" id="text-1-7"></div>
+        <div id="outline-container-org6ebca40" class="outline-4">
+          <h4 id="org6ebca40"><span class=
+          "section-number-4">1.7.1.</span>
+          limited-save-excursion</h4>
+        </div>
+        <div id="outline-container-orge58fc6f" class="outline-4">
+          <h4 id="orge58fc6f"><span class=
+          "section-number-4">1.7.2.</span> eval</h4>
+        </div>
+        <div id="outline-container-org133851c" class="outline-4">
+          <h4 id="org133851c"><span class=
+          "section-number-4">1.7.3.</span> Macro Functions</h4>
+        </div>
+        <div id="outline-container-orgaf51e99" class="outline-4">
+          <h4 id="orgaf51e99"><span class=
+          "section-number-4">1.7.4.</span> Backquote and
+          Unquote</h4>
+        </div>
+        <div id="outline-container-orgf79b2a1" class="outline-4">
+          <h4 id="orgf79b2a1"><span class=
+          "section-number-4">1.7.5.</span> Return Value</h4>
+        </div>
+        <div id="outline-container-org9b79680" class="outline-4">
+          <h4 id="org9b79680"><span class=
+          "section-number-4">1.7.6.</span> Failing Gracefully</h4>
+        </div>
+        <div id="outline-container-org0c22faf" class="outline-4">
+          <h4 id="org0c22faf"><span class=
+          "section-number-4">1.7.7.</span> Point Marker</h4>
+        </div>
+      </div>
+      <div id="outline-container-org8174cea" class="outline-3">
+        <h3 id="org8174cea"><span class=
+        "section-number-3">1.8.</span> A Major Mode</h3>
+        <div class="outline-text-3" id="text-1-8"></div>
+        <div id="outline-container-org4f52646" class="outline-4">
+          <h4 id="org4f52646"><span class=
+          "section-number-4">1.8.1.</span> My Quips File</h4>
+        </div>
+        <div id="outline-container-org446adfc" class="outline-4">
+          <h4 id="org446adfc"><span class=
+          "section-number-4">1.8.2.</span> Major Mode
+          Skeeleton</h4>
+        </div>
+        <div id="outline-container-orgc3f0753" class="outline-4">
+          <h4 id="orgc3f0753"><span class=
+          "section-number-4">1.8.3.</span> Chaning the Definition
+          of a Paragraph</h4>
+        </div>
+        <div id="outline-container-orgfd5800b" class="outline-4">
+          <h4 id="orgfd5800b"><span class=
+          "section-number-4">1.8.4.</span> Quip Commands</h4>
+        </div>
+        <div id="outline-container-orgbe2752d" class="outline-4">
+          <h4 id="orgbe2752d"><span class=
+          "section-number-4">1.8.5.</span> Keymaps</h4>
+        </div>
+        <div id="outline-container-orgc31734d" class="outline-4">
+          <h4 id="orgc31734d"><span class=
+          "section-number-4">1.8.6.</span> Narrowing</h4>
+        </div>
+        <div id="outline-container-org5ca9133" class="outline-4">
+          <h4 id="org5ca9133"><span class=
+          "section-number-4">1.8.7.</span> Derived Modes</h4>
+        </div>
+      </div>
+      <div id="outline-container-org68196a4" class="outline-3">
+        <h3 id="org68196a4"><span class=
+        "section-number-3">1.9.</span> A Comprehensive Example</h3>
+        <div class="outline-text-3" id="text-1-9"></div>
+        <div id="outline-container-org43deb32" class="outline-4">
+          <h4 id="org43deb32"><span class=
+          "section-number-4">1.9.1.</span> New York Times
+          Rules</h4>
+          <div class="outline-text-4" id="text-1-9-1"></div>
+          <ol class="org-ol">
+            <li>
+              <a id="org4b5869a"></a>Matrix
+              function&nbsp;&nbsp;&nbsp;<span class=
+              "tag"><span class="drill">drill</span></span><br />
+              <div class="outline-text-5" id="text-1-9-1-1">
+                <p>create matrix function given that signature is
+                as followed</p>
+                <div class="org-src-container">
+                  <pre class="src src-emacs-lisp"><span style=
+                  "color: #51afef;">(</span><span style=
+                  "color: #51afef;">defun</span> <span style=
+                  "color: #c678dd;">make-matrix</span> <span style=
+                  "color: #c678dd;">(</span>rows columns <span style=
+                  "color: #ECBE7B;">&amp;optional</span> initial<span style=
+                  "color: #c678dd;">)</span> ... <span style=
+                  "color: #51afef;">)</span>
+</pre>
+                </div>
+              </div>
+              <ol class="org-ol">
+                <li>
+                  <a id="org294755f"></a>answer<br />
+                  <div class="outline-text-6" id="text-1-9-1-1-1">
+                    <div class="org-src-container">
+                      <pre class="src src-emacs-lisp"><span style=
+                      "color: #51afef;">(</span><span style=
+                      "color: #51afef;">defun</span> <span style=
+                      "color: #c678dd;">make-matrix</span> <span style=
+                      "color: #c678dd;">(</span>rows columns <span style=
+                      "color: #ECBE7B;">&amp;optional</span> initial<span style=
+                      "color: #c678dd;">)</span>
+  <span style=
+"color: #83898d;">"Create a ROWS by COLUMNS matrix."</span>
+  <span style="color: #c678dd;">(</span><span style=
+"color: #51afef;">let</span> <span style=
+"color: #98be65;">(</span><span style=
+"color: #a9a1e1;">(</span>result <span style=
+"color: #51afef;">(</span><span style=
+"color: #a9a1e1;">make-vector</span> rows nil<span style=
+"color: #51afef;">)</span><span style="color: #a9a1e1;">)</span>
+        <span style="color: #a9a1e1;">(</span>y <span style=
+"color: #da8548; font-weight: bold;">0</span><span style=
+"color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
+    <span style="color: #98be65;">(</span><span style=
+"color: #51afef;">while</span> <span style=
+"color: #a9a1e1;">(</span><span style=
+"color: #a9a1e1;">&lt;</span> y rows<span style=
+"color: #a9a1e1;">)</span>
+      <span style="color: #a9a1e1;">(</span><span style=
+"color: #a9a1e1;">aset</span> result y <span style=
+"color: #51afef;">(</span><span style=
+"color: #a9a1e1;">make-vector</span> columns initial<span style=
+"color: #51afef;">)</span><span style="color: #a9a1e1;">)</span>
+      <span style="color: #a9a1e1;">(</span><span style=
+"color: #51afef;">setq</span> y <span style=
+"color: #51afef;">(</span><span style=
+"color: #a9a1e1;">+</span> y <span style=
+"color: #da8548; font-weight: bold;">1</span><span style=
+"color: #51afef;">)</span><span style=
+"color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
+      result<span style="color: #c678dd;">)</span><span style=
+"color: #51afef;">)</span>
+</pre>
+                    </div>
+                    <pre class="example">
+make-matrix
+</pre>
+                  </div>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <a id="org9c8e729"></a>Basic operations<br />
+              <div class="outline-text-5" id="text-1-9-1-2">
+                <div class="org-src-container">
+                  <pre class="src src-emacs-lisp"><span style=
+                  "color: #51afef;">(</span><span style=
+                  "color: #51afef;">defun</span> <span style=
+                  "color: #c678dd;">matrix-set</span> <span style=
+                  "color: #c678dd;">(</span>matrix row column elt<span style=
+                  "color: #c678dd;">)</span>
+  <span style=
+"color: #83898d;">"Given a MATRIX, ROW, and COLUMN, put element ELT there."</span>
+  <span style="color: #c678dd;">(</span><span style=
+"color: #51afef;">let</span> <span style=
+"color: #98be65;">(</span><span style=
+"color: #a9a1e1;">(</span>a <span style=
+"color: #51afef;">(</span><span style=
+"color: #a9a1e1;">aref</span> matrix row<span style=
+"color: #51afef;">)</span><span style=
+"color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
+    <span style="color: #98be65;">(</span><span style=
+"color: #a9a1e1;">aset</span> a column elt<span style=
+"color: #98be65;">)</span><span style=
+"color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+</pre>
+                </div>
+                <pre class="example">
+matrix-set
+</pre>
+                <div class="org-src-container">
+                  <pre class="src src-emacs-lisp"><span style=
+                  "color: #51afef;">(</span><span style=
+                  "color: #51afef;">defun</span> <span style=
+                  "color: #c678dd;">matrix-ref</span> <span style=
+                  "color: #c678dd;">(</span>matrix row column<span style=
+                  "color: #c678dd;">)</span>
+  <span style=
+"color: #83898d;">"Get the element of MATRIX at ROW and COLUMN."</span>
+  <span style="color: #c678dd;">(</span><span style=
+"color: #51afef;">let</span> <span style=
+"color: #98be65;">(</span><span style=
+"color: #a9a1e1;">(</span>a <span style=
+"color: #51afef;">(</span><span style=
+"color: #a9a1e1;">aref</span> matrix row<span style=
+"color: #51afef;">)</span><span style=
+"color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
+    <span style="color: #98be65;">(</span><span style=
+"color: #a9a1e1;">aref</span> a column<span style=
+"color: #98be65;">)</span>
+    <span style="color: #c678dd;">)</span>
+  <span style="color: #51afef;">)</span>
+</pre>
+                </div>
+                <pre class="example">
+matrix-ref
+</pre>
+                <div class="org-src-container">
+                  <pre class="src src-emacs-lisp"><span style=
+                  "color: #51afef;">(</span><span style=
+                  "color: #51afef;">defun</span> <span style=
+                  "color: #c678dd;">matrix-columns</span> <span style=
+                  "color: #c678dd;">(</span>matrix<span style=
+                  "color: #c678dd;">)</span>
+  <span style=
+"color: #83898d;">"Get number of columns in matrix"</span>
+  <span style="color: #c678dd;">(</span><span style=
+"color: #a9a1e1;">length</span> <span style=
+"color: #98be65;">(</span><span style=
+"color: #a9a1e1;">aref</span> matrix <span style=
+"color: #da8548; font-weight: bold;">0</span><span style=
+"color: #98be65;">)</span><span style=
+"color: #c678dd;">)</span><span style="color: #51afef;">)</span>
+</pre>
+                </div>
+                <pre class="example">
+matrix-columns
+</pre>
+                <div class="org-src-container">
+                  <pre class="src src-emacs-lisp"><span style=
+                  "color: #51afef;">(</span><span style=
+                  "color: #51afef;">defun</span> <span style=
+                  "color: #c678dd;">matrix-rows</span> <span style=
+                  "color: #c678dd;">(</span>matrix<span style=
+                  "color: #c678dd;">)</span>
+  <span style=
+"color: #83898d;">"Get number of rows in matrix"</span>
+  <span style="color: #c678dd;">(</span><span style=
+"color: #a9a1e1;">length</span> matrix<span style=
+"color: #c678dd;">)</span>
+  <span style="color: #51afef;">)</span>
+</pre>
+                </div>
+                <pre class="example">
+matrix-rows
+</pre>
+                <div class="org-src-container">
+                  <pre class="src src-emacs-lisp"><span style=
+                  "color: #51afef;">(</span><span style=
+                  "color: #51afef;">defun</span> <span style=
+                  "color: #c678dd;">make-crossword</span> <span style=
+                  "color: #c678dd;">(</span>size<span style=
+                  "color: #c678dd;">)</span>
+  <span style=
+"color: #83898d;">"Make a crossword grid with SIZE rows and columns."</span>
+  <span style="color: #c678dd;">(</span><span style=
+"color: #51afef;">if</span> <span style=
+"color: #98be65;">(</span><span style=
+"color: #c678dd;">zerop</span> <span style=
+"color: #a9a1e1;">(</span><span style=
+"color: #dcaeea;">%</span> size <span style=
+"color: #da8548; font-weight: bold;">2</span><span style=
+"color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>
+             <span style="color: #98be65;">(</span><span style=
+"color: #c678dd;">error</span> <span style=
+"color: #98be65;">"make-crossword: size must be odd."</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+  <span style="color: #c678dd;">(</span><span style=
+"color: #51afef;">if</span> <span style=
+"color: #98be65;">(</span><span style=
+"color: #a9a1e1;">&lt;</span> size <span style=
+"color: #da8548; font-weight: bold;">3</span><span style=
+"color: #98be65;">)</span>
+      <span style="color: #98be65;">(</span><span style=
+"color: #c678dd;">error</span> <span style=
+"color: #98be65;">"make-crossword: size must be 3 or greate."</span><span style="color: #98be65;">)</span><span style="color: #c678dd;">)</span>
+  <span style=
+"color: #c678dd;">(</span>make-matrix size size nil<span style=
+"color: #c678dd;">)</span>
+  <span style="color: #51afef;">)</span>
+</pre>
+                </div>
+                <pre class="example">
+make-crossword
+</pre>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div id="outline-container-org4fe9bc1" class="outline-4">
+          <h4 id="org4fe9bc1"><span class=
+          "section-number-4">1.9.2.</span> Data Representation</h4>
+        </div>
+        <div id="outline-container-org1bb9366" class="outline-4">
+          <h4 id="org1bb9366"><span class=
+          "section-number-4">1.9.3.</span> User Interface</h4>
+        </div>
+        <div id="outline-container-orgbbd7225" class="outline-4">
+          <h4 id="orgbbd7225"><span class=
+          "section-number-4">1.9.4.</span> Seetting Up the
+          Mode</h4>
+        </div>
+        <div id="outline-container-orgfbd942f" class="outline-4">
+          <h4 id="orgfbd942f"><span class=
+          "section-number-4">1.9.5.</span> Tracking Unauthorized
+          Changes</h4>
+        </div>
+        <div id="outline-container-orgd27c288" class="outline-4">
+          <h4 id="orgd27c288"><span class=
+          "section-number-4">1.9.6.</span> Parsing the Buffer</h4>
+        </div>
+        <div id="outline-container-org30bedfc" class="outline-4">
+          <h4 id="org30bedfc"><span class=
+          "section-number-4">1.9.7.</span> Word Finder</h4>
+        </div>
+        <div id="outline-container-orgdc09e0b" class="outline-4">
+          <h4 id="orgdc09e0b"><span class=
+          "section-number-4">1.9.8.</span> Last Word</h4>
+        </div>
+      </div>
+      <div id="outline-container-orgb7bb62a" class="outline-3">
+        <h3 id="orgb7bb62a"><span class=
+        "section-number-3">1.10.</span> Conclusion</h3>
+        <div class="outline-text-3" id="text-1-10"></div>
+        <div id="outline-container-org5f30512" class="outline-4">
+          <h4 id="org5f30512"><span class=
+          "section-number-4">1.10.1.</span> A. Lisp Quick
+          Reference</h4>
+          <div class="outline-text-4" id="text-1-10-1"></div>
+          <ol class="org-ol">
+            <li><a id="org88668f5"></a>Basics<br /></li>
+            <li><a id="org8d1c118"></a>Data Types<br /></li>
+            <li><a id="org42f4384"></a>Control Structure<br /></li>
+            <li><a id="org48144cf"></a>Code Objects<br /></li>
+          </ol>
+        </div>
+        <div id="outline-container-org2821459" class="outline-4">
+          <h4 id="org2821459"><span class=
+          "section-number-4">1.10.2.</span> B. Debugging and
+          Profiling</h4>
+          <div class="outline-text-4" id="text-1-10-2"></div>
+          <ol class="org-ol">
+            <li><a id="orgcc319fb"></a>Evaluation<br /></li>
+            <li><a id="orgf4f147d"></a>The Debugger<br /></li>
+            <li><a id="org44cb326"></a>Edebug<br /></li>
+            <li><a id="org88bf786"></a>The Profiler<br /></li>
+          </ol>
+        </div>
+        <div id="outline-container-org20b4fba" class="outline-4">
+          <h4 id="org20b4fba"><span class=
+          "section-number-4">1.10.3.</span> Sharing Your Code</h4>
+          <div class="outline-text-4" id="text-1-10-3"></div>
+          <ol class="org-ol">
+            <li><a id="org395120d"></a>Documentation<br /></li>
+            <li><a id="org816de4f"></a>Copyright<br /></li>
+            <li><a id="org493eff6"></a>Posting<br /></li>
+          </ol>
+        </div>
+        <div id="outline-container-orgecffda1" class="outline-4">
+          <h4 id="orgecffda1"><span class=
+          "section-number-4">1.10.4.</span> Obtaining and Building
+          Emacs</h4>
+          <div class="outline-text-4" id="text-1-10-4"></div>
+          <ol class="org-ol">
+            <li><a id="org2fc537b"></a>Availability of
+            Packages<br /></li>
+            <li><a id="orga3df99d"></a>Unpacking, Building, and
+            Installing Emacs<br /></li>
+          </ol>
+        </div>
+      </div>
+      <div id="outline-container-org4b01107" class="outline-3">
+        <h3 id="org4b01107"><span class=
+        "section-number-3">1.11.</span> Index</h3>
+      </div>
+    </div>
+  </div>
+  <div id="postamble" class="status">
+    <p class="author">Author: Anak Wannaphaschaiyong</p>
+    <p class="date">Created: 2022-02-15 Tue 14:30</p>
+  </div>
+</body>
+</html>

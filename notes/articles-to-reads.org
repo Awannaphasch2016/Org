@@ -1,0 +1,7 @@
+#+TITLE: Articles To Read
+
+* Programming Articles
+** ScalaCheck Website and the Property-based testing page on that site
+mentioned on Page 204 of learning functional programing in scala book.
+** Jesper Nordenberg on "Haskell vs Scala"
+one of the most neutral "Haskell vs Scala" discussions I've read.
