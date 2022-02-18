@@ -118,5 +118,6 @@ object ByNameTests {
 **** A parameter in one group can use a parameter from a previous group as a default value
 *** Benefit of implicit values
 **** Because boo is an implicit Boolean value and it’s in the current scope, the Scala compiler reaches out and automatically uses it as the input parameter for the second parameter group. That is, boo is used just as though it had been passed in explicitly.
-**** An implicit execution context
-*****
+** Chapter 28: Partially-Applied Functions (and Currying)
+*** A second motivation is that the concept of currying is related to the multiple parameter groups I showed in the previous lesson come from
+*** The primary motivation for writing this lesson is that having multiple parameter groups make it a little easier to create partially-applied functions, and these can be useful in your FP code

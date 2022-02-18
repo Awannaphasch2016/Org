@@ -490,3 +490,11 @@ Elnode is an asynchronous HttpServer framework. You can use it to write HTTP ser
 
 - ref
   - [[https://reindeereffect.github.io/2020/05/05/index.html][Making and Slaying Monster Sudoku]]
+** learn wolframe language for practical use.
+- ref
+  - [[https://reference.wolfram.com/language/][wolfram language & system]]
+  - http://xahlee.info/M/index.html
+  - [[https://rgoswami.me/posts/org-mathematica/][using mathematica with orgmode]]
+  - [[http://xahlee.info/emacs/misc/xah-wolfram-mode.html][xah wolfram mode]]
+  - [[https://github.com/kawabata/wolfram-mode][wolframe mode]]
+  - [[https://www.wolfram.com/language/elementary-introduction/2nd-ed/23-more-about-numbers.html][an elementary introduction to the wolfram language.]]
