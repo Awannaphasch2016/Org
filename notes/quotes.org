@@ -8,3 +8,4 @@
 ** functional programing quotes
 *** “Functional code is characterised by one thing: the absence of side effects.”
 *** The best FP code is like algebra, and in algebra you never reuse variables. And not re-using variables has many benefit
+** “To understand recursion, one must first understand recursion.” - Stephen Hawking.

@@ -1,0 +1,6 @@
+#+TITLE: Personal Website
+#+FILETAGS: PERSONAL @sideproject mywebsite
+
+* Questions :QUESTION:
+* Notes :NOTE:
+* Meeting :MEETING:

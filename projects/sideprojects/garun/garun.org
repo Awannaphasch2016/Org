@@ -1,22 +1,31 @@
-
 #+TITLE: garun projects
 #+STARTUP: inlineimages
+#+FILETAGS: garun emacs PERSONAL @sideproject
+
+This project is an effect to create my ideal PKM with emacs 2.0 (emacs + pen.el). Effect made toward pen.el project will be documented in [[file:~/org/projects/sideprojects/pen.org][pen.el project file]].
 
 * Garun
-** programming implementation design choise
-*** what language to use?
-*** which types of markdown style can I use? (org mode can't be used because gpl v3 license)
+:LOGBOOK:
+CLOCK: [2022-02-21 Mon 00:05]
+:END:
+** Questions :QUESTION:
+** Notes :NOTE:
+:LOGBOOK:
+:END:
+*** programming implementation design choise
+**** what language to use?
+**** which types of markdown style can I use? (org mode can't be used because gpl v3 license)
 alternative:
 1. [[https://github.com/200ok-ch/organice][organice]]
-** features underimplementation + known error
-*** uncaterogized
-*** pdf related workflow
-**** PROJECT when open pdf file PDFView is not a default (DocView is still in used). This is a unexpected behavior because when install pdf-tools PDFView should be automatically set as default
-*** org mode
-**** checkbox doesn't work for some reason, so all checkbox related commands cannot be tested.
-**** figure out how to perform multi-select in dropdown (output by vertico, ivy, etc.)
-**** assign schedule and deadline to header doesn't show in agenda?
-**** figure out a way to manage archive contents
+*** features underimplementation + known error
+**** uncaterogized
+**** pdf related workflow
+***** PROJECT when open pdf file PDFView is not a default (DocView is still in used). This is a unexpected behavior because when install pdf-tools PDFView should be automatically set as default
+**** org mode
+***** checkbox doesn't work for some reason, so all checkbox related commands cannot be tested.
+***** figure out how to perform multi-select in dropdown (output by vertico, ivy, etc.)
+***** assign schedule and deadline to header doesn't show in agenda?
+***** figure out a way to manage archive contents
 - requirements
   + how to make them searchable
     - ref:
@@ -25,14 +34,14 @@ alternative:
 - FAQs
   + best practices for archiving content?
 
-**** create org-capture such that new added content will be appended to the end of the file.
-**** implement tagging system in org roam
-***** note
-****** follow roam research's tagging system which use page,block,filter by page,backlink, reference link.
-******* tags and categories features from org-mode can be derived by roam research tagging system
-****** one thing that roam research tagging doesn't provide is when I set page as directory for example dir1/dir2/dir3. To improve roam research to include this features few things have to be considered
-******* pages should be able to filter by directory.
-**** syncing change on a tangled file back to original org file
+***** create org-capture such that new added content will be appended to the end of the file.
+***** implement tagging system in org roam
+****** note
+******* follow roam research's tagging system which use page,block,filter by page,backlink, reference link.
+******** tags and categories features from org-mode can be derived by roam research tagging system
+******* one thing that roam research tagging doesn't provide is when I set page as directory for example dir1/dir2/dir3. To improve roam research to include this features few things have to be considered
+******** pages should be able to filter by directory.
+***** syncing change on a tangled file back to original org file
 :PROPERTIES:
 :ID:       6ffa9220-2744-448a-ab30-5781ad44130e
 :END:
@@ -43,44 +52,44 @@ ref: https://emacs.stackexchange.com/questions/12889/syncing-changes-on-a-tangle
 tools
 1. lentic server
 2. [[https://github.com/mtekman/org-tanglesync.el][org-tanglesync]]
-**** copy link out of org mode
+***** copy link out of org mode
 ref: https://emacs.stackexchange.com/questions/3981/how-to-copy-links-out-of-org-mode
-**** integrate organice to push org files to clouds where I can be access via phone and enable syncing between device.
+***** integrate organice to push org files to clouds where I can be access via phone and enable syncing between device.
 
-**** presentation
-***** try using =demo-it= plugins for code along styles presentation
-**** PROJECT implement a command such that when inside a subtree, I can close the parent subtree in which the cursor is wihtin.
-**** org roam
-***** when inside of a page, I should be able to select existing heading of the selected pages to insert as a link.
+***** presentation
+****** try using =demo-it= plugins for code along styles presentation
+***** PROJECT implement a command such that when inside a subtree, I can close the parent subtree in which the cursor is wihtin.
+***** org roam
+****** when inside of a page, I should be able to select existing heading of the selected pages to insert as a link.
 The user experience here is more seamless than having to navigate to the page -> find the heading -> copy link from the heading and come back to insert.
 
 This faetures is waiting on implementation on [[*PROJECT multi-layer text search filter. (design UI experience for piping sequence of regex output)][PROJECT multi-layer text search filter. (design UI experience for piping sequence of regex output)]]
-***** for any heading that have a link attach to it, id should be automatically generated so that that this block now will be treated as a "node" which have a set of faetures available to it.
+****** for any heading that have a link attach to it, id should be automatically generated so that that this block now will be treated as a "node" which have a set of faetures available to it.
 
 example of feature that can be useful are "synchonized name change" (name of the reference node change when the original node name is change.)
-**** PROJECT implement tagging system. currently, I used other people default setup and it doesn't fit my needs.
-**** typing ']]' will close code block that doesn't yet been close. This is behavior is similar to latex in vim that I have set up. (This enhances flexibility of use case)
-**** PROJECT literate programming in emacs
+***** PROJECT implement tagging system. currently, I used other people default setup and it doesn't fit my needs.
+***** typing ']]' will close code block that doesn't yet been close. This is behavior is similar to latex in vim that I have set up. (This enhances flexibility of use case)
+***** PROJECT literate programming in emacs
 ref:
 - https://jamiecollinson.com/blog/my-emacs-config/
 - https://github.com/angrybacon/dotemacs/blob/master/dotemacs.org
 
 note:
 this can be used when writing report for data science project as well [[https://www.youtube.com/watch?v=dljNabciEGg&ab_channel=HowardAbrams][literate devops]].
-***** allow header property =:dir:= to be set as a starting point of directory in which code will be operate on.
-**** PROJECT allow cmd command (defined in .zshrc) to be used in org-babel code block
-***** error
+****** allow header property =:dir:= to be set as a starting point of directory in which code will be operate on.
+***** PROJECT allow cmd command (defined in .zshrc) to be used in org-babel code block
+****** error
 I am not sure what is going on but when I run the block with bash/zsh/sh =cmd= command is not found
-*** user experience
+**** user experience
 ref:
 - https://hungyi.net/posts/doom-emacs-search-replace-project/#fn.1
-**** enlarge window to occupy the whole space and reset window to default (which occupied space equally)
+***** enlarge window to occupy the whole space and reset window to default (which occupied space equally)
 I accidentally deleted enlarg-window-maximize, so I have to reimplement it
 #+BEGIN_SRC elisp
 (global-set-key (kbd "C-x !") 'enlarge-window-maximize)
 #+END_SRC
 
-**** increase/decrease text size such that all other buffer text size will be adjusted at the same time. (not limited to opened buffer; all future buffer should also obey condition)
+***** increase/decrease text size such that all other buffer text size will be adjusted at the same time. (not limited to opened buffer; all future buffer should also obey condition)
 
 #+BEGIN_SRC emacs-lisp
 (defadvice text-scale-increase (around all-buffers (arg) activate)
@@ -88,62 +97,62 @@ I accidentally deleted enlarg-window-maximize, so I have to reimplement it
     (with-current-buffer buffer
       ad-do-it)))
 #+END_SRC
-**** capture Gif/video of screen using emacs command line, and automatically upload to cloud.
-**** GTD
-***** PROJECT seamlessly managing actions-wise tasks
-****** add new actions to child/nighbour bullet point of the current subtree of actions (the structure is similar to one I use in vim TODOMANAGER)
-****** display all trees (similar to nerd tree strcuture) of actions, so one can switch to different subtree in the "actions tree" or switching to different "action tree."
-****** easily move reselect new actions from existing of subtrees
-**** I want string in the notes to be data in which one can highlight section to select the data then programming-langauge/filtering/functions/command can be applied to manipulate the dataset.
+***** capture Gif/video of screen using emacs command line, and automatically upload to cloud.
+***** GTD
+****** PROJECT seamlessly managing actions-wise tasks
+******* add new actions to child/nighbour bullet point of the current subtree of actions (the structure is similar to one I use in vim TODOMANAGER)
+******* display all trees (similar to nerd tree strcuture) of actions, so one can switch to different subtree in the "actions tree" or switching to different "action tree."
+******* easily move reselect new actions from existing of subtrees
+***** I want string in the notes to be data in which one can highlight section to select the data then programming-langauge/filtering/functions/command can be applied to manipulate the dataset.
 I can see this become really use ful when combine with [[*PROJECT multi-layer text search filter. (design UI experience for piping sequence of regex output)][PROJECT multi-layer text search filter. (design UI experience for piping sequence of regex output)]]
-*** search and filter experience
-**** PROJECT multi-layer text search filter. (design UI experience for piping sequence of regex output)
-*** data science features
-**** passing scripts from your favorite language, and have them all available in emacs as commands.
+**** search and filter experience
+***** PROJECT multi-layer text search filter. (design UI experience for piping sequence of regex output)
+**** data science features
+***** passing scripts from your favorite language, and have them all available in emacs as commands.
 ref: http://ergoemacs.org/emacs/elisp_perl_wrapper.html
-**** allow org-babel code block to stop before finish running. (This is because sometime I want to run something at the begining of the code for debug. Without this funcationality I cannot document the code as efficiently.)
+***** allow org-babel code block to stop before finish running. (This is because sometime I want to run something at the begining of the code for debug. Without this funcationality I cannot document the code as efficiently.)
 There are 2 ways to do this.
 1. set time limit which code block will automatically execute
 2. send command to cancle the run. (kill process)
-*** PROJECT interacting with pdf files (seamless pdf interaction experience)
-**** to use pdf-isearch-occur one first need to use isearch-occur -> type in a text -> run pdf-isearch-occur to find words in pdf. (or i need to run pdf-isearch-minor-mode, but it is slow and keybinding may need to remap to match evil-mode keybinding.)
-**** very buggy and unpredicable at times
-*** colloborative features
-**** real time coding
-***** using Floobits to share code editing in real time (this allow sharing real time independent of text editor or IDE being used.)
-*** emails
-**** I have problem setting up mu4e with doom emacs
+**** PROJECT interacting with pdf files (seamless pdf interaction experience)
+***** to use pdf-isearch-occur one first need to use isearch-occur -> type in a text -> run pdf-isearch-occur to find words in pdf. (or i need to run pdf-isearch-minor-mode, but it is slow and keybinding may need to remap to match evil-mode keybinding.)
+***** very buggy and unpredicable at times
+**** colloborative features
+***** real time coding
+****** using Floobits to share code editing in real time (this allow sharing real time independent of text editor or IDE being used.)
+**** emails
+***** I have problem setting up mu4e with doom emacs
 error is shown below
 #+BEGIN_SRC markdown
 IMAP command 'LOGIN <user> <pass>' returned an error: NO [AUTHENTICATIONFAILED] Invalid credentials (Failure)
 #+END_SRC
-*** PROJECT Intelligent-based feautures
-**** GPT-3 automatially generate tags when highlighted text from Readwise are imported to my knowledge based
+**** PROJECT Intelligent-based feautures
+***** GPT-3 automatially generate tags when highlighted text from Readwise are imported to my knowledge based
 To do this, I need to fine tune GPT-3 to optimize for searchability and discoveribility within knowledgebased "page protocol.")
-**** During creative session or writing session, Garun should allow GPT-3 to generate questions to trigger our creativity (create either bias or diversification of thought.).
-*** Communicating between emacs and outside emacs
-**** note
+***** During creative session or writing session, Garun should allow GPT-3 to generate questions to trigger our creativity (create either bias or diversification of thought.).
+**** Communicating between emacs and outside emacs
+***** note
 brainstorming on ways to use emacs to communicate with outside world
 url: https://www.reddit.com/r/emacs/comments/5jhwlu/getting_things_from_outside_emacs_into/
-*** Leetcode
+**** Leetcode
 ref:
 Buffer leetcode-testcase and leetcode-result not displaying in corresponding window #70
 https://github.com/kaiwk/leetcode.el/issues/70
 
-**** fix Leetcode.el to always show windows without being replaced by new window. New window should be placed some where else.
+***** fix Leetcode.el to always show windows without being replaced by new window. New window should be placed some where else.
 
-**** create a leetcommand for refreshing window (in case unexpected ui behavior occurs)
-*** Publish website with org-mode
-*** Dealing with Images
-**** improve on image-dired
-***** display list of existing tags globally and locally
-****** when select tags to display tagged images, ui should show window at the bottom and list of files + directory of each images and ui should allow for further filtering by matched word. (This ui idea is similar to ~+default/search-buffer~ )
+***** create a leetcommand for refreshing window (in case unexpected ui behavior occurs)
+**** Publish website with org-mode
+**** Dealing with Images
+***** improve on image-dired
+****** display list of existing tags globally and locally
+******* when select tags to display tagged images, ui should show window at the bottom and list of files + directory of each images and ui should allow for further filtering by matched word. (This ui idea is similar to ~+default/search-buffer~ )
 This is a very interesting workflow that reduce fiction between a user's thought to output.
 
 usecase:
 imagine that when you think of "vacation." You can get all of the pictures that have vacation tags and you may filter it further by file name and dir name (e.g. "2020", "Thailand").
-***** provide autocomplete mechanism when trying to mark by tags. (C-t f)
-***** Allow image preview as seen in [[https://youtu.be/HzFqZ0Gl0aw?t=238][this video.]]
+****** provide autocomplete mechanism when trying to mark by tags. (C-t f)
+****** Allow image preview as seen in [[https://youtu.be/HzFqZ0Gl0aw?t=238][this video.]]
 I believe that this behavior is done using image-dired.
 
 list of candidate command that I think can create the desired behavior.
@@ -161,43 +170,43 @@ The problem is when using these commands the following undesired behavior occurs
 
 Error:
 displaying thumbnail default behavior in doom emacs are strange to use. Behavior is not as the same as the one shown in [[https://youtu.be/NrY3t3W0_cM?t=154][this video.]]
-**** PROJECT Display Online Images
+***** PROJECT Display Online Images
 ref: https://emacs.stackexchange.com/questions/42281/org-mode-is-it-possible-to-display-online-images
 
-*** Bookmark
+**** Bookmark
 ref:
 [[https://www.youtube.com/watch?v=Im8taRkzYAc][Enhance your Emacs experience with Bookmark Plus]]
 
 ~Bookmarkplus~ allows one to bookmark things beyond just file. It contains interesting ideas and workflows, but this workflow may results in very unorganized bookmark which may overtime becomes unobtainable.
 If I in the future finds default ~Bookmark~ functionality to be limited, ~Bookmarkplus~ should be further explored.
 
-*** Dired
-**** select files in dired by regex.
-*** Dealing with videos
-**** allow taking notes on video like roam research plugin
+**** Dired
+***** select files in dired by regex.
+**** Dealing with videos
+***** allow taking notes on video like roam research plugin
 ref:
 https://www.reddit.com/r/emacs/comments/a9upre/watching_video_within_an_emacs_buffer/
 https://github.com/emacs-eaf/emacs-application-framework
-*** Use Emacs Application Framework (EAF)
+**** Use Emacs Application Framework (EAF)
 ref:
 https://www.youtube.com/watch?v=mJjBZ4MZHBo&ab_channel=AndyStewart
 https://www.youtube.com/watch?v=z9W0pnShEWc&ab_channel=GavinFreeborn
 https://www.youtube.com/watch?v=HK_f8KTuR0s&ab_channel=MatthewZeng
 
-** current features
-*** org mode
-**** presentation
-***** org-tree-slides for live demo
-****** ref
-******* https://www.youtube.com/watch?v=vz9aLmxYJB0&ab_channel=SystemCrafters
-****** follow along features
+*** current features
+**** org mode
+***** presentation
+****** org-tree-slides for live demo
+******* ref
+******** https://www.youtube.com/watch?v=vz9aLmxYJB0&ab_channel=SystemCrafters
+******* follow along features
 to show history of type keys stroke,
 run =globalcommand-log-mode= follow by =clm/toggle-command-log-buffer=
-****** presentation
-******* presentation that required live coding.
-******** tools
-********* org tree slide
-******** initial setup
+******* presentation
+******** presentation that required live coding.
+********* tools
+********** org tree slide
+********* initial setup
 #+BEGIN_SRC emacs-lisp
 (use-package org-tree-slide
   :custom
@@ -205,13 +214,13 @@ run =globalcommand-log-mode= follow by =clm/toggle-command-log-buffer=
 #+END_SRC
 
 run = org-treeside with =C-<= and =C->=
-******** simple presentation
+********* simple presentation
 =org-tree-slide-mode=
-******** narrow presentation
+********* narrow presentation
 toggle =org-tree-slide-narrow-control-profile= to be on
 only show slides that have todos
 comment slide algo get skip
-******** configuration
+********* configuration
 #+BEGIN_SRC emacs-lisp
 (defun efs/presentation-setup ()
   (setq text-scale-mode-amount 3)
@@ -232,24 +241,21 @@ comment slide algo get skip
   (org-tree-slide-breadcrumbs " // ")
   (org-image-actual-width nil))
 #+END_SRC
-******** sharing presentation slides
+********* sharing presentation slides
 run =org-beamer-export-to-pdf=
-***** use org-reveal for standard presentation
+****** use org-reveal for standard presentation
 I pick =org-reveal= over =org-beamer= because I am not sure if =org-beamer= has notes features.
-**** clocking
-***** how much time do I take to complete task x?
+***** clocking
+****** how much time do I take to complete task x?
 first clock-in under a heading then you can choose to clock-goto to go to the heading that clock is in.
 To end the clock and output the estimated time for the task, clock-out can be used.
-**** Allow literate programming with org-babel where org-babel block are treated as organized as "outline nodes oragnization" styles used in leo IDE.
+***** Allow literate programming with org-babel where org-babel block are treated as organized as "outline nodes oragnization" styles used in leo IDE.
 requirement:
     literate programming using org-babel to tangle codes in non linear ways. This idea can be expanded to utilize leo ideo ideas of "outline nodes organization" (finer than file-based organization). To do this each org-babel block must be able to references "inside" other blocks (not only as input to other block) by tagging nodes of the block. t
 
 Demo of this feature is demonstrated by using org-babel with org block and org-roam  literater devops + nodes-outlines organization (from leo IDE).
-**** allow "making literate note from source code"
+***** allow "making literate note from source code"
 
-*** movement
-**** ace-jump
-* garun
-:PROPERTIES:
-:NOTER_DOCUMENT: garun.pdf
-:END:
+**** movement
+***** ace-jump
+** Meeting :MEETING:

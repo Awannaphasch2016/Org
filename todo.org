@@ -1,4 +1,7 @@
 #+FILETAGS: PERSONAL
+
+TODO.org contains personal tasks and things to keep track of. Basically, tasks that needs to be done, but doesn't belong to another other tasks.
+
 * Inbox
 * Special dates
 :PROPERTIES:
@@ -26,6 +29,17 @@
 :PROPERTIES:
 :CATEGORY: Task
 :END:
+** TODO Install Info Plus to get the history pesist functionality.
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 09:47]--[2022-02-20 Sun 09:49] =>  0:02
+:END:
+[2022-02-20 Sun 09:47]
+** TODO How to restrict the matches to the current list (7.1 Refile setup)
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 10:44]--[2022-02-20 Sun 10:45] =>  0:01
+:END:
+[2022-02-20 Sun 10:44]
+[[file:~/org/todo.org::*Passwords][Passwords]]
 * Vehicle maintenance
 :PROPERTIES:
 :CATEGORY: Vehicle
@@ -39,18 +53,4 @@ SCHEDULED: <2021-10-04 Mon>
 * Passwords
 :PROPERTIES:
 :CATEGORY: Password
-* Organization
-* TODO Reading Writing GNU Emacs Extensions
-:LOGBOOK:
-CLOCK: [2021-09-28 Tue 20:49]--[2021-09-28 Tue 20:50] =>  0:01
 :END:
-[2021-09-28 Tue 20:49]
-[[file:~/Scratches/scratch.el::lambda (]]
-** NEXT stop at "Hanlding the Symlink"
-* TODO find pimp kratom (mangda) for Bowen. :NOTE:
-:LOGBOOK:
-CLOCK: [2021-09-27 Mon 23:25]--[2021-09-27 Mon 23:31] =>  0:06
-:END:
-[2021-09-27 Mon 23:25]
-[[file:~/org/todo.org::*something][someth* Category
-

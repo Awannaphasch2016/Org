@@ -1,0 +1,6 @@
+#+TITLE: School
+#+FILETAGS: @PhD WORK
+
+* Notes :NOTE:
+* Questions :QUESTION:
+* Meeting :MEETING:

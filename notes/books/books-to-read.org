@@ -14,6 +14,8 @@ Mentioned in Learning Functional Programming in Scala.
 Mentioned in Learning Functional Programming in Scala.
 *** Complete Systems Analysis by Robertson and Robertson
 Mentioned in Learning Functional Programming in Scala.
+*** Inside the Java Virtual Machine by Bill Venners.
+Mentioned in Learning Functional Programming in Scala.
 *** Functional Programming
 **** Mastermind of programing
 Mentioned in Learning Functional Programming in Scala.

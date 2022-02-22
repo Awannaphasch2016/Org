@@ -121,3 +121,50 @@ object ByNameTests {
 ** Chapter 28: Partially-Applied Functions (and Currying)
 *** A second motivation is that the concept of currying is related to the multiple parameter groups I showed in the previous lesson come from
 *** The primary motivation for writing this lesson is that having multiple parameter groups make it a little easier to create partially-applied functions, and these can be useful in your FP code
+*** In mathematics and computer science, currying is the technique of translating the evaluation of a function that takes multiple arguments into evaluating a sequence of functions, each with a single argument.
+*** You still have access to both functions, and you kept your code “DRY”  you didn’t copy and paste code to make the new function
+** Chapter 31: Recursion: Let's look at List
+** Chaptre 33: Recursion: How Recurssive Function Calls Work
+** Chapter 34: Visualizing the Revusrive sum Function
+** Chapter 35: Recursion: A Conversation Between Two Developers
+** Chapter 36: Recursion: Thinking Recursively
+*** 3 things to think about when thinking recursively (the last to step is iterative.)
+**** what is the function signature?
+**** What is the end condition for this algorithms?
+***** end condition is related to "identify" element/operator of the input data structure
+****** identity element of list is Nil (for scala implementation as Nil == List())
+****** identity element of String is ''
+****** identity element of product operator is ''
+**** What is the actual algorithm?
+***** Set of question to ask when implementing recurion algorithm
+****** What is the algorithm at hands?
+****** What should my function do when it receives a non-empty List?
+** Chapter 37: JVM Stacks and Stack Frames
+*** But in applications where you don’t know how much data you might beprocessing, it’s important that your recursive algorithms are tail-recursive,otherwise you’ll get a nasty StackOverflowError.
+*** The actual number of integers in a list needed to produce a StackOverflowError with this function will depend on the java command-line settings you use, but the last time I checked the default Java stack size it was 1,024 kb  yes, 1,024 kilobytes  just over one million bytes. That’s not much RAM to work with. I write more about this at the end of this lesson, including how to change the default stack size with the java command’s -Xss parameter
+*** The Java Stack
+**** “The method that is currently being executed by a thread is the thread’s current method. The stack frame for the current method is the current frame. The class in which the current method is defined is called the current class, and the current class’s constant pool is the current constant pool. As it executes a method, the JVM keeps track of the current class and current constant pool. When the JVM encounters instructions that operate on data stored in the stack frame, it performs those operations on the current frame.”
+**** When a thread invokes a Java method, the JVM creates and pushes a new frame ont
+***** As the previous paragraph implies, each instance of a method has its own stack frame. Therefore, when you see the term “stack frame,” you can think, “all of the stuff a method instance needs.”
+**** What is a stack frame?
+** Chapter 38: A Visual Look at Stacks and Frames
+*** Manually dumping the stack with the sum examples
+#+BEGIN_SRC scala
+object ob{
+
+    def sum(list: List[Int]): Int = list match {
+    case Nil => {
+        val stackTraceAsArray = Thread.currentThread.getStackTrace
+        stackTraceAsArray.foreach(println)
+        0
+    }
+    case x :: xs => x + sum(xs)
+    }
+  def main(args: Array[String]): Unit = {
+
+    println(sum(List(1,2,3)))
+  }
+}
+#+END_SRC
+** Chapter 39: Tail-Recursive Algorithms
+*** “Functions which call themselves as their last action are called tail-recursive. The Scala compiler detects tail recursion and replaces it with a jump back to the beginning of the function, after updating the function parameters with the new values … as long as the last thing you do is calling yourself, it’s automatically tail-recursive (i.e., optimized).”

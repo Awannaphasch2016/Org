@@ -24,11 +24,24 @@ Miscellaneous Input/Output
 of course, you have to have a collection of parameters that don’t fit elsewhere
 #+END_QUOTE
 
-* General Key binding
+* Key binding
+** Nagivation key binding
+| commands              | key | doom key  | custom key | description                                                   |
+| org-shiftdown         |     |           |            | depends on context. similar to how c-c c-c depends on context |
+| org-metadown          | M-j |           |            | Move subtree down or move table row down.                     |
+| org-move-subtree-down |     | spc-m-s-j |            |                                                               |
+| org-demote-subtree    |     | spc-m-s-l |            |                                                               |
+| org-copy-subtree      |     |           |            |                                                               |
+| org-narrow-to-subtree |     | spc-m-s-n |            |                                                               |
+| widen                 |     | spc-m-n-N |            | opposite to org-narrow-to-subtree                             |
+** General Key binding
 | commands                    | key         | doom key | custom key | description            |
 | org-footnote-action         |             | spc-m-f  |            | create footnotes       |
 | org-set-property            | c-c c-x p   | spc-m-o  |            | set properties of file |
 | expert org to html and open | c-c c-e h o |          |            | open file in browser   |
+** Tag Searches
+| commands              | key   | doom keys | custom keys | descriptions |
+| org-match-sparse-tree | C-c / |           |             |              |
 * Features
 ** Timers
 *** Key binding
@@ -46,3 +59,14 @@ if you prefer video explaining, see [[https://youtu.be/lxkPeJS6keY?t=285][here]]
 0:00:05 first you must insert timer into buffer with =org-timer=.
 - 0:02:35 :: once you have list with timer-prefix, creating new item with C-Entr will insert the next timestamp.
 - 0:07:10 :: like this.
+** Refile
+| commands   | key     | doom keys | custom keys | descriptions |
+| org-refile | c-c c-w | spc-m-s-r |             |              |
+** Clock
+| commands            | key          | doom keys       | custom keys | descriptions                                                    |
+|                     |              | spc-u spc-m-c-l |             | open clock history selection buffer                             |
+| org-agenda-log-mode |              |                 |             | show all clock lines for today.                                 |
+|                     | s-<up arrow> |                 |             | increase time by 1 min                                          |
+|                     |              | spc-m-c-R       |             | create dynamic clock table                                      |
+| org-clock-display   | c-c c-x c-d  |                 |             | provides a quick summary of block time for the current org file |
+*** reporting

@@ -110,7 +110,17 @@ intern basically return symbol whose name property matches input string
 
 #+RESULTS:
 : my/fn-with-raw-arg
+* Useful functions/commands/variables to know for elisp impementation
 
+** variables
+| variables | descriptions |
+** functions
+*** file and directory
+| funtions                 | descriptions    |
+| file-truename            |                 |
+| find-file-visit-truename | resolve symlink |
+** commands
+| commands | descriptions |
 * FAQs
 ** how to evaluate code snippets in Emacs
 option 1 =gr=

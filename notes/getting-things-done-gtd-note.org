@@ -1,0 +1,62 @@
+#+TITLE: Getting things Done (GTD)
+
+
+* My Daily Worflow
+** Org Agenda Daily Workflow
+- ref
+  - [[http://doc.norang.ca/org-mode.html][8 Custom agenda views -> 8.1 Setup]]
+My day goes generally like this:
+- Punch in (this starts the clock on the default task)
+- Look at the agenda and make a mental note of anything important to deal with today
+- Read email and news
+    - create notes, and tasks for things that need responses with org-capture
+- Check refile tasks and respond to emails
+- Look at my agenda and work on important tasks for today
+    - Clock it in
+    - Work on it until it is DONE or it gets interrupted
+- Work on tasks
+- Make journal entries (C-c c j) for interruptions
+- Punch out for lunch and punch back in after lunch
+- work on more tasks
+- Refile tasks to empty the list
+    - Tag tasks to be refiled with m collecting all tasks for the same target
+    - Bulk refile the tasks to the target location with B r
+    - Repeat (or refile individually with C-c C-w) until all refile tasks are gone
+- Mark habits done today as DONE
+- Punch out at the end of the work day
+** What do I work on next?
+- Pick something off today's agenda
+  - deadline for today (do this first - it's not late yet)
+  - deadline in the past (it's already late)
+  - a scheduled task for today (it's supposed to be done today)
+  - a scheduled task that is still on the agenda
+  - deadline that is coming up soon
+- pick a NEXT task
+- If you run out of items to work on look for a NEXT task in the current context pick a task from the Tasks list of the current project.
+*** Filtering
+So many tasks, so little time. I have hundreds of tasks at any given time (373 right now). There is so much stuff
+to look at it can be daunting. This is where agenda filtering saves the day.
+
+It's 11:53AM and I'm in work mode just before lunch. I don't want to see tasks that are not work related right
+now. I also don't want to work on a big project just before lunch… so I need to find small tasks that I can knock
+off the list.
+
+How do we do this? Get a list of NEXT tasks from the block agenda and then narrow it down with filtering. Tasks
+are ordered in the NEXT agenda view by estimated effort so the short tasks are first  just start at the top and
+work your way down. I can limit the displayed agenda tasks to those estimates of 10 minutes or less with / + 1
+and I can pick something that fits the minutes I have left before I take off for lunch.
+** Clocking
+I now use the concept of punching in and punching out at the start and end of my work day. I punch in when I arrive
+at work, punch out for lunch, punch in after lunch, and punch out at the end of the day. Every minute is clocked
+between punch-in and punch-out times.
+
+My clocking setup basically works like this:
+- Punch in (start the clock)
+    - This clocks in a predefined task by org-id that is the default task to clock in whenever the clock normally stops
+- Clock in tasks normally, and let moving to a DONE state clock out
+    - clocking out automatically clocks time on a parent task or moves back to the predefined default task if no parent exists.
+- Continue clocking whatever tasks you work on
+- Punch out (stop the clock)
+
+* Stuck projects
+If you are following a system like David Allen’s GTD to organize your work, one of the “duties” you have is a regular review to make sure that all projects move along. A stuck project is a project that has no defined next actions, so it never shows up in the TODO lists Org mode produces. During the review, you need to identify such projects and define next actions for them.

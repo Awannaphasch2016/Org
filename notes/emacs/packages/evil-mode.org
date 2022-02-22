@@ -1,0 +1,5 @@
+#+TITLE: Evil Mode
+
+* Key binding
+| commands                    | key | doom keys | custom keys | descriptions                        |
+| evil-execute-in-emacs-state |     | \         |             | execute next command in emacs state |

@@ -1,0 +1,8 @@
+#+TITLE: Org Column Note
+
+* key binding
+:PROPERTIES:
+:EFFORT:   6:00
+:END:
+| commands   | key         | doom keys | custom keys | descriptions |
+| org-column | c-c c-x c-c |           |             |              |

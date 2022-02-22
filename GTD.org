@@ -1,0 +1,17 @@
+#+TITLE: Gtd
+#+FILETAGS: @home gtd
+
+GTD files collects all todos related related to time taken to spend on following GTD methods which includes
+1. capture
+2. clarify
+   assign actions to tasks
+3. organize
+4. reflect
+   reflect on how time has been spend in the past and how time should be spend in the future
+5. adjust
+
+* GTD
+:LOGBOOK:
+CLOCK: [2022-02-21 Mon 22:06]
+:END:
+** Weekly review

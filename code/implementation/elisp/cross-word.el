@@ -28,11 +28,10 @@
   (length matrix)
   )
 
-(defun make-crossword (size)
-  "Make a crossword grid with SIZE rows and columns."
-  (if (zerop (% size 2))
-             (error "make-crossword: size must be odd."))
-  (if (< size 3)
-      (error "make-crossword: size must be 3 or greate."))
-  (make-matrix size size nil)
-  )
+;; (defun make-crossword (size)
+;;   "Make a crossword grid with SIZE rows and columns."
+;;   (if (zerop (% size 2))
+;;              (error "make-crossword: size must be odd."))
+;;   (if (< size 3)
+;;       (error "make-crossword: size must be 3 or greate."))
+;;   (make-matrix size size nil))

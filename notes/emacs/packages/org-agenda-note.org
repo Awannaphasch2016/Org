@@ -1,0 +1,116 @@
+#+TITLE: Org Agenda Note
+
+Please read [[file:~/org/notes/getting-things-done-gtd-note.org::*My Daily Worflow][here]]. on how org agenda can be used.
+
+* Tags
+Tasks can have any number of arbitrary tags. Tags are used for:
+    - filtering todo lists and agenda views
+    - providing context for tasks
+    - tagging notes
+    - tagging phone calls
+    - tagging meetings
+    - tagging tasks to be refiled
+    - tagging tasks in a WAITING state because a parent task is WAITING
+    - tagging cancelled tasks because a parent task is CANCELLED
+    - preventing export of some subtrees when publishing
+I use tags mostly for filtering in the agenda. This means you can find tasks with a specific tag easily across your large number of org-mode files.
+
+Some tags are mutually exclusive. These are defined in a group so that only one of the tags can be applied to a task at a time (disregarding tag inheritance). I use these types for tags for applying context to a task. (Work tasks have an @office tag, and are done at the office, Farm tasks have an @farm tag and are done at the farm  I can't change the oil on the tractor if I'm not at the farm… so I hide these and other tasks by filtering my agenda view to only @office tasks when I'm at the office.)
+
+Tasks are grouped together in org-files and a #+FILETAGS: entry applies a tag to all tasks in the file. I use this to apply a tag to all tasks in the file. My norang.org file creates a NORANG file tag so I can filter tasks in the agenda in the norang.org file easily.
+* Custom Agenda view layout
+- Single block agenda shows the following
+    - overview of today
+    - Finding tasks to be refiled
+    - Finding stuck projects
+    - Finding NEXT tasks to work on
+    - Show all related tasks
+    - Reviewing projects
+    - Finding tasks waiting on something
+    - Findings tasks to be archived
+- Finding notes
+- Viewing habits
+* Search support in Org Agenda
+- ref
+  - [[https://orgmode.org/manual/Matching-tags-and-properties.html][Matching tags and properties]]
+A search string can use Boolean operators ‘&’ for AND and ‘|’ for OR. ‘&’ binds more strongly than ‘|’. Parentheses are currently not implemented. Each element in the search is either a tag, a regular expression matching tags, or an expression like ‘PROPERTY OPERATOR VALUE’ with a comparison operator, accessing a property value.
+** How does searching rule works? with example. for more see the org mode reference linked provided above.
+*** tags only
+**** =+work-bass= select headlines tagges 'work', but discard those also tagged 'boss'
+**** =work|laptop= selects lines tagged 'work' or 'laptop'
+**** =work|laptop+night= like before, but require the 'laptop` lines to be tagged also 'night'
+*** Tags Hierachy
+**** Group tags (see Tag Hierarchy) are expanded as regular expressions. E.g., if ‘work’ is a group tag for the group ‘:work:lab:conf:’, then searching for ‘work’ also searches for ‘{\(?:work\|lab\|conf\)}’ and searching for ‘-work’ searches for all headlines but those with one of the tags in the group (i.e., ‘-{\(?:work\|lab\|conf\)}’).
+*** Tags + Keywords + Properties
+**** You may also test for properties (see Properties and Columns) at the same time as matching tags. The properties may be real properties, or special properties that represent other metadata (see Special Properties). For example, the property ‘TODO’ represents the TODO keyword of the entry. Or, the property ‘LEVEL’ represents the level of an entry. So searching ‘+LEVEL=3+boss-TODO​="DONE"’ lists all level three headlines that have the tag ‘boss’ and are not marked with the TODO keyword ‘DONE’. In buffers with org-odd-levels-only set, ‘LEVEL’ does not count the number of stars, but ‘LEVEL=2’ corresponds to 3 stars etc.
+**** examples
+***** ‘work+TODO​="WAITING"’
+****** Select ‘work’-tagged TODO lines with the specific TODO keyword ‘WAITING’.
+***** ‘work+TODO​="WAITING"|home+TODO​="WAITING"’
+****** Waiting tasks both at work and at home.
+*** applying / and ! syntax
+For backward compatibility, and also for typing speed, there is also a different way to test TODO states in a search. For this, terminate the tags/property part of the search string (which may include several terms connected with ‘|’) with a ‘/’ and then specify a Boolean expression just for TODO keywords. The syntax is then similar to that for tags, but should be applied with care: for example, a positive selection on several TODO keywords cannot meaningfully be combined with boolean AND. However, negative selection combined with AND can be meaningful. To make sure that only lines are checked that actually have any TODO keyword (resulting in a speed-up), use M-x org-agenda M, or equivalently start the TODO part after the slash with ‘!’. Using M-x org-agenda M or ‘/!’ does not match TODO keywords in a DONE state. Examples:
+**** ‘work/WAITING’
+***** Same as ‘work+TODO​="WAITING"’.
+**** ‘work/!-WAITING-NEXT’
+***** Select ‘work’-tagged TODO lines that are neither ‘WAITING’ nor ‘NEXT’.
+**** ‘work/!+WAITING|+NEXT’
+***** Select ‘work’-tagged TODO lines that are either ‘WAITING’ or ‘NEXT’.
+
+* Key binding
+| commands          | key | doom keys | custom keys | descriptions |
+| org-agenda        |     | spc-o-a-a |             |              |
+| org-tags-view     |     | spc-o-a-m |             |              |
+| org-todo-list     |     | spc-o-a-t |             |              |
+| org-search-view   |     | spc-o-a-v |             |              |
+| org-agenda-filter |     |           |             |              |
+* useful commands and functions
+| functions                             | descriptions                                                                               |
+| org-agenda-file-to-font               | add the current file to agenda                                                             |
+| org-remove-file                       | remove current file from agenda                                                            |
+| org-agenda-set-restriction-lock       | limited the scope to the current header                                                    |
+| org-agenda-remove-restriction-lock    |                                                                                            |
+| org-agenda-todo-ignore-with-deadline  | exclude scheduled items from global todo .                                                 |
+| org-agenda-todo-ignore-with-timestamp | exclude items with an active timestamp other than a DEADLINE or a SCHEDULED timestamp      |
+| org-agenda-todo-ignore-with-date      | exlcude items iwth at least one active timestamp                                           |
+| org-agenda-todo-list-sublevels        | omit the sublevels from the global list. Only the highest level TODO headline is included. |
+* Terminologies
+** agenda dispatcher
+* Reporting clock
+| commands                      | key                         | doom keys | custom keys | descriptions                                                    |
+| org-agenda-view-mode-dispatch | v c (enable in agenda mode) | z c       |             |                                                                 |
+| org-clock-report              |                             | spc-m-c-R |             | create dynamic clock table                                      |
+| org-clock-display             | c-c c-x c-d                 |           |             | provides a quick summary of block time for the current org file |
+| org-agenda-clockreport-mode   | 1 R (enable in agneda mode) |           |             |                                                                 |
+** examples
+*** In evil mode, report clock data this month, type f12-a z-m z-c
+*** In evil mode, report clock data this week, type f12-a z-w z-c
+*** To get all clock time report within agenda mode, M-x org-agenda-clockreport-mode (type 1 R)
+*** export agenda report to html with c-x c-w (write-file) and saved it agenda report as .html file.
+* Example of how clocking should look like
+** Organization
+:PROPERTIES:
+:ID:       bfabde2a-6ada-4f02-af94-df0a84d6e69a
+:END:
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 17:30]--[2022-02-20 Sun 17:31] =>  0:01
+CLOCK: [2022-02-20 Sun 17:26]--[2022-02-20 Sun 17:29] =>  0:03
+:END:
+*** Project A
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 17:24]--[2022-02-20 Sun 17:25] =>  0:01
+:END:
+**** DONE TASK 1
+**** DONE TASK 2
+**** DONE TASK 3
+
+** Tasks
+*** DONE Some miscellaneous task
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 17:47]--[2022-02-20 Sun 17:48] =>  0:01
+CLOCK: [2022-02-20 Sun 17:46]--[2022-02-20 Sun 17:47] =>  0:01
+CLOCK: [2022-02-20 Sun 17:40]--[2022-02-20 Sun 17:41] =>  0:01
+CLOCK: [2022-02-20 Sun 17:32]--[2022-02-20 Sun 17:40] =>  0:08
+CLOCK: [2022-02-20 Sun 17:31]--[2022-02-20 Sun 17:32] =>  0:01
+:END:
+*** TODO to be archived

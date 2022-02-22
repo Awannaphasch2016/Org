@@ -1,0 +1,21 @@
+#+TITLE: Org Roam Note
+
+* key binding
+| commands                          | key | doom keys | custom keys | descriptions   |
+| org-id-get-create                 |     | spc-m-I   |             | create node id |
+| org-roam-node-insert              |     | spc-n-r-i |             |                |
+| org-roam-node-find                |     | spc-n-r-f |             |                |
+| org-roam-capture                  |     | spc-n-r-n |             |                |
+| org-roam-buffer-toggle            |     | spc-n-r-r |             |                |
+| org-roam-buffer-display-dedicated |     | spc-n-r-R |             |                |
+| org-roam-capture                  |     | spc-n-r-n |             |                |
+* For Users
+* For Deverlopers
+** Useful functions/commands/variables to know for org roam impementation
+*** variables
+| variables          | descriptions |
+| org-roam-directory |              |
+*** commands and functions
+| commands                  | descriptions |
+| org-roam-db-autosync-mode |              |
+| completion-at-point       |              |

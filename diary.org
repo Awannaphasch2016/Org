@@ -1,4 +1,6 @@
+#+FILETAGS: dairy
 
+Dairy contains daily journal. I know there is a file named journal.org, but, says, for some history of org agenda implementation, dairy.org is a file for journal while journal.org is a file for all tasks that are irrelevant that happened in a day, for example, interruption, etc.
 
 * 2021
 
@@ -19,3 +21,29 @@
 *** 2021-10-07 Thursday
 
 *** 2021-10-11 Monday
+
+* 2022
+
+** 2022-02 February
+
+*** 2022-02-18 Friday
+
+*** 2022-02-19 Saturday
+
+*** 2022-02-20 Sunday
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 15:06]--[2022-02-20 Sun 15:08] =>  0:02
+CLOCK: [2022-02-20 Sun 14:54]--[2022-02-20 Sun 15:05] =>  0:11
+CLOCK: [2022-02-20 Sun 14:48]--[2022-02-20 Sun 14:53] =>  0:05
+CLOCK: [2022-02-20 Sun 14:46]--[2022-02-20 Sun 14:47] =>  0:01
+CLOCK: [2022-02-20 Sun 14:41]--[2022-02-20 Sun 14:45] =>  0:04
+:END:
+**** interruption
+[2022-02-20 Sun 17:47]
+**** sometihng :WORK:
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 17:48]--[2022-02-20 Sun 17:51] =>  0:03
+:END:
+[2022-02-20 Sun 17:48]
+**** wtf
+[2022-02-20 Sun 17:48]

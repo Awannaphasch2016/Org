@@ -1,0 +1,7 @@
+#+TITLE: Org Capture Note
+
+* creating org capture template
+** examples
+#+BEGIN_SRC emacs-lisp
+(setq org-roam-capture-templates '(("d" "default" plain "%?" :target (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title} ") :unnarrowed t)))
+#+END_SRC

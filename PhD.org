@@ -1,0 +1,16 @@
+#+title: PhD
+#+FILETAGS: @PhD WORK
+
+* PhD
+:PROPERTIES:
+:ID:       46615078-5777-4487-8197-b1c6fd8641a0
+:END:
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 22:57]--[2022-02-20 Sun 22:58] =>  0:01
+CLOCK: [2022-02-20 Sun 22:56]--[2022-02-20 Sun 22:57] =>  0:01
+CLOCK: [2022-02-20 Sun 22:55]--[2022-02-20 Sun 22:56] =>  0:01
+CLOCK: [2022-02-20 Sun 22:52]--[2022-02-20 Sun 22:53] =>  0:01
+:END:
+** Notes :NOTE:
+** Questions :QUESTION:
+** Meeting :MEETING:

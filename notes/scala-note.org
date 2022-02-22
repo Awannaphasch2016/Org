@@ -1,6 +1,35 @@
 #+TITLE: Scala Note
 
 * Basic and Fundamental
+** Nil
+Nill is equalent of List()
+#+BEGIN_SRC scala
+val empty1: List[Int] = List()
+// empty: List[Int] = List()
+
+val empty2: List[Int] = Nil
+// empty: List[Int] = List()
+
+empty1 == empty2
+// res0: Boolean = true
+#+END_SRC
+** List (aka Linked List)
+#+BEGIN_SRC scala
+val list1 = List(1,2,3)
+// list: List[Int] = List(1, 2, 3)
+
+val list2 = 1 :: 2 :: 3 :: Nil
+// list: List[Int] = List(1, 2, 3)
+
+list1 == list2
+// res1: Boolean = true
+
+// Nil must bet the last element of the list.
+val list = 1 :: 2 :: 3
+// <console>:10: error: value :: is not a member of Int
+            // val list = 1 :: 2 :: 3
+#+END_SRC
+
 ** Trait
 *** Function1, Function2, ... ,FunctionN
 **** it is a function that takes in N input and output something.
@@ -36,11 +65,50 @@ object fp {
 #+RESULTS:
 : 10
 ** by-name parameters vs by-value parameters, see example [[file:books/learning-fp-in-scala.org::*Example of by-name parameters use case.][here]].
+** currying
+[[file:books/learning-fp-in-scala.org::*Chapter 28: Partially-Applied Functions (and Currying)][explaination of what currying and paritially-applied function (PAF) is.]]
+*** partially-applied function (PAF)
+#+BEGIN_SRC scala :no-eval
+def add(x:Int, y:Int) = x + y
+
+// assign regular functions from def to val.
+val addFunction = add _
+
+// assign regular functions to curried function
+val addCurried = (add _).curried
+
+// now you can used curried function as followed
+addCurried(1)(2)
+
+// creating paritially-applied function from the curried function
+val addFunctionTwo = addFunction(2)(_)
+
+
+// now you can used PAF function as followed
+addFunctionTwo(5) // 7
+#+END_SRC
 * Scala Specification
 ** [[file:books/scal-puzzlers.org::*This puzzle make use of "The Scala Language Specification, Section 5.1.1" which produce adapting argument lists behavior.][This puzzle make use of "The Scala Language Specification, Section 5.1.1" which produce adapting argument lists behavior.]]
 * Scala Compiler
 ** Eta Expansion (expand scala method to function.)
 ** Scala Compiler Commandlines
 ***  The Scala compiler's -Xlint option enables recommended additional warnings that you can use to flag suspicious language usage.
+* Examples
+** implement sum with recursion
+#+BEGIN_SRC scala
+object ob{
+  def sum(list: List[Int]): Int = list match {
+    case Nil => 0
+    case head:: tail => head + sum(tail)
+  }
+
+  def main(args: Array[String]) = {
+    println(sum(List(1,2,3,4)))
+  }
+}
+#+END_SRC
+* Debugging
+** getting stack trace of compiled programs after program finish running, see [[file:books/learning-fp-in-scala.org::*Manually dumping the stack with the sum examples][here]].
+
 * FAQs
 ** functions vs methods

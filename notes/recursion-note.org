@@ -1,0 +1,7 @@
+#+TITLE: Recursion Note
+
+* References
+** [[file:books/learning-fp-in-scala.org::*Chapter 36: Recursion: Thinking Recursively][Chapter 36: Recursion: Thinking Recursively]]
+
+* Tail Recursion
+** [[file:books/learning-fp-in-scala.org::*“Functions which call themselves as their last action are called tail-recursive. The Scala compiler detects tail recursion and replaces it with a jump back to the beginning of the function, after updating the function parameters with the new values … as long as the last thing you do is calling yourself, it’s automatically tail-recursive (i.e., optimized).”][“Functions which call themselves as their last action are called tail-recursive. The Scala compiler detects tail recursion and replaces it with a jump back to the beginning of the function, after updating the function parameters with the new values … as long as the last thing you do is calling yourself, it’s automatically tail-recursive (i.e., optimized).”]]

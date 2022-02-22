@@ -1,0 +1,201 @@
+#+FILETAGS: REFILE
+
+refile.org acts like a cabinet of all tasks because it is organized via GTD methods. (see ~/org/gtd.org for more information on gtd methodology)
+
+* TODO It doesn't seem taht my f12 space works as describe in 3.2 Refiling Task
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 10:59]--[2022-02-20 Sun 11:00] =>  0:01
+:END:
+[2022-02-20 Sun 10:59]
+[[file:~/org/refile.org][file:~/org/refile.org]]
+* TODO figure out how to do tags search over org files. With this I can search for things like key binding of "x package" for example. (Does org roam has any functionality supporting this header + tags filtering? maybe I can try that solution as well.)
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 11:12]--[2022-02-20 Sun 11:13] =>  0:01
+:END:
+[2022-02-20 Sun 11:12]
+[[file:~/org/notes/emacs/packages/org-agenda-note.org::*Key binding][Key binding]]
+* TODO making jump to file/header more systemetic. (figure out a way to list only header of all orgs file. Then figure out a way to incrementally narrow down the search. similar to how org agenda has incremental search.)
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 11:14]--[2022-02-20 Sun 11:15] =>  0:01
+:END:
+[2022-02-20 Sun 11:14]
+[[file:~/org/notes/emacs/packages/org-agenda-note.org::*Key binding][Key binding]]
+* TODO learn the basic of how to modified org agenda view.
+[2022-02-20 Sun 12:44]
+[[file:~/.doom.d/config.org::*Custom Agenda Views][Custom Agenda Views]]
+* TODO style org agenda view so that it is easier to see. :emacs:
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 12:52]--[2022-02-20 Sun 12:53] =>  0:01
+:END:
+[2022-02-20 Sun 12:52]
+[[file:~/.doom.d/config.org::*Ace jump][Ace jump]]
+* LEARNING how to set default task for punch in? :emacs:
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 12:55]--[2022-02-20 Sun 12:56] =>  0:01
+:END:
+[2022-02-20 Sun 12:55]
+* TODO create NEXT actions for tasks of every projects.
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 13:04]--[2022-02-20 Sun 13:05] =>  0:01
+:END:
+[2022-02-20 Sun 13:04]
+[[file:~/org/notes/getting-things-done-gtd-note.org::a][What do I work on next?]]
+* TODO assign MAYBE to tasks in every projects
+[2022-02-20 Sun 13:06]
+[[file:~/org/notes/getting-things-done-gtd-note.org::*What do I work on next?][What do I work on next?]]
+* LEARNING
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 13:24]--[2022-02-20 Sun 13:26] =>  0:02
+:END:
+[2022-02-20 Sun 13:24]
+* LEARNING what exactly does doom sync do? I feel like this is a part of the puzzle that, sometimes, my own config doesn't load properly after doom/reload.
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 14:30]--[2022-02-20 Sun 14:34] =>  0:04
+CLOCK: [2022-02-20 Sun 14:27]--[2022-02-20 Sun 14:30] =>  0:03
+CLOCK: [2022-02-20 Sun 13:46]--[2022-02-20 Sun 14:27] =>  0:41
+CLOCK: [2022-02-20 Sun 13:42]--[2022-02-20 Sun 13:45] =>  0:03
+CLOCK: [2022-02-20 Sun 13:39]--[2022-02-20 Sun 13:40] =>  0:01
+CLOCK: [2022-02-20 Sun 13:27]--[2022-02-20 Sun 13:38] =>  0:11
+CLOCK: [2022-02-20 Sun 13:26]--[2022-02-20 Sun 13:27] =>  0:01
+:END:
+[2022-02-20 Sun 13:26]
+* LEARNING learn about the following org-model. org-crypt, org-gnus, org-bbdb, org-irc, org-
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 13:38]--[2022-02-20 Sun 13:39] =>  0:01
+:END:
+[2022-02-20 Sun 13:38]
+#+BEGIN_SRC emacs-lisp
+(setq org-modules (quote (org-bbdb
+                          org-bibtex
+                          org-crypt
+                          org-gnus
+                          org-id
+                          org-info
+                          org-jsinfo
+                          org-habit
+                          org-inlinetask
+                          org-irc
+                          org-mew
+                          org-mhe
+                          org-protocol
+                          org-rmail
+                          org-vm
+                          org-wl
+                          org-w3m)))
+#+END_SRC
+* LEARNING read "write code comments in org-mode with poporg." :READ:
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 13:45]--[2022-02-20 Sun 13:46] =>  0:01
+:END:
+[2022-02-20 Sun 13:45]
+* NEXT Respond to  on
+SCHEDULED: <2022-02-20 Sun>
+[2022-02-20 Sun 14:30]
+[[file:~/.doom.d/config.org::*Org capture][Org capture]]
+* TODO hwo to narrow todo list (open with f12 t) incrementally. (mentioned in 8.4 Filtering)
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 14:34]--[2022-02-20 Sun 14:35] =>  0:01
+:END:
+[2022-02-20 Sun 14:34]
+[[file:~/org/notes/incremental-learning.org::*\[\[https://github.com/emacsorphanage/emamux\]\[interact with tmux from emacs\]\]][interact with tmux from emacs]]
+* LEARNING what is tag/category in org mode :emacs:
+[2022-02-20 Sun 14:41]
+* TODO figure out why at the "...search again..." line there are 10 values. (how can I configure this.) are those tags? or TODO state?
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 14:45]--[2022-02-20 Sun 14:46] =>  0:01
+:END:
+[2022-02-20 Sun 14:45]
+* LEARNING what is interitance tags in org mode? :emacs:
+[2022-02-20 Sun 14:47]
+* TODO how to filter by tags? how to filter by todo state? and how to filter both of them at the same time?
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 14:47]--[2022-02-20 Sun 14:48] =>  0:01
+:END:
+[2022-02-20 Sun 14:47]
+[[file:~/org/refile.org::*LEARNING what is interitance tags in org mode?][LEARNING what is interitance tags in org mode?]]
+* LEARNING how do I clock in a task? is it work differently than punch in? (9. time clocking)
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 14:53]--[2022-02-20 Sun 14:54] =>  0:01
+:END:
+[2022-02-20 Sun 14:53]
+* TODO what is bh/orgnization-task-id? how can I change default task? :emacs:
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 15:05]--[2022-02-20 Sun 15:06] =>  0:01
+:END:
+[2022-02-20 Sun 15:05]
+[[file:~/.doom.d/config.org::*uncategorized][uncategorized]]
+* LEARNING what is the proper way to stop the clock-in? how to report time spend tracked by clock
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 15:20]--[2022-02-20 Sun 15:21] =>  0:01
+:END:
+[2022-02-20 Sun 15:20]
+* NEXT clocking system works mostly, but I feel that there are too many ways to manually mess up things. Is it possible to implement the same clock system, but make it more robust to manual mistake/error.
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 17:39]--[2022-02-20 Sun 17:40] =>  0:01
+CLOCK: [2022-02-20 Sun 17:29]--[2022-02-20 Sun 17:30] =>  0:01
+:END:
+[2022-02-20 Sun 17:29]
+[[file:~/org/todo.org::*Task 4][Task 4]]
+* TODO how to see my current clock-in task?
+[2022-02-20 Sun 17:41]
+[[file:~/org/refile.org::*LEARNING how do I clock in a task? is it work differently than punch in? (9. time clocking)][LEARNING how do I clock in a task? is it work differently than punch in? (9. time clocking)]]
+* useful keybinding c-c c-w :NOTE:
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 19:22]--[2022-02-20 Sun 19:23] =>  0:01
+:END:
+[2022-02-20 Sun 19:22]
+[[file:/tmp/agenda.html::<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">]]
+* NEXT useful key-binding c-c c-w
+[2022-02-20 Sun 19:23]
+[[file:/tmp/agenda.html::<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">]]
+* TODO figure out why my configuration cannot be loaded to doom sandbox? is it sandbox error? :emacs:
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 21:53]--[2022-02-20 Sun 21:55] =>  0:02
+:END:
+[2022-02-20 Sun 21:53]
+* TODO figure out how to change lispy key binding. D for delete and y for yank. :emacs:
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 21:56]--[2022-02-20 Sun 21:57] =>  0:01
+:END:
+[2022-02-20 Sun 21:56]
+[[file:~/org/projects/sideprojects/garun/garun.org::*assign schedule and deadline to header doesn't show in agenda?][assign schedule and deadline to header doesn't show in agenda?]]
+* NEXT how to search tags in agenda mode? OR how to filter by tags? :emacs:
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 22:30]--[2022-02-20 Sun 22:31] =>  0:01
+:END:
+[2022-02-20 Sun 22:30]
+[[file:~/org/refile.org::*figure out how to do tags search over org files. With this I can search for things like key binding of "x package" for example. (Does org roam has any functionality supporting this header + tags filtering? maybe I can try that solution as well.)][figure out how to do tags search over org files. With this I can search for things like key binding of "x package" for example. (Does org roam has any functionality supporting this header + tags filtering? maybe I can try that solution as well.)]]
+* TODO how to schedule recurrence task like weekly review to be the first task on every monday.
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 23:14]--[2022-02-20 Sun 23:15] =>  0:01
+:END:
+[2022-02-20 Sun 23:14]
+[[file:~/org/weekly-review.org][file:~/org/weekly-review.org]]
+* NEXT how do I archieve stuff in org mode? :emacs:
+:LOGBOOK:
+CLOCK: [2022-02-21 Mon 00:03]--[2022-02-21 Mon 00:04] =>  0:01
+CLOCK: [2022-02-20 Sun 23:49]--[2022-02-20 Sun 23:50] =>  0:01
+:END:
+[2022-02-20 Sun 23:49]
+[[file:~/.doom.d/config.org::*Report block][Report block]]
+* TODO workon refiling stuff
+[2022-02-21 Mon 00:11]
+[[file:~/org/refile.org::+FILETAGS: REFILE]]
+* TODO update phone OS and buy iphone storage.
+:LOGBOOK:
+CLOCK: [2022-02-21 Mon 21:48]--[2022-02-21 Mon 21:49] =>  0:01
+:END:
+[2022-02-21 Mon 21:48]
+[[file:~/org/journal.org::*shower][shower]]
+* TODO tell jared to always close bathroom door because dogs drink from the toilet.
+:LOGBOOK:
+CLOCK: [2022-02-21 Mon 22:00]--[2022-02-21 Mon 22:01] =>  0:01
+:END:
+[2022-02-21 Mon 22:00]
+[[file:~/org/PhD.org::*PhD][PhD]]
+* TODO write notes on definition of tags in emacs, so it stay consistence. :gtd:@home:
+:LOGBOOK:
+CLOCK: [2022-02-21 Mon 22:02]--[2022-02-21 Mon 22:03] =>  0:01
+:END:
+[2022-02-21 Mon 22:02]
+[[file:~/org/GTD.org::+TITLE: Gtd]]

@@ -14,6 +14,7 @@
 | org-hide-block-all                  |           |           |             | Fold all source blocks in the current buffer                               |
 | org-babel-remove-result-one-or-many | c-c c-v k |           |             | remove all results blocks                                                  |
 | org-babel-logb-ingest               | C-c C-v i |           |             | Add all named source blocks defined in FILE to org-babel-library-of-babel. |
+| org-babel-demarcate-block           |           |           |             | org babel split block into two                                             |
 * using results from one code block in another org-mode
 ref: https://kitchingroup.cheme.cmu.edu/blog/2019/02/12/Using-results-from-one-code-block-in-another-org-mode/
 

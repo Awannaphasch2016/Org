@@ -1,0 +1,14 @@
+#+TITLE: Jvm Note
+
+* JVM specification
+** default stacks size is 1024 kbytes.
+*** you can check the JVM stack size with ~java -XX:+PrintFlagsFinal -version | grep -i stack~
+*** stack size can be adjusted with ~java -Xss 1M... (the rest of your command lien here)~ where M is megabyte.
+* JVM memory setting
+** As a final note, you can find more options for controlling Java application memory use by looking at the output of the java -X command:
+*** usecase example
+**** ~java -Xms64m -Xmx1G myapp.jar~
+*** example of command line arguments with prefix -X
+**** Xms set initial Java heap size
+**** Xmx set maximum Java heap size
+**** Xss set java thread stack size

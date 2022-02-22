@@ -1,0 +1,6 @@
+#+TITLE: Org Crypt Note
+
+org-crypt allows you to tag headings with a special tag crypt and org-mode can keep data in these headings encrypted when saved to disk. You decrypt the heading temporarily when you need access to the data and org-mode re-encrypts the heading as soon as you save the file.
+
+* references
+** [[http://doc.norang.ca/org-mode.html][Handling Encryption]]

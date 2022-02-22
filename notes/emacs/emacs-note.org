@@ -55,6 +55,7 @@ lexical binding (static binding) and dynamic binding refer to how variables are 
 A name that is lexically bound is looked up only in bindings in the lexical environment of the name  that is, in bindings that enclose the name in the source code. So if “a” is lexically bound, the code above prints “1”, because only binding (1) is in the lexical environment. When there are multiple bindings in the lexical environment, the innermost one is used.
 
 A name that is dynamically bound is looked up only in bindings in the dynamic environment of the name  that is, in all bindings which have been created since the program began and which have not yet been destroyed. When there are multiple bindings in the dynamic environment, the most recently created one is used. So if “a” is dynamically bound, the code above prints “2” because both binding (1) and binding (2) have been created by the time “a” is evaluated, but binding (2) was created more recently.
+** defcustom
 
 * Help sections and related info
 ** looking up documentation, see [[https://discourse.doomemacs.org/t/how-to-debug-issues/55#looking-up-documentation-3][here]].
@@ -256,6 +257,22 @@ Once in the edebug mode
 ;; (defun anak/insdate-insert-current-date
 ;;     )
 #+END_SRC
+**** info mode (I often recalled it incorrectly as help mode)
+On the resting page, navigation with info mode is mentioned.
+#+BEGIN_QUOTE
+This (the Directory node) gives a menu of major topics.
+Typing "q" exits, "H" lists all Info commands, "d" returns here,
+"h" gives a primer for first-timers,
+"mEmacs<Return>" visits the Emacs manual, etc.
+
+In Emacs, you can click mouse button 2 on a menu item or cross reference
+to select it.
+#+END_QUOTE
+***** Key binding
+| commands       | key | doom keys | custom keys | descriptions                           |
+| info-directory |     |           |             | go to the resting page of emacs manual |
+
+
 ** Built-in functionality and macros
 *** Functionality
 **** [[https://www.gnu.org/software/emacs/manual/html_mono/ediff.html][Ediff]]
@@ -276,6 +293,9 @@ Note: It is not intuitive to use at all. Unless, I need to use it, I am better w
 **** Align
 | commands    | key | doom keys | custom keys | descriptions |
 | align-regex |     |           |             |              |
+**** Things related to clocking and time
+| commands                | key | doom keys | custom keys | descriptions                                            |
+| calendar-sunrise-sunset |     |           |             | Local time of sunrise and sunset for date under cursor. |
 *** Emacs components
 **** Buffer
 ***** How =display-buffer= works
