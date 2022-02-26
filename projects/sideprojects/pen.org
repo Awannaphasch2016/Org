@@ -2,6 +2,25 @@
 #+FILETAGS: pen PERSONAL @sideproject
 
 * Pen
+** Habits :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING: DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+*** TODO 30 mins about pen.el codebase + prompt programming.
+:LOGBOOK:
+- State "TODO"       from "DONE"       [2022-02-26 Sat 16:56]
+:END:
+- State "WAITING"    from "NEXT"       [2022-02-26 Sat 10:39] \\
+  I have learn and install org habit
+[2022-02-24 Thu 22:58]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*3.2 A sample database application][3.2 A sample database application]]
+SCHEDULED: <2022-02-27 Sun .+1d/3d>
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: NEXT
+:END:
 ** Questions :QUESTION:
 ** Notes :NOTE:
 ** Meeting :MEETING:

@@ -2,6 +2,9 @@
 #+FILETAGS: PERSONAL @sideproject mywebsite
 
 * Personal Website
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 18:17]
+:END:
 ** Questions :QUESTION:
 ** Notes :NOTE:
 ** Meeting :MEETING:
@@ -11,16 +14,16 @@
   - Example of [[https://www.huxiaoxing.com/building-a-website-with-org-mode-files][Personal website that use org mode]].
   - collection of [[https://orgmode.org/worg/org-web.html][Personal Webiste that use org mode]].
   - choose website style that I like from [[https://orgmode.org/worg/org-web.html][Personal Websites that use Org mode]], and build mine.
-**** TODO migrate all of my notes to blog in jykell.
-https://orgmode.org/worg/org-tutorials/org-jekyll.html
-*** project: create website for blog using org mode.
-**** goal: publish website that capable of hosting org file
-- ref
   - read the following tutorial: https://thackl.github.io/blogging-with-emacs-org-mode-and-jekyll
 - note
   - my current blog is using jekyll but files are .md not .org.
   - I started to add org files into my blogs directory without testing whether or not it will work. On top of that, I didn't even follow naming convention which, if I remember correct, are necessary to make jekyll works. Hence, I don't expect it to work, so debug it.
-*** TODO One I get my website running with jekyll, I need to merge my old blog post and articles. This includes changing file name and directory.
+**** CANCELLED migrate all of my notes to blog in jykell. :CANCELLED:
+- State "CANCELLED"  from "TODO"       [2022-02-26 Sat 12:09] \\
+  I decided to use hugo instead. The reason is simple, I never heard someone use jekll and org mode in the same sentence, but hugo and org mode is heard every where.
+https://orgmode.org/worg/org-tutorials/org-jekyll.html
+**** NEXT build website with hugo + org mode .
+**** TODO One I get my website running with jekyll or hugo, I need to merge my old blog post and articles. This includes changing file name and directory.
 :LOGBOOK:
 CLOCK: [2022-02-22 Tue 10:07]--[2022-02-22 Tue 10:08] =>  0:01
 :END:

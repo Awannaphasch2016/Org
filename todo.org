@@ -97,7 +97,7 @@ CLOCK: [2022-02-24 Thu 11:10]--[2022-02-24 Thu 11:12] =>  0:02
 [[file:~/org/school.org::*check my exam dates][check my exam dates]]
 *** TODO figure out how often I should post on linkedIn and what content I should tweet about? do research on this.
 ** TODO read this email https://mail.google.com/mail/u/0/#inbox/FMfcgzGmvBpdjhSVwkfgqdzcsTtkhgrL
-SCHEDULED: <2022-02-24 Thu>
+SCHEDULED: <2022-02-25 Fri>
 [2022-02-24 Thu 11:14]
 [[file:~/org/school.org::*check my exam dates][check my exam dates]]
 ** TODO clean up my email. remove recurring email.  remove notification.
@@ -146,6 +146,10 @@ CLOCK: [2022-02-24 Thu 22:45]--[2022-02-24 Thu 22:47] =>  0:02
 :END:
 [2022-02-24 Thu 22:45]
 [[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*key attributes of entity types][key attributes of entity types]]
+** TODO map out purpose/principle/vision for all the projects.
+SCHEDULED: <2022-02-26 Sat>
+[2022-02-26 Sat 10:33]
+[[file:~/org/projects/sideprojects/pen.org::*write out business plan required for me to execute pen.el start up plan. what does a founder need to know before starting a company? how to estimate value of the business? what is the time horizon (can I start doing it before starting the summer)? what do I need to know because deciding on the amount of money that pen.el need to continue the project?][write out business plan required for me to execute pen.el start up plan. what does a founder need to know before starting a company? how to estimate value of the business? what is the time horizon (can I start doing it before starting the summer)? what do I need to know because deciding on the amount of money that pen.el need to continue the project?]]
 * Vehicle maintenance
 :PROPERTIES:
 :CATEGORY: Vehicle
@@ -167,28 +171,18 @@ CLOCK: [2022-02-21 Mon 23:23]--[2022-02-21 Mon 23:24] =>  0:01
 :PROPERTIES:
 :CATEGORY: Password
 :END:
-* Habits
-** NEXT start daily writing and reading. (checkout template that I made for roam research to used as a building block. dont reinvent the wheel, but adjust things accordingly.)
-SCHEDULED: <2022-02-24 Thu>
-[2022-02-24 Thu 22:55]
-[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*domain defines all possible values for attribute.][domain defines all possible values for attribute.]]
-SCHEDULED: <2022-02-24 Thu .+1d/3d>
+* Habits :habit:
 :PROPERTIES:
-:STYLE: habit
-:REPEAT_TO_STATE: NEXT
+:CATEGORY: Habit
+:LOGGING: DONE(!)
+:ARCHIVE:  %s_archive::* Habits
 :END:
-** NEXT Drink 1 gallon of water daily. Always buy 1 gallon of water on the way to walking home.
-[2022-02-24 Thu 22:57]
-[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*logical design or data model mapping][logical design or data model mapping]]
-SCHEDULED: <2022-02-24 Thu .+1d/3d>
-:PROPERTIES:
-:STYLE: habit
-:REPEAT_TO_STATE: NEXT
+*** NEXT Always buy 1 gallon of water on the way to walking home. Make sure to drink 1 gallon of water daily.
+:LOGBOOK:
 :END:
-** NEXT learn about pen.el codebase + prompt programming daily or bi-daily.
-[2022-02-24 Thu 22:58]
-[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*3.2 A sample database application][3.2 A sample database application]]
-SCHEDULED: <2022-02-24 Thu .+1d/3d>
+[2022-02-26 Sat 16:57]
+[[file:~/org/todo.org::*Always buy 1 gallon of water on the way to walking home. Make sure to drink 1 gallon of water daily.][Always buy 1 gallon of water on the way to walking home. Make sure to drink 1 gallon of water daily.]]
+SCHEDULED: <2022-02-27 Sun .+1d/3d>
 :PROPERTIES:
 :STYLE: habit
 :REPEAT_TO_STATE: NEXT

@@ -23,6 +23,16 @@ CLOCK: [2022-02-21 Mon 22:06]--[2022-02-21 Mon 22:26] =>  0:20
 ** Weekly review
 ** Refiling  + organizing
 :LOGBOOK:
+CLOCK: [2022-02-26 Sat 10:49]--[2022-02-26 Sat 10:54] =>  0:05
+CLOCK: [2022-02-26 Sat 10:44]--[2022-02-26 Sat 10:49] =>  0:05
+CLOCK: [2022-02-26 Sat 10:40]--[2022-02-26 Sat 10:43] =>  0:03
+CLOCK: [2022-02-26 Sat 10:33]--[2022-02-26 Sat 10:40] =>  0:07
+CLOCK: [2022-02-26 Sat 10:28]--[2022-02-26 Sat 10:33] =>  0:05
+CLOCK: [2022-02-26 Sat 10:18]--[2022-02-26 Sat 10:28] =>  0:10
+CLOCK: [2022-02-26 Sat 10:12]--[2022-02-26 Sat 10:17] =>  0:05
+CLOCK: [2022-02-26 Sat 10:05]--[2022-02-26 Sat 10:12] =>  0:07
+CLOCK: [2022-02-26 Sat 10:03]--[2022-02-26 Sat 10:05] =>  0:02
+CLOCK: [2022-02-26 Sat 09:45]--[2022-02-26 Sat 10:01] =>  0:16
 CLOCK: [2022-02-24 Thu 16:04]--[2022-02-24 Thu 16:15] =>  0:11
 CLOCK: [2022-02-24 Thu 16:03]--[2022-02-24 Thu 16:04] =>  0:01
 CLOCK: [2022-02-24 Thu 16:02]--[2022-02-24 Thu 16:03] =>  0:01
@@ -39,6 +49,9 @@ CLOCK: [2022-02-24 Thu 11:18]--[2022-02-24 Thu 11:19] =>  0:01
 :END:
 [2022-02-24 Thu 11:18]
 [[file:~/org/GTD.org::*Refiling + organizing][Refiling + organizing]]
+*** DONE assign next task to each of my project.
+[2022-02-26 Sat 10:28]
+[[file:~/org/refile.org][file:~/org/refile.org]]
 ** NEXT write down my version of GTD purposed -> action models under Getting projects Creatively Under (7.48 hour left mins mark) for all aspect in life I want to achieve.
 SCHEDULED: <2022-02-24 Thu>
 :LOGBOOK:

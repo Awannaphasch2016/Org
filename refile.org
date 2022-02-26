@@ -1,30 +1,88 @@
 #+FILETAGS: REFILE
 
 refile.org acts like a cabinet of all tasks because it is organized via GTD methods. (see ~/org/gtd.org for more information on gtd methodology)
-* TODO talk to community about fixing internet.
-[2022-02-26 Sat 00:35]
-[[file:~/org/todo.org::+FILETAGS: PERSONAL]]
-* TODO Read about how to write Thesis for my PhD.
+* TODO do weekly planing for each day of the whole week.
+[2022-02-26 Sat 10:40]
+[[file:~/org/PhD.org::*finalize conclusion of ensemble modele's performance on 10k instances.][finalize conclusion of ensemble modele's performance on 10k instances.]]
+* TODO install and learn HPC slurm + emacs package. (slurm.el)
+[2022-02-26 Sat 10:49]
+[[file:~/org/projects/sideprojects/garun/garun.org::*learn to use tramp to connect to aws container cloud.][learn to use tramp to connect to aws container cloud.]]
+* TODO find logo of my picture and send to iyann to help me design business card
+[2022-02-26 Sat 12:15]
+* TODO check out rememberance agent for emacs (see [[https://www.google.com/search?q=emacs+resembrance+agent&rlz=1C1CHBF_enUS941US941&oq=emacs+resembrance+agent&aqs=chrome..69i57j69i64.4756j0j7&sourceid=chrome&ie=UTF-8][here]].)
+[2022-02-26 Sat 12:17]
+[[file:~/org/projects/sideprojects/garun/garun.org::*Questions][Questions]]
+* searching with org-rifle :NOTE:emacs:garun:
+[2022-02-26 Sat 12:24]
+[[file:~/org/personal-website.org::*migrate all of my notes to blog in jykell.][migrate all of my notes to blog in jykell.]]
+* TODO tabineAI (see [[https://www.tabnine.com/blog/17-cool-emacs-packages/][here]]) :emacs:garun:resembranceagent:
 :LOGBOOK:
-CLOCK: [2022-02-26 Sat 10:01]--[2022-02-26 Sat 10:02] =>  0:01
+CLOCK: [2022-02-26 Sat 12:40]--[2022-02-26 Sat 12:43] =>  0:03
 :END:
-[2022-02-26 Sat 10:01]
-[[file:~/org/refile.org::*figure out a way to migrate content from roam research to emacs using org roam and others. What are features that I still need from roam research that may take too much time for me to implement or figure out to replicate in emacs?][figure out a way to migrate content from roam research to emacs using org roam and others. What are features that I still need from roam research that may take too much time for me to implement or figure out to replicate in emacs?]]
-* TODO draft content of the next paper. what are sections that I should have? what are references? collect logs of data I may need to use.
+[2022-02-26 Sat 12:40]
+[[file:~/org/projects/sideprojects/garun/garun.org::*Task][Task]]
+* TODO resembrance agent package, eva (see [[https://github.com/meedstrom/eva][here]]) :emacs:garun:resembranceagent:
+[2022-02-26 Sat 12:44]
+[[file:~/org/projects/sideprojects/garun/garun.org::*Task][Task]]
+* TODO assign noblocking properties to repeated task. (http://doc.norang.ca/org-mode.html#HandlingBlockedTasks)
 :LOGBOOK:
-CLOCK: [2022-02-26 Sat 10:02]--[2022-02-26 Sat 10:03] =>  0:01
+CLOCK: [2022-02-26 Sat 12:58]--[2022-02-26 Sat 12:59] =>  0:01
 :END:
-[2022-02-26 Sat 10:02]
-[[file:~/org/refile.org::*figure out a way to migrate content from roam research to emacs using org roam and others. What are features that I still need from roam research that may take too much time for me to implement or figure out to replicate in emacs?][figure out a way to migrate content from roam research to emacs using org roam and others. What are features that I still need from roam research that may take too much time for me to implement or figure out to replicate in emacs?]]
-* TODO refile task within todos/tasks into other section appropriatly.
-[2022-02-26 Sat 10:05]
-[[file:~/org/refile.org::*start daily writing and reading. (checkout template that I made for roam research to used as a building block. dont reinvent the wheel, but adjust things accordingly.)][start daily writing and reading. (checkout template that I made for roam research to used as a building block. dont reinvent the wheel, but adjust things accordingly.)]]
-* TODO commit incremental learning
-[2022-02-26 Sat 10:12]
-[[file:~/org/refile.org::*read the art of debugging.][read the art of debugging.]]
-* TODO assign the rest of the school homework to schedule. (goal is to finish all homework + notes as soon as possible)
+[2022-02-26 Sat 12:58]
+* TODO plan out how to implement my own server. including buying server and setting things up.
 :LOGBOOK:
-CLOCK: [2022-02-26 Sat 10:17]--[2022-02-26 Sat 10:18] =>  0:01
+CLOCK: [2022-02-26 Sat 14:34]--[2022-02-26 Sat 14:35] =>  0:01
 :END:
-[2022-02-26 Sat 10:17]
-[[file:~/org/refile.org::*create notes for all classes.][create notes for all classes.]]
+[2022-02-26 Sat 14:34]
+[[file:~/org/todo.org::*start daily writing and reading. (checkout template that I made for roam research to used as a building block. dont reinvent the wheel, but adjust things accordingly.)][start daily writing and reading. (checkout template that I made for roam research to used as a building block. dont reinvent the wheel, but adjust things accordingly.)]]
+* TODO start putting my expense and income in org ledger.
+[2022-02-26 Sat 16:32]
+[[file:~/org/refile.org::*plan out how to implement my own server. including buying server and setting things up.][plan out how to implement my own server. including buying server and setting things up.]]
+* WAITING limit my daily/weekly/monthly budget. :WAITING:
+- State "WAITING"    from "TODO"       [2022-02-26 Sat 16:34] \\
+  I need to setup org ledger properly first. Start by going by a week worth of expenses.
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 16:33]--[2022-02-26 Sat 16:34] =>  0:01
+:END:
+[2022-02-26 Sat 16:33]
+[[file:~/org/personal-finance.org::*Questions][Questions]]
+* WAITING schedule time to check my eye and get a new lense of my glasses. :WAITING:
+:LOGBOOK:
+- State "WAITING"    from "TODO"       [2022-02-26 Sat 16:52] \\
+  check my student insurance whether it support or not.
+CLOCK: [2022-02-26 Sat 16:50]--[2022-02-26 Sat 16:51] =>  0:01
+:END:
+[2022-02-26 Sat 16:50]
+[[file:~/.doom.d/config.org::*Org Mode][Org Mode]]
+* WAITING schedule time to get my teeth check up. :WAITING:
+:LOGBOOK:
+- State "WAITING"    from "TODO"       [2022-02-26 Sat 16:51] \\
+  check my student insurance whether it support or not.
+CLOCK: [2022-02-26 Sat 16:51]--[2022-02-26 Sat 16:52] =>  0:01
+:END:
+[2022-02-26 Sat 16:51]
+[[file:~/.doom.d/config.org::*Org Mode][Org Mode]]
+* NEXT make pdfile work with emacs doom.
+[2022-02-26 Sat 17:08]
+[[file:~/org/projects/sideprojects/garun/garun.org::*when select tags to display tagged images, ui should show window at the bottom and list of files + directory of each images and ui should allow for further filtering by matched word. (This ui idea is similar to ~+default/search-buffer~ )][when select tags to display tagged images, ui should show window at the bottom and list of files + directory of each images and ui should allow for further filtering by matched word. (This ui idea is similar to ~+default/search-buffer~ )]]
+* NEXT learn artist mode enough to use ditaa to draw graph.
+[2022-02-26 Sat 17:14]
+[[file:~/org/projects/sideprojects/pen.org::*write out business plan required for me to execute pen.el start up plan. what does a founder need to know before starting a company? how to estimate value of the business? what is the time horizon (can I start doing it before starting the summer)? what do I need to know because deciding on the amount of money that pen.el need to continue the project?][write out business plan required for me to execute pen.el start up plan. what does a founder need to know before starting a company? how to estimate value of the business? what is the time horizon (can I start doing it before starting the summer)? what do I need to know because deciding on the amount of money that pen.el need to continue the project?]]
+* NEXT draw UML using PlantUML: sequence diagram, activity diagram, usecase diagram, object diagram, state diagram. :@sideproject:WORK:EI:
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 17:16]--[2022-02-26 Sat 17:19] =>  0:03
+:END:
+[2022-02-26 Sat 17:16]
+[[file:~/.doom.d/init.el::+jupyter]]
+* TODO figure out where ditaa.jar is installed (https://emacs.stackexchange.com/questions/20731/setting-up-ditaa-in-org-mode). Then follow norang setup. (http://doc.norang.ca/org-mode.html#Publishing)
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 17:35]--[2022-02-26 Sat 17:38] =>  0:03
+:END:
+[2022-02-26 Sat 17:35]
+[[file:~/org/projects/sideprojects/garun/garun.org::*Notes][Notes]]
+* TODO configure mode for cronjobs called crontabs mode?
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 18:00]--[2022-02-26 Sat 18:01] =>  0:01
+:END:
+[2022-02-26 Sat 18:00]
+[[file:~/Scratches/scratch.el::;]]

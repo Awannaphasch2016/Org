@@ -1,7 +1,16 @@
 #+TITLE: Weekly Review
 
-* NEXT weekly review
-SCHEDULED:
+* TODO weekly review
+SCHEDULED: <2022-03-26 Sat +1w>
+:PROPERTIES:
+:ORDERED:  t
+:NOBLOCKING: t
+:RESET_CHECK_BOXES: t
+:LAST_REPEAT: [2022-02-26 Sat 13:10]
+:END:
+- State "DONE"       from "TODO"       [2022-02-26 Sat 13:10]
+- State "DONE"       from "TODO"       [2022-02-26 Sat 13:10]
+- State "DONE"       from "TODO"       [2022-02-26 Sat 13:09]
 note: this methodology follows GTD.
 what to review:
 - [ ] Check follow-up folder

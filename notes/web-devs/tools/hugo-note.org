@@ -1,1 +1,5 @@
 #+TITLE: Hugo Notes
+
+* Environment Variables
+** HUGO_BASE_DIR
+** HUGO_SECTION

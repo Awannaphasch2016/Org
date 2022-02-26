@@ -51,11 +51,11 @@ SCHEDULED: <2022-03-02 Wed 14:00-15:30 +1w>
 ***** blockchain class: schedule class is on wed and friday 2 - 3.30pm
 SCHEDULED: <2022-03-04 Fri 14:00-15:30 +1w>
 ***** blockchain class: office hours is 4.30pm - 530 pm wednesady, 11:00 am- 12.30 pm fridays.
-        SCHEDULED: <2022-02-28 Mon +1w>
+SCHEDULED: <2022-02-28 Mon +1w>
 ***** blockchain class: office hours is 4.30pm - 530 pm wednesady, 11:00 am- 12.30 pm fridays.
         SCHEDULED: <2022-02-25 Fri 11:00-12:30 +1w>
 
-**** TODO work on quiz
+**** NEXT work on quiz
 SCHEDULED: <2022-02-25 Fri>
 **** DONE Talk by Karolina Bergman: Concealing and Revealing Bitcoin Identities: (This will be expanded version of the ACM conference talk) ([[https://mail.google.com/mail/u/0/#inbox/FMfcgzGmvBqpBCDDvxtkGfbTtDGWRXfq][gmail link]])
 SCHEDULED: <2022-02-25 Fri 14:00>
@@ -83,7 +83,7 @@ SCHEDULED: <2022-03-01 Tue>
 SCHEDULED: <2022-03-04 Fri>
 [2022-02-24 Thu 23:14]
 [[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*3.4.1 Relationship types, Sets, and Instances][3.4.1 Relationship types, Sets, and Instances]]
-*** TODO go through all notification of all the classes and organized what I need to do, prepare for the rest of the semester.
+*** NEXT go through all notification of all the classes and organized what I need to do, prepare for the rest of the semester.
 SCHEDULED: <2022-02-25 Fri>
 *** TODO add whatsapp for blockchain class.
 SCHEDULED: <2022-02-26 Sat>
@@ -115,3 +115,15 @@ CLOCK: [2022-02-25 Fri 21:02]--[2022-02-25 Fri 21:03] =>  0:01
 :END:
 [2022-02-25 Fri 21:02]
 [[file:~/org/notes/database-note.org::*Terminologies][Terminologies]]
+*** TODO assign the rest of the school homework to schedule. (goal is to finish all homework + notes as soon as possible)
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 10:17]--[2022-02-26 Sat 10:18] =>  0:01
+:END:
+[2022-02-26 Sat 10:17]
+[[file:~/org/refile.org::*create notes for all classes.][create notes for all classes.]]
+*** NEXT clarify,list out tasks I need to do to review of each exam midterm subject. Then assign NEXT to it.
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 10:43]--[2022-02-26 Sat 10:44] =>  0:01
+:END:
+[2022-02-26 Sat 10:43]
+[[file:~/org/notes/emacs/packages/org-agenda-note.org::*Key binding][Key binding]]

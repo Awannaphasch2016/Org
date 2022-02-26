@@ -6,6 +6,20 @@ This project is an effect to create my ideal PKM with emacs 2.0 (emacs + pen.el)
 
 * Garun
 :LOGBOOK:
+CLOCK: [2022-02-26 Sat 18:01]
+CLOCK: [2022-02-26 Sat 17:38]--[2022-02-26 Sat 18:00] =>  0:22
+CLOCK: [2022-02-26 Sat 17:19]--[2022-02-26 Sat 17:35] =>  0:16
+CLOCK: [2022-02-26 Sat 17:14]--[2022-02-26 Sat 17:16] =>  0:02
+CLOCK: [2022-02-26 Sat 17:08]--[2022-02-26 Sat 17:14] =>  0:06
+CLOCK: [2022-02-26 Sat 16:58]--[2022-02-26 Sat 17:08] =>  0:10
+CLOCK: [2022-02-26 Sat 14:43]--[2022-02-26 Sat 15:36] =>  0:53
+CLOCK: [2022-02-26 Sat 13:18]--[2022-02-26 Sat 13:19] =>  0:01
+CLOCK: [2022-02-26 Sat 12:59]--[2022-02-26 Sat 13:14] =>  0:15
+CLOCK: [2022-02-26 Sat 12:44]--[2022-02-26 Sat 12:58] =>  0:14
+CLOCK: [2022-02-26 Sat 12:43]--[2022-02-26 Sat 12:44] =>  0:01
+CLOCK: [2022-02-26 Sat 12:24]--[2022-02-26 Sat 12:40] =>  0:16
+CLOCK: [2022-02-26 Sat 12:17]--[2022-02-26 Sat 12:24] =>  0:07
+CLOCK: [2022-02-26 Sat 12:16]--[2022-02-26 Sat 12:17] =>  0:01
 CLOCK: [2022-02-21 Mon 00:05]--[2022-02-21 Mon 21:16] => 21:11
 :END:
 ** Questions :QUESTION:
@@ -161,6 +175,10 @@ https://github.com/kaiwk/leetcode.el/issues/70
 
 ***** create a leetcommand for refreshing window (in case unexpected ui behavior occurs)
 **** Publish website with org-mode
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 12:15]--[2022-02-26 Sat 12:16] =>  0:01
+CLOCK: [2022-02-26 Sat 12:11]--[2022-02-26 Sat 12:15] =>  0:04
+:END:
 **** Dealing with Images
 ***** improve on image-dired
 ****** display list of existing tags globally and locally
@@ -211,7 +229,7 @@ https://www.youtube.com/watch?v=mJjBZ4MZHBo&ab_channel=AndyStewart
 https://www.youtube.com/watch?v=z9W0pnShEWc&ab_channel=GavinFreeborn
 https://www.youtube.com/watch?v=HK_f8KTuR0s&ab_channel=MatthewZeng
 **** lispy
-***** TODO figure out how to change lispy key binding. D for delete and y for yank. :emacs:
+***** NEXT figure out how to change lispy key binding. D for delete and y for yank. :emacs:
 :LOGBOOK:
 CLOCK: [2022-02-20 Sun 21:56]--[2022-02-20 Sun 21:57] =>  0:01
 :END:
@@ -230,7 +248,7 @@ ref:
 ***** improve cloud based emacs
 ****** TODO learn to use tramp to connect to aws container cloud.
 ****** TODO [[https://martin.baillie.id/wrote/emacs-tramp-over-aws-ssm-apis/][Emacs TRAMP over AWS SSM APIs]]
-******* TODO figure out how to use tramp to connect to koko ssh
+******* NEXT figure out how to use tramp to connect to koko ssh
 [2022-02-24 Thu 00:27]
 [[file:~/org/notes/emacs/packages/tramp-note.org::*How to access remote files ?][How to access remote files ?]]
 ******* DONE learn how to use scp so I can move large file between two machine easier.
