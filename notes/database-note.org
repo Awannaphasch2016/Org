@@ -1,0 +1,36 @@
+#+TITLE: Database Note
+
+* Inference Rules for Functional Dependencies
+** Armstrong Axioms
+*** Reflective Rule   : If X is a subset of Y, then X -> Y
+*** Augmentation Rule : {X -> Y} |= XZ -> YZ
+*** Transitive Rule   : {X -> Y, Y-> Z} |= X -> Z
+** Additional Rules
+*** Decomposition Rule     : {X -> YZ} |= X -> Y, X-> Z
+*** Union Rule             : {X -> Y, X -> Z} |= X -> YZ
+*** Pseudo Transitive Rule : {X -> Y, WY -> Z} |= WX -> Z
+* Normalization
+** Types of Normal form of a relation.
+*** 1NF
+**** each table cell should contain a single value.
+**** each record need to be unique.
+*** 2NF
+**** be in 1NF.
+**** Single column primary key that does not functionally dependant on any subset of candidate key relation.
+*** 3NF
+**** be in 2NF
+**** has no transitive functional dependencies.
+*** BCNF (Boyce-Codd Normal Form)
+**** if every functional dependnecy X->Y, X is the super key of the table.
+** How to find highest normal form of a relation?
+1. Find all possible candiddate keys of the relation
+2. Divide all attributes into two categories: prime attributes and non-prime attributes
+3. Check for 1st normal form then 2nd and so on. If it fails to satisfy Nth normal form condition, highest normal form will be n-1.
+* Terminologies
+** prime attributes
+*** attributes that form a candidate key of a relation are called prime attributes. And rest of the attributes of the relation are non-prime.
+** candidate key
+*** A candidate key is a specific type of field in a relational database that can identify each unique record independently of any other data
+** super key
+*** A superkey is a group of single or multiple keys which identifies rows in a table. A Super key may have additional attributes that are not needed for unique identification.
+** composite key

@@ -1,0 +1,111 @@
+#+TITLE: Expert Identification
+#+FILETAGS: PERSONAL @sideproject EI
+
+* Expert Identification
+** Questions :QUESTION:
+** Notes :NOTE:
+** Meeting :MEETING:
+** Tasks
+*** TODO start working on project again after a week pause. Focus on analyzing data. (lets at the same time learn data science at command line.) (spend an hour daily or something.)
+SCHEDULED: <2022-02-26 Sat>
+**** TODO analyze sentiment data to indicate whether the sentiment works at all.
+***** NEXT figure out a way to collect data. (where to get the data?)
+****** TODO check out alpaca api. what does it used for? can I use it?
+***** TODO how should I clean data? what should data structure look like when store in database?
+***** TODO how should I measure the performance? what matrix should I use?
+*** project: crypto with kenny
+- ref
+  - tutorial on twitter query
+    - https://developer.twitter.com/en/docs/twitter-api/tweets/search/integrate/build-a-query
+  - tutorial on snscrape
+    - https://github.com/MartinBeckUT/TwitterScraper/tree/master/snscrape
+  - list of account to follow
+    - [[https://itsblockchain.com/crypto-twitter-traders-2021/][Top 5 Crypto traders to follow on Twitter in 2021]]
+    - [[https://medium.com/geekculture/12-cryptocurrency-twitter-accounts-everyone-should-follow-1b5936877eaf][12 Cryptoscurrency Twitter Accounts Everyone Should Follow]]
+- dvc stuff
+  - ref
+    - [[https://dvc.org/doc/start/data-and-model-versioning][Get Started: Data Versioning]]
+  - creat remote storage in s3
+    - ?
+- extends to use knowledge graph, see [[https://medium.com/neo4j/monitoring-the-cryptocurrency-space-with-nlp-and-knowledge-graphs-92a1cfaebd1a][here]].
+- I will extend to use docker later.
+- start using database from now one to make query easy. (SQL schema? document db?)
+- should I use HDF5?
+- add log to the file name
+- make sure for full day.
+- have get_tweets() report dataframe
+  - fix dataframe numpy and column stuff in get_tweets.
+- does other social media api provide stream? (inspect their behavior)
+- use free version first. (then scale from there.)
+- cloud infrastructure design
+  - how to store data that will later be used for machine learning.
+    - do i need data lake?
+    - do i need data warehouse?
+    - dynamoDB
+
+- what is the api to use whne doing streaming data from socila media?
+  - ref
+    - [[https://developer.twitter.com/en/docs/tutorials/consuming-streaming-data][Consuming streaming data]]
+    - https://www.google.com/search?q=get+stream+data+from+social+media&rlz=1C1CHBF_enUS941US941&oq=get+stream+data+from+social+media&aqs=chrome..69i57.7261j0j7&sourceid=chrome&ie=UTF-8
+
+- create stream data follow AWS project
+- do some data science.
+  - score expert-coin tuple pair
+    - sentiment anaysis
+- report class
+  - summarized result of last week.
+- get sum of sentiment.
+- commad line  for user experience.
+- get price the next and compare it to the tweet give score to the
+- get all users that target retweet.
+- how to get list of all coin that is traded on crypto brokerage.
+- get sentiment of the last 7 days of bitcoin.
+  - aspect sentiment.
+- get stream data of tweet that mention "Etherem" of 1 account.
+- can I do some kind of network analysis on this.
+- query data from hashtags. or mention
+  - get all tweets that has hastags for  1 months
+    - learn how to use snscrape
+    - what subparser?
+- use snsscrapeAPI for retweet. possible?
+- is there any different between using twitter api endpoint (e.g. =https://api.twitter.com/2/timeline/profile/{userId}.json=) vs query from twitter query.
+twitter.com/search
+- query vs search operation.
+- there should be 2 ways to use the algorithms ( what would be the differences between the two cases?)
+  - note
+    - trade only focus on short terms.
+    - users should be able to get answer for their question
+      - "should I buy this crypto for short term profit?"
+        - return 0-1. where value is confidence. (confidence should reflect)
+        - query
+          - crypto
+      - "what is the ranking of crypto that is most likely to profit?"
+        - return ranking of crypto
+  - query from the past
+  - query from stream data
+*** TODO finalized list of task that I have discussed with Adam on ExpertCrypto project. :EI:
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 10:00]--[2022-02-22 Tue 10:02] =>  0:02
+:END:
+[2022-02-22 Tue 10:00]
+**** NFTs stuff.
+**** 1 coin -> 1 score.
+**** coin discovery. (with filter e.g. by number)
+**** track the expert performance.
+**** to connect using the ece2 instance ocnnect browser-based client, the instance must have ap ulbich IPv4 address.
+*** TODO [[file:/C:/Users/terng/Downloads/electronics-10-02739.pdf][read Sentiment Analysis in Twitter Based on Knowledge Graph and Deep Learning Classification]]
+- ref
+  - file:///C:/Users/terng/Downloads/electronics-10-02739.pdf
+*** TODO learn about time series forcasting
+*** TODO writing ER diagram, relationship schema for Expert Identification project as appropriate.
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 23:09]--[2022-02-24 Thu 23:10] =>  0:01
+:END:
+[2022-02-24 Thu 23:09]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*In the initial design of entity types, relationships are typically captured in the form of attributes. As the design is refined, these attributes get converted into relationships between entity types][In the initial design of entity types, relationships are typically captured in the form of attributes. As the design is refined, these attributes get converted into relationships between entity types]]
+*** TODO search for useful api in rapidAPI for pen.el, garun, expert identifification projects.
+:LOGBOOK:
+CLOCK: [2022-02-25 Fri 11:04]--[2022-02-25 Fri 11:05] =>  0:01
+:END:
+[2022-02-25 Fri 11:04]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*A weak entity type always has a total participation constraint (existence dependency) with respect to its identifying relationship because a weak entity cannot be identified without an owner entity. However, not every existence dependency results in a weak entity type. For example, a DRIVER_LICENSE entity cannot exist unless it is related to a PERSON entity, even though it has its own key (License_number) and hence is not a weak entity][A weak entity type always has a total participation constraint (existence dependency) with respect to its identifying relationship because a weak entity cannot be identified without an owner entity. However, not every existence dependency results in a weak entity type. For example, a DRIVER_LICENSE entity cannot exist unless it is related to a PERSON entity, even though it has its own key (License_number) and hence is not a weak entity]]

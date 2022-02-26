@@ -22,3 +22,6 @@ Mentioned in Learning Functional Programming in Scala.
 **** Functional Reactive Programming
 ***** Reactive Programming in the Netflix API with RxJava
 Mentioned in Learning Functional Programming in Scala.
+*** TODO reading [[https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-4.html][Structure and Interpretation of Computer Programs]]
+**** NEXT reading [[https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-4.html][Structure and Interpretation of Computer Programs]] stopped [[https://sicp.sourceacademy.org/chapters/1.1.html][here]]
+*** TODO Read [[https://youtu.be/FihU5JxmnBg?t=2779][Why Programs Fails a guide to systematic debugging]] (read chapters 5-7, 11-14)

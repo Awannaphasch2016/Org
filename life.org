@@ -1,0 +1,15 @@
+#+TITLE: Life
+
+Life.org keeps tracks of things important in mylife.
+
+* Getting a job
+** TODO read articles on how to ace jobs interviews.
+SCHEDULED: <2022-02-24 Thu>
+:PROPERTIES:
+:EFFORT:   0:15
+:END:
+** TODO do research on leetcode vs algoexpert vs other options. which one should I choose? or should I just read a book on acing interview?
+SCHEDULED: <2022-02-25 Fri>
+:PROPERTIES:
+:EFFORT:   0:15
+:END:

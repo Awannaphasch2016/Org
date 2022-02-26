@@ -1,0 +1,66 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/awannaphasch2016/org/PhD.org
+
+
+* Archived Tasks
+
+** DONE run models on HPC
+SCHEDULED: <2022-02-23 Wed>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-24 Thu 11:07
+:ARCHIVE_FILE: ~/org/PhD.org
+:ARCHIVE_OLPATH: PhD/Tasks
+:ARCHIVE_CATEGORY: PhD
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: @PhD WORK
+:END:
+*** git pull model from koko server.
+*** upload 100k data. run data with 1k windows with starting ensemble index of 10k.
+*** is individual models slides keep its training lenght as it slides forward?
+*** compare original model on sliding window of the same setup.
+
+** DONE write report on data I have run.
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-24 Thu 15:40
+:ARCHIVE_FILE: ~/org/PhD.org
+:ARCHIVE_OLPATH: PhD/Tasks
+:ARCHIVE_CATEGORY: PhD
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: @PhD WORK
+:END:
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 13:32]--[2022-02-24 Thu 13:50] =>  0:18
+CLOCK: [2022-02-24 Thu 11:29]--[2022-02-24 Thu 12:07] =>  0:38
+:END:
+*** DONE visualized log data that run in HPC.
+
+** DONE comprare 2 models use a sliding window to compare erform w.r.t. multiple time points
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-24 Thu 15:41
+:ARCHIVE_FILE: ~/org/PhD.org
+:ARCHIVE_OLPATH: PhD/Tasks
+:ARCHIVE_CATEGORY: PhD
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: @PhD WORK
+:END:
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 10:34]--[2022-02-22 Tue 10:35] =>  0:01
+:END:
+*** DONE work on sliding window with prediction range > 1.
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 14:14]--[2022-02-22 Tue 14:15] =>  0:01
+CLOCK: [2022-02-22 Tue 10:49]--[2022-02-22 Tue 11:27] =>  0:38
+CLOCK: [2022-02-22 Tue 10:22]--[2022-02-22 Tue 10:34] =>  0:12
+CLOCK: [2022-02-22 Tue 10:20]--[2022-02-22 Tue 10:21] =>  0:01
+CLOCK: [2022-02-22 Tue 10:14]--[2022-02-22 Tue 10:20] =>  0:06
+CLOCK: [2022-02-22 Tue 10:10]--[2022-02-22 Tue 10:12] =>  0:02
+CLOCK: [2022-02-22 Tue 10:08]--[2022-02-22 Tue 10:10] =>  0:02
+CLOCK: [2022-02-22 Tue 10:06]--[2022-02-22 Tue 10:07] =>  0:01
+CLOCK: [2022-02-22 Tue 10:02]--[2022-02-22 Tue 10:03] =>  0:01
+CLOCK: [2022-02-22 Tue 09:54]--[2022-02-22 Tue 09:55] =>  0:01
+CLOCK: [2022-02-22 Tue 09:53]--[2022-02-22 Tue 09:54] =>  0:01
+CLOCK: [2022-02-22 Tue 09:52]--[2022-02-22 Tue 09:53] =>  0:01
+:END:
+**** make sure that the model with fixed beginging train on the training data and test on the evaluation set.

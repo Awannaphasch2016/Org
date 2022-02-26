@@ -1,6 +1,117 @@
 #+TITLE: School
-#+FILETAGS: @PhD WORK
+#+FILETAGS: WORK @school
 
-* Notes :NOTE:
-* Questions :QUESTION:
-* Meeting :MEETING:
+* School
+** Notes :NOTE:
+** Questions :QUESTION:
+** Meeting :MEETING:
+** Tasks
+*** Database
+**** note
+***** class is Wednesday and Friday 12.30 to 2.15. Classroom is at ???.
+SCHEDULED: <2022-03-02 Wed 12:30-14:15>
+***** class is Wednesday and Friday 12.30 to 2.15. Classroom is at ???.
+SCHEDULED: <2022-03-04 Fri 12:30-14:15>
+***** office hourse if Tue & Thu 4.00pm and 5.30pm.
+SCHEDULED: <2022-03-01 Tue 16:00-17:30 +1w>
+***** office hourse if Tue & Thu 4.00pm and 5.30pm.
+SCHEDULED: <2022-03-03 Thu 16:00-17:30 +1w>
+**** presentation
+  - note
+    - deadline: before the end of semester.
+***** TODO Paper: [[https://www.semanticscholar.org/paper/Anatomy-of-a-Database-System-Hellerstein-Stonebraker/acf0f99dd4bbcbf7049b787e10cb538c620ed110][Anatomy of a Database system.]] (10 percent extra credit)
+**** TODO midterm exam
+DEADLINE: <2022-03-01 Tue>
+***** NEXT review for exam and make notes
+SCHEDULED: <2022-02-26 Sat>
+*** scala course
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 18:19]--[2022-02-22 Tue 18:20] =>  0:01
+:END:
+**** note
+***** class is 9.30am to 10.50am (Tuesday and Thrusday). classroom is at CM128.
+SCHEDULED: <2022-03-01 Tue 09:30-10:50 +1w>
+***** class is 9.30am to 10.50am (Tuesday and Thrusday). classroom is at CM128.
+SCHEDULED: <2022-03-03 Thu 09:30-10:50 +1w>
+***** office hours: Tue & Thu 11 am to 12.30 am.
+SCHEDULED: <2022-03-01 Tue 11:00-00:30 +1w>
+***** office hours: Tue & Thu 11 am to 12.30 am.
+SCHEDULED: <2022-03-03 Thu 11:00-00:30 +1w>
+**** TODO make notes on the scala class notes.
+***** NEXT make notes on chapter 3
+***** TODO make notes on chapter 4
+**** TODO midterm exam
+DEADLINE: <2022-03-01 Tue>
+***** NEXT review for exam and make notes
+SCHEDULED: <2022-02-27 Sun>
+*** blockchain
+**** note
+***** blockchain class: schedule class is on wed and friday 2 - 3.30pm
+SCHEDULED: <2022-03-02 Wed 14:00-15:30 +1w>
+***** blockchain class: schedule class is on wed and friday 2 - 3.30pm
+SCHEDULED: <2022-03-04 Fri 14:00-15:30 +1w>
+***** blockchain class: office hours is 4.30pm - 530 pm wednesady, 11:00 am- 12.30 pm fridays.
+        SCHEDULED: <2022-02-28 Mon +1w>
+***** blockchain class: office hours is 4.30pm - 530 pm wednesady, 11:00 am- 12.30 pm fridays.
+        SCHEDULED: <2022-02-25 Fri 11:00-12:30 +1w>
+
+**** TODO work on quiz
+SCHEDULED: <2022-02-25 Fri>
+**** DONE Talk by Karolina Bergman: Concealing and Revealing Bitcoin Identities: (This will be expanded version of the ACM conference talk) ([[https://mail.google.com/mail/u/0/#inbox/FMfcgzGmvBqpBCDDvxtkGfbTtDGWRXfq][gmail link]])
+SCHEDULED: <2022-02-25 Fri 14:00>
+:LOGBOOK:
+CLOCK: [2022-02-23 Wed 14:16]--[2022-02-23 Wed 14:18] =>  0:02
+:END:
+[2022-02-23 Wed 14:16]
+[[file:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/hw2/hw2.org::*Write in module Tree (file p3.scala) a polymorphic method with this signature: def toList\[A\](t: Tree\[A\]) : List\[A\] that returns a list (i.e. standard library List) with all elements from the leaves in tree t. Use the Tree.fold method given from the textbook. Hint: the List.++ method appends two lists.][Write in module Tree (file p3.scala) a polymorphic method with this signature: def toList[A](t: Tree[A]) : List[A] that returns a list (i.e. standard library List) with all elements from the leaves in tree t. Use the Tree.fold method given from the textbook. Hint: the List.++ method appends two lists.]]
+
+Time: Feb 25, 2020 2:00 pm.
+Physical Location:  EE-106 -- East Engineering Building (Speaker will join in via Zoom)
+Zoom:
+https://fau-edu.zoom.us/j/84395602086?pwd=KzZCL2x3aHJjQ1BWV05FUVJFZ01jUT09Meeting ID: 843 9560 2086
+Passcode: Trynotdo1
+
+Bitcoin remains the most widely used cryptocurrency. It has attracted users from tech enthusiasts to commercial investors to criminals  in no small part due to its reputation for anonymity. While not designed primarily for privacy, Bitcoin’s architecture contains several provisions that can be exploited by criminals to conduct illegal activity including money laundering and collecting payments from ransomware and scams. Since Bitcoin’s creation in 2008, various groups such as law enforcement, lawyers, criminals and privacy-focused Bitcoin users have been locked in a struggle between attempts to reveal hidden Bitcoin users’ identities and attempts to keep those identities concealed. This discussion covers the techniques used within Bitcoin to alternately reveal or conceal users’ identities.
+
+About the Speaker
+Karolina Berman received a B.S. in Global Security and Intelligence Studies at ERAU, and then, deciding that no modern security was complete without knowledge of cybersecurity, completed a M.S. in Cyber Intelligence and Security. She began studying blockchain during this time, focusing on Bitcoin opportunities and concerns for security. Her studies focused on the security challenges of Bitcoin, and applying Machine Learning to the information visible on the public blockchain to extract insights from data. She currently works as a data analyst at True Meridian LTD, performing research on upcoming information security challenges.
+**** TODO midterm exam
+DEADLINE: <2022-03-04 Fri>
+***** NEXT review for midterm and make notes.
+SCHEDULED: <2022-03-01 Tue>
+**** TODO schedule time to finish learning solidity tutorial on youtube, so I can start building blockchain project towards pen.el
+SCHEDULED: <2022-03-04 Fri>
+[2022-02-24 Thu 23:14]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*3.4.1 Relationship types, Sets, and Instances][3.4.1 Relationship types, Sets, and Instances]]
+*** TODO go through all notification of all the classes and organized what I need to do, prepare for the rest of the semester.
+SCHEDULED: <2022-02-25 Fri>
+*** TODO add whatsapp for blockchain class.
+SCHEDULED: <2022-02-26 Sat>
+[2022-02-24 Thu 16:21]
+[[file:~/org/school.org::*state the strongest normal form that R satisfies (e.g. 1NF 2NF, 3NF, BCNF)][state the strongest normal form that R satisfies (e.g. 1NF 2NF, 3NF, BCNF)]]
+*** TODO install erd ([[https://github.com/BurntSushi/erd][here]]) to use it for ER diagram stuff.
+SCHEDULED: <2022-02-26 Sat>
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 18:07]--[2022-02-24 Thu 18:10] =>  0:03
+:END:
+[2022-02-24 Thu 18:07]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*Chapter 6 Basic SQL][Chapter 6 Basic SQL]]
+*** TODO set up SQL ide and er diagram in emacs.
+[2022-02-24 Thu 22:56]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*domain defines all possible values for attribute.][domain defines all possible values for attribute.]]
+*** DONE find out time of all my classes and put them in to emacs as recurring tasks
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 23:14]--[2022-02-24 Thu 23:15] =>  0:01
+:END:
+[2022-02-24 Thu 23:14]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*]]
+*** TODO make notes on canvas notification, and clear all canvas notification to be 0.
+SCHEDULED: <2022-02-26 Sat>
+[2022-02-24 Thu 23:31]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*]]
+*** TODO create notes for all classes up until before midterm.
+:LOGBOOK:
+CLOCK: [2022-02-25 Fri 21:02]--[2022-02-25 Fri 21:03] =>  0:01
+:END:
+[2022-02-25 Fri 21:02]
+[[file:~/org/notes/database-note.org::*Terminologies][Terminologies]]

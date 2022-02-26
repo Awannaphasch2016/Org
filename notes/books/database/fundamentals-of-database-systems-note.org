@@ -1,0 +1,125 @@
+#+TITLE: Fundamentals Of Database Systems Note
+
+* Chapter 3 Data Modeling Using the Entity-Reltationship (ER) models
+** 3.1 Using high-level conceptual data models for database design
+*** conceptual design
+** logical design or data model mapping
+** physical design
+** 3.2 A sample database application
+** 3.3 Entity Types, entity Sets, Attributes, and Keys
+**** 3.3.1 entities and their attributes
+***** composite versus simple (Atomic) attributes
+****** composite attribute can be divided into smaller subparts, which represent more basic attributes with independent meaning, aka atomic attribute.
+***** single-valued vs multivaled attributes
+***** stored vs derived attributes
+***** Complex attributes
+****** e.g. if a person can have more than one residence and each residence can have a single address and multiple phones, an attribute Address_phone for a person can be specified as shown in Figure 3.5.4 Both Phone and Address are themselves composite attributes.
+**** 3.3.2 Entity Types and Entity Sets
+***** entity types defines a collection (or set) of entities that have the same attribute.
+***** key attributes of entity types
+****** key attribute is an attribute whose values are distinct for each individual entity. More than 1 attribute can satisfy key attribute property.
+****** each key attribute has its name underlined inside the oval.
+****** composite key must be minimal; that is, all component attributes must be included in the composite attribute to have the uniqueness property
+***** value set (domains) of attributes
+****** domain defines all possible values for attribute.
+**** 3.3.3 Initial conceptual Design of the COMPANY database.
+** 3.4 Relationship Types, relationship set, Roles, and Structural Constraints
+*** Relationship Types, Relationship Sets, Roles, and Structural Constraints
+**** In the ER model, these references should not be represented as attributes but as relationships
+**** In the initial design of entity types, relationships are typically captured in the form of attributes. As the design is refined, these attributes get converted into relationships between entity types
+*** 3.4.1 Relationship types, Sets, and Instances
+*** 3.4.2 Relationship Degree, Role Names, and Recursive Relationships
+**** Degree of a Relationship Types
+***** One can think of an attribute called Department of the EMPLOYEE entity type, where the value of Department for each EMPLOYEE entity is (a reference to) the DEPARTMENT entity for which that employee works. Hence, the value set for this Department attribute is the set of all DEPARTMENT entities, which is the DEPARTMENT entity set.
+***** The alternative point of view is to think of a multivalued attribute Employees of the entity type DEPARTMENT whose value for each DEPARTMENT entity is the set of EMPLOYEE entities who work for that department.
+**** Relatinoship as Attributes
+**** Role Names and Recursive Relationship
+***** The role name signifies the role that a participating entity from the entity type plays in each relationship instance, and it helps to explain what the relationship means. For example, in the WORKS_FOR relationship type, EMPLOYEE plays the role of employee or worker and DEPARTMENT plays the role of department or employer
+***** However, in some cases the same entity type participates more than once in a relationship type in different roles. In such cases the role name becomes essential for distinguishing the meaning of the role that each participating entity plays. Such relationship types are called recursive relationships or self-referencing relationships.
+***** Figure 3.11 shows an example. The SUPERVISION relationship type relates an employee to a supervisor, where both employee and supervisor entities are members of the same EMPLOYEE entity set. Hence, the EMPLOYEE entity type participates twice in SUPERVISION: once in the role of supervisor (or boss), and once in the role of supervisee (or subordinate).
+***
+*** 3.4.3 Constraints on Binary Relationship Types
+**** We can distinguish two main types of binary relationship constraints: cardinality ratio and participation.
+**** Cadinality Ratio for binary Relationships
+***** The possible cardinality ratios for binary relationship types are 1:1, 1:N, N:1, and M:N.
+**** participation Constraints and Existence Dependencies
+***** The participation constraint specifies whether the existence of an entity depends on its being related to another entity via the relationship type. This constraint specifies the minimum number of relationship instances that each entity can participate in and is sometimes called the minimum cardinality constraint
+***** There are two types of participation constraintstotal and partial
+***** We will refer to the cardinality ratio and participation constraints, taken together, as the structural constraints of a relationship type
+***** In ER diagrams, total participation (or existence dependency) is displayed as a double line connecting the participating entity type to the relationship, whereas partial participation is represented by a single line (see Figure 3.2). Notice that in this notation, we can either specify no minimum (partial participation) or a minimum of one (total participation).
+*** 3.4.4. Attributes of Relationship Types
+** 3.5 Weak Entity Types
+*** Entity types that do not have key attributes of their own are called weak entity types. In contrast, regular entity types that do have a key attributewhich include all the examples discussed so farare called strong entity types
+***  A weak entity type always has a total participation constraint (existence dependency) with respect to its identifying relationship because a weak entity cannot be identified without an owner entity. However, not every existence dependency results in a weak entity type. For example, a DRIVER_LICENSE entity cannot exist unless it is related to a PERSON entity, even though it has its own key (License_number) and hence is not a weak entity
+*** A weak entity type normally has a partial key, which is the attribute that can uniquely identify weak entities that are related to the same owner entity. 12 In our example, if we assume that no two dependents of the same employee ever have the same first name, the attribute Name of DEPENDENT is the partial key. In the worst case, a composite attribute of all the weak entity’s attributes will be the partial key.
+*** The identifying entity type is also sometimes called the parent entity type or the dominant entity type
+*** The weak entity type is also sometimes called the child entity type or the subordinate entity type.
+*** The partial key is sometimes called the discriminator.
+*** we call the relationship type that relates a weak entity type to its owner the identifying relationship of the weak entity type
+** 3.6 Refining the ER Design for the COMPANY database
+** 3.7 ER Diagram, Naming, Conventions, and Design Issues
+** 3.8 Example of Other Notation: UML Class Diagrams
+** 3.9 Relationship Types of Degree Higher than Two
+*** 3.9.1 choosing between binary and ternary (or higher-degree) relationship
+**** Some database design tools are based on variations of the ER model that permit only binary relationships. In this case, a ternary relationship such as SUPPLY must be represented as a weak entity type, with no partial key and with three identifying relationships.
+*** 3.9.2 Constraints on Ternary (or Higher-Degree) Relationships
+** 3.10 anoter Example: a UNIVERSITY database
+** 3.11 Summary
+** Review Question
+** Exercise
+** Laboratory Exervise
+** Selected Bibliography
+* Chapter 4 The Enhanced Entity-Relationship (EER) Model
+** 4.1 Subclasses, Superclasses, and Inheritance
+** 4.2 Specialization and Generalization
+** 4.3 Constriants and Characteristics of Specialization and Generalization Hierarchies
+** 4.4 Modelign of UNION Types Using Categories
+** 4.5 A sample UNIVERSITY EER Schema, Design Choices, and Formal Definitions
+** 4.6 Example of Other Notation: Represetnting Specialization and Generalization in UML Class Diagrmas
+** 4.7 DAta Abstraction, Knowledge Representation, and Ontology concepts
+** 4.8 Summary
+** Review Question
+** Exercise
+** Laboratory Exercise
+** Selected Bibliography
+* Chapter 5 The relational Data model and Relational Database Constraints
+** 5.1 Relational Model concepts
+*** 5.1.1 Domains, Attributes, Tuples, and Relations
+*** 5.1.2 Characteristics of Relations
+* Chapter 6 Basic SQL
+** 6.1 SQL Data Definition and Data Types
+*** 6.1.1 Schema and Catalog Concepts in SQL
+**** An SQL schema is identified by a schema name and includes an authorization identifier to indicate the user or account who owns the schema, as well as descriptors for each element in the schema
+**** Schema elements include tables, types, constraints, views, domains, and other constructs (such as authorization grants) that describe the schema
+**** In addition to the concept of a schema, SQL uses the concept of a cataloga named collection of schemas
+**** A catalog always contains a special schema called INFORMATION_SCHEMA, which provides information on all the schemas in the catalog and all the element descriptors in these schemas.
+*** 6.1.2 The CREATE TABLE Command in SQL
+**** Base relations are distinguished from virtual relations, created through the CREATE VIEW statement (see Chapter 7), which may or may not correspond to an actual physical file
+** 6.2 Specifying Constriants in SQL
+** 6.3 Basic Retrieval Queries in SQL
+*** 6.3.5 Substring Pattern Matching and Arithmetic Operators
+*** 6.3.6 Ordering of Query Results
+*** 6.3.7 Discussion and Summary of Basic SQL Retrieval Queries
+** 6.4 INSETE, DELETE, and UPDATE statements in SQL
+** 6.5 Additional Features of SQL
+** 6.6 Summary
+** Review Question
+** Exercise
+** Selected Bibliography
+* Chapter 7 More SQL: complex Queries, Triggers, Views, and Schema Modification
+** 7.1 More Complex SQL Retrieval Queries
+*** 7.1.1 Comparisons Involving NULL and Three-Valued Logic
+*** 7.1.2 Nested Queries, Tuples, and Set/Multiset Comparisons
+*** 7.1.3 Correlated Nested Queries
+*** 7.1.4 The EXISTS and UNIQUE Functions in SQL
+*** 7.1.5 Explicit Sets and Renaming in SQL
+*** 7.1.6 Joined Tables in SQL and Outer Joins
+*** 7.1.7 Aggregate Functions in SQL
+** 7.2 Specifying Constraints as Assertions and Actions as Triggers
+** 7.3 Views (Virtual Tables) in SQL
+
+** 7.4 Schema Change Statemetns in SQL
+** 7.5 Summary
+** Review Question
+** Exercise
+** Selected Bibliography

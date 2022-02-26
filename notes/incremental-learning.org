@@ -31,7 +31,7 @@ print(random.choice(topics))
 ** Books
 
 * Current Topics for Incremental Learning
-** Emacs
+** Emacs :emacs:
 *** customize emacs config
 **** learn from other emacs-config (additional feature can be found at garun project.)
 ***** vanila emacs
@@ -43,16 +43,15 @@ print(random.choice(topics))
 ****** [[https://www.youtube.com/watch?v=5Q9435eIOVI&ab_channel=EmacsConfandEmacshangouts][EmacsConf 2021: Managing a research workflow (bibliographies, note-taking, and arXiv) - Ahmed Khaled]]
 
 **** discord + emacs, see [[https://github.com/Mstrodl/elcord][here]].
-**** NEXT integrate organice or [[https://github.com/tconfrey/BrainTool][BrainTool]] (which allow org-mode to be interacted via webbrowser)
+**** TODO integrate organice or [[https://github.com/tconfrey/BrainTool][BrainTool]] (which allow org-mode to be interacted via webbrowser)
 ***** implement a feature in BrainTool, see [[https://github.com/tconfrey/BrainTool/issues/15][here]].
-**** NEXT reimplement org-agenda and org-capture from scratch.
-**** NEXT [[https://github.com/emacsorphanage/emamux][interact with tmux from emacs]]
-**** NEXT [[https://mullikine.github.io/posts/an-emacs-mode-for-asciinema-playback/][implement asciinema mode in emacs]]
-**** NEXT write customc folding for mode that use bracket and space (like python).
-**** NEXT how to search emacs info?
+**** TODO [[https://github.com/emacsorphanage/emamux][interact with tmux from emacs]]
+**** [[https://mullikine.github.io/posts/an-emacs-mode-for-asciinema-playback/][implement asciinema mode in emacs]]
+**** TODO write customc folding for mode that use bracket and space (like python).
+**** TODO how to search emacs info?
 - https://superuser.com/questions/665930/how-can-i-search-emacs-built-in-manual#:~:text=The%20s%20command%20allows%20you,followed%20by%20RET%20will%20do.
-**** NEXT try [[https://github.com/cniles/axe][axe]] (emacs extension for AWS cli)
-**** NEXT make reading pdf compatible with org-noter for reproducible research.
+**** TODO try [[https://github.com/cniles/axe][axe]] (emacs extension for AWS cli)
+**** TODO make reading pdf compatible with org-noter for reproducible research.
 - ref
   - [[https://www.youtube.com/watch?v=bTbiC6SamT4&ab_channel=EmacsConfandEmacshangouts][EmacsConf 2020 - 17 - Org-mode and Org-Roam for Scholars and Researchers - Noorah Alhasan]]
   - [[https://www.youtube.com/watch?v=Wy9WvF5gWYg&ab_channel=Zaeph][Org-roam-bibtex - Quick Presentation]]
@@ -64,17 +63,24 @@ tools may include the following
 - org-super-agenda
 - org-sidebar
 
+**** TODO LEARNING what exactly does doom sync do? I feel like this is a part of the puzzle that, sometimes, my own config doesn't load properly after doom/reload.
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 14:30]--[2022-02-20 Sun 14:34] =>  0:04
+CLOCK: [2022-02-20 Sun 14:27]--[2022-02-20 Sun 14:30] =>  0:03
+CLOCK: [2022-02-20 Sun 13:46]--[2022-02-20 Sun 14:27] =>  0:41
+CLOCK: [2022-02-20 Sun 13:42]--[2022-02-20 Sun 13:45] =>  0:03
+CLOCK: [2022-02-20 Sun 13:39]--[2022-02-20 Sun 13:40] =>  0:01
+CLOCK: [2022-02-20 Sun 13:27]--[2022-02-20 Sun 13:38] =>  0:11
+CLOCK: [2022-02-20 Sun 13:26]--[2022-02-20 Sun 13:27] =>  0:01
+:END:
+[2022-02-20 Sun 13:26]
 *** learn to implement in emacs using elisp
-**** what is speedbar?
+**** TODO what is speedbar?
 **** paper on evolution of emacs lisp, see [[https://dl.acm.org/doi/pdf/10.1145/3386324][here]].
-**** NEXT [[file:books/Writing GNU Emacs Extension - Bob Glickstein.org::*Using =this-command=][stop at this chaptor of 'writing with elisp..']]
-**** NEXT Figure out how to properly use variation of =interaction= keyword in lisp function.
-**** NEXT learn to use debug in elisp
-**** NEXT implement elisp code to get file name
-http://cl-cookbook.sourceforge.net/strings.html#substrings
-**** NEXT hwo to obtain a list of all functions exclusively provided by a certain major mode
+**** TODO [[file:books/Writing GNU Emacs Extension - Bob Glickstein.org::*Using =this-command=][stop at this chaptor of 'writing with elisp..']]
+**** TODO hwo to obtain a list of all functions exclusively provided by a certain major mode
 - https://emacs.stackexchange.com/questions/14208/how-to-obtain-a-list-of-all-functions-exclusively-provided-by-a-certain-major-mo
-**** NEXT writing efficient lisp code (optimize for speed and performance)
+**** TODO writing efficient lisp code (optimize for speed and performance)
 - ref
   - [[https://www.cs.utexas.edu/users/novak/lispeff.html][lisp style and efficiency]]
   - [[https://www.emacswiki.org/emacs/CoRoutines][co routines]]
@@ -84,56 +90,69 @@ http://cl-cookbook.sourceforge.net/strings.html#substrings
   - [[https://www.emacswiki.org/emacs/ConcurrentEmacs][concurrent emacs]]
 **** learn lisp testing framework
 *** Contribute to EAF
-- look at [[https://github.com/emacs-eaf/emacs-application-framework/wiki/Todo-List][EAF NEXT list]] and pick one
+**** look at [[https://github.com/emacs-eaf/emacs-application-framework/wiki/Todo-List][EAF TODO list]] and pick one
+**** TODO learn how visidata works before I attempt to implement visidata in EAF
 *** Understand Emacs at the deeper level
 - ref:
     - [[https://tuhdo.github.io/c-ide.html][C/C++ Development Environment for Emacs]]
-**** NEXT what is lexical and dynamic binding?
-**** NEXT How does environment of linux and emacs differ?
 **** learn about the following packages and workflow
 ***** understand packagers mechanism and functionality
 ****** learn org-babel
-******* Figure out org-babel manipulate output from shell. (so I understand or able to debug scenario in which output of org-babel block are not as what I expected)
-****** NEXT learn about completion
-******* understand prescient, see [[https://www.youtube.com/watch?v=T9kygXveEz0&ab_channel=SystemCrafters][here]].
-******* undertand vertico
+******* TODO Figure out org-babel manipulate output from shell. (so I understand or able to debug scenario in which output of org-babel block are not as what I expected)
+****** TODO learn about completion
+******* TODO understand prescient, see [[https://www.youtube.com/watch?v=T9kygXveEz0&ab_channel=SystemCrafters][here]].
+******** TODO figure out how ranking algorithm works.
 ***** config workflow
-****** jump to next error in emacs?
+****** DONE jump to next error in emacs?
 ****** explore =alphapapa= github for new seamless integration, [[https://github.com/alphapapa/org-ql][here]].
 ****** NEXT tree-sitter doesn't turn on =tree-sitter-hl-mode= on rustic mode, see [[file:~/.doom.d/config.org::*Emacs Tree Sitter][here]]
 ****** understand window and buffer config
-****** learning to use IRC Client.
 ****** set up emacs for SQL developement
-****** Learning how to use jupyter-notebook from [[https://youtu.be/RD0o2pkJBaI?t=1905][this tutorial.]]
-******* NEXT [[https://www.reddit.com/r/emacs/comments/hk4fps/any_emacs_ipython_notebook_ein_users_willing_to/][Discussion on jupyter + emacs]]
-******* NEXT add ob-ipython like advice from scimax environment.
+****** TODO Learning how to use jupyter-notebook from [[https://youtu.be/RD0o2pkJBaI?t=1905][this tutorial.]]
+******* TODO [[https://www.reddit.com/r/emacs/comments/hk4fps/any_emacs_ipython_notebook_ein_users_willing_to/][Discussion on jupyter + emacs]]
+******* TODO add ob-ipython like advice from scimax environment.
 before this is added, I pretty much can't use emacs-jupyter as jupyter replacement, see [[file:~/org/projects/sideprojects/website/my-website/org-mode.org::*Dependences Packages][here]].
 
 scimax advice also have to be added on top of ob-ipython package itself, see [[https://youtu.be/dMira3QsUdg?t=133][here]].
 
-****** window navigation
-ref:
-[[https://www.youtube.com/watch?v=-H2nU0rsUMY&ab_channel=SystemCrafters][Hey Emacs, Don't Move My Windows! - Customizing display-buffer's behavior]]
-
-******* implement =open in other window= behavior such that you can open bookmark, recent files, buffer etc to other buffer using =shift + enter=
-******* create custom keybinding for scroll up and down other window. (make sure that it is intuitive and can be generalized to be combine with other key binding. )
-******* implement =toggling= behavior for switching between previously visited window and next (current) window. (This is useful when using with =ace-window=)
-******* create popup window in emacs (like what I use in vim)
 ****** move section of code to scratch file, see [[https://emacs.stackexchange.com/questions/2810/how-to-copy-or-move-code-in-current-scope-to-end-of-another-file][here]] for reference.
-****** NEXT compare (diff) two regions, see [[https://emacs.stackexchange.com/questions/18369/how-do-i-compare-regions-in-the-same-file][here]] and [[https://www.gnu.org/software/emacs/manual/html_mono/ediff.html][ediff document]]for reference.
-****** screencast stuff
-****** automatically matched parenthesis (or other kinds of closure) in emacs, see [[https://www.google.com/search?q=partedit+emacs&rlz=1C1CHBF_enUS941US941&oq=partedit+emacs+&aqs=chrome..69i57j33i160.3230j0j7&sourceid=chrome&ie=UTF-8][paredit mode]], and this [[https://www.youtube.com/watch?v=QRBcm6jFJ3Q&ab_channel=SachaChua][tutorial]].
-****** NEXT learn to use Iedit, see [[https://www.youtube.com/watch?v=xrNOLTAl1ug&ab_channel=AritraBhattacharjee][here]].
-****** NEXT search and replace in emacs
-****** NEXT multi-cursor edit in emacs
-****** NEXT learn how =workspace= work
-******* learn to save and load =workspace=
-****** NEXT improve cloud based emacs
-******* NEXT learn to use tramp to connect to aws container cloud.
-******* NEXT [[https://martin.baillie.id/wrote/emacs-tramp-over-aws-ssm-apis/][Emacs TRAMP over AWS SSM APIs]]
+****** TODO compare (diff) two regions, see [[https://emacs.stackexchange.com/questions/18369/how-do-i-compare-regions-in-the-same-file][here]] and [[https://www.gnu.org/software/emacs/manual/html_mono/ediff.html][ediff document]]for reference.
+***** LEARNING learn about the following org-model. org-crypt, org-gnus, org-bbdb, org-irc, org-
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 13:38]--[2022-02-20 Sun 13:39] =>  0:01
+:END:
+[2022-02-20 Sun 13:38]
+#+BEGIN_SRC emacs-lisp
+(setq org-modules (quote (org-bbdb
+                          org-bibtex
+                          org-crypt
+                          org-gnus
+                          org-id
+                          org-info
+                          org-jsinfo
+                          org-habit
+                          org-inlinetask
+                          org-irc
+                          org-mew
+                          org-mhe
+                          org-protocol
+                          org-rmail
+                          org-vm
+                          org-wl
+                          org-w3m)))
+#+END_SRC
+***** TODO LEARNING what is tag/category in org mode :emacs:
+[2022-02-20 Sun 14:41]
+***** TODO LEARNING what is interitance tags in org mode? :emacs:
+[2022-02-20 Sun 14:47]
+***** TODO learn about org sidebar. Can I integrated into my work flow? :emacs:garun:
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 09:55]--[2022-02-22 Tue 09:56] =>  0:01
+:END:
+[2022-02-22 Tue 09:55]
+***** TODO learn to use yank pad to collect useful codes.
+[2022-02-22 Tue 09:56]
 **** learn the following mode
-***** hledger to maintain financial report
-[[https://github.com/narendraj9/hledger-mode][hledger-mode]]
 ***** kubernetes-mode with limited permission
 [[https://github.com/abrochard/kubel][kubel]]
 ***** [[https://github.com/Silex/docker.el][docker mode]]
@@ -141,8 +160,8 @@ ref:
 ***** twittering
 ***** python mode unable to import module
 ***** Dap mode
-***** lsp mode
-****** NEXT learn how to evaluate or benchmark lsp performance.
+***** TODO lsp mode
+****** TODO learn how to evaluate or benchmark lsp performance.
 - Check lsp-doctor function first
 - And then check https://emacs-lsp.github.io/lsp-mode/page/performance/
 ****** NEXT [[https://medium.com/ballerina-techblog/implementing-a-language-server-how-hard-can-it-be-part-1-introduction-c915d2437076][Implementing a Language Server…How Hard Can It Be??  Part 1 (Introduction)]]
@@ -150,30 +169,30 @@ ref:
 ******* https://github.com/ethereum/solidity/issues/7763
 ******* https://www.reddit.com/r/neovim/comments/l6a5dy/nvim_lsp_support_for_solidity/
 ****** Implement  lsp-mode for solidity from github issue, see [[https://github.com/ethereum/solidity/issues/7763][here]].
-******* NEXT Implement lsp-mode for markdown from github issue, see [[https://github.com/emacs-lsp/lsp-mode/issues/3010][here]].
+******* TODO Implement lsp-mode for markdown from github issue, see [[https://github.com/emacs-lsp/lsp-mode/issues/3010][here]].
 ******** Error: I am trying to solve
 ******** how does =gopls= implement langauge server using =lsp-mode=?
-****** check whether python version and python environment are correctly set up. (as it should in without emacs)
-****** figure out how to use anaconda in emacs
-****** switch style guide
-****** using flycheck with lsp-mode.
+****** TODO check whether python version and python environment are correctly set up. (as it should in without emacs)
+****** TODO using flycheck with lsp-mode.
 Error:
 =flycheck-list-error=  and =lsp-treemacs-list-error= are not insync.
 =flycheck-list-error= shows =unable to import 'pandas' [import-error]=
 
 For =mspyls=, =lsp-treemacs-error-list= only shows error from =tgn= project.
 =mspyls= and =pyls=
-
-******* NEXT First I need to understand how flycheck and lsp works together before start to debug this.
-***** Python mode
+***** TODO Python mode
 ****** NEXT how to auto format python mode to match code style guideline, see [[https://stackoverflow.com/questions/1288474/is-there-any-way-to-format-a-complete-python-buffer-in-emacs-with-a-key-press][here]].
-****** NEXT figure out how to interact better with repl.
+****** TODO figure out how to interact better with repl.
 ***** org mode
-****** how to create matched emphasize (e.g. =<some word>= etc.).
 **** learn package manager
 ***** learn =straight.el= from tutorial. I stopped [[https://youtu.be/UmbVeqphGlc?t=262][here]].
-** Blockchain
-*** NEXT read or check out the following before moving on to other list.
+**** TODO figure out how to use org category? how can I use org category with tags? read the =norang= for examples.
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 09:59]--[2022-02-22 Tue 10:00] =>  0:01
+:END:
+[2022-02-22 Tue 09:59]
+** Blockchain :blockchain:
+*** TODO read or check out the following before moving on to other list.
 **** read Althea AI whitepaper
 **** write essay or reimplement code from the following
 ***** https://youtu.be/M576WGiDBdQ?t=1904
@@ -205,270 +224,136 @@ https://youtu.be/k-nFdF5FEwA?t=2702
   - test-reputation-coverage.
   - chainid
 
-**** NEXT hands on solidty from beginner to expert
+**** TODO hands on solidty from beginner to expert :solidity:
 - ref
   - https://github.com/smartcontractkit/full-blockchain-solidity-course-py
   - [[https://github.com/OpenZeppelin/openzeppelin-contracts][solidity template with zappenlin contract]]
-***** NEXT [[https://www.youtube.com/watch?v=M576WGiDBdQ&ab_channel=freeCodeCamp.org][Solidity, Blockchain, and Smart Contract Course  Beginner to Expert Python Tutorial]]
+***** TODO [[https://www.youtube.com/watch?v=M576WGiDBdQ&ab_channel=freeCodeCamp.org][Solidity, Blockchain, and Smart Contract Course  Beginner to Expert Python Tutorial]]
 ****** I stop [[https://youtu.be/M576WGiDBdQ?t=12409][here]].
 - finish web three
 - work locally with brownie.
-**** NEXT implement crypto with blockchain from scratc using javascript
+**** TODO implement crypto with blockchain from scratc using javascript :javascript:
 - ref
   - [[https://dev.to/freakcdev297/build-a-p2p-network-and-release-your-cryptocurrency-clf][Build a p2p network and release your cryptocurrency]]
     - [[https://www.youtube.com/watch?v=aTCQvtO-jzc&ab_channel=FreakCdev][A Tutorial video about how to Implement a P2P Network and Releasing your Cryptocurrency on your blockchain in Javascript.]]
   - [[https://dev.to/freakcdev297/creating-transactions-mining-rewards-mint-and-gas-fee-5hhf][Creating a cryptocurrency - Creating transactions, mining rewards, mint and gas fee]]
   - [[https://dev.to/freakcdev297/creating-a-blockchain-in-60-lines-of-javascript-5fka][Creating a blockchain in 60 lines of Javascript]]
-*** NEXT Complete this [[https://paulx.dev/blog/2021/01/14/programming-on-solana-an-introduction/][tutorial]] on Solona
+*** TODO Complete this [[https://paulx.dev/blog/2021/01/14/programming-on-solana-an-introduction/][tutorial]] on Solona
 **** learning rust only when Solona tutorial needs it using ~rustling~.
-*** NEXT [[https://mycoralhealth.medium.com/code-your-own-blockchain-in-less-than-200-lines-of-go-e296282bcffc][Code your own blockchian in less than 200 line of go.]]
-*** NEXT [[https://jeiwan.net/posts/building-blockchain-in-go-part-1/][following building blockchain in Go]]
+*** TODO [[https://mycoralhealth.medium.com/code-your-own-blockchain-in-less-than-200-lines-of-go-e296282bcffc][Code your own blockchian in less than 200 line of go.]]
+*** TODO [[https://jeiwan.net/posts/building-blockchain-in-go-part-1/][following building blockchain in Go]]
 *** understand funcdamental of blockchain
 - reading the following
   - trying to understand ~encorse peers~ (~endorser transaction~) used in ~Hyperledger Fabric~
     - I stopped [[https://hyperledger-fabric.readthedocs.io/en/release-2.2/peers/peers.html#peers-and-channels][here]]
 
 ** Algorithm, Computer Science & Deverlopers Fundamentals
-*** NEXT learning from leetcode
+*** TODO learning from leetcode :algorithms:
 Note: to learn algorithm and new language at the same time for each algorithm, reimplement them in all the language including (rust, javascript, golang, c, c++. python)
 **** Add Two Numbers
 learning about link list
-*** NEXT reading [[https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-4.html][Structure and Interpretation of Computer Programs]]
-stopped [[https://sicp.sourceacademy.org/chapters/1.1.html][here]]
-*** gist
+*** TODO gist
 **** I failed to switch git permission, see [[file:git-notes.org::*Switching git permission][here]].
 
-** Prompt Programming
-*** NEXT reading [[https://generative.ink/posts/methods-of-prompt-programming/][methods of prompt programming]]
-*** NEXT reading [[id:][GPT-3 creative fiction]]
-** Classes that I am taking
-*** Database
-- presentation
-  - note
-    - deadline: before the end of semester.
-  - Paper: [[https://www.semanticscholar.org/paper/Anatomy-of-a-Database-System-Hellerstein-Stonebraker/acf0f99dd4bbcbf7049b787e10cb538c620ed110][Anatomy of a Database system.]] (10 percent extra credit)
-
-
-** Deep learning and Data Science
-*** NEXT learn to use ray with slurm
+** Prompt Programming :progmptprogramming:
+*** TODO reading [[https://generative.ink/posts/methods-of-prompt-programming/][methods of prompt programming]]
+*** TODO reading [[id:][GPT-3 creative fiction]] :gpt3:
+** Deep learning and Data Science :datascience:deeplearning:
+*** TODO learn to use ray with slurm :slurm:
 - ref
   - [[https://docs.ray.io/en/latest/cluster/slurm.html][deploying ray on slurm]]
-*** NEXT working on [[file:~/org/researches/ssl-dynamic-graph/log-ssl-dynamic-graph.org][log of ssl-dgnn]]
-- be sufficient in rush enough to plot all the basic stuff.
-  ref:
-  [[https://www.youtube.com/watch?v=2o1YDUKyhu0&ab_channel=RiffomonasProject][Learning to use the patchwork R package (how to learn a package in general) (CC099)]]
-- write summary from email report on https://mail.google.com/mail/u/0/#search/node+classification/QgrcJHsNlSQcfgjngKvJvfWsltLMshplFxg
-  - from these contents are performed at the labs computer.
-*** NEXT implement model with CUDA (performance tuning stuff)
-- re
+*** TODO implement model with CUDA (performance tuning stuff) :cuda:
+- ref
   - [[https://luniak.io/cuda-neural-network-implementation-part-1/][CUDA Neural Network Implementation (Part 1)]]
   - https://developer.nvidia.com/blog/programming-tensor-cores-cuda-9/
   - [[https://pytorch.org/tutorials/recipes/recipes/tuning_guide.html][Performance tuning guide (pytorch)]]
-*** NEXT things to implementation
-- how to use ray 'localhost'? (how can it be useful to me? when to use it?)
-  - how to remotely inspect localhost from remote nodes?
-- start using version control for data. (DVC)
-- test why memory update error occurs
-  - can memory be negative?
-  - what is the different between memory and self.memory.get_memory()?
-    - memory = get_updated_memory
-    - memory.get_memory()
-  - does memory diff increases each window?
-    - should memory diff increase?
-- add new dataset that are used in the tgn paper.
-*** NEXT question to answer to help with my own implementation
-- figure out how tgn does semi-supervised learning for node classification.
-- other
-    how does DDGCL uses GAN loss?
-    what is DDGCL architecture like?
-    is DDGCL generative or contrastive?
-    is DDGCL reconstruct next window or current window?
-
-    to understand how DDGCL train, I have to read the following paper.
-    1.MoCo
-    2.E2E
-
-* Out of current focus, but I really want to learn more
-
-** learn about debugging
-*** Read [[https://youtu.be/FihU5JxmnBg?t=2779][Why Programs Fails a guide to systematic debugging]] (read chapters 5-7, 11-14)
-*** [[https://stackoverflow.com/questions/4590237/how-do-i-debug-my-program-when-it-hangs#:~:text=Use%20the%20debugger%20to%20find,take%20control%20of%20the%20process.][how do I figure out why program hangs?]]
-** learn about data science at commandline
-**** NEXT study xvzf code on "command line pandas killer" (mlr, q, csvtk, xsv, tsv-utils) and adopt the usecase in my workflow, see [[https://github.com/xvzftube/pandas_killers/blob/main/main.sh][here]].
-** learn new languages by doing.
-*** Building website using org mode.
+**** TODO read hands-on GPU programming with Python and CUDA. see [[https://subscription.packtpub.com/book/application-development/9781788993913/1][here]].
+[2022-02-25 Fri 15:52]
+[[file:~/org/notes/emacs/packages/tramp-note.org::*Tutorial][Tutorial]]
+* Out of current focus, but I really want to learn more :freetime:hobbie:
+** learn about debugging :debug:
+*** TODO read the art of debugging.
+[2022-02-25 Fri 15:48]
+[[file:~/org/notes/emacs/packages/tramp-note.org::*References][References]]
+*** TODO implement debugger from scratch. (see [[https://www.google.com/search?q=implement+debugger+from+scratch&rlz=1C1CHBF_enUS941US941&oq=implement+debugger+from+scratch+&aqs=chrome..69i57.6093j1j7&sourceid=chrome&ie=UTF-8][here]])
+[2022-02-25 Fri 15:54]
 - ref
-  - Example of [[https://www.huxiaoxing.com/building-a-website-with-org-mode-files][Personal website that use org mode]].
-  - collection of [[https://orgmode.org/worg/org-web.html][Personal Webiste that use org mode]].
-  - choose website style that I like from [[https://orgmode.org/worg/org-web.html][Personal Websites that use Org mode]], and build mine.
-**** migrate all of my notes to blog in jykell.
-https://orgmode.org/worg/org-tutorials/org-jekyll.html
-*** learning Typescript by doing.
-[[https://blog.scottlogic.com/2019/05/17/webassembly-compiler.html][build your own WebAssembly compiler]]
-[[https://github.com/g-plane/tiny-package-manager][Tiny Package Manager: Learns how npm or Yarn works]]
-*** learning Javascript by doing.
-[[https://github.com/ronami/minipack][build your own module bundler -minipack]]
-[[https://levelup.gitconnected.com/understand-javascript-promises-by-building-a-promise-from-scratch-84c0fd855720][learn JavaScript Promises by Building a Promis from Scratch]]
-[[https://medium.com/@ankur_anand/implement-your-own-call-apply-and-bind-method-in-javascript-42cc85dba1b][Implement your own--call(), apply(), and bind() method in JavaScript.]]
-[[http://aosabook.org/en/500L/dagoba-an-in-memory-graph-database.html][Dagoba: an in-memory graph database]]
-*** learning Go by doing
-**** [[https://blog.jse.li/posts/torrent/][Building a BitTorrent client form the ground up in Go]]
-*** Learning C from open source code
-**** [[https://cstack.github.io/db_tutorial/][let's build a simple database.]]
-**** understand how coreutils (data science related command lines)
-[[https://github.com/coreutils/coreutils/blob/master/src/cat.c][source code to cat command]]
+  - [[file:~/org/refile.org::*read hands-on GPU programming with Python and CUDA. see \[\[https://subscription.packtpub.com/book/application-development/9781788993913/1\]\[here\]\].][read hands-on GPU programming with Python and CUDA. see here.]]
+** learn about data science at commandline :cmd:datascience:
+*** TODO begin reading data science at commandline 2nd (https://mail.google.com/mail/u/0/#inbox/FMfcgzGmvBpgRLhhLPHmKxjwSSmdxMJF)
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 11:12]--[2022-02-24 Thu 11:13] =>  0:01
+:END:
+[2022-02-24 Thu 11:12]
+[[file:~/org/school.org::*check my exam dates][check my exam dates]]
+** learn new languages by doing. :programminglanguage:
+*** learning Typescript by doing. :typescript:
+**** [[https://blog.scottlogic.com/2019/05/17/webassembly-compiler.html][build your own WebAssembly compiler]] :compiler:
+**** [[https://github.com/g-plane/tiny-package-manager][Tiny Package Manager: Learns how npm or Yarn works]] :packagemanager:
+*** learning Javascript by doing. :javascript:
+**** [[https://github.com/ronami/minipack][build your own module bundler -minipack]] :packagemanager:
+**** [[https://levelup.gitconnected.com/understand-javascript-promises-by-building-a-promise-from-scratch-84c0fd855720][learn JavaScript Promises by Building a Promis from Scratch]]
+**** [[https://medium.com/@ankur_anand/implement-your-own-call-apply-and-bind-method-in-javascript-42cc85dba1b][Implement your own--call(), apply(), and bind() method in JavaScript.]]
+**** [[http://aosabook.org/en/500L/dagoba-an-in-memory-graph-database.html][Dagoba: an in-memory graph database]] :database:graphdatabase:
+*** learn cpp (the goal is to learn how to write high performance code) :cpp:
+- ref
+  - [[https://github.com/PacktPublishing/Cpp-High-Performance-Second-Edition][C++ High Performance, Second Edition]]
+*** learning Go by doing :go:
+**** [[https://blog.jse.li/posts/torrent/][Building a BitTorrent client form the ground up in Go]] :bittorrent:
+**** build docker using Go from scratch :docker:
+***** TODO [[https://www.infoq.com/articles/build-a-container-golang/][Go: Build Your Own Container Using Less than 100 Lines of Go]]
+***** NEXT [[https://www.youtube.com/watch?v=8fi7uSYlOdc&ab_channel=GOTOConferences][Containers From Scratch  Liz Rice  GOTO 2018]]
+stop [[https://youtu.be/8fi7uSYlOdc?t=616][here]].
+*** Learning C from open source code :c:
+**** [[https://cstack.github.io/db_tutorial/][let's build a simple database.]] :database:
+**** understand how coreutils (data science related command lines) :cmd:linux:
+***** [[https://github.com/coreutils/coreutils/blob/master/src/cat.c][source code to cat command]]
 ** learn generallized funcationality
 *** learn undo and redo mechanism
 - ref
   - example of undo mechanism achieve via =defavice= with before flag, see [[file:books/Writing GNU Emacs Extension - Bob Glickstein.org::*Window Appearance][here]].
-- understand undo and redo mechanism in =winner-mode= in emacs.
-- understand undo and redo mechanism in =visidata=.
+**** understand undo and redo mechanism in =winner-mode= in emacs.
+**** understand undo and redo mechanism in =visidata=. :visidata:
 ** learn about software design
 *** figure out software design of visidata. (why does it change? what changed?)
 *** figure out software design of org roam. (why does it change? what changed?)
-** oragnize stuff to optimize for future workflow
-*** categorize =Garun= features into =incremental learning= page (this page.) by creating links
-** learn how to think mathematically.
-*** finish [[https://www.youtube.com/watch?v=LN7cCW1rSsI&ab_channel=Nerd%27slesson][introduction to mathmematical thinking complete course]]
+*** TODO read system design book.
+[2022-02-25 Fri 15:50]
+[[file:~/org/notes/emacs/packages/tramp-note.org][file:~/org/notes/emacs/packages/tramp-note.org]]
+** learn how to think mathematically. :math:
+*** TODO finish [[https://www.youtube.com/watch?v=LN7cCW1rSsI&ab_channel=Nerd%27slesson][introduction to mathmematical thinking complete course]]
 **** I stop [[https://youtu.be/LN7cCW1rSsI?t=489][here]]. finish reading [[https://github.com/kyrylo/coursera-mathematical-thinking/blob/master/lecture-0/background-reading-what-is-mathematics.pdf][this]] paper before continue with the lecture.
 
-** learning to hack
+** learning to hack :hack:
 *** watch [[https://www.youtube.com/c/LiveOverflow/playlists][LiveOverflow]]
-** project: crypto with kenny
+** project: scraping with stein :webscraping:
+*** TODO using scrapy to scrape
+**** https://www.bovada.lv/sports/basketball/nba
+** functional programming language. :functionalprogramminglangauge:programminglanguage:
+*** learning clojure :clojoure:
+**** [[https://hackernoon.com/learn-blockchains-by-building-one-117428612f46][learning blockchain by building one with clojure]] :blockchain:
+
+*** learning scala :scala:
+**** [[https://www.youtube.com/watch?v=LQVDJtfpQU0&list=PLS1QulWo1RIagob5D6kMIAvu7DQC5VTh3&ab_channel=ProgrammingKnowledge][scala tutorial]]
+**** [[https://github.com/elleFlorio/scalachain][scalachain]] :blockchain:
+**** [[https://www.freecodecamp.org/news/how-to-build-a-simple-actor-based-blockchain-aac1e996c177/][How to build a simple actor-based blockchain]] :blockchain:
+*** TODO make a todo list on the last page I read of the book "Learning functional programming in Scala" by Alvin Alexander.
+SCHEDULED: <2022-02-25 Fri>
+[2022-02-23 Wed 15:05]
+[[file:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/hw2/hw2.org::*Write in module Tree (file p3.scala) a polymorphic method with this signature: def toList\[A\](t: Tree\[A\]) : List\[A\] that returns a list (i.e. standard library List) with all elements from the leaves in tree t. Use the Tree.fold method given from the textbook. Hint: the List.++ method appends two lists.][Write in module Tree (file p3.scala) a polymorphic method with this signature: def toList[A](t: Tree[A]) : List[A] that returns a list (i.e. standard library List) with all elements from the leaves in tree t. Use the Tree.fold method given from the textbook. Hint: the List.++ method appends two lists.]]
+*** Questions what is Algebraic Data Types (ADT)?
+[2022-02-23 Wed 15:12]
+** learning distributed system :distributedsystem:
 - ref
-  - tutorial on twitter query
-    - https://developer.twitter.com/en/docs/twitter-api/tweets/search/integrate/build-a-query
-  - tutorial on snscrape
-    - https://github.com/MartinBeckUT/TwitterScraper/tree/master/snscrape
-  - list of account to follow
-    - [[https://itsblockchain.com/crypto-twitter-traders-2021/][Top 5 Crypto traders to follow on Twitter in 2021]]
-    - [[https://medium.com/geekculture/12-cryptocurrency-twitter-accounts-everyone-should-follow-1b5936877eaf][12 Cryptoscurrency Twitter Accounts Everyone Should Follow]]
-- dvc stuff
-  - ref
-    - [[https://dvc.org/doc/start/data-and-model-versioning][Get Started: Data Versioning]]
-  - creat remote storage in s3
-    - ?
-- extends to use knowledge graph, see [[https://medium.com/neo4j/monitoring-the-cryptocurrency-space-with-nlp-and-knowledge-graphs-92a1cfaebd1a][here]].
-- I will extend to use docker later.
-- start using database from now one to make query easy. (SQL schema? document db?)
-- should I use HDF5?
-- add log to the file name
-- make sure for full day.
-- have get_tweets() report dataframe
-  - fix dataframe numpy and column stuff in get_tweets.
-- does other social media api provide stream? (inspect their behavior)
-- use free version first. (then scale from there.)
-- cloud infrastructure design
-  - how to store data that will later be used for machine learning.
-    - do i need data lake?
-    - do i need data warehouse?
-    - dynamoDB
-
-- what is the api to use whne doing streaming data from socila media?
-  - ref
-    - [[https://developer.twitter.com/en/docs/tutorials/consuming-streaming-data][Consuming streaming data]]
-    - https://www.google.com/search?q=get+stream+data+from+social+media&rlz=1C1CHBF_enUS941US941&oq=get+stream+data+from+social+media&aqs=chrome..69i57.7261j0j7&sourceid=chrome&ie=UTF-8
-
-- create stream data follow AWS project
-- do some data science.
-  - score expert-coin tuple pair
-    - sentiment anaysis
-- report class
-  - summarized result of last week.
-- get sum of sentiment.
-- commad line  for user experience.
-- get price the next and compare it to the tweet give score to the
-- get all users that target retweet.
-- how to get list of all coin that is traded on crypto brokerage.
-- get sentiment of the last 7 days of bitcoin.
-  - aspect sentiment.
-- get stream data of tweet that mention "Etherem" of 1 account.
-- can I do some kind of network analysis on this.
-- query data from hashtags. or mention
-  - get all tweets that has hastags for  1 months
-    - learn how to use snscrape
-    - what subparser?
-- use snsscrapeAPI for retweet. possible?
-- is there any different between using twitter api endpoint (e.g. =https://api.twitter.com/2/timeline/profile/{userId}.json=) vs query from twitter query.
-twitter.com/search
-- query vs search operation.
-- there should be 2 ways to use the algorithms ( what would be the differences between the two cases?)
-  - note
-    - trade only focus on short terms.
-    - users should be able to get answer for their question
-      - "should I buy this crypto for short term profit?"
-        - return 0-1. where value is confidence. (confidence should reflect)
-        - query
-          - crypto
-      - "what is the ranking of crypto that is most likely to profit?"
-        - return ranking of crypto
-  - query from the past
-  - query from stream data
-** project: scraping with stein
-
-- scrapy
-https://www.bovada.lv/sports/basketball/nba
-** project: build website for adam investor
-
-the site name is =blackwatercoins.com=
-
-** project: create website for blog using org mode.
-*** goal: publish website that capable of hosting org file
-- ref
-  - read the following tutorial: https://thackl.github.io/blogging-with-emacs-org-mode-and-jekyll
-- note
-  - my current blog is using jekyll but files are .md not .org.
-  - I started to add org files into my blogs directory without testing whether or not it will work. On top of that, I didn't even follow naming convention which, if I remember correct, are necessary to make jekyll works. Hence, I don't expect it to work, so debug it.
-** functional programming language.
-*** learning clojure
-- ref
-  - [[https://hackernoon.com/learn-blockchains-by-building-one-117428612f46][learning blockchain by building one with clojure]]
-
-*** learning scala
-- ref
-  - [[https://www.youtube.com/watch?v=LQVDJtfpQU0&list=PLS1QulWo1RIagob5D6kMIAvu7DQC5VTh3&ab_channel=ProgrammingKnowledge][scala tutorial]]
-  - [[https://github.com/elleFlorio/scalachain][scalachain]]
-    - [[https://www.freecodecamp.org/news/how-to-build-a-simple-actor-based-blockchain-aac1e996c177/][How to build a simple actor-based blockchain]]
-
-** learning distributed system
-- ref
-  - [[https://nullprogram.com/blog/2010/08/07/][distributed computing with emacs]]
-  - [[https://towardsdatascience.com/lets-build-a-simple-distributed-computing-system-for-modern-cloud-part-one-e2b745126211][let's build a simple distributed computing system, for modern cloud]]
   - Google search: [[https://www.youtube.com/results?search_query=build+distributed+system+from+scratch+][build distributed system from scratch]]
+*** [[https://nullprogram.com/blog/2010/08/07/][distributed computing with emacs]] :emacs:
+*** [[https://towardsdatascience.com/lets-build-a-simple-distributed-computing-system-for-modern-cloud-part-one-e2b745126211][let's build a simple distributed computing system, for modern cloud]]
 
-** builing startup on pen.el project
-- ref
-  - research paper
-    - [[https://storage.googleapis.com/deepmind-media/AlphaCode/competition_level_code_generation_with_alphacode.pdf][Competition-Level Code Generation with AlphaCode]]
-  - api alternative
-    - https://cohere.ai/
-    - https://www.ai21.com/
-    - https://goose.ai/docs/api/completions
-
-- requirement
-  - scalability
-    - lsp-server
-      - lots of requests to server. (high pair-wise activity)
-- build blockchain to extend pen.el
-  - start working on state_channel (what is the purpose on state_channel?)
-- files that should be looked at first. (related to blockchain part of things)
-  - src/pen.el (server)
-  - src/pen-client.el (thin client)
-  - src/pen-custom.el (read ~/.pen/pen.yaml config file)
-
-** learning GNU Guix (for config file reproducibility.)
+** learning GNU Guix (for config file reproducibility.) :gnu:guix:
 - ref
   - learn from system crafter playlist, [[https://www.youtube.com/watch?v=iBaqOK75cho&list=PLEoMzSkcN8oNxnj7jm5V2ZcGc52002pQU&ab_channel=SystemCrafters][here]].
-  - guix on wsl2, [[https://gist.github.com/giuliano108/49ec5bd0a9339db98535bc793ceb5ab4][here.]]
-** learn cpp (the goal is to learn how to write high performance code)
-- ref
-  - [[https://github.com/PacktPublishing/Cpp-High-Performance-Second-Edition][C++ High Performance, Second Edition]]
-** learn to build docker from scratch
-*** build docker using Go.
-**** NEXT [[https://www.infoq.com/articles/build-a-container-golang/][Go: Build Your Own Container Using Less than 100 Lines of Go]]
-**** NEXT [[https://www.youtube.com/watch?v=8fi7uSYlOdc&ab_channel=GOTOConferences][Containers From Scratch  Liz Rice  GOTO 2018]]
-stop [[https://youtu.be/8fi7uSYlOdc?t=616][here]].
-** learn about garbage collection
+*** guix on wsl2, [[https://gist.github.com/giuliano108/49ec5bd0a9339db98535bc793ceb5ab4][here.]] :wsl2:
+** learn about garbage collection :garbagecollection:
 *** [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Garbage-Collection.html#:~:text=Emacs%20provides%20a%20garbage%20collector,still%20accessible%20to%20Lisp%20programs.][Emacs nodes on Garbage Collection]]
 *** [[https://emacs.stackexchange.com/questions/18454/control-of-garbage-collection/18455][Control of garbage collection?]]
 *** [[https://emacs.stackexchange.com/questions/34342/is-there-any-downside-to-setting-gc-cons-threshold-very-high-and-collecting-ga][Is there any downside to setting `gc-cons-threshold` very high and collecting garbage when idle?]]
@@ -476,20 +361,19 @@ stop [[https://youtu.be/8fi7uSYlOdc?t=616][here]].
 *** [[https://emacs.stackexchange.com/questions/52697/why-does-a-let-bound-huge-list-survive-garbage-collection-after-the-let-form][Why does a let-bound huge list survive garbage collection after the let form?]]
 *** figure out how simple implementation of gcmh package works, see [[https://gitlab.com/koral/gcmh/-/blob/0089f9c3a6d4e9a310d0791cf6fa8f35642ecfd9/gcmh.el][here]].
 *** implement garbage collection from scratch
-** develop deeper understanding of threading and hwo to implement them
+** develop deeper understanding of threading and hwo to implement them :threading:
 *** building simple multi-threading projects
-**** NEXT [[https://www.reddit.com/r/learnprogramming/comments/8m1bmq/simple_multithreading_project_ideas/][simple multithreading project ideas]]
+**** [[https://www.reddit.com/r/learnprogramming/comments/8m1bmq/simple_multithreading_project_ideas/][simple multithreading project ideas]]
 *** [[https://www.emacswiki.org/emacs/Elnode][elnode]]
 Elnode is an asynchronous HttpServer framework. You can use it to write HTTP services in EmacsLisp.
-** learning Networking by doing
+** learning Networking by doing :networking:
 *** Building A Network with OSI from scratch
 - ref
   - [[https://www.houstonisd.org/cms/lib2/TX01001591/Centricity/Domain/20951/Ch03%20Book.pdf][Building a Network with OSI]]
-** building sudoku with literate programming
-
+** building sudoku with literate programming :literateprogramming:
 - ref
   - [[https://reindeereffect.github.io/2020/05/05/index.html][Making and Slaying Monster Sudoku]]
-** learn wolframe language for practical use.
+** learn wolframe language for practical use. :wolframelanguage:
 - ref
   - [[https://reference.wolfram.com/language/][wolfram language & system]]
   - http://xahlee.info/M/index.html
@@ -497,3 +381,29 @@ Elnode is an asynchronous HttpServer framework. You can use it to write HTTP ser
   - [[http://xahlee.info/emacs/misc/xah-wolfram-mode.html][xah wolfram mode]]
   - [[https://github.com/kawabata/wolfram-mode][wolframe mode]]
   - [[https://www.wolfram.com/language/elementary-introduction/2nd-ed/23-more-about-numbers.html][an elementary introduction to the wolfram language.]]
+** implement domain specific language. :DSL:
+- ref
+  - [[https://ragnarsecurity.medium.com/why-you-should-learn-reverse-engineering-and-how-to-get-started-2084990b75db][article: why you should learn reverse engineering and how to get started]] (start here)
+  - [[https://livebook.manning.com/book/domain-specific-languages-made-easy/meap-version-8/v-8/][domain specific language made easy]]
+** build database :database:
+*** [[*\[\[https://cstack.github.io/db_tutorial/\]\[let's build a simple database.\]\]][let's build a simple database.]]
+*** TODO build my own database where I can query dataset from different machine to do data analysis. try out Amazon Athena. (what is it used for? what are other alternative?)
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 18:17]--[2022-02-24 Thu 18:18] =>  0:01
+:END:
+[2022-02-24 Thu 18:17]
+[[file:~/org/PhD.org::*Meeting][Meeting]]
+** learn about windowing system (e.g. X11, wayland, etc.) :windowingsystem:
+*** TODO search for books on windowing system (e.g. xwindow system, wayland) the goal is to understand windowing system enough to manipulate it with my wsl2.
+:LOGBOOK:
+CLOCK: [2022-02-25 Fri 11:50]--[2022-02-25 Fri 11:51] =>  0:01
+:END:
+[2022-02-25 Fri 11:50]
+** learn reverse engineer :reverseengineer:
+*** TODO start reading reverse engineering book. just to get my hands on to understand what its like to do reverse engineer.
+[2022-02-25 Fri 15:47]
+[[file:~/org/notes/emacs/packages/tramp-note.org::*References][References]]
+** learn devops tools :devops:
+*** TODO read book on terraform and ansible
+[2022-02-25 Fri 15:51]
+[[file:~/org/notes/emacs/packages/tramp-note.org::*Tutorial][Tutorial]]

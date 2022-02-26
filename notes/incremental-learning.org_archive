@@ -1,0 +1,57 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/awannaphasch2016/org/notes/incremental-learning.org
+
+
+* Archived Tasks
+
+** DONE How does environment of linux and emacs differ?
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-21 Mon 23:53
+:ARCHIVE_FILE: ~/org/notes/incremental-learning.org
+:ARCHIVE_OLPATH: Current Topics for Incremental Learning/Emacs/Understand Emacs at the deeper level
+:ARCHIVE_CATEGORY: incremental-learning
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: PERSONAL @sideproject LEARN emacs
+:END:
+
+** DONE what is lexical and dynamic binding?
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-21 Mon 23:53
+:ARCHIVE_FILE: ~/org/notes/incremental-learning.org
+:ARCHIVE_OLPATH: Current Topics for Incremental Learning/Emacs/Understand Emacs at the deeper level
+:ARCHIVE_CATEGORY: incremental-learning
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: PERSONAL @sideproject LEARN emacs
+:END:
+
+** DONE reimplement org-agenda and org-capture from scratch.
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-21 Mon 23:53
+:ARCHIVE_FILE: ~/org/notes/incremental-learning.org
+:ARCHIVE_OLPATH: Current Topics for Incremental Learning/Emacs/customize emacs config
+:ARCHIVE_CATEGORY: incremental-learning
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: PERSONAL @sideproject LEARN emacs
+:END:
+
+** DONE Figure out how to properly use variation of =interaction= keyword in lisp function.
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-22 Tue 00:29
+:ARCHIVE_FILE: ~/org/notes/incremental-learning.org
+:ARCHIVE_OLPATH: Current Topics for Incremental Learning/Emacs/learn to implement in emacs using elisp
+:ARCHIVE_CATEGORY: incremental-learning
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: PERSONAL @sideproject LEARN emacs
+:END:
+
+** DONE learn to use debug in elisp
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-22 Tue 00:29
+:ARCHIVE_FILE: ~/org/notes/incremental-learning.org
+:ARCHIVE_OLPATH: Current Topics for Incremental Learning/Emacs/learn to implement in emacs using elisp
+:ARCHIVE_CATEGORY: incremental-learning
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: PERSONAL @sideproject LEARN emacs
+:END:

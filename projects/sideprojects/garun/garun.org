@@ -6,12 +6,10 @@ This project is an effect to create my ideal PKM with emacs 2.0 (emacs + pen.el)
 
 * Garun
 :LOGBOOK:
-CLOCK: [2022-02-21 Mon 00:05]
+CLOCK: [2022-02-21 Mon 00:05]--[2022-02-21 Mon 21:16] => 21:11
 :END:
 ** Questions :QUESTION:
 ** Notes :NOTE:
-:LOGBOOK:
-:END:
 *** programming implementation design choise
 **** what language to use?
 **** which types of markdown style can I use? (org mode can't be used because gpl v3 license)
@@ -19,6 +17,14 @@ alternative:
 1. [[https://github.com/200ok-ch/organice][organice]]
 *** features underimplementation + known error
 **** uncaterogized
+**** doom emacs config
+***** TODO figure out why my configuration cannot be loaded to doom sandbox? is it sandbox error? :emacs:
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 21:53]--[2022-02-20 Sun 21:55] =>  0:02
+:END:
+[2022-02-20 Sun 21:53]
+***** TODO figure out how to repeat last command in emacs (similar to ; in vim) :emacs:garun:
+[2022-02-22 Tue 09:55]
 **** pdf related workflow
 ***** PROJECT when open pdf file PDFView is not a default (DocView is still in used). This is a unexpected behavior because when install pdf-tools PDFView should be automatically set as default
 **** org mode
@@ -77,6 +83,11 @@ ref:
 note:
 this can be used when writing report for data science project as well [[https://www.youtube.com/watch?v=dljNabciEGg&ab_channel=HowardAbrams][literate devops]].
 ****** allow header property =:dir:= to be set as a starting point of directory in which code will be operate on.
+****** TODO recall how to substitue section of code in org babel block into another block. :emacs:garun:
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 23:30]--[2022-02-22 Tue 23:32] =>  0:02
+:END:
+[2022-02-22 Tue 23:30]
 ***** PROJECT allow cmd command (defined in .zshrc) to be used in org-babel code block
 ****** error
 I am not sure what is going on but when I run the block with bash/zsh/sh =cmd= command is not found
@@ -107,6 +118,12 @@ I accidentally deleted enlarg-window-maximize, so I have to reimplement it
 I can see this become really use ful when combine with [[*PROJECT multi-layer text search filter. (design UI experience for piping sequence of regex output)][PROJECT multi-layer text search filter. (design UI experience for piping sequence of regex output)]]
 **** search and filter experience
 ***** PROJECT multi-layer text search filter. (design UI experience for piping sequence of regex output)
+***** TODO making jump to file/header more systemetic. (figure out a way to list only header of all orgs file. Then figure out a way to incrementally narrow down the search. similar to how org agenda has incremental search.)
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 11:14]--[2022-02-20 Sun 11:15] =>  0:01
+:END:
+[2022-02-20 Sun 11:14]
+[[file:~/org/notes/emacs/packages/org-agenda-note.org::*Key binding][Key binding]]
 **** data science features
 ***** passing scripts from your favorite language, and have them all available in emacs as commands.
 ref: http://ergoemacs.org/emacs/elisp_perl_wrapper.html
@@ -120,6 +137,7 @@ There are 2 ways to do this.
 **** colloborative features
 ***** real time coding
 ****** using Floobits to share code editing in real time (this allow sharing real time independent of text editor or IDE being used.)
+****** TODO learn to use Iedit for multi-occurrence editing in your buffer, see [[https://www.youtube.com/watch?v=xrNOLTAl1ug&ab_channel=AritraBhattacharjee][here]].
 **** emails
 ***** I have problem setting up mu4e with doom emacs
 error is shown below
@@ -188,11 +206,89 @@ ref:
 https://www.reddit.com/r/emacs/comments/a9upre/watching_video_within_an_emacs_buffer/
 https://github.com/emacs-eaf/emacs-application-framework
 **** Use Emacs Application Framework (EAF)
-ref:
+ref :
 https://www.youtube.com/watch?v=mJjBZ4MZHBo&ab_channel=AndyStewart
 https://www.youtube.com/watch?v=z9W0pnShEWc&ab_channel=GavinFreeborn
 https://www.youtube.com/watch?v=HK_f8KTuR0s&ab_channel=MatthewZeng
-
+**** lispy
+***** TODO figure out how to change lispy key binding. D for delete and y for yank. :emacs:
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 21:56]--[2022-02-20 Sun 21:57] =>  0:01
+:END:
+[2022-02-20 Sun 21:56]
+[[file:~/org/projects/sideprojects/garun/garun.org::*assign schedule and deadline to header doesn't show in agenda?][assign schedule and deadline to header doesn't show in agenda?]]
+**** window navigation + buffer + frame
+ref:
+[[https://www.youtube.com/watch?v=-H2nU0rsUMY&ab_channel=SystemCrafters][Hey Emacs, Don't Move My Windows! - Customizing display-buffer's behavior]]
+***** TODO implement =open in other window= behavior such that you can open bookmark, recent files, buffer etc to other buffer using =shift + enter=
+***** TODO create custom keybinding for scroll up and down other window. (make sure that it is intuitive and can be generalized to be combine with other key binding. )
+***** TODO implement =toggling= behavior for switching between previously visited window and next (current) window. (This is useful when using with =ace-window=)
+***** TODO create popup window in emacs (like what I use in vim)
+***** TODO figure out how to manipulate buffer by converting mini buffer such sa help to be a buffer. :garun:emacs:
+[2022-02-22 Tue 09:54]
+**** remote and cloud
+***** improve cloud based emacs
+****** TODO learn to use tramp to connect to aws container cloud.
+****** TODO [[https://martin.baillie.id/wrote/emacs-tramp-over-aws-ssm-apis/][Emacs TRAMP over AWS SSM APIs]]
+******* TODO figure out how to use tramp to connect to koko ssh
+[2022-02-24 Thu 00:27]
+[[file:~/org/notes/emacs/packages/tramp-note.org::*How to access remote files ?][How to access remote files ?]]
+******* DONE learn how to use scp so I can move large file between two machine easier.
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 00:28]--[2022-02-24 Thu 00:29] =>  0:01
+:END:
+[2022-02-24 Thu 00:28]
+[[file:~/org/notes/emacs/packages/tramp-note.org::*References][References]]
+**** ledger
+**** Tracking Habits
+***** TODO implement habit trackings. I want to develope reading, synthesizing (given info in my knowledge base) habits 30 mins for each. :emacs:garun:
+:LOGBOOK:
+CLOCK: [2022-02-23 Wed 09:32]--[2022-02-23 Wed 09:34] =>  0:02
+:END:
+[2022-02-23 Wed 09:32]
+[[file:~/org/refile.org::*dry my clothes.][dry my clothes.]]
+**** lsp
+***** TODO figure out why I get Use ="‘M-x customize-variable RET flycheck-checker-error-threshold’ to change the threshold or ‘SPC u C-c ! x’ to re-enable the checker.= when I open big python projects. How to get rid of all the error? should I obey these error? :WORK:emacs:garun:
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 09:40]--[2022-02-22 Tue 09:42] =>  0:02
+:END:
+[2022-02-22 Tue 09:40]
+[[file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/evaluation/sliding_window.py::model = self.models\[ensemble_idx\]\["model"\]]]
+***** DONE figure out why breadcrume of lsp is not coplete. it left out the class and def. Maybe internet connection error? :emacs:garun:lsp:
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 10:21]--[2022-02-22 Tue 10:22] =>  0:01
+:END:
+[2022-02-22 Tue 10:21]
+[[file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/evaluation/sliding_window.py::assert selected_sources_to_label\[:len_before\] == selected_sources_to_label_before]]
+**** snippet
+***** TODO dig into my past snippets and organised all those snippets to be searchbled and easy to retrieved and reuse. (such as yank pad, easy-collections, or other) :emacs:garun:
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 09:56]--[2022-02-22 Tue 09:58] =>  0:02
+:END:
+[2022-02-22 Tue 09:56]
+**** evil related key binding
+***** TODO In term mode, figure out why =evil-append-line" include newline character. :emacs:garun:
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 10:05]--[2022-02-22 Tue 10:06] =>  0:01
+:END:
+[2022-02-22 Tue 10:05]
+**** performance optimization
+***** TODO fix garbage collection code by implement k-time function :emacs:garun:
+[2022-02-22 Tue 18:21]
+[[file:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/hw2/main.scala][file:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/hw2/main.scala]]
+**** TODO enhance emacs bookmark features with bookmark+. learn to use bookmark+ feature and figure out how to integrate to my current workflow. should I replace bookmark with bookmark+?
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 09:58]--[2022-02-22 Tue 09:59] =>  0:01
+:END:
+[2022-02-22 Tue 09:58]
+**** TODO can I zoom in on the section of code? (this can help with searching and stuff) :emacs:garun:
+[2022-02-22 Tue 10:20]
+[[file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/evaluation/sliding_window.py][file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/evaluation/sliding_window.py]]
+**** TODO explore org-download, the goal is so that I can drag and drop images from internet or paste image from my clipboard. :emacs:garun:
+SCHEDULED: <2022-02-26 Sat>
+[2022-02-24 Thu 16:03]
+[[file:~/org/GTD.org::*write down my version of GTD purposed -> action models under Getting projects Creatively Under (7.48 hour left mins mark) for all aspect in life I want to achieve.][write down my version of GTD purposed -> action models under Getting projects Creatively Under (7.48 hour left mins mark) for all aspect in life I want to achieve.]]
+***** solution for wsl is [[https://github.com/abo-abo/org-download/issues/178][here]].
 *** current features
 **** org mode
 ***** presentation
@@ -249,13 +345,173 @@ I pick =org-reveal= over =org-beamer= because I am not sure if =org-beamer= has 
 ****** how much time do I take to complete task x?
 first clock-in under a heading then you can choose to clock-goto to go to the heading that clock is in.
 To end the clock and output the estimated time for the task, clock-out can be used.
+****** DONE LEARNING what is the proper way to stop the clock-in? how to report time spend tracked by clock
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 15:20]--[2022-02-20 Sun 15:21] =>  0:01
+:END:
+[2022-02-20 Sun 15:20]
+****** DONE clocking system works mostly, but I feel that there are too many ways to manually mess up things. Is it possible to implement the same clock system, but make it more robust to manual mistake/error.
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 17:39]--[2022-02-20 Sun 17:40] =>  0:01
+CLOCK: [2022-02-20 Sun 17:29]--[2022-02-20 Sun 17:30] =>  0:01
+:END:
+[2022-02-20 Sun 17:29]
+[[file:~/org/todo.org::*Task 4][Task 4]]
+****** DONE how to see my current clock-in task?
+[2022-02-20 Sun 17:41]
+[[file:~/org/refile.org::*LEARNING how do I clock in a task? is it work differently than punch in? (9. time clocking)][LEARNING how do I clock in a task? is it work differently than punch in? (9. time clocking)]]
+****** TODO figure out how to manually reset starting clock time? can I refresh clock to check if it responds to my manual change :emacs:garun:
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 14:18]--[2022-02-22 Tue 14:19] =>  0:01
+:END:
+[2022-02-22 Tue 14:18]
+[[file:~/org/PhD.org::*PhD][PhD]]
+****** DONE how to schedule with time :emacs:garun:
+:LOGBOOK:
+CLOCK: [2022-02-23 Wed 14:18]--[2022-02-23 Wed 14:20] =>  0:02
+:END:
+[2022-02-23 Wed 14:18]
+[[file:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/hw2/hw2.org::*Write in module Tree (file p3.scala) a polymorphic method with this signature: def toList\[A\](t: Tree\[A\]) : List\[A\] that returns a list (i.e. standard library List) with all elements from the leaves in tree t. Use the Tree.fold method given from the textbook. Hint: the List.++ method appends two lists.][Write in module Tree (file p3.scala) a polymorphic method with this signature: def toList[A](t: Tree[A]) : List[A] that returns a list (i.e. standard library List) with all elements from the leaves in tree t. Use the Tree.fold method given from the textbook. Hint: the List.++ method appends two lists.]]
 ***** Allow literate programming with org-babel where org-babel block are treated as organized as "outline nodes oragnization" styles used in leo IDE.
 requirement:
     literate programming using org-babel to tangle codes in non linear ways. This idea can be expanded to utilize leo ideo ideas of "outline nodes organization" (finer than file-based organization). To do this each org-babel block must be able to references "inside" other blocks (not only as input to other block) by tagging nodes of the block. t
 
 Demo of this feature is demonstrated by using org-babel with org block and org-roam  literater devops + nodes-outlines organization (from leo IDE).
+***** org agenda
+****** DONE It doesn't seem taht my f12 space works as describe in 3.2 Refiling Task
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 10:59]--[2022-02-20 Sun 11:00] =>  0:01
+:END:
+[2022-02-20 Sun 10:59]
+[[file:~/org/refile.org][file:~/org/refile.org]]
+
+****** DONE figure out how to do tags search over org files. With this I can search for things like key binding of "x package" for example. (Does org roam has any functionality supporting this header + tags filtering? maybe I can try that solution as well.)
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 11:12]--[2022-02-20 Sun 11:13] =>  0:01
+:END:
+[2022-02-20 Sun 11:12]
+[[file:~/org/notes/emacs/packages/org-agenda-note.org::*Key binding][Key binding]]
+****** DONE learn the basic of how to modified org agenda view.
+[2022-02-20 Sun 12:44]
+[[file:~/.doom.d/config.org::*Custom Agenda Views][Custom Agenda Views]]
+****** TODO style org agenda view so that it is easier to see. :emacs:
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 12:52]--[2022-02-20 Sun 12:53] =>  0:01
+:END:
+[2022-02-20 Sun 12:52]
+[[file:~/.doom.d/config.org::*Ace jump][Ace jump]]
+****** DONE LEARNING how to set default task for punch in? :emacs:
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 12:55]--[2022-02-20 Sun 12:56] =>  0:01
+:END:
+[2022-02-20 Sun 12:55]
+****** TODO hwo to narrow todo list (open with f12 t) incrementally. (mentioned in 8.4 Filtering)
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 14:34]--[2022-02-20 Sun 14:35] =>  0:01
+:END:
+[2022-02-20 Sun 14:34]
+[[file:~/org/notes/incremental-learning.org::*\[\[https://github.com/emacsorphanage/emamux\]\[interact with tmux from emacs\]\]][interact with tmux from emacs]]
+****** DONE how to filter by tags? how to filter by todo state? and how to filter both of them at the same time?
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 14:47]--[2022-02-20 Sun 14:48] =>  0:01
+:END:
+[2022-02-20 Sun 14:47]
+[[file:~/org/refile.org::*LEARNING what is interitance tags in org mode?][LEARNING what is interitance tags in org mode?]]
+****** DONE LEARNING how do I clock in a task? is it work differently than punch in? (9. time clocking)
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 14:53]--[2022-02-20 Sun 14:54] =>  0:01
+:END:
+[2022-02-20 Sun 14:53]
+****** DONE what is bh/orgnization-task-id? how can I change default task? :emacs:
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 15:05]--[2022-02-20 Sun 15:06] =>  0:01
+:END:
+[2022-02-20 Sun 15:05]
+[[file:~/.doom.d/config.org::*uncategorized][uncategorized]]
+****** DONE how to search tags in agenda mode? OR how to filter by tags? :emacs:
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 22:30]--[2022-02-20 Sun 22:31] =>  0:01
+:END:
+[2022-02-20 Sun 22:30]
+[[file:~/org/refile.org::*figure out how to do tags search over org files. With this I can search for things like key binding of "x package" for example. (Does org roam has any functionality supporting this header + tags filtering? maybe I can try that solution as well.)][figure out how to do tags search over org files. With this I can search for things like key binding of "x package" for example. (Does org roam has any functionality supporting this header + tags filtering? maybe I can try that solution as well.)]]
+****** DONE how do I archieve stuff in org mode? :emacs:
+:LOGBOOK:
+CLOCK: [2022-02-21 Mon 00:03]--[2022-02-21 Mon 00:04] =>  0:01
+CLOCK: [2022-02-20 Sun 23:49]--[2022-02-20 Sun 23:50] =>  0:01
+:END:
+[2022-02-20 Sun 23:49]
+[[file:~/.doom.d/config.org::*Report block][Report block]]
+****** TODO how to schedule recurrence task like weekly review to be the first task on every monday.
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 23:14]--[2022-02-20 Sun 23:15] =>  0:01
+:END:
+[2022-02-20 Sun 23:14]
+[[file:~/org/weekly-review.org][file:~/org/weekly-review.org]]
+****** DONE How to restrict the matches to the current list (7.1 Refile setup)
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 10:44]--[2022-02-20 Sun 10:45] =>  0:01
+:END:
+[2022-02-20 Sun 10:44]
+[[file:~/org/todo.org::*Passwords][Passwords]]
+****** DONE figure out how to define stuck project and project in emacs.
+:LOGBOOK:
+CLOCK: [2022-02-21 Mon 23:24]--[2022-02-21 Mon 23:38] =>  0:14
+CLOCK: [2022-02-21 Mon 23:15]--[2022-02-21 Mon 23:23] =>  0:08
+:END:
+[2022-02-21 Mon 23:01]
+[[file:~/org/projects/sideprojects/garun/garun.org::*figure out why my configuration cannot be loaded to doom sandbox? is it sandbox error?][figure out why my configuration cannot be loaded to doom sandbox? is it sandbox error?]]
+****** DONE learn how to filter org mode header by tags and tags all of the org-agenda-files accordingly.
+[2022-02-22 Tue 00:49]
+[[file:~/org/notes/incremental-learning.org::*learn about data science at commandline][learn about data science at commandline]]
+****** TODO how to pick tags from list of existing tags?
+[2022-02-22 Tue 01:12]
+[[file:~/org/notes/incremental-learning.org::*learning clojure][learning clojure]]
+****** DONE learn how to filter org mode header by tags and tags all of the org-agenda-files accordingly.
+[2022-02-22 Tue 00:49]
+[[file:~/org/notes/incremental-learning.org::*learn about data science at commandline][learn about data science at commandline]]
+****** TODO how to pick tags from list of existing tags?
+[2022-02-22 Tue 01:12]
+[[file:~/org/notes/incremental-learning.org::*learning clojure][learning clojure]]
+****** TODO write notes on definition of tags in emacs, so it stay consistence. :gtd:@home:
+:LOGBOOK:
+CLOCK: [2022-02-21 Mon 22:02]--[2022-02-21 Mon 22:03] =>  0:01
+:END:
+[2022-02-21 Mon 22:02]
+[[file:~/org/GTD.org::+TITLE: Gtd]]
+
+[2022-02-22 Tue 09:20]
 ***** allow "making literate note from source code"
 
 **** movement
 ***** ace-jump
+**** hledger to maintain financial report
+[[https://github.com/narendraj9/hledger-mode][hledger-mode]]
+*** In attempt to make garun be a stable version of emacs that is ready to distributed. There should be a unittest that make sure that core functionality that one expect from emacs will not break. If it pass the test, configuration can be added otherwise the configuration should be avoided. :NOTE:
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 22:42]--[2022-02-24 Thu 22:43] =>  0:01
+:END:
+[2022-02-24 Thu 22:42]
 ** Meeting :MEETING:
+** Task
+*** TODO read or watch video about notion. compare and constrast why notion is better or worse than roam research/emacs. (what are functionality that I should add to emacs.)
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 22:40]--[2022-02-24 Thu 22:41] =>  0:01
+:END:
+[2022-02-24 Thu 22:40]
+*** TODO do research on ipad (or alike) to support notetaking by hands. (time to explore note taking by hands.) main focus should be to support research reading & highlighting process, and, also, writing as a process of expressing thought (this condition implies that "back-of-envolop" note should be able to easily stored and search via emacs or roam research. etc.)
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 22:37]--[2022-02-24 Thu 22:40] =>  0:03
+:END:
+[2022-02-24 Thu 22:37]
+*** TODO figure out a way to migrate content from roam research to emacs using org roam and others. What are features that I still need from roam research that may take too much time for me to implement or figure out to replicate in emacs?
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 22:53]--[2022-02-24 Thu 22:55] =>  0:02
+:END:
+[2022-02-24 Thu 22:53]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*domain defines all possible values for attribute.][domain defines all possible values for attribute.]]
+*** TODO skim through norang productivity tools topics and list out topics that I am interested in implementing. After than schedule my time to implement each of the sections.
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 23:10]--[2022-02-24 Thu 23:11] =>  0:01
+:END:
+[2022-02-24 Thu 23:10]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*3.5 Weak Entity Types][3.5 Weak Entity Types]]

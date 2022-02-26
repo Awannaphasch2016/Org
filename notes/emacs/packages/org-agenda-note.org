@@ -56,6 +56,12 @@ For backward compatibility, and also for typing speed, there is also a different
 ***** Select ‘work’-tagged TODO lines that are neither ‘WAITING’ nor ‘NEXT’.
 **** ‘work/!+WAITING|+NEXT’
 ***** Select ‘work’-tagged TODO lines that are either ‘WAITING’ or ‘NEXT’.
+** example of how to search in agenda mode
+*** in agenda mode, \ (will convert next command to emacs commands rather than evil) then mark tasks with =m= and applied bulk command with =B=.
+*** in agenda mode, org-agenda-filter-by-tags (s t) let one filter tasks by tags.
+*** in agenda mode, org-agenda-filter (\ /) let one filter by category, tag, effort, regexp.
+* Archived
+** in agenda mode, \ (will convert next command to emacs commands rather than evil) then mark tasks with =m= and applied bulk archived command with =B $=.
 
 * Key binding
 | commands          | key | doom keys | custom keys | descriptions |

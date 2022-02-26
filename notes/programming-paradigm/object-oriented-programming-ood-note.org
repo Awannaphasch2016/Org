@@ -1,0 +1,4 @@
+#+TITLE: Object Oriented Programming Ood Note
+
+* Polymorphism
+=polymorphism= is the provision of a single interface to entities of different types or the use of a single symbol to represent multiple different types.

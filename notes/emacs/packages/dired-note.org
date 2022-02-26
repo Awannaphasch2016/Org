@@ -1,0 +1,5 @@
+#+TITLE: Dired Note
+
+* key binding and command
+| commands                         | key | doom keys | custom keys | descriptions                                   |
+| dired-copy-filename-as-killright |     | Y         |             | with spc-u 0, absoluate path to file is copied |

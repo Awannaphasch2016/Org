@@ -1,6 +1,37 @@
 #+TITLE: Pen
 #+FILETAGS: pen PERSONAL @sideproject
 
-* Questions :QUESTION:
-* Notes :NOTE:
-* Meeting :MEETING:
+* Pen
+** Questions :QUESTION:
+** Notes :NOTE:
+** Meeting :MEETING:
+** Tasks
+*** builing startup on pen.el project
+- ref
+  - research paper
+    - [[https://storage.googleapis.com/deepmind-media/AlphaCode/competition_level_code_generation_with_alphacode.pdf][Competition-Level Code Generation with AlphaCode]]
+  - api alternative
+    - https://cohere.ai/
+    - https://www.ai21.com/
+    - https://goose.ai/docs/api/completions
+
+- requirement
+  - scalability
+    - lsp-server
+      - lots of requests to server. (high pair-wise activity)
+- build blockchain to extend pen.el
+  - start working on state_channel (what is the purpose on state_channel?)
+- files that should be looked at first. (related to blockchain part of things)
+  - src/pen.el (server)
+  - src/pen-client.el (thin client)
+  - src/pen-custom.el (read ~/.pen/pen.yaml config file)
+
+*** WAITING write out business plan required for me to execute pen.el start up plan. what does a founder need to know before starting a company? how to estimate value of the business? what is the time horizon (can I start doing it before starting the summer)? what do I need to know because deciding on the amount of money that pen.el need to continue the project? :WAITING:
+SCHEDULED: <2022-03-01 Tue>
+- State "WAITING"    from "TODO"       [2022-02-24 Thu 18:42] \\
+  I need to map out purpose/principle/vision ( GTD methods) for my life and pen.el project (among other project) before begingin this step. actions should be postponeed until I can see my whole life at a higher level.
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 18:39]--[2022-02-24 Thu 18:41] =>  0:02
+:END:
+[2022-02-24 Thu 18:39]
+[[file:~/org/notes/database-note.org::*ER][ER]]

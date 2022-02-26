@@ -1,7 +1,14 @@
 #+TITLE: Articles To Read
+#+FILETAGS: LEARN read article
 
 * Programming Articles
 ** ScalaCheck Website and the Property-based testing page on that site
 mentioned on Page 204 of learning functional programing in scala book.
 ** Jesper Nordenberg on "Haskell vs Scala"
 one of the most neutral "Haskell vs Scala" discussions I've read.
+** LEARNING read "write code comments in org-mode with poporg." :READ:
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 13:45]--[2022-02-20 Sun 13:46] =>  0:01
+:END:
+[2022-02-20 Sun 13:45]
+** TODO [[https://stackoverflow.com/questions/4590237/how-do-i-debug-my-program-when-it-hangs#:~:text=Use%20the%20debugger%20to%20find,take%20control%20of%20the%20process.][how do I figure out why program hangs?]]

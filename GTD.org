@@ -12,6 +12,37 @@ GTD files collects all todos related related to time taken to spend on following
 
 * GTD
 :LOGBOOK:
-CLOCK: [2022-02-21 Mon 22:06]
+CLOCK: [2022-02-24 Thu 11:07]--[2022-02-24 Thu 11:09] =>  0:02
+CLOCK: [2022-02-23 Wed 00:16]--[2022-02-23 Wed 00:40] =>  0:24
+CLOCK: [2022-02-22 Tue 20:18]--[2022-02-22 Tue 20:26] =>  0:08
+CLOCK: [2022-02-21 Mon 23:01]--[2022-02-21 Mon 23:10] =>  0:09
+CLOCK: [2022-02-21 Mon 22:39]--[2022-02-21 Mon 23:01] =>  0:22
+CLOCK: [2022-02-21 Mon 22:26]--[2022-02-21 Mon 22:39] =>  0:13
+CLOCK: [2022-02-21 Mon 22:06]--[2022-02-21 Mon 22:26] =>  0:20
 :END:
 ** Weekly review
+** Refiling  + organizing
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 16:04]--[2022-02-24 Thu 16:15] =>  0:11
+CLOCK: [2022-02-24 Thu 16:03]--[2022-02-24 Thu 16:04] =>  0:01
+CLOCK: [2022-02-24 Thu 16:02]--[2022-02-24 Thu 16:03] =>  0:01
+CLOCK: [2022-02-24 Thu 15:46]--[2022-02-24 Thu 15:48] =>  0:02
+CLOCK: [2022-02-24 Thu 11:28]--[2022-02-24 Thu 11:29] =>  0:01
+CLOCK: [2022-02-24 Thu 11:19]--[2022-02-24 Thu 11:24] =>  0:05
+CLOCK: [2022-02-24 Thu 10:53]--[2022-02-24 Thu 10:54] =>  0:01
+:END:
+*** WAITING assign schedule and deadline for tasks in todos/tasks and school (e.g exam date.) :@errand:WAITING:
+- State "WAITING"    from "TODO"       [2022-02-24 Thu 11:19] \\
+  this task should be done after I foind out mid term deadline.
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 11:18]--[2022-02-24 Thu 11:19] =>  0:01
+:END:
+[2022-02-24 Thu 11:18]
+[[file:~/org/GTD.org::*Refiling + organizing][Refiling + organizing]]
+** NEXT write down my version of GTD purposed -> action models under Getting projects Creatively Under (7.48 hour left mins mark) for all aspect in life I want to achieve.
+SCHEDULED: <2022-02-24 Thu>
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 10:55]--[2022-02-24 Thu 10:57] =>  0:02
+:END:
+[2022-02-24 Thu 10:55]
+[[file:~/org/GTD.org::*Refiling][Refiling]]

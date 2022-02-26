@@ -37,3 +37,222 @@ CLOCK: [2022-02-21 Mon 21:30]--[2022-02-21 Mon 21:48] =>  0:18
 CLOCK: [2022-02-21 Mon 21:49]--[2022-02-21 Mon 22:00] =>  0:11
 :END:
 [2022-02-21 Mon 21:48]
+**** taking a break
+:LOGBOOK:
+CLOCK: [2022-02-21 Mon 23:58]--[2022-02-22 Tue 00:28] =>  0:30
+:END:
+[2022-02-21 Mon 23:58]
+
+*** 2022-02-22 Tuesday
+**** taking a break.
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 01:23]--[2022-02-22 Tue 09:20] =>  7:57
+:END:
+[2022-02-22 Tue 01:23]
+**** walking dog.
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 09:20]--[2022-02-22 Tue 09:38] =>  0:18
+:END:
+[2022-02-22 Tue 09:20]
+**** using bathroom.
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 09:42]--[2022-02-22 Tue 09:49] =>  0:07
+:END:
+[2022-02-22 Tue 09:42]
+**** rank ensembles by performances :PhD:
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 10:04]--[2022-02-22 Tue 10:05] =>  0:01
+:END:
+[2022-02-22 Tue 10:04]
+**** taking a break
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 11:27]--[2022-02-22 Tue 12:08] =>  0:41
+:END:
+[2022-02-22 Tue 11:27]
+**** takign shower :@home:
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 12:08]--[2022-02-22 Tue 12:17] =>  0:09
+:END:
+[2022-02-22 Tue 12:08]
+**** moving
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 14:39]--[2022-02-22 Tue 14:41] =>  0:02
+:END:
+[2022-02-22 Tue 14:39]
+**** taking a break.
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 16:19]--[2022-02-22 Tue 16:43] =>  0:24
+:END:
+[2022-02-22 Tue 16:19]
+**** bathroom break
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 16:57]--[2022-02-22 Tue 17:12] =>  0:15
+:END:
+[2022-02-22 Tue 16:57]
+**** bathroom break.
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 19:13]--[2022-02-22 Tue 19:31] =>  0:18
+:END:
+[2022-02-22 Tue 19:13]
+**** taking a break
+[2022-02-22 Tue 21:08]
+**** taking a break
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 21:09]--[2022-02-22 Tue 21:54] =>  0:45
+:END:
+[2022-02-22 Tue 21:09]
+
+*** 2022-02-23 Wednesday
+**** taking a break
+:LOGBOOK:
+CLOCK: [2022-02-23 Wed 00:02]--[2022-02-23 Wed 00:11] =>  0:09
+:END:
+[2022-02-23 Wed 00:02]
+**** errand :@home:
+:LOGBOOK:
+CLOCK: [2022-02-23 Wed 10:03]--[2022-02-23 Wed 10:08] =>  0:05
+:END:
+[2022-02-23 Wed 10:03]
+**** break
+[2022-02-23 Wed 10:29]
+**** taking a break
+:LOGBOOK:
+CLOCK: [2022-02-23 Wed 10:45]--[2022-02-23 Wed 10:59] =>  0:14
+:END:
+[2022-02-23 Wed 10:45]
+**** shower :@home:
+:LOGBOOK:
+CLOCK: [2022-02-23 Wed 11:45]--[2022-02-23 Wed 12:10] =>  0:25
+:END:
+[2022-02-23 Wed 11:45]
+**** errand :@errand:
+:LOGBOOK:
+CLOCK: [2022-02-23 Wed 12:10]--[2022-02-23 Wed 12:14] =>  0:04
+:END:
+[2022-02-23 Wed 12:10]
+**** taking a break
+:LOGBOOK:
+CLOCK: [2022-02-23 Wed 14:28]--[2022-02-23 Wed 14:58] =>  0:30
+:END:
+[2022-02-23 Wed 14:28]
+**** chat
+:LOGBOOK:
+CLOCK: [2022-02-23 Wed 15:20]--[2022-02-23 Wed 15:22] =>  0:02
+:END:
+[2022-02-23 Wed 15:20]
+**** distracted
+:LOGBOOK:
+CLOCK: [2022-02-23 Wed 15:26]--[2022-02-23 Wed 15:41] =>  0:15
+:END:
+[2022-02-23 Wed 15:26]
+**** distracted
+:LOGBOOK:
+CLOCK: [2022-02-23 Wed 15:43]--[2022-02-23 Wed 15:47] =>  0:04
+:END:
+[2022-02-23 Wed 15:43]
+**** moving
+:LOGBOOK:
+CLOCK: [2022-02-23 Wed 16:33]--[2022-02-23 Wed 16:41] =>  0:08
+:END:
+[2022-02-23 Wed 16:33]
+**** distract
+:LOGBOOK:
+CLOCK: [2022-02-23 Wed 16:49]--[2022-02-23 Wed 16:52] =>  0:03
+:END:
+[2022-02-23 Wed 16:49]
+**** taking a break
+:LOGBOOK:
+CLOCK: [2022-02-23 Wed 17:10]--[2022-02-23 Wed 17:20] =>  0:10
+:END:
+[2022-02-23 Wed 17:10]
+**** chat
+:LOGBOOK:
+CLOCK: [2022-02-23 Wed 17:23]--[2022-02-23 Wed 17:28] =>  0:05
+:END:
+[2022-02-23 Wed 17:23]
+**** moving
+:LOGBOOK:
+CLOCK: [2022-02-23 Wed 18:54]--[2022-02-23 Wed 18:55] =>  0:01
+:END:
+[2022-02-23 Wed 18:54]
+**** bathroom break + eating
+:LOGBOOK:
+CLOCK: [2022-02-23 Wed 19:12]--[2022-02-23 Wed 20:32] =>  1:20
+:END:
+[2022-02-23 Wed 19:12]
+**** taking a break
+:LOGBOOK:
+CLOCK: [2022-02-23 Wed 23:37]--[2022-02-24 Thu 00:26] =>  0:49
+:END:
+[2022-02-23 Wed 23:37]
+
+*** 2022-02-24 Thursday
+**** bathroom break
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 11:24]--[2022-02-24 Thu 11:28] =>  0:04
+:END:
+[2022-02-24 Thu 11:24]
+**** moving
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 12:07]--[2022-02-24 Thu 12:08] =>  0:01
+:END:
+[2022-02-24 Thu 12:07]
+**** moving
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 14:41]--[2022-02-24 Thu 15:39] =>  0:58
+:END:
+[2022-02-24 Thu 14:41]
+**** chatting
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 15:48]--[2022-02-24 Thu 16:02] =>  0:14
+:END:
+[2022-02-24 Thu 15:48]
+**** emacs stuff
+[2022-02-24 Thu 16:02]
+**** eating a meal
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 16:50]--[2022-02-24 Thu 18:07] =>  1:17
+:END:
+[2022-02-24 Thu 16:50]
+**** gtd stuff for expert identification task
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 18:28]--[2022-02-24 Thu 18:31] =>  0:03
+:END:
+[2022-02-24 Thu 18:28]
+**** GTD
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 23:15]--[2022-02-24 Thu 23:26] =>  0:11
+:END:
+[2022-02-24 Thu 23:15]
+**** gtd stuff
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 23:29]--[2022-02-24 Thu 23:31] =>  0:02
+:END:
+[2022-02-24 Thu 23:29]
+**** emacs org agenda.
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 23:45]--[2022-02-25 Fri 00:03] =>  0:18
+:END:
+[2022-02-24 Thu 23:44]
+
+*** 2022-02-25 Friday
+**** break
+:LOGBOOK:
+CLOCK: [2022-02-25 Fri 00:04]--[2022-02-25 Fri 09:19] =>  9:15
+:END:
+[2022-02-25 Fri 00:04]
+**** break
+:LOGBOOK:
+CLOCK: [2022-02-25 Fri 09:43]--[2022-02-25 Fri 10:41] =>  0:58
+:END:
+[2022-02-25 Fri 09:43]
+**** bathroom
+:LOGBOOK:
+CLOCK: [2022-02-25 Fri 11:20]--[2022-02-25 Fri 11:50] =>  0:30
+:END:
+[2022-02-25 Fri 11:20]
+**** break
+:LOGBOOK:
+CLOCK: [2022-02-25 Fri 12:46]--[2022-02-25 Fri 12:58] =>  0:12
+:END:
+[2022-02-25 Fri 12:46]

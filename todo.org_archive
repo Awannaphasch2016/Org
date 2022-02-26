@@ -18,3 +18,128 @@ Archived entries from file /home/awannaphasch2016/org/todo.org
 - State "DONE"       from "WAITING"    [2021-10-18 Mon 16:20]
 - State "WAITING"    from "TODO"       [2021-09-28 Tue 20:52] \\
   waiting until a car is registered.
+
+** DONE Buy car insurance
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-21 Mon 23:09
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Vehicle maintenance
+:ARCHIVE_CATEGORY: Vehicle
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: PERSONAL
+:END:
+- State "DONE"       from "WAITING"    [2021-10-18 Mon 16:20]
+- State "WAITING"    from "TODO"       [2021-09-28 Tue 20:52] \\
+  waiting until a car is registered.
+
+** DONE check to make sure that jared pay rent for march. 750 :@errand:
+SCHEDULED: <2022-02-23 Wed>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-23 Wed 23:39
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Tasks
+:ARCHIVE_CATEGORY: Task
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: PERSONAL
+:END:
+
+** DONE pay rent 1500 and asked jared to pay 750. :@errand:
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-23 Wed 23:39
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Tasks
+:ARCHIVE_CATEGORY: Task
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: PERSONAL
+:END:
+[2022-02-22 Tue 10:40]
+[[file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/utils.py::raise NotImplementedError("I don't expect this to be used anymore.")]]
+
+** DONE check to make sure that jared pay rent for march. 750 :@errand:
+SCHEDULED: <2022-02-23 Wed>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-24 Thu 10:57
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Tasks
+:ARCHIVE_CATEGORY: Task
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: PERSONAL
+:END:
+
+** DONE pay rent 1500 and asked jared to pay 750. :@errand:
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-24 Thu 10:57
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Tasks
+:ARCHIVE_CATEGORY: Task
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: PERSONAL
+:END:
+[2022-02-22 Tue 10:40]
+[[file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/utils/utils.py::raise NotImplementedError("I don't expect this to be used anymore.")]]
+
+** DONE answer maggie
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-26 Sat 09:55
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Tasks
+:ARCHIVE_CATEGORY: Task
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: PERSONAL
+:END:
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 10:54]--[2022-02-24 Thu 10:55] =>  0:01
+:END:
+[2022-02-24 Thu 10:54]
+[[file:~/org/GTD.org::*Refiling][Refiling]]
+
+** DONE When I am home, put my jacket in my bags.
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-26 Sat 09:55
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Tasks
+:ARCHIVE_CATEGORY: Task
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: PERSONAL
+:END:
+[2022-02-24 Thu 10:54]
+[[file:~/org/GTD.org::*Refiling][Refiling]]
+
+** DONE weight my self in the morning.
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-26 Sat 09:55
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Tasks
+:ARCHIVE_CATEGORY: Task
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: PERSONAL
+:END:
+[2022-02-23 Wed 01:00]
+[[file:~/org/GTD.org::*GTD][GTD]]
+
+** DONE buy dog food. Ask jared too. He could help me buy it.
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-26 Sat 10:23
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Tasks
+:ARCHIVE_CATEGORY: Task
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: PERSONAL
+:END:
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 09:51]--[2022-02-22 Tue 09:52] =>  0:01
+:END:
+[2022-02-22 Tue 09:51]
+[[file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/evaluation/sliding_window.py::def evaluate_epoch(self, ensemble_idx, epoch, num_batch):]]
+
+** DONE refile task within todos/tasks into other section appropriatly.
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-26 Sat 10:26
+:ARCHIVE_FILE: ~/org/todo.org
+:ARCHIVE_OLPATH: Tasks
+:ARCHIVE_CATEGORY: Task
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: PERSONAL
+:END:
+[2022-02-26 Sat 10:05]
+[[file:~/org/refile.org::*start daily writing and reading. (checkout template that I made for roam research to used as a building block. dont reinvent the wheel, but adjust things accordingly.)][start daily writing and reading. (checkout template that I made for roam research to used as a building block. dont reinvent the wheel, but adjust things accordingly.)]]

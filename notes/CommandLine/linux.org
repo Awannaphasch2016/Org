@@ -1,5 +1,7 @@
 #+TITLE: Linux
 
+* Reference
+** "command line pandas killer" (mlr, q, csvtk, xsv, tsv-utils), see [[https://github.com/xvzftube/pandas_killers/blob/main/main.sh][here]].
 * ls
 ** what is the meaning of read column output
 - ref

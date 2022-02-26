@@ -1,0 +1,128 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/awannaphasch2016/org/school.org
+
+
+* Archived Tasks
+
+** DONE work on scala homework.
+SCHEDULED: <2022-02-23 Wed>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-24 Thu 11:07
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Tasks/scala course
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school
+:END:
+- State "TODO"       from "WAITING"    [2022-02-23 Wed 09:35]
+- State "WAITING"    from "TODO"       [2022-02-23 Wed 01:14] \\
+  do scala homework after I finish the quiz .
+:LOGBOOK:
+CLOCK: [2022-02-23 Wed 15:58]--[2022-02-24 Thu 01:00] =>  9:02
+CLOCK: [2022-02-23 Wed 15:41]--[2022-02-23 Wed 15:43] =>  0:02
+CLOCK: [2022-02-23 Wed 15:22]--[2022-02-23 Wed 15:26] =>  0:04
+CLOCK: [2022-02-23 Wed 15:12]--[2022-02-23 Wed 15:20] =>  0:08
+CLOCK: [2022-02-23 Wed 15:05]--[2022-02-23 Wed 15:12] =>  0:07
+CLOCK: [2022-02-23 Wed 14:58]--[2022-02-23 Wed 15:05] =>  0:07
+CLOCK: [2022-02-23 Wed 14:20]--[2022-02-23 Wed 14:28] =>  0:08
+CLOCK: [2022-02-23 Wed 13:45]--[2022-02-23 Wed 14:16] =>  0:31
+CLOCK: [2022-02-23 Wed 12:14]--[2022-02-23 Wed 12:27] =>  0:13
+CLOCK: [2022-02-23 Wed 10:59]--[2022-02-23 Wed 11:45] =>  0:46
+CLOCK: [2022-02-23 Wed 10:30]--[2022-02-23 Wed 10:45] =>  0:15
+CLOCK: [2022-02-23 Wed 09:50]--[2022-02-23 Wed 10:30] =>  0:40
+CLOCK: [2022-02-23 Wed 09:35]--[2022-02-23 Wed 09:36] =>  0:01
+CLOCK: [2022-02-22 Tue 19:31]--[2022-02-22 Tue 20:18] =>  0:47
+CLOCK: [2022-02-22 Tue 18:21]--[2022-02-22 Tue 18:34] =>  0:13
+CLOCK: [2022-02-22 Tue 18:20]--[2022-02-22 Tue 18:21] =>  0:01
+:END:
+*** get overview of all the questios and write down things that I need to know before starting to code.
+
+** DONE work on scala quiz
+SCHEDULED: <2022-02-23 Wed>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-24 Thu 11:07
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Tasks/scala course
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school
+:END:
+
+** DONE check my exam dates
+SCHEDULED: <2022-02-24 Thu>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-24 Thu 16:10
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Tasks
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school
+:END:
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 11:16]--[2022-02-24 Thu 11:18] =>  0:02
+CLOCK: [2022-02-24 Thu 11:14]--[2022-02-24 Thu 11:15] =>  0:01
+CLOCK: [2022-02-24 Thu 11:13]--[2022-02-24 Thu 11:14] =>  0:01
+CLOCK: [2022-02-24 Thu 11:09]--[2022-02-24 Thu 11:10] =>  0:01
+:END:
+[2022-02-23 Wed 13:41]
+[[file:~/org/PhD.org::*comprare 2 models use a sliding window to compare erform w.r.t. multiple time points][comprare 2 models use a sliding window to compare erform w.r.t. multiple time points]]
+
+** DONE work on database homework.
+SCHEDULED: <2022-02-24 Thu> DEADLINE: <2022-02-25 Fri>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-26 Sat 00:01
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Tasks/Database
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school
+:END:
+:LOGBOOK:
+CLOCK: [2022-02-25 Fri 15:54]--[2022-02-25 Fri 22:00] =>  6:06
+CLOCK: [2022-02-25 Fri 15:52]--[2022-02-25 Fri 15:54] =>  0:02
+CLOCK: [2022-02-25 Fri 15:51]--[2022-02-25 Fri 15:52] =>  0:01
+CLOCK: [2022-02-25 Fri 15:50]--[2022-02-25 Fri 15:51] =>  0:01
+CLOCK: [2022-02-25 Fri 15:48]--[2022-02-25 Fri 15:50] =>  0:02
+CLOCK: [2022-02-25 Fri 15:47]--[2022-02-25 Fri 15:48] =>  0:01
+CLOCK: [2022-02-25 Fri 15:46]--[2022-02-25 Fri 15:47] =>  0:01
+CLOCK: [2022-02-25 Fri 14:25]--[2022-02-25 Fri 15:45] =>  1:20
+:END:
+*** get overview of all the questios and write down things that I need to know before starting to code. Watch lecture accordingly
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 19:17]--[2022-02-24 Thu 19:43] =>  0:26
+CLOCK: [2022-02-24 Thu 18:41]--[2022-02-24 Thu 19:07] =>  0:26
+CLOCK: [2022-02-24 Thu 18:33]--[2022-02-24 Thu 18:39] =>  0:06
+CLOCK: [2022-02-24 Thu 18:31]--[2022-02-24 Thu 18:32] =>  0:01
+CLOCK: [2022-02-24 Thu 18:25]--[2022-02-24 Thu 18:28] =>  0:03
+CLOCK: [2022-02-24 Thu 18:18]--[2022-02-24 Thu 18:23] =>  0:05
+CLOCK: [2022-02-24 Thu 18:10]--[2022-02-24 Thu 18:17] =>  0:07
+CLOCK: [2022-02-24 Thu 16:21]--[2022-02-24 Thu 16:50] =>  0:29
+CLOCK: [2022-02-24 Thu 16:15]--[2022-02-24 Thu 16:21] =>  0:06
+:END:
+**** what I need to know to do homework
+***** figure out how to log in to database.
+***** draw ER diagram for an application.
+***** translate your ER diagram into relation schemas (write SQL statement)
+***** what is FDs
+****** identify candidate keys
+****** state the strongest normal form that R satisfies (e.g. 1NF 2NF, 3NF, BCNF)
+**** read chapter 3,4,6,7 (around 120 pages, I think I can finish it today.)
+:LOGBOOK:
+CLOCK: [2022-02-25 Fri 14:07]--[2022-02-25 Fri 14:25] =>  0:18
+CLOCK: [2022-02-25 Fri 13:50]--[2022-02-25 Fri 14:07] =>  0:17
+CLOCK: [2022-02-25 Fri 12:58]--[2022-02-25 Fri 12:59] =>  0:01
+CLOCK: [2022-02-25 Fri 12:45]--[2022-02-25 Fri 12:46] =>  0:01
+CLOCK: [2022-02-25 Fri 11:51]--[2022-02-25 Fri 12:45] =>  0:54
+CLOCK: [2022-02-25 Fri 11:10]--[2022-02-25 Fri 11:20] =>  0:10
+CLOCK: [2022-02-25 Fri 11:05]--[2022-02-25 Fri 11:10] =>  0:05
+CLOCK: [2022-02-25 Fri 10:41]--[2022-02-25 Fri 11:04] =>  0:23
+CLOCK: [2022-02-25 Fri 09:19]--[2022-02-25 Fri 09:43] =>  0:24
+CLOCK: [2022-02-24 Thu 23:26]--[2022-02-24 Thu 23:29] =>  0:03
+CLOCK: [2022-02-24 Thu 23:11]--[2022-02-24 Thu 23:14] =>  0:03
+CLOCK: [2022-02-24 Thu 23:03]--[2022-02-24 Thu 23:09] =>  0:06
+:END:
+***** read 6 + practice
+***** read 5
+***** if still needed, read 4,7
