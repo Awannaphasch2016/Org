@@ -6,6 +6,15 @@
 - Linux Secret Service
 - GNOME Keyring
 - KWallet
+* Tools
+** Transport Layer Security (TLS)
+** Secure Shell (SSL) protocol
+*** ssh enable secure system administration and file transfer over insecure networks.
+*** Terminologies
+**** multiplexiing
+***** multiplexing is the ability to send more htan one signal over a single line or connection. In OpenSSH, multipliexing can re-sue and existing outgoing TCP connection form ultiple concurrent SSH session to a remote SSH server, avoiding the overhead of creating a new TCP connection and reauthenticating each time.
+** GPG
+*** implement the Pretty Good Privacy (PGP) protocol.
 * How tos
 ** How to encrypt/decrypt Your password?
 *** Store/access passwords in an encrypted file using =auth-source= package in emacs.
@@ -90,8 +99,32 @@ pgrep gpg-agent
 gpg-connect-agent /by e
 #+END_SRC
 
-
-
 ** How To Verify SSL Certificate From A Shell Prompt.
 - ref
   - https://www.cyberciti.biz/faq/test-ssl-certificates-diagnosis-ssl-certificate/
+* Terminology and Concepts
+** collision
+*** hash function has a collision if two plaintexts $p_{1}$ and $p_{2}$ exist such that they both provide the same hash i.e. $H[p_{1}] = h = H[p_{2}]$.
+*** All one-way functions including hashes have massive amounts of collisions
+** hash function
+*** general hash function
+**** properties
+***** one-way property (non-invertible function).
+***** should be able to accept input data of any size.
+***** must provide an output of fixed size
+***** should be computationally easy (fast) to compute
+**** example
+***** CRC32
+*** cryptographics hash function
+**** properties
+***** collision-free
+***** hiding
+***** puzzle friendly
+* FAQs
+** Compare
+*** SSL vs telnet vs ftp vs ftp/s vs  rlogin vs rsh vs rcp
+**** SSL replaces legacy tools and protocol including telnet vs ftp vs ftp/s vs  rlogin vs rsh vs rcp
+** [[https://security.stackexchange.com/questions/120706/why-would-i-sign-my-git-commits-with-a-gpg-key-when-i-already-use-an-ssh-key-to/120725#120725][Why would I sign my git ocmmits with a GPG key when I already use an SSH key to authenticate myself when I push?]]
+When you authenticate to Github with your SSH key, that authentication doesn't become part of the repository in any meaningful or lasting way. It causes Github to give you access for the moment, but it doesn't prove anything to anyone who is not Github.
+
+When you GPG-sign a git tag, that tag is part of the repository, and can be pushed to other copies of the repository. Thus, other people who clone your repository can verify the signed tag, assuming that they have access to your public key and reason to trust it.

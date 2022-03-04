@@ -2,17 +2,34 @@
 #+FILETAGS: PERSONAL @sideproject EI
 
 * Expert Identification
+** Waiting :WAITING:
+** Habit :habit:
+*** TODO work on expert identification
+SCHEDULED: <2022-03-03 Thu .+2d/+3d>
+:PROPERTIES:
+:STYLE:    habit
+:REPEAT_TO_STATE: TODO
+:END:
+**** TODO start working on project again after a week pause. Focus on analyzing data. (lets at the same time learn data science at command line.) (spend an hour daily or something.)
+:LOGBOOK:
+CLOCK: [2022-03-02 Wed 18:56]--[2022-03-02 Wed 19:21] =>  0:25
+CLOCK: [2022-03-02 Wed 18:55]--[2022-03-02 Wed 18:56] =>  0:01
+:END:
+***** TODO analyze sentiment data to indicate whether the sentiment works at all.
+****** NEXT figure out a way to collect data. (where to get the data?)
+******* TODO check out alpaca api. what does it used for? can I use it?
+****** TODO how should I clean data? what should data structure look like when store in database?
+****** TODO how should I measure the performance? what matrix should I use?
+**** NEXT draw UML using PlantUML: sequence diagram, activity diagram, usecase diagram, object diagram, state diagram. :@sideproject:WORK:EI:
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 17:16]--[2022-02-26 Sat 17:19] =>  0:03
+:END:
+[2022-02-26 Sat 17:16]
+[[file:~/.doom.d/init.el::+jupyter]]
 ** Questions :QUESTION:
 ** Notes :NOTE:
 ** Meeting :MEETING:
 ** Tasks
-*** TODO start working on project again after a week pause. Focus on analyzing data. (lets at the same time learn data science at command line.) (spend an hour daily or something.)
-SCHEDULED: <2022-02-26 Sat>
-**** TODO analyze sentiment data to indicate whether the sentiment works at all.
-***** NEXT figure out a way to collect data. (where to get the data?)
-****** TODO check out alpaca api. what does it used for? can I use it?
-***** TODO how should I clean data? what should data structure look like when store in database?
-***** TODO how should I measure the performance? what matrix should I use?
 *** project: crypto with kenny
 - ref
   - tutorial on twitter query

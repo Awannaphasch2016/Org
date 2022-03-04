@@ -4,9 +4,51 @@
 
 This project is an effect to create my ideal PKM with emacs 2.0 (emacs + pen.el). Effect made toward pen.el project will be documented in [[file:~/org/projects/sideprojects/pen.org][pen.el project file]].
 
+Goal: I envision Garun to support the following things
+- GTD
+- For programmer + boundless extensibilities.
+- Note-Taking (hand writing + typing).
+- Agenda + Schedule + Clocking.
+- seamless collaboration with other people and other apps. (superior functionality of emacs like emacs search should be able to it over other apps.)
+- Garun should also share the same features on multiple computers either remote or local.
+- automatically generate structure data that you own.
+- optimal keybinding. (vim + whichkey like )
+- allow user to publish contents online.
+- accessible via mobile, any OS, laptop, desktop.
+- Complex functionality is nicely sealed for ease of use. (provide help options to incrementally learn about Garun, consist of layer to )
+- protect against content loss.
+- provide optimized workflow via 'workflow mode.'
+- provide resembrance agents for each 'workflow mode'.
+- optimize for one screen/multiple screen.
+
 * Garun
 :LOGBOOK:
-CLOCK: [2022-02-26 Sat 18:01]
+CLOCK: [2022-03-03 Thu 14:43]--[2022-03-03 Thu 16:25] =>  1:42
+CLOCK: [2022-03-03 Thu 14:00]--[2022-03-03 Thu 14:04] =>  0:04
+CLOCK: [2022-03-03 Thu 13:52]--[2022-03-03 Thu 14:00] =>  0:08
+CLOCK: [2022-03-03 Thu 13:03]--[2022-03-03 Thu 13:29] =>  0:26
+CLOCK: [2022-03-03 Thu 13:02]--[2022-03-03 Thu 13:03] =>  0:01
+CLOCK: [2022-03-03 Thu 13:01]--[2022-03-03 Thu 13:02] =>  0:01
+CLOCK: [2022-03-03 Thu 12:06]--[2022-03-03 Thu 13:00] =>  0:54
+CLOCK: [2022-03-03 Thu 03:04]--[2022-03-03 Thu 03:39] =>  0:35
+CLOCK: [2022-03-03 Thu 01:27]--[2022-03-03 Thu 02:04] =>  0:37
+CLOCK: [2022-03-03 Thu 00:01]--[2022-03-03 Thu 01:21] =>  1:20
+CLOCK: [2022-03-03 Thu 00:00]--[2022-03-03 Thu 00:01] =>  0:01
+CLOCK: [2022-03-02 Wed 21:58]--[2022-03-02 Wed 23:59] =>  2:01
+CLOCK: [2022-03-02 Wed 16:25]--[2022-03-02 Wed 17:50] =>  1:25
+CLOCK: [2022-02-28 Mon 08:42]--[2022-02-28 Mon 08:47] =>  0:05
+CLOCK: [2022-02-28 Mon 08:16]--[2022-02-28 Mon 08:41] =>  0:25
+CLOCK: [2022-02-27 Sun 17:15]--[2022-02-27 Sun 17:16] =>  0:01
+CLOCK: [2022-02-27 Sun 17:06]--[2022-02-27 Sun 17:07] =>  0:01
+CLOCK: [2022-02-27 Sun 17:04]--[2022-02-27 Sun 17:06] =>  0:02
+CLOCK: [2022-02-27 Sun 16:51]--[2022-02-27 Sun 16:56] =>  0:05
+CLOCK: [2022-02-27 Sun 15:16]--[2022-02-27 Sun 16:33] =>  1:17
+CLOCK: [2022-02-27 Sun 14:29]--[2022-02-27 Sun 15:15] =>  0:46
+CLOCK: [2022-02-27 Sun 00:55]--[2022-02-27 Sun 01:32] =>  0:37
+CLOCK: [2022-02-26 Sat 23:37]--[2022-02-27 Sun 00:51] =>  1:14
+CLOCK: [2022-02-26 Sat 23:31]--[2022-02-26 Sat 23:37] =>  0:06
+CLOCK: [2022-02-26 Sat 22:30]--[2022-02-26 Sat 23:31] =>  1:01
+CLOCK: [2022-02-26 Sat 18:01]--[2022-02-26 Sat 18:17] =>  0:16
 CLOCK: [2022-02-26 Sat 17:38]--[2022-02-26 Sat 18:00] =>  0:22
 CLOCK: [2022-02-26 Sat 17:19]--[2022-02-26 Sat 17:35] =>  0:16
 CLOCK: [2022-02-26 Sat 17:14]--[2022-02-26 Sat 17:16] =>  0:02
@@ -20,8 +62,16 @@ CLOCK: [2022-02-26 Sat 12:43]--[2022-02-26 Sat 12:44] =>  0:01
 CLOCK: [2022-02-26 Sat 12:24]--[2022-02-26 Sat 12:40] =>  0:16
 CLOCK: [2022-02-26 Sat 12:17]--[2022-02-26 Sat 12:24] =>  0:07
 CLOCK: [2022-02-26 Sat 12:16]--[2022-02-26 Sat 12:17] =>  0:01
-CLOCK: [2022-02-21 Mon 00:05]--[2022-02-21 Mon 21:16] => 21:11
 :END:
+** Waiting :WAITING:
+*** WAITING figure out if i need lucid dream for flowchart workflow. If not, unsubscribe from it. :WAITING:
+:LOGBOOK:
+- State "WAITING"    from "TODO"       [2022-03-02 Wed 18:45] \\
+  try using lucid dream after I get an ipad, If I come to conclusion that I don't need it, cancle the subscription.
+CLOCK: [2022-03-02 Wed 18:44]--[2022-03-02 Wed 18:45] =>  0:01
+:END:
+[2022-03-02 Wed 18:44]
+[[file:~/org/finance/ledger.dat::Expenses:Drinks:Coffee $1.99]]
 ** Questions :QUESTION:
 ** Notes :NOTE:
 *** programming implementation design choise
@@ -138,6 +188,15 @@ CLOCK: [2022-02-20 Sun 11:14]--[2022-02-20 Sun 11:15] =>  0:01
 :END:
 [2022-02-20 Sun 11:14]
 [[file:~/org/notes/emacs/packages/org-agenda-note.org::*Key binding][Key binding]]
+***** searching with org-rifle :NOTE:emacs:garun:
+[2022-02-26 Sat 12:24]
+[[file:~/org/personal-website.org::*migrate all of my notes to blog in jykell.][migrate all of my notes to blog in jykell.]]
+***** TODO tabineAI (see [[https://www.tabnine.com/blog/17-cool-emacs-packages/][here]]) :emacs:garun:resembranceagent:
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 12:40]--[2022-02-26 Sat 12:43] =>  0:03
+:END:
+[2022-02-26 Sat 12:40]
+[[file:~/org/projects/sideprojects/garun/garun.org::*Task][Task]]
 **** data science features
 ***** passing scripts from your favorite language, and have them all available in emacs as commands.
 ref: http://ergoemacs.org/emacs/elisp_perl_wrapper.html
@@ -302,8 +361,7 @@ CLOCK: [2022-02-22 Tue 09:58]--[2022-02-22 Tue 09:59] =>  0:01
 **** TODO can I zoom in on the section of code? (this can help with searching and stuff) :emacs:garun:
 [2022-02-22 Tue 10:20]
 [[file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/evaluation/sliding_window.py][file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/evaluation/sliding_window.py]]
-**** TODO explore org-download, the goal is so that I can drag and drop images from internet or paste image from my clipboard. :emacs:garun:
-SCHEDULED: <2022-02-26 Sat>
+**** NEXT explore org-download, the goal is so that I can drag and drop images from internet or paste image from my clipboard. :emacs:garun:
 [2022-02-24 Thu 16:03]
 [[file:~/org/GTD.org::*write down my version of GTD purposed -> action models under Getting projects Creatively Under (7.48 hour left mins mark) for all aspect in life I want to achieve.][write down my version of GTD purposed -> action models under Getting projects Creatively Under (7.48 hour left mins mark) for all aspect in life I want to achieve.]]
 ***** solution for wsl is [[https://github.com/abo-abo/org-download/issues/178][here]].
@@ -509,6 +567,12 @@ CLOCK: [2022-02-21 Mon 22:02]--[2022-02-21 Mon 22:03] =>  0:01
 CLOCK: [2022-02-24 Thu 22:42]--[2022-02-24 Thu 22:43] =>  0:01
 :END:
 [2022-02-24 Thu 22:42]
+*** the most common solutions for adding figures to LaTeX documents are TikZ, PSTricks and Asymptote. :NOTE:
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 23:13]--[2022-02-26 Sat 23:30] =>  0:17
+:END:
+[2022-02-26 Sat 23:13]
+[[file:~/org/notes/networking-note.org::*multiplexing is the ability to send more htan one signal over a single line or connection. In OpenSSH, multipliexing can re-sue and existing outgoing TCP connection form ultiple concurrent SSH session to a remote SSH server, avoiding the overhead of creating a new TCP connection and reauthenticating each time.][multiplexing is the ability to send more htan one signal over a single line or connection. In OpenSSH, multipliexing can re-sue and existing outgoing TCP connection form ultiple concurrent SSH session to a remote SSH server, avoiding the overhead of creating a new TCP connection and reauthenticating each time.]]
 ** Meeting :MEETING:
 ** Task
 *** TODO read or watch video about notion. compare and constrast why notion is better or worse than roam research/emacs. (what are functionality that I should add to emacs.)
@@ -533,3 +597,48 @@ CLOCK: [2022-02-24 Thu 23:10]--[2022-02-24 Thu 23:11] =>  0:01
 :END:
 [2022-02-24 Thu 23:10]
 [[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*3.5 Weak Entity Types][3.5 Weak Entity Types]]
+*** TODO check out rememberance agent for emacs (see [[https://www.google.com/search?q=emacs+resembrance+agent&rlz=1C1CHBF_enUS941US941&oq=emacs+resembrance+agent&aqs=chrome..69i57j69i64.4756j0j7&sourceid=chrome&ie=UTF-8][here]].)
+[2022-02-26 Sat 12:17]
+[[file:~/org/projects/sideprojects/garun/garun.org::*Questions][Questions]]
+*** TODO resembrance agent package, eva (see [[https://github.com/meedstrom/eva][here]]) :emacs:garun:resembranceagent:
+[2022-02-26 Sat 12:44]
+[[file:~/org/projects/sideprojects/garun/garun.org::*Task][Task]]
+*** TODO configure mode for cronjobs called crontabs mode?
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 18:00]--[2022-02-26 Sat 18:01] =>  0:01
+:END:
+[2022-02-26 Sat 18:00]
+[[file:~/Scratches/scratch.el::;]]
+*** TODO use stackoverflow package in emacs. (sx.el) The goal is not to search for answer. (but if it does better, that's even better.) Rather, the goal is to quickly ask question that I have in a seamless manner. :garun:emacs:
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 23:06]--[2022-02-26 Sat 23:07] =>  0:01
+:END:
+[2022-02-26 Sat 23:06]
+[[file:~/org/notes/networking-note.org::*multiplexiing][multiplexiing]]
+*** TODO add voice to text to emacs.
+[2022-02-27 Sun 21:26]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*Suppose that we denote one such subset of attributes by SK; then for any two distinct tuples t1 and t2 in a relation state r of R, we have the constraint that: $t_1\[SK\] != t_2\[SK\]$][Suppose that we denote one such subset of attributes by SK; then for any two distinct tuples t1 and t2 in a relation state r of R, we have the constraint that: $t_1[SK] != t_2[SK]$]]
+*** TODO check out emamux. (interact with tmux from emacs.)
+[2022-02-28 Mon 09:57]
+[[file:/ssh:koko-login.hpc.fau.edu:/mnt/beegfs/home/awannaphasch2016/Documents/Working/tgn/tmp.sh::/mnt/beegfs/home/awannaphasch2016/.conda/envs/py38/bin/python3 train_self_supervised.py -d reddit_10000 --use_memory --n_runs 1 --n_epoch 5 --bs 1000 --max_random_weight_range 5000 --use_random_weight_to_benchmark_ef_iwf]]
+*** TODO figure out a way to use terminal in emacs full time.
+[2022-02-28 Mon 10:10]
+[[file:~/.doom.d/config.org::*multi-term][multi-term]]
+
+read the following
+https://www.reddit.com/r/emacs/comments/siatd/emacs_workflows_whats_your_setup/
+https://news.ycombinator.com/item?id=25297268
+http://jacobzelko.com/workflow/
+https://www.google.com/search?q=workflow+of+using+terminal+in+emacs&rlz=1C1CHBF_enUS941US941&oq=workflow+of+using+terminal+in+emacs&aqs=chrome..69i57j33i22i29i30.6066j0j7&sourceid=chrome&ie=UTF-8
+https://emacs.stackexchange.com/questions/13861/combining-ssh-through-term-with-tramp-to-open-file-in-buffer
+http://sagarjha.github.io/multi-run/#:~:text=And%20Emacs%20supports%20multiple%20terminal,any%20of%20the%20above%20types.
+https://stackoverflow.com/questions/3993528/how-to-open-multiple-terminals
+*** TODO explore research + literater programming (e.g. org babel etc.) features in scimax.
+[2022-02-28 Mon 10:17]
+[[file:/ssh:koko-login.hpc.fau.edu:/mnt/beegfs/home/awannaphasch2016/Documents/Working/tgn/tmp.sh::/mnt/beegfs/home/awannaphasch2016/.conda/envs/py38/bin/python3 train_self_supervised.py -d reddit_10000 --use_memory --n_runs 1 --n_epoch 5 --bs 200 --ws_framework ensemble --custom_prefix tmp --ws_multiplier 1 --init_n_instances_as_multiple_of_ws 10]]
+*** TODO figure out clipboard system of linux and window. The goal is to figure out how to copy clipboard from window and paste the link to the clipboard to emacs.
+:LOGBOOK:
+CLOCK: [2022-03-03 Thu 01:21]--[2022-03-03 Thu 01:27] =>  0:06
+:END:
+[2022-03-03 Thu 01:21]
+[[file:~/org/notes/emacs/packages/org-download-note.org::*starting code doesn't work because powershell command doesn't creat file.][starting code doesn't work because powershell command doesn't creat file.]]

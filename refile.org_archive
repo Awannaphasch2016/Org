@@ -17,3 +17,106 @@ SCHEDULED: <2022-02-23 Wed>
 :END:
 [2022-02-22 Tue 09:53]
 [[file:~/org/refile.org::*buy paper rolled][buy paper rolled]]
+
+** DONE review my Horizontal focus with my roam research template that i have.
+CLOSED: [2022-02-28 Mon 18:22] DEADLINE: <2022-02-27 Sun>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-28 Mon 18:22
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: REFILE
+:END:
+:LOGBOOK:
+CLOCK: [2022-02-27 Sun 11:57]--[2022-02-27 Sun 11:58] =>  0:01
+:END:
+[2022-02-27 Sun 11:57]
+[[file:~/org/school.org::*midterm exam][midterm exam]]
+
+** DONE convert all recurring task to have repatable property (as seen in habit tags)
+CLOSED: [2022-03-02 Wed 17:26]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-02 Wed 17:26
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: TODO
+:ARCHIVE_ITAGS: REFILE
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-02 Wed 12:13]--[2022-03-02 Wed 12:14] =>  0:01
+:END:
+[2022-03-02 Wed 12:13]
+[[file:~/org/school.org::*class is Wednesday and Friday 12.30 to 2.15. Classroom is at ???.][class is Wednesday and Friday 12.30 to 2.15. Classroom is at ???.]]
+
+** DONE find logo of my picture and send to iyann to help me design business card
+CLOSED: [2022-03-03 Thu 03:43]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-03 Thu 03:43
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: REFILE
+:END:
+[2022-02-26 Sat 12:15]
+
+** DONE assign noblocking properties to repeated task. (http://doc.norang.ca/org-mode.html#HandlingBlockedTasks)
+CLOSED: [2022-03-03 Thu 03:44]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-03 Thu 03:44
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: REFILE
+:END:
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 12:58]--[2022-02-26 Sat 12:59] =>  0:01
+:END:
+[2022-02-26 Sat 12:58]
+
+** DONE start putting my expense and income in org ledger.
+CLOSED: [2022-03-03 Thu 03:45]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-03 Thu 03:45
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: REFILE
+:END:
+[2022-02-26 Sat 16:32]
+[[file:~/org/refile.org::*plan out how to implement my own server. including buying server and setting things up.][plan out how to implement my own server. including buying server and setting things up.]]
+
+** DONE make pdfile work with emacs doom.
+CLOSED: [2022-03-03 Thu 03:50]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-03 Thu 03:50
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: REFILE
+:END:
+[2022-02-26 Sat 17:08]
+[[file:~/org/projects/sideprojects/garun/garun.org::*when select tags to display tagged images, ui should show window at the bottom and list of files + directory of each images and ui should allow for further filtering by matched word. (This ui idea is similar to ~+default/search-buffer~ )][when select tags to display tagged images, ui should show window at the bottom and list of files + directory of each images and ui should allow for further filtering by matched word. (This ui idea is similar to ~+default/search-buffer~ )]]
+
+** DONE deploy my website to Git Page. :mywebsite:
+CLOSED: [2022-03-03 Thu 03:52]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-03 Thu 03:53
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: REFILE
+:END:
+[2022-02-26 Sat 18:43]
+[[file:~/org/notes/web-devs/tools/hugo-note.org::*run hugo server][run hugo server]]
+
+** DONE clean my phone text notification.
+CLOSED: [2022-03-03 Thu 04:02]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-03 Thu 04:02
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: REFILE
+:END:
+[2022-02-28 Mon 17:06]
+[[file:~/org/todo.org::*House maintenance][House maintenance]]

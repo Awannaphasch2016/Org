@@ -1,0 +1,3 @@
+#+TITLE: Readme
+
+This directory (=~/org/blog/=) contains blogs and articles that I write for my website.

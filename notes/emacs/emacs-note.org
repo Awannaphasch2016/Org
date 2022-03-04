@@ -272,7 +272,6 @@ to select it.
 | commands       | key | doom keys | custom keys | descriptions                           |
 | info-directory |     |           |             | go to the resting page of emacs manual |
 
-
 ** Built-in functionality and macros
 *** Functionality
 **** [[https://www.gnu.org/software/emacs/manual/html_mono/ediff.html][Ediff]]
@@ -296,6 +295,9 @@ Note: It is not intuitive to use at all. Unless, I need to use it, I am better w
 **** Things related to clocking and time
 | commands                | key | doom keys | custom keys | descriptions                                            |
 | calendar-sunrise-sunset |     |           |             | Local time of sunrise and sunset for date under cursor. |
+**** Search and Replace functionality
+| commands      | key | doom keys | custom keys | descriptions |
+| query-replace |     | M-s-%     |             |              |
 *** Emacs components
 **** Buffer
 ***** How =display-buffer= works
@@ -367,6 +369,25 @@ ref: [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Choosing-Modes.
 4. Fourthif Emacs still hasn’t found a suitable major modeit looks at the file’s name. The correspondence between file names and major modes is controlled by the variable ~auto-mode-alist~
 
 5. Finally, if Emacs still hasn’t found a major mode to use, it compares the text at the start of the buffer to the variable ~magic-fallback-mode-alist~
+*** term mode
+- ref
+  - https://www.gnu.org/software/emacs/manual/html_node/elisp/Multiple-Terminals.html
+**** Emacs represents each terminal as a terminal object data type (see Terminal Type).
+**** Each terminal object has the following attributes:
+***** The name of the device used by the terminal (e.g., ‘:0.0’ or /dev/tty).
+***** The terminal and keyboard coding systems used on the terminal. See Terminal I/O Encoding.
+***** The kind of display associated with the terminal. This is the symbol returned by the function terminal-live-p (i.e., x, t, w32, ns, or pc). See Frames.
+***** A list of terminal parameters. See Terminal Parameters.
+*** shell mode
+** Minor modes
+*** term-char-mode and term-line-mode.
+**** an ordinary terminal mode operate in the equivalent of character mode.
+**** In line mode, Term basically acts like Shell mode (see Shell Mode). In char mode, each character is sent directly to the subshell, except for the Term escape character, normally C-c.
+**** Why might you want to use one over the other? Line mode allows you to perform Emacs editing operations on what you write, to accumulate multiple lines to send through at once, and to perform tab completion of filenames in Emacs. See the list of commands in shell mode for details. Character mode lets you use all the features of the underlying process, like its own (likely better) tab completion, rather than the Emacs operations, and also to send through inputs that Emacs would have interpreted as referring to its own commands (like Ctrl-X). This is also the mode you'd want if you wanted to run vim inside emacs.
+**** term-line-mode
+***** When run (term-line-mode), wwitch to line ("cooked") sub-mode of term mode. This means that Emacs editing commands work as normally, until you type M-x term-send-input which sends the current line to the inferior.
+**** term-char-mode
+***** Switch to char ("raw") sub-mode of term mode. Each character you type is sent directly to the inferior without intervention from Emacs, except for the escape character (usually C-c).
 ** Navigation
 *** org-mode and table
 
@@ -697,6 +718,13 @@ Emacs uses GnuPG via the =epa= lbirary to automatically encrypt and decrypt andy
 ** What is relationship of emacs =exec-path= and environment variable =$PATH=
 - ref
   - https://emacs.stackexchange.com/questions/550/exec-path-and-path
+** shell-mode vs term-mode?
+Running a term buffer is much closer to an actual terminal. Here are a few differences:
+
+Shell mode provides very limited terminal emulation. Programs that take advantage of the terminal's full-screen capabilities (e.g. less, mtr, mutt, top) won't work properly. Terminal mode will generally handle these without any problem.
+In shell mode, emacs provides tab completion. In terminal mode, the shell or command-line program provide it themselves.
+Shell mode buffers the input and sends it to the process on newline. Terminal mode sends the characters to the running process immediately.
+Shell mode works like a regular buffer with the usual emacs key bindings. Terminal mode doesn't intercept most control characters unless you explicitly put it into line mode.
 
 * Footnotes
 

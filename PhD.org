@@ -6,6 +6,22 @@
 :ID:       46615078-5777-4487-8197-b1c6fd8641a0
 :END:
 :LOGBOOK:
+CLOCK: [2022-03-03 Thu 18:32]--[2022-03-03 Thu 18:33] =>  0:01
+CLOCK: [2022-03-03 Thu 13:50]--[2022-03-03 Thu 13:51] =>  0:01
+CLOCK: [2022-03-03 Thu 12:05]--[2022-03-03 Thu 12:06] =>  0:01
+CLOCK: [2022-03-02 Wed 18:14]--[2022-03-02 Wed 18:15] =>  0:01
+CLOCK: [2022-02-28 Mon 17:06]--[2022-02-28 Mon 17:25] =>  0:19
+CLOCK: [2022-02-28 Mon 16:41]--[2022-02-28 Mon 17:06] =>  0:25
+CLOCK: [2022-02-28 Mon 13:53]--[2022-02-28 Mon 16:33] =>  2:40
+CLOCK: [2022-02-28 Mon 10:17]--[2022-02-28 Mon 13:53] =>  3:36
+CLOCK: [2022-02-28 Mon 10:15]--[2022-02-28 Mon 10:17] =>  0:02
+CLOCK: [2022-02-28 Mon 10:10]--[2022-02-28 Mon 10:12] =>  0:02
+CLOCK: [2022-02-28 Mon 09:57]--[2022-02-28 Mon 10:10] =>  0:13
+CLOCK: [2022-02-28 Mon 09:24]--[2022-02-28 Mon 09:57] =>  0:33
+CLOCK: [2022-02-28 Mon 08:57]--[2022-02-28 Mon 09:24] =>  0:27
+CLOCK: [2022-02-28 Mon 08:47]--[2022-02-28 Mon 08:55] =>  0:08
+CLOCK: [2022-02-27 Sun 16:50]--[2022-02-27 Sun 16:51] =>  0:01
+CLOCK: [2022-02-27 Sun 09:03]--[2022-02-27 Sun 09:04] =>  0:01
 CLOCK: [2022-02-26 Sat 12:02]--[2022-02-26 Sat 12:11] =>  0:09
 CLOCK: [2022-02-25 Fri 00:03]--[2022-02-25 Fri 00:04] =>  0:01
 CLOCK: [2022-02-24 Thu 23:44]--[2022-02-24 Thu 23:45] =>  0:01
@@ -38,32 +54,50 @@ CLOCK: [2022-02-20 Sun 22:56]--[2022-02-20 Sun 22:57] =>  0:01
 CLOCK: [2022-02-20 Sun 22:55]--[2022-02-20 Sun 22:56] =>  0:01
 CLOCK: [2022-02-20 Sun 22:52]--[2022-02-20 Sun 22:53] =>  0:01
 :END:
+** Waiting :WAITING:
 ** Habits :habit:
 :PROPERTIES:
 :CATEGORY: Habit
 :LOGGING: DONE(!)
 :ARCHIVE:  %s_archive::* Habits
 :END:
-*** NEXT start daily writing and reading. (checkout template that I made for roam research to used as a building block. dont reinvent the wheel, but adjust things accordingly.) focus on synthesizing writing on PhD related topics. Could be something related to Thesis writing as well.
+*** TODO start daily writing and reading. (checkout template that I made for roam research to used as a building block. dont reinvent the wheel, but adjust things accordingly.) focus on synthesizing writing on PhD related topics. Could be something related to Thesis writing as well.
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-03-02 Wed 18:47]
+:END:
 [2022-02-26 Sat 16:56]
 [[file:~/org/PhD.org::*start daily writing and reading. (checkout template that I made for roam research to used as a building block. dont reinvent the wheel, but adjust things accordingly.) focus on synthesizing writing on PhD related topics. Could be something related to Thesis writing as well.][start daily writing and reading. (checkout template that I made for roam research to used as a building block. dont reinvent the wheel, but adjust things accordingly.) focus on synthesizing writing on PhD related topics. Could be something related to Thesis writing as well.]]
-SCHEDULED: <2022-02-27 Sun .+1d/3d>
+SCHEDULED: <2022-03-03 Thu .+1d>
 :PROPERTIES:
 :STYLE: habit
 :REPEAT_TO_STATE: NEXT
 :END:
+*** TODO run some models on FAU HPC everyday. Related to PhD topics.
+SCHEDULED: <2022-03-03 Thu .+1d>
+:PROPERTIES:
+:REPEAT_TO_STATE: TODO
+:STYLE:    habit
+:END:
 ** Notes :NOTE:
 ** Questions :QUESTION:
 ** Meeting :MEETING:
-*** MEETING with Dr Zhu for Weekly progress report on PhD :MEETING:
+*** NEXT with Dr Zhu for Weekly progress report on PhD. Monday 2pm
+SCHEDULED: <2022-03-07 Mon 14:00 .+1w>
+:PROPERTIES:
+:LAST_REPEAT: [2022-02-28 Mon 16:53]
+:END:
 :LOGBOOK:
+- State "DONE"       from "TODO"       [2022-02-28 Mon 16:53]
+- State "MEETING"    from "TODO"       [2022-02-27 Sun 12:00]
+- State "DONE"       from "TODO"       [2022-02-27 Sun 12:00]
 CLOCK: [2022-02-24 Thu 13:54]--[2022-02-24 Thu 14:41] =>  0:47
 :END:
 [2022-02-24 Thu 13:54]
-**** rewrite report in weekly progress report from 2/21/2022 - 2/24/2022. ( I wrote description of the graph incorrectly.  )
+**** I notice that I worte description of the visualization incorrectly in  weekly progress report from 2/21/2022 - 2/24/2022.
+*** TODO with Dr Zhu for Weekly progress report on PhD. Thursday 2pm
+DEADLINE: <2022-03-03 Thu 14:00 .+1w>
 ** Tasks
-*** NEXT run a models as discussed on <2022-02-24 Thu> meeting.
-SCHEDULED: <2022-02-26 Sat>
+*** Writing paper
 *** TODO question to answer to help with my own implementation :CANCELLED:
 **** figure out how tgn does semi-supervised learning for node classification.
 ***** how does DDGCL uses GAN loss?
@@ -73,19 +107,31 @@ SCHEDULED: <2022-02-26 Sat>
 ***** to understand how DDGCL train, I have to read the following paper,
 1.MoCo
 2.E2E
-
-*** NEXT finalize conclusion of ensemble modele's performance on 10k instances.
-SCHEDULED: <2022-02-25 Fri>
+*** TODO finalize conclusion of ensemble modele's performance on 10k instances.
 **** How many models given window size of 200 do I need to beat the benchmark? (I know that 48 models beat benchmark, I also know that ensemble with ws of 1000 and 9 models can't beat benchmark.)
 **** I need to increase number of models from 5 to 10. Does 10 models performance better? by how much?
 ***** waiting on the following run from koko
 #+BEGIN_SRC sh
-/mnt/beegfs/home/awannaphasch2016/.conda/envs/py38/bin/python3 train_self_supervised.py -d reddit_10000 --use_memory --n_runs 1 --n_epoch 5 --bs 200  --ws_framework ensemble --custom_prefix tmp --ws_multiplier 1 --init_n_instances_as_multiple_of_ws 10 /mnt/beegfs/home/awannaphasch2016/.conda/envs/py38/bin/python3 train_self_supervised.py -d reddit_10000 --use_memory --n_runs 1 --n_epoch 5 --bs 200  --ws_framework ensemble --custom_prefix tmp --ws_multiplier 1 --init_n_instances_as_multiple_of_ws 10 --fix_begin_data_ind_of_models_in_ensemble
+# log name is 1645725664.4413369
+/mnt/beegfs/home/awannaphasch2016/.conda/envs/py38/bin/python3 train_self_supervised.py -d reddit_10000 --use_memory --n_runs 1 --n_epoch 5 --bs 200  --ws_framework ensemble --custom_prefix tmp --ws_multiplier 1 --init_n_instances_as_multiple_of_ws 10
+
+# log name is 1645728678.546848
+/mnt/beegfs/home/awannaphasch2016/.conda/envs/py38/bin/python3 train_self_supervised.py -d reddit_10000 --use_memory --n_runs 1 --n_epoch 5 --bs 200  --ws_framework ensemble --custom_prefix tmp --ws_multiplier 1 --init_n_instances_as_multiple_of_ws 10 --fix_begin_data_ind_of_models_in_ensemble
 #+END_SRC
+
+#+RESULTS:
+|              |    |                                                                 |     |                                                                 |     |       |
+| /usr/bin/sh: | 1: | /mnt/beegfs/home/awannaphasch2016/.conda/envs/py38/bin/python3: | not | found                                                           |     |       |
+| $            |  $ | /usr/bin/sh:                                                    |  4: | /mnt/beegfs/home/awannaphasch2016/.conda/envs/py38/bin/python3: | not | found |
+
 **** I need to increase batch size from 200 to 1000. fix number of model to 5.
 ***** waiting on the following run from koko
 #+BEGIN_SRC sh
+
+# log name is 1645727763.8540914
 /mnt/beegfs/home/awannaphasch2016/.conda/envs/py38/bin/python3 train_self_supervised.py -d reddit_10000 --use_memory --n_runs 1 --n_epoch 5 --bs 1000  --ws_framework ensemble --custom_prefix tmp --ws_multiplier 1 --init_n_instances_as_multiple_of_ws 5
+
+# log name is 1645729693.158312
 /mnt/beegfs/home/awannaphasch2016/.conda/envs/py38/bin/python3 train_self_supervised.py -d reddit_10000 --use_memory --n_runs 1 --n_epoch 5 --bs 1000  --ws_framework ensemble --custom_prefix tmp --ws_multiplier 1 --init_n_instances_as_multiple_of_ws 5 --fix_begin_data_ind_of_models_in_ensemble
 #+END_SRC
 
@@ -138,3 +184,69 @@ CLOCK: [2022-02-26 Sat 10:02]--[2022-02-26 Sat 10:03] =>  0:01
 :END:
 [2022-02-26 Sat 10:02]
 [[file:~/org/refile.org::*figure out a way to migrate content from roam research to emacs using org roam and others. What are features that I still need from roam research that may take too much time for me to implement or figure out to replicate in emacs?][figure out a way to migrate content from roam research to emacs using org roam and others. What are features that I still need from roam research that may take too much time for me to implement or figure out to replicate in emacs?]]
+*** TODO install and learn HPC slurm + emacs package. (slurm.el)
+SCHEDULED: <2022-03-04 Fri>
+[2022-02-26 Sat 10:49]
+[[file:~/org/projects/sideprojects/garun/garun.org::*learn to use tramp to connect to aws container cloud.][learn to use tramp to connect to aws container cloud.]]
+*** TODO read and implement post from reddit titled "Latex export with Inkscape Images and Draw.io Graphs in org mode." :emacs:garun:
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 23:11]--[2022-02-26 Sat 23:12] =>  0:01
+:END:
+[2022-02-26 Sat 23:11]
+[[file:~/org/notes/networking-note.org::*multiplexing is the ability to send more htan one signal over a single line or connection. In OpenSSH, multipliexing can re-sue and existing outgoing TCP connection form ultiple concurrent SSH session to a remote SSH server, avoiding the overhead of creating a new TCP connection and reauthenticating each time.][multiplexing is the ability to send more htan one signal over a single line or connection. In OpenSSH, multipliexing can re-sue and existing outgoing TCP connection form ultiple concurrent SSH session to a remote SSH server, avoiding the overhead of creating a new TCP connection and reauthenticating each time.]]
+*** TODO figure out what I need to graduate from PhD. who do I talk to? what should I read? where do I get information? should I talk to dr zhu?
+SCHEDULED: <2022-03-03 Thu>
+:LOGBOOK:
+CLOCK: [2022-02-27 Sun 11:27]--[2022-02-27 Sun 11:28] =>  0:01
+:END:
+[2022-02-27 Sun 11:27]
+[[file:~/org/notes/getting-things-done-gtd-note.org::*Horizontal Focus][Horizontal Focus]]
+*** TODO Do i need to do 20 hours during summer to get tuition paid for? if yes, when can I register for summer TA?
+SCHEDULED: <2022-03-04 Fri>
+:LOGBOOK:
+CLOCK: [2022-02-27 Sun 11:28]--[2022-02-27 Sun 11:30] =>  0:02
+:END:
+[2022-02-27 Sun 11:28]
+[[file:~/org/notes/getting-things-done-gtd-note.org::*Horizontal Focus][Horizontal Focus]]
+*** TODO read about structure of PhD. how does it work? what is PhD candidate expected to do? what can he/she do? who should they contact? how to graduate?
+SCHEDULED: <2022-03-03 Thu>
+[2022-02-27 Sun 23:52]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*selects the project numbers of projects that have an employee with last name 'Smith' involved as manager, wheras the second nested query selects the project numbers of projects that have an employee with last name 'Smith' involved as work][selects the project numbers of projects that have an employee with last name 'Smith' involved as manager, wheras the second nested query selects the project numbers of projects that have an employee with last name 'Smith' involved as work]]
+*** TODO how to send command via ssh to remote server?
+:LOGBOOK:
+CLOCK: [2022-02-28 Mon 08:55]--[2022-02-28 Mon 08:57] =>  0:02
+:END:
+[2022-02-28 Mon 08:55]
+[[file:~/org/PhD.org::*waiting on the following run from koko][waiting on the following run from koko]]
+*** TODO do a survey online on how peopel manage their research reference + make notes within emacs. (What are the tools stack they use? can I manage reference without Zotero? if I need to use Zotero, how can I make notes comfortable within emacs?)
+:LOGBOOK:
+CLOCK: [2022-02-28 Mon 10:12]--[2022-02-28 Mon 10:15] =>  0:03
+:END:
+[2022-02-28 Mon 10:12]
+[[file:~/org/refile.org::*figure out a way to use terminal in emacs full time.][figure out a way to use terminal in emacs full time.]]
+
+http://jacobzelko.com/workflow/
+*** TODO rearrange tasks related to PhD stuff.
+:LOGBOOK:
+CLOCK: [2022-02-28 Mon 17:25]--[2022-02-28 Mon 17:26] =>  0:01
+:END:
+[2022-02-28 Mon 17:25]
+[[file:~/org/PhD.org::*to understand how DDGCL train, I have to read the following paper,][to understand how DDGCL train, I have to read the following paper,]]
+*** TODO check dr zhu email and add IEEE template to overleaf online.
+SCHEDULED: <2022-03-03 Thu>
+:LOGBOOK:
+CLOCK: [2022-02-28 Mon 23:56]--[2022-02-28 Mon 23:57] =>  0:01
+:END:
+[2022-02-28 Mon 23:56]
+*** NEXT seriouly start learning latex.
+SCHEDULED: <2022-03-03 Thu>
+:LOGBOOK:
+CLOCK: [2022-03-03 Thu 11:51]--[2022-03-03 Thu 12:05] =>  0:14
+CLOCK: [2022-03-03 Thu 10:57]--[2022-03-03 Thu 11:07] =>  0:10
+CLOCK: [2022-03-03 Thu 09:38]--[2022-03-03 Thu 10:38] =>  1:00
+CLOCK: [2022-03-02 Wed 22:36]--[2022-03-02 Wed 22:37] =>  0:01
+:END:
+[2022-03-02 Wed 22:36]
+[[file:~/org/my-resume.org::*Photo & Tagline][Photo & Tagline]]
+*** TODO how to copy file from remote server to local server using Tramp?
+[2022-03-03 Thu 00:01]

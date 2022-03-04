@@ -268,3 +268,95 @@ CLOCK: [2022-02-26 Sat 10:54]--[2022-02-26 Sat 11:35] =>  0:41
 CLOCK: [2022-02-26 Sat 13:14]--[2022-02-26 Sat 13:18] =>  0:04
 :END:
 [2022-02-26 Sat 13:14]
+
+*** 2022-02-27 Sunday
+**** taking a break
+:LOGBOOK:
+CLOCK: [2022-02-27 Sun 09:06]--[2022-02-27 Sun 11:14] =>  2:08
+:END:
+[2022-02-27 Sun 09:06]
+**** taking a break.
+:LOGBOOK:
+CLOCK: [2022-02-27 Sun 17:07]--[2022-02-27 Sun 17:15] =>  0:08
+:END:
+[2022-02-27 Sun 17:07]
+**** taking a break
+:LOGBOOK:
+CLOCK: [2022-02-27 Sun 20:16]--[2022-02-27 Sun 21:11] =>  0:55
+:END:
+[2022-02-27 Sun 20:16]
+**** taking a break
+:LOGBOOK:
+CLOCK: [2022-02-27 Sun 21:46]--[2022-02-27 Sun 22:19] =>  0:33
+:END:
+[2022-02-27 Sun 21:46]
+**** break
+:LOGBOOK:
+CLOCK: [2022-02-27 Sun 22:39]--[2022-02-27 Sun 22:54] =>  0:15
+:END:
+[2022-02-27 Sun 22:39]
+**** break
+:LOGBOOK:
+CLOCK: [2022-02-27 Sun 23:05]--[2022-02-27 Sun 23:27] =>  0:22
+:END:
+[2022-02-27 Sun 23:05]
+
+*** 2022-02-28 Monday
+**** break
+:LOGBOOK:
+CLOCK: [2022-02-28 Mon 00:09]--[2022-02-28 Mon 06:38] =>  6:29
+:END:
+[2022-02-28 Mon 00:09]
+**** taking shower
+:LOGBOOK:
+CLOCK: [2022-02-28 Mon 07:08]--[2022-02-28 Mon 07:57] =>  0:49
+:END:
+[2022-02-28 Mon 07:08]
+
+** 2022-03 March
+
+*** 2022-03-01 Tuesday
+**** taking a break
+:LOGBOOK:
+CLOCK: [2022-03-01 Tue 00:17]--[2022-03-01 Tue 00:33] =>  0:16
+:END:
+[2022-03-01 Tue 00:17]
+**** sleep
+:LOGBOOK:
+CLOCK: [2022-03-01 Tue 00:33]--[2022-03-01 Tue 08:13] =>  7:40
+:END:
+[2022-03-01 Tue 00:33]
+
+*** 2022-03-02 Wednesday
+**** taking a break
+:LOGBOOK:
+CLOCK: [2022-03-02 Wed 17:52]--[2022-03-02 Wed 18:14] =>  0:22
+:END:
+[2022-03-02 Wed 17:52]
+**** taking a break
+:LOGBOOK:
+CLOCK: [2022-03-02 Wed 20:01]--[2022-03-02 Wed 20:53] =>  0:52
+:END:
+[2022-03-02 Wed 20:01]
+
+*** 2022-03-03 Thursday
+**** takign a break
+:LOGBOOK:
+CLOCK: [2022-03-03 Thu 11:07]--[2022-03-03 Thu 11:51] =>  0:44
+:END:
+[2022-03-03 Thu 11:07]
+**** taking a break
+:LOGBOOK:
+CLOCK: [2022-03-03 Thu 13:29]--[2022-03-03 Thu 13:50] =>  0:21
+:END:
+[2022-03-03 Thu 13:29]
+**** walking dog and shower
+:LOGBOOK:
+CLOCK: [2022-03-03 Thu 14:04]--[2022-03-03 Thu 14:43] =>  0:39
+:END:
+[2022-03-03 Thu 14:04]
+**** cleaning house
+:LOGBOOK:
+CLOCK: [2022-03-03 Thu 16:00]--[2022-03-03 Thu 16:25] =>  0:25
+:END:
+[2022-03-03 Thu 16:25]

@@ -1,7 +1,0 @@
-#+TITLE: Personal Finance
-
-* Personal Finance
-** Habits :habit:
-** Questions :QUESTION:
-** Notes :NOTE:
-** Tasks

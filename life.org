@@ -2,14 +2,34 @@
 
 Life.org keeps tracks of things important in mylife.
 
+* Waiting :WAITING:
 * Getting a job
-** TODO read articles on how to ace jobs interviews.
-SCHEDULED: <2022-02-24 Thu>
-:PROPERTIES:
-:EFFORT:   0:15
+:LOGBOOK:
+CLOCK: [2022-03-02 Wed 11:28]--[2022-03-02 Wed 12:12] =>  0:44
 :END:
-** TODO do research on leetcode vs algoexpert vs other options. which one should I choose? or should I just read a book on acing interview?
-SCHEDULED: <2022-02-25 Fri>
-:PROPERTIES:
-:EFFORT:   0:15
+
+** TODO watch 1 of the interview to understand how coding interview is structured, so I can prepare each section accordingly
+SCHEDULED: <2022-03-04 Fri>
+** solutions tracking list
+- note
+  - if you can't think of new way to solve the question in 15 mins, look for solutions.
+  - make a list of common problme-solving patterns
+*** algorithm interview
+use space repetition system here.
+*** system design interview
+- note
+  - interview structure
+    - ref
+      - [[https://www.youtube.com/watch?v=9N2S3JZffeg&ab_channel=EngineeringwithUtsav][How to Prepare for Technical Interviews, Part 2 - System Design]]
+    - 1. functional requirement [5 mins]
+    - 2. non-functional requiremetns [5 mins]
+    - 3. high-level design & key challenges [15 mins]
+    - 4. deep dive [15 mins]
+  - build 3 real systems to practice
+** NEXT rewrite my resume from scratch using org mode.
+SCHEDULED: <2022-02-27 Sun>
+:LOGBOOK:
+CLOCK: [2022-03-02 Wed 20:54]--[2022-03-02 Wed 21:27] =>  0:33
+CLOCK: [2022-03-02 Wed 19:22]--[2022-03-02 Wed 19:30] =>  0:08
 :END:
+[[https://www.aidanscannell.com/post/org-mode-resume/][Creating a CV/Resume in Org-Mode using LaTeX Template   s]]

@@ -1,14 +1,25 @@
 #+TITLE: Personal Website
 #+FILETAGS: PERSONAL @sideproject mywebsite
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
 
 * Personal Website
 :LOGBOOK:
-CLOCK: [2022-02-26 Sat 18:17]
+CLOCK: [2022-02-26 Sat 19:14]--[2022-02-26 Sat 19:22] =>  0:08
+CLOCK: [2022-02-26 Sat 19:11]--[2022-02-26 Sat 19:13] =>  0:02
+CLOCK: [2022-02-26 Sat 18:43]--[2022-02-26 Sat 19:01] =>  0:18
+CLOCK: [2022-02-26 Sat 18:17]--[2022-02-26 Sat 18:43] =>  0:26
 :END:
 ** Questions :QUESTION:
 ** Notes :NOTE:
 ** Meeting :MEETING:
 ** Tasks
+:PROPERTIES:
+:EXPORT_FILE_NAME: hugo
+:END:
+*** writing blog
+:LOGBOOK:
+CLOCK: [2022-02-27 Sun 16:56]--[2022-02-27 Sun 17:04] =>  0:08
+:END:
 *** Building website using org mode.
 - ref
   - Example of [[https://www.huxiaoxing.com/building-a-website-with-org-mode-files][Personal website that use org mode]].
@@ -28,3 +39,14 @@ https://orgmode.org/worg/org-tutorials/org-jekyll.html
 CLOCK: [2022-02-22 Tue 10:07]--[2022-02-22 Tue 10:08] =>  0:01
 :END:
 [2022-02-22 Tue 10:07]
+*** TODO migrate content located at jykell dir to hugo dir. :mywebsite:
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 19:01]--[2022-02-26 Sat 19:11] =>  0:10
+:END:
+[2022-02-26 Sat 19:01]
+[[file:~/org/projects/sideprojects/website/my-website/hugo/quickstart/content/posts/hugo.md][file:~/org/projects/sideprojects/website/my-website/hugo/quickstart/content/posts/hugo.md]]
+*** TODO read my blogging set with Emacs, Org mode, ox-hugo, Hugo, Gitlab, and Netlify :READ:website: :LOGBOOK:
+CLOCK: [2022-02-26 Sat 19:13]--[2022-02-26 Sat 19:14] =>  0:01
+:END:
+[2022-02-26 Sat 19:13]
+[[file:~/org/projects/sideprojects/website/my-website/hugo/quickstart/config.toml][file:~/org/projects/sideprojects/website/my-website/hugo/quickstart/config.toml]]

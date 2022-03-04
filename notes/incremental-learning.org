@@ -20,6 +20,7 @@ print(random.choice(topics))
 #+END_SRC
 
 
+* Waiting :WAITING:
 * References
 ** Amazing blogs or articles to boarden knowledge away from my responsibility :)
 [[https://eli.thegreenplace.net/archives/all][Eli Bendersky's website]]
@@ -337,10 +338,6 @@ stop [[https://youtu.be/8fi7uSYlOdc?t=616][here]].
 **** [[https://www.youtube.com/watch?v=LQVDJtfpQU0&list=PLS1QulWo1RIagob5D6kMIAvu7DQC5VTh3&ab_channel=ProgrammingKnowledge][scala tutorial]]
 **** [[https://github.com/elleFlorio/scalachain][scalachain]] :blockchain:
 **** [[https://www.freecodecamp.org/news/how-to-build-a-simple-actor-based-blockchain-aac1e996c177/][How to build a simple actor-based blockchain]] :blockchain:
-*** TODO make a todo list on the last page I read of the book "Learning functional programming in Scala" by Alvin Alexander.
-SCHEDULED: <2022-02-25 Fri>
-[2022-02-23 Wed 15:05]
-[[file:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/hw2/hw2.org::*Write in module Tree (file p3.scala) a polymorphic method with this signature: def toList\[A\](t: Tree\[A\]) : List\[A\] that returns a list (i.e. standard library List) with all elements from the leaves in tree t. Use the Tree.fold method given from the textbook. Hint: the List.++ method appends two lists.][Write in module Tree (file p3.scala) a polymorphic method with this signature: def toList[A](t: Tree[A]) : List[A] that returns a list (i.e. standard library List) with all elements from the leaves in tree t. Use the Tree.fold method given from the textbook. Hint: the List.++ method appends two lists.]]
 *** Questions what is Algebraic Data Types (ADT)?
 [2022-02-23 Wed 15:12]
 ** learning distributed system :distributedsystem:
@@ -407,3 +404,12 @@ CLOCK: [2022-02-25 Fri 11:50]--[2022-02-25 Fri 11:51] =>  0:01
 *** TODO read book on terraform and ansible
 [2022-02-25 Fri 15:51]
 [[file:~/org/notes/emacs/packages/tramp-note.org::*Tutorial][Tutorial]]
+*** TODO read hands-on Github Actions: Implement CI/CD with GitHub Action Workflows for Your applications. :devops:
+[2022-02-26 Sat 23:37]
+** building my own at home server
+*** TODO plan out how to implement my own server. including buying server and setting things up.
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 14:34]--[2022-02-26 Sat 14:35] =>  0:01
+:END:
+[2022-02-26 Sat 14:34]
+[[file:~/org/todo.org::*start daily writing and reading. (checkout template that I made for roam research to used as a building block. dont reinvent the wheel, but adjust things accordingly.)][start daily writing and reading. (checkout template that I made for roam research to used as a building block. dont reinvent the wheel, but adjust things accordingly.)]]

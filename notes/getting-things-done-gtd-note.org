@@ -60,3 +60,42 @@ My clocking setup basically works like this:
 
 * Stuck projects
 If you are following a system like David Allen’s GTD to organize your work, one of the “duties” you have is a regular review to make sure that all projects move along. A stuck project is a project that has no defined next actions, so it never shows up in the TODO lists Org mode produces. During the review, you need to identify such projects and define next actions for them.
+* Horizontal Focus
+1. Purpose and Principles: Why you exist in this world? What is your destination in life?
+   - Purpose
+     - I want to sucessfully create a community/ecosystem (via blockchain mechanism) that allow contributor to be compensated just enough to pursuit programming highest level of excellent and pursuit knowledge for its own sake. Create a community that follow CEOF principles.
+     - I want to be independent of my needs and want.
+   - Principles
+     - Always be geunine at the thing I say, act, and think.
+     - Whenever possible choose obsession over competition.
+     - Strive for stressful productivity.
+     - Embrance continous learning. (specially leaning ideas that can be generalized to other fields)
+2. Vision: where are you in five or more years?
+   - I want to work at a company in team with strong teamwork and mentoring mindset.
+   - I want to complete all features of garun project that would allow user to use garun seamlessly regardless of OS, hardware, and location that they use.
+   - I want to have my blogsite become one of the well accepted within autodidact community.
+3. Goals: your big targets for the next few months
+   - PhD
+     - Graduate from PhD program.
+   - Pen.el
+     - become a maintainer fof pen.el project.
+4. Areas of responsibility: what are your roles?
+   - PhD students
+     - Get my paper accepted into top conferences.
+     - Being a good student for my PhD advisor.
+     - do research + write paper + read paper.
+   - Pen.el
+     - contribute to the project.
+   - Expert Identification
+     - implement features that clients need.
+   - Finding a job
+     - study for interview question.
+   - House maintenance
+     - take care of my dogs. (make sure it is stress free.)
+   - Finance
+     - be responsible for my money. (no need to bring income, just don't over spend.)
+   - Relationship
+     - Being a good friend. (be there when they need me. make some time to spend with them.)
+     - Being a good son. (be happy, make time to talk to them weekly, graduate with PhD)
+5. Projects: the short-term outcomes you are working towards
+6. Actions: the actual tasks that you need to do

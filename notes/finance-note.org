@@ -1,0 +1,4 @@
+#+TITLE: Finance Note
+
+* double ledger bookkeeping
+ledger requires the sum of the amount changes of all accounts in each tranaction to be 0.

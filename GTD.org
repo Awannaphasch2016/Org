@@ -12,6 +12,10 @@ GTD files collects all todos related related to time taken to spend on following
 
 * GTD
 :LOGBOOK:
+CLOCK: [2022-02-27 Sun 11:58]--[2022-02-27 Sun 12:06] =>  0:08
+CLOCK: [2022-02-27 Sun 11:30]--[2022-02-27 Sun 11:57] =>  0:27
+CLOCK: [2022-02-27 Sun 11:14]--[2022-02-27 Sun 11:27] =>  0:13
+CLOCK: [2022-02-27 Sun 09:04]--[2022-02-27 Sun 09:06] =>  0:02
 CLOCK: [2022-02-24 Thu 11:07]--[2022-02-24 Thu 11:09] =>  0:02
 CLOCK: [2022-02-23 Wed 00:16]--[2022-02-23 Wed 00:40] =>  0:24
 CLOCK: [2022-02-22 Tue 20:18]--[2022-02-22 Tue 20:26] =>  0:08
@@ -20,9 +24,39 @@ CLOCK: [2022-02-21 Mon 22:39]--[2022-02-21 Mon 23:01] =>  0:22
 CLOCK: [2022-02-21 Mon 22:26]--[2022-02-21 Mon 22:39] =>  0:13
 CLOCK: [2022-02-21 Mon 22:06]--[2022-02-21 Mon 22:26] =>  0:20
 :END:
-** Weekly review
+** Waiting :WAITING:
+** TODO weekly review
+SCHEDULED: <2022-03-05 Sat +1w>
+:PROPERTIES:
+:ORDERED:  t
+:NOBLOCKING: t
+:RESET_CHECK_BOXES: t
+:LAST_REPEAT: [2022-02-26 Sat 13:10]
+:END:
+- State "DONE"       from "TODO"       [2022-02-26 Sat 13:10]
+- State "DONE"       from "TODO"       [2022-02-26 Sat 13:10]
+- State "DONE"       from "TODO"       [2022-02-26 Sat 13:09]
+note: make sure that action that I do on my projects are aligned with my vision, and purpose.( [[file:notes/getting-things-done-gtd-note.org::*Horizontal Focus][Horizontal Focus]])
+
+what to review:
+- [ ] Check follow-up folder
+- [ ] Review weekly agenda =F12 a w=
+- [ ] Review clock report for past week =R=
+  - check where we spent time (too much or too little) and rectify this week.
+- [ ] Look at entire agenda for today =F12 SPC=
+- [ ] Review projects =F12 SPC= and =V= (I am not quite sure what this is) repeatedly to view each project.
+- start work
+  - daily agenda first - knock off items
+  - then work on NEXT tasks
+
 ** Refiling  + organizing
 :LOGBOOK:
+CLOCK: [2022-03-03 Thu 03:39]--[2022-03-03 Thu 04:15] =>  0:36
+CLOCK: [2022-03-02 Wed 19:21]--[2022-03-02 Wed 19:22] =>  0:01
+CLOCK: [2022-03-02 Wed 17:50]--[2022-03-02 Wed 17:52] =>  0:02
+CLOCK: [2022-03-02 Wed 12:14]--[2022-03-02 Wed 12:16] =>  0:02
+CLOCK: [2022-03-02 Wed 12:12]--[2022-03-02 Wed 12:13] =>  0:01
+CLOCK: [2022-02-28 Mon 17:30]--[2022-02-28 Mon 18:27] =>  0:57
 CLOCK: [2022-02-26 Sat 10:49]--[2022-02-26 Sat 10:54] =>  0:05
 CLOCK: [2022-02-26 Sat 10:44]--[2022-02-26 Sat 10:49] =>  0:05
 CLOCK: [2022-02-26 Sat 10:40]--[2022-02-26 Sat 10:43] =>  0:03
@@ -52,10 +86,3 @@ CLOCK: [2022-02-24 Thu 11:18]--[2022-02-24 Thu 11:19] =>  0:01
 *** DONE assign next task to each of my project.
 [2022-02-26 Sat 10:28]
 [[file:~/org/refile.org][file:~/org/refile.org]]
-** NEXT write down my version of GTD purposed -> action models under Getting projects Creatively Under (7.48 hour left mins mark) for all aspect in life I want to achieve.
-SCHEDULED: <2022-02-24 Thu>
-:LOGBOOK:
-CLOCK: [2022-02-24 Thu 10:55]--[2022-02-24 Thu 10:57] =>  0:02
-:END:
-[2022-02-24 Thu 10:55]
-[[file:~/org/GTD.org::*Refiling][Refiling]]

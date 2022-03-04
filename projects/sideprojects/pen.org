@@ -2,6 +2,7 @@
 #+FILETAGS: pen PERSONAL @sideproject
 
 * Pen
+** Waiting :WAITING:
 ** Habits :habit:
 :PROPERTIES:
 :CATEGORY: Habit
@@ -10,16 +11,23 @@
 :END:
 *** TODO 30 mins about pen.el codebase + prompt programming.
 :LOGBOOK:
+- State "DONE"       from "TODO"       [2022-03-02 Wed 18:47]
 - State "TODO"       from "DONE"       [2022-02-26 Sat 16:56]
 :END:
 - State "WAITING"    from "NEXT"       [2022-02-26 Sat 10:39] \\
   I have learn and install org habit
 [2022-02-24 Thu 22:58]
 [[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*3.2 A sample database application][3.2 A sample database application]]
-SCHEDULED: <2022-02-27 Sun .+1d/3d>
+SCHEDULED: <2022-03-03 Thu .+1d/3d>
 :PROPERTIES:
 :STYLE: habit
-:REPEAT_TO_STATE: NEXT
+:REPEAT_TO_STATE: TODO
+:END:
+*** TODO read about startup information that i need to know. 30 mins
+SCHEDULED: <2022-03-02 Wed .+1d>
+:PROPERTIES:
+:STYLE:    habit
+:REEAT_TO_STATE: TODO
 :END:
 ** Questions :QUESTION:
 ** Notes :NOTE:
@@ -45,8 +53,12 @@ SCHEDULED: <2022-02-27 Sun .+1d/3d>
   - src/pen-client.el (thin client)
   - src/pen-custom.el (read ~/.pen/pen.yaml config file)
 
+*** TODO understand startup structure
+**** TODO read about start up, what does founder need to know before starting a company?
+**** TODO how to estimate value of the business?
+**** TODO what is the road map for the project?
+**** TODO what is the cost of running the business? do i need investor to get it running?
 *** WAITING write out business plan required for me to execute pen.el start up plan. what does a founder need to know before starting a company? how to estimate value of the business? what is the time horizon (can I start doing it before starting the summer)? what do I need to know because deciding on the amount of money that pen.el need to continue the project? :WAITING:
-SCHEDULED: <2022-03-01 Tue>
 - State "WAITING"    from "TODO"       [2022-02-24 Thu 18:42] \\
   I need to map out purpose/principle/vision ( GTD methods) for my life and pen.el project (among other project) before begingin this step. actions should be postponeed until I can see my whole life at a higher level.
 :LOGBOOK:
@@ -54,3 +66,10 @@ CLOCK: [2022-02-24 Thu 18:39]--[2022-02-24 Thu 18:41] =>  0:02
 :END:
 [2022-02-24 Thu 18:39]
 [[file:~/org/notes/database-note.org::*ER][ER]]
+*** TODO get api key for language models products. (see discussion with Shane to recall the name of the companies)
+SCHEDULED: <2022-03-03 Thu>
+:LOGBOOK:
+CLOCK: [2022-02-27 Sun 20:05]--[2022-02-27 Sun 20:06] =>  0:01
+:END:
+[2022-02-27 Sun 20:05]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*Several characteristics differentiate relations from ordinary tables or files. The first is that a relation is not sensitive to the ordering of tuples. The second involves the ordering of attributes in a relation schema and the corresponding ordering of values within a tuple. We gave an alternative definition of relation that does not require ordering of attributes, but we continued to use the first definition, which requires attributes and tuple values to be ordered, for convenience.][Several characteristics differentiate relations from ordinary tables or files. The first is that a relation is not sensitive to the ordering of tuples. The second involves the ordering of attributes in a relation schema and the corresponding ordering of values within a tuple. We gave an alternative definition of relation that does not require ordering of attributes, but we continued to use the first definition, which requires attributes and tuple values to be ordered, for convenience.]]

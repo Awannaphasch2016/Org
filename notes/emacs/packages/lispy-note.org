@@ -1,14 +1,14 @@
 #+TITLE: Lispy Note
 
-| description                               | command                 | Key |
-| prettify                                  |                         | i   |
-| jump to matched paren                     |                         | d   |
-| copy list                                 |                         | n   |
-|                                           | lispy-ace-paren         | q   |
-|                                           | lispy-ace-char          | Q   |
-|                                           | lispy-ace-symbol        | a   |
-|                                           | lispy-ace-subword       | -   |
-|                                           | special-lispy-mark-list | m   |
-|                                           | lispy-kill-sentence     | M-k |
-| remove current paren                      | lispy-splice            |     |
-| search for occurence within current paren | special-lispy-occurs    | y   |
+| description                               | command                 | Key                |
+| prettify                                  |                         | i                  |
+| jump to matched paren                     |                         | d                  |
+| copy list                                 |                         | n                  |
+|                                           | lispy-ace-paren         | q                  |
+|                                           | lispy-ace-char          | Q                  |
+|                                           | lispy-ace-symbol        | a                  |
+|                                           | lispy-ace-subword       | -                  |
+|                                           | special-lispy-mark-list | m                  |
+|                                           | lispy-kill-sentence     | M-k                |
+| remove current paren                      | lispy-splice            | <normal-state> M-s |
+| search for occurence within current paren | special-lispy-occurs    | y                  |

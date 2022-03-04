@@ -126,3 +126,152 @@ CLOCK: [2022-02-24 Thu 23:03]--[2022-02-24 Thu 23:09] =>  0:06
 ***** read 6 + practice
 ***** read 5
 ***** if still needed, read 4,7
+
+** DONE find out time of all my classes and put them in to emacs as recurring tasks
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-27 Sun 08:50
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Tasks
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school
+:END:
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 23:14]--[2022-02-24 Thu 23:15] =>  0:01
+:END:
+[2022-02-24 Thu 23:14]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*]]
+
+** DONE clarify,list out tasks I need to do to review of each exam midterm subject. Then assign NEXT to it.
+CLOSED: [2022-02-27 Sun 08:52]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-27 Sun 08:52
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Tasks
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school
+:END:
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 10:43]--[2022-02-26 Sat 10:44] =>  0:01
+:END:
+[2022-02-26 Sat 10:43]
+[[file:~/org/notes/emacs/packages/org-agenda-note.org::*Key binding][Key binding]]
+
+** DONE review for exam and make notes
+CLOSED: [2022-02-28 Mon 17:26] DEADLINE: <2022-02-27 Sun>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-28 Mon 17:26
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Tasks/Database/midterm exam
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school
+:END:
+:LOGBOOK:
+CLOCK: [2022-02-28 Mon 07:57]--[2022-02-28 Mon 08:16] =>  0:19
+:END:
+*** make note on chapter 5
+:LOGBOOK:
+CLOCK: [2022-02-28 Mon 06:38]--[2022-02-28 Mon 07:08] =>  0:30
+CLOCK: [2022-02-27 Sun 23:52]--[2022-02-28 Mon 00:09] =>  0:17
+CLOCK: [2022-02-27 Sun 23:27]--[2022-02-27 Sun 23:52] =>  0:25
+CLOCK: [2022-02-27 Sun 22:54]--[2022-02-27 Sun 23:05] =>  0:11
+CLOCK: [2022-02-27 Sun 22:19]--[2022-02-27 Sun 22:39] =>  0:20
+CLOCK: [2022-02-27 Sun 21:26]--[2022-02-27 Sun 21:46] =>  0:20
+CLOCK: [2022-02-27 Sun 21:11]--[2022-02-27 Sun 21:26] =>  0:15
+CLOCK: [2022-02-27 Sun 20:06]--[2022-02-27 Sun 20:16] =>  0:10
+CLOCK: [2022-02-27 Sun 19:28]--[2022-02-27 Sun 20:05] =>  0:37
+:END:
+*** make note on chapter 7
+
+** DONE go through all notification of all the classes and organized what I need to do, prepare for the rest of the semester.
+CLOSED: [2022-02-28 Mon 17:57] DEADLINE: <2022-02-27 Sun>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-28 Mon 17:57
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Tasks
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school
+:END:
+
+** DONE add whatsapp for blockchain class.
+CLOSED: [2022-02-28 Mon 17:57] DEADLINE: <2022-02-27 Sun>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-28 Mon 17:57
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Tasks
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school
+:END:
+[2022-02-24 Thu 16:21]
+[[file:~/org/school.org::*state the strongest normal form that R satisfies (e.g. 1NF 2NF, 3NF, BCNF)][state the strongest normal form that R satisfies (e.g. 1NF 2NF, 3NF, BCNF)]]
+
+** DONE make notes on canvas notification, and clear all canvas notification to be 0.
+CLOSED: [2022-02-28 Mon 18:22] DEADLINE: <2022-02-27 Sun>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-28 Mon 18:22
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Tasks
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school
+:END:
+[2022-02-24 Thu 23:31]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*]]
+
+** DONE midterm exam
+CLOSED: [2022-03-02 Wed 12:12] DEADLINE: <2022-03-01 Tue 12:30>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-02 Wed 12:12
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Tasks/Database
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-01 Tue 00:12]--[2022-03-01 Tue 00:17] =>  0:05
+CLOCK: [2022-03-01 Tue 00:00]--[2022-03-01 Tue 00:12] =>  0:12
+CLOCK: [2022-02-28 Mon 23:57]--[2022-03-01 Tue 00:00] =>  0:03
+CLOCK: [2022-02-28 Mon 23:51]--[2022-02-28 Mon 23:56] =>  0:05
+CLOCK: [2022-02-28 Mon 23:46]--[2022-02-28 Mon 23:50] =>  0:04
+:END:
+
+** DONE midterm exam
+CLOSED: [2022-03-02 Wed 12:14] DEADLINE: <2022-03-01 Tue 09:30>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-02 Wed 12:14
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Tasks/scala course
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-01 Tue 19:38]--[2022-03-01 Tue 23:59] =>  4:21
+CLOCK: [2022-03-01 Tue 19:27]--[2022-03-01 Tue 19:38] =>  0:11
+CLOCK: [2022-03-01 Tue 19:25]--[2022-03-01 Tue 19:26] =>  0:01
+CLOCK: [2022-03-01 Tue 12:58]--[2022-03-01 Tue 19:25] =>  6:27
+CLOCK: [2022-03-01 Tue 09:44]--[2022-03-01 Tue 12:58] =>  3:14
+CLOCK: [2022-03-01 Tue 08:43]--[2022-03-01 Tue 09:44] =>  1:01
+CLOCK: [2022-02-28 Mon 22:15]--[2022-02-28 Mon 23:46] =>  1:31
+:END:
+
+** DONE assign the rest of the school homework to schedule. (goal is to finish all homework + notes as soon as possible)
+CLOSED: [2022-03-02 Wed 17:42] DEADLINE: <2022-03-01 Tue>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-02 Wed 17:42
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Tasks
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school
+:END:
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 10:17]--[2022-02-26 Sat 10:18] =>  0:01
+:END:
+[2022-02-26 Sat 10:17]
+[[file:~/org/refile.org::*create notes for all classes.][create notes for all classes.]]

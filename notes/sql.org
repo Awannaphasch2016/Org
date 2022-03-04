@@ -2,3 +2,84 @@
 
 * Joins
 quick examples of joins, see [[https://www.w3schools.com/sql/sql_join.asp][here]].
+* Syntax
+#+BEGIN_SRC sql
+
+#+END_SRC
+* Normalization
+** NF1
+an attribute is single atomic
+** NF2
+every non-prime attribute is full functionally dependent on any key
+
+In the other word, no partial dependency.
+Given FD X->A, X must not be a subset of candidate key.
+** NF3
+given FD x->A
+(a) X is a superkey or (b) A is a prime attribute.
+** BCNF
+given FD x-> A
+X is always a super key.
+
+* SQL operation
+** division operation
+| reserve   | / | boat | output |
+| side, bid |   | bid  | sid    |
+| 1,A       |   | A    | A      |
+| 1,B       |   | B    |        |
+| 1,C       |   | C    |        |
+| 2,A       |   |      |        |
+| 3,C       |   |      |        |
+#+BEGIN_SRC sql
+select s.sname
+from sailor s
+where not exists (
+select b.bid
+from boats b
+except
+select r.bid
+from reservers r
+where s.sid = r.sid);
+#+END_SRC
+** set operator
+| UNION     | all distinct rows selecte by either query                        |
+| UNION ALL | all rows selected by either query, including all duplicates      |
+| INTERSECT | all distinct rows selected by both queries                       |
+| MINUS     | all distinct rows selected by the first query but not the second |
+** retrieval operations
+#+BEGIN_SRC sql
+select <attribute and function list>
+from <table list>
+[where <condition>]
+[group by <grouping attribute(s)>]
+[having <group condition>]
+[order by <attribute list>]
+
+#+END_SRC
+* SQL order of execution
+| order | clause   |
+|     1 | from     |
+|     2 | where    |
+|     3 | group by |
+|     4 | having   |
+|     5 | select   |
+|     6 | order by |
+|     7 | limit    |
+* SQL Views
+** use of sql views
+*** hide columns or rows
+*** display results of computations
+*** hide complicated sql syntax
+*** layer built-in functions
+*** provide level of isolation between table data and users' view of data
+*** assign different processing permission to different views of the same table.
+*** assign different triggers to different views of the same table.
+* FAQs
+** Comparison
+*** Subquery vs Nested query vs Correlated query
+**** subquery
+***** When a query is included inside another query, the Outer query is known as Main Query, and Inner query is known as Subquery.
+**** Nested Query
+***** In Nested Query,  Inner query runs first, and only once. Outer query is executed with result from Inner query.Hence, Inner query is used in execution of Outer query.
+**** Correlated Query
+***** In Correlated Query,  Outer query executes first and for every Outer query row Inner query is executed. Hence, Inner query uses values from Outer query.

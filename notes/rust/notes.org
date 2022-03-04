@@ -7,7 +7,6 @@ string literal are immutable.
 ** String type
 string type manages data allocated on the heap.j
 
-
 * [[https://doc.rust-lang.org/reference/attributes.html][attributes]]
 From what I understand attributes are as the name suggested, it attaches to an item.
 
@@ -23,7 +22,6 @@ Attributes can be classified into the following kinds:
 - Macro attributes
 - Derive macro helper attributes
 - Tool attributes
-
 
 
 

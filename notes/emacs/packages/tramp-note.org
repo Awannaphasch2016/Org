@@ -1,6 +1,9 @@
 #+TITLE: Tramp Note
+#+FILETAGS: tramp emacs garun
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
 
-TRAMP mode is also known as RPC mode.
+TRAMP stands for “Transparent Remote (file) Access, Multiple Protocol”.
+iRAMP mode is also known as RPC mode.
 
 TRAMP (Transparent Remote Access, Multiple Protocols) is a package for editing remote files [...] Whereas the others use FTP to connect to the remote host and to transfer the files, TRAMP uses a remote shell connection (rlogin, telnet, ssh).
 
@@ -9,6 +12,24 @@ TRAMP (Transparent Remote Access, Multiple Protocols) is a package for editing r
 [[https://www.nistara.net/post/emacs-aws/][Connecting to an AWS instance via emacs/shell]]
 ** Documentation
 [[https://www.gnu.org/software/tramp/][TRAMP 2.5.1 User Manual]]
+* Blogs
+** How to solve hanging tramps?
+:PROPERTIES:
+:EXPORT_FILE_NAME: how to solve handing tramp?
+:END:
+Note that information I describe here can be found at FAQ page of TRAMP user manual, see [[https://www.gnu.org/software/emacs/manual/html_node/tramp/Frequently-Asked-Questions.html][here]].
+
+From an hour of digging, I discovered that tramp is really specific in term of how it read terminal prompt (aka PS1 environment variable.). It also limited in types of terminal, specified by TERM environment variables. TERM must match tramp terminal default setting (=tramp-terminal-type=).
+
+I am using zsh shell in my remote compute. (I learn now that being minimalist and stick with bash may have more advantage than I would happily admit few weeks back.)
+
+In my case, I need to set ~TERM=dumb~ and set ~PS1='$ '~.
+
+After assigning new value to environment variables and restart emacs, Tramp no longer hangs.
+
+This fix my problem. If this doesn't fix your problem. please read TRAMP user manual on Tramp hangs section. There are few more things that I haven't get to tried.
+
+and.. just like that I completed my first technical blog writing.
 * Error
 ** Errors and Debugging log (logs of how I debug it).
 *** tramp is buggy and freeze alot.
@@ -41,3 +62,6 @@ Error: all the sudo synxtax I tried below cause emacs to hangs. (hangs because w
   e.g.
   =/ssh:awannaphasch2016@koko-login.hpc.fau.edu|sudo:koko-login.hpc.fau.edu:/=
   =/ssh:awannaphasch2016@koko-login.hpc.fau.edu|sudo::/=
+* FAQs
+** Debugs
+*** [[*How to solve hanging tramps?][How to solve hanging tramps?]]

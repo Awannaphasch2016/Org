@@ -1,25 +1,49 @@
-#+TITLE: Pdf Tools Note
-#+FILETAGS: emacs pdf-tools garun
-#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+% Created 2022-03-02 Wed 23:55
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Anak Wannaphaschaiyong}
+\date{\today}
+\title{Pdf Tools Note}
+\begin{document}
 
-* Errors
-** Errors and Debugging log (logs of how I debug it). :error:
-*** Error log: Error in private config: config.el, (error pdf-info-epdfinfo-program is not executable) and Dependcies conflicts while installing pdf-tools via =pdf-tools-install=.
-:PROPERTIES:
-:EXPORT_FILE_NAME: Dependcies conflicts while installing pdf-tools via pdf-tools-install
-:END:
-**** Current Solution as of <2022-03-02 Wed>.
-The solution only works on doom emacs only, I found that =pdf-tools= must be install with =init.el=.
+\maketitle
+\tableofcontents
 
-I had =(package! pdf-tools)= and =:tools pdf=. Dependencies conflict is caused by endable pdf-tools two different ways as shown.
 
-I solved the problem by remove =(package! pdf-tools)= from packages.el and only keep =:tools pdf=.
+\section{Errors}
+\label{sec:orgd66765a}
+\subsection{Errors and Debugging log (logs of how I debug it).\hfill{}\textsc{error}}
+\label{sec:orgcb5315a}
+\subsubsection{Error in private config: config.el, (error pdf-info-epdfinfo-program is not executable) and Dependcies conflicts while installing pdf-tools via \texttt{pdf-tools-install}.}
+\label{sec:org9103257}
+\begin{enumerate}
+\item Current Solution as of \textit{<2022-03-02 Wed>}.
+\label{sec:org1b9e6ad}
+The solution only works on doom emacs only, I found that \texttt{pdf-tools} must be install with \texttt{init.el}.
+
+I had \texttt{(package! pdf-tools)} and \texttt{:tools pdf}. Dependencies conflict is caused by endable pdf-tools two different ways as shown.
+
+I solved the problem by remove \texttt{(package! pdf-tools)} from packages.el and only keep \texttt{:tools pdf}.
 
 Abit of backstory, I first encounter the problem at a very early stage of using doom emacs (first 2 weeks.), so I didn't know how to properly install things. (This problem is recognized by doom emacs maintainer that installing packages in doom style are beginner mistake.)
-**** actions log
-***** Gathering information
-When I encountered this error, I can still open doom with =doom run=, but it is clear from the error message when doom is open that config.el is not loaded all the ways.
-#+BEGIN_SRC md
+\item actions log
+\label{sec:orgc948fda}
+\begin{enumerate}
+\item Gathering information
+\label{sec:orga657536}
+When I encountered this error, I can still open doom with \texttt{doom run}, but it is clear from the error message when doom is open that config.el is not loaded all the ways.
+\begin{verbatim}
 Warning: due to a long standing Gtk+ bug
 https://gitlab.gnome.org/GNOME/gtk/issues/221
 Emacs might crash when run in daemon mode and the X11 connection is unexpectedly lost.
@@ -31,16 +55,16 @@ Error in private config: config.el, (error pdf-info-epdfinfo-program is not exec
 To ensure normal operation, you should investigate and remove the
 cause of the error in your initialization file.  Start Emacs with
 the ‘--debug-init’ option to view a complete error backtrace.
-#+END_SRC
+\end{verbatim}
 
 It is important to note that doom does recognize pdf mode. (It open pdf file with pdfview mode)
 
-As the main error message suggests =pdf-info-epdfinfo-program= can't not be executed because it doesn't exist.
+As the main error message suggests \texttt{pdf-info-epdfinfo-program} can't not be executed because it doesn't exist.
 
-This [[https://www.reddit.com/r/emacs/comments/aa9yz3/compiling_pdftools/][page]] encounters similar error, and it is suggested to run =pdf-tools-install=.
+This \href{https://www.reddit.com/r/emacs/comments/aa9yz3/compiling\_pdftools/}{page} encounters similar error, and it is suggested to run \texttt{pdf-tools-install}.
 
-Running =pdf-tools-install.= output the following error.
-#+BEGIN_SRC md
+Running \texttt{pdf-tools-install.} output the following error.
+\begin{verbatim}
 -*- mode: compilation; default-directory: "~/.emacs.d/.local/elpa/pdf-tools-20211110.513/build/server/" -*-
 Comint started at Thu Nov 18 09:02:31
 
@@ -155,28 +179,31 @@ MAKE: *** [MAKEFILE:368: ALL] ERROR 2
 NOTE: MAYBE TRY THE '-D' OPTION.
 
 COMINT EXITED ABNORMALLY WITH CODE 1 AT THU NOV 18 09:02:38
-#+END_SRC
-***** remove =pdf-tools= from package install and uncomment =pdf= module in =init.el=
-I suspected that there could be version or dependencies mismatch that cause the error, so I make sure that =pdf-tools= is removed from =packages.el= page and uncommented =pdf= module in =init.el=. I do this because I figure it is best to install dependencies in doom-like ways.
+\end{verbatim}
+\item remove \texttt{pdf-tools} from package install and uncomment \texttt{pdf} module in \texttt{init.el}
+\label{sec:org76af189}
+I suspected that there could be version or dependencies mismatch that cause the error, so I make sure that \texttt{pdf-tools} is removed from \texttt{packages.el} page and uncommented \texttt{pdf} module in \texttt{init.el}. I do this because I figure it is best to install dependencies in doom-like ways.
 
 I observed that pdf-tools was rebuild when I reload doom.
-I also observed that when open pdf file, doom doesn't recognise pdf file and open it as fundamental mode. (while previous to install =pdf= module via =init.el=, doom opens pdf with pdf-view mode)
+I also observed that when open pdf file, doom doesn't recognise pdf file and open it as fundamental mode. (while previous to install \texttt{pdf} module via \texttt{init.el}, doom opens pdf with pdf-view mode)
 
-Still, rerun =pdf-tools-install= still output the same error as before.
+Still, rerun \texttt{pdf-tools-install} still output the same error as before.
 
 Validation: How does module loaded into doom? How is it related to loading the packages itself via straight.el or other package manager?
 
-***** replace line of code in =pdf-info.el=. Code is found [[https://github.com/politza/pdf-tools/pull/683/commits/90852ba946c1a798f0b7b4dd412bf9d616c8cecf][here]].
+\item replace line of code in \texttt{pdf-info.el}. Code is found \href{https://github.com/politza/pdf-tools/pull/683/commits/90852ba946c1a798f0b7b4dd412bf9d616c8cecf}{here}.
+\label{sec:orga4a582f}
 
-After replaced the line, run =pdf-tools-install= still fails.
-Note: as of <2021-11-18 Thu>, the code is not merged into master.
+After replaced the line, run \texttt{pdf-tools-install} still fails.
+Note: as of \textit{<2021-11-18 Thu>}, the code is not merged into master.
 
-***** manually compile pdf-tools at =~/.emacs.d/.local/straight/repos/pdf-tools/=
+\item manually compile pdf-tools at \texttt{\textasciitilde{}/.emacs.d/.local/straight/repos/pdf-tools/}
+\label{sec:org9d8c3f3}
 
-I decided to follow compilation guide from pdf-tools github page, see [[https://github.com/politza/pdf-tools#compilation][here]].
+I decided to follow compilation guide from pdf-tools github page, see \href{https://github.com/politza/pdf-tools\#compilation}{here}.
 
-run =make -d=, I get the following message.
-#+BEGIN_SRC md
+run \texttt{make -d}, I get the following message.
+\begin{verbatim}
 GNU Make 4.2.1
 Built for x86_64-pc-linux-gnu
 Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -611,23 +638,27 @@ Putting child 0x55d1fce51170 (.cask/27.1) PID 2737 on the chain.
 Live child 0x55d1fce51170 (.cask/27.1) PID 2737
 Reaping losing child 0x55d1fce51170 PID 2737
 Removing child 0x55d1fce51170 PID 2737 from chain.
-#+END_SRC
+\end{verbatim}
 
-I searched the error of =make: cask command not found= and, interestingly, I found this [[https://github.com/politza/pdf-tools/issues/335][page]], which is an issue from pdf-tools github.
+I searched the error of \texttt{make: cask command not found} and, interestingly, I found this \href{https://github.com/politza/pdf-tools/issues/335}{page}, which is an issue from pdf-tools github.
 
-I have further check that version of =pdf-tools= from =M-x list-packages= are the latest version, see the commit on github [[https://github.com/vedang/pdf-tools/tree/a8847b75d3487d60e27762816bdbdd23b6dc1c11][here]].
+I have further check that version of \texttt{pdf-tools} from \texttt{M-x list-packages} are the latest version, see the commit on github \href{https://github.com/vedang/pdf-tools/tree/a8847b75d3487d60e27762816bdbdd23b6dc1c11}{here}.
 
 I confirmed that epdfinfo can't be found by checking the following
-1. =M-x pdf-info-check-epdfinfo RET=
-2. from installing section [[https://github.com/vedang/pdf-tools/tree/a8847b75d3487d60e27762816bdbdd23b6dc1c11#installing][here]], I checked that no tar file is contained within the direcotry.
-***** search about =epdfinfo= installabtion problem on the latest git commit, no result found.
-I searched for =epdfinfo= related issue on the latest git commit and found nothing.
+\begin{enumerate}
+\item \texttt{M-x pdf-info-check-epdfinfo RET}
+\item from installing section \href{https://github.com/vedang/pdf-tools/tree/a8847b75d3487d60e27762816bdbdd23b6dc1c11\#installing}{here}, I checked that no tar file is contained within the direcotry.
+\end{enumerate}
+\item search about \texttt{epdfinfo} installabtion problem on the latest git commit, no result found.
+\label{sec:orgd990a4a}
+I searched for \texttt{epdfinfo} related issue on the latest git commit and found nothing.
 This confirmed that the problem is more general than version conflict.
-***** install cask manually, and rerun =make -d= in =~/.emacs.d/.local/straight/repos/pdf-tools/=
-I install cask manually from [[https://github.com/cask/cask#installation][here]].
+\item install cask manually, and rerun \texttt{make -d} in \texttt{\textasciitilde{}/.emacs.d/.local/straight/repos/pdf-tools/}
+\label{sec:org0e84d7d}
+I install cask manually from \href{https://github.com/cask/cask\#installation}{here}.
 
-when I rerun =make -d=, the same =cask caa't be found= is gone, and get the following message instead.
-#+BEGIN_SRC md
+when I rerun \texttt{make -d}, the same \texttt{cask caa't be found} is gone, and get the following message instead.
+\begin{verbatim}
 /home/awannaphasch2016/anaconda3/bin/../lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0/../../../../x86_64-conda_cos6-linux-gnu/bin/ld: /home/awannaphasch2016/anaconda3/lib/libxcb.so.1: undefined reference to `XauGetBestAuthByAddr'
 /home/awannaphasch2016/anaconda3/bin/../lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0/../../../../x86_64-conda_cos6-linux-gnu/bin/ld: /home/awannaphasch2016/anaconda3/lib/libcairo.so: undefined reference to `XCopyArea'
 /home/awannaphasch2016/anaconda3/bin/../lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0/../../../../x86_64-conda_cos6-linux-gnu/bin/ld: /home/awannaphasch2016/anaconda3/lib/libcairo.so: undefined reference to `XRenderFindFormat'
@@ -648,14 +679,19 @@ make[1]: Leaving directory '/home/awannaphasch2016/.emacs.d/.local/straight/repo
 Reaping losing child 0x5577befe74b0 PID 9333
 make: *** [Makefile:82: server/epdfinfo] Error 2
 Removing child 0x5577befe74b0 PID 9333 from chain.
-#+END_SRC
+\end{verbatim}
 
-The above error seem to be the same as the one I observed at [[*Gathering information][Gathering information]].
-When I rerun =pdf-tools-install=, I still get the same error as mentioned.
-***** Found same =collect2: error: ld= error in the latest issue of pdf-tools.
-I found the issue [[https://github.com/vedang/pdf-tools/issues/42][here]].
+The above error seem to be the same as the one I observed at \hyperref[sec:orga657536]{Gathering information}.
+When I rerun \texttt{pdf-tools-install}, I still get the same error as mentioned.
+\item Found same \texttt{collect2: error: ld} error in the latest issue of pdf-tools.
+\label{sec:org5d0d048}
+I found the issue \href{https://github.com/vedang/pdf-tools/issues/42}{here}.
 
-I stopped here because to I am unable to locate where =/home/awannaphasch2016/anaconda3/bin/../lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0/../../../../x86_64-conda_cos6-linux-gnu/bin/ld= is.
+I stopped here because to I am unable to locate where \texttt{/home/awannaphasch2016/anaconda3/bin/../lib/gcc/x86\_64-conda\_cos6-linux-gnu/7.3.0/../../../../x86\_64-conda\_cos6-linux-gnu/bin/ld} is.
 
 To dig into it further, I first need to locate the file and knowledge about how C program is built and how ld works may come in handy if I am on the right track on debugging this problem.
-***** I found solution by keeping =:tools pdf= and remove =(package! pdf-tools)= from packages.el
+\item I found solution by keeping \texttt{:tools pdf} and remove \texttt{(package! pdf-tools)} from packages.el
+\label{sec:orgb8acb4d}
+\end{enumerate}
+\end{enumerate}
+\end{document}

@@ -1,5 +1,9 @@
 #+TITLE: Fundamentals Of Database Systems Note
 
+* Chapter 1
+** 1.6
+*** 1.6.8 Enforcing Integrity Constraints
+**** the simplest type of integrity constaint involves specifying a data type for each data item.
 * Chapter 3 Data Modeling Using the Entity-Reltationship (ER) models
 ** 3.1 Using high-level conceptual data models for database design
 *** conceptual design
@@ -84,8 +88,72 @@
 ** Selected Bibliography
 * Chapter 5 The relational Data model and Relational Database Constraints
 ** 5.1 Relational Model concepts
+*** In the formal relational model terminology, a row is called a tuple, a column header is called an attribute, and the table is called a relation. The data type describing the types of values that can appear in each column is represented by a domain of possible values. We now define these termsdomain, tuple, attribute, and relation, formally
 *** 5.1.1 Domains, Attributes, Tuples, and Relations
+**** A domain D is a set of atomic values. By atomic we mean that each value in the domain is indivisible as far as the formal relational model is concerned.
+**** A relation schema2 R, denoted by R(A1, A2, … , An), is made up of a relation name R and a list of attributes, A1, A2, … , An.
+**** A relation (or relation state) r(R) is a mathematical relation of degree n on the domains dom(A1), dom(A2), … , dom(An), which is a subset of the Cartesian product (denoted by ×) of the domains that define R:
+**** Of all these possible combinations, a relation state at a given timethe current relation statereflects only the valid tuples that represent a particular state of the real world.
 *** 5.1.2 Characteristics of Relations
+**** ordering of typles in a Relation
+**** ordering of values within a tuple and an alterantive defintion of a relation
+**** values and NULLs in the Tuples.
+***** When the attribute name and value are included together in a tuple, it is known as self-describing data, because the description of each value (attribute name) is included in the tuple.
+***** The exact meaning of a NULL value governs how it fares during arithmetic aggregations or comparisons with other values. For example, a comparison of two NULL values leads to ambiguitiesif both Customer A and B have NULL addresses, it does not mean they have the same address. During database design, it is best to avoid NULL values as much as possible. We will discuss this further in Chapters 7 and 8 in the context of operations and queries, and in Chapter 14 in the context of database design and normalization.
+**** Interpretation (meaning) of a relation
+***** Each tuple in the relation can then be interpreted as a fact or a particular instance of the assertion
+***** the relational model represents facts about both entities and relationships uniformly as relations
+***** An alternative interpretation of a relation schema is as a predicate; in this case, the values in each tuple are interpreted as values that satisfy the predicate
+***** An assumption called the closed world assumption states that the only true facts in the universe are those present within the extension (state) of the relation(s). Any other combination of values makes the predicate false. This interpretation is useful when we consider queries on relations based on relational calculus in Section 8.6.
+*** 5.1.3. Relational Model Notation
+** 5.2 Relational Model Constiraints and RElational Database Schemas
+*** Constraints on databases can generally be divided into three main categories.
+**** Constraints that are inherent in the data model. We call these inherent model-base constraints  or implicit constraints.
+**** Constraints that can be directly expressed in the schemas of the data model, typically by specifying them in the DDL (data definition language, see Section 2.3.1). We call these schema-based constraints or explicit constraint
+**** Constraints that cannot be directly expressed in the schemas of the data model, and hence must be expressed and enforced by the application programs or in some other way. We call these application-based or semantic constraints or business rules
+**** Another important category of constraints is data dependencies, which include functional dependencies and multivalued dependencies. They are used mainly for testing the “goodness” of the design of a relational database and are utilized in a process called normalization, which is discussed in Chapters 14 and 15
+*** 5.2.1 Domain Constraints
+*** 5.2.2 Key Constraints and Constraints on NULL Values
+**** definition of superkey
+***** Suppose that we denote one such subset of attributes by SK; then for any two distinct tuples t1 and t2 in a relation state r of R, we have the constraint that: $t_1[SK] != t_2[SK]$. These are superkey.
+***** A superkey SK specifies a uniqueness constraint that no two distinct tuples in any state r of R can have the same value of SK.
+**** definition of key
+***** Key k of a relation schema R is a superkey of R with the additional property that removing any attribute A from K leaves a set of attribute $K'$ that is nto a uperkey of R anymore.
+***** key satisfy uniqueness property and minimality property (key is a a minimal superkey.)
+***** key is also has time-invariant property. It must continue to hold when we inset new tuples in the relation.
+**** definition of candidate key
+***** a relation schema may have more than one key. In this case, each of the keys is called a candidate key.
+***** It is common to designate one of the candidatek eys as the primary key of the relation. the hcoice of one to become the primary key is arbitrary. It is usually bettern to choose a primayr key with a single attribute or a small number of attirubtes.  The other candidate keys are designated as unique keys.
+*** 5.2.3 Relational Databases and Relational Database Schemas
+**** relational database schema (S)
+**** Each relational DBMS must have a data definition language (DDL) for defining a relational database schema.
+*** 5.2.4 Entity Integrity, Referential Integrity, and Foreign Keys
+**** The entity integrity constraint states that no primary key value can be NULL.
+**** Key constraints and entity integrity constraints are specified on individual relations. The referential integrity constraint is specified between two relations and is used to maintain the consistency among tuples in the two relations
+**** definition of foreign key (FK)
+***** a set of attribute FK in relation schema $R_1$ is a foreign key of $R_1$ that references relation $R_2$ if it satisfies the following rules:
+****** The attributes in FK have the same domain(s) as the primary key attributes PK of R2; the attributes FK are said to reference or refer to the relation R2.
+****** $T_1[FK]$ = $t_2[PK]$
+*** 5.2.5 Other Types of Constraints
+**** The preceding integrity constraints are included in the data definition language because they occur in most database applications. Another class of general constraints, sometimes called semantic integrity constraints, are not part of the DDL and have to be specified and enforced in a different way. Examples of such constraints are the salary of an employee should not exceed the salary of the employee’s supervisor and the maximum number of hours an employee can work on all projects per week is 56. Such constraints can be specified and enforced within the application programs that update the database, or by using a general-purpose constraint specification language. Mechanisms called triggers and assertions can be used in SQL, through the CREATE ASSERTION and CREATE TRIGGER statements, to specify some of these constraints (see Chapter 7).
+**** The types of constraints we discussed so far may be called state constraints because they define the constraints that a valid state of the database must satisfy. Another type of constraint, called transition constraints, can be defined to deal with state changes in the database.11 An example of a transition constraint is: “the salary of an employee can only increase.” Such constraints are typically enforced by the application programs or specified using active rules and triggers, as we discuss in Section 26.1.
+** 5.3 Update Operations, Transactions, and Dealing with Constraint
+*** In this section we discuss the types of constraints that may be violated by each of these operations and the types of actions that may be taken if an operation causes a violation.
+*** 5.3.1 The Insert Operation
+**** Insert operation can violate all 4 constraints.
+*** 5.3.2 The Delete Operation
+**** delete operation can violate only referential integrity constraints.
+**** Several options are available if a deletion operation causes a violation. The first option, called restrict, is to reject the deletion. The second option, called cascade, is to attempt to cascade (or propagate) the deletion by deleting tuples that reference the tuple that is being deleted
+**** A third option, called set null or set default, is to modify the referencing attribute values that cause the violation; each such value is either set to NULL or changed to reference another default valid tuple. Notice that if a referencing attribute that causes a violation is part of the primary key, it cannot be set to NULL; otherwise, it would violate entity integrity.
+**** Combinations of these three options are also possible. For example, to avoid having operation 3 cause a violation, the DBMS may automatically delete all tuples from WORKS_ON and DEPENDENT with Essn = ‘333445555’. Tuples in EMPLOYEE with Super_ssn = ‘333445555’ and the tuple in DEPARTMENT with Mgr_ssn = ‘333445555’ can have their Super_ssn and Mgr_ssn values changed to other valid values or to NULL. Although it may make sense to delete automatically the WORKS_ON and DEPENDENT tuples that refer to an EMPLOYEE tuple, it may not make sense to delete other EMPLOYEE tuples or a DEPARTMENT tuple.
+*** 5.3.3 The Update Operation
+**** If a foreign key attribute is modified, the DBMS must make sure that the new value refers to an existing tuple in the referenced relation (or is set to NULL). Similar options exist to deal with referential integrity violations caused by Update as those options discussed for the Delete operation. In fact, when a referential integrity constraint is specified in the DDL, the DBMS will allow the user to choose separate options to deal with a violation caused by Delete and a violation caused by Update (see Section 6.2)
+*** 5.3.4 The Transaction Concept
+**** A database application program running against a relational database typically executes one or more transactions. A transaction is an executing program that includes some database operations, such as reading from the database, or applying insertions, deletions, or updates to the database.
+**** At the end of the transaction, it must leave the database in a valid or consistent state that satisfies all the constraints specified on the database schema.
+**** A single transaction may involve any number of retrieval operations (to be discussed as part of relational algebra and calculus in Chapter 8, and as a part of the language SQL in Chapters 6 and 7) and any number of update operations. These retrievals and updates will together form an atomic unit of work against the database. For example, a transaction to apply a bank withdrawal will typically read the user account record, check if there is a sufficient balance, and then update the record by the withdrawal amount
+** 5.4 Summary
+*** Several characteristics differentiate relations from ordinary tables or files. The first is that a relation is not sensitive to the ordering of tuples. The second involves the ordering of attributes in a relation schema and the corresponding ordering of values within a tuple. We gave an alternative definition of relation that does not require ordering of attributes, but we continued to use the first definition, which requires attributes and tuple values to be ordered, for convenience.
 * Chapter 6 Basic SQL
 ** 6.1 SQL Data Definition and Data Types
 *** 6.1.1 Schema and Catalog Concepts in SQL
@@ -109,16 +177,222 @@
 * Chapter 7 More SQL: complex Queries, Triggers, Views, and Schema Modification
 ** 7.1 More Complex SQL Retrieval Queries
 *** 7.1.1 Comparisons Involving NULL and Three-Valued Logic
+**** SQL uses a three-valued logic with values TRUE, FALSE, and UNKNOWN instead of the standard two-valued (Boolean) logic with values TRUE or FALSE. It is therefore necessary to define the results (or truth values) of three-valued logical expressions when the logical connectives AND, OR, and NOT are used.
 *** 7.1.2 Nested Queries, Tuples, and Set/Multiset Comparisons
+**** Some queries require that existing values in the database be fetched and then used in a comparison condition. Such queries can be conveniently formulated by using nested queries, which are complete select-from-where blocks within another SQL query. That other query is called the outer query. These nested queries can also appear in the WHERE clause or the FROM clause or the SELECT clause or other SQL clauses as needed.
+**** If a nested query returns a single attribute and a single tuple, the query result will be a single (scalar) value. I
+**** In general, the nested query will return a table (relation), which is a set of multiset of tuples.
+**** The = ANY (or = SOME) operator returns  TRUE if the value v is equal to some vlaue in the set V and is hence equivalent to IN.
+**** Example
+***** selects the project numbers of projects that have an employee with last name 'Smith' involved as manager, wheras the second nested query selects the project numbers of projects that have an employee with last name 'Smith' involved as work
+#+BEGIN_SRC sql
+select distinct Pnumber
+from project
+where Pnumber in
+(
+select Pnumber
+from PROJECT,DEPARTMENT,EMPLOYEE
+where Dnum = Dnumber AND Mgr_ssn = Ssn and Lname = 'Smith'
+)
+or
+Pnumber in
+(select Pno
+from WORKS_ON,EMPLOYEE
+where Essn = Ssn and Lname = 'Smith')
+#+END_SRC
+***** returns the names of employees whose salary is greater than the salary of all the employees in department 5
+#+BEGIN_SRC sql
+select Lname, Fname
+from EMPLOYEE
+where salary > ALL (select salary from EMPLOYEE where Dno = 5);
+#+END_SRC
+***** Retrieve the name of each employee who has a dependent with the same first name and is the same sex as the employee.
+#+BEGIN_SRC sql
+select E.Fname, E.Lname
+from EMPLOYEE as E
+where E.Ssn in (
+select D.Essn
+from Dependent as D
+where D.Dependent_name = E.Fname and E.Sex = D.sex);
+#+END_SRC
+**** In general, we can have several levels of nested queries. We can once again be faced with possible ambiguity among attribute names if attributes of the same name existone in a relation in the FROM clause of the outer query, and another in a relation in the FROM clause of the nested query. The rule is that a reference to an unqualified attribute refers to the relation declared in the innermost nested query.
+**** It is generally advisable to create tuple variables (aliases) for all the tables referenced in an SQL query to avoid potential errors and ambiguities, as illustrated in Q16
 *** 7.1.3 Correlated Nested Queries
+**** Whenever a condition in the WHERE clause of a nested query references some attribute of a relation declared in the outer query, the two queries are said to be correlated
+**** We can understand a correlated query better by considering that the nested query is evaluated once for each tuple (or combination of tuples) in the outer query
+**** In general, a query written with nested select-from-where blocks and using the = or IN comparison operators can always be expressed as a single block query
+**** Example
+***** Q16A: each EMPLOYEE tuple, evaluate the nested query, which retrieves the Essn values for all DEPENDENT tuples with the same sex and name as that EMPLOYEE tuple; if the Ssn value of the EMPLOYEE tuple is in the result of the nested query, then select that EMPLOYEE tuple.
+#+BEGIN_SRC sql
+select E.Fname, E.Lname
+from EMPLOYEE as E, DEPENDENT as D
+where E.Ssn = D.Essn and E.Fname = D.Dependent_name and E.sex and D.sex;
+#+END_SRC
 *** 7.1.4 The EXISTS and UNIQUE Functions in SQL
+**** EXISTS and UNIQUE are Boolean functions that return TRUE or FALSE; hence, they can be used in a WHERE clause condition.
+**** Example
+***** Q16B:
+#+BEGIN_SRC sql
+select E.Fname, E.Lname
+from EMPLOYEE as E
+where EXISTS (
+select *
+from DEPENDENT as D
+where E.Ssn = D.Essn and E.Fname = D.Dependent_name and E.sex and D.sex);
+#+END_SRC
+***** Query 6: Retrive the names of employee who have no dependent
+#+BEGIN_SRC sql
+select E.Fname, E.Lname
+from EMPLOYEE as E
+where NOT EXIST (
+select *
+from DEPENDENT as D
+where D.Essn = E.Ssn);
+
+#+END_SRC
+***** Query 7: List the names of managers who have at least one dependent
+#+BEGIN_SRC sql
+-- first way
+select E.Fname, E.Lname
+from EMPLOYEE as E
+where EXISTS (
+select *
+from MANAGER as M, DEPENDENT as D
+where M.Essn = E.Ssn and E.Ssn = D.Essn);
+
+-- second way
+select E.Fname, E.Lname
+from EMPLOYEE as E
+where EXISTS (
+select *
+from DEPARTMENT as M
+where M.Mgr_ssn = E.Ssn)
+AND (
+select *
+from DEPENDENT as D
+where E.Ssn = D.Essn);
+#+END_SRC
+***** Query 3A: Retrive the name of each employee who works on all the projects controlled by department number 5.
+#+BEGIN_SRC sql
+SELECT Fname, Lname
+FROM EMPLOYEE
+WHERE NOT EXISTS ((
+SELECT Pnumber
+FROM PROJECT
+WHERE Dnum = 5
+EXCEPT (
+select Pno
+from works_on
+where Ssn=Essn));
+#+END_SRC
+In Q3A, the first subquery (which is not correlated with the outer query) selects all projects controlled by department 5, and the second subquery (which is correlated) selects all projects that the particular employee being considered works on. If the set difference of the first subquery result MINUS (EXCEPT) the second subquery result is empty, it means that the employee works on all the projects and is therefore selected.
+**** This is an example of cetrian types of universal quantification, as we will discuss in Section 8.6.7. One way to write this query is to use the construct (S2 EXCEPT S1) as explained next, and checking whether the result is empty.1
 *** 7.1.5 Explicit Sets and Renaming in SQL
 *** 7.1.6 Joined Tables in SQL and Outer Joins
+**** The concept of a joined table (or joined relation) was incorporated into SQL to permit users to specify a table resulting from a join operation in the FROM clause of a query. This construct may be easier to comprehend than mixing together all the select and join conditions in the WHERE clause.
 *** 7.1.7 Aggregate Functions in SQL
-** 7.2 Specifying Constraints as Assertions and Actions as Triggers
-** 7.3 Views (Virtual Tables) in SQL
+**** Aggregate functions are used to summarize information from multiple tuples into a single-tuple summary. Grouping is used to create subgroups of tuples before summarization. Grouping and aggregation are required in many database applications, and we will introduce their use in SQL through examples.
+**** Example
+***** Q20: Find the sum of the salaries of all employees of the ‘Research’ department, as well as the maximum salary, the minimum salary, and the average salary in this department.
+#+BEGIN_SRC sql
+SELECT SUM (Salary), MAX (Salary), MIN (Salary), AVG (Salary)
+FROM (EMPLOYEE JOIN DEPARTMENT ON Dno = Dnumber)
+WHERE Dname = ‘Research’;
+#+END_SRC
+***** Q22
+#+BEGIN_SRC sql
+SELECT Lname,Fname
+FROM EMPLOYEE
+WHERE (select count(*) from DEPENDENT where Ssn = Essn)>=2
+#+END_SRC
+*** 7.1.8 Grouping: The GROUP BY and HAVING Clauses
+**** Example
+***** Q24: For each department, retrieve the department number, the number of employees in the department, and their average salary
+#+BEGIN_SRC sql
+SELECT Dno, COUNT (*), AVG (Salary)
+FROM EMPLOYEE
+GROUP BY Dno;
+#+END_SRC
+***** Q25: For each project, retrieve the project number, the project name, and the number of employees who work on that project.
+#+BEGIN_SRC sql
+SELECT Pnumber, Pname, COUNT (*)
+FROM PROJECT, WORKS_ON
+WHERE Pnumber = Pno
+GROUP BY Pnumber, Pname;
+#+END_SRC
+***** Query 28: For each department that has more than five employees, retrieve the department number and the number of its employees who are making more than $40,000
+Below is incorrect because it will select only departments that have more than five
+employees who each earn more than $40,000
+#+BEGIN_SRC sql
+SELECT Dno, COUNT (*)
+FROM EMPLOYEE
+WHERE Salary>40000
+GROUP BY Dno
+HAVING COUNT (*) > 5;
+#+END_SRC
 
+Correct version is shown below
+#+BEGIN_SRC sql
+SELECT Dno, COUNT (*)
+FROM EMPLOYEE
+WHERE Salary>40000 AND Dno IN
+ ( SELECT Dno
+ FROM EMPLOYEE
+GROUP BY Dno
+ HAVING COUNT (*) > 5)
+GROUP BY Dno;
+#+END_SRC
+*** 7.1.9  Other SQL Constructs: WITH and CASE
+**** In Q28′, we defined in the WITH clause a temporary table BIG_DEPTS whose result holds the Dno’s of departments with more than five employees, then used this table in the subsequent query. Once this query is executed, the temporary table BIGDEPTS is discarded.
+**** example
+***** Q28': For each department that has more than five employees, retrieve the department number and the number of its employees who are making more than $40,000
+#+BEGIN_SRC sql
+WITH BIGDEPTS (Dno) AS
+ ( SELECT Dno
+ FROM EMPLOYEE
+ GROUP BY Dno
+ HAVING COUNT (*) > 5)
+SELECT Dno, COUNT (*)
+FROM EMPLOYEE
+WHERE Salary>40000 AND Dno IN BIGDEPTS
+GROUP BY Dno;
+#+END_SRC
+***** U6'
+#+BEGIN_SRC sql
+UPDATE EMPLOYEE
+SET Salary =
+CASE WHEN Dno = 5 THEN Salary + 2000
+ WHEN Dno = 4 THEN Salary + 1500
+ WHEN Dno = 1 THEN Salary + 3000
+ ELSE Salary + 0 ;
+#+END_SRC
+*** 7.1.10 Recursive Queries in SQL
+**** In this section, we illustrate how to write a recursive query in SQL. This syntax was added in SQL:99 to allow users the capability to specify a recursive query in a declarative manner
+**** example
+***** Q29:
+#+BEGIN_SRC sql
+WITH RECURSIVE SUP_EMP (SupSsn, EmpSsn) AS
+ ( SELECT SupervisorSsn, Ssn
+ FROM EMPLOYEE
+ UNION
+ SELECT E.Ssn, S.SupSsn
+ FROM EMPLOYEE AS E, SUP_EMP AS S
+ WHERE E.SupervisorSsn = S.EmpSsn)
+ SELECT*
+ FROM SUP_EMP;
+#+END_SRC
+*** 7.1.11 Discussion and Summary of SQL Queries
+** 7.2 Specifying Constraints as Assertions and Actions as Triggers
+*** 7.2.1 Specifying General Constraints as Assertions in SQL
+*** 7.2.2 Introduction to Triggers in SQL
+** 7.3 Views (Virtual Tables) in SQL
+*** 7.3.1 Concept of a View in SQL
+*** 7.3.2 Specification of Views in SQL
+*** 7.3.3 View Implementation, View Update, and Inline Views
+*** 7.3.4 Views as Authorization Mechanisms
 ** 7.4 Schema Change Statemetns in SQL
+*** 7.4.1 The DROP Command
+*** 7.4.2 The ALTER Command
 ** 7.5 Summary
 ** Review Question
 ** Exercise

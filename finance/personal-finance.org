@@ -1,0 +1,40 @@
+#+TITLE: Personal Finance
+#+FILETAGS: finance personal
+
+
+* Personal Finance
+** Waiting :WAITING:
+** Habits :habit:
+*** TODO fill in what i have paid for the day into my ledger file.
+SCHEDULED: <2022-03-03 Thu .+1d>
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: TODO
+:LAST_REPEAT: [2022-03-02 Wed 19:07]
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-03-02 Wed 19:07]
+:END:
+** Questions :QUESTION:
+** Notes :NOTE:
+** Tasks
+*** WAITING limit my daily/weekly/monthly budget. :WAITING:
+- State "WAITING"    from "TODO"       [2022-02-26 Sat 16:34] \\
+  I need to setup org ledger properly first. Start by going by a week worth of expenses.
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 16:33]--[2022-02-26 Sat 16:34] =>  0:01
+:END:
+[2022-02-26 Sat 16:33]
+[[file:~/org/personal-finance.org::*Questions][Questions]]
+*** TODO figure out what is this amazon web service monthly charge. $150 per month.
+SCHEDULED: <2022-03-03 Thu>
+[2022-03-02 Wed 18:29]
+[[file:~/org/finance/ledger.dat::Expenses:Drinks:Coffee $1.99]]
+*** TODO cancle/figure out detail/adjust price all recurring subscription.
+:LOGBOOK:
+CLOCK: [2022-03-02 Wed 18:32]--[2022-03-02 Wed 18:44] =>  0:12
+:END:
+[2022-03-02 Wed 18:32]
+[[file:~/org/finance/ledger.dat::Expenses:Drinks:Coffee $1.99]]
+**** cancle the following: LA fitness onlyfans, trading view, security nationaes: bill pay id: security, patreon, lucid chart, amazon prime.
+**** improve the following pay: AT&T.

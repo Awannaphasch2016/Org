@@ -1,4 +1,5 @@
 #+title: org-babel notes
+#+FILETAGS: org-babel notes
 
 
 * Project build by org-babel

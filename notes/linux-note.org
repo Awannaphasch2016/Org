@@ -1,0 +1,85 @@
+#+TITLE: Linux Note
+
+* Command line
+** Reference
+*** "command line pandas killer" (mlr, q, csvtk, xsv, tsv-utils), see [[https://github.com/xvzftube/pandas_killers/blob/main/main.sh][here]].
+** ls
+*** what is the meaning of read column output
+- ref
+  - [[https://unix.stackexchange.com/questions/103114/what-do-the-fields-in-ls-al-output-mean][What do the fields in ls -al output mean?]]
+
+#+BEGIN_SRC txt
+-rwxrw-r--    1    root   root 2048    Jan 13 07:11 afile.exe
+#+END_SRC
+
+- file permissions (-rwxrw-r--),
+- number of (hard) links (1),
+- owner name (root),
+- owner group (root),
+- file size in bytes (2048),
+- time of last modification (Jan 13 07:11), and
+- file/directory name (afile.exe)
+** timer
+#+BEGIN_SRC sh :results raw
+time find . -name "*.scala"
+#+END_SRC
+
+#+RESULTS:
+
+CPU (0avgtext+0avgdata 3300maxresident)k
+0inputs+0outputs (0major+150minor)pagefaults 0swaps
+** kpsewhich (Karl's Path SEarch Library WHICH)
+- ref
+  - [[https://tex.stackexchange.com/questions/492093/what-does-kpsewhich-stand-for][What does kpsewhich stand for?]]
+As info kpathsea says (online manual here), Kpathsea is a library for path searching (e.g., for very quickly locating a given .sty file in a set of potentially large TEXMF trees, without doing a recursive directory tree traversal every time a given file is needed; this is important when compiling LaTeX documents using several packages, themselves requiring other packages, possibly various font files, etc.).* Environment variables
+** list of helper commands
+*** whereis vs which
+=whereis= searches for "possibly useful" files, while =which= only searches for executables.
+
+run =whatis= result on the two command, we get the following
+#+BEGIN_SRC sh
+whatis which
+#+END_SRC
+
+#+RESULTS:
+: which (1)            - locate a command
+
+#+BEGIN_SRC sh
+whatis whereis
+#+END_SRC
+
+#+RESULTS:
+| whereis (1)          - locate the binary | source | and manual page files for a command |
+
+
+*** whatis
+provide tldr description of target command.
+#+BEGIN_SRC sh
+whatis which
+#+END_SRC
+
+#+RESULTS:
+|                                         |
+| which (1)            - locate a command |
+
+* PS
+- ref
+  - https://access.redhat.com/solutions/505983
+** Prompt is control via a special shell variable. You need to set PS1, PS2, PS3 and PS4 variable.
+** **PS1** - The value of this parameter is expanded and used as the primary prompt string. The default value is \u@\h \W\\$ .
+** **PS2** - The value of this parameter is expanded as with PS1 and used as the secondary prompt string. The default is ]
+** **PS3** - The value of this parameter is used as the prompt for the select command
+** **PS4** - The value of this parameter is expanded as with PS1 and the value is printed before each command bash displays during an execution trace. The first character of PS4 is replicated multiple times, as necessary, to indicate multiple levels of indirection. The default is +
+* TERM
+** The TERM environment variable is used for terminal handling. It lets DB-Access (and other character-based applications) recognize and communicate with the terminal that you are using.
+**  $TERM is read and interpreted by the terminfo system. terminfo also refers to the database of terminal descriptions which you can find on most systems in /usr/share/terminfo . $TERM must match one of the entries in that database.
+* Environment variable
+* Compare
+** kpsewhich vs which
+- ref
+  - [[https://tex.stackexchange.com/questions/492093/what-does-kpsewhich-stand-for][What does kpsewhich stand for?]]
+The comparison between which and kpsewhich goes further than that. As Unix shells often maintain a cache of executables present in directories of the PATH in order to offer efficient lookup for command completion, the Kpathsea library maintains a filename database (comprised of the ls-R files in each TEXMF tree) in order to offer similar fast lookup to TeX-related programs.
+
+In Unix shells, the cache can often be updated with a hash command (hash -r in Bash, rehash in Zsh) when you've added or removed executables from your PATH and wish to refresh the cache without restarting your shell; for the Kpathsea library, the corresponding operation is done with mktexlsr, also known as texhash.
+
+Finally, which looks up a given executable in the directories listed in PATH1, in some way similarly as kpsewhich for finding a TeX-related file using either on-disk lookup or only the filename database (it depends on whether the TEXMF tree is preceded with !! where it is used in texmf.cnf2). kpsewhich is more sophisticated than a typical which builtin, though, as it can return different results depending on what was given as -progname, has a notion of variables that can be set in texmf.cnf, can look up in-cache-only or on-disk depending on the per-directory-settings in texmf.cnf, etc.* FAQs

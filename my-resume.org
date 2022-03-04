@@ -1,0 +1,74 @@
+#+TITLE: My Resume
+#+AUTHOR: Anak Wannaphaschaiyong
+#+EXCLUDE_TAGS: noexport
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+OPTIONS: toc:nil title:nil H:1
+#+LATEX_HEADER: \columnratio{0.6} % Set the left/right column width ratio to 6:4.
+#+MACRO: cvevent \cvevent{$1}{$2}{$3}{$4}
+#+MACRO: cvachievement \cvachievement{$1}{$2}{$3}{$4}
+#+MACRO: cvtag \cvtag{$1}
+#+MACRO: divider \par\divider
+
+* Config :noexport:
+** LaTeX Config
+#+BEGIN_SRC emacs-lisp
+(setq org-latex-packages-alist 'nil)
+(setq org-latex-default-packages-alist
+      '(("rm" "roboto"  t)
+        ("defaultsans" "lato" t)
+        ("" "paracol" t)
+        ))
+#+END_SRC
+
+#+RESULTS:
+| rm          | roboto  | t |
+| defaultsans | lato    | t |
+|             | paracol | t |
+
+** Exporter Settings
+** Macros
+* CV Header
+** Photo & Tagline
+#+BEGIN_SRC latex
+\name{Aidan Scannell}
+% \photoR{2.8cm}{aidan_portrait.jpeg}
+\tagline{PhD Researcher}
+#+END_SRC
+** Personal Info
+#+BEGIN_EXPORT latex
+\personalinfo{%
+    \homepage{www.aidanscannell.com}
+    \email{scannell.aidan@gmail.com}
+    \phone{+44 787 558 3912}
+    \location{Bristol, UK}
+    \github{aidanscannell}
+    \linkedin{aidan-scannell-82522789/}
+}
+\makecvheader
+#+END_EXPORT
+* CV Columns one
+** Experience
+*** PhD Researcher
+*** Teaching Assistant
+** Projects
+*** Project 1
+*** Do not export this project
+** Publication :noexport:
+#+begin_export latex
+\nocite{*}
+\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+\divider
+\printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
+\divider
+\printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
+#+end_export
+** Volunteering
+* CV Column two
+** Skills
+** Education
+** My Life Philosophy :noexport:
+** Schievements
+** Languages :noexport:
+** Referees
+* Backmatter

@@ -2,6 +2,7 @@
 
 TODO.org contains personal tasks and things to keep track of. Basically, tasks that needs to be done, but doesn't belong to another other tasks.
 
+* Waiting :WAITING:
 * Inbox
 * Special dates
 :PROPERTIES:
@@ -9,6 +10,9 @@ TODO.org contains personal tasks and things to keep track of. Basically, tasks t
 :END:
 ** Birthdays
 ** Anniversaries
+** Events
+*** How Researchers and Developers Can Benefit from the Command Line. ([[https://mail.google.com/mail/u/0/#inbox/FMfcgzGmvBtHDzdNzLkpJJKjkKGxqgbh][here]])
+SCHEDULED: <2022-03-08 Tue 14:00-15:00>
 * Finance :finance:
 :PROPERTIES:
 :CATEGORY: Finance
@@ -24,21 +28,14 @@ TODO.org contains personal tasks and things to keep track of. Basically, tasks t
 ** TODO pay for FPL. and ask jared to pay me half.
 [2022-02-24 Thu 23:26]
 [[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*]]
-** TODO wash by blanket.
-SCHEDULED: <2022-02-26 Sat>
-[2022-02-25 Fri 11:10]
-[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*Entity types that do not have key attributes of their own are called weak entity types. In contrast, regular entity types that do have a key attributewhich include all the examples discussed so farare called strong entity types][Entity types that do not have key attributes of their own are called weak entity types. In contrast, regular entity types that do have a key attributewhich include all the examples discussed so farare called strong entity types]]
 ** TODO clean my couch. (prevent my back from getting rash)
 [2022-02-25 Fri 11:10]
 [[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*Entity types that do not have key attributes of their own are called weak entity types. In contrast, regular entity types that do have a key attributewhich include all the examples discussed so farare called strong entity types][Entity types that do not have key attributes of their own are called weak entity types. In contrast, regular entity types that do have a key attributewhich include all the examples discussed so farare called strong entity types]]
-** TODO clean my jacket, towel.
-SCHEDULED: <2022-02-26 Sat>
+** WAITING talk to community about fixing internet. call AT&T and tell them that my cable is broken. how to fix it? :WAITING:
 :LOGBOOK:
-CLOCK: [2022-02-25 Fri 15:45]--[2022-02-25 Fri 15:46] =>  0:01
+- State "WAITING"    from "NEXT"       [2022-02-28 Mon 17:10] \\
+  waiting for reply by oaks of boca office to decide on what I need to do and when it can be fixed.
 :END:
-[2022-02-25 Fri 15:45]
-** TODO talk to community about fixing internet.
-SCHEDULED: <2022-02-26 Sat>
 [2022-02-26 Sat 00:35]
 [[file:~/org/todo.org::+FILETAGS: PERSONAL]]
 ** TODO clean my toilet. :@errand:
@@ -48,15 +45,6 @@ CLOCK: [2022-02-22 Tue 09:49]--[2022-02-22 Tue 09:50] =>  0:01
 [2022-02-22 Tue 09:49]
 [[file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/evaluation/sliding_window.py::def evaluate_epoch(self, ensemble_idx, epoch, num_batch_pair, checkpoint_loss):]]
 *** NEXT check if I have all the cleaning product to learn toilet, if not, buy it from cvs.
-** TODO restock by bathroom product. collect things I need to buy. then go and buy them.
-SCHEDULED: <2022-02-26 Sat>
-:LOGBOOK:
-CLOCK: [2022-02-22 Tue 09:50]--[2022-02-22 Tue 09:51] =>  0:01
-:END:
-[2022-02-22 Tue 09:50]
-[[file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/evaluation/sliding_window.py::def evaluate_epoch(self, ensemble_idx, epoch, num_batch_pair, checkpoint_loss):]]
-*** NEXT buy facial product to clean my face. (I ran out of it.)
-*** NEXT buy paper rolled
 * Notes
 :PROPERTIES:
 :CATEGORY: Note
@@ -77,12 +65,6 @@ CLOCK: [2022-02-21 Mon 21:48]--[2022-02-21 Mon 21:49] =>  0:01
 [2022-02-21 Mon 21:48]
 [[file:~/org/journal.org::*shower][shower]]
 ** TODO check passport expired date
-** TODO rewriting my resume
-SCHEDULED: <2022-02-27 Sun>
-** TODO make an appointment time for my hair cut.
-SCHEDULED: <2022-02-26 Sat>
-[2022-02-23 Wed 23:20]
-[[file:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/hw2/src/main.scala::}]]
 ** NEXT figure out a way to increase space in my iphone. :@errand:
 :LOGBOOK:
 CLOCK: [2022-02-24 Thu 11:04]--[2022-02-24 Thu 11:05] =>  0:01
@@ -96,17 +78,10 @@ CLOCK: [2022-02-24 Thu 11:10]--[2022-02-24 Thu 11:12] =>  0:02
 [2022-02-24 Thu 11:10]
 [[file:~/org/school.org::*check my exam dates][check my exam dates]]
 *** TODO figure out how often I should post on linkedIn and what content I should tweet about? do research on this.
-** TODO read this email https://mail.google.com/mail/u/0/#inbox/FMfcgzGmvBpdjhSVwkfgqdzcsTtkhgrL
-SCHEDULED: <2022-02-25 Fri>
-[2022-02-24 Thu 11:14]
-[[file:~/org/school.org::*check my exam dates][check my exam dates]]
-** TODO clean up my email. remove recurring email.  remove notification.
-SCHEDULED: <2022-02-26 Sat>
-[2022-02-24 Thu 11:15]
-[[file:~/org/school.org::*check my exam dates][check my exam dates]]
-** TODO calculate cost of AT&T that jared hasn't paid me yet. (figure out last time jared paid me, and how much he owe me.) :@errand:
-SCHEDULED: <2022-02-26 Sat>
+** WAITING calculate cost of AT&T that jared hasn't paid me yet. (figure out last time jared paid me, and how much he owe me.) :@errand:WAITING:
 :LOGBOOK:
+- State "WAITING"    from "NEXT"       [2022-02-28 Mon 17:00] \\
+  waiting for jared to answer when was the last time he paid internet and calculate how much he owed me.
 CLOCK: [2022-02-24 Thu 11:15]--[2022-02-24 Thu 11:16] =>  0:01
 :END:
 [2022-02-24 Thu 11:15]
@@ -114,58 +89,68 @@ CLOCK: [2022-02-24 Thu 11:15]--[2022-02-24 Thu 11:16] =>  0:01
 ** TODO put deadline of summer 2022 in my schedule. or schedule task to remind me to look at the summer 2022 schedule. (https://www.fau.edu/registrar/pdf/Summer2022_08182021.pdf)
 [2022-02-24 Thu 16:04]
 [[file:~/org/GTD.org::*write down my version of GTD purposed -> action models under Getting projects Creatively Under (7.48 hour left mins mark) for all aspect in life I want to achieve.][write down my version of GTD purposed -> action models under Getting projects Creatively Under (7.48 hour left mins mark) for all aspect in life I want to achieve.]]
-** TODO check truebill and start creating budget for weekly for the rest of the year.
-SCHEDULED: <2022-02-26 Sat>
-:LOGBOOK:
-CLOCK: [2022-02-24 Thu 18:23]--[2022-02-24 Thu 18:24] =>  0:01
-:END:
-[2022-02-24 Thu 18:23]
-[[file:~/org/PhD.org::*Tasks][Tasks]]
 ** TODO figure out if I can pay this semester with cash. (best option for me, because I dont need to deposite 5k)
 :LOGBOOK:
 CLOCK: [2022-02-24 Thu 18:24]--[2022-02-24 Thu 18:25] =>  0:01
 :END:
 [2022-02-24 Thu 18:24]
 [[file:~/org/refile.org::*check truebill and start creating budget for weekly for the rest of the year.][check truebill and start creating budget for weekly for the rest of the year.]]
-** TODO collect my brother question from facebook to ask the real estate guy.
-SCHEDULED: <2022-02-26 Sat>
+** WAITING collect my brother question from facebook to ask the real estate guy. :WAITING:
 :LOGBOOK:
+- State "WAITING"    from "NEXT"       [2022-02-28 Mon 17:23] \\
+  waitin for Victor Wolfgang to answer the question I asked via text.
 CLOCK: [2022-02-24 Thu 18:32]--[2022-02-24 Thu 18:33] =>  0:01
 :END:
 [2022-02-24 Thu 18:32]
 [[file:~/org/school.org::*get overview of all the questios and write down things that I need to know before starting to code. Watch lecture accordingly][get overview of all the questios and write down things that I need to know before starting to code. Watch lecture accordingly]]
-** TODO clear virus on my iphone.
-SCHEDULED: <2022-03-02 Wed>
-:LOGBOOK:
-CLOCK: [2022-02-24 Thu 22:36]--[2022-02-24 Thu 22:37] =>  0:01
-:END:
-[2022-02-24 Thu 22:36]
 ** TODO collect yearly, month events, and important documentations (such as visa.) and put them into org agenda. I should also scan important documentation into pdf or other mean that can be easily store and search via emacs.
 :LOGBOOK:
 CLOCK: [2022-02-24 Thu 22:45]--[2022-02-24 Thu 22:47] =>  0:02
 :END:
 [2022-02-24 Thu 22:45]
 [[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*key attributes of entity types][key attributes of entity types]]
-** TODO map out purpose/principle/vision for all the projects.
-SCHEDULED: <2022-02-26 Sat>
-[2022-02-26 Sat 10:33]
-[[file:~/org/projects/sideprojects/pen.org::*write out business plan required for me to execute pen.el start up plan. what does a founder need to know before starting a company? how to estimate value of the business? what is the time horizon (can I start doing it before starting the summer)? what do I need to know because deciding on the amount of money that pen.el need to continue the project?][write out business plan required for me to execute pen.el start up plan. what does a founder need to know before starting a company? how to estimate value of the business? what is the time horizon (can I start doing it before starting the summer)? what do I need to know because deciding on the amount of money that pen.el need to continue the project?]]
+** TODO schedule time to check my eye and get a new lense of my glasses.
+SCHEDULED: <2022-03-03 Thu>
+:LOGBOOK:
+- State "TODO"       from "WAITING"    [2022-03-03 Thu 03:45]
+- State "WAITING"    from "TODO"       [2022-02-26 Sat 16:52] \\
+  check my student insurance whether it support or not.
+CLOCK: [2022-02-26 Sat 16:50]--[2022-02-26 Sat 16:51] =>  0:01
+:END:
+[2022-02-26 Sat 16:50]
+[[file:~/.doom.d/config.org::*Org Mode][Org Mode]]
+** TODO schedule time to get my teeth check up.
+SCHEDULED: <2022-03-03 Thu>
+:LOGBOOK:
+- State "TODO"       from "WAITING"    [2022-03-03 Thu 03:46]
+- State "WAITING"    from "TODO"       [2022-02-26 Sat 16:51] \\
+  check my student insurance whether it support or not.
+CLOCK: [2022-02-26 Sat 16:51]--[2022-02-26 Sat 16:52] =>  0:01
+:END:
+[2022-02-26 Sat 16:51]
+[[file:~/.doom.d/config.org::*Org Mode][Org Mode]]
+** TODO setup onedrive for my window. (symlink all my wsl2 content to it. (create a new folder in onedrive base dir named "wsl2." is there a better way?). Once I am done with this. use oneNote todo handwriting stuff + emacs for typing. :emacs:garun:
+SCHEDULED: <2022-03-03 Thu>
+:LOGBOOK:
+CLOCK: [2022-02-27 Sun 00:51]--[2022-02-27 Sun 00:55] =>  0:04
+:END:
+[2022-02-27 Sun 00:51]
 * Vehicle maintenance
 :PROPERTIES:
 :CATEGORY: Vehicle
 :END:
 ** TODO Register a car
-DEADLINE: <2022-03-19 Sat>
-*** TODO talk to the car tool guy about the price. (discount for the fixed date that I will get.) (toll back to my apartment, so I don't have to pay per day toll)
-SCHEDULED: <2022-02-26 Sat>
-*** TODO Go to DMV at 7am to get my driver licence. (The schedule date is set to remind that I need to start plan out my actions towards completing this tasks.)
 SCHEDULED: <2022-03-04 Fri>
+*** TODO talk to the car tow guy about the price. (discount for the fixed date that I will get.) (toll back to my apartment, so I don't have to pay per day toll)
+DEADLINE: <2022-03-03 Thu>
+[[https://www.google.com/search?q=tow+car+near+me+&rlz=1C1CHBF_enUS941US941&sxsrf=APq-WBv7VVWWPjKuX9b2RBvlV7dlfGCxNA%3A1646084711475&ei=Z0IdYu66HI6UwbkPqsy9wAI&ved=0ahUKEwiuiv2zr6P2AhUOSjABHSpmDygQ4dUDCA4&uact=5&oq=tow+car+near+me+&gs_lcp=Cgdnd3Mtd2l6EAMyCAgAEMkDEJECMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeOgcIIxDqAhAnOgQIIxAnOgUIABCRAjoRCC4QgAQQsQMQxwEQowIQ1AI6CwguEIAEEMcBEKMCOg4ILhCABBCxAxDHARCjAjoLCAAQgAQQsQMQgwE6DQguELEDEMcBEKMCEEM6CAgAELEDEJECOgoIABCxAxCDARBDOgQIABBDOhEILhCxAxCDARDHARDRAxCRAjoFCAAQgAQ6CwguEIAEEMcBEK8BOgQILhBDOgUIABCxAzoFCC4QgAQ6BAguECc6CAgAEIAEELEDOgcIABCxAxBDOgUIABCSAzoKCAAQsQMQyQMQQzoICAAQFhAKEB5KBAhBGABKBAhGGABQAFimE2CyFGgDcAF4AIABgAGIAbkKkgEEMTMuM5gBAKABAbABCsABAQ&sclient=gws-wiz][go through list of company here, and figure out which company has my car]]
+*** TODO Go to DMV at 7am to get my driver licence. (The schedule date is set to remind that I need to start plan out my actions towards completing this tasks.) Then ask staff for car certificate.
+DEADLINE: <2022-03-04 Fri>
 :LOGBOOK:
 CLOCK: [2022-02-21 Mon 23:23]--[2022-02-21 Mon 23:24] =>  0:01
 :END:
 [2022-02-21 Mon 23:23]
 [[file:~/org/todo.org::*Vehicle maintenance][Vehicle maintenance]]
-*** NEXT Before getting my car register, I need to do research on how to get a car certificate. after I figure this out, plan out the date and time in which I will get my car register.
 
 * Passwords
 :PROPERTIES:
@@ -177,13 +162,38 @@ CLOCK: [2022-02-21 Mon 23:23]--[2022-02-21 Mon 23:24] =>  0:01
 :LOGGING: DONE(!)
 :ARCHIVE:  %s_archive::* Habits
 :END:
-*** NEXT Always buy 1 gallon of water on the way to walking home. Make sure to drink 1 gallon of water daily.
+** TODO Always buy 1 gallon of water on the way to walking home. Make sure to drink 1 gallon of water daily.
 :LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-03-02 Wed 18:48]
 :END:
 [2022-02-26 Sat 16:57]
 [[file:~/org/todo.org::*Always buy 1 gallon of water on the way to walking home. Make sure to drink 1 gallon of water daily.][Always buy 1 gallon of water on the way to walking home. Make sure to drink 1 gallon of water daily.]]
-SCHEDULED: <2022-02-27 Sun .+1d/3d>
+SCHEDULED: <2022-03-03 Thu .+1d>
 :PROPERTIES:
 :STYLE: habit
 :REPEAT_TO_STATE: NEXT
 :END:
+** TODO check and clean up my email daily.
+:PROPERTIES:
+:LAST_REPEAT: [2022-03-02 Wed 17:43]
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-03-02 Wed 17:43]
+- State "DONE"       from "NEXT"       [2022-02-28 Mon 16:51]
+:END:
+[2022-02-28 Mon 16:40]
+[[file:~/org/todo.org::*Vehicle maintenance][Vehicle maintenance]]
+SCHEDULED: <2022-03-03 Thu .+1d>
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: NEXT
+:END:
+
+* Contacts
+** TODO call P'pun
+SCHEDULED: <2022-03-03 Thu 09:30-10:30>
+[2022-02-28 Mon 09:24]
+[[help:term-line-mode]]
+** TODO facetime my friend big from thailand
+[2022-03-03 Thu 03:39]
+[[file:~/org/refile.org::*searching with org-rifle][searching with org-rifle]]

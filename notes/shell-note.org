@@ -1,0 +1,6 @@
+#+TITLE: Shell Note
+
+* Zsh
+** Terminology
+*** Widget
+**** All actions in the editor are performed by ‘widgets’. A widget’s job is simply to perform some small action.

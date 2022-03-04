@@ -8,89 +8,196 @@
 ** Tasks
 *** Database
 **** note
-***** class is Wednesday and Friday 12.30 to 2.15. Classroom is at ???.
-SCHEDULED: <2022-03-02 Wed 12:30-14:15>
-***** class is Wednesday and Friday 12.30 to 2.15. Classroom is at ???.
-SCHEDULED: <2022-03-04 Fri 12:30-14:15>
-***** office hourse if Tue & Thu 4.00pm and 5.30pm.
-SCHEDULED: <2022-03-01 Tue 16:00-17:30 +1w>
-***** office hourse if Tue & Thu 4.00pm and 5.30pm.
-SCHEDULED: <2022-03-03 Thu 16:00-17:30 +1w>
+***** TODO class is Wednesday and Friday 12.30 to 2.15. Classroom is at ???.
+SCHEDULED: <2022-03-09 Wed 12:30-14:15 .+1w>
+:PROPERTIES:
+:REPEAT_TO_STATE: TODO
+:LAST_REPEAT: [2022-03-02 Wed 17:50]
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-03-02 Wed 17:50]
+:END:
+***** TODO class is Wednesday and Friday 12.30 to 2.15. Classroom is at ???.
+SCHEDULED: <2022-03-04 Fri 12:30-14:15 .+1w>
+:PROPERTIES:
+:REPEAT_TO_STATE: TODO
+:END:
+***** TODO office hourse if Tue & Thu 4.00pm and 5.30pm.
+SCHEDULED: <2022-03-09 Wed 16:00-17:30 .+1w>
+:PROPERTIES:
+:REPEAT_TO_STATE: TODO
+:LAST_REPEAT: [2022-03-02 Wed 17:50]
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-03-02 Wed 17:50]
+:END:
+***** TODO office hourse if Tue & Thu 4.00pm and 5.30pm.
+SCHEDULED: <2022-03-03 Thu 16:00-17:30 .+1w>
+:PROPERTIES:
+:REPEAT_TO_STATE: TODO
+:END:
 **** presentation
   - note
     - deadline: before the end of semester.
 ***** TODO Paper: [[https://www.semanticscholar.org/paper/Anatomy-of-a-Database-System-Hellerstein-Stonebraker/acf0f99dd4bbcbf7049b787e10cb538c620ed110][Anatomy of a Database system.]] (10 percent extra credit)
-**** TODO midterm exam
-DEADLINE: <2022-03-01 Tue>
-***** NEXT review for exam and make notes
-SCHEDULED: <2022-02-26 Sat>
+**** TODO publish all practice database homework on my site. (just the one that is informative)
+**** NEXT learn artist mode enough to use ditaa to draw graph.
+[2022-02-26 Sat 17:14]
+[[file:~/org/projects/sideprojects/pen.org::*write out business plan required for me to execute pen.el start up plan. what does a founder need to know before starting a company? how to estimate value of the business? what is the time horizon (can I start doing it before starting the summer)? what do I need to know because deciding on the amount of money that pen.el need to continue the project?][write out business plan required for me to execute pen.el start up plan. what does a founder need to know before starting a company? how to estimate value of the business? what is the time horizon (can I start doing it before starting the summer)? what do I need to know because deciding on the amount of money that pen.el need to continue the project?]]
+***** TODO figure out where ditaa.jar is installed (https://emacs.stackexchange.com/questions/20731/setting-up-ditaa-in-org-mode). Then follow norang setup. (http://doc.norang.ca/org-mode.html#Publishing)
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 17:35]--[2022-02-26 Sat 17:38] =>  0:03
+:END:
+[2022-02-26 Sat 17:35]
+[[file:~/org/projects/sideprojects/garun/garun.org::*Notes][Notes]]
+**** TODO setup sql IDE environemnt in emac, (see [[https://arjanvandergaag.nl/blog/using-emacs-as-a-database-client.html][Using emacs as a database client]])
+:LOGBOOK:
+CLOCK: [2022-02-28 Mon 08:41]--[2022-02-28 Mon 08:42] =>  0:01
+:END:
+[2022-02-28 Mon 08:41]
+[[file:~/.doom.d/init.el::;;crystal ; ruby at the speed of c]]
+**** TODO create database from the fundamental-of-database-systems book, and practice by query from it.
+[2022-03-01 Tue 00:00]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*Q16B:][Q16B:]]
 *** scala course
 :LOGBOOK:
 CLOCK: [2022-02-22 Tue 18:19]--[2022-02-22 Tue 18:20] =>  0:01
 :END:
 **** note
-***** class is 9.30am to 10.50am (Tuesday and Thrusday). classroom is at CM128.
-SCHEDULED: <2022-03-01 Tue 09:30-10:50 +1w>
-***** class is 9.30am to 10.50am (Tuesday and Thrusday). classroom is at CM128.
+***** TODO class is 9.30am to 10.50am (Tuesday and Thrusday). classroom is at CM128.
+SCHEDULED: <2022-03-08 Tue 09:30-10:50   +1w>
+:PROPERTIES:
+:REPEAT_TO_STATE: TODO
+:LAST_REPEAT: [2022-03-02 Wed 17:22]
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-03-02 Wed 17:22]
+:END:
+***** TODO class is 9.30am to 10.50am (Tuesday and Thrusday). classroom is at CM128.
 SCHEDULED: <2022-03-03 Thu 09:30-10:50 +1w>
-***** office hours: Tue & Thu 11 am to 12.30 am.
-SCHEDULED: <2022-03-01 Tue 11:00-00:30 +1w>
-***** office hours: Tue & Thu 11 am to 12.30 am.
+:PROPERTIES:
+:REPEAT_TO_STATE: TODO
+:END:
+:LOGBOOK:
+:END:
+***** TODO office hours: Tue & Thu 11 am to 12.30 am.
+SCHEDULED: <2022-03-08 Tue 11:00-00:30 +1w>
+:PROPERTIES:
+:LAST_REPEAT: [2022-03-02 Wed 17:22]
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-03-02 Wed 17:22]
+:END:
+***** TODO office hours: Tue & Thu 11 am to 12.30 am.
 SCHEDULED: <2022-03-03 Thu 11:00-00:30 +1w>
-**** TODO make notes on the scala class notes.
-***** NEXT make notes on chapter 3
-***** TODO make notes on chapter 4
-**** TODO midterm exam
-DEADLINE: <2022-03-01 Tue>
-***** NEXT review for exam and make notes
-SCHEDULED: <2022-02-27 Sun>
+:PROPERTIES:
+:REPEAT_TO_STATE: TODO
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-01 Tue 19:26]--[2022-03-01 Tue 19:27] =>  0:01
+:END:
+**** TODO Self Evaluation (Your Paper will not be graded without this) see [[https://canvas.fau.edu/courses/118725/assignments/1338228][here]].
+DEADLINE: <2022-05-06 Fri>
+**** TODO Peer Evaluation (Your Paper will not be graded without this), see [[https://canvas.fau.edu/courses/118725/assignments/1338227][here]].
+DEADLINE: <2022-05-06 Fri>
+**** TODO work on Homework 3.
+SCHEDULED: <2022-03-04 Fri> DEADLINE: <2022-03-15 Tue>
+**** TODO work on quiz 3.
+DEADLINE: <2022-03-09 Wed .+1w>
+:PROPERTIES:
+:NOBLOCKING: t
+:REPEAT_TO_STATE: TODO
+:LAST_REPEAT: [2022-03-02 Wed 16:37]
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-03-02 Wed 16:37]
+- State "DONE"       from "TODO"       [2022-03-02 Wed 16:26]
+:END:
+***** TODO
+**** TODO work on homework 4.
+DEADLINE: <2022-04-08 Fri>
+**** TODO final exam.
+DEADLINE: <2022-04-29 Fri>
+**** TODO make notes on all of the scala hw solution.
+[2022-03-01 Tue 19:38]
+[[file:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/hws/hw_1 solution.org::*p 4][p 4]]
 *** blockchain
 **** note
-***** blockchain class: schedule class is on wed and friday 2 - 3.30pm
-SCHEDULED: <2022-03-02 Wed 14:00-15:30 +1w>
-***** blockchain class: schedule class is on wed and friday 2 - 3.30pm
-SCHEDULED: <2022-03-04 Fri 14:00-15:30 +1w>
-***** blockchain class: office hours is 4.30pm - 530 pm wednesady, 11:00 am- 12.30 pm fridays.
-SCHEDULED: <2022-02-28 Mon +1w>
-***** blockchain class: office hours is 4.30pm - 530 pm wednesady, 11:00 am- 12.30 pm fridays.
-        SCHEDULED: <2022-02-25 Fri 11:00-12:30 +1w>
-
-**** NEXT work on quiz
-SCHEDULED: <2022-02-25 Fri>
-**** DONE Talk by Karolina Bergman: Concealing and Revealing Bitcoin Identities: (This will be expanded version of the ACM conference talk) ([[https://mail.google.com/mail/u/0/#inbox/FMfcgzGmvBqpBCDDvxtkGfbTtDGWRXfq][gmail link]])
-SCHEDULED: <2022-02-25 Fri 14:00>
-:LOGBOOK:
-CLOCK: [2022-02-23 Wed 14:16]--[2022-02-23 Wed 14:18] =>  0:02
+***** TODO blockchain class: schedule class is on wed and friday 2 - 3.30pm
+SCHEDULED: <2022-03-09 Wed 14:00-15:30 +1w>
+:PROPERTIES:
+:REPEAT_TO_STATE: TODO
+:LAST_REPEAT: [2022-03-03 Thu 03:48]
 :END:
-[2022-02-23 Wed 14:16]
-[[file:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/hw2/hw2.org::*Write in module Tree (file p3.scala) a polymorphic method with this signature: def toList\[A\](t: Tree\[A\]) : List\[A\] that returns a list (i.e. standard library List) with all elements from the leaves in tree t. Use the Tree.fold method given from the textbook. Hint: the List.++ method appends two lists.][Write in module Tree (file p3.scala) a polymorphic method with this signature: def toList[A](t: Tree[A]) : List[A] that returns a list (i.e. standard library List) with all elements from the leaves in tree t. Use the Tree.fold method given from the textbook. Hint: the List.++ method appends two lists.]]
-
-Time: Feb 25, 2020 2:00 pm.
-Physical Location:  EE-106 -- East Engineering Building (Speaker will join in via Zoom)
-Zoom:
-https://fau-edu.zoom.us/j/84395602086?pwd=KzZCL2x3aHJjQ1BWV05FUVJFZ01jUT09Meeting ID: 843 9560 2086
-Passcode: Trynotdo1
-
-Bitcoin remains the most widely used cryptocurrency. It has attracted users from tech enthusiasts to commercial investors to criminals  in no small part due to its reputation for anonymity. While not designed primarily for privacy, Bitcoin’s architecture contains several provisions that can be exploited by criminals to conduct illegal activity including money laundering and collecting payments from ransomware and scams. Since Bitcoin’s creation in 2008, various groups such as law enforcement, lawyers, criminals and privacy-focused Bitcoin users have been locked in a struggle between attempts to reveal hidden Bitcoin users’ identities and attempts to keep those identities concealed. This discussion covers the techniques used within Bitcoin to alternately reveal or conceal users’ identities.
-
-About the Speaker
-Karolina Berman received a B.S. in Global Security and Intelligence Studies at ERAU, and then, deciding that no modern security was complete without knowledge of cybersecurity, completed a M.S. in Cyber Intelligence and Security. She began studying blockchain during this time, focusing on Bitcoin opportunities and concerns for security. Her studies focused on the security challenges of Bitcoin, and applying Machine Learning to the information visible on the public blockchain to extract insights from data. She currently works as a data analyst at True Meridian LTD, performing research on upcoming information security challenges.
-**** TODO midterm exam
-DEADLINE: <2022-03-04 Fri>
-***** NEXT review for midterm and make notes.
-SCHEDULED: <2022-03-01 Tue>
-**** TODO schedule time to finish learning solidity tutorial on youtube, so I can start building blockchain project towards pen.el
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-03-03 Thu 03:48]
+:END:
+***** TODO blockchain class: schedule class is on wed and friday 2 - 3.30pm
+SCHEDULED: <2022-03-04 Fri 14:00-15:30 +1w>
+:PROPERTIES:
+:REPEAT_TO_STATE: TODO
+:END:
+***** TODO blockchain class: office hours is 4.30pm - 530 pm wednesady, 11:00 am- 12.30 pm fridays.
+SCHEDULED: <2022-03-09 Wed 16:30-17:30 +1w>
+:PROPERTIES:
+:LAST_REPEAT: [2022-03-02 Wed 17:20]
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-03-02 Wed 17:20]
+- State "DONE"       from "TODO"       [2022-03-02 Wed 17:19]
+:END:
+***** TODO blockchain class: office hours is 4.30pm - 530 pm wednesady, 11:00 am- 12.30 pm fridays.
+SCHEDULED: <2022-03-11 Fri 11:00-12:30 +1w>
+:PROPERTIES:
+:LAST_REPEAT: [2022-03-02 Wed 17:19]
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-03-02 Wed 17:19]
+- State "DONE"       from "TODO"       [2022-02-27 Sun 11:55]
+:END:
+**** habit
+***** read blockchain papers. 30 mins
+SCHEDULED: <2022-03-02 Wed .+1d/3d>
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: NEXT
+:END:
+***** TODO check canvas daily.
+:PROPERTIES:
+:LAST_REPEAT: [2022-03-02 Wed 17:44]
+:END:
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-03-02 Wed 17:44]
+:END:
+[2022-02-28 Mon 16:47]
+[[file:~/org/todo.org::*read this email https://mail.google.com/mail/u/0/#inbox/FMfcgzGmvBpdjhSVwkfgqdzcsTtkhgrL][read this email https://mail.google.com/mail/u/0/#inbox/FMfcgzGmvBpdjhSVwkfgqdzcsTtkhgrL]]
+SCHEDULED: <2022-03-03 Thu .+1d>
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: TODO
+:END:
+**** Tasks
+***** learning + reviewing class material
+:LOGBOOK:
+CLOCK: [2022-03-03 Thu 19:19]
+CLOCK: [2022-03-03 Thu 19:01]--[2022-03-03 Thu 19:19] =>  0:18
+CLOCK: [2022-03-03 Thu 18:59]--[2022-03-03 Thu 19:00] =>  0:01
+CLOCK: [2022-03-03 Thu 18:49]--[2022-03-03 Thu 18:58] =>  0:09
+CLOCK: [2022-03-03 Thu 18:33]--[2022-03-03 Thu 18:43] =>  0:10
+:END:
+***** TODO graduate students: must pick a presentation topics, and same or separate paper proposal.
+DEADLINE: <2022-03-23 Wed>
+****** TODO pick presentation topics that is the same as paper proposal
+SCHEDULED: <2022-03-04 Fri>
+******* TODO select blockchain topics that is related to pen.el projects. (scalability?) (proof-of-n?)
+******** what is the topics of blockchain that I can pick from?
+***** TODO work on quiz 3
+DEADLINE: <2022-03-02 Wed>
+***** TODO schedule time to finish learning solidity tutorial on youtube, so I can start building blockchain project towards pen.el
 SCHEDULED: <2022-03-04 Fri>
 [2022-02-24 Thu 23:14]
 [[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*3.4.1 Relationship types, Sets, and Instances][3.4.1 Relationship types, Sets, and Instances]]
-*** NEXT go through all notification of all the classes and organized what I need to do, prepare for the rest of the semester.
-SCHEDULED: <2022-02-25 Fri>
-*** TODO add whatsapp for blockchain class.
-SCHEDULED: <2022-02-26 Sat>
-[2022-02-24 Thu 16:21]
-[[file:~/org/school.org::*state the strongest normal form that R satisfies (e.g. 1NF 2NF, 3NF, BCNF)][state the strongest normal form that R satisfies (e.g. 1NF 2NF, 3NF, BCNF)]]
 *** TODO install erd ([[https://github.com/BurntSushi/erd][here]]) to use it for ER diagram stuff.
-SCHEDULED: <2022-02-26 Sat>
 :LOGBOOK:
 CLOCK: [2022-02-24 Thu 18:07]--[2022-02-24 Thu 18:10] =>  0:03
 :END:
@@ -99,31 +206,3 @@ CLOCK: [2022-02-24 Thu 18:07]--[2022-02-24 Thu 18:10] =>  0:03
 *** TODO set up SQL ide and er diagram in emacs.
 [2022-02-24 Thu 22:56]
 [[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*domain defines all possible values for attribute.][domain defines all possible values for attribute.]]
-*** DONE find out time of all my classes and put them in to emacs as recurring tasks
-:LOGBOOK:
-CLOCK: [2022-02-24 Thu 23:14]--[2022-02-24 Thu 23:15] =>  0:01
-:END:
-[2022-02-24 Thu 23:14]
-[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*]]
-*** TODO make notes on canvas notification, and clear all canvas notification to be 0.
-SCHEDULED: <2022-02-26 Sat>
-[2022-02-24 Thu 23:31]
-[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*]]
-*** TODO create notes for all classes up until before midterm.
-:LOGBOOK:
-CLOCK: [2022-02-25 Fri 21:02]--[2022-02-25 Fri 21:03] =>  0:01
-:END:
-[2022-02-25 Fri 21:02]
-[[file:~/org/notes/database-note.org::*Terminologies][Terminologies]]
-*** TODO assign the rest of the school homework to schedule. (goal is to finish all homework + notes as soon as possible)
-:LOGBOOK:
-CLOCK: [2022-02-26 Sat 10:17]--[2022-02-26 Sat 10:18] =>  0:01
-:END:
-[2022-02-26 Sat 10:17]
-[[file:~/org/refile.org::*create notes for all classes.][create notes for all classes.]]
-*** NEXT clarify,list out tasks I need to do to review of each exam midterm subject. Then assign NEXT to it.
-:LOGBOOK:
-CLOCK: [2022-02-26 Sat 10:43]--[2022-02-26 Sat 10:44] =>  0:01
-:END:
-[2022-02-26 Sat 10:43]
-[[file:~/org/notes/emacs/packages/org-agenda-note.org::*Key binding][Key binding]]

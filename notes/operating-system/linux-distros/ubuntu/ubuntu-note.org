@@ -41,7 +41,11 @@ Errors were encountered while processing:
  /var/cache/apt/archives/emacs-common_1%3a26.3+1-1ubuntu2_all.deb
 E: Sub-process /usr/bin/dpkg returned an error code (1)
 #+END_SRC
-
+* Ubuntu Filesystem Layout
+* FAQs
+** where is apt-get installed packages?
+- ref
+  - [[https://linuxhint.com/apt-get-install-packages-to/][where does apt-get install packges to?]]
 
 * Footnotes
 [fn:2] https://askubuntu.com/questions/1062171/dpkg-deb-error-paste-subprocess-was-killed-by-signal-broken-pipe

@@ -1,0 +1,90 @@
+#+TITLE: Latex Note
+
+* Using latex in org mode
+** creating simple latex in org mode
+- ref
+  - https://opensource.com/article/18/4/how-create-latex-documents-emacs
+#+BEGIN_EXPORT org
+,#+TITLE: First
+,#+DATE: <2022-03-03 Thu>
+,#+AUTHOR: Anak Wannaphaschaiyong
+,#+EMAIL: awannaphasch2016@fau.edu
+,#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+,#+OPTIONS: author:t c:nil creator:comment d:(not "LOGBOOK") date:t
+,#+OPTIONS: e:t email:nil f:t inline:t num:t p:nil pri:nil stat:t
+,#+OPTIONS: tags:t tasks:t tex:t timestamp:t toc:t todo:t |:t
+,#+CREATOR: Emacs 25.3.1 (Org mode 8.2.10)
+,#+DESCRIPTION:
+,#+EXCLUDE_TAGS: noexport
+,#+KEYWORDS:
+,#+LANGUAGE: en
+,#+SELECT_TAGS: export
+,* Introduction
+
+  \paragraph{}
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem
+  nisi, tincidunt tempus sem nec, elementum feugiat ipsum. Nulla in
+  diam libero. Nunc tristique ex a nibh egestas sollicitudin.
+
+  \paragraph{}
+  Mauris efficitur vitae ex id egestas. Vestibulum ligula felis,
+  pulvinar a posuere id, luctus vitae leo. Sed ac imperdiet orci, non
+  elementum leo. Nullam molestie congue placerat. Phasellus tempor et
+  libero maximus commodo.
+#+END_EXPORT
+** creating latex beamer in org mode
+- ref
+  - https://opensource.com/article/18/4/how-create-latex-documents-emacs
+#+BEGIN_SRC org
+,#+TITLE: LaTeX Beamer presentation
+,#+DATE: \today
+,#+AUTHOR: Sachin Patil
+,#+EMAIL: psachin@redhat.com
+,#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+,#+OPTIONS: author:t c:nil creator:comment d:(not "LOGBOOK") date:t
+,#+OPTIONS: e:t email:nil f:t inline:t num:t p:nil pri:nil stat:t
+,#+OPTIONS: tags:t tasks:t tex:t timestamp:t toc:nil todo:t |:t
+,#+CREATOR: Emacs 25.3.1 (Org mode 8.2.10)
+,#+DESCRIPTION:
+,#+EXCLUDE_TAGS: noexport
+,#+KEYWORDS:
+,#+LANGUAGE: en
+,#+SELECT_TAGS: export
+,#+LATEX_CLASS: beamer
+,#+BEAMER_THEME: Frankfurt
+,#+BEAMER_INNER_THEME: rounded
+
+
+,* Introduction
+,*** Programming
+    - Python
+    - Ruby
+
+,*** Paragraph one
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing
+    elit. Cras lorem nisi, tincidunt tempus sem nec, elementum feugiat
+    ipsum. Nulla in diam libero. Nunc tristique ex a nibh egestas
+    sollicitudin.
+
+,*** Paragraph two
+
+    Mauris efficitur vitae ex id egestas. Vestibulum
+    ligula felis, pulvinar a posuere id, luctus vitae leo. Sed ac
+    imperdiet orci, non elementum leo. Nullam molestie congue
+    placerat. Phasellus tempor et libero maximus commodo.
+
+,* Thanks
+,*** Links
+    - Link one
+    - Link two
+#+END_SRC
+* Tex Distribution system
+** TeX Live
+TeX Live is a free distribution of the TeX typesetting system that includes many TeX-related programs, fonts, and macros pacakges, including LaTeX.
+* Package Manager
+** tlmgr (the native TeX Live Manager)
+tlmgr is a native TeX Live manager.
+* FAQs
+** how to compile latex?
+~pdflatex <path to .tex file>~

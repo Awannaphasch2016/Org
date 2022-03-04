@@ -1,10 +1,64 @@
 #+TITLE: Org Mode Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
 
 * Start here
 ** [[file:~/org/notes/emacs/packages/org-babel.org::*\[\[http://www.howardism.org/Technical/Emacs/literate-programming-tutorial.html\]\[Introduction to literate programming with org-mode and org-babel by howard\]\]][Introduction to literate programming with org-mode and org-babel by howard]]
 It basically explains all the usecase of org-babel blocks. very useful.
+* Blog
+** How to set local variable for a specific mode? :latex:config:
+:PROPERTIES:
+:EXPORT_FILE_NAME: How to set local variable for a specific mode?
+:END:
 
+This type of tutorial/question is best to present with an example.
+Given that I want to set =compile-command= variable for LaTex mode which applies to all buffer of this mode.
 
+#+BEGIN_SRC emacs-lisp
+(defun set-compile-command-default-in-LaTeX-mode ()
+  (set (make-local-variable 'compile-command) ;; create local variable specific to a current buffer
+       (format "" (buffer-file-name))))
+
+(add-hook 'LaTeX-mode-hook
+          'set-compile-command-default-in-LaTeX-mode)
+#+END_SRC
+
+** how to set recurring todo tasks with org mode in emacs?
+:PROPERTIES:
+:EXPORT_FILE_NAME: how to set recurring todo tasks with org mode in emacs?
+:END:
+First thing is to understand that behavior of a header block in org mode is dictated by properties.
+
+I want to set repeating task to have the following functions
+- when I change from TODO state to DONE state, a header block will log "state changes" with time stamp.
+
+That is all the requirement I need for recurring tasks.
+
+This can be done by setting the following
+- set =:REPEAT_TO_STATE:= property under the header with =org-set-property=
+- set either =DEADLINE= (=org-deadline=) or =SCHEDULE= (=org-schedule=) with recurring syntax [fn:1] , for example, adding =.+1d/+3d= to timestamp represent recurring every 1 day or 3 day. (it will be randomly assigned by org mode.).
+
+first you must set header as followed
+#+BEGIN_SRC org
+,* TODO work on quiz 3
+DEADLINE: <2022-03-03 Thu  .+1w>
+:PROPERTIES:
+:REPEAT_TO_STATE: TODO
+:LAST_REPEAT: [2022-03-02 Wed 16:26]
+:END:
+#+END_SRC
+
+Then when you change from TODO to DONE state, header will log "state change" in a =:LOGBOOK:= property, and DONE state will automatically change to TODO. (so you will not see DONE state appears.). Deadline is then reset to the next date and time.
+#+BEGIN_SRC org
+,* TODO work on quiz 3
+DEADLINE: <2022-03-03 Thu .+1w>
+:PROPERTIES:
+:REPEAT_TO_STATE: TODO
+:LAST_REPEAT: [2022-03-02 Wed 16:26]
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-03-02 Wed 16:26]
+:END:
+#+END_SRC
 * Key binding
 ** Nagivation key binding
 | commands              | key | doom key  | custom key | description                                                   |
@@ -74,8 +128,18 @@ variables for a source block can be set in various ways
 Miscellaneous Input/Output
 of course, you have to have a collection of parameters that don’t fit elsewhere
 #+END_QUOTE
+* Support of other languages
+** latex
+*** key binding
+| commands                  | key | doom keys | custom keys | descriptions                                                 |
+| org-toggle-latex-fragment |     |           |             | c-u twice show all as previws, c-u once remove all previews. |
+*** latex fragments, see [[https://orgmode.org/manual/LaTeX-fragments.html][here]].
 * FAQs
 ** categories vs tags.
 - ref
   - https://karl-voit.at/2019/09/25/categories-versus-tags/
 I have decided to not use categories until it clear to me why I need it.
+
+* Footnotes
+
+[fn:1] [[https://orgmode.org/manual/Repeated-tasks.html][8.3.2 repeated tasks]]

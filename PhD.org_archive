@@ -64,3 +64,14 @@ CLOCK: [2022-02-22 Tue 09:53]--[2022-02-22 Tue 09:54] =>  0:01
 CLOCK: [2022-02-22 Tue 09:52]--[2022-02-22 Tue 09:53] =>  0:01
 :END:
 **** make sure that the model with fixed beginging train on the training data and test on the evaluation set.
+
+** DONE run a models as discussed on <2022-02-24 Thu> meeting.
+CLOSED: [2022-02-28 Mon 17:25] DEADLINE: <2022-02-27 Sun>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-02-28 Mon 17:25
+:ARCHIVE_FILE: ~/org/PhD.org
+:ARCHIVE_OLPATH: PhD/Tasks
+:ARCHIVE_CATEGORY: PhD
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: @PhD WORK
+:END:

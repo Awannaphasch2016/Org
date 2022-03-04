@@ -1,6 +1,6 @@
 #+TITLE: Scala Note
 
-* Basic and Fundamental
+* Basic and Fundamenta
 ** Nil
 Nill is equalent of List()
 #+BEGIN_SRC scala
@@ -432,7 +432,9 @@ z = x - y
 println(m3_tuple) // Some((1, 2, -1)) , with a tuple inside
 }
 #+END_SRC
-
+** function composition
+*** function.compose
+*** function.andThen
 * Scala Specification
 ** [[file:books/scal-puzzlers.org::*This puzzle make use of "The Scala Language Specification, Section 5.1.1" which produce adapting argument lists behavior.][This puzzle make use of "The Scala Language Specification, Section 5.1.1" which produce adapting argument lists behavior.]]
 * Scala Compiler
@@ -441,6 +443,67 @@ println(m3_tuple) // Some((1, 2, -1)) , with a tuple inside
 ***  The Scala compiler's -Xlint option enables recommended additional warnings that you can use to flag suspicious language usage.
 * Examples
 ** implement sum with recursion
+*** tail-recursion
+**** closure property
+#+BEGIN_SRC scala :results output
+object p2 {
+  def main(args: Array[String]): Unit = {
+    def countWithProperty[T](xs: List[T], p: T => Boolean): Int = {
+      def sum(ys: List[T], y: Int, p: T => Boolean): Int = {
+
+        if (ys == Nil) {
+          y
+        } else if (p(ys.head)) {
+          // println(ys.head)
+          // countWithProperty(ys.tail, p) + 1
+          sum(ys.tail, y + 1, p)
+        } else {
+          sum(ys.tail, y, p)
+        }
+
+      }
+      sum(xs, 0, p)
+    }
+
+    val luckyNumbers = List(4, 8, 15, 16, 23, 42)
+    val evenCount = countWithProperty(luckyNumbers, (x: Int) => x % 2 == 0)
+    println(evenCount)
+  }
+
+}
+#+END_SRC
+
+#+RESULTS:
+: 4
+: 8
+: 16
+: 42
+: 4
+*** non-tail recusion
+**** ordinary recursion
+#+BEGIN_SRC scala
+object p2 {
+  def main(args: Array[String]): Unit = {
+
+    def countWithProperty[T](xs: List[T], p: T => Boolean): Int = {
+      if (xs == Nil) {
+        0
+      } else if (p(xs.head)) {
+        countWithProperty(xs.tail, p) + 1
+      } else {
+        countWithProperty(xs.tail, p)
+      }
+
+    }
+
+    val luckyNumbers = List(4, 8, 15, 16, 23, 42)
+    val evenCount = countWithProperty(luckyNumbers, (x: Int) => x % 2 == 0)
+    println(evenCount)
+  }
+
+}
+#+END_SRC
+**** match pattern
 #+BEGIN_SRC scala
 object ob{
   def sum(list: List[Int]): Int = list match {
@@ -453,6 +516,7 @@ object ob{
   }
 }
 #+END_SRC
+
 * Debugging
 ** getting stack trace of compiled programs after program finish running, see [[file:books/learning-fp-in-scala.org::*Manually dumping the stack with the sum examples][here]].
 * Help
