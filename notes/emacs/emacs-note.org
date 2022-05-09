@@ -1,5 +1,206 @@
 #+TITLE: Emacs Note
+#+filetags: emacs
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
 
+* Blogs :blog:
+** Building fundamental in Emacs: How to customize key binding in vanilla Emacs?
+:PROPERTIES:
+:EXPORT_FILE_NAME: Building fundamental in Emacs: How to customize key binding in vanilla Emacs?
+:ID:       fd1953d6-0d3a-458b-a7d5-2471960f885a
+:END:
+
+When I first get into Emacs, I was a vim user before, so I picked up Doom Emacs without experience with vanilla Emacs. Transition has been smooth so far, but because I never has experience with Vanilla Emacs before when I encounter a bug in Doom Emacs. I always have to first figure out if it is Doom Emacs problem or Emacs problems. Because of this, I put out a new blog series to help me build a stronger foundation of Vanilla Emacs.
+
+
+I started of the series with a topic that irritate me quite often, key binding.
+
+My goal of this blog is as followed
+1. Understand priority of keymaps
+2. Understand stand enough to distinguish vanilla Emacs problem from Doom problem.
+
+This is a summarize of =Emacs Internal Manual under Emacs topic on chapter 49.3 Key Binding Chapter=.
+
+*** Keymaps
+Most modes have their own key binding which can overwrite your custom keybinding. For this reasons Emacs has reserve small number of keys to create a "safe space" for custom or build-in key binding example of these are 'C-c <a char>'', 'F5' - 'F9' keys.
+
+Key sequence and its command function are recorded in Emacs as a data structure called "keymaps".
+
+Keymap's value consist of =sequence of key binding= and =command= where =sequence of key binding= can either be a key or a =chain of keymaps=, more in "Visualize how a chain of keymaps works" section. In the other word, a keymap is a map between presentation of =key sequence= to a command.
+
+Note that since =keymaps= is simply just a data structure. A mode can define its own =keymaps= such as =org-mode-map= etc.
+
+To inspect current keymaps availble in a buffer, you can use =C-h b=.
+
+Keymaps accepts values from variety of keys including '<Home>' and mouse.
+
+*** Prefix
+Emacs interprets one keymap at a time, however, a "chain" of keymap commands is also accepted. A "chain" of keymap  contains "prefix". "prefix" is a keymap that map to other keymaps.
+
+Some keymap (not all) have symbols representation, for example, symbol of 'C-x' is 'Control-X-prefix'.
+
+*** Local Keymaps
+:PROPERTIES:
+:ID:       2da596bf-c2f5-4e73-b364-cf79664d281f
+:END:
+local keymaps can have their own prefix key.
+
+It is important to note that global prefix is ALWAYS vulnerable to be overwritten by higher priority keys. Still, there are keys that are reserved for the user. (From what I have read, it is unclear which keys are reserved.)
+
+When local keymap is defined, global keymaps and local keymaps are chain together.
+To clarify, given that we have "C-x C-z h", "C-x" is global prefix and "C-z" is local prefix. instead of one "C-x C-z" prefix.
+*** Visualize how a chain of keymaps works?
+
+This is how I think of it visually. It maybe incorrect or imprecise, but, at least, it helps me visualize in my head.
+
+Says, we have a keymap =a,b,...,n= that map to =foo-command=.
+Recall that a keymap is a map between presentation of =key sequence= to a command.
+When sequence of key is pressed, a chain of keymap will be evaluated as followed.
+#+BEGIN_SRC
+(key a, keymap b)-> (key b, keymap c) -> ... -> (key n, foo-commands)
+#+END_SRC
+
+*** Key precedence (keymap lookup order)
+:PROPERTIES:
+:ID:       71b4d005-751c-47c7-aef6-268ab7fd98c4
+:END:
+local keymaps can be defined in 3 different places.
+1. Major mode
+2. Minor mode
+3. area of text within a buffer.
+
+To be more precise, in term of commands, key precedence (keymap lookup order) is as followed. Emacs look up keymap from top to bottom of the list.
+1. ~overriding-terminal-local-map~ for terminal-specific key bind
+2. ~overriding-local-map~
+3. ~keymap char property at point~ keymaps for the current character. Yasnippet keymaps are in this category.
+4. ~emulation-mode-map-alists~. Apparently, its more multi-mode keymap management. I am not sure what this means, but if i have to guess it is used in modes that have its known key precedence or other complexity that its key binding system brings. Evil mode keymap falls into this category.
+5. ~minor-mode-overriding-map-alise~
+6. ~minor-mode-map-alist~
+7. ~keymap text property at point~
+8. ~current-local-map~
+9. ~current-global-map~
+
+In [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Searching-Keymaps.html][Emacs Manual chapter 22.8 Searching the Active Keymaps]], pseudo-Lisp summary of how Emacs searches for active keymaps are mentioned which matched up with key precendence mentioned previously.
+#+BEGIN_SRC emacs-lisp
+(or (if overriding-terminal-local-map
+        (find-in overriding-terminal-local-map))
+    (if overriding-local-map
+        (find-in overriding-local-map)
+      (or (find-in (get-char-property (point) 'keymap))
+          (find-in-any emulation-mode-map-alists)
+          (find-in-any minor-mode-overriding-map-alist)
+          (find-in-any minor-mode-map-alist)
+          (if (get-text-property (point) 'local-map)
+              (find-in (get-char-property (point) 'local-map))
+            (find-in (current-local-map)))))
+    (find-in (current-global-map)))
+#+END_SRC
+
+The search for keymap is finalized when a command is found. If a symbol is reached, emacs will replace the input key sequence with the symbol's value and restart the search.
+
+**** Temporarily elevate keymap priority.
+=transcient-map= is used to temporarily elevate a keymap to the highest precedence. This is done by calling =overriding-terminal-local-map=. (The highest keymap precedence)
+
+*** Modifying Keybinding
+Note that, Emacs always treats ‘C-A’ as ‘C-a’, ‘C-B’ as ‘C-b’, and so forth. This is because, in non-graphical environment,  'A' is the same as 'a.' To let Emacs know about the difference, we can pass in 'C-S-a' where S is <Shift>.
+
+You have to think in the point of view of how computer compile information.
+
+Emacs also accpets uncommon including <Super>, <Hyper>, and <Alt>, these are represented as 's-', 'H-', and 'A-'. Without these keys on the keyboard, you can still activate the key with 'C-x @ s', 'C-x @ h', and 'C-x @ a', respectively.
+
+There are more valid keys. I only provide few examples.
+
+The goal of modifying a keymap is to either modify =sequence of key binding= or =command= of a keymap.
+**** Changing Keybinding for current Emacs session.
+One can change keybinding for CURRENT Emacs session with the following options.
+#+BEGIN_SRC
+‘M-x global-set-key <RET> KEY CMD <RET>’
+     Define KEY globally to run CMD.
+‘M-x local-set-key <RET> KEY CMD <RET>’
+     Define KEY locally (in the major mode now in effect) to run CMD.
+‘M-x global-unset-key <RET> KEY’
+     Make KEY undefined in the global map.
+‘M-x local-unset-key <RET> KEY’
+     Make KEY undefined locally (in the major mode now in effect).
+#+END_SRC
+**** Changing Keybinding permanently.
+One can change keybinding permanently using the following commands.
+#+BEGIN_SRC emacs-lisp
+(global-set-key (kbd "C-c y") 'clipboard-yank)
+(global-set-key (kbd "C-M-q") 'query-replace)
+(global-set-key (kbd "<f5>") 'flyspell-mode)
+(global-set-key (kbd "C-<f5>") 'display-line-numbers-mode)
+(global-set-key (kbd "C-<right>") 'forward-sentence)
+(global-set-key (kbd "<mouse-2>") 'mouse-save-then-kill)
+#+END_SRC
+
+One can also delay local keymap to be evaluated by using hook as followed.
+#+BEGIN_SRC emacs-lisp
+(add-hook 'texinfo-mode-hook
+    (lambda ()
+        (define-key texinfo-mode-map "\C-cp"
+                    'backward-paragraph)
+        (define-key texinfo-mode-map "\C-cn"
+                    'forward-paragraph)))
+        (define-key texinfo-mode-map "\C-c\C-xx" nil)
+#+END_SRC
+
+**** Rebinding with Mouse event
+:PROPERTIES:
+:ID:       30c68903-9c18-43ea-b937-a9ea08665758
+:END:
+valid key includes
+#+BEGIN_SRC
+[mouse-N] where 1 is the leftmost mouse button.
+[drag-mouse-N]
+[down-mouse-N]
+[double-mouse-N]
+#+END_SRC
+
+keyboard prefix precedes mouse prefix.
+
+Keybinding for clicking on frame has the following format [frame-type mouse-N]
+frame-type includes
+#+BEGIN_SRC
+‘mode-line’
+     The mouse was in the mode line of a window.
+‘vertical-line’
+     The mouse was in the vertical line separating side-by-side windows.
+     (If you use scroll bars, they appear in place of these vertical
+     lines.)
+‘vertical-scroll-bar’
+     The mouse was in a vertical scroll bar.  (This is the only kind of
+     scroll bar Emacs currently supports.)
+‘menu-bar’
+     The mouse was in the menu bar.
+‘tab-bar’
+     The mouse was in a tab bar.
+‘tab-line’
+     The mouse was in a tab line.
+‘header-line’
+     The mouse was in a header line.
+#+END_SRC
+**** Disabling Commands
+disable Commands silently
+#+BEGIN_SRC emacs-lisp
+(put 'delete-region 'disabled
+    "It's better to use `kill-region' instead.\n")
+#+END_SRC
+disable commands with message
+#+BEGIN_SRC emacs-lisp
+(put 'delete-region 'disabled
+    "It's better to use `kill-region' instead.\n")
+#+END_SRC
+**** How to load custom key binding, so it is not overwritten by other keymaps?
+You might imagine to simply have one of these modifier keymap function in your init.el and keymaps will be rebind.
+
+Not so fast.
+
+Sometimes, major mode or minor mode may define their keybinding using mode-hook. In this case, keymaps that are defined later can override your init.el configuration. In the cases as this, you have to dig into thier souce code to understand when you want your new keybinding to be evaluated.
+
+*** Conclusion
+This blog summarizes =Emacs Internal Manual under Emacs topic on chapter 49.3 Key Binding Chapter=. We have learn that keymap priority based on context from highest to lowest: region in buffer, minor mode, and major mode.
+
+Lastly, I have learned that vanilla Emacs doesn't exc. I can't say what exactly.
 * Map of Contents (MOCs)
 ** ~+eval/region~ and ~+eval/buffer~ doesn't send results from overlays to ~Message~ buffer, but ~eros-eval-last-sexp~ does.
 *** Background (information and description of goal)
@@ -40,31 +241,37 @@ example
 | 42 | foo | foo | bar |
 
 ** Lexical binding vs dynamic binding
+:PROPERTIES:
+:ID:       e15c4443-c2a2-4fff-b9f1-b83ac25de8d6
+:END:
 - ref
   - [[https://www.emacswiki.org/emacs/DynamicBindingVsLexicalBinding][dynamic binding vs lexical binding]]
 lexical binding (static binding) and dynamic binding refer to how variables are looked up by their names.
 
-*** example
-
+The main different between lexical bound and dynamic bound is that with dynamic bound all value that has been binding since the program started always exists while program is being executed.
 #+BEGIN_SRC emacs-lisp
 (let ((a 1))                            ; binding (1)
     (let ((f (lambda () (print a))))
     (let ((a 2))                        ; binding (2)
         (funcall f))))
 #+END_SRC
+=lexical bound= looks up binding in the lexical environemnt while =dynamic bound= looks up binding in the dynamic environment.
+
+In the other word, in dynamic environment, all of the bindings since the started of the program are not destroyed as long as program is still running. In constrast to lexical environment, bindings are only defined within the scope that it is first defined.
+
 A name that is lexically bound is looked up only in bindings in the lexical environment of the name  that is, in bindings that enclose the name in the source code. So if “a” is lexically bound, the code above prints “1”, because only binding (1) is in the lexical environment. When there are multiple bindings in the lexical environment, the innermost one is used.
 
 A name that is dynamically bound is looked up only in bindings in the dynamic environment of the name  that is, in all bindings which have been created since the program began and which have not yet been destroyed. When there are multiple bindings in the dynamic environment, the most recently created one is used. So if “a” is dynamically bound, the code above prints “2” because both binding (1) and binding (2) have been created by the time “a” is evaluated, but binding (2) was created more recently.
 ** defcustom
-
 * Help sections and related info
 ** looking up documentation, see [[https://discourse.doomemacs.org/t/how-to-debug-issues/55#looking-up-documentation-3][here]].
 
-| commands                     | key | doom keys | custom keys | descriptions |
-| helpful-function -> add-hook |     |           |             |              |
-| helpful-variable             |     | spc-h-v   |             |              |
-| helpful-key                  |     | spc-h-k   |             |              |
-| doom/help-custom-variable    |     | spc-h-V   |             |              |
+| commands                     | key     | doom keys | custom keys | descriptions          |
+| helpful-function -> add-hook |         |           |             |                       |
+| helpful-variable             |         | spc-h-v   |             |                       |
+| helpful-key                  |         | spc-h-k   |             |                       |
+| doom/help-custom-variable    |         | spc-h-V   |             |                       |
+|                              | C-h C-h |           |             | show all describe-xxx |
 
 seaching doom specific documentation
 
@@ -73,10 +280,23 @@ seaching doom specific documentation
 | doom/help-search-heading |     | spc-h-d-s |             |              |
 
 * Notes for Users (How to use things?)
+** General key binding
+:PROPERTIES:
+:ID:       6235a579-abfd-4f76-9e5b-82983a1c8d9d
+:END:
+| commands               | key             | doom keys | custom keys | descriptions               |
+| repeat                 | C-x z           |           |             | repeat last emacs commands |
+| repeat-complex-command | C-x <Esc> <Esc> |           |             |                            |
 ** Built-in Packages and modes
+:PROPERTIES:
+:ID:       8a81f3e7-ccf4-4f05-b419-61c7dfcc55cc
+:END:
 *** Packages
 **** Imenu
 *****  How does Imenu function works?
+:PROPERTIES:
+:ID:       9dcaf4a1-4cd1-456a-b8e6-4ecb6c23bc6a
+:END:
 ~imenu~ function when called when called will jump to a place in the buffer chosen using either a buffer menu or mouse menu.
 
 #+BEGIN_SRC emacs-lisp
@@ -217,7 +437,14 @@ Cache results of parsing source code files using Semantic Database (SemanticDB)
 Parsing large files can take several seconds or more. By default, Semantic automatically caches parse trees by saving them in your .emacs.d directory. When you revisit a previously-parsed file, the parse tree is automatically reloaded from this cache, to save time. See [[https://www.gnu.org/software/emacs/manual/html_node/semantic/SemanticDB.html][SemanticDB]].
 
 By default, SemanticDB is enabled together with Semantic mode. To disable it, remove it from semantic-default-submodes (see [[https://www.gnu.org/software/emacs/manual/html_node/semantic/Semantic-mode.html][Semantic mode]]). You can also enable or disable SemanticDB with M-x global-semanticdb-minor-mode.
+**** Xref
+- ref
+  - [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Xref.html][28.4 Find Identifier References]]
+Xref is used to display defintion of symbols and their references.
 
+A mode's backend can use Xref in many ways. For example,
+1. Some majors modes may search through loaded packages or by searching through documentation string. Disadvantage of this approach is that Xref can only find symbols that has been loaded.
+2. Another approach is to scan throught relevant files and build database of symbols references. etags is one of the built-in example. Disadvantage of this approach is the reference tables need to be kept upto date.
 *** Modes
 **** edebug mode
 - ref
@@ -403,6 +630,9 @@ ref: [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Choosing-Modes.
 
 *** Windows
 **** Key-binding
+:PROPERTIES:
+:ID:       bd1a31c8-a47a-43aa-8a9a-3609a8e481e5
+:END:
 I figure its best to only list the one I use often.
 
 Note: =prior= key is =pageup=
@@ -426,8 +656,8 @@ Note: =prior= key is =pageup=
 | +evil/window-move-left              |            | spc-w-L   |            |                            |
 | +evil/window-move-down              |            | spc-w-J   |            |                            |
 | +evil/window-move-right             |            | spc-w-R   |            |                            |
-| ace-window                          |            |           |            | jump to window by number   |
-| scroll-other-window                 | M-prior    |           |            |                            |
+| ace-window                          |            | spc-w-a   |            | jump to window by number   |
+| scroll-other-window                 | C-M-S-v    |           |            |                            |
 | scroll-other-window-down            | C-M-v      |           |            |                            |
 | find-file-other-window              |            |           | spc-w-f    | other file in other window |
 ** Things related to managing and loading packages
@@ -494,6 +724,51 @@ Return a predicate that returns non-nil if all PREDS do so.
 
 * Notes for Developers (How to do and fix things)
 ** Useful funcstions and customized function
+*** Match Data
+- ref
+  - https://www.gnu.org/software/emacs/manual/html_node/elisp/Simple-Match-Data.html
+**** match string of input
+#+BEGIN_SRC emacs-lisp
+(string-match "\\(qu\\)\\(ick\\)"
+              "The quick fox jumped quickly.")
+              ;0123456789
+     ⇒ 4
+
+(match-string 0 "The quick fox jumped quickly.")
+     ⇒ "quick"
+(match-string 1 "The quick fox jumped quickly.")
+     ⇒ "qu"
+(match-string 2 "The quick fox jumped quickly.")
+     ⇒ "ick"
+
+(match-beginning 1)       ; The beginning of the match
+     ⇒ 4                 ;   with ‘qu’ is at index 4.
+
+(match-beginning 2)       ; The beginning of the match
+     ⇒ 6                 ;   with ‘ick’ is at index 6.
+
+(match-end 1)             ; The end of the match
+     ⇒ 6                 ;   with ‘qu’ is at index 6.
+
+(match-end 2)             ; The end of the match
+     ⇒ 9                 ;   with ‘ick’ is at index 9.
+#+END_SRC
+
+**** match string in a buffer
+***** re-search-forward match string in buffer and move point to the match
+#+BEGIN_SRC emacs-lisp
+(with-temp-buffer
+  (insert "# Intro\n"
+          "# Usage\n"
+          "# License\n")
+  (goto-char (point-min))
+  (let ((matches '()))
+    (while (re-search-forward "^# \\(.+\\)$" nil t)
+      (push (match-string 1) matches))
+    (nreverse matches)))
+#+END_SRC
+
+
 ** Customization
 *** set keys binding
 mapping new key binding to non-defined prefix (by emacs).

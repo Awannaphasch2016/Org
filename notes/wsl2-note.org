@@ -1,8 +1,28 @@
 #+TITLE: Wsl2 Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+
+* blog :blog:
+** Enable x11 display in WSL2
+:PROPERTIES:
+:EXPORT_FILE_NAME: Enable x11 display in WSL2
+:ID:       d4107ca9-eb24-4ce3-9980-6995d3943180
+:END:
+
+Resources are provided in [[https://roamresearch.com/#/app/AdaptiveGraphStucture/page/I1FI0mnUx][my roam research note]].
+
+I successfully connect x-apps via x11 protocol by first installing and launching xming server. Xming application provides x11-server. Then, I need to tell the wsl2 "address and port of X11 server to connect wsl2 application to" (my note on x11 can be seen [[https://roamresearch.com/#/app/AdaptiveGraphStucture/page/f433e8apo][here]]) X11 server is enlisted as WSL2 entrusted DNS which located in resolve.conf. (my note on resolve.conf can be seen [[https://roamresearch.com/#/app/AdaptiveGraphStucture/page/I1FI0mnUx][here]].) From the image below, x11 server port is =0.0=.
+
+#+attr_html: :width 300px
+[[file:./images/screenshot_20220430_153555.png]]
+
+In practice, I need to put the following in shell configuration file. In my case, it was =.zshrc=.
+#+BEGIN_SRC bash
+export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
+#+END_SRC
+
+My friend gets it working by replacing =:0= with =:0.0=. I couldn't tell you why, but that's something to be careful about.
 
 * Configuration
-
-
 ** open files from within wsl2 using window applicationa
 
 <2021-11-07 Sun>

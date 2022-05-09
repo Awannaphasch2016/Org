@@ -1,0 +1,9 @@
+#+TITLE: Completion Note
+
+* Choosing between =ivy-bibtex=, =helm-bibtex=, and =citar=.
+:PROPERTIES:
+:ID:       821c019b-af5f-4f8d-b3fd-7000d543e375
+:END:
+I never use =ivy-bibtex=.
+Comparing between =helm-bibtex= and =citar=, I really don't see any major  the difference.
+So using either =helm-bibtex= or =citar= both works for me.

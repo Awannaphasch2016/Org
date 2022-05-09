@@ -1,0 +1,7 @@
+#+TITLE: Fpscala Chapter10 Monoid Note
+
+* Fpscala Chapter10 Monoid Note
+:PROPERTIES:
+:NOTER_DOCUMENT: /home/awannaphasch2016/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 10. Monoids.pdf
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 10. Monoids.pdf::3++0.00]]
+:END:

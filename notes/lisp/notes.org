@@ -15,7 +15,6 @@ example of how to check hashtable[fn:2]
 symbol is an object with a name.[fn:1]
 
 In Scheme and Racket, a symbol is like an immutable string that happens to be interned so that symbols can be compared with eq? (fast, essentially pointer comparison). Symbols and strings are separate data types
-
 *** vectors
 Vectors are self-evaluating; that is, the result of evaluating a vector is the vector itself. Its
 subexpressions are not evaluated. So if you write:
@@ -34,7 +33,6 @@ example of a list containing 2 pairs (tuple).
 '((mode . (org-mode helpful-mode help-mode))
   (reuseable-freams .t))
 #+END_SRC
-
 ** Functions
 *** defvar
 Define SYMBOL as a variable, and return SYMBOL.
@@ -43,7 +41,7 @@ example
 #+BEGIN_SRC emacs-lisp :noeval
 (defvar lsp-clients (make-hash-table :test 'eql)
 #+END_SRC
-** Advice
+** Advise
 - ref
   - [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Advice-Combinators.html][ways to compose advice]]
 benchmark-elapse
@@ -65,6 +63,14 @@ example
 ** Terminology
 *** intern
 intern basically return symbol whose name property matches input string
+** Macro
+*** Examples
+#+BEGIN_SRC emacs-lisp
+(defmacro inc (var)
+  (list 'setq var (list '1+ var)))
+
+(let  ((x 0)) (inc x))
+#+END_SRC
 
 * Useful functions/commands/variables
 ** Data Structure

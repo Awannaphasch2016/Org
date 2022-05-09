@@ -128,3 +128,27 @@ CLOCK: [2022-02-24 Thu 10:55]--[2022-02-24 Thu 10:57] =>  0:02
 :END:
 [2022-02-24 Thu 10:55]
 [[file:~/org/GTD.org::*Refiling][Refiling]]
+
+** DONE assign next task to each of my project.
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-18 Fri 11:24
+:ARCHIVE_FILE: ~/org/GTD.org
+:ARCHIVE_OLPATH: GTD/Refiling  + organizing
+:ARCHIVE_CATEGORY: GTD
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: @home gtd
+:END:
+[2022-02-26 Sat 10:28]
+[[file:~/org/refile.org][file:~/org/refile.org]]
+
+** DONE assign next task to each of my project.
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-18 Fri 11:24
+:ARCHIVE_FILE: ~/org/GTD.org
+:ARCHIVE_OLPATH: GTD/Refiling  + organizing
+:ARCHIVE_CATEGORY: GTD
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: @home gtd
+:END:
+[2022-02-26 Sat 10:28]
+[[file:~/org/refile.org][file:~/org/refile.org]]

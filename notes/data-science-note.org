@@ -1,0 +1,7 @@
+#+TITLE: Data Science Note
+#+filetags: datascience
+
+* blog :blog:
+:PROPERTIES:
+:ID:       61a879de-864f-4473-9680-f6d6a1132149
+:END:

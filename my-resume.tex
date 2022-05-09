@@ -1,9 +1,50 @@
-% Created 2022-03-03 Thu 12:58
+% Created 2022-03-04 Fri 15:52
 % Intended LaTeX compiler: pdflatex
-\documentclass[11pt]{article}
-\usepackage[rm]{roboto}
-\usepackage[defaultsans]{lato}
-\usepackage{paracol}
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% Use roboto and lato for fonts
+\renewcommand{\familydefault}{\sfdefault}
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
 \columnratio{0.6} % Set the left/right column width ratio to 6:4.
 \author{Anak Wannaphaschaiyong}
 \date{\today}
@@ -11,13 +52,13 @@
 \begin{document}
 
 
-\section{CV Header}
-\label{sec:orga991c17}
+\cvsection{CV Header}
+\label{sec:org552aac1}
 \begin{enumerate}
 \item Photo \& Tagline
-\label{sec:orgb766649}
+\label{sec:orgf56312b}
 \item Personal Info
-\label{sec:org314d5ab}
+\label{sec:orge627474}
 \personalinfo{%
     \homepage{www.aidanscannell.com}
     \email{scannell.aidan@gmail.com}
@@ -28,40 +69,40 @@
 }
 \makecvheader
 \end{enumerate}
-\section{CV Columns one}
-\label{sec:org34d0a63}
+\cvsection{CV Columns one}
+\label{sec:orgf23d688}
 \begin{enumerate}
 \item Experience
-\label{sec:org537ff93}
+\label{sec:orga5d2c58}
 \begin{enumerate}
 \item PhD Researcher
-\label{sec:orge40af1a}
+\label{sec:org1bbc0f1}
 \item Teaching Assistant
-\label{sec:org833d683}
+\label{sec:org7d6df89}
 \end{enumerate}
 \item Projects
-\label{sec:orgabe0870}
+\label{sec:orgf2d0250}
 \begin{enumerate}
 \item Project 1
-\label{sec:orgabd4245}
+\label{sec:org846a85a}
 \item Do not export this project
-\label{sec:org52931a2}
+\label{sec:orga72e18c}
 \end{enumerate}
 \item Volunteering
-\label{sec:orgd442515}
+\label{sec:orgd24e0cc}
 \end{enumerate}
-\section{CV Column two}
-\label{sec:orge615567}
+\cvsection{CV Column two}
+\label{sec:org0990c8d}
 \begin{enumerate}
 \item Skills
-\label{sec:orgc176cb4}
+\label{sec:org65cc562}
 \item Education
-\label{sec:org470c13f}
+\label{sec:orgfc858cc}
 \item Schievements
-\label{sec:org4afc3d2}
+\label{sec:orgcc0d8ed}
 \item Referees
-\label{sec:org7ba073c}
+\label{sec:org577f276}
 \end{enumerate}
-\section{Backmatter}
-\label{sec:orgbcd5f3a}
+\cvsection{Backmatter}
+\label{sec:orgb715380}
 \end{document}

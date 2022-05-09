@@ -1,0 +1,120 @@
+#+TITLE: Investing
+#+filetags: investing
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+
+* blog :blog:
+** Portfolio
+*** Survey on difference asset allocation portfolio types and their performance
+**** things to read
+***** crypto based portfolio
+****** [[https://www.thenationalnews.com/business/money/2022/02/03/a-beginners-guide-to-building-a-cryptocurrency-portfolio/][A beginner's guide to building a cryptocurrency portfolio]]
+****** [[https://www.cabital.com/blog/asset-allocation-why-it-is-crucial-to-diversify-your-crypto-portfolio][Asset Allocation: How to diversify your crypto portfolio]]
+***** non-crypto based portfolio
+****** [[https://www.optimizedportfolio.com/bogleheads-3-fund-portfolio/][Bogleheads 3 funds Portfolio Review and Vanguard ETFs to Use]]
+****** [[https://www.optimizedportfolio.com/ultimate-buy-and-hold-portfolio/][Paul Merriman Ultimate Buy and Hold Portfolio Review, M1 Pie (2022)]]
+****** [[https://www.wsj.com/articles/in-pursuit-of-the-perfect-portfolio-review-models-and-mavens-11641338333][‘In Pursuit of the Perfect Portfolio’ Review: Models and Mavens]]
+** Web3
+*** Staking survey
+**** TODO International staking survey
+***** things to read
+[[https://static1.squarespace.com/static/59be750cd55b4162d0f1d3d7/t/5e92636b2121991619e4624a/1586652026440/InternationalStakingSurvey-V3+%282%29.pdf][International staking survey]]
+*** Web3 Market analysis
+**** TODO Market analysis of blockchain in Game
+:PROPERTIES:
+:ID:       dba35263-857d-4f13-85b6-0fb45280cee3
+:END:
+
+As of May 20 2020, players in game 150 billion dollars purchasing game and digital goods in game [fn:1].
+
+Most of the game, less than 3 percent of in-game buyers accounts for more than 80 percent of the overall in-games sells. [fn:1] The difficulties of developers are to put out lots of contents to create more in-game product to drive in-game revenue. By having an in-game market place, games can trade their items which relieve the need to constantly output new products because games have incentives to sell product to other gamer. The incentives to sell was not as strong because there are high-fiction to sell in-game products for real money. [fn:1] Embedding blockchain technology integrate grey market, which is marketplace outside of game, into the in-game marketplace.
+
+As of May 24 2021, Kevin Chou mentioned that trend in gaming is creating new item by combining items together. He expected that this trend will emerge in NFT [fn:2]. He also mentioned that most prominence mechanism for buying NFT art is via auction mechanism. This works well for rare item such as  one of a kind item. However, he also mentioned that, in general not limited to in-game marketplace, eBay found out that people don't like auction, hence, other mechnism is expected to emerge.
+
+*** Investing in Web3
+**** TODO How to find web3 projects that have growth potential?
+:PROPERTIES:
+:ID:       d1e8d05c-da37-419e-a24e-216ad351c54b
+:END:
+One way to find project with big potential is to find projects from "accelerator program." Accelerator program is a program that train contributors of the projects to gain a certain skills. Companies created the project responsible for filter out bad project, so they can put time and money into growing the early stage of these project, and the company with be rewarded with x percentage of the stage. One can think of these companies as investing company that invest in pre fund raising round start up, these start up is called seed startup.
+
+One example of the web3 investing company is Seed Club.
+**** TODO How to earn passive income with crypto
+:PROPERTIES:
+:ID:       64ccf239-c261-45ad-8ce0-fb4cc1ee48c0
+:END:
+- ref
+  - [[https://www.stakingrewards.com/][staking rewards]]
+
+- earn interest on stablcoins at 20% [fn:3].
+- instant 0% APR loans [fn:3].
+- borrow against interest-bearing assets [fn:3].
+- staking (lock) your crypto to earn interest [fn:3].
+- trade options/future contracts on crypto.
+- take advantage of arbitrage opportunities
+- flash loans
+-
+
+* Investing
+:PROPERTIES:
+:ID:       03cfc8cc-db9a-4821-bdf7-5b1d5791e9bc
+:END:
+** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+** Notes :note:
+** Meeting :meeting:
+** Schedule
+*** recurring :recurring:
+*** non-recurring :nonrecurring:
+** Delegation :waiting:
+*** WAITING waiting for bank of america to transfer money to coinbase account. It should arrived better [2022-04-20 Wed] and [2022-04-22 Fri]. When money is added to coinbase, it should be in my wallet (beacuse I import wallet using 12 words.) if not I need to figure out how to transfer money from coinbase to my wallet. :WAITING:
+:PROPERTIES:
+:ID:       310f0cb0-2ff4-48e7-801e-bce3b9d1f637
+:END:
+:LOGBOOK:
+- State "WAITING"    from "TODO"       [2022-04-16 Sat 10:38]
+CLOCK: [2022-04-16 Sat 10:35]--[2022-04-16 Sat 10:38] =>  0:03
+:END:
+[2022-04-16 Sat 10:35]
+
+It mention in coinbase help section that for US customer. transfer will takes 3-5 business day. see [[https://help.coinbase.com/en/coinbase/trading-and-funding/buying-selling-or-converting-crypto/how-long-does-a-purchase-or-deposit-take-to-complete][here]].
+*** WAITING pay for gnosis-safe creation. :WAITING:
+:PROPERTIES:
+:ID:       e8e25064-420a-4d13-9eef-1daf0ac8906e
+:END:
+:LOGBOOK:
+- State "WAITING"    from "TODO"       [2022-04-17 Sun 10:16] \\
+  waiting for money to be transfer from bank of america to coinbase.
+CLOCK: [2022-04-17 Sun 10:15]--[2022-04-17 Sun 10:16] =>  0:01
+:END:
+[2022-04-17 Sun 10:15]
+[[file:~/org/school.org::*habit][habit]]
+
+this is a task in dao the rabbit hole, see [[https://app.rabbithole.gg/skills/intro-to-daos/GNOSIS_SAFE_OWNER][here]].
+** Tasks
+*** actionable :actionable:
+:PROPERTIES:
+:ID:       714c7dac-73bc-47d0-84c0-a5316ca8ae71
+:END:
+**** TODO create investing club on Syndicate
+SCHEDULED: <2022-05-05 Thu>
+***** read about how to create investing club with syndicate
+read syndicate FAQ in discord
+*** incubation :incubation:
+**** is buying node in Gala fair?
+:PROPERTIES:
+:ID:       58ca073e-fafb-4240-92b2-6ea13907c624
+:END:
+**** find project to invest from DAO.
+:PROPERTIES:
+:ID:       3d730530-38f9-46b9-9916-ab27dc6daeee
+:END:
+
+* Footnotes
+[fn:3] [[https://entrepreneurshandbook.co/why-i-quit-my-job-at-google-to-work-in-crypto-1b2793ffb6a0][Why I just quite My Hight-Paying Job at Google to Work In Crypto]]
+
+[fn:2] [[https://www.youtube.com/watch?v=IUZS_qJ9Isc&list=PLM4u6XbiXf5omwoWS7AsncKViss76s28x&index=3&ab_channel=a16z][Social Tokens for Creators Explained]]
+[fn:1] [[https://www.youtube.com/watch?v=CBu8lLC0g8I&list=PLM4u6XbiXf5oDP6DFeEoNP5K_Epy1RAx4&index=11&ab_channel=TechCrunch][Josh Williams: Opportunities for Crypto in Gaming]]

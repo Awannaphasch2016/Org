@@ -1,0 +1,8 @@
+#+title: ${title}
+#+FILETAGS:
+#+ROAM_KEY: %^{citekey}
+
+* ${title}
+:PROPERTIES:
+:Custom_ID: %^{citekey}
+:END:

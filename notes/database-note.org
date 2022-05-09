@@ -1,5 +1,292 @@
 #+TITLE: Database Note
 
+* Blog :blog:
+** TODO How does processed and their share data?
+Every process use =heap memory= to store share data. The share data is a piece of data that can be stored by more than one process. Intuitively, one can think of =heap memory= as a storage of processes shared memory. Since share memory
+** TODO Anatomy of database system.
+The design decision involve
+- Server Process Models
+- How data is passed around/
+** TODO How is data stored on disk and memory?
+
+#+name: Two plated hard disk
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220420_170210.png]]
+
+#+name: Physical disk data storage
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220420_165451.png]]
+
+*** Data stroage on disk
+Physical disk is shown in ref:Two. A physical hard disk contains a number of platters in a stack. The ring on the side of the disk is called tracks. According to figure ref:Physical, a platter (a layer of the stack) are separated in to sectors. Multiple sectors compose a block. A block is considered a =logical unit=. [fn:2]
+
+In DBMS, each record (a row in a table) lies on disk. As of <2022-04-20 Wed>, I am not sure exactly how index schema file is stored on disk. However, I know that schema structure determines location in which data stored on disk. Schema structure organize primary index. Index schema file (aka index file) is tuple of (search key,pointer). Efficiency of index search using search keys depends on schema structure. Schema structure organizes search keys. Example of schema structure are B+ tree, linear hashing, among other.
+
+As of <2022-04-20 Wed>, I am aware that, in addition to organization of primary index, one must also specify organization of secondary index of on the disk. Secondary index are index that point to address of actual record data lie on the physical disk.
+
+Furthermore, one must also determine whether record shoule be storein row-wise or colum wise. Storing in row-wise manner mean rows inside the same table stay together. Row-wise indexing is cheap for row adding and expensive for column adding, and vice versa.
+
+*** Data movement between disk and memory
+
+#+name: file is actually a stream of bit/bytes.
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220420_172723.png]]
+
+A file is not a collection of data store together on a disk or on a memory. Rather a file is actually a stream of bits/bytes, see figure ref:file.
+
+*** things todo
+**** answer How is index file/schema stored on disk?
+* Relational Algebra
+:PROPERTIES:
+:ID:       644a3ce9-c3ed-4555-8682-979e7513fcac
+:END:
+- ref
+  - for latex shee cheat for relational algebra, see [[https://www.cs.uleth.ca/~rice/latex/worksheet.pdf][here]].
+| symbol name           | latex        | description                                |
+| leftarrow             | $\leftarrow$ |                                            |
+| select                | $\sigma$     |                                            |
+| project               | $\Pi$        | output subset of unique rows from all rows |
+| inner join            | $\bowtie$    |                                            |
+| cross join            | $\times$     |                                            |
+| rename                | $\rho$       |                                            |
+| less than             | $<$          |                                            |
+| greater than          | $>$          |                                            |
+| less than or equal    | $\leq$       |                                            |
+| greater than or equal | $\geq$       |                                            |
+| equal                 | $=$          |                                            |
+| not equal             | $\neq$       |                                            |
+| or                    | $\vee$       |                                            |
+| not                   | $\neg$       |                                            |
+
+* File and Index Structure
+Modern database uses primary index and secondary index. Primary index database outputs collections of index to be search in secondary index database. Primary index is stored depends on index structure being used(such as hashing file). Secondary index is stored in =heap file=.
+
+** Index structure
+
+*** B+ tree
+B+ tree is useful for range index.
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220418_210801.png]]
+
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220418_205854.png]]
+*** External sorting
+**** Example
+***** COP6731 final exam practice quiz, [[file:~/Documents/Courses/FAU/2022/spring/database/course-material/practices/exam-practice/final-exam-note.org::*COP6731 Database Final Exam Note][here]].
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220428_133723.png]]
+
+
+*** hashing
+:PROPERTIES:
+:ID:       80f19263-0804-4bbf-b72c-b04ab6a352ec
+:END:
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220418_204035.png]]
+
+**** Extendible Hashing
+- ref
+  - [[https://www.youtube.com/watch?v=r4GkXtH1la8&ab_channel=DouglasFisher][Youtube: Extendible hashing]]
+***** Examples
+****** COP6731 final exam practice quiz, [[file:~/Documents/Courses/FAU/2022/spring/database/course-material/practices/exam-practice/final-exam-note.org::*COP6731 Database Final Exam Note][here]].
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220428_133318.png]]
+
+local depth
+| local depth = 2 for remaining of 0 |    |    |    |    |
+| local depth = 2 for remaining of 1 | 21 |    |    |    |
+| local depth = 2 for remaining of 2 | 10 | 62 | 74 | 22 |
+| local depth = 2 for remaining of 3 | 35 |    |    |    |
+
+expands when insert 58
+| local depth = 2 for remaining of 0   |    |    |    |    |
+| local depth = 2 for remaining of 1,5 | 21 |  1 |    |    |
+| local depth = 3 for remaining of 2   | 10 | 74 | 58 | 42 |
+| local depth = 3 for remaining of 6   | 62 | 22 |    |    |
+| local depth = 2 for remaining of 3,7 | 35 |    |    |    |
+| local depth = 2 for remaining of 4   | 12 | 28 |    |    |
+
+* Query Processing and Query Optimization
+:PROPERTIES:
+:ID:       08ec369b-c7ac-448f-a768-447bdc7319ed
+:END:
+** Note
+*** cross product
+cross product is the most expensive operation.
+*** Self join
+without optimization self join process as followed
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220415_113650.png]]
+
+One way to optimize is to convert left-deep tree to balance tree (B+ tree)
+This is because B+ tree allows one to process data in parallel. There is no need to wait for lower level tree to finish.
+
+This is optimizing tree structure is a hard research problem because search space are very large. Query optimizing is all about time.
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220415_113953.png]]
+
+** Query Processing
+:PROPERTIES:
+:ID:       2c55f525-26c1-4792-acba-f8671f35050b
+:END:
+The process of query process is as followed
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220415_115206.png]]
+
+In details, query process steps are broken down to the following.
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220415_114531.png]]
+
+SQL queries are decomposed into query blocks. There are two types of queries: out queries and in queries. (I may get the name wrong from fau 2022 database lecture.) According to illustration below, Left is out query and right is in queries.
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220415_115345.png]]
+
+*** Basic concept
+
+#+caption: a more detail representation of records in database. Records (row) are stored in block (BN).
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220415_174401.png]]
+
+Query is processed on per block basis not per record basis.
+
+**** Terminologies
+Given relation R, the following terminology is defined as followed.
+- Cardinality: number of tuples (or rows)
+- Block Count: the number of blocks to store r into storage.
+- Blocking factor (bfr): number of tuples per block.
+- Selective (sl): (the number of tuples that satisfy select operation) / (the total number of tuples in R)
+    #+attr_html: :width 500px
+    [[file:./images/screenshot_20220415_173423.png]]
+
+*** Operations
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220417_132449.png]]
+
+**** SELECT Operation.
+***** The query process for SELECT operation
+The query process of SELECT operation includes
+1. select algorithm for select operation that would have the highest activity rate.
+   the algorithm will construct a data structure including hash, tree, and none.
+   Tree is used for binary search and B+ tree. Linear search doesn't create data structure. It scan database directly.
+2. apply algorithm for select operation
+3. extract the matched record from blocks in database. (position of blocks effect speeds of retrieval)
+
+***** Algorithms for SELECT operation.
+****** linear search
+****** binary search
+****** hash key
+****** B+ key
+***** Conjunctive Selection_20220417_132109.png]]
+** Optimization
+:PROPERTIES:
+:ID:       c61ac6e9-407d-4ca5-a8c8-f610db7029c9
+:END:
+*** TODO Basic of optimizing query
+:PROPERTIES:
+:ID:       b4859c46-5fcb-4995-8aeb-bf6d190bd9f2
+:END:
+- push down selection. (reduce size of records to be processed.)
+- convert cross product to self join.
+- do selection before join (selection guarantee unique rows.)
+**** Index and Table Access
+***** Index UNIQUE scan
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220417_134551.png]]
+
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220417_135436.png]]
+***** Index RANGE scan
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220417_134638.png]]
+***** Index FULL scan
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220417_134649.png]]
+**** Joins
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220417_134758.png]]
+***** Nested loops join
+***** hash join
+- ref
+  - https://dev.mysql.com/blog-archive/hash-join-in-mysql-8/#:~:text=Hash%20join%20is%20a%20way,inputs%20can%20fit%20in%20memory.
+
+It is typically more efficient than nested loop joins. especially if one of the input can fit in memory.
+there are two phases: build & probe phase.
+
+build phase (build input phase): build in-memory hash table. One of the join input is designated as the build input.
+
+the probe phase: reading rows from probe phase.
+
+At the end, the server has scanned each input only once, so lookup time is =O(constant)=.
+
+***** merge join
+**** Sorting and Grouping
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220417_134824.png]]
+
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220417_134852.png]]
+
+***** sort order by
+***** sort order by stopkey
+***** sort group by
+***** sort group by nosort
+***** hash group by
+**** Access and Filter-Predicate
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220417_135027.png]]
+**** Constraints
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220417_135137.png]]
+
+*** TODO Execution Plan
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220417_134435.png]]
+**** How to read execution plan output
+***** Oracle SQL
+****** Understand execution plan's table
+#+attr_html: :width 500px
+#+name: Example of Orcale SQL execution plan
+[[file:./images/screenshot_20220418_184737.png]]
+
+One starts reading execution plan from operation with deepest level of indentation in =Operation= columns. Given Figure ref:Example, =TABLE ACCESS FULL= has the deepest level of indentation, hence it is the first to execute. One can see that this is true by looking at =Predicate Inforamtion (identified by operation id)=. =1 - filter("E", "AGE"=10)= means operation with ID 1 perform filter operation base on the following query statement: =FROM emplyee E WHERE E.age = 10.=
+
+******* Understand meaning of columns name in execution plan's table.
+=A-Time= stands for actual time which is the actual time SQL is taken to evaluate. [fn:1]
+
+=A-Rows= stands for  actual rows and =E-Rows= stands for CBO estimated rows where CBO stands for cost-based query optimization.
+**** Conversion between Query tree and Execution plan
+***** Join example 1
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220418_223427.png]]
+
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220418_223540.png]]
+***** Join example 2
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220418_224209.png]]
+
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220418_224651.png]]
+** Question
+*** COP6731 quiz 10 week 9
+**** question 1
+#+name: COP6731_10q_week9_q1
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220428_114617.png]]
+option
+1. Access the sorted file for R directly
+2. Use a (clustered) B+ tree index on attribute R.a
+   B+ tree perform well with range index
+3. Use a linear hashed index on attribute R.a
+
+answer
+a. 1, 2
+b. 3
+c. 2
+d. 2
+
+
+
 * Inference Rules for Functional Dependencies
 ** Armstrong Axioms
 *** Reflective Rule   : If X is a subset of Y, then X -> Y
@@ -33,4 +320,16 @@
 *** A candidate key is a specific type of field in a relational database that can identify each unique record independently of any other data
 ** super key
 *** A superkey is a group of single or multiple keys which identifies rows in a table. A Super key may have additional attributes that are not needed for unique identification.
+:PROPERTIES:
+:ID:       819848ef-9add-4b4e-8512-2d50e86a1e97
+:END:
 ** composite key
+:PROPERTIES:
+:ID:       31aaf81a-74a5-4f24-8e10-39982a118ae7
+:END:
+
+* Footnotes
+
+[fn:3] [[https://towardsdatascience.com/how-your-data-is-stored-on-disk-and-memory-8842891da52][How your data is stored on disk and memory?]]
+[fn:2] [[http://www.active-undelete.com/hdd_basic.htm][Hard Disk Drive Basics]]
+[fn:1] [[http://www.dba-oracle.com/t_plan_a_rows_e_rows.htm][SQL execution plan A-ROWS vs. E-ROWS]]

@@ -1,0 +1,5 @@
+#+TITLE: Org Noter Note
+
+| commands                               | key   | doom keys | custom keys | descriptions |
+| org-noter-sync-current-note            | C-M-. |           |             |              |
+| org-noter-sync-current-page-or-chapter |       |           |             |              |

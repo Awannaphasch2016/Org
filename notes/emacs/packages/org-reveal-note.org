@@ -1,0 +1,60 @@
+#+TITLE: Org Reveal Note
+
+* references
+:PROPERTIES:
+:ID:       47e615c6-c961-4488-aacd-42fcdcdce463
+:END:
+** [[https://www.youtube.com/watch?v=avtiR0AUVlo&t=312s&ab_channel=JakeB][Classy slideshow From Emacs Org Mode + org-reveal -- Straightforward Emacs]]
+:BACKLINKS:
+[2022-03-22 Tue 15:38] <- [[file:~/org/notes/emacs/packages/org-reveal-note.org::*Example][Example]]
+:END:
+* key binding
+** key binding when on reveal.js slides on browser
+| commands | key | doom keys | custom keys | descriptions                 |
+|          | s   |           |             | show notes                   |
+|          | o   |           |             | show overall (bird-eye view) |
+
+* Example
+:PROPERTIES:
+:ID:       2ffef7f4-022c-4226-b022-3c732db9636d
+:END:
+Example from [[*\[\[https://www.youtube.com/watch?v=avtiR0AUVlo&t=312s&ab_channel=JakeB\]\[Classy slideshow From Emacs Org Mode + org-reveal -- Straightforward Emacs\]\]][Classy slideshow From Emacs Org Mode + org-reveal -- Straightforward Emacs]]
+#+BEGIN_SRC org
+:reveal_properties:
+,#+reveal_root: https://cdn.jsdelivr.net/npm/reveal.js
+,#+reveal_reveal_js_version: 4
+,#+reveal_theme: serif
+,#+options: timestamps:nil toc:1 num:nil
+:end:
+
+,#+title:     org-show
+,#+author:    Anak Wannaphaschaiyong
+,#+DATE: <2022-03-22 Tue>
+
+
+,* Intro Slide
+,#+begin_notes
+some notes bruh
+,#+end_notes
+
+,#+attr_reveal: :frag (appear)
+1) Point one
+2) Point two
+3) Point Three
+,* Images
+,#+attr_html: :width 45% :align center
+https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/EmacsIcon.svg/1024px-EmacsIcon.svg.png
+
+,* Slides and sub-slides
+,** Subslides
+There are some words on this one.
+,** Markup
++ *Bold*
++ /Italics/
++ __underlines__
+,*** a subsubslides
+a content
+,* Another Slides
+,* Slides with notes.
+#+END_SRC
+* FAQs

@@ -1,0 +1,11 @@
+
+* transcient
+:PROPERTIES:
+:ID:       a6d9705b-4152-40a3-a50c-fc2f15be2de4
+:END:
+* magit
+:PROPERTIES:
+:ID:       ab7a4737-8fbd-4c5f-8db2-85c8902f3927
+:BRAIN_PARENTS:
+:BRAIN_FRIENDS:
+:END:

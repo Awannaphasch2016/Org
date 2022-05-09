@@ -1,0 +1,12 @@
+#+TITLE: Web3 Note
+
+* blog :blog:
+:PROPERTIES:
+:ID:       ac2406c2-982c-4408-a1a3-ee734a72942d
+:END:
+** TODO Evolution from Web1 to Web3
+:PROPERTIES:
+:ID:       22df16a5-28d4-45c7-850c-1ddf33272128
+:END:
+web1 (read web) => web2 (read-write web) => web3 (read-write-value web)
+web1 (local storage) => web2 (centralized storage) => web3 (decnetralized storage)

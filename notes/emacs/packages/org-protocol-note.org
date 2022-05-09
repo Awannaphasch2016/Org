@@ -1,0 +1,15 @@
+#+TITLE: Org Protocol Note
+
+* FAQs
+** what exactly is "booklets" in =org protocol=? :PROPERTIES:
+:ID:       e3fb1759-b115-471b-90f7-5bbe611c4dae
+:END:
+I found myself asking myself this question to start writing my understand about it here. Still, I can't really figure what it really refers to. I presented my best attempt to understand it below.
+
+=org-protocol= interacts with a browser in the following way.
+1. highlight a content from web browser
+2. click on web browser =booklet= (bookmark button)
+3. with your =org-protocol= configuration can trigger emacs to perform something.
+   For example, with the help org =org-protocol=,  the event after step 2. may be to open =org-capture= in emacs with =org-capture= template which contains information about location of the highlight.
+4. In org capture, you can choose to make note on the highlight.
+5. Save to appropriate location.

@@ -1,0 +1,174 @@
+#+TITLE: Portfolio Management Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+
+* Blog :blog:
+** TODO Arbitrage with Mine Extractable Value (MEV)
+*** things to read
+**** Papers
+:PROPERTIES:
+:ID:       b2e91da7-7a29-46c6-af23-bd978dc91839
+:END:
+[[https://www.econbiz.de/Record/applying-the-genetic-based-neural-networks-to-volatility-trading-wang-shinn-wen/10005080815][APPLYING THE GENETIC-BASED NEURAL NETWORKS TO VOLATILITY TRADING]]
+[[https://arxiv.org/pdf/2106.04028.pdf][Deep Learning Statistical Arbitrage∗]]
+** TODO How to Establish Benchmark Return to decide on Investment Oppotunity and associated Risk
+A good portfolio must allocate assets.
+
+Each assets class dividens
+
+*** Crypto market
+benchmark return should be based the base digital currency/token that the project builds on.
+* GTD
+** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+** Notes :note:
+** Meeting :meeting:
+** Schedule
+*** recurring :recurring:
+*** non-recurring :nonrecurring:
+:PROPERTIES:
+:ID:       44602bd6-8479-467f-bcb6-d2c6266e538e
+:END:
+** Delegation :waiting:
+** Tasks
+*** actionable :actionable:
+*** incubation :incubation:
+**** Research to pick 6 crypto project to invest for a life time.
+:PROPERTIES:
+:Effort:   120:00
+:END:
+***** pick the first crypto project to invest
+:PROPERTIES:
+:Effort:   20:00
+:END:
+**** Learn enough about portfolio management to start building personal portfolio
+:PROPERTIES:
+:Effort:   6:00
+:ID:       6fc56ed4-62fe-4c0a-8174-b9897d558d27
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-22 Fri 09:15]--[2022-04-22 Fri 09:40] =>  0:25
+:END:
+***** create invesetment path toward retiredment
+:PROPERTIES:
+:Effort:   3:00
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-22 Fri 13:38]--[2022-04-22 Fri 14:46] =>  1:08
+CLOCK: [2022-04-22 Fri 13:15]--[2022-04-22 Fri 13:38] =>  0:23
+:END:
+
+***** survey on types of portflio
+:PROPERTIES:
+:Effort:   0:30
+:ID:       6569adf5-4fc3-4834-b246-00e315112352
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-22 Fri 11:45]--[2022-04-22 Fri 12:10] =>  0:25
+CLOCK: [2022-04-22 Fri 09:44]--[2022-04-22 Fri 10:10] =>  0:26
+CLOCK: [2022-04-22 Fri 09:40]--[2022-04-22 Fri 09:44] =>  0:04
+:END:
+***** how should I structure my spredsheet?
+:PROPERTIES:
+:Effort:   0:30
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-22 Fri 11:20]--[2022-04-22 Fri 11:45] =>  0:25
+:END:
+* Personal Investment Portfolio
+:PROPERTIES:
+:ID:       4729e36b-6bec-46aa-8511-973a469de647
+:END:
+** Fund I manage for others
+*** 20k funded by my dad
+**** 20 percent
+[[*Rules of Thumb of Portfolio Management][Rules of Thumb of Portfolio Management]]
+**** 80 percent
+***** Conversative/Intermediate portfolio management
+****** Stock and Bond Portfolio
+******* Index fund
+******** S&P 500
+******* Blueship stock
+***** Growth portfolio management
+****** Crypto Portfolio
+******* Staking Portfolio (invest in experts)
+******* NFT + Web3 (Metaverse) Portfolio.
+******* Growth crypto project Portfolio
+
+** Income I personally generally
+*** Income-oriented portfolio
+* Notes
+** API
+*** coin prices
+coingecko API
+** Portfolio Spread Sheet Example
+#+caption: from https://www.youtube.com/watch?v=WZ15gaHbmHA&ab_channel=PaulaGuilfoyle
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220422_113930.png]]
+
+#+caption: using emacs
+#+attr_html: :width 500px
+https://www.youtube.com/watch?v=WZ15gaHbmHA&ab_channel=PaulaGuilfoyle
+** Portfolio Strategy Example
+*** All Weather Portfolio [fn:2]
+**** Risk Analysis [fn:3]
+:PROPERTIES:
+:ID:       ee9f63b7-cc33-4a22-aeca-2691ab0665fd
+:END:
+**** Explanation
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220422_144157.png]]
+
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220422_144124.png]]
+
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220422_144245.png]]
+
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220422_144313.png]]
+
+** Portfolio management best practices
+:PROPERTIES:
+:ID:       f155eff7-6292-4fd1-b787-e9818d94b288
+:END:
+Portfolio management for clients may involve the following modules
+- Resource Plan
+- Portfolio Plan
+- Finance Plan
+- Work Plan
+- Timesheets
+- Status Reports
+** Type of portfolio management
+time line and
+*** Conversative portfolio management
+*** Intermediate portfolio management
+*** Growth portfolio management (Personal crypto portfolio)
+*** Income-oriented portfolio ()
+2 main ways to generate income
+**** total return
+**** dividends and interest
+*** Tax Efficient portflio
+:PROPERTIES:
+:ID:       f64cf3f7-5e66-499d-8ac7-84d491ed986a
+:END:
+** Rules of Thumb of Portfolio Management
+1. 20 percent of portfolio is reserved at all time. Read to invest.
+   wait for low cost average entry opportunity during market drop.
+2. no sector should be over 20 percent, and no individual stock or alike should be more than 5 percent.
+3. every 90 days, take out profit from the stock or sector that goes above 5 and 20 percent threshold and hold as case or diversify portfolio.
+** Investing Philosophy[fn:1]
+- Develope A long term mindset
+- Understand Market Behavior
+- Build a Balanced Portfolio
+- Become A Crypto Expert
+- Navigate Crypto Safely
+
+* Footnotes
+[fn:3] [[https://www.youtube.com/watch?v=Nu4lHaSh7D4&ab_channel=Investopedia][Ray Dalio breaks down his "Holy Grail"]]
+[fn:2] [[https://www.youtube.com/watch?v=V3Zhm0MLPIU&ab_channel=InvestingMadeSimple-NathanSloan][Ray Dalio: All Weather Portfolio -- Does it Still Work?]]
+
+[fn:1] [[https://www.youtube.com/watch?v=EGIt376FwoE&ab_channel=BitBoyCrypto][Portfolio Update - Revealing My ENTIRE Multi-Million Dollar Crypto Portfolio]]

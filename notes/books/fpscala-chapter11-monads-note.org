@@ -1,0 +1,7 @@
+#+TITLE: Fpscala Chapter11 Monads Note
+
+* Fpscala Chapter11 Monads Note
+:PROPERTIES:
+:NOTER_DOCUMENT: /home/awannaphasch2016/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 11. Monads.pdf
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 11. Monads.pdf::1++0.00]]
+:END:

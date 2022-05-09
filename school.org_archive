@@ -275,3 +275,765 @@ CLOCK: [2022-02-26 Sat 10:17]--[2022-02-26 Sat 10:18] =>  0:01
 :END:
 [2022-02-26 Sat 10:17]
 [[file:~/org/refile.org::*create notes for all classes.][create notes for all classes.]]
+
+** DONE work on quiz 3
+CLOSED: [2022-03-04 Fri 01:08] DEADLINE: <2022-03-02 Wed>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-04 Fri 01:08
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Tasks/blockchain/Tasks
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school
+:END:
+
+** DONE work on Homework 3.
+CLOSED: [2022-03-22 Tue 11:22] SCHEDULED: <2022-03-04 Fri> DEADLINE: <2022-03-15 Tue>
+:PROPERTIES:
+:ID:       1c863046-0599-4d23-b53e-bd299b0d8aaf
+:ARCHIVE_TIME: 2022-03-22 Tue 11:22
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Scala/Task/actionable
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school actionable
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-18 Fri 19:55]--[2022-03-18 Fri 19:57] =>  0:02
+CLOCK: [2022-03-18 Fri 15:31]--[2022-03-18 Fri 15:39] =>  0:08
+CLOCK: [2022-03-18 Fri 14:49]--[2022-03-18 Fri 14:57] =>  0:08
+:END:
+
+** DONE learning + reviewing class material for quiz
+CLOSED: [2022-03-22 Tue 11:22]
+:PROPERTIES:
+:ID:       d0bb73f2-fc41-42fc-8553-3382b4e46c62
+:ARCHIVE_TIME: 2022-03-22 Tue 11:22
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Blockchain/tasks/actionable
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school actionable
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-03 Thu 21:48]--[2022-03-03 Thu 23:15] =>  1:27
+CLOCK: [2022-03-03 Thu 20:59]--[2022-03-03 Thu 21:48] =>  0:49
+CLOCK: [2022-03-03 Thu 20:11]--[2022-03-03 Thu 20:59] =>  0:48
+CLOCK: [2022-03-03 Thu 19:52]--[2022-03-03 Thu 19:53] =>  0:01
+CLOCK: [2022-03-03 Thu 19:19]--[2022-03-03 Thu 19:34] =>  0:15
+CLOCK: [2022-03-03 Thu 19:01]--[2022-03-03 Thu 19:19] =>  0:18
+CLOCK: [2022-03-03 Thu 18:59]--[2022-03-03 Thu 19:00] =>  0:01
+CLOCK: [2022-03-03 Thu 18:49]--[2022-03-03 Thu 18:58] =>  0:09
+CLOCK: [2022-03-03 Thu 18:33]--[2022-03-03 Thu 18:43] =>  0:10
+:END:
+
+** DONE graduate students: must pick a presentation topics, and same or separate paper proposal.
+CLOSED: [2022-03-22 Tue 11:28] DEADLINE: <2022-03-23 Wed>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-22 Tue 11:28
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Blockchain/tasks/incubation
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school incubation
+:END:
+*** pick presentation topics that is the same as paper proposal
+SCHEDULED: <2022-03-04 Fri>
+**** select blockchain topics that is related to pen.el projects. (scalability?) (proof-of-n?)
+***** what is the topics of blockchain that I can pick from?
+
+** DONE figure out what to do for presentation. make a draft chapter.
+CLOSED: [2022-03-23 Wed 10:15]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-23 Wed 10:15
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Blockchain/tasks/actionable/Do a presentation and research on Decentralized Autonomous Organization (DAO)?
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school actionable
+:END:
+
+** DONE reading [[https://kriptomat.io/cryptocurrencies/aragon/what-is-aragon/][What is cryptocurrency Aragon and how does it work?]]
+CLOSED: [2022-03-23 Wed 10:30]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-23 Wed 10:35
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Blockchain/tasks/actionable/Do a presentation and research on Decentralized Autonomous Organization (DAO)?
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school actionable
+:END:
+In DAO goverance system, to make a decision, one must call for a "court", called "Aragon Network Juror (ANJ)". To form a court, deposite of ANT coint is required.
+
+** DONE Do a presentation and research on Decentralized Autonomous Organization (DAO)?
+CLOSED: [2022-04-05 Tue 08:58]
+:PROPERTIES:
+:ID:       b1d3ac62-8b48-4ac8-9df2-21e83295cfbb
+:ARCHIVE_TIME: 2022-04-05 Tue 08:58
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Blockchain/tasks/actionable
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school actionable
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-18 Fri 14:09]--[2022-03-18 Fri 14:31] =>  0:22
+CLOCK: [2022-03-15 Tue 13:14]--[2022-03-15 Tue 13:36] =>  0:22
+CLOCK: [2022-03-14 Mon 22:50]--[2022-03-14 Mon 23:27] =>  0:37
+CLOCK: [2022-03-14 Mon 22:45]--[2022-03-14 Mon 22:46] =>  0:01
+CLOCK: [2022-03-14 Mon 22:30]--[2022-03-14 Mon 22:45] =>  0:15
+CLOCK: [2022-03-14 Mon 22:01]--[2022-03-14 Mon 22:22] =>  0:21
+CLOCK: [2022-03-14 Mon 20:03]--[2022-03-14 Mon 21:09] =>  1:06
+CLOCK: [2022-03-14 Mon 15:42]--[2022-03-14 Mon 15:56] =>  0:14
+CLOCK: [2022-03-14 Mon 15:23]--[2022-03-14 Mon 15:39] =>  0:16
+CLOCK: [2022-03-13 Sun 21:46]--[2022-03-13 Sun 21:49] =>  0:03
+:END:
+*** NOTE
+**** list of DAO to look at
+:PROPERTIES:
+:ID:       55ad3292-d4bf-4c7e-82c9-7f343584bdea
+:END:
+**** Kleros
+**** Componund
+**** DXdao
+**** PrimeDAO
+**** lexDAO
+**** Raid guild
+**** 1Hive
+**** Audius
+**** Gnosis
+**** DAOstack
+:PROPERTIES:
+:ID:       55ad3292-d4bf-4c7e-82c9-7f343584bdea
+:END:
+**** Curve
+**** Kleros
+**** Componund
+**** DXdao
+**** PrimeDAO
+**** lexDAO
+**** Raid guild
+**** 1Hive
+**** Audius
+**** Gnosis
+:PROPERTIES:
+:ID:       2b9f34be-b028-4416-b009-c7294e4f3cce
+:END:
+**** DAOstack
+*** reading [[https://roamresearch.com/#/app/AdaptiveGraphStucture/page/oaDQO96Zk][Decentralized Autonomous Organizations on Blockchain: Analysis and visualization]]
+*** reading [[https://medium.com/daostack/voting-options-in-daos-b86e5c69a3e3][Voting Options in DAOs]]
+**** Token based quorum voting
+**** Holographic Consensus
+**** Permissioned relative majority (Moloch DAOs)
+**** Conviction Voting
+**** The multisig
+**** Colony's "Lazy Consensus"
+*** reading Aragon Voting app [[cite:&cuende2017aragon]]
+
+** work on quiz 3.
+:PROPERTIES:
+:NOBLOCKING: t
+:REPEAT_TO_STATE: TODO
+:LAST_REPEAT: [2022-03-02 Wed 16:37]
+:ARCHIVE_TIME: 2022-04-08 Fri 12:39
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Scala/Task/incubation
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_ITAGS: WORK @school incubation
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-17 Thu 02:05]--[2022-03-17 Thu 02:23] =>  0:18
+CLOCK: [2022-03-16 Wed 21:47]--[2022-03-17 Thu 02:05] =>  4:18
+CLOCK: [2022-03-16 Wed 20:15]--[2022-03-16 Wed 20:44] =>  0:29
+CLOCK: [2022-03-16 Wed 17:04]--[2022-03-16 Wed 19:18] =>  2:14
+CLOCK: [2022-03-16 Wed 16:31]--[2022-03-16 Wed 16:44] =>  0:13
+CLOCK: [2022-03-16 Wed 15:58]--[2022-03-16 Wed 16:12] =>  0:14
+CLOCK: [2022-03-16 Wed 15:44]--[2022-03-16 Wed 15:57] =>  0:13
+CLOCK: [2022-03-16 Wed 15:17]--[2022-03-16 Wed 15:44] =>  0:27
+CLOCK: [2022-03-16 Wed 14:37]--[2022-03-16 Wed 14:55] =>  0:18
+CLOCK: [2022-03-16 Wed 14:30]--[2022-03-16 Wed 14:37] =>  0:07
+- State "DONE"       from "TODO"       [2022-03-02 Wed 16:37]
+- State "DONE"       from "TODO"       [2022-03-02 Wed 16:26]
+:END:
+
+** DONE do all scala anki card.
+CLOSED: [2022-04-13 Wed 14:45] SCHEDULED: <2022-04-13 Wed>
+:PROPERTIES:
+:ID:       985f9875-6f3a-4bd9-a9ab-23993d811faf
+:ARCHIVE_TIME: 2022-04-13 Wed 14:45
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Scala/Task/actionable
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school actionable
+:END:
+[2022-04-12 Tue 16:22]
+[[file:~/org/life.org::*30 mins of picking actionable task and do them.][30 mins of picking actionable task and do them.]]
+
+** DONE watch 1 and make Anki blockchain lecture of 1 of the quiz.
+CLOSED: [2022-04-14 Thu 19:09] SCHEDULED: <2022-04-13 Wed>
+:PROPERTIES:
+:ID:       7680ec34-25f8-497c-bf4d-f86fd6b168a1
+:ARCHIVE_TIME: 2022-04-14 Thu 19:09
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Blockchain/tasks/actionable
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school actionable
+:END:
+[2022-04-12 Tue 16:23]
+[[file:~/org/refile.org][file:~/org/refile.org]]
+
+** CANCELLED work on quiz 3. :CANCELLED:
+CLOSED: [2022-04-14 Thu 19:10] DEADLINE: <2022-04-10 Sun>
+:PROPERTIES:
+:NOBLOCKING: t
+:REPEAT_TO_STATE: TODO
+:LAST_REPEAT: [2022-03-02 Wed 16:37]
+:ARCHIVE_TIME: 2022-04-14 Thu 19:10
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Scala/Task/actionable
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: WORK @school actionable
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from "TODO"       [2022-04-14 Thu 19:10] \\
+  I failed to manage time propertly. so I decided to not do it.
+CLOCK: [2022-03-17 Thu 02:05]--[2022-03-17 Thu 02:23] =>  0:18
+CLOCK: [2022-03-16 Wed 21:47]--[2022-03-17 Thu 02:05] =>  4:18
+CLOCK: [2022-03-16 Wed 20:15]--[2022-03-16 Wed 20:44] =>  0:29
+CLOCK: [2022-03-16 Wed 17:04]--[2022-03-16 Wed 19:18] =>  2:14
+CLOCK: [2022-03-16 Wed 16:31]--[2022-03-16 Wed 16:44] =>  0:13
+CLOCK: [2022-03-16 Wed 15:58]--[2022-03-16 Wed 16:12] =>  0:14
+CLOCK: [2022-03-16 Wed 15:44]--[2022-03-16 Wed 15:57] =>  0:13
+CLOCK: [2022-03-16 Wed 15:17]--[2022-03-16 Wed 15:44] =>  0:27
+CLOCK: [2022-03-16 Wed 14:37]--[2022-03-16 Wed 14:55] =>  0:18
+CLOCK: [2022-03-16 Wed 14:30]--[2022-03-16 Wed 14:37] =>  0:07
+- State "DONE"       from "TODO"       [2022-03-02 Wed 16:37]
+- State "DONE"       from "TODO"       [2022-03-02 Wed 16:26]
+:END:
+
+** TODO watch all database lecture and make notes
+:PROPERTIES:
+:ID:       36794bab-cb87-4c3e-bdb5-e5bcbe757686
+:ARCHIVE_TIME: 2022-04-19 Tue 07:50
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Database/Task/actionable
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: TODO
+:ARCHIVE_ITAGS: WORK @school actionable
+:END:
+[2022-04-12 Tue 16:25]
+[[file:~/org/refile.org][file:~/org/refile.org]]
+
+** DONE watch all database lecture and make notes
+CLOSED: [2022-04-19 Tue 07:50]
+:PROPERTIES:
+:ID:       36794bab-cb87-4c3e-bdb5-e5bcbe757686
+:ARCHIVE_TIME: 2022-04-19 Tue 07:50
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Database/Task/actionable
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school actionable
+:END:
+[2022-04-12 Tue 16:25]
+[[file:~/org/refile.org][file:~/org/refile.org]]
+
+** CANCELLED make anki card of chapter 6 and 7. :CANCELLED:
+CLOSED: [2022-04-19 Tue 08:07]
+:PROPERTIES:
+:ID:       8d51d491-d56a-46ca-b1b3-4750da3ec517
+:ARCHIVE_TIME: 2022-04-19 Tue 08:08
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Scala/Task/actionable
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: WORK @school actionable
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from "TODO"       [2022-04-19 Tue 08:07]
+:END:
+[2022-04-12 Tue 16:26]
+[[file:~/org/refile.org][file:~/org/refile.org]]
+
+** CANCELLED work on homework 4. :CANCELLED:
+CLOSED: [2022-04-19 Tue 07:51] DEADLINE: <2022-04-10 Sun>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-19 Tue 08:08
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Scala/Task/actionable
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: WORK @school actionable
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from "TODO"       [2022-04-19 Tue 07:51] \\
+  I skipped this homework completely
+:END:
+
+** DONE read database paper and make a slide answering 6 major questions
+CLOSED: [2022-04-27 Wed 12:18]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-27 Wed 12:18
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Database/Task/actionable
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school database actionable
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-21 Thu 16:05]--[2022-04-21 Thu 16:06] =>  0:01
+CLOCK: [2022-04-21 Thu 14:50]--[2022-04-21 Thu 15:33] =>  0:43
+CLOCK: [2022-04-21 Thu 14:10]--[2022-04-21 Thu 14:37] =>  0:27
+CLOCK: [2022-04-21 Thu 13:36]--[2022-04-21 Thu 14:08] =>  0:32
+CLOCK: [2022-04-21 Thu 12:51]--[2022-04-21 Thu 13:23] =>  0:32
+CLOCK: [2022-04-21 Thu 12:09]--[2022-04-21 Thu 12:41] =>  0:32
+CLOCK: [2022-04-21 Thu 10:51]--[2022-04-21 Thu 11:40] =>  0:49
+CLOCK: [2022-04-21 Thu 01:40]--[2022-04-21 Thu 02:47] =>  1:07
+CLOCK: [2022-04-20 Wed 20:26]--[2022-04-20 Wed 22:32] =>  2:06
+CLOCK: [2022-04-20 Wed 17:53]--[2022-04-20 Wed 18:52] =>  0:59
+CLOCK: [2022-04-20 Wed 15:00]--[2022-04-20 Wed 17:53] =>  2:53
+CLOCK: [2022-04-20 Wed 14:42]--[2022-04-20 Wed 15:11] =>  0:29
+CLOCK: [2022-04-20 Wed 13:59]--[2022-04-20 Wed 14:38] =>  0:39
+CLOCK: [2022-04-20 Wed 13:55]--[2022-04-20 Wed 13:58] =>  0:03
+CLOCK: [2022-04-20 Wed 12:00]--[2022-04-20 Wed 12:42] =>  0:42
+:END:
+<2022-04-19 Tue>
+DEADLINE: <2022-04-25 Mon>
+:PROPERTIES:
+:Effort:   7:00
+:END:
+According to [[https://canvas.fau.edu/courses/118054/discussion_topics/1146039][Accounement about extra credit]], Prof. Yang states.
+#+BEGIN_QUOTE
+Make presentation slides based on six questions and record your presentation given 15-20 mins. You can share the recorded presentation using Youtube or Google Drive by April 21 (Thursday).
+#+END_QUOTE
+- I can upload it to Youtube or Google drive. The upload must be done before deadline.
+- list of paper to select from is [[https://faculty.eng.fau.edu/yangk/COP6731/papers.html][here]].
+- Information related to extra credit is [[https://canvas.fau.edu/courses/118054/pages/introduction-slash-relational-data-model?module_item_id=3007020][here]].
+- 6 question to answer can be found [[https://canvas.fau.edu/courses/118054/pages/introduction-slash-relational-data-model?module_item_id=3007020][here]].
+*** reading Paper: [[https://www.semanticscholar.org/paper/Anatomy-of-a-Database-System-Hellerstein-Stonebraker/acf0f99dd4bbcbf7049b787e10cb538c620ed110][Anatomy of a Database system.]] (10 percent extra credit)
+:PROPERTIES:
+:Effort:   3:00
+:END:
+*** [[https://dl.acm.org/doi/pdf/10.1145/248603.248616][An Overview of Data Warehousing and OLAP Technology.]]
+
+** DONE watch blockchain lectures and evaluate presentation.
+CLOSED: [2022-05-05 Thu 01:36]
+:PROPERTIES:
+:Effort:   5:00
+:ID:       6aa69e18-5842-4f9f-a57b-50e583464e27
+:ARCHIVE_TIME: 2022-05-05 Thu 01:36
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Blockchain/tasks/actionable
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school blockchain actionable
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-19 Tue 10:03]--[2022-04-19 Tue 10:04] =>  0:01
+:END:
+[2022-04-19 Tue 10:03]
+
+** DONE write paper on mechanism of tokenization in DAO paper.
+CLOSED: [2022-05-05 Thu 01:37]
+:PROPERTIES:
+:Effort:   10:00
+:ID:       49e43e18-70cc-471c-b389-3c5f61fb1364
+:ARCHIVE_TIME: 2022-05-05 Thu 01:37
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Blockchain/tasks/actionable
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school blockchain actionable
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-24 Sun 20:47]--[2022-04-24 Mon 23:00] =>  2:13
+CLOCK: [2022-04-24 Sun 20:45]--[2022-04-24 Sun 20:46] =>  0:01
+CLOCK: [2022-04-24 Sun 19:00]--[2022-04-24 Sun 20:23] =>  1:23
+CLOCK: [2022-04-24 Sun 17:20]--[2022-04-24 Sun 18:39] =>  1:19
+CLOCK: [2022-04-24 Sun 17:08]--[2022-04-24 Sun 17:14] =>  0:06
+CLOCK: [2022-04-24 Sun 15:04]--[2022-04-24 Sun 16:57] =>  1:53
+CLOCK: [2022-04-24 Sun 12:41]--[2022-04-24 Sun 13:21] =>  0:40
+CLOCK: [2022-04-24 Sun 11:35]--[2022-04-24 Sun 12:35] =>  1:00
+CLOCK: [2022-04-23 Sat 15:24]--[2022-04-23 Sat 16:03] =>  0:39
+CLOCK: [2022-04-23 Sat 15:00]--[2022-04-23 Sat 15:24] =>  0:24
+CLOCK: [2022-04-23 Sat 11:06]--[2022-04-23 Sat 12:52] =>  1:46
+CLOCK: [2022-04-22 Fri 22:09]--[2022-04-22 Fri 23:32] =>  1:23
+CLOCK: [2022-04-22 Fri 19:57]--[2022-04-22 Fri 21:30] =>  1:33
+CLOCK: [2022-04-22 Fri 09:01]--[2022-04-22 Fri 09:12] =>  0:11
+CLOCK: [2022-04-22 Fri 08:30]--[2022-04-22 Fri 09:01] =>  0:31
+CLOCK: [2022-04-21 Thu 20:08]--[2022-04-21 Thu 21:39] =>  1:31
+CLOCK: [2022-04-19 Tue 19:46]--[2022-04-19 Tue 20:03] =>  0:17
+CLOCK: [2022-04-19 Tue 18:55]--[2022-04-19 Tue 19:06] =>  0:11
+CLOCK: [2022-04-19 Tue 18:45]--[2022-04-19 Tue 18:54] =>  0:09
+CLOCK: [2022-04-19 Tue 14:23]--[2022-04-19 Tue 14:25] =>  0:02
+CLOCK: [2022-04-19 Tue 14:13]--[2022-04-19 Tue 14:19] =>  0:06
+CLOCK: [2022-04-19 Tue 14:11]--[2022-04-19 Tue 14:12] =>  0:01
+CLOCK: [2022-04-19 Tue 14:05]--[2022-04-19 Tue 14:06] =>  0:01
+CLOCK: [2022-04-19 Tue 10:05]--[2022-04-19 Tue 10:06] =>  0:01
+:END:
+[2022-04-19 Tue 10:05]
+
+** CANCELLED Self Evaluation (Your Paper will not be graded without this) see [[https://canvas.fau.edu/courses/118725/assignments/1338228][here]]. :CANCELLED:
+CLOSED: [2022-05-05 Thu 01:38] DEADLINE: <2022-05-06 Fri>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-05-05 Thu 01:40
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Blockchain/incubation
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: WORK @school blockchain incubation
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from              [2022-05-05 Thu 01:38]
+:END:
+
+** CANCELLED Peer Evaluation (Your Paper will not be graded without this), see [[https://canvas.fau.edu/courses/118725/assignments/1338227][here]]. :CANCELLED:
+CLOSED: [2022-05-05 Thu 01:38] DEADLINE: <2022-05-06 Fri>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-05-05 Thu 01:40
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Blockchain/incubation
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: WORK @school blockchain incubation
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from              [2022-05-05 Thu 01:38]
+:END:
+
+** DONE check canvas daily.
+CLOSED: [2022-05-05 Thu 01:42]
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: NEXT
+:LAST_REPEAT: [2022-04-19 Tue 08:40]
+:ARCHIVE_TIME: 2022-05-05 Thu 01:42
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Blockchain/habit
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school blockchain habit
+:END:
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-04-19 Tue 08:40]
+- State "DONE"       from "NEXT"       [2022-04-19 Tue 08:25]
+- State "DONE"       from "NEXT"       [2022-04-14 Thu 19:13]
+- State "DONE"       from "NEXT"       [2022-04-13 Wed 15:44]
+- State "DONE"       from "NEXT"       [2022-04-12 Tue 14:16]
+- State "DONE"       from "NEXT"       [2022-04-11 Mon 14:37]
+- State "DONE"       from "NEXT"       [2022-04-10 Sun 19:56]
+- State "DONE"       from "TODO"       [2022-04-09 Sat 11:35]
+:END:
+
+** CANCELLED Blockchain :blockchain:CANCELLED:
+CLOSED: [2022-05-05 Thu 01:42]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-05-05 Thu 01:43
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: WORK @school
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from              [2022-05-05 Thu 01:42] \\
+  I have completed 2020 spring blockchain course.
+:END:
+*** Notes :NOTE:
+*** Questions :QUESTION:
+*** Meeting :MEETING:
+:PROPERTIES:
+:ID:       f0bbb39d-a82d-44e6-ae59-7f92ee1479dc
+:END:
+*** habit :habit:
+:PROPERTIES:
+:ID:       2297ac57-5879-4767-b34f-7b6645c01d1b
+:END:
+*** Schedule
+**** recurring :recurring:
+:PROPERTIES:
+:ID:       17ca66e1-93bb-4859-a377-1d3ba342499c
+:END:
+***** blockchain class: schedule class is on wed and friday 2 - 3.30pm
+***** blockchain class: schedule class is on wed and friday 2 - 3.30pm
+***** blockchain class: office hours is 4.30pm - 530 pm wednesady, 11:00 am- 12.30 pm fridays.
+***** blockchain class: office hours is 4.30pm - 530 pm wednesady, 11:00 am- 12.30 pm fridays.
+**** non-recurring :nonrecurring:
+***** Final paper dealine
+****** self evaluation (your paper will not be graded without this)
+link is [[https://canvas.fau.edu/courses/118725/assignments/1338228][here]].
+****** complete peer evaluation (Your Paper will not be graded without this)
+link is [[https://canvas.fau.edu/courses/118725/assignments/1338227][here]].
+*** tasks
+**** actionable :actionable:
+*** incubation :incubation:
+
+** CANCELLED make notes on all of the scala hw solution. :CANCELLED:
+CLOSED: [2022-05-05 Thu 01:43]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-05-05 Thu 01:44
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Scala/Task/actionable
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: WORK @school scala actionable
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from "TODO"       [2022-05-05 Thu 01:43]
+:END:
+[2022-03-01 Tue 19:38]
+[[file:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/hws/hw_1 solution.org::*p 4][p 4]]
+
+** CANCELLED study scala hw5 5 hr (include making card) :CANCELLED:
+CLOSED: [2022-05-05 Thu 01:44]
+:PROPERTIES:
+:Effort:   5:00
+:ID:       e797912a-39c8-441c-9f1e-7967de9347db
+:ARCHIVE_TIME: 2022-05-05 Thu 01:44
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Scala/Task/actionable
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: WORK @school scala actionable
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from "NEXT"       [2022-05-05 Thu 01:44]
+CLOCK: [2022-04-19 Tue 11:13]--[2022-04-19 Tue 13:54] =>  2:41
+CLOCK: [2022-04-19 Tue 10:48]--[2022-04-19 Tue 11:11] =>  0:23
+:END:
+[2022-04-19 Tue 10:02]
+[[file:~/org/notes/emacs/modes/org-mode-note.org::*types of header parameters][types of header parameters]]
+
+** CANCELLED work on scala hw5 :CANCELLED:
+CLOSED: [2022-05-05 Thu 01:44]
+:PROPERTIES:
+:Effort:   10:00
+:ID:       bad3b435-bae8-4e4b-8acb-ab91ef3ee006
+:ARCHIVE_TIME: 2022-05-05 Thu 01:44
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Scala/Task/actionable
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: WORK @school scala actionable
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from "TODO"       [2022-05-05 Thu 01:44]
+CLOCK: [2022-04-19 Tue 10:02]--[2022-04-19 Tue 10:03] =>  0:01
+:END:
+[2022-04-19 Tue 10:02]
+
+** CANCELLED study for final database material. :CANCELLED:
+CLOSED: [2022-05-05 Thu 01:44]
+:PROPERTIES:
+:Effort:   5:00
+:ID:       07378299-92b0-4069-85f3-21701e86a726
+:ARCHIVE_TIME: 2022-05-05 Thu 01:44
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Scala/Task/actionable
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: WORK @school scala actionable
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from "TODO"       [2022-05-05 Thu 01:44]
+CLOCK: [2022-04-19 Tue 10:06]--[2022-04-19 Tue 10:07] =>  0:01
+:END:
+[2022-04-19 Tue 10:06]
+
+** CANCELLED final exam. :CANCELLED:
+CLOSED: [2022-05-05 Thu 01:44] DEADLINE: <2022-04-29 Fri>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-05-05 Thu 01:44
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Scala/Task/incubation
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: WORK @school scala incubation
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from              [2022-05-05 Thu 01:44]
+:END:
+
+** CANCELLED scala homework 5 :CANCELLED:
+CLOSED: [2022-05-05 Thu 01:45] DEADLINE: <2022-04-28 Thu>
+:PROPERTIES:
+:Effort:   1:00
+:ARCHIVE_TIME: 2022-05-05 Thu 01:45
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Scala/Schedule/non-recurring
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: WORK @school scala nonrecurring
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from              [2022-05-05 Thu 01:45]
+CLOCK: [2022-04-19 Tue 10:47]--[2022-04-19 Tue 10:48] =>  0:01
+:END:
+
+** CANCELLED scala final exam :CANCELLED:
+CLOSED: [2022-05-05 Thu 01:45] SCHEDULED: <2022-04-29 Fri>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-05-05 Thu 01:45
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Scala/Schedule/non-recurring
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: WORK @school scala nonrecurring
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from              [2022-05-05 Thu 01:45]
+:END:
+
+** DONE Scala :scala:
+CLOSED: [2022-05-05 Thu 01:46]
+:PROPERTIES:
+:ID:       72b06f44-5a2b-4df0-a281-a9b19000500d
+:ARCHIVE_TIME: 2022-05-05 Thu 01:46
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school
+:END:
+*** Notes :NOTE:
+*** Questions :QUESTION:
+*** Meeting :MEETING:
+*** Schedule
+**** recurring :recurring:
+***** class is 9.30am to 10.50am (Tuesday). classroom is at CM128.
+***** class is 9.30am to 10.50am (Thrusday). classroom is at CM128.
+***** office hours: Tue 11 am to 12.30 am.
+***** office hours: Thu 11 am to 12.30 am.
+**** non-recurring :nonrecurring:
+:PROPERTIES:
+:ID:       7a4ccfc2-a911-4947-a1e7-af48268a7393
+:END:
+*** Task
+**** actionable :actionable:
+**** incubation :incubation:
+
+** CANCELLED setup sql IDE environemnt in emac, (see [[https://arjanvandergaag.nl/blog/using-emacs-as-a-database-client.html][Using emacs as a database client]]) :CANCELLED:
+CLOSED: [2022-05-05 Thu 01:46]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-05-05 Thu 01:46
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Database/Task/incubation
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: WORK @school database incubation
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from              [2022-05-05 Thu 01:46]
+CLOCK: [2022-02-28 Mon 08:41]--[2022-02-28 Mon 08:42] =>  0:01
+:END:
+[2022-02-28 Mon 08:41]
+[[file:~/.doom.d/init.el::;;crystal ; ruby at the speed of c]]
+
+** CANCELLED create database from the fundamental-of-database-systems book, and practice by query from it. :CANCELLED:
+CLOSED: [2022-05-05 Thu 01:46]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-05-05 Thu 01:46
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Database/Task/incubation
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: WORK @school database incubation
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from              [2022-05-05 Thu 01:46]
+:END:
+[2022-03-01 Tue 00:00]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*Q16B:][Q16B:]]
+
+** CANCELLED install erd ([[https://github.com/BurntSushi/erd][here]]) to use it for ER diagram stuff. :CANCELLED:
+CLOSED: [2022-05-05 Thu 01:46]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-05-05 Thu 01:47
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Database/Task/incubation
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: WORK @school database incubation
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from              [2022-05-05 Thu 01:46]
+CLOCK: [2022-02-24 Thu 18:07]--[2022-02-24 Thu 18:10] =>  0:03
+:END:
+[2022-02-24 Thu 18:07]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*Chapter 6 Basic SQL][Chapter 6 Basic SQL]]
+
+** CANCELLED set up SQL ide and er diagram in emacs. :CANCELLED:
+CLOSED: [2022-05-05 Thu 01:47]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-05-05 Thu 01:47
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Database/Task/incubation
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: WORK @school database incubation
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from              [2022-05-05 Thu 01:47]
+:END:
+[2022-02-24 Thu 22:56]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*domain defines all possible values for attribute.][domain defines all possible values for attribute.]]
+
+** CANCELLED learn artist mode enough to use ditaa to draw graph. :CANCELLED:
+CLOSED: [2022-05-05 Thu 01:47]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-05-05 Thu 01:47
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_OLPATH: School/Database/Task/incubation
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: WORK @school database incubation
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from              [2022-05-05 Thu 01:47]
+:END:
+[2022-02-26 Sat 17:14]
+[[file:~/org/projects/sideprojects/pen.org::*write out business plan required for me to execute pen.el start up plan. what does a founder need to know before starting a company? how to estimate value of the business? what is the time horizon (can I start doing it before starting the summer)? what do I need to know because deciding on the amount of money that pen.el need to continue the project?][write out business plan required for me to execute pen.el start up plan. what does a founder need to know before starting a company? how to estimate value of the business? what is the time horizon (can I start doing it before starting the summer)? what do I need to know because deciding on the amount of money that pen.el need to continue the project?]]
+*** figure out where ditaa.jar is installed (https://emacs.stackexchange.com/questions/20731/setting-up-ditaa-in-org-mode). Then follow norang setup. (http://doc.norang.ca/org-mode.html#Publishing)
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 17:35]--[2022-02-26 Sat 17:38] =>  0:03
+:END:
+[2022-02-26 Sat 17:35]
+[[file:~/org/projects/sideprojects/garun/garun.org::*Notes][Notes]]
+
+** DONE School
+CLOSED: [2022-05-05 Thu 01:47]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-05-05 Thu 01:47
+:ARCHIVE_FILE: ~/org/school.org
+:ARCHIVE_CATEGORY: school
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: WORK @school
+:END:
+*** Database :database:
+:PROPERTIES:
+:ID:       84a45491-4084-416e-85d0-f3a14046c0a0
+:END:
+**** Notes :NOTE:
+**** Questions :QUESTION:
+**** Meeting :MEETING:
+**** Schedule
+***** recurring :recurring:
+****** class is Wednesday 12.30 to 2.15. Classroom is at ???.
+****** class is Friday 12.30 to 2.15. Classroom is at ???.
+****** database office hours if Tue 4.00pm and 5.30pm.
+****** database office hours on Thu 4.00pm and 5.30pm.
+***** non-recurring :nonrecurring:
+****** database final exam
+You can take the exam twice and the last attempt will be graded. For more information about final see [[https://canvas.fau.edu/courses/118054/discussion_topics/1154530][this link]]
+****** Discuss about "Anatomy of database system" with Ming
+
+**** Task
+***** actionable :actionable:
+:PROPERTIES:
+:ID:       d5c451af-3440-404f-839a-349f17e1d362
+:END:
+***** incubation :incubation:
+****** publish all practice database homework on my site. (just the one that is informative)

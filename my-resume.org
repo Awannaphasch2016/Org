@@ -4,6 +4,7 @@
 #+LANGUAGE: en
 #+SELECT_TAGS: export
 #+OPTIONS: toc:nil title:nil H:1
+#+LATEX_CLASS: altacv
 #+LATEX_HEADER: \columnratio{0.6} % Set the left/right column width ratio to 6:4.
 #+MACRO: cvevent \cvevent{$1}{$2}{$3}{$4}
 #+MACRO: cvachievement \cvachievement{$1}{$2}{$3}{$4}
@@ -30,6 +31,9 @@
 ** Macros
 * CV Header
 ** Photo & Tagline
+:PROPERTIES:
+:ID:       93c7075b-d316-45b6-84d9-46f941349d9d
+:END:
 #+BEGIN_SRC latex
 \name{Aidan Scannell}
 % \photoR{2.8cm}{aidan_portrait.jpeg}

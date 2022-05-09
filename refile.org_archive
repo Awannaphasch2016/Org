@@ -120,3 +120,349 @@ CLOSED: [2022-03-03 Thu 04:02]
 :END:
 [2022-02-28 Mon 17:06]
 [[file:~/org/todo.org::*House maintenance][House maintenance]]
+
+** PHONE chat with iyann:PHONE:
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-04 Fri 01:20
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: PHONE
+:ARCHIVE_ITAGS: REFILE
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-03 Thu 13:51]--[2022-03-03 Thu 13:52] =>  0:01
+:END:
+[2022-03-03 Thu 13:51]
+
+** DONE config latex for emacs
+CLOSED: [2022-03-03 Thu 18:49]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-04 Fri 01:21
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: REFILE
+:END:
+[2022-03-03 Thu 18:44]
+[[file:~/org/notes/emacs/modes/org-mode-note.org::*categories vs tags.][categories vs tags.]]
+
+** DONE figure out how to define comment for dot language in org-babel
+CLOSED: [2022-03-04 Fri 01:22]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-04 Fri 01:22
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: REFILE
+:END:
+[2022-03-03 Thu 19:46]
+[[file:~/org/notes/diagrams/dot-note.org::*Example][Example]]
+
+** DONE work on adam's website
+CLOSED: [2022-03-14 Mon 15:41]
+:PROPERTIES:
+:ID:       855fce95-2520-4697-8c6b-35755f8dad8a
+:ARCHIVE_TIME: 2022-03-18 Fri 13:53
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: ???
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: REFILE
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-14 Mon 15:41]--[2022-03-14 Mon 15:42] =>  0:01
+CLOCK: [2022-03-14 Mon 15:40]--[2022-03-14 Mon 15:41] =>  0:01
+:END:
+[2022-03-14 Mon 15:40]
+[[file:~/org/notes/blockchains/blockchain-note.org::*How long does it takes for bitcoin to generate collision crash?][How long does it takes for bitcoin to generate collision crash?]]
+
+** DONE clean my cloth
+CLOSED: [2022-04-15 Fri 09:34] SCHEDULED: <2022-04-14 Thu>
+:PROPERTIES:
+:ID:       13471416-2f56-45da-a5d2-16ba41951d40
+:ARCHIVE_TIME: 2022-04-15 Fri 09:34
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: REFILE
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-14 Thu 20:18]--[2022-04-14 Thu 20:19] =>  0:01
+:END:
+[2022-04-14 Thu 20:18]
+[[file:~/org/contacts.org::*emails: hello@syndicate.io][emails: hello@syndicate.io]]
+
+** DONE call adam for oppotunity (he mentioned it)
+CLOSED: [2022-04-15 Fri 09:34] SCHEDULED: <2022-04-14 Thu>
+:PROPERTIES:
+:ID:       de7bb9b4-cc46-4321-8048-1a78690ff8c6
+:ARCHIVE_TIME: 2022-04-15 Fri 09:34
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: REFILE
+:END:
+[2022-04-14 Thu 19:37]
+[[file:~/org/contacts.org::*report suspicious activity: 800-432-1000][report suspicious activity: 800-432-1000]]
+
+** DONE add dao the rabbithole weekly schedule in my agenda
+CLOSED: [2022-04-19 Tue 10:08]
+:PROPERTIES:
+:ID:       615298ee-3318-485d-aebe-7aa497b88403
+:ARCHIVE_TIME: 2022-04-19 Tue 10:08
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: REFILE
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-15 Fri 19:01]--[2022-04-15 Fri 19:02] =>  0:01
+:END:
+[2022-04-15 Fri 19:01]
+[[file:~/org/projects/sideprojects/pen.org::*Habits][Habits]]
+
+** DONE tell my parents that my scholarship is expired. fall. So I have to pay around 12k for the two semesters.
+CLOSED: [2022-04-19 Tue 10:19]
+:PROPERTIES:
+:ID:       f454f2d9-e8dc-45e8-aedb-3296e86175f8
+:ARCHIVE_TIME: 2022-04-19 Tue 10:19
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: REFILE
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-16 Sat 09:18]--[2022-04-16 Sat 09:19] =>  0:01
+:END:
+[2022-04-16 Sat 09:18]
+[[file:~/org/notes/blockchains/blockchain-note.org::*How to calculate profit from mining?][How to calculate profit from mining?]]
+
+** CANCELLED wait for lyaan venmo address so I can send 7.26 lyft to lyaan :CANCELLED:
+CLOSED: [2022-04-19 Tue 10:38]
+:PROPERTIES:
+:ID:       aa3b0303-2d6e-4cd2-911b-06fe8c74b0ac
+:ARCHIVE_TIME: 2022-04-19 Tue 10:38
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: REFILE
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from "WAITING"    [2022-04-19 Tue 10:38]
+- State "WAITING"    from "TODO"       [2022-04-19 Tue 10:17] \\
+  wait for this reply on whatsapp
+CLOCK: [2022-04-19 Tue 10:15]--[2022-04-19 Tue 10:17] =>  0:02
+:END:
+[2022-04-19 Tue 10:15]
+[[file:~/org/finance/ledger.org::*4: April][4: April]]
+
+** CANCELLED fix scala cisco problem :CANCELLED:
+CLOSED: [2022-05-05 Thu 02:56]
+:PROPERTIES:
+:ID:       119129fa-09f6-4302-89ec-46e3d131b4ef
+:ARCHIVE_TIME: 2022-05-05 Thu 02:56
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: REFILE
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from "TODO"       [2022-05-05 Thu 02:56]
+CLOCK: [2022-04-19 Tue 11:11]--[2022-04-19 Tue 11:13] =>  0:02
+:END:
+[2022-04-19 Tue 11:11]
+[[file:~/org/school.org::*scala final exam][scala final exam]]
+
+see email sent to Dr Ionut Cardei, [[https://canvas.fau.edu/conversations#filter=type=inbox][email title "Cannot join provided cisco link"]]
+
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220419_111153.png]]
+
+** CANCELLED TEC orientation call on <2022-05-05 Thu 13:00> :CANCELLED:
+CLOSED: [2022-05-05 Thu 03:04]
+:PROPERTIES:
+:ID:       cb3c3a4a-0ecd-41b2-9506-f8b697d33fdd
+:ARCHIVE_TIME: 2022-05-05 Thu 03:04
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: REFILE
+:END:
+:LOGBOOK:
+CLOCK: [2022-05-04 Wed 01:50]--[2022-05-04 Wed 01:54] =>  0:04
+:END:
+[2022-05-04 Wed 01:49]
+
+** CANCELLED implement 1 of the mev longtail strat. :CANCELLED:
+CLOSED: [2022-05-05 Thu 03:06]
+:PROPERTIES:
+:ID:       1b07d37b-bd14-4658-9c08-9cc6d03c3bad
+:ARCHIVE_TIME: 2022-05-05 Thu 03:06
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: REFILE
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from "DONE"       [2022-05-05 Thu 03:06]
+:END:
+[2022-05-01 Sun 21:41]
+
+** DONE tags Megi on the post about meme metrics.
+CLOSED: [2022-05-05 Thu 03:19] SCHEDULED: <2022-05-01 Sun>
+:PROPERTIES:
+:ID:       c103da10-3b76-4fe1-8e7b-7b3a8aadfda7
+:ARCHIVE_TIME: 2022-05-05 Thu 03:19
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: REFILE
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-30 Sat 13:23]--[2022-04-30 Sat 13:25] =>  0:02
+:END:
+[2022-04-30 Sat 13:23]
+
+@evolve from RH suggests to me that I should send message to member with Megi  regarding my comment on meme evaluation metrics for the community  the message is copied and pasted below.
+
+```
+suggestion of way to evaluate meme is "circulation of active token," "distribution of participate activity per day/week/month," "ratio of active members," "rate of new members gains per day/week/month," "distribution of number of maximum actives days of users," "distribution of days users have joined the community," "How long does it take a new member to be active if at all."   Without a way to measure a system, one can't design a way to improve the system. In this case, we want to grow a community, so we need to measure meme activity.
+
+"you can't improve what you don't measure" -- Peter Drucker
+```
+
+There are around 3000+ members. I am now at lv 5 and rank358. almost top 10 percent and I barely know anything about RH at all. just really started. This raise a question of how many active members really is.
+
+** CANCELLED with  Alokik Bhasin from skout. A w3 recruite team :MEETING:CANCELLED:
+SCHEDULED: <2022-05-01 Sun 13:00>
+:PROPERTIES:
+:ID:       cacaf020-a183-4c8e-83be-f88a07330a5e
+:ARCHIVE_TIME: 2022-05-05 Thu 03:19
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: REFILE
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from "MEETING"    [2022-05-05 Thu 03:19]
+CLOCK: [2022-04-30 Sat 11:45]--[2022-04-30 Sat 11:46] =>  0:01
+:END:
+[2022-04-30 Sat 11:45]
+
+** check out typeform to make survey question.
+:PROPERTIES:
+:ID:       c0e43d12-085a-4f24-8372-63bcb5ddd782
+:ARCHIVE_TIME: 2022-05-05 Thu 03:19
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_ITAGS: REFILE
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-30 Sat 11:36]--[2022-04-30 Sat 11:37] =>  0:01
+:END:
+[2022-04-30 Sat 11:36]
+[[file:~/org/notes/blockchains/blockchain-note.org::*demand mechanism][demand mechanism]]
+
+** CANCELLED label anki flashcard :CANCELLED:
+CLOSED: [2022-05-05 Thu 03:21]
+:PROPERTIES:
+:ID:       29d9c469-87a2-4ee9-8dda-ed7e42d5faff
+:ARCHIVE_TIME: 2022-05-05 Thu 03:21
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: REFILE
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from "TODO"       [2022-05-05 Thu 03:21]
+:END:
+[2022-04-26 Tue 17:11]
+[[file:~/org/notes/books/function-programming-in-scala-note.org::*10.1 What is a monoid?][10.1 What is a monoid?]]
+
+** DONE work on tokenization in DAO for 4 hours in the morning.
+CLOSED: [2022-05-05 Thu 03:33]
+:PROPERTIES:
+:ID:       63e3517e-ec91-4f60-99d6-1f32bb153ddc
+:ARCHIVE_TIME: 2022-05-05 Thu 03:33
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: REFILE
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-21 Thu 23:22]--[2022-04-21 Thu 23:23] =>  0:01
+:END:
+[2022-04-21 Thu 23:22]
+[[file:~/org/school.org::*incubation][incubation]]
+
+** DONE follow up with people in blockchain community and ask for their feedback
+CLOSED: [2022-05-05 Thu 03:34]
+:PROPERTIES:
+:ID:       79187a3e-b60b-434f-a78d-df145bc351c7
+:ARCHIVE_TIME: 2022-05-05 Thu 03:34
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: REFILE
+:END:
+<2022-04-19 Tue>
+:LOGBOOK:
+CLOCK: [2022-04-19 Tue 18:54]--[2022-04-19 Tue 18:55] =>  0:01
+:END:
+[2022-04-19 Tue 18:54]
+[[file:~/org/notes/blockchains/decentralized-autonomous-organization-note.org::*Categorize DAOs by usecase.][Categorize DAOs by usecase.]]
+
+** DONE Since I am doing Direct Path PhD, Do I have enough credit to earn the Master's in Computer Science?
+CLOSED: [2022-05-05 Thu 03:36]
+:PROPERTIES:
+:ID:       b02c8b37-67de-4feb-b40a-45f6e9b6d107
+:ARCHIVE_TIME: 2022-05-05 Thu 03:36
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: REFILE
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-19 Tue 15:54]--[2022-04-19 Tue 15:55] =>  0:01
+:END:
+[2022-04-19 Tue 15:54]
+[[file:~/org/finance/ledger.org::*Education Cost][Education Cost]]
+see email. [[https://mail.google.com/mail/u/0/#inbox/QgrcJHsBqxpRxphrFrbFxqBNxmfBWVwvQPq][here]].
+How many credit do I need? read the email?
+
+** DONE waiting for reply from internation student programs regarding "Possibility of changing program."
+CLOSED: [2022-05-05 Thu 03:36]
+:PROPERTIES:
+:ID:       55cdd6b3-f93f-44a6-9546-bda1eb906a07
+:ARCHIVE_TIME: 2022-05-05 Thu 03:37
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: REFILE
+:END:
+:LOGBOOK:
+- State "DONE"       from "WAITING"    [2022-05-05 Thu 03:36]
+- State "WAITING"    from "TODO"       [2022-04-19 Tue 15:38]
+:END:
+[2022-04-19 Tue 15:38]
+[[file:~/org/refile.org::*waiting for reply from Jean regarding "Possibility of changing program."][waiting for reply from Jean regarding "Possibility of changing program."]]
+ses email [[https://mail.google.com/mail/u/0/#sent/QgrcJHsNlRXpTLXqqTmwhnRmvccdHGZLrVg][here]]
+
+** DONE waiting for reply from Jean regarding "Possibility of changing program."
+CLOSED: [2022-05-05 Thu 03:37]
+:PROPERTIES:
+:ID:       9a89a48e-fd16-4bd6-9e82-d304c728a04c
+:ARCHIVE_TIME: 2022-05-05 Thu 03:37
+:ARCHIVE_FILE: ~/org/refile.org
+:ARCHIVE_CATEGORY: refile
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: REFILE
+:END:
+:LOGBOOK:
+- State "DONE"       from "WAITING"    [2022-05-05 Thu 03:37]
+- State "WAITING"    from "TODO"       [2022-04-19 Tue 15:37]
+CLOCK: [2022-04-19 Tue 15:36]--[2022-04-19 Tue 15:37] =>  0:01
+:END:
+[2022-04-19 Tue 15:36]
+[[file:~/org/contacts.org::*Bank of America][Bank of America]]
+
+email is [[https://mail.google.com/mail/u/0/#sent/QgrcJHsBqxpRxphrFrbFxqBNxmfBWVwvQPq][here]].

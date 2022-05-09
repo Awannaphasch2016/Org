@@ -1,4 +1,7 @@
 * Learning Fp In Scala
+:PROPERTIES:
+:ID:       5299e0a2-1f4e-421d-84db-49a8b23be923
+:END:
 ** Chapter 6: Question Everything
 *** pure function
 **** a) a function's output depnds only on its input parameters

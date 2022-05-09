@@ -1,0 +1,5 @@
+#+TITLE: Vim Note
+
+
+* set relative line number
+~:set number relativenumber~

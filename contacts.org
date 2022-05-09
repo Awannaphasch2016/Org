@@ -1,9 +1,51 @@
 #+TITLE: Contacts
 
-* Phone Number
+* EAF
+** Mingde (Matthew) Zeng <matthewzmd@posteo.net>
+maintainer of EAF. Email is his choice of communication.
+* FAU
+** golf cart transport
+:PROPERTIES:
+:ID:       db0fe445-9324-421a-b6db-76fe83f41daf
+:END:
+see email [[https://mail.google.com/mail/u/0/#inbox/FMfcgzGpFgnSDhkRdKBlTrfWbghGnHpk][here]] for more information
+
+Phone Numbers: FAU-PD = 561.297.3500, Night-Owl 561-297-6695 (FREE on campus after hour golf cart transport (like uber))
 ** FAU Counseling & Psychological Services at 561.297.CAPS (2277)
-** Oaks of Boca Apartment.
-*** during opening hour: (561) 395-0674
-*** during closing hour (text only): 5618594924
-*** emergency: 5614055150
+:PROPERTIES:
+:ID:       599f9bde-451e-4bc8-96b4-d44059edbd9a
+:END:
+** FAU office of registration, [[https://www.fau.edu/registrar/][here]].
+*** phone number: 561-297-3050
+*** email: registrar@fau.edu
+** International Student Service, [[https://www.fau.edu/global/international/about/contact/][here]].
+*** phone number: (561) 297-3049
+*** email: ISSS@fau.edu
+** Graduate Stuff
+*** Jean Mangiaracina
+**** email: jmangiar@fau.edu
+*** Esther Burgess
+**** email: eburges3@fau.edu
+*** Judy Kaczmarek
+**** email: jkaczmarek@fau.edu
+* Oaks of Boca Apartment.
+** during opening hour: (561) 395-0674
+** during closing hour (text only): 5618594924
+** emergency: 5614055150
+* AT&T
 ** At&T customer service. 800.331.0500
+** At&t tech support 855.920.0146
+** At&T
+:PROPERTIES:
+:ID:       4f36095e-4d46-4758-9820-9de56d553db0
+:END:
+* syndicate
+** emails: hello@syndicate.io
+:PROPERTIES:
+:ID:       bf574ec0-0a4a-4747-bc21-1127431f91ec
+:END:
+* Bank of America
+:PROPERTIES:
+:ID:       567634ac-7cd0-4d45-bda0-2eb0585a171e
+:END:
+** report suspicious activity: 800-432-1000

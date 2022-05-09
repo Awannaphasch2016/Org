@@ -1,0 +1,25 @@
+#+TITLE: Python Note
+
+* Fundamental and Basics
+** types of error that can be raised
+#+BEGIN_SRC
+what are type of raise error that I may need ot use
+    ValueError
+        raise hwen a function gets a nargument of correct but but improper
+        value
+    NotImplementedERror
+        ONly raised in abstract methods?
+        or used for TODO marker
+    TypeERror ( when to use it?)
+        raised when a function or operation is applied to an object of
+        incorrectype
+    attribute
+        raise when an ttributereference or assignemnt fails
+    Name
+        you've tried to use a variable that does not yet exists
+    Lookup
+        NOTE: there was an issureretriing the kye you whereloking for
+        KyeERror is a type lookup
+            semantic menaing is that thek ye bieng looked for could not be
+            found
+#+END_SRC

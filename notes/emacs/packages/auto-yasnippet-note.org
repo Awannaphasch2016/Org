@@ -1,0 +1,167 @@
+#+TITLE: Auto Yasnippet Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: aya
+
+* Blog :blog:
+** Dev Logs: Auto-YASnippet (aka =aya=) dive deep. :devlogs:
+:PROPERTIES:
+:EXPORT_FILE_NAME: Dev Logs: Auto-YASnippet (aka =aya=) dive deep.
+:END:
+Dev logs is new blog series which dive deep into implementation level. The goal is to understand how things works. I figure this should be an interesting series because I always wanted to know how these program works underneath. Instead of explaining the whole code base, I will only focus on the "magical" part that sparked my interest the most.
+
+Todays I present to you =aya=.
+
+I started of the series with =aya= because, I think, it is a small package with the right portion of magic.
+
+The branch I am working with is =ab930dd= commit from [[https://github.com/abo-abo/auto-yasnippet][abo-abo repo]].
+
+Question I had about =aya= is the following:
+1. How does it know where to replace content?
+2. How is yassnippet template stored during the =aya-create=?
+
+For those whose doesn't want to bother downloading the code. Here is the code I am dealing with.
+
+#+BEGIN_SRC emacs-lisp
+(defun aya-create (&optional beg end)
+  "Create a snippet from the text between BEG and END.
+When the bounds are not given, use either the current region or line.
+
+Remove `aya-marker' prefixes, write the corresponding snippet to
+`aya-current', with words prefixed by `aya-marker' as fields, and
+mirrors properly set up."
+  (interactive)
+  (unless (aya-create-one-line)
+    (let* ((beg (cond (beg)
+                      ((region-active-p)
+                       (region-beginning))
+                      (t
+                       (aya--beginning-of-line))))
+           (end (cond (end)
+                      ((region-active-p)
+                       (region-end))
+                      (t
+                       (line-end-position))))
+           (str (buffer-substring-no-properties beg end))
+           (case-fold-search nil)
+           (res (aya--parse str)))
+      (when (cl-some #'listp res)
+        (delete-region beg end)
+        (insert (mapconcat
+                 (lambda (x) (if (listp x) (aya--alist-get-proper-case-value x) x))
+                 res ""))
+        (setq aya-current
+              (aya--maybe-append-newline
+               (mapconcat
+                (lambda (x) (if (listp x) (aya--alist-create-value-specifier x res) x))
+                res "")))
+        ;; try some other useful action if it's defined for current buffer
+        (and (functionp aya-default-function)
+             (funcall aya-default-function))))))
+#+END_SRC
+
+
+Function I am interested in is =aya-create=.
+=aya-create= contains 3 interested functions: =aya--parse=, =aya--alist-get-proper-case-value=, and =aya--alist-create-value-specifier=
+
+"--" in the function names is a convention of elisp which indicates that it is a private function.
+
+from ~(cl-some #'listp res)~ expression, the condition is non-nil if res is a list.
+Now, I know that =aya--parse= must return some kind of list.
+
+Given the selected region, =aya--parse= match the following regex.
+#+BEGIN_SRC emacs-lisp
+(format
+    "\\(?:`\\(?1:[^']+\\)'\\|%s\\(?1:\\(?:%s\\)+\\)\\)"
+    aya-marker ;; value is ~
+    aya-field-regex)
+#+END_SRC
+
+
+Then, =aya--parse= return the following format which contains tuples of string properties.
+#+BEGIN_SRC emacs-lisp
+(list (cons 'idx idx)
+                    (cons 'value cased-mirror)
+                    (cons 'ucase ucase))
+#+END_SRC
+
+If =aya--parse= return appropriate format, selected aread will be delete with ~(delete-region beg end)~ and
+
+Content of a target region is recreated with
+#+BEGIN_SRC emacs-lisp
+(insert (mapconcat
+            (lambda (x) (if (listp x) (aya--alist-get-proper-case-value x) x))
+            res ""))
+#+END_SRC
+where =aya--alist-get-proper-case-value= uses list of tuple properties to recreate orignal string.
+
+aya template is saved to =aya-current= whose templatpe is created with =aya--alist-create-value-specifier= as followed
+#+BEGIN_SRC emacs-lisp
+(setq aya-current
+        (aya--maybe-append-newline
+        (mapconcat
+        (lambda (x) (if (listp x) (aya--alist-create-value-specifier x res) x))
+        res "")))
+#+END_SRC
+
+I think I have learn more than enough to answer my question, so I am going to stop here.
+
+Lets recap.
+
+Diving into few functions, I am able to answer our questions
+1. "How does =aya= know where to replace content?"
+2. "How is yassnippet template stored during the =aya-create=?"
+
+=aya= uses regex to capture string of interest within a region then it create property list of captured string (mainly, be aware of string capitalization.). Template of the captured string is created accordingly and ready to be reused in the future.
+
+Personally, I have learned a few things.
+1. I have learned how regex is used in emacs style. Other than annoying string escape, I have learned =(?num:)= where num is a explicit numbered group. See [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Regexp-Backslash.html][here]] for more in formation.
+2. I have learned the basic of matching, see [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Match-Data.html][34.6 The Match Data]] from emacs manual.
+3. I have learn abo-abo style of coding, especially, how he stored property of matched region property as a list of tuples after processed target string.
+
+That's it.
+
+Peace.
+
+** How to use auto yasnippet (aka =aya=) in your workflow?
+:PROPERTIES:
+:EXPORT_FILE_NAME: How to use auto yasnippet (aka =aya=) in your workflow?
+:END:
+All of the content I presented below can be found at [[https://github.com/abo-abo/auto-yasnippet][Auto-YASnippet Github repo]].
+
+Auto-Yasnippet (aka aya) provides the following interactive commands: =aya-create=, =aya-expand=, =aya-persiste-snippet=, and =aya-open-line=:
+
+I don't quite understand =aya-open-line= yet, so I will not be explaining it here.
+
+This snippet package support ad-hoc style of editing workflow where you can create useful snippet to be reused as you editing.
+
+Without =aya=, one would have do the following
+1. go to =yassnippet= directory.
+2. implement snippet template which may required multiple reload of the =yassnippet= directory via =yas-reload-all=.
+3. switch back to the to buffer you wish to apply the template.
+4. insert template and edit it.
+
+=aya= simply skip the above step and automatically create =yasnippet= template base on context which may be one line or multiple line.
+
+Here is how one can use =aya=. imagine you have function =count_of_red(color)= and you want to count three colors: red, blue, and green.
+
+You can start by writing template on the line in the same buffer you are editing.
+#+BEGIN_SRC python
+count_of_~red = get_total("");
+#+END_SRC
+
+note: =~= is a =aya-marker= which will mark word to be replaced.
+
+Then, you will call =aya-create= with point (cursor) on the same line. Note, =~= should now gone, and you should get the following.
+#+BEGIN_SRC python
+count_of_red = get_total("red");
+#+END_SRC
+
+To reused the template, you just created with =aya-create=. Just run =aya-expand= on the line you want to insert the new template.
+
+Done! Blazing fast!
+
+Oh, I heard you want to save the template to a snippet? run =aya-persist-snippet=. Save.
+
+That's it.
+
+Peace.

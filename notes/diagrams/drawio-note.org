@@ -1,0 +1,30 @@
+#+TITLE: Drawio Note
+
+* keybinding
+:PROPERTIES:
+:ID:       35ff5d35-381a-4256-a9fd-d1e05a5772c3
+:END:
+| key                          | descriptions                                                                                                                                                              |
+| spacebar + mouse             | move canvas                                                                                                                                                               |
+| ctrl + backspace             | delete a shape and the connector that is leading to it                                                                                                                    |
+| ctrl + drag on shape         | fixed center of the shape while adjust size of diagram                                                                                                                    |
+| ctrl + drag on connector     | clone connector                                                                                                                                                           |
+| ctrl + shift + arrow         | same as ctrl + arrow, but adjust step less refine                                                                                                                         |
+| alt + scroll                 | zoom in and out                                                                                                                                                           |
+| alt + shift                  | falstlane mathod; add duplicate a shape and connect the new shape with the old. if shape already exist, fastlane method will move focus to the shape pointed by the arrow |
+| alt + drag on arrow          | allow arrow to draw on top of the shape                                                                                                                                   |
+| shift + drag on shape        | maintain proportion while resizing                                                                                                                                        |
+| ctrl + shift + drag on shape | maintain proportion and keep center of the shape while resizing                                                                                                           |
+
+* connectors
+#+caption: illustraion of floating connector
+#+attr_html: :width 300px
+[[file:./images/screenshot_20220417_192625.png]]
+
+#+caption: illustraion of fixed connector
+#+attr_html: :width 300px
+[[file:./images/screenshot_20220417_192657.png]]
+
+draw.io has two types of connectors: fixed and floating. fixed connector connect arrow to a fixed point on the shape. On the other hand, floating connectors ignore fixed point on the shape and connect to position in the frame which can be any position on the edge of the shape.
+
+To create fixed connector, draw arrow from source shape to one of the fixed point on edges of destination shape. To create floating connector, draw arrow from source shape to none-fixed point on edges of destination shape.

@@ -1,0 +1,36 @@
+#+TITLE: Blockchain Spread Sheets
+
+* Layer 1 solution
+:PROPERTIES:
+:ID:       07412f3f-6fd8-4799-b008-40acc5c4f8ed
+:END:
+| symbol | Project name           | layer | Consensus | category | description | market cap | FDV | spending or holding token |
+|        | Arweave                |     1 |           |          |             |            |     |                           |
+| ETH    | Ethereum               |     1 |           |          |             |            |     |                           |
+| LUNA   | Terra                  |     1 |           |          |             |            |     |                           |
+| AVAX   | Avalanche              |     1 |           |          |             |            |     |                           |
+| SOL    | solana                 |     1 |           |          |             |            |     |                           |
+| NEAR   | Near                   |     1 | PoS       |          |             |            |     |                           |
+| BSC    | Binance Smart Contract |     1 |           |          |             |            |     |                           |
+| DOT    | Pogadot                |       |           |          |             |            |     |                           |
+| ADA    | Cardano                |       |           |          |             |            |     |                           |
+
+* Layer 2 solution
+:PROPERTIES:
+:ID:       be1811c3-cbce-42fa-a806-e2e2ba8e176e
+:END:
+| symbol | Project name          | layer | category  | description      | market cap | FDV | spending or holding token |
+|        | Votium                |     2 |           |                  |            |     |                           |
+| CVX    | Convex Finance        |     2 |           |                  |            |     |                           |
+|        | Dao the Rabbit Hole   |     2 |           |                  |            |     |                           |
+|        | Syndicate             |     2 |           |                  |            |     |                           |
+|        | Seed club             |     2 |           |                  |            |     |                           |
+|        | Chainlink             |     2 |           |                  |            |     |                           |
+|        | rally                 |     2 |           |                  |            |     |                           |
+|        | Altered State Machine |     2 |           | iNFT Marketplace |            |     |                           |
+|        | Olympus               |     2 |           |                  |            |     |                           |
+|        | Aave                  |     2 | liqudator |                  |            |     |                           |
+|        | Compound              |     2 | liqudator |                  |            |     |                           |
+| MIR    | Mirror Protocol       |     2 |           |                  |            |     |                           |
+| MATIC  | Polygon               |     2 |           |                  |            |     |                           |
+| UNI    | Uniswap               |     2 | DEX, AMM  |                  |            |     |                           |

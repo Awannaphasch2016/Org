@@ -1,0 +1,3 @@
+[debug] not up to date. inChanged = true, force = false
+[debug] Updating ProjectRef(uri("file:/home/awannaphasch2016/org/notes/built-tools/sbt/examples/foo-build/project/"), "foo-build-build")...
+[debug] Done updating ProjectRef(uri("file:/home/awannaphasch2016/org/notes/built-tools/sbt/examples/foo-build/project/"), "foo-build-build")

@@ -34,7 +34,41 @@
     Expenses:Drinks:Water                      $1.99
     Expenses:Drinks:Coffee                     $6.96
     Assets:Saving                             $-8.95
+
 2022/03/02
     Expenses:Drinks:Coffee                     $6.15
     Expenses:Meals:Dinning                     $9.62
-    Assets:Saving                             $-15.77
+    Assets:Saving                            $-15.77
+2022/03/03
+    Expenses:Drinks:EnergyDrink                $6.40
+    Expenses:Meals:Dinning                    $10.80
+    Assets:Saving                            $-17.20
+2022/03/04
+    Expenses:Drinks:EnergyDrink                $6.40
+    Expenses:Meals:Dinning                     $9.62
+    Assets:Saving                            $-16.02
+
+2022/04/11
+    Expenses:Drinks:EnergyDrink                $5.30
+    Expenses:Meals:Dinning                     $9.62
+    Expenses:Meals:Dinning                    $10.80
+    Assets:Saving                            $-25.72
+2022/04/12
+    Expenses:Drinks                            $8.96
+    Expenses:Meals:Dinning                    $10.80
+    Assets:Saving                            $-19.76
+2022/04/13
+    Expenses:Drinks:Coffee                     $5.62
+    Expenses:Drinks                            $8.96
+    Expenses:Meals:Dinning                     $9.62
+    Expenses:Meals:Dinning                     $7.49
+    Assets:Saving                            $-31.69
+2022/04/14
+    Expenses:Drinks                           $14.52
+    Expenses:Drinks:Coffe                      $5.62
+    Expenses:Meals:Dinning                     $9.62
+    Assets:Saving                            $-29.76
+2022/04/19
+    Expenses:Entertaining:Boxing              $10.00
+    Expenses:Transportation:Lyft               $7.26
+    Assets:Saving                            $-17.26

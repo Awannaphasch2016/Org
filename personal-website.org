@@ -2,51 +2,132 @@
 #+FILETAGS: PERSONAL @sideproject mywebsite
 #+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
 
-* Personal Website
-:LOGBOOK:
-CLOCK: [2022-02-26 Sat 19:14]--[2022-02-26 Sat 19:22] =>  0:08
-CLOCK: [2022-02-26 Sat 19:11]--[2022-02-26 Sat 19:13] =>  0:02
-CLOCK: [2022-02-26 Sat 18:43]--[2022-02-26 Sat 19:01] =>  0:18
-CLOCK: [2022-02-26 Sat 18:17]--[2022-02-26 Sat 18:43] =>  0:26
-:END:
-** Questions :QUESTION:
-** Notes :NOTE:
-** Meeting :MEETING:
+My hugo blog base dir is
+=#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart=
+
+* Personal Blog
+** Notes :note:
+** Meeting :meeting:
+** Schedule
+*** recurring :recurring:
+*** non-recurring :nonrecurring:
+** Delegation :waiting:
 ** Tasks
+*** actionable :actionable:
 :PROPERTIES:
-:EXPORT_FILE_NAME: hugo
+:ID:       2be753c8-51cc-409c-9138-0ced8e580ed7
 :END:
-*** writing blog
+**** TODO write articles about "Framework to think about NFT and Metaverse?" and "Transition from Web2 to Web3: What's exactly change?"
+SCHEDULED: <2022-05-05 Thu>
+:PROPERTIES:
+:ID:       61013b56-2570-4534-ade7-0d906cc5c032
+:Effort:   1:00
+:END:
 :LOGBOOK:
-CLOCK: [2022-02-27 Sun 16:56]--[2022-02-27 Sun 17:04] =>  0:08
+CLOCK: [2022-04-15 Fri 09:56]--[2022-04-15 Fri 10:04] =>  0:08
 :END:
-*** Building website using org mode.
-- ref
-  - Example of [[https://www.huxiaoxing.com/building-a-website-with-org-mode-files][Personal website that use org mode]].
-  - collection of [[https://orgmode.org/worg/org-web.html][Personal Webiste that use org mode]].
-  - choose website style that I like from [[https://orgmode.org/worg/org-web.html][Personal Websites that use Org mode]], and build mine.
-  - read the following tutorial: https://thackl.github.io/blogging-with-emacs-org-mode-and-jekyll
-- note
-  - my current blog is using jekyll but files are .md not .org.
-  - I started to add org files into my blogs directory without testing whether or not it will work. On top of that, I didn't even follow naming convention which, if I remember correct, are necessary to make jekyll works. Hence, I don't expect it to work, so debug it.
-**** CANCELLED migrate all of my notes to blog in jykell. :CANCELLED:
-- State "CANCELLED"  from "TODO"       [2022-02-26 Sat 12:09] \\
-  I decided to use hugo instead. The reason is simple, I never heard someone use jekll and org mode in the same sentence, but hugo and org mode is heard every where.
-https://orgmode.org/worg/org-tutorials/org-jekyll.html
-**** NEXT build website with hugo + org mode .
-**** TODO One I get my website running with jekyll or hugo, I need to merge my old blog post and articles. This includes changing file name and directory.
+[2022-04-15 Fri 09:56]
+[[file:~/Documents/Courses/FAU/2022/spring/database/course-material/practices/week9-relational-algebra-note.org::*answer][answer]]
+NFT is attach ownership to digital assets.
+NFT is composable. NFT can create/combine non-tangible assets in a way that not possible. This is done by removing the need to involve trustable entity because everyone can trust the block itself. This leads to increase in new composable assets and speed of object creation/transaction of object.
+
+NFT is a map between
+
+Metaverse is not what Meta vision.
+Metaverse is just web 3 internet.
+
+
+web 1 (user can publish and edit thier own website.)-> web 2 (users can add/modified content on other site e.g.g tweet in twitter) -> web 3 (users own data their created and get stake of project their contribute.).
+
+*** incubation :incubation:
+**** writing blog on masting note taking and learning: with categorize then synthesize methods. (find my old articles and merge the two together.)
+:PROPERTIES:
+:ID:       092f6415-8fd9-45c1-93be-2f3d781a3ff5
+:END:
+[2022-03-05 Sat 00:57]
+[[file:~/org/journal.org::*walking dog.][walking dog.]]
+
+categorizing.
+1.active recall (axioms + facts, inferences function.)
+
+synthesizing.
+2.work through exmaple (exercise)
+3.writing articles. (conclusion, connecting ideas)
+4.implementing (exploration, closing theory and practice.)
+**** write blog about separation of concern design that appear in scala. [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::91++2.97][Functional Programming in Scala ( PDFDrive ).pdf: Page 91]] 
+:PROPERTIES:
+:ID:       15e6dd40-5f2f-4b33-9e5e-f21715fe561e
+:END:
+**** write blog about foldRight in scala
+:PROPERTIES:
+:ID:       20a8bb68-90ad-4627-9b7a-7019c5d4c08e
+:END:
+**** write blog about why zipWith (from hw3) can used with drop
+:PROPERTIES:
+:ID:       2b7c251c-33af-447a-b819-0f062e04ab8c
+:END:
+ref: https://stackoverflow.com/questions/51226848/how-to-find-two-successive-and-same-values-in-a-stream
+#+BEGIN_SRC  scala
+    println(
+      "zipWith tuples: " + st2
+        .zipWith(st2.drop(1))((x, y) =>
+        )
+        .take(10)
+        .toList
+    )
+#+END_SRC
+
+**** write a blog on how tothink of unfolding (element, state)
+:PROPERTIES:
+:ID:       8f24cfdb-72c4-431b-9b84-c6c8e0549995
+:END:
+
+
+
+****  how to link hugo block post
+:PROPERTIES:
+:ID:       1345df8e-f1bc-4f0a-8a98-c9b7255d2da2
+:END:
+[2022-03-13 Sun 21:14]
+****  write blog on "How to set up org-roam and org-roam-bibtex as building block of emacs as your primary personal knowledge management?"
+:PROPERTIES:
+:ID:       54a7e11e-2de7-466e-8c73-1cb7a5c8831c
+:END:
+[2022-03-13 Sun 21:15]
+[[file:~/org/personal-knowledge-management-pkm-note.org::*How to set up org-roam and org-roam-bibtex as building block of emacs as your primary personal knowledge management?][How to set up org-roam and org-roam-bibtex as building block of emacs as your primary personal knowledge management?]]
+****  write blog summarizing different type of dynamic graph taxonomy. (summarize content I have in my PhD ensemble paper)
+:PROPERTIES:
+:ID:       1850f5e9-1c86-40de-9164-9977cfc705da
+:END:
+[2022-03-14 Mon 02:53]
+****  figure out how to render latex in hugo.
+:PROPERTIES:
+:ID:       44be033c-c551-4179-ac39-17b102f1da2a
+:END:
+[2022-03-14 Mon 22:45]
+[[file:~/org/notes/blockchains/blockchain-note.org::*Optimizing number of gas supply of blockchain at a given point in time.][Optimizing number of gas supply of blockchain at a given point in time.]]
+* Personal Website
+:PROPERTIES:
+:ID:       c0e28838-acee-4bc3-bcd0-09c784882002
+:END:
+** Notes :note:
+*** look at this [[https://rgoswami.me/][website]] to get inspiration for my website.
+:PROPERTIES:
+:ID:       d848550c-ce87-4055-87ba-677c3e1875f6
+:END:
 :LOGBOOK:
-CLOCK: [2022-02-22 Tue 10:07]--[2022-02-22 Tue 10:08] =>  0:01
+CLOCK: [2022-03-04 Fri 23:34]--[2022-03-04 Fri 23:36] =>  0:02
 :END:
-[2022-02-22 Tue 10:07]
-*** TODO migrate content located at jykell dir to hugo dir. :mywebsite:
-:LOGBOOK:
-CLOCK: [2022-02-26 Sat 19:01]--[2022-02-26 Sat 19:11] =>  0:10
+[2022-03-04 Fri 23:34]
+[[file:~/org/my-resume.org::*LaTeX Config][LaTeX Config]]
+** Meeting :meeting:
+** Schedule
+*** recurring :recurring:
+*** non-recurring :nonrecurring:
+** Delegation :waiting:
+** Tasks
+*** actionable :actionable:
+*** incubation :incubation:
+:PROPERTIES:
+:ID:       34aef54d-f624-47fa-9a60-a23748837659
 :END:
-[2022-02-26 Sat 19:01]
-[[file:~/org/projects/sideprojects/website/my-website/hugo/quickstart/content/posts/hugo.md][file:~/org/projects/sideprojects/website/my-website/hugo/quickstart/content/posts/hugo.md]]
-*** TODO read my blogging set with Emacs, Org mode, ox-hugo, Hugo, Gitlab, and Netlify :READ:website: :LOGBOOK:
-CLOCK: [2022-02-26 Sat 19:13]--[2022-02-26 Sat 19:14] =>  0:01
-:END:
-[2022-02-26 Sat 19:13]
-[[file:~/org/projects/sideprojects/website/my-website/hugo/quickstart/config.toml][file:~/org/projects/sideprojects/website/my-website/hugo/quickstart/config.toml]]

@@ -1,0 +1,1232 @@
+#+TITLE: Hands On Smart Contract Developement With Solidity Note
+
+* Hands On Smart Contract Developement With Solidity Note
+:PROPERTIES:
+:NOTER_DOCUMENT: /home/awannaphasch2016/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::47++1.91]]
+:END:
+
+** Skeleton
+
+*** Copyright
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::4++0.081633??Copyright]]
+:END:
+
+**** Link on page 4: [[http://oreilly.com][http://oreilly.com]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::4++0.22381]]
+:END:
+
+**** Link on page 4: [[http://oreilly.com/catalog/errata.csp?isbn=9781492045267][http://oreilly.com/catalog/errata.csp?isbn=9781492045267]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::4++0.437917]]
+:END:
+
+*** Table of Contents
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::5++0.108844??Table%20of%20Contents]]
+:END:
+
+*** Preface
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::11++0.108844??Preface]]
+:END:
+
+**** Mastering Ethereum
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::11++0.723334??Mastering%20Ethereum]]
+:END:
+
+**** ConsenSys Academy
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::12++0.081633??ConsenSys%20Academy]]
+:END:
+
+**** B9 Academy
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::12++0.280575??B9%20Academy]]
+:END:
+
+***** Link on page 12: [[https://oreil.ly/vvUOC][free Ethereum course]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::12++0.338586]]
+:END:
+
+***** Link on page 12: [[https://oreil.ly/OZ45a][certificate]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::12++0.480989]]
+:END:
+
+**** Conventions Used in This Book
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::12++0.612851??Conventions%20Used%20in%20This%20Book]]
+:END:
+
+**** Using Code Examples
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::13++0.458947??Using%20Code%20Examples]]
+:END:
+
+***** Link on page 13: [[https://github.com/RedSquirrelTech/hoscdev][https://github.com/RedSquirrelTech/hoscdev]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::13++0.516957]]
+:END:
+
+***** Link on page 13: [[mailto:bookquestions@oreilly.com][bookquestions@oreilly.com]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::13++0.564123]]
+:END:
+
+***** Link on page 14: [[mailto:permissions@oreilly.com][permissions@oreilly.com]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::14++0.102268]]
+:END:
+
+**** O’Reilly Online Learning
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::14++0.138891??O’Reilly%20Online%20Learning]]
+:END:
+
+***** Link on page 14: [[http://oreilly.com][O’Reilly Media]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::14++0.190326]]
+:END:
+
+***** Link on page 14: [[http://oreilly.com][http://oreilly.com]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::14++0.365382]]
+:END:
+
+**** How to Contact Us
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::14++0.402006??How%20to%20Contact%20Us]]
+:END:
+
+***** Link on page 14: [[https://oreil.ly/handsOn-smart-contract-dev-solidity-ethereum][https://oreil.ly/handsOn-smart-contract-dev-]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::14++0.623584]]
+:END:
+
+***** Link on page 14: [[https://oreil.ly/handsOn-smart-contract-dev-solidity-ethereum][solidity-ethereum]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::14++0.642632]]
+:END:
+
+***** Link on page 14: [[mailto:bookquestions@oreilly.com][bookquestions@oreilly.com]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::14++0.67075]]
+:END:
+
+***** Link on page 14: [[http://www.oreilly.com][http://www.oreilly.com]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::14++0.736963]]
+:END:
+
+***** Link on page 14: [[http://facebook.com/oreilly][http://facebook.com/oreilly]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::14++0.765081]]
+:END:
+
+***** Link on page 14: [[http://twitter.com/oreillymedia][http://twitter.com/oreillymedia]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::14++0.793199]]
+:END:
+
+***** Link on page 14: [[http://www.youtube.com/oreillymedia][http://www.youtube.com/oreillymedia]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::14++0.821317]]
+:END:
+
+**** Acknowledgments
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::15++0.081633??Acknowledgments]]
+:END:
+
+*** Part I. Intro to the Ethereum Blockchain
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::17++0.108844??Part%20I.%20Intro%20to%20the%20Ethereum%20Blockchain]]
+:END:
+**** Chapter 1. Blockchain Concepts
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::19++0.108844??Chapter%201.%20Blockchain%20Concepts]]
+:END:
+
+***** A Brief History
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::20++0.31032??A%20Brief%20History]]
+:END:
+
+****** Link on page 20: [[https://bitcoin.org/bitcoin.pdf][Bitcoin white paper]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::20++0.349283]]
+:END:
+
+****** Link on page 20: [[https://github.com/ethereum/wiki/wiki/White-Paper][Ethereum]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::20++0.644067]]
+:END:
+
+****** Link on page 20: [[https://github.com/ethereum/wiki/wiki/White-Paper][white paper]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::20++0.663115]]
+:END:
+
+****** Link on page 20: [[http://bit.ly/szabo-sc][Nick Szabo in 1994]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::20++0.748376]]
+:END:
+
+***** The Character of a Blockchain
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::21++0.186057??The%20Character%20of%20a%20Blockchain]]
+:END:
+
+****** Decentralized Networks
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::21++0.630428??Decentralized%20Networks]]
+:END:
+
+****** Consensus Protocols
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::22++0.612891??Consensus%20Protocols]]
+:END:
+
+****** Transaction Processing
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::25++0.081633??Transaction%20Processing]]
+:END:
+
+****** Transaction Finality
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::27++0.412725??Transaction%20Finality]]
+:END:
+
+****** Hard Forks
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::29++0.711683??Hard%20Forks]]
+:END:
+
+***** Ethereum Fundamentals
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::30++0.404651??Ethereum%20Fundamentals]]
+:END:
+
+****** Ether and Gas
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::30++0.59324??Ether%20and%20Gas]]
+:END:
+
+******* Link on page 31: [[https://ethereum.github.io/yellowpaper/paper.pdf][https://ether]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::31++0.862963]]
+:END:
+
+******* Link on page 31: [[https://ethereum.github.io/yellowpaper/paper.pdf][eum.github.io/yellowpaper/paper.pdf]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::31++0.87808]]
+:END:
+
+******* Link on page 32: [[https://ethgasstation.info/][implicitly under‐]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::32++0.319934]]
+:END:
+
+******* Link on page 32: [[https://ethgasstation.info/][stood market rate for gas]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::32++0.338982]]
+:END:
+
+****** Accounts
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::33++0.081633??Accounts]]
+:END:
+
+****** Contracts
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::33++0.459575??Contracts]]
+:END:
+
+****** Blocks and Transactions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::34++0.347121??Blocks%20and%20Transactions]]
+:END:
+
+****** What Time Is It?
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::35++0.728254??What%20Time%20Is%20It?]]
+:END:
+
+****** Signing Transactions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::37++0.165726??Signing%20Transactions]]
+:END:
+
+***** Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::38++0.244993??Summary]]
+:END:
+
+**** Chapter 2. Decentralized Applications
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::39++0.108844??Chapter%202.%20Decentralized%20Applications]]
+:END:
+***** Tokens
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::39++0.528261??Tokens]]
+:END:
+
+****** Link on page 39: [[https://eips.ethereum.org/][Ethereum Improvement]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::39++0.728675]]
+:END:
+
+****** Link on page 39: [[https://eips.ethereum.org/EIPS/eip-20][ERC-20]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::39++0.747723]]
+:END:
+
+****** Link on page 39: [[https://eips.ethereum.org/][Proposal (EIP) process]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::39++0.747723]]
+:END:
+
+****** Link on page 39: [[https://eips.ethereum.org/EIPS/eip-721][ERC-721]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::39++0.76677]]
+:END:
+
+****** ERC-20
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::39++0.80211??ERC-20]]
+:END:
+
+******* Link on page 40: [[https://oreil.ly/ElzWd][OpenZeppelin contracts]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::40++0.591972]]
+:END:
+
+******* Link on page 40: [[https://www.kickstarter.com/][Kickstarter]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::40++0.715328]]
+:END:
+
+******* Link on page 40: [[https://eips.ethereum.org/EIPS/eip-1462][draft]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::40++0.800589]]
+:END:
+
+******* Link on page 40: [[https://eips.ethereum.org/EIPS/eip-1462][proposal]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::40++0.819636]]
+:END:
+
+******* Link on page 40: [[https://etherscan.io/tokens][Etherscan]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::40++0.847754]]
+:END:
+
+****** Non-Fungible Token (ERC-721)
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::41++0.137608??Non-Fungible%20Token%20(ERC-721)]]
+:END:
+
+******* Link on page 42: [[https://oreil.ly/fQ_FY][ERC-721]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::42++0.258841]]
+:END:
+
+******* Link on page 42: [[https://www.cryptokitties.co/][CryptoKitties]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::42++0.286958]]
+:END:
+
+******* Link on page 42: [[https://kittysales.herokuapp.com/][Kitty Sales website]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::42++0.430259]]
+:END:
+
+***** Supply Chain
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::42++0.580261??Supply%20Chain]]
+:END:
+
+****** Link on page 43: [[https://oreil.ly/zID8C][Walmart’s experiment]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::43++0.497994]]
+:END:
+
+****** Link on page 43: [[https://oreil.ly/MvE0N][Hyperledger Fabric for its blockchain experi‐ ment. Hyperledger Fabric is a permissioned blockchain, which]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::43++0.653867]]
+:END:
+
+****** Link on page 43: [[https://oreil.ly/MvE0N][ment]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::43++0.671282]]
+:END:
+
+***** Permanent Records
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::44++0.262247??Permanent%20Records]]
+:END:
+
+****** Link on page 44: [[https://aeron.aero/][Aeron Labs]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::44++0.405518]]
+:END:
+
+****** Link on page 44: [[https://oreil.ly/ehPRI][performed 3]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::44++0.56697]]
+:END:
+
+****** Link on page 44: [[https://oreil.ly/ehPRI][takeoffs and landings in the last 90 days]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::44++0.586017]]
+:END:
+
+***** Evaluating Blockchain for Your Application
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::45++0.281295??Evaluating%20Blockchain%20for%20Your%20Application]]
+:END:
+
+****** Verifiable
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::45++0.393693??Verifiable]]
+:END:
+
+****** Transparent
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::45++0.557577??Transparent]]
+:END:
+
+******* Link on page 45: [[https://etherscan.io/][Etherscan]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::45++0.628977]]
+:END:
+
+****** Resilient
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::45++0.759556??Resilient]]
+:END:
+
+***** Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::46++0.081633??Summary]]
+:END:
+
+**** Chapter 3. Before We Get Started
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::47++0.108844??Chapter%203.%20Before%20We%20Get%20Started]]
+:END:
+
+***** Ethereum Clients
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::47++0.566356??Ethereum%20Clients]]
+:END:
+****** Link on page 47: [[https://github.com/twilio][their GitHub page]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::47++0.794888]]
+:END:
+
+****** Link on page 48: [[https://oreil.ly/jkaya][Ethereum wiki]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::48++0.263719]]
+:END:
+
+****** Link on page 48: [[https://bit.ly/35nWBkz][the docs]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::48++0.42517]]
+:END:
+
+****** Installing Parity
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::48++0.46051??Installing%20Parity]]
+:END:
+
+***** Installing MetaMask
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::49++0.473424??Installing%20MetaMask]]
+:END:
+
+****** Link on page 49: [[https://metamask.io][https://metamask.io]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::49++0.797194]]
+:END:
+
+****** Link on page 57: [[https://oreil.ly/AWWuE][State of the DApps]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::57++0.726961]]
+:END:
+
+***** Installing Node.js
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::58++0.100796??Installing%20Node.js]]
+:END:
+
+****** Ubuntu Installation (Including Windows WSL Ubuntu)
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::58++0.251289??Ubuntu%20Installation%20(Including%20Windows%20WSL%20Ubuntu)]]
+:END:
+
+****** Mac Installation
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::59++0.081633??Mac%20Installation]]
+:END:
+
+***** Installing the Truffle Suite
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::60++0.081633??Installing%20the%20Truffle%20Suite]]
+:END:
+
+****** Link on page 60: [[https://www.trufflesuite.com][Truffle Suite]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::60++0.139643]]
+:END:
+
+****** Truffle
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::60++0.194031??Truffle]]
+:END:
+
+****** Ganache
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::61++0.099512??Ganache]]
+:END:
+
+******* Link on page 61: [[https://www.trufflesuite.com/ganache][Ganache page]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::61++0.341435]]
+:END:
+
+***** Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::62++0.509792??Summary]]
+:END:
+
+*** Part II. Developing Smart Contracts
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::63++0.108844??Part%20II.%20Developing%20Smart%20Contracts]]
+:END:
+
+**** Chapter 4. Our First Smart Contract
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::65++0.108844??Chapter%204.%20Our%20First%20Smart%20Contract]]
+:END:
+
+***** Setup
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::65++0.603544??Setup]]
+:END:
+
+***** Our First Test
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::66++0.551559??Our%20First%20Test]]
+:END:
+
+****** Link on page 66: [[https://oreil.ly/b1-5B][TDD]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::66++0.590522]]
+:END:
+
+****** Link on page 66: [[https://oreil.ly/Qb5mQ][Truffle testing documentation]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::66++0.771021]]
+:END:
+
+****** Link on page 67: [[https://mochajs.org/][Mocha]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::67++0.451717]]
+:END:
+
+****** Link on page 67: [[https://oreil.ly/g2Gv8][Promise.prototype.then method]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::67++0.583574]]
+:END:
+
+****** Link on page 67: [[https://oreil.ly/IfhOu][async/await syntax]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::67++0.603598]]
+:END:
+
+***** Saying Hello
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::70++0.209639??Saying%20Hello]]
+:END:
+
+***** Making Our Contract Dynamic
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::72++0.658568??Making%20Our%20Contract%20Dynamic]]
+:END:
+
+***** Making the Greeter Ownable
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::78++0.081633??Making%20the%20Greeter%20Ownable]]
+:END:
+
+***** Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::85++0.138891??Summary]]
+:END:
+
+**** Chapter 5. Deploying and Interacting with Contracts
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::87++0.108844??Chapter%205.%20Deploying%20and%20Interacting%20with%20Contracts]]
+:END:
+
+***** Contract Compilation and Deployment
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::87++0.688805??Contract%20Compilation%20and%20Deployment]]
+:END:
+
+****** Deployment Process
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::88++0.204718??Deployment%20Process]]
+:END:
+
+***** Setting Up the UI
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::89++0.500206??Setting%20Up%20the%20UI]]
+:END:
+
+****** Link on page 89: [[https://github.com/RedSquirrelTech/hoscdev][GitHub]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::89++0.577265]]
+:END:
+
+***** Deploying to Ganache
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::90++0.649549??Deploying%20to%20Ganache]]
+:END:
+
+****** Link on page 91: [[https://github.com/trufflesuite/ganache/releases][Truffle Suite’s GitHub]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::91++0.786213]]
+:END:
+
+***** Deploying to Goerli with Parity
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::96++0.491564??Deploying%20to%20Goerli%20with%20Parity]]
+:END:
+
+****** Link on page 96: [[https://oreil.ly/h8wy6][BIP-32]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::96++0.653883]]
+:END:
+
+****** Link on page 96: [[https://oreil.ly/NU_8X][BIP-39]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::96++0.691978]]
+:END:
+
+****** Link on page 96: [[https://goerli-faucet.slock.it/][Goerli Faucet]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::96++0.872477]]
+:END:
+
+***** Deploying to Rinkeby with Infura
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::100++0.205104??Deploying%20to%20Rinkeby%20with%20Infura]]
+:END:
+
+****** Link on page 100: [[https://infura.io/register][https://infura.io/register]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::100++0.452684]]
+:END:
+
+****** Link on page 101: [[https://faucet.rinkeby.io/][Rinkeby Faucet]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::101++0.79081]]
+:END:
+
+***** Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::102++0.313041??Summary]]
+:END:
+
+**** Chapter 6. The Fundraiser Application
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::103++0.108844??Chapter%206.%20The%20Fundraiser%20Application]]
+:END:
+
+***** Application Overview
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::103++0.594474??Application%20Overview]]
+:END:
+
+****** Link on page 103: [[https://coinbase.com][Coinbase]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::103++0.671532]]
+:END:
+
+***** Creating the Project
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::107++0.719133??Creating%20the%20Project]]
+:END:
+
+****** Link on page 108: [[https://www.trufflesuite.com/boxes][Truffle Boxes]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::108++0.180252]]
+:END:
+
+****** Link on page 108: [[https://www.trufflesuite.com/boxes][page]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::108++0.199299]]
+:END:
+
+***** Initializing Fundraisers
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::109++0.311216??Initializing%20Fundraisers]]
+:END:
+
+****** Link on page 110: [[https://mochajs.org/#hooks][https://mochajs.org/#hooks]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::110++0.87808]]
+:END:
+
+****** Setting the Beneficiary and Custodian
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::117++0.293566??Setting%20the%20Beneficiary%20and%20Custodian]]
+:END:
+
+***** Editing the Beneficiary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::120++0.638362??Editing%20the%20Beneficiary]]
+:END:
+
+***** Making Donations
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::125++0.742963??Making%20Donations]]
+:END:
+
+****** Structs
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::127++0.442339??Structs]]
+:END:
+
+****** Mappings
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::128++0.262757??Mappings]]
+:END:
+
+****** Donation Tests
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::128++0.653378??Donation%20Tests]]
+:END:
+
+****** myDonations
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::132++0.251883??myDonations]]
+:END:
+
+****** Fundraiser Totals
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::135++0.173889??Fundraiser%20Totals]]
+:END:
+
+******* Link on page 136: [[https://oreil.ly/qPDtW][prevent integer overflow issues]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::136++0.68455]]
+:END:
+
+****** Events
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::140++0.452045??Events]]
+:END:
+
+***** Withdrawing Funds
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::142++0.539788??Withdrawing%20Funds]]
+:END:
+
+***** Fallback Functions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::147++0.779969??Fallback%20Functions]]
+:END:
+
+***** Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::150++0.317576??Summary]]
+:END:
+
+**** Chapter 7. FundraiserFactory
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::151++0.108844??Chapter%207.%20FundraiserFactory]]
+:END:
+
+***** Migrating Our FundraiserFactory
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::151++0.547308??Migrating%20Our%20FundraiserFactory]]
+:END:
+
+***** Creating Fundraisers
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::153++0.391952??Creating%20Fundraisers]]
+:END:
+
+***** Viewing Available Fundraisers
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::158++0.157939??Viewing%20Available%20Fundraisers]]
+:END:
+
+****** Testing Pagination When Empty
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::158++0.615874??Testing%20Pagination%20When%20Empty]]
+:END:
+
+****** Testing the Limit
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::160++0.414101??Testing%20the%20Limit]]
+:END:
+
+****** Testing the Offset
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::163++0.229822??Testing%20the%20Offset]]
+:END:
+
+***** Setting Up the UI
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::167++0.280992??Setting%20Up%20the%20UI]]
+:END:
+
+****** Link on page 167: [[https://github.com/RedSquirrelTech/hoscdev][GitHub]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::167++0.386168]]
+:END:
+
+***** Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::168++0.39558??Summary]]
+:END:
+
+*** Part III. Interacting with Our Smart Contracts Through Web3
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::169++0.108844??Part%20III.%20Interacting%20with%20Our%20Smart%20Contracts%20Through%20Web3]]
+:END:
+
+**** Chapter 8. What Is Web3?
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::171++0.108844??Chapter%208.%20What%20Is%20Web3?]]
+:END:
+
+***** Link on page 171: [[https://www.jsonrpc.org/specification][here]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::171++0.491637]]
+:END:
+
+***** The Frontend, Web3, and the Blockchain
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::171++0.566356??The%20Frontend,%20Web3,%20and%20the%20Blockchain]]
+:END:
+
+***** Web3 Methods
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::172++0.352512??Web3%20Methods]]
+:END:
+
+****** getAccounts()
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::172++0.531123??getAccounts()]]
+:END:
+
+****** getBlockNumber()
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::172++0.692265??getBlockNumber()]]
+:END:
+
+****** getBalance()
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::172++0.801717??getBalance()]]
+:END:
+
+****** sendTransaction()
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::173++0.255511??sendTransaction()]]
+:END:
+
+****** Providers
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::174++0.137608??Providers]]
+:END:
+
+****** Promises with Web3
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::174++0.535485??Promises%20with%20Web3]]
+:END:
+
+****** MetaMask for Web3 Injection
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::176++0.081633??MetaMask%20for%20Web3%20Injection]]
+:END:
+
+******* Link on page 176: [[https://metamask.io/][MetaMask]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::176++0.114938]]
+:END:
+
+****** Send (State Updates/Write)
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::176++0.341641??Send%20(State%20Updates/Write)]]
+:END:
+
+****** Call (Reads)
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::176++0.566245??Call%20(Reads)]]
+:END:
+
+***** Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::177++0.100796??Summary]]
+:END:
+
+**** Chapter 9. Connecting the UI to Our Contracts
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::179++0.108844??Chapter%209.%20Connecting%20the%20UI%20to%20Our%20Contracts]]
+:END:
+
+***** Why React?
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::179++0.500143??Why%20React?]]
+:END:
+
+****** Link on page 179: [[https://reactjs.org/][official site]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::179++0.719605]]
+:END:
+
+****** Link on page 179: [[https://github.com/truffle-box/react-box][React Box]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::179++0.852031]]
+:END:
+
+****** Dev Setup
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::180++0.241916??Dev%20Setup]]
+:END:
+
+******* Link on page 180: [[https://github.com/truffle-box/react-box][React Truffle Box]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::180++0.294269]]
+:END:
+
+***** Truffle
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::181++0.081633??Truffle]]
+:END:
+
+****** React Truffle Box Setup
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::182++0.787938??React%20Truffle%20Box%20Setup]]
+:END:
+
+****** Importing our Greeter Contracts
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::188++0.081633??Importing%20our%20Greeter%20Contracts]]
+:END:
+
+****** Adding Our Greeter Contract Functionality
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::189++0.309923??Adding%20Our%20Greeter%20Contract%20Functionality]]
+:END:
+
+****** Setting Our Greeting Through React
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::191++0.081633??Setting%20Our%20Greeting%20Through%20React]]
+:END:
+
+***** Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::192++0.761032??Summary]]
+:END:
+
+**** Chapter 10. Our Larger DApp
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::195++0.108844??Chapter%2010.%20Our%20Larger%20DApp]]
+:END:
+
+***** Starting with React Truffle Box
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::195++0.528261??Starting%20with%20React%20Truffle%20Box]]
+:END:
+
+****** Fundraiser Setup
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::198++0.196565??Fundraiser%20Setup]]
+:END:
+
+****** React Routing
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::201++0.563912??React%20Routing]]
+:END:
+
+******* Link on page 201: [[https://www.npmjs.com/package/react-router-dom][react-router-dom]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::201++0.635233]]
+:END:
+
+***** React and Material UI
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::205++0.119843??React%20and%20Material%20UI]]
+:END:
+
+****** Link on page 205: [[https://material-ui.com/][here]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::205++0.254044]]
+:END:
+
+****** Link on page 205: [[https://material-ui.com/components/app-bar/][here]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::205++0.506188]]
+:END:
+
+****** Creating Our New Fundraiser Page View
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::207++0.515888??Creating%20Our%20New%20Fundraiser%20Page%20View]]
+:END:
+
+******* Link on page 207: [[https://oreil.ly/4VHWO][text field]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::207++0.692494]]
+:END:
+
+****** Displaying the Current Fundraisers List
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::211++0.625579??Displaying%20the%20Current%20Fundraisers%20List]]
+:END:
+
+******* Link on page 211: [[https://material-ui.com/components/cards/][cards]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::211++0.763193]]
+:END:
+
+***** Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::217++0.081633??Summary]]
+:END:
+
+**** Chapter 11. Finishing Our Fundraiser UI
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::219++0.108844??Chapter%2011.%20Finishing%20Our%20Fundraiser%20UI]]
+:END:
+
+***** Adding Detailed Information About Each Fundraiser
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::219++0.575426??Adding%20Detailed%20Information%20About%20Each%20Fundraiser]]
+:END:
+
+****** Implementing a Material UI Dialog
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::221++0.497698??Implementing%20a%20Material%20UI%20Dialog]]
+:END:
+
+******* Link on page 221: [[https://material-ui.com/components/dialogs/][dialog]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::221++0.531004]]
+:END:
+
+***** Accepting a Donation with React
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::224++0.565416??Accepting%20a%20Donation%20with%20React]]
+:END:
+
+****** Testing a Donation
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::228++0.621615??Testing%20a%20Donation]]
+:END:
+
+***** Displaying the Current ETH Exchange Rate
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::230++0.157939??Displaying%20the%20Current%20ETH%20Exchange%20Rate]]
+:END:
+
+****** Link on page 230: [[https://www.cryptocompare.com][CryptoCompare]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::230++0.378308]]
+:END:
+
+***** Generating a Donation Receipt for Our User
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::234++0.081633??Generating%20a%20Donation%20Receipt%20for%20Our%20User]]
+:END:
+
+***** Handling a Withdrawal from Our Contract
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::240++0.157939??Handling%20a%20Withdrawal%20from%20Our%20Contract]]
+:END:
+
+****** Adding Edit Beneficiary to the Contract
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::246++0.577805??Adding%20Edit%20Beneficiary%20to%20the%20Contract]]
+:END:
+
+***** Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::247++0.625956??Summary]]
+:END:
+
+*** Part IV. Securing Your Smart Contracts
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::249++0.108844??Part%20IV.%20Securing%20Your%20Smart%20Contracts]]
+:END:
+
+**** Chapter 12. Smart Contract Security
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::251++0.108844??Chapter%2012.%20Smart%20Contract%20Security]]
+:END:
+
+***** Why Do We Need to Worry About Security?
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::251++0.509213??Why%20Do%20We%20Need%20to%20Worry%20About%20Security?]]
+:END:
+
+****** Link on page 251: [[https://oreil.ly/C1-tf][disabled it]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::251++0.652484]]
+:END:
+
+****** Link on page 251: [[https://oreil.ly/0xhPC][3.6 million]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::251++0.77584]]
+:END:
+
+****** Link on page 251: [[https://oreil.ly/0xhPC][ether]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::251++0.794888]]
+:END:
+
+***** Types of Smart Contract Vulnerabilities
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::252++0.081633??Types%20of%20Smart%20Contract%20Vulnerabilities]]
+:END:
+
+****** Unprotected Function
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::252++0.174983??Unprotected%20Function]]
+:END:
+
+****** Transaction Ordering Dependence
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::252++0.74062??Transaction%20Ordering%20Dependence]]
+:END:
+
+****** Integer Overflow and Underflow
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::253++0.156655??Integer%20Overflow%20and%20Underflow]]
+:END:
+
+******* Link on page 253: [[https://oreil.ly/Jkkgn][Integer overflow and underflow]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::253++0.189961]]
+:END:
+
+******* Link on page 253: [[https://oreil.ly/-hbmQ][SafeMath]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::253++0.286016]]
+:END:
+
+****** Reentrancy
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::253++0.417561??Reentrancy]]
+:END:
+
+****** Block Gas Limit
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::254++0.499502??Block%20Gas%20Limit]]
+:END:
+
+****** Timestamp Dependence
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::254++0.710552??Timestamp%20Dependence]]
+:END:
+
+****** And Many More
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::255++0.137608??And%20Many%20More]]
+:END:
+
+******* Link on page 255: [[https://oreil.ly/12fsm][list]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::255++0.209008]]
+:END:
+
+***** Preparing Your Contract for an External Audit
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::255++0.311845??Preparing%20Your%20Contract%20for%20an%20External%20Audit]]
+:END:
+
+****** Link on page 255: [[https://oreil.ly/Drwei][here]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::255++0.841501]]
+:END:
+
+****** External Auditing
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::256++0.156655??External%20Auditing]]
+:END:
+
+****** Auditing Companies
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::256++0.339587??Auditing%20Companies]]
+:END:
+
+******* Link on page 256: [[https://github.com/authio-ethereum/Audits][Authio]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::256++0.39194]]
+:END:
+
+****** Solidified
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::256++0.50347??Solidified]]
+:END:
+
+***** Free Auditing Resources
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::256++0.772946??Free%20Auditing%20Resources]]
+:END:
+
+****** Link on page 256: [[https://github.com/crytic/echidna][Echidna]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::256++0.830956]]
+:END:
+
+****** Link on page 256: [[https://oreil.ly/fQeqf][resources]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::256++0.850004]]
+:END:
+
+****** Link on page 257: [[https://oreil.ly/ras8O][ConSensys]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::257++0.08322]]
+:END:
+
+***** Growing Your Auditing Skills
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::257++0.186057??Growing%20Your%20Auditing%20Skills]]
+:END:
+
+****** Link on page 257: [[https://oreil.ly/6zxH4][auditing course]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::257++0.357446]]
+:END:
+
+***** Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::257++0.489307??Summary]]
+:END:
+
+*** Index
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::259++0.108844??Index]]
+:END:
+
+*** About the Authors
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::268++0.09675??About%20the%20Authors]]
+:ID:       b0eb2d71-0ed3-4194-bffd-79f3d5a9cdfe
+:END:
+
+*** Colophon
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/hands-on-smart-contract-development-with-solidity-and-ethereum-from-fundamentals-to-deployment-1nbsped-1492045268-9781492045267_compress.pdf::268++0.450813??Colophon]]
+:END:

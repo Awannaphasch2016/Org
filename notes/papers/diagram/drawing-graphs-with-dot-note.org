@@ -1,0 +1,7 @@
+#+TITLE: Drawing Graphs With Dot Note
+
+* Drawing Graphs with Dot Note
+:PROPERTIES:
+:NOTER_DOCUMENT: /home/awannaphasch2016/org/papers/drawing-graph-with-dot.pdf
+:NOTER_PAGE: [[pdf:~/org/papers/drawing-graph-with-dot.pdf::1++0.00]]
+:END:

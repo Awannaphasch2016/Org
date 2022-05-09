@@ -360,3 +360,468 @@ CLOCK: [2022-03-03 Thu 14:04]--[2022-03-03 Thu 14:43] =>  0:39
 CLOCK: [2022-03-03 Thu 16:00]--[2022-03-03 Thu 16:25] =>  0:25
 :END:
 [2022-03-03 Thu 16:25]
+**** bathroom break
+:LOGBOOK:
+CLOCK: [2022-03-03 Thu 19:53]--[2022-03-03 Thu 20:11] =>  0:18
+:END:
+[2022-03-03 Thu 19:53]
+
+*** 2022-03-04 Friday
+**** taking a break
+:LOGBOOK:
+CLOCK: [2022-03-04 Fri 17:30]--[2022-03-04 Fri 17:41] =>  0:11
+:END:
+[2022-03-04 Fri 17:30]
+**** bathroom break
+:LOGBOOK:
+CLOCK: [2022-03-04 Fri 18:02]--[2022-03-04 Fri 18:28] =>  0:26
+:END:
+[2022-03-04 Fri 18:02]
+**** taking a break
+:LOGBOOK:
+CLOCK: [2022-03-04 Fri 18:48]--[2022-03-04 Fri 18:50] =>  0:02
+:END:
+[2022-03-04 Fri 18:48]
+**** taking a break
+:LOGBOOK:
+CLOCK: [2022-03-04 Fri 22:32]--[2022-03-04 Fri 23:03] =>  0:31
+:END:
+[2022-03-04 Fri 22:32]
+
+*** 2022-03-05 Saturday
+**** walking dog.
+:LOGBOOK:
+CLOCK: [2022-03-05 Sat 00:15]--[2022-03-05 Sat 00:51] =>  0:36
+:END:
+**** distracted by web surfing
+:LOGBOOK:
+CLOCK: [2022-03-05 Sat 12:06]--[2022-03-05 Sat 12:36] =>  0:30
+:END:
+[2022-03-05 Sat 12:06]
+**** distacted
+:LOGBOOK:
+CLOCK: [2022-03-05 Sat 12:48]--[2022-03-05 Sat 13:07] =>  0:19
+:END:
+[2022-03-05 Sat 12:38]
+**** taking a break
+:LOGBOOK:
+CLOCK: [2022-03-05 Sat 13:47]--[2022-03-05 Sat 15:00] =>  1:13
+:END:
+[2022-03-05 Sat 13:47]
+
+*** 2022-03-06 Sunday
+**** taking a break.
+:LOGBOOK:
+CLOCK: [2022-03-06 Sun 08:27]--[2022-03-06 Sun 10:05] =>  1:38
+:END:
+[2022-03-06 Sun 08:27]
+**** bathroom break
+:LOGBOOK:
+CLOCK: [2022-03-06 Sun 11:06]--[2022-03-06 Sun 11:26] =>  0:20
+:END:
+[2022-03-06 Sun 11:06]
+**** break
+:LOGBOOK:
+CLOCK: [2022-03-06 Sun 11:43]--[2022-03-06 Sun 12:15] =>  0:32
+:END:
+[2022-03-06 Sun 11:43]
+**** taking a break
+[2022-03-06 Sun 21:18]
+
+*** 2022-03-07 Monday
+**** taking a break
+:LOGBOOK:
+CLOCK: [2022-03-07 Mon 01:05]--[2022-03-07 Mon 01:37] =>  0:32
+:END:
+[2022-03-07 Mon 01:05]
+**** taking a break
+:LOGBOOK:
+CLOCK: [2022-03-07 Mon 13:53]--[2022-03-07 Mon 15:07] =>  1:14
+:END:
+[2022-03-07 Mon 13:53]
+
+*** 2022-03-09 Wednesday
+
+*** 2022-03-10 Thursday
+
+*** 2022-03-12 Saturday
+
+*** 2022-03-13 Sunday
+**** taking a break
+:PROPERTIES:
+:ID:       be287ac5-a130-408c-a7a1-63d83a85c989
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-13 Sun 22:24]--[2022-03-13 Sun 22:50] =>  0:26
+:END:
+[2022-03-13 Sun 22:24]
+
+*** 2022-03-14 Monday
+**** taking a break
+:LOGBOOK:
+CLOCK: [2022-03-14 Mon 00:17]--[2022-03-14 Mon 01:39] =>  1:22
+:END:
+[2022-03-14 Mon 00:17]
+**** taking a break
+:PROPERTIES:
+:ID:       97f9321e-372f-4be2-bdea-eff81a054cf0
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-14 Mon 11:44]--[2022-03-14 Mon 11:50] =>  0:06
+:END:
+[2022-03-14 Mon 11:44]
+**** taking a break
+:PROPERTIES:
+:ID:       d09425b0-a446-4cc9-8810-def4a00d3f3a
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-14 Mon 12:55]--[2022-03-14 Mon 13:10] =>  0:15
+:END:
+[2022-03-14 Mon 12:55]
+**** taking a break
+:PROPERTIES:
+:ID:       a8e33132-3144-4dd6-a4b7-2eaedea963ee
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-14 Mon 21:09]--[2022-03-14 Mon 22:01] =>  0:52
+:END:
+[2022-03-14 Mon 21:09]
+**** taking break
+:PROPERTIES:
+:ID:       bbbf2a82-5dd9-49df-9b19-c6e0419852f8
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-14 Mon 22:22]--[2022-03-14 Mon 22:30] =>  0:08
+:END:
+[2022-03-14 Mon 22:22]
+**** taking a break
+:PROPERTIES:
+:ID:       cf53c36c-15e3-46d9-a8e4-03b0e2d080a2
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-14 Mon 22:46]--[2022-03-14 Mon 22:50] =>  0:04
+:END:
+[2022-03-14 Mon 22:46]
+**** taking a break.
+:PROPERTIES:
+:ID:       9379d55b-8973-4350-b88f-e9bfdc878b12
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-14 Mon 23:30]--[2022-03-14 Mon 23:33] =>  0:03
+:END:
+[2022-03-14 Mon 23:30]
+
+*** 2022-03-16 Wednesday
+:PROPERTIES:
+:ID:       d05f1504-37bb-470f-8a42-63342a1183bc
+:END:
+**** taking a break
+:PROPERTIES:
+:ID:       5faffc09-5214-41b0-adb8-523f67bb724a
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-16 Wed 14:22]--[2022-03-16 Wed 14:30] =>  0:08
+:END:
+[2022-03-16 Wed 14:22]
+**** figure out how to extract highligh.
+:LOGBOOK:
+:END:
+[2022-03-16 Wed 14:37]
+**** taking a break
+:PROPERTIES:
+:ID:       b465de2d-9665-466c-a8d3-9ff03b664c6f
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-16 Wed 14:55]--[2022-03-16 Wed 15:17] =>  0:22
+:END:
+[2022-03-16 Wed 14:55]
+**** figuring out how to use I-search
+:PROPERTIES:
+:ID:       bf945892-38a7-42ef-be26-cf121e4fce92
+:END:
+[2022-03-16 Wed 15:44]
+**** taking a break
+:PROPERTIES:
+:ID:       a3e5db8d-0a56-4a5b-8b55-0055e1110c8d
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-16 Wed 16:12]--[2022-03-16 Wed 16:31] =>  0:19
+:END:
+[2022-03-16 Wed 16:12]
+**** calling internet guy
+:PROPERTIES:
+:ID:       72dcb1df-5824-436e-b9b9-42a9c7e4cce5
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-16 Wed 16:44]--[2022-03-16 Wed 17:04] =>  0:20
+:END:
+[2022-03-16 Wed 16:44]
+**** taking a break
+:PROPERTIES:
+:ID:       a48b0487-d5c9-43f2-a0f6-0379b0cfe956
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-16 Wed 19:18]--[2022-03-16 Wed 20:15] =>  0:57
+:END:
+[2022-03-16 Wed 19:18]
+**** taking a break
+:PROPERTIES:
+:ID:       103e9566-1272-4b5d-bfdc-1522a888bc17
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-16 Wed 20:45]--[2022-03-16 Wed 21:47] =>  1:02
+:END:
+[2022-03-16 Wed 20:45]
+
+*** 2022-03-18 Friday
+**** taking a break
+:PROPERTIES:
+:ID:       e74be925-e96b-467b-93c4-45f19b9e9db4
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-18 Fri 12:36]--[2022-03-18 Fri 13:35] =>  0:59
+:END:
+[2022-03-18 Fri 12:36]
+**** taking a break
+:PROPERTIES:
+:ID:       60df026b-f62c-4e05-abd2-3b9d7ccadaa6
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-18 Fri 14:00]--[2022-03-18 Fri 14:06] =>  0:06
+:END:
+[2022-03-18 Fri 14:00]
+**** taking a break
+:PROPERTIES:
+:ID:       cdb77a7a-63d1-4b95-a9f1-bd73b31d93f0
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-18 Fri 15:39]--[2022-03-18 Fri 15:43] =>  0:04
+:END:
+[2022-03-18 Fri 15:39]
+**** break
+:LOGBOOK:
+:END:
+[2022-03-18 Fri 19:57]
+
+*** 2022-03-22 Tuesday
+
+** 2022-04 April
+
+*** 2022-04-10 Sunday
+
+*** 2022-04-12 Tuesday
+****
+:LOGBOOK:
+CLOCK: [2022-04-12 Tue 16:22]--[2022-04-12 Tue 16:23] =>  0:01
+CLOCK: [2022-04-12 Tue 14:16]--[2022-04-12 Tue 16:22] =>  2:06
+:END:
+[2022-04-12 Tue 00:00]
+
+*** 2022-04-14 Thursday
+
+*** 2022-04-19 Tuesday
+**** taking a break
+:LOGBOOK:
+CLOCK: [2022-04-19 Tue 10:39]--[2022-04-19 Tue 10:47] =>  0:08
+:END:
+[2022-04-19 Tue 10:39]
+**** break
+:PROPERTIES:
+:ID:       3d27a9f1-2e2a-4c80-9c40-92864e2a1ad8
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-19 Tue 14:03]--[2022-04-19 Tue 14:04] =>  0:01
+:END:
+[2022-04-19 Tue 14:03]
+**** GTD/organization
+:PROPERTIES:
+:ID:       18373d3b-8564-4c9d-b670-e0340937e6a0
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-19 Tue 14:06]--[2022-04-19 Tue 14:11] =>  0:05
+:END:
+[2022-04-19 Tue 14:06]
+**** GTD stuff
+:PROPERTIES:
+:ID:       74935b7b-9611-44ff-bf9e-675e4f76e97e
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-19 Tue 14:19]--[2022-04-19 Tue 14:23] =>  0:04
+:END:
+[2022-04-19 Tue 14:19]
+**** GTD/organization
+:LOGBOOK:
+CLOCK: [2022-04-19 Tue 14:25]--[2022-04-19 Tue 14:38] =>  0:13
+:END:
+[2022-04-19 Tue 14:25]
+**** GTD
+:PROPERTIES:
+:ID:       c983a1a8-1ff8-45ab-9a11-e1c6e5f180e3
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-19 Tue 14:40]--[2022-04-19 Tue 14:43] =>  0:03
+:END:
+[2022-04-19 Tue 14:40]
+**** moving
+:PROPERTIES:
+:ID:       559d894b-3ef3-433b-b87b-8958e801c823
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-19 Tue 19:06]--[2022-04-19 Tue 19:08] =>  0:02
+:END:
+[2022-04-19 Tue 19:06]
+
+*** 2022-04-20 Wednesday
+**** chating
+:PROPERTIES:
+:ID:       0218d191-d11e-49a6-a349-92e18a04b738
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-20 Wed 13:58]--[2022-04-20 Wed 13:59] =>  0:01
+:END:
+[2022-04-20 Wed 13:58]
+**** chating
+:PROPERTIES:
+:ID:       e0ca6dea-7a5e-4d05-8930-389f1f875852
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-20 Wed 14:38]--[2022-04-20 Wed 14:42] =>  0:04
+:END:
+[2022-04-20 Wed 14:38]
+
+*** 2022-04-21 Thursday
+**** break
+:PROPERTIES:
+:ID:       8315ad72-6e42-45b3-8c4b-a6934820b66f
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-21 Thu 11:40]--[2022-04-21 Thu 12:09] =>  0:29
+:END:
+[2022-04-21 Thu 11:40]
+**** break
+:PROPERTIES:
+:ID:       a97c98c5-16b7-444c-bd25-a5eb11055501
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-21 Thu 12:41]--[2022-04-21 Thu 12:51] =>  0:10
+:END:
+[2022-04-21 Thu 12:41]
+**** break
+:PROPERTIES:
+:ID:       7c97df9c-9198-4f8b-9897-df55a33861f1
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-21 Thu 13:23]--[2022-04-21 Thu 13:36] =>  0:13
+:END:
+[2022-04-21 Thu 13:23]
+**** break
+:PROPERTIES:
+:ID:       8e6761a1-3a0f-479c-b3cc-08df04a81bdc
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-21 Thu 14:08]--[2022-04-21 Thu 14:10] =>  0:02
+:END:
+[2022-04-21 Thu 14:08]
+**** break
+:PROPERTIES:
+:ID:       57a20e2b-6e33-4560-a80f-93244c4fbbb6
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-21 Thu 14:37]--[2022-04-21 Thu 14:50] =>  0:13
+:END:
+[2022-04-21 Thu 14:37]
+**** break
+:PROPERTIES:
+:ID:       5b3494f4-42c5-4a54-aa22-61e6d151cd3c
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-21 Thu 15:33]--[2022-04-21 Thu 16:05] =>  0:32
+:END:
+[2022-04-21 Thu 15:33]
+**** reading stuff
+:PROPERTIES:
+:ID:       1d7b7e6b-b474-4d77-8c4d-f0c2684dcf06
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-21 Thu 16:07]--[2022-04-21 Thu 16:20] =>  0:13
+:END:
+[2022-04-21 Thu 16:07]
+
+*** 2022-04-22 Friday
+**** break
+:PROPERTIES:
+:ID:       a0bef76b-50df-43c2-86f8-860880c3877e
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-22 Fri 10:10]--[2022-04-22 Fri 10:39] =>  0:29
+:END:
+[2022-04-22 Fri 10:10]
+
+*** 2022-04-24 Sunday
+**** break
+:PROPERTIES:
+:ID:       4b8f0955-8f8f-4ab2-a01f-1a04b58abdd1
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-24 Sun 12:35]--[2022-04-24 Sun 12:41] =>  0:06
+:END:
+[2022-04-24 Sun 12:35]
+**** break
+:PROPERTIES:
+:ID:       bc9ab7af-740c-4dff-a051-36664b63689f
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-24 Sun 13:21]--[2022-04-24 Sun 14:04] =>  0:43
+:END:
+[2022-04-24 Sun 13:21]
+**** break
+:PROPERTIES:
+:ID:       e95bdaa9-36e9-4028-937a-4186c939648e
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-24 Sun 17:14]--[2022-04-24 Sun 17:20] =>  0:06
+:END:
+[2022-04-24 Sun 17:14]
+**** break
+:PROPERTIES:
+:ID:       8a5affc8-3989-45e2-bfba-cc31e2536ebc
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-24 Sun 18:39]--[2022-04-24 Sun 19:00] =>  0:21
+:END:
+[2022-04-24 Sun 18:39]
+**** break
+:PROPERTIES:
+:ID:       abe0e0d3-37e0-4e8e-bd09-587c41d5d444
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-24 Sun 20:23]--[2022-04-24 Sun 20:45] =>  0:22
+:END:
+[2022-04-24 Sun 20:23]
+**** break
+:PROPERTIES:
+:ID:       42c474c2-44d0-4b66-b141-ba1ec77e23a6
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-24 Sun 20:46]--[2022-04-24 Sun 20:47] =>  0:01
+:END:
+[2022-04-24 Sun 20:46]
+
+*** 2022-04-25 Monday
+
+*** 2022-04-26 Tuesday
+
+** 2022-05 May
+
+*** 2022-05-01 Sunday
+:PROPERTIES:
+:ID:       b8830f55-aa8c-4ab2-a6b6-8c565eca591a
+:END:
+
+*** 2022-05-05 Thursday
+
+****
+:LOGBOOK:
+CLOCK: [2022-05-05 Thu 16:31]--[2022-05-05 Thu 16:38] =>  0:07
+:END:
+[2022-05-05 Thu 00:00]

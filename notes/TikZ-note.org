@@ -1,0 +1,6 @@
+#+TITLE: Tik Z Note
+
+* FAQs
+** why would you bother learning TikZ?
+- ref
+  - [[https://tex.stackexchange.com/questions/222500/why-is-latex-so-complicated][Why is LaTeX so complicated? [closed]​]]

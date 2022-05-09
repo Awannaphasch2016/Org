@@ -1,37 +1,10 @@
 #+TITLE: Expert Identification
 #+FILETAGS: PERSONAL @sideproject EI
 
-* Expert Identification
-** Waiting :WAITING:
-** Habit :habit:
-*** TODO work on expert identification
-SCHEDULED: <2022-03-03 Thu .+2d/+3d>
+* Reference
 :PROPERTIES:
-:STYLE:    habit
-:REPEAT_TO_STATE: TODO
+:ID:       43b07466-346f-46b6-a527-0a480dcee046
 :END:
-**** TODO start working on project again after a week pause. Focus on analyzing data. (lets at the same time learn data science at command line.) (spend an hour daily or something.)
-:LOGBOOK:
-CLOCK: [2022-03-02 Wed 18:56]--[2022-03-02 Wed 19:21] =>  0:25
-CLOCK: [2022-03-02 Wed 18:55]--[2022-03-02 Wed 18:56] =>  0:01
-:END:
-***** TODO analyze sentiment data to indicate whether the sentiment works at all.
-****** NEXT figure out a way to collect data. (where to get the data?)
-******* TODO check out alpaca api. what does it used for? can I use it?
-****** TODO how should I clean data? what should data structure look like when store in database?
-****** TODO how should I measure the performance? what matrix should I use?
-**** NEXT draw UML using PlantUML: sequence diagram, activity diagram, usecase diagram, object diagram, state diagram. :@sideproject:WORK:EI:
-:LOGBOOK:
-CLOCK: [2022-02-26 Sat 17:16]--[2022-02-26 Sat 17:19] =>  0:03
-:END:
-[2022-02-26 Sat 17:16]
-[[file:~/.doom.d/init.el::+jupyter]]
-** Questions :QUESTION:
-** Notes :NOTE:
-** Meeting :MEETING:
-** Tasks
-*** project: crypto with kenny
-- ref
   - tutorial on twitter query
     - https://developer.twitter.com/en/docs/twitter-api/tweets/search/integrate/build-a-query
   - tutorial on snscrape
@@ -39,11 +12,74 @@ CLOCK: [2022-02-26 Sat 17:16]--[2022-02-26 Sat 17:19] =>  0:03
   - list of account to follow
     - [[https://itsblockchain.com/crypto-twitter-traders-2021/][Top 5 Crypto traders to follow on Twitter in 2021]]
     - [[https://medium.com/geekculture/12-cryptocurrency-twitter-accounts-everyone-should-follow-1b5936877eaf][12 Cryptoscurrency Twitter Accounts Everyone Should Follow]]
-- dvc stuff
-  - ref
-    - [[https://dvc.org/doc/start/data-and-model-versioning][Get Started: Data Versioning]]
-  - creat remote storage in s3
-    - ?
+* Expert Identification
+** Delegation :waiting:
+** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+*** CANCELLED 30 mins: send trader new list of coins daily :CANCELLED:
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: NEXT
+:END:
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-04-19 Tue 19:50]
+:END:
+Before I can send list of coins, complete the following [[*aggregate sentiment value of coin.][aggregate sentiment value of coin.]]
+*** CANCELLED 30 - 1 hours work on expert identification :CANCELLED:
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: NEXT
+:END:
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-04-09 Sat 15:30]
+:END:
+**** do research on sentiment analysis to output candidate coins to be traded.
+**** read through Qaunt talk can. what kind of information I can get from it?
+**** learn from numer.ai community
+**** complete in kaggle competition about blockchain
+:PROPERTIES:
+:ID:       95f7fbf9-db36-4f58-8a35-be7de494c0f5
+:END:
+***** [[https://www.kaggle.com/competitions/g-research-crypto-forecasting/data][crypto price prediction competition]]
+:PROPERTIES:
+:ID:       8e277dc6-8b13-4b75-95fa-984afd7bbb13
+:END:
+[[https://www.kaggle.com/code/tomforbes/1st-place-6-weeks-in-final-submission][1st Place (6 Weeks in) Final Submission]]
+***** analyze blockchain price by following kaggle notework, see [[https://www.kaggle.com/search?q=blockchain+in%3Anotebooks][here]]
+:PROPERTIES:
+:ID:       9a3ae118-2adb-44f4-8b50-0919c296e613
+:END:
+**** complete python for finance
+:PROPERTIES:
+:ID:       d5ce524e-8517-4667-ab41-9bfe2b71fe35
+:END:
+https://www.youtube.com/playlist?list=PLGLfVvz_LVvTHOWIEBAl-YOr_FC8lRmWX
+**** start working on project again after a week pause. Focus on analyzing data. (lets at the same time learn data science at command line.) (spend an hour daily or something.)
+:LOGBOOK:
+CLOCK: [2022-03-02 Wed 18:56]--[2022-03-02 Wed 19:21] =>  0:25
+CLOCK: [2022-03-02 Wed 18:55]--[2022-03-02 Wed 18:56] =>  0:01
+:END:
+***** analyze sentiment data to indicate whether the sentiment works at all.
+****** figure out a way to collect data. (where to get the data?)
+******* check out alpaca api. what does it used for? can I use it?
+****** how should I clean data? what should data structure look like when store in database?
+****** how should I measure the performance? what matrix should I use?
+**** draw UML using PlantUML: sequence diagram, activity diagram, usecase diagram, object diagram, state diagram. :@sideproject:WORK:EI:
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 17:16]--[2022-02-26 Sat 17:19] =>  0:03
+:END:
+[2022-02-26 Sat 17:16]
+[[file:~/.doom.d/init.el::+jupyter]]
+** Questions :QUESTION:
+** Notes :NOTE:
+*** graph based appraoch
+:PROPERTIES:
+:ID:       9ec5f916-1f10-40d8-8d9f-c28aedd8cccb
+:END:
 - extends to use knowledge graph, see [[https://medium.com/neo4j/monitoring-the-cryptocurrency-space-with-nlp-and-knowledge-graphs-92a1cfaebd1a][here]].
 - I will extend to use docker later.
 - start using database from now one to make query easy. (SQL schema? document db?)
@@ -100,29 +136,64 @@ twitter.com/search
         - return ranking of crypto
   - query from the past
   - query from stream data
-*** TODO finalized list of task that I have discussed with Adam on ExpertCrypto project. :EI:
+*** temporal clustering based approach.
+*** source of data
+social media data is twitter.
+articles in coinbase
+social trading platform is Seeking Alpha.
+
+** Meeting :MEETING:
+** Tasks
+:PROPERTIES:
+:ID:       497e5e98-ca9a-47f3-97cf-4cb500bd359a
+:END:
+*** actionable :actionable:
+:PROPERTIES:
+:ID:       a45d054e-85db-486f-840d-ea6d0fd03017
+:END:
+**** TODO aggregate sentiment value of coin.
+SCHEDULED: <2022-05-05 Thu>
+picture below is what the program current output
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220419_083744.png]]
+*** incubation :incubation:
+:PROPERTIES:
+:ID:       1f02c9b1-887f-4404-8a41-90767f6fe535
+:END:
+****  finalized list of task that I have discussed with Adam on ExpertCrypto project. :EI:
 :LOGBOOK:
 CLOCK: [2022-02-22 Tue 10:00]--[2022-02-22 Tue 10:02] =>  0:02
 :END:
 [2022-02-22 Tue 10:00]
-**** NFTs stuff.
-**** 1 coin -> 1 score.
-**** coin discovery. (with filter e.g. by number)
-**** track the expert performance.
-**** to connect using the ece2 instance ocnnect browser-based client, the instance must have ap ulbich IPv4 address.
-*** TODO [[file:/C:/Users/terng/Downloads/electronics-10-02739.pdf][read Sentiment Analysis in Twitter Based on Knowledge Graph and Deep Learning Classification]]
+***** NFTs stuff.
+***** 1 coin -> 1 score.
+***** coin discovery. (with filter e.g. by number)
+***** track the expert performance.
+***** to connect using the ece2 instance ocnnect browser-based client, the instance must have ap ulbich IPv4 address.
+****  [[file:/C:/Users/terng/Downloads/electronics-10-02739.pdf][read Sentiment Analysis in Twitter Based on Knowledge Graph and Deep Learning Classification]]
 - ref
   - file:///C:/Users/terng/Downloads/electronics-10-02739.pdf
-*** TODO learn about time series forcasting
-*** TODO writing ER diagram, relationship schema for Expert Identification project as appropriate.
+****  learn about time series forcasting
+****  writing ER diagram, relationship schema for Expert Identification project as appropriate.
 :LOGBOOK:
 CLOCK: [2022-02-24 Thu 23:09]--[2022-02-24 Thu 23:10] =>  0:01
 :END:
 [2022-02-24 Thu 23:09]
 [[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*In the initial design of entity types, relationships are typically captured in the form of attributes. As the design is refined, these attributes get converted into relationships between entity types][In the initial design of entity types, relationships are typically captured in the form of attributes. As the design is refined, these attributes get converted into relationships between entity types]]
-*** TODO search for useful api in rapidAPI for pen.el, garun, expert identifification projects.
+****  search for useful api in rapidAPI for pen.el, garun, expert identifification projects.
 :LOGBOOK:
 CLOCK: [2022-02-25 Fri 11:04]--[2022-02-25 Fri 11:05] =>  0:01
 :END:
 [2022-02-25 Fri 11:04]
 [[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*A weak entity type always has a total participation constraint (existence dependency) with respect to its identifying relationship because a weak entity cannot be identified without an owner entity. However, not every existence dependency results in a weak entity type. For example, a DRIVER_LICENSE entity cannot exist unless it is related to a PERSON entity, even though it has its own key (License_number) and hence is not a weak entity][A weak entity type always has a total participation constraint (existence dependency) with respect to its identifying relationship because a weak entity cannot be identified without an owner entity. However, not every existence dependency results in a weak entity type. For example, a DRIVER_LICENSE entity cannot exist unless it is related to a PERSON entity, even though it has its own key (License_number) and hence is not a weak entity]]
+
+**** dvc stuff
+- ref
+  - [[https://dvc.org/doc/start/data-and-model-versioning][Get Started: Data Versioning]]
+***** creat remote storage in s3
+****  read [[https://quant.stackexchange.com/questions/115/l%c3%a9vy-alpha-stable-distribution-and-modelling-of-stock-prices][Lévy alpha-stable distribution and modelling of stock prices.]] about quantitative finance stuff
+:PROPERTIES:
+:ID:       179a4fff-74e9-41a3-8836-73fd3fc632dc
+:END:
+[2022-03-15 Tue 12:04]
+[[file:~/org/expert-identification.org::*Tasks][Tasks]]

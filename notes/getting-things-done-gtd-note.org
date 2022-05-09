@@ -46,6 +46,9 @@ are ordered in the NEXT agenda view by estimated effort so the short tasks are f
 work your way down. I can limit the displayed agenda tasks to those estimates of 10 minutes or less with / + 1
 and I can pick something that fits the minutes I have left before I take off for lunch.
 ** Clocking
+:PROPERTIES:
+:ID:       d4e04e9d-a500-4df4-bcb2-ebe5181bf084
+:END:
 I now use the concept of punching in and punching out at the start and end of my work day. I punch in when I arrive
 at work, punch out for lunch, punch in after lunch, and punch out at the end of the day. Every minute is clocked
 between punch-in and punch-out times.
@@ -59,6 +62,9 @@ My clocking setup basically works like this:
 - Punch out (stop the clock)
 
 * Stuck projects
+:PROPERTIES:
+:ID:       fe929ca3-fb9a-4f12-9b31-45ba11ebe713
+:END:
 If you are following a system like David Allen’s GTD to organize your work, one of the “duties” you have is a regular review to make sure that all projects move along. A stuck project is a project that has no defined next actions, so it never shows up in the TODO lists Org mode produces. During the review, you need to identify such projects and define next actions for them.
 * Horizontal Focus
 1. Purpose and Principles: Why you exist in this world? What is your destination in life?

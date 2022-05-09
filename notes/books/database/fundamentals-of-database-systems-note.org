@@ -1,190 +1,193 @@
 #+TITLE: Fundamentals Of Database Systems Note
+#+filetags: database book
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
 
-* Chapter 1
-** 1.6
-*** 1.6.8 Enforcing Integrity Constraints
-**** the simplest type of integrity constaint involves specifying a data type for each data item.
-* Chapter 3 Data Modeling Using the Entity-Reltationship (ER) models
-** 3.1 Using high-level conceptual data models for database design
-*** conceptual design
-** logical design or data model mapping
-** physical design
-** 3.2 A sample database application
-** 3.3 Entity Types, entity Sets, Attributes, and Keys
-**** 3.3.1 entities and their attributes
-***** composite versus simple (Atomic) attributes
-****** composite attribute can be divided into smaller subparts, which represent more basic attributes with independent meaning, aka atomic attribute.
-***** single-valued vs multivaled attributes
-***** stored vs derived attributes
-***** Complex attributes
-****** e.g. if a person can have more than one residence and each residence can have a single address and multiple phones, an attribute Address_phone for a person can be specified as shown in Figure 3.5.4 Both Phone and Address are themselves composite attributes.
-**** 3.3.2 Entity Types and Entity Sets
-***** entity types defines a collection (or set) of entities that have the same attribute.
-***** key attributes of entity types
-****** key attribute is an attribute whose values are distinct for each individual entity. More than 1 attribute can satisfy key attribute property.
-****** each key attribute has its name underlined inside the oval.
-****** composite key must be minimal; that is, all component attributes must be included in the composite attribute to have the uniqueness property
-***** value set (domains) of attributes
-****** domain defines all possible values for attribute.
-**** 3.3.3 Initial conceptual Design of the COMPANY database.
-** 3.4 Relationship Types, relationship set, Roles, and Structural Constraints
-*** Relationship Types, Relationship Sets, Roles, and Structural Constraints
-**** In the ER model, these references should not be represented as attributes but as relationships
-**** In the initial design of entity types, relationships are typically captured in the form of attributes. As the design is refined, these attributes get converted into relationships between entity types
-*** 3.4.1 Relationship types, Sets, and Instances
-*** 3.4.2 Relationship Degree, Role Names, and Recursive Relationships
-**** Degree of a Relationship Types
-***** One can think of an attribute called Department of the EMPLOYEE entity type, where the value of Department for each EMPLOYEE entity is (a reference to) the DEPARTMENT entity for which that employee works. Hence, the value set for this Department attribute is the set of all DEPARTMENT entities, which is the DEPARTMENT entity set.
-***** The alternative point of view is to think of a multivalued attribute Employees of the entity type DEPARTMENT whose value for each DEPARTMENT entity is the set of EMPLOYEE entities who work for that department.
-**** Relatinoship as Attributes
-**** Role Names and Recursive Relationship
-***** The role name signifies the role that a participating entity from the entity type plays in each relationship instance, and it helps to explain what the relationship means. For example, in the WORKS_FOR relationship type, EMPLOYEE plays the role of employee or worker and DEPARTMENT plays the role of department or employer
-***** However, in some cases the same entity type participates more than once in a relationship type in different roles. In such cases the role name becomes essential for distinguishing the meaning of the role that each participating entity plays. Such relationship types are called recursive relationships or self-referencing relationships.
-***** Figure 3.11 shows an example. The SUPERVISION relationship type relates an employee to a supervisor, where both employee and supervisor entities are members of the same EMPLOYEE entity set. Hence, the EMPLOYEE entity type participates twice in SUPERVISION: once in the role of supervisor (or boss), and once in the role of supervisee (or subordinate).
+* TODO old note (move notes to org noter at one point )
+** Chapter 1
+*** 1.6
+**** 1.6.8 Enforcing Integrity Constraints
+***** the simplest type of integrity constaint involves specifying a data type for each data item.
+** Chapter 3 Data Modeling Using the Entity-Reltationship (ER) models
+*** 3.1 Using high-level conceptual data models for database design
+**** conceptual design
+*** logical design or data model mapping
+*** physical design
+*** 3.2 A sample database application
+*** 3.3 Entity Types, entity Sets, Attributes, and Keys
+***** 3.3.1 entities and their attributes
+****** composite versus simple (Atomic) attributes
+******* composite attribute can be divided into smaller subparts, which represent more basic attributes with independent meaning, aka atomic attribute.
+****** single-valued vs multivaled attributes
+****** stored vs derived attributes
+****** Complex attributes
+******* e.g. if a person can have more than one residence and each residence can have a single address and multiple phones, an attribute Address_phone for a person can be specified as shown in Figure 3.5.4 Both Phone and Address are themselves composite attributes.
+***** 3.3.2 Entity Types and Entity Sets
+****** entity types defines a collection (or set) of entities that have the same attribute.
+****** key attributes of entity types
+******* key attribute is an attribute whose values are distinct for each individual entity. More than 1 attribute can satisfy key attribute property.
+******* each key attribute has its name underlined inside the oval.
+******* composite key must be minimal; that is, all component attributes must be included in the composite attribute to have the uniqueness property
+****** value set (domains) of attributes
+******* domain defines all possible values for attribute.
+***** 3.3.3 Initial conceptual Design of the COMPANY database.
+*** 3.4 Relationship Types, relationship set, Roles, and Structural Constraints
+**** Relationship Types, Relationship Sets, Roles, and Structural Constraints
+***** In the ER model, these references should not be represented as attributes but as relationships
+***** In the initial design of entity types, relationships are typically captured in the form of attributes. As the design is refined, these attributes get converted into relationships between entity types
+**** 3.4.1 Relationship types, Sets, and Instances
+**** 3.4.2 Relationship Degree, Role Names, and Recursive Relationships
+***** Degree of a Relationship Types
+****** One can think of an attribute called Department of the EMPLOYEE entity type, where the value of Department for each EMPLOYEE entity is (a reference to) the DEPARTMENT entity for which that employee works. Hence, the value set for this Department attribute is the set of all DEPARTMENT entities, which is the DEPARTMENT entity set.
+****** The alternative point of view is to think of a multivalued attribute Employees of the entity type DEPARTMENT whose value for each DEPARTMENT entity is the set of EMPLOYEE entities who work for that department.
+***** Relatinoship as Attributes
+***** Role Names and Recursive Relationship
+****** The role name signifies the role that a participating entity from the entity type plays in each relationship instance, and it helps to explain what the relationship means. For example, in the WORKS_FOR relationship type, EMPLOYEE plays the role of employee or worker and DEPARTMENT plays the role of department or employer
+****** However, in some cases the same entity type participates more than once in a relationship type in different roles. In such cases the role name becomes essential for distinguishing the meaning of the role that each participating entity plays. Such relationship types are called recursive relationships or self-referencing relationships.
+****** Figure 3.11 shows an example. The SUPERVISION relationship type relates an employee to a supervisor, where both employee and supervisor entities are members of the same EMPLOYEE entity set. Hence, the EMPLOYEE entity type participates twice in SUPERVISION: once in the role of supervisor (or boss), and once in the role of supervisee (or subordinate).
 ***
-*** 3.4.3 Constraints on Binary Relationship Types
-**** We can distinguish two main types of binary relationship constraints: cardinality ratio and participation.
-**** Cadinality Ratio for binary Relationships
-***** The possible cardinality ratios for binary relationship types are 1:1, 1:N, N:1, and M:N.
-**** participation Constraints and Existence Dependencies
-***** The participation constraint specifies whether the existence of an entity depends on its being related to another entity via the relationship type. This constraint specifies the minimum number of relationship instances that each entity can participate in and is sometimes called the minimum cardinality constraint
-***** There are two types of participation constraintstotal and partial
-***** We will refer to the cardinality ratio and participation constraints, taken together, as the structural constraints of a relationship type
-***** In ER diagrams, total participation (or existence dependency) is displayed as a double line connecting the participating entity type to the relationship, whereas partial participation is represented by a single line (see Figure 3.2). Notice that in this notation, we can either specify no minimum (partial participation) or a minimum of one (total participation).
-*** 3.4.4. Attributes of Relationship Types
-** 3.5 Weak Entity Types
-*** Entity types that do not have key attributes of their own are called weak entity types. In contrast, regular entity types that do have a key attributewhich include all the examples discussed so farare called strong entity types
-***  A weak entity type always has a total participation constraint (existence dependency) with respect to its identifying relationship because a weak entity cannot be identified without an owner entity. However, not every existence dependency results in a weak entity type. For example, a DRIVER_LICENSE entity cannot exist unless it is related to a PERSON entity, even though it has its own key (License_number) and hence is not a weak entity
-*** A weak entity type normally has a partial key, which is the attribute that can uniquely identify weak entities that are related to the same owner entity. 12 In our example, if we assume that no two dependents of the same employee ever have the same first name, the attribute Name of DEPENDENT is the partial key. In the worst case, a composite attribute of all the weak entity’s attributes will be the partial key.
-*** The identifying entity type is also sometimes called the parent entity type or the dominant entity type
-*** The weak entity type is also sometimes called the child entity type or the subordinate entity type.
-*** The partial key is sometimes called the discriminator.
-*** we call the relationship type that relates a weak entity type to its owner the identifying relationship of the weak entity type
-** 3.6 Refining the ER Design for the COMPANY database
-** 3.7 ER Diagram, Naming, Conventions, and Design Issues
-** 3.8 Example of Other Notation: UML Class Diagrams
-** 3.9 Relationship Types of Degree Higher than Two
-*** 3.9.1 choosing between binary and ternary (or higher-degree) relationship
-**** Some database design tools are based on variations of the ER model that permit only binary relationships. In this case, a ternary relationship such as SUPPLY must be represented as a weak entity type, with no partial key and with three identifying relationships.
-*** 3.9.2 Constraints on Ternary (or Higher-Degree) Relationships
-** 3.10 anoter Example: a UNIVERSITY database
-** 3.11 Summary
-** Review Question
-** Exercise
-** Laboratory Exervise
-** Selected Bibliography
-* Chapter 4 The Enhanced Entity-Relationship (EER) Model
-** 4.1 Subclasses, Superclasses, and Inheritance
-** 4.2 Specialization and Generalization
-** 4.3 Constriants and Characteristics of Specialization and Generalization Hierarchies
-** 4.4 Modelign of UNION Types Using Categories
-** 4.5 A sample UNIVERSITY EER Schema, Design Choices, and Formal Definitions
-** 4.6 Example of Other Notation: Represetnting Specialization and Generalization in UML Class Diagrmas
-** 4.7 DAta Abstraction, Knowledge Representation, and Ontology concepts
-** 4.8 Summary
-** Review Question
-** Exercise
-** Laboratory Exercise
-** Selected Bibliography
-* Chapter 5 The relational Data model and Relational Database Constraints
-** 5.1 Relational Model concepts
-*** In the formal relational model terminology, a row is called a tuple, a column header is called an attribute, and the table is called a relation. The data type describing the types of values that can appear in each column is represented by a domain of possible values. We now define these termsdomain, tuple, attribute, and relation, formally
-*** 5.1.1 Domains, Attributes, Tuples, and Relations
-**** A domain D is a set of atomic values. By atomic we mean that each value in the domain is indivisible as far as the formal relational model is concerned.
-**** A relation schema2 R, denoted by R(A1, A2, … , An), is made up of a relation name R and a list of attributes, A1, A2, … , An.
-**** A relation (or relation state) r(R) is a mathematical relation of degree n on the domains dom(A1), dom(A2), … , dom(An), which is a subset of the Cartesian product (denoted by ×) of the domains that define R:
-**** Of all these possible combinations, a relation state at a given timethe current relation statereflects only the valid tuples that represent a particular state of the real world.
-*** 5.1.2 Characteristics of Relations
-**** ordering of typles in a Relation
-**** ordering of values within a tuple and an alterantive defintion of a relation
-**** values and NULLs in the Tuples.
-***** When the attribute name and value are included together in a tuple, it is known as self-describing data, because the description of each value (attribute name) is included in the tuple.
-***** The exact meaning of a NULL value governs how it fares during arithmetic aggregations or comparisons with other values. For example, a comparison of two NULL values leads to ambiguitiesif both Customer A and B have NULL addresses, it does not mean they have the same address. During database design, it is best to avoid NULL values as much as possible. We will discuss this further in Chapters 7 and 8 in the context of operations and queries, and in Chapter 14 in the context of database design and normalization.
-**** Interpretation (meaning) of a relation
-***** Each tuple in the relation can then be interpreted as a fact or a particular instance of the assertion
-***** the relational model represents facts about both entities and relationships uniformly as relations
-***** An alternative interpretation of a relation schema is as a predicate; in this case, the values in each tuple are interpreted as values that satisfy the predicate
-***** An assumption called the closed world assumption states that the only true facts in the universe are those present within the extension (state) of the relation(s). Any other combination of values makes the predicate false. This interpretation is useful when we consider queries on relations based on relational calculus in Section 8.6.
-*** 5.1.3. Relational Model Notation
-** 5.2 Relational Model Constiraints and RElational Database Schemas
-*** Constraints on databases can generally be divided into three main categories.
-**** Constraints that are inherent in the data model. We call these inherent model-base constraints  or implicit constraints.
-**** Constraints that can be directly expressed in the schemas of the data model, typically by specifying them in the DDL (data definition language, see Section 2.3.1). We call these schema-based constraints or explicit constraint
-**** Constraints that cannot be directly expressed in the schemas of the data model, and hence must be expressed and enforced by the application programs or in some other way. We call these application-based or semantic constraints or business rules
-**** Another important category of constraints is data dependencies, which include functional dependencies and multivalued dependencies. They are used mainly for testing the “goodness” of the design of a relational database and are utilized in a process called normalization, which is discussed in Chapters 14 and 15
-*** 5.2.1 Domain Constraints
-*** 5.2.2 Key Constraints and Constraints on NULL Values
-**** definition of superkey
-***** Suppose that we denote one such subset of attributes by SK; then for any two distinct tuples t1 and t2 in a relation state r of R, we have the constraint that: $t_1[SK] != t_2[SK]$. These are superkey.
-***** A superkey SK specifies a uniqueness constraint that no two distinct tuples in any state r of R can have the same value of SK.
-**** definition of key
-***** Key k of a relation schema R is a superkey of R with the additional property that removing any attribute A from K leaves a set of attribute $K'$ that is nto a uperkey of R anymore.
-***** key satisfy uniqueness property and minimality property (key is a a minimal superkey.)
-***** key is also has time-invariant property. It must continue to hold when we inset new tuples in the relation.
-**** definition of candidate key
-***** a relation schema may have more than one key. In this case, each of the keys is called a candidate key.
-***** It is common to designate one of the candidatek eys as the primary key of the relation. the hcoice of one to become the primary key is arbitrary. It is usually bettern to choose a primayr key with a single attribute or a small number of attirubtes.  The other candidate keys are designated as unique keys.
-*** 5.2.3 Relational Databases and Relational Database Schemas
-**** relational database schema (S)
-**** Each relational DBMS must have a data definition language (DDL) for defining a relational database schema.
-*** 5.2.4 Entity Integrity, Referential Integrity, and Foreign Keys
-**** The entity integrity constraint states that no primary key value can be NULL.
-**** Key constraints and entity integrity constraints are specified on individual relations. The referential integrity constraint is specified between two relations and is used to maintain the consistency among tuples in the two relations
-**** definition of foreign key (FK)
-***** a set of attribute FK in relation schema $R_1$ is a foreign key of $R_1$ that references relation $R_2$ if it satisfies the following rules:
-****** The attributes in FK have the same domain(s) as the primary key attributes PK of R2; the attributes FK are said to reference or refer to the relation R2.
-****** $T_1[FK]$ = $t_2[PK]$
-*** 5.2.5 Other Types of Constraints
-**** The preceding integrity constraints are included in the data definition language because they occur in most database applications. Another class of general constraints, sometimes called semantic integrity constraints, are not part of the DDL and have to be specified and enforced in a different way. Examples of such constraints are the salary of an employee should not exceed the salary of the employee’s supervisor and the maximum number of hours an employee can work on all projects per week is 56. Such constraints can be specified and enforced within the application programs that update the database, or by using a general-purpose constraint specification language. Mechanisms called triggers and assertions can be used in SQL, through the CREATE ASSERTION and CREATE TRIGGER statements, to specify some of these constraints (see Chapter 7).
-**** The types of constraints we discussed so far may be called state constraints because they define the constraints that a valid state of the database must satisfy. Another type of constraint, called transition constraints, can be defined to deal with state changes in the database.11 An example of a transition constraint is: “the salary of an employee can only increase.” Such constraints are typically enforced by the application programs or specified using active rules and triggers, as we discuss in Section 26.1.
-** 5.3 Update Operations, Transactions, and Dealing with Constraint
-*** In this section we discuss the types of constraints that may be violated by each of these operations and the types of actions that may be taken if an operation causes a violation.
-*** 5.3.1 The Insert Operation
-**** Insert operation can violate all 4 constraints.
-*** 5.3.2 The Delete Operation
-**** delete operation can violate only referential integrity constraints.
-**** Several options are available if a deletion operation causes a violation. The first option, called restrict, is to reject the deletion. The second option, called cascade, is to attempt to cascade (or propagate) the deletion by deleting tuples that reference the tuple that is being deleted
-**** A third option, called set null or set default, is to modify the referencing attribute values that cause the violation; each such value is either set to NULL or changed to reference another default valid tuple. Notice that if a referencing attribute that causes a violation is part of the primary key, it cannot be set to NULL; otherwise, it would violate entity integrity.
-**** Combinations of these three options are also possible. For example, to avoid having operation 3 cause a violation, the DBMS may automatically delete all tuples from WORKS_ON and DEPENDENT with Essn = ‘333445555’. Tuples in EMPLOYEE with Super_ssn = ‘333445555’ and the tuple in DEPARTMENT with Mgr_ssn = ‘333445555’ can have their Super_ssn and Mgr_ssn values changed to other valid values or to NULL. Although it may make sense to delete automatically the WORKS_ON and DEPENDENT tuples that refer to an EMPLOYEE tuple, it may not make sense to delete other EMPLOYEE tuples or a DEPARTMENT tuple.
-*** 5.3.3 The Update Operation
-**** If a foreign key attribute is modified, the DBMS must make sure that the new value refers to an existing tuple in the referenced relation (or is set to NULL). Similar options exist to deal with referential integrity violations caused by Update as those options discussed for the Delete operation. In fact, when a referential integrity constraint is specified in the DDL, the DBMS will allow the user to choose separate options to deal with a violation caused by Delete and a violation caused by Update (see Section 6.2)
-*** 5.3.4 The Transaction Concept
-**** A database application program running against a relational database typically executes one or more transactions. A transaction is an executing program that includes some database operations, such as reading from the database, or applying insertions, deletions, or updates to the database.
-**** At the end of the transaction, it must leave the database in a valid or consistent state that satisfies all the constraints specified on the database schema.
-**** A single transaction may involve any number of retrieval operations (to be discussed as part of relational algebra and calculus in Chapter 8, and as a part of the language SQL in Chapters 6 and 7) and any number of update operations. These retrievals and updates will together form an atomic unit of work against the database. For example, a transaction to apply a bank withdrawal will typically read the user account record, check if there is a sufficient balance, and then update the record by the withdrawal amount
-** 5.4 Summary
-*** Several characteristics differentiate relations from ordinary tables or files. The first is that a relation is not sensitive to the ordering of tuples. The second involves the ordering of attributes in a relation schema and the corresponding ordering of values within a tuple. We gave an alternative definition of relation that does not require ordering of attributes, but we continued to use the first definition, which requires attributes and tuple values to be ordered, for convenience.
-* Chapter 6 Basic SQL
-** 6.1 SQL Data Definition and Data Types
-*** 6.1.1 Schema and Catalog Concepts in SQL
-**** An SQL schema is identified by a schema name and includes an authorization identifier to indicate the user or account who owns the schema, as well as descriptors for each element in the schema
-**** Schema elements include tables, types, constraints, views, domains, and other constructs (such as authorization grants) that describe the schema
-**** In addition to the concept of a schema, SQL uses the concept of a cataloga named collection of schemas
-**** A catalog always contains a special schema called INFORMATION_SCHEMA, which provides information on all the schemas in the catalog and all the element descriptors in these schemas.
-*** 6.1.2 The CREATE TABLE Command in SQL
-**** Base relations are distinguished from virtual relations, created through the CREATE VIEW statement (see Chapter 7), which may or may not correspond to an actual physical file
-** 6.2 Specifying Constriants in SQL
-** 6.3 Basic Retrieval Queries in SQL
-*** 6.3.5 Substring Pattern Matching and Arithmetic Operators
-*** 6.3.6 Ordering of Query Results
-*** 6.3.7 Discussion and Summary of Basic SQL Retrieval Queries
-** 6.4 INSETE, DELETE, and UPDATE statements in SQL
-** 6.5 Additional Features of SQL
-** 6.6 Summary
-** Review Question
-** Exercise
-** Selected Bibliography
-* Chapter 7 More SQL: complex Queries, Triggers, Views, and Schema Modification
-** 7.1 More Complex SQL Retrieval Queries
-*** 7.1.1 Comparisons Involving NULL and Three-Valued Logic
-**** SQL uses a three-valued logic with values TRUE, FALSE, and UNKNOWN instead of the standard two-valued (Boolean) logic with values TRUE or FALSE. It is therefore necessary to define the results (or truth values) of three-valued logical expressions when the logical connectives AND, OR, and NOT are used.
-*** 7.1.2 Nested Queries, Tuples, and Set/Multiset Comparisons
-**** Some queries require that existing values in the database be fetched and then used in a comparison condition. Such queries can be conveniently formulated by using nested queries, which are complete select-from-where blocks within another SQL query. That other query is called the outer query. These nested queries can also appear in the WHERE clause or the FROM clause or the SELECT clause or other SQL clauses as needed.
-**** If a nested query returns a single attribute and a single tuple, the query result will be a single (scalar) value. I
-**** In general, the nested query will return a table (relation), which is a set of multiset of tuples.
-**** The = ANY (or = SOME) operator returns  TRUE if the value v is equal to some vlaue in the set V and is hence equivalent to IN.
-**** Example
-***** selects the project numbers of projects that have an employee with last name 'Smith' involved as manager, wheras the second nested query selects the project numbers of projects that have an employee with last name 'Smith' involved as work
+**** 3.4.3 Constraints on Binary Relationship Types
+***** We can distinguish two main types of binary relationship constraints: cardinality ratio and participation.
+***** Cadinality Ratio for binary Relationships
+****** The possible cardinality ratios for binary relationship types are 1:1, 1:N, N:1, and M:N.
+***** participation Constraints and Existence Dependencies
+****** The participation constraint specifies whether the existence of an entity depends on its being related to another entity via the relationship type. This constraint specifies the minimum number of relationship instances that each entity can participate in and is sometimes called the minimum cardinality constraint
+****** There are two types of participation constraintstotal and partial
+****** We will refer to the cardinality ratio and participation constraints, taken together, as the structural constraints of a relationship type
+****** In ER diagrams, total participation (or existence dependency) is displayed as a double line connecting the participating entity type to the relationship, whereas partial participation is represented by a single line (see Figure 3.2). Notice that in this notation, we can either specify no minimum (partial participation) or a minimum of one (total participation).
+**** 3.4.4. Attributes of Relationship Types
+*** 3.5 Weak Entity Types
+**** Entity types that do not have key attributes of their own are called weak entity types. In contrast, regular entity types that do have a key attributewhich include all the examples discussed so farare called strong entity types
+****  A weak entity type always has a total participation constraint (existence dependency) with respect to its identifying relationship because a weak entity cannot be identified without an owner entity. However, not every existence dependency results in a weak entity type. For example, a DRIVER_LICENSE entity cannot exist unless it is related to a PERSON entity, even though it has its own key (License_number) and hence is not a weak entity
+**** A weak entity type normally has a partial key, which is the attribute that can uniquely identify weak entities that are related to the same owner entity. 12 In our example, if we assume that no two dependents of the same employee ever have the same first name, the attribute Name of DEPENDENT is the partial key. In the worst case, a composite attribute of all the weak entity’s attributes will be the partial key.
+**** The identifying entity type is also sometimes called the parent entity type or the dominant entity type
+**** The weak entity type is also sometimes called the child entity type or the subordinate entity type.
+**** The partial key is sometimes called the discriminator.
+**** we call the relationship type that relates a weak entity type to its owner the identifying relationship of the weak entity type
+*** 3.6 Refining the ER Design for the COMPANY database
+*** 3.7 ER Diagram, Naming, Conventions, and Design Issues
+*** 3.8 Example of Other Notation: UML Class Diagrams
+*** 3.9 Relationship Types of Degree Higher than Two
+**** 3.9.1 choosing between binary and ternary (or higher-degree) relationship
+***** Some database design tools are based on variations of the ER model that permit only binary relationships. In this case, a ternary relationship such as SUPPLY must be represented as a weak entity type, with no partial key and with three identifying relationships.
+**** 3.9.2 Constraints on Ternary (or Higher-Degree) Relationships
+*** 3.10 anoter Example: a UNIVERSITY database
+*** 3.11 Summary
+*** Review Question
+*** Exercise
+*** Laboratory Exervise
+*** Selected Bibliography
+** Chapter 4 The Enhanced Entity-Relationship (EER) Model
+*** 4.1 Subclasses, Superclasses, and Inheritance
+*** 4.2 Specialization and Generalization
+*** 4.3 Constriants and Characteristics of Specialization and Generalization Hierarchies
+*** 4.4 Modelign of UNION Types Using Categories
+*** 4.5 A sample UNIVERSITY EER Schema, Design Choices, and Formal Definitions
+*** 4.6 Example of Other Notation: Represetnting Specialization and Generalization in UML Class Diagrmas
+*** 4.7 DAta Abstraction, Knowledge Representation, and Ontology concepts
+*** 4.8 Summary
+*** Review Question
+*** Exercise
+*** Laboratory Exercise
+*** Selected Bibliography
+** Chapter 5 The relational Data model and Relational Database Constraints
+*** 5.1 Relational Model concepts
+**** In the formal relational model terminology, a row is called a tuple, a column header is called an attribute, and the table is called a relation. The data type describing the types of values that can appear in each column is represented by a domain of possible values. We now define these termsdomain, tuple, attribute, and relation, formally
+**** 5.1.1 Domains, Attributes, Tuples, and Relations
+***** A domain D is a set of atomic values. By atomic we mean that each value in the domain is indivisible as far as the formal relational model is concerned.
+***** A relation schema2 R, denoted by R(A1, A2, … , An), is made up of a relation name R and a list of attributes, A1, A2, … , An.
+***** A relation (or relation state) r(R) is a mathematical relation of degree n on the domains dom(A1), dom(A2), … , dom(An), which is a subset of the Cartesian product (denoted by ×) of the domains that define R:
+***** Of all these possible combinations, a relation state at a given timethe current relation statereflects only the valid tuples that represent a particular state of the real world.
+**** 5.1.2 Characteristics of Relations
+***** ordering of typles in a Relation
+***** ordering of values within a tuple and an alterantive defintion of a relation
+***** values and NULLs in the Tuples.
+****** When the attribute name and value are included together in a tuple, it is known as self-describing data, because the description of each value (attribute name) is included in the tuple.
+****** The exact meaning of a NULL value governs how it fares during arithmetic aggregations or comparisons with other values. For example, a comparison of two NULL values leads to ambiguitiesif both Customer A and B have NULL addresses, it does not mean they have the same address. During database design, it is best to avoid NULL values as much as possible. We will discuss this further in Chapters 7 and 8 in the context of operations and queries, and in Chapter 14 in the context of database design and normalization.
+***** Interpretation (meaning) of a relation
+****** Each tuple in the relation can then be interpreted as a fact or a particular instance of the assertion
+****** the relational model represents facts about both entities and relationships uniformly as relations
+****** An alternative interpretation of a relation schema is as a predicate; in this case, the values in each tuple are interpreted as values that satisfy the predicate
+****** An assumption called the closed world assumption states that the only true facts in the universe are those present within the extension (state) of the relation(s). Any other combination of values makes the predicate false. This interpretation is useful when we consider queries on relations based on relational calculus in Section 8.6.
+**** 5.1.3. Relational Model Notation
+*** 5.2 Relational Model Constiraints and RElational Database Schemas
+**** Constraints on databases can generally be divided into three main categories.
+***** Constraints that are inherent in the data model. We call these inherent model-base constraints  or implicit constraints.
+***** Constraints that can be directly expressed in the schemas of the data model, typically by specifying them in the DDL (data definition language, see Section 2.3.1). We call these schema-based constraints or explicit constraint
+***** Constraints that cannot be directly expressed in the schemas of the data model, and hence must be expressed and enforced by the application programs or in some other way. We call these application-based or semantic constraints or business rules
+***** Another important category of constraints is data dependencies, which include functional dependencies and multivalued dependencies. They are used mainly for testing the “goodness” of the design of a relational database and are utilized in a process called normalization, which is discussed in Chapters 14 and 15
+**** 5.2.1 Domain Constraints
+**** 5.2.2 Key Constraints and Constraints on NULL Values
+***** definition of superkey
+****** Suppose that we denote one such subset of attributes by SK; then for any two distinct tuples t1 and t2 in a relation state r of R, we have the constraint that: $t_1[SK] != t_2[SK]$. These are superkey.
+****** A superkey SK specifies a uniqueness constraint that no two distinct tuples in any state r of R can have the same value of SK.
+***** definition of key
+****** Key k of a relation schema R is a superkey of R with the additional property that removing any attribute A from K leaves a set of attribute $K'$ that is nto a uperkey of R anymore.
+****** key satisfy uniqueness property and minimality property (key is a a minimal superkey.)
+****** key is also has time-invariant property. It must continue to hold when we inset new tuples in the relation.
+***** definition of candidate key
+****** a relation schema may have more than one key. In this case, each of the keys is called a candidate key.
+****** It is common to designate one of the candidatek eys as the primary key of the relation. the hcoice of one to become the primary key is arbitrary. It is usually bettern to choose a primayr key with a single attribute or a small number of attirubtes.  The other candidate keys are designated as unique keys.
+**** 5.2.3 Relational Databases and Relational Database Schemas
+***** relational database schema (S)
+***** Each relational DBMS must have a data definition language (DDL) for defining a relational database schema.
+**** 5.2.4 Entity Integrity, Referential Integrity, and Foreign Keys
+***** The entity integrity constraint states that no primary key value can be NULL.
+***** Key constraints and entity integrity constraints are specified on individual relations. The referential integrity constraint is specified between two relations and is used to maintain the consistency among tuples in the two relations
+***** definition of foreign key (FK)
+****** a set of attribute FK in relation schema $R_1$ is a foreign key of $R_1$ that references relation $R_2$ if it satisfies the following rules:
+******* The attributes in FK have the same domain(s) as the primary key attributes PK of R2; the attributes FK are said to reference or refer to the relation R2.
+******* $T_1[FK]$ = $t_2[PK]$
+**** 5.2.5 Other Types of Constraints
+***** The preceding integrity constraints are included in the data definition language because they occur in most database applications. Another class of general constraints, sometimes called semantic integrity constraints, are not part of the DDL and have to be specified and enforced in a different way. Examples of such constraints are the salary of an employee should not exceed the salary of the employee’s supervisor and the maximum number of hours an employee can work on all projects per week is 56. Such constraints can be specified and enforced within the application programs that update the database, or by using a general-purpose constraint specification language. Mechanisms called triggers and assertions can be used in SQL, through the CREATE ASSERTION and CREATE TRIGGER statements, to specify some of these constraints (see Chapter 7).
+***** The types of constraints we discussed so far may be called state constraints because they define the constraints that a valid state of the database must satisfy. Another type of constraint, called transition constraints, can be defined to deal with state changes in the database.11 An example of a transition constraint is: “the salary of an employee can only increase.” Such constraints are typically enforced by the application programs or specified using active rules and triggers, as we discuss in Section 26.1.
+*** 5.3 Update Operations, Transactions, and Dealing with Constraint
+**** In this section we discuss the types of constraints that may be violated by each of these operations and the types of actions that may be taken if an operation causes a violation.
+**** 5.3.1 The Insert Operation
+***** Insert operation can violate all 4 constraints.
+**** 5.3.2 The Delete Operation
+***** delete operation can violate only referential integrity constraints.
+***** Several options are available if a deletion operation causes a violation. The first option, called restrict, is to reject the deletion. The second option, called cascade, is to attempt to cascade (or propagate) the deletion by deleting tuples that reference the tuple that is being deleted
+***** A third option, called set null or set default, is to modify the referencing attribute values that cause the violation; each such value is either set to NULL or changed to reference another default valid tuple. Notice that if a referencing attribute that causes a violation is part of the primary key, it cannot be set to NULL; otherwise, it would violate entity integrity.
+***** Combinations of these three options are also possible. For example, to avoid having operation 3 cause a violation, the DBMS may automatically delete all tuples from WORKS_ON and DEPENDENT with Essn = ‘333445555’. Tuples in EMPLOYEE with Super_ssn = ‘333445555’ and the tuple in DEPARTMENT with Mgr_ssn = ‘333445555’ can have their Super_ssn and Mgr_ssn values changed to other valid values or to NULL. Although it may make sense to delete automatically the WORKS_ON and DEPENDENT tuples that refer to an EMPLOYEE tuple, it may not make sense to delete other EMPLOYEE tuples or a DEPARTMENT tuple.
+**** 5.3.3 The Update Operation
+***** If a foreign key attribute is modified, the DBMS must make sure that the new value refers to an existing tuple in the referenced relation (or is set to NULL). Similar options exist to deal with referential integrity violations caused by Update as those options discussed for the Delete operation. In fact, when a referential integrity constraint is specified in the DDL, the DBMS will allow the user to choose separate options to deal with a violation caused by Delete and a violation caused by Update (see Section 6.2)
+**** 5.3.4 The Transaction Concept
+***** A database application program running against a relational database typically executes one or more transactions. A transaction is an executing program that includes some database operations, such as reading from the database, or applying insertions, deletions, or updates to the database.
+***** At the end of the transaction, it must leave the database in a valid or consistent state that satisfies all the constraints specified on the database schema.
+***** A single transaction may involve any number of retrieval operations (to be discussed as part of relational algebra and calculus in Chapter 8, and as a part of the language SQL in Chapters 6 and 7) and any number of update operations. These retrievals and updates will together form an atomic unit of work against the database. For example, a transaction to apply a bank withdrawal will typically read the user account record, check if there is a sufficient balance, and then update the record by the withdrawal amount
+*** 5.4 Summary
+**** Several characteristics differentiate relations from ordinary tables or files. The first is that a relation is not sensitive to the ordering of tuples. The second involves the ordering of attributes in a relation schema and the corresponding ordering of values within a tuple. We gave an alternative definition of relation that does not require ordering of attributes, but we continued to use the first definition, which requires attributes and tuple values to be ordered, for convenience.
+** Chapter 6 Basic SQL
+*** 6.1 SQL Data Definition and Data Types
+**** 6.1.1 Schema and Catalog Concepts in SQL
+***** An SQL schema is identified by a schema name and includes an authorization identifier to indicate the user or account who owns the schema, as well as descriptors for each element in the schema
+***** Schema elements include tables, types, constraints, views, domains, and other constructs (such as authorization grants) that describe the schema
+***** In addition to the concept of a schema, SQL uses the concept of a cataloga named collection of schemas
+***** A catalog always contains a special schema called INFORMATION_SCHEMA, which provides information on all the schemas in the catalog and all the element descriptors in these schemas.
+**** 6.1.2 The CREATE TABLE Command in SQL
+***** Base relations are distinguished from virtual relations, created through the CREATE VIEW statement (see Chapter 7), which may or may not correspond to an actual physical file
+*** 6.2 Specifying Constriants in SQL
+*** 6.3 Basic Retrieval Queries in SQL
+**** 6.3.5 Substring Pattern Matching and Arithmetic Operators
+**** 6.3.6 Ordering of Query Results
+**** 6.3.7 Discussion and Summary of Basic SQL Retrieval Queries
+*** 6.4 INSETE, DELETE, and UPDATE statements in SQL
+*** 6.5 Additional Features of SQL
+*** 6.6 Summary
+*** Review Question
+*** Exercise
+*** Selected Bibliography
+** Chapter 7 More SQL: complex Queries, Triggers, Views, and Schema Modification
+*** 7.1 More Complex SQL Retrieval Queries
+**** 7.1.1 Comparisons Involving NULL and Three-Valued Logic
+***** SQL uses a three-valued logic with values TRUE, FALSE, and UNKNOWN instead of the standard two-valued (Boolean) logic with values TRUE or FALSE. It is therefore necessary to define the results (or truth values) of three-valued logical expressions when the logical connectives AND, OR, and NOT are used.
+**** 7.1.2 Nested Queries, Tuples, and Set/Multiset Comparisons
+***** Some queries require that existing values in the database be fetched and then used in a comparison condition. Such queries can be conveniently formulated by using nested queries, which are complete select-from-where blocks within another SQL query. That other query is called the outer query. These nested queries can also appear in the WHERE clause or the FROM clause or the SELECT clause or other SQL clauses as needed.
+***** If a nested query returns a single attribute and a single tuple, the query result will be a single (scalar) value. I
+***** In general, the nested query will return a table (relation), which is a set of multiset of tuples.
+***** The = ANY (or = SOME) operator returns  TRUE if the value v is equal to some vlaue in the set V and is hence equivalent to IN.
+***** Example
+****** selects the project numbers of projects that have an employee with last name 'Smith' involved as manager, wheras the second nested query selects the project numbers of projects that have an employee with last name 'Smith' involved as work
 #+BEGIN_SRC sql
 select distinct Pnumber
 from project
@@ -200,13 +203,13 @@ Pnumber in
 from WORKS_ON,EMPLOYEE
 where Essn = Ssn and Lname = 'Smith')
 #+END_SRC
-***** returns the names of employees whose salary is greater than the salary of all the employees in department 5
+****** returns the names of employees whose salary is greater than the salary of all the employees in department 5
 #+BEGIN_SRC sql
 select Lname, Fname
 from EMPLOYEE
 where salary > ALL (select salary from EMPLOYEE where Dno = 5);
 #+END_SRC
-***** Retrieve the name of each employee who has a dependent with the same first name and is the same sex as the employee.
+****** Retrieve the name of each employee who has a dependent with the same first name and is the same sex as the employee.
 #+BEGIN_SRC sql
 select E.Fname, E.Lname
 from EMPLOYEE as E
@@ -215,23 +218,23 @@ select D.Essn
 from Dependent as D
 where D.Dependent_name = E.Fname and E.Sex = D.sex);
 #+END_SRC
-**** In general, we can have several levels of nested queries. We can once again be faced with possible ambiguity among attribute names if attributes of the same name existone in a relation in the FROM clause of the outer query, and another in a relation in the FROM clause of the nested query. The rule is that a reference to an unqualified attribute refers to the relation declared in the innermost nested query.
-**** It is generally advisable to create tuple variables (aliases) for all the tables referenced in an SQL query to avoid potential errors and ambiguities, as illustrated in Q16
-*** 7.1.3 Correlated Nested Queries
-**** Whenever a condition in the WHERE clause of a nested query references some attribute of a relation declared in the outer query, the two queries are said to be correlated
-**** We can understand a correlated query better by considering that the nested query is evaluated once for each tuple (or combination of tuples) in the outer query
-**** In general, a query written with nested select-from-where blocks and using the = or IN comparison operators can always be expressed as a single block query
-**** Example
-***** Q16A: each EMPLOYEE tuple, evaluate the nested query, which retrieves the Essn values for all DEPENDENT tuples with the same sex and name as that EMPLOYEE tuple; if the Ssn value of the EMPLOYEE tuple is in the result of the nested query, then select that EMPLOYEE tuple.
+***** In general, we can have several levels of nested queries. We can once again be faced with possible ambiguity among attribute names if attributes of the same name existone in a relation in the FROM clause of the outer query, and another in a relation in the FROM clause of the nested query. The rule is that a reference to an unqualified attribute refers to the relation declared in the innermost nested query.
+***** It is generally advisable to create tuple variables (aliases) for all the tables referenced in an SQL query to avoid potential errors and ambiguities, as illustrated in Q16
+**** 7.1.3 Correlated Nested Queries
+***** Whenever a condition in the WHERE clause of a nested query references some attribute of a relation declared in the outer query, the two queries are said to be correlated
+***** We can understand a correlated query better by considering that the nested query is evaluated once for each tuple (or combination of tuples) in the outer query
+***** In general, a query written with nested select-from-where blocks and using the = or IN comparison operators can always be expressed as a single block query
+***** Example
+****** Q16A: each EMPLOYEE tuple, evaluate the nested query, which retrieves the Essn values for all DEPENDENT tuples with the same sex and name as that EMPLOYEE tuple; if the Ssn value of the EMPLOYEE tuple is in the result of the nested query, then select that EMPLOYEE tuple.
 #+BEGIN_SRC sql
 select E.Fname, E.Lname
 from EMPLOYEE as E, DEPENDENT as D
 where E.Ssn = D.Essn and E.Fname = D.Dependent_name and E.sex and D.sex;
 #+END_SRC
-*** 7.1.4 The EXISTS and UNIQUE Functions in SQL
-**** EXISTS and UNIQUE are Boolean functions that return TRUE or FALSE; hence, they can be used in a WHERE clause condition.
-**** Example
-***** Q16B:
+**** 7.1.4 The EXISTS and UNIQUE Functions in SQL
+***** EXISTS and UNIQUE are Boolean functions that return TRUE or FALSE; hence, they can be used in a WHERE clause condition.
+***** Example
+****** Q16B:
 #+BEGIN_SRC sql
 select E.Fname, E.Lname
 from EMPLOYEE as E
@@ -240,7 +243,7 @@ select *
 from DEPENDENT as D
 where E.Ssn = D.Essn and E.Fname = D.Dependent_name and E.sex and D.sex);
 #+END_SRC
-***** Query 6: Retrive the names of employee who have no dependent
+****** Query 6: Retrive the names of employee who have no dependent
 #+BEGIN_SRC sql
 select E.Fname, E.Lname
 from EMPLOYEE as E
@@ -250,7 +253,7 @@ from DEPENDENT as D
 where D.Essn = E.Ssn);
 
 #+END_SRC
-***** Query 7: List the names of managers who have at least one dependent
+****** Query 7: List the names of managers who have at least one dependent
 #+BEGIN_SRC sql
 -- first way
 select E.Fname, E.Lname
@@ -272,7 +275,7 @@ select *
 from DEPENDENT as D
 where E.Ssn = D.Essn);
 #+END_SRC
-***** Query 3A: Retrive the name of each employee who works on all the projects controlled by department number 5.
+****** Query 3A: Retrive the name of each employee who works on all the projects controlled by department number 5.
 #+BEGIN_SRC sql
 SELECT Fname, Lname
 FROM EMPLOYEE
@@ -286,41 +289,41 @@ from works_on
 where Ssn=Essn));
 #+END_SRC
 In Q3A, the first subquery (which is not correlated with the outer query) selects all projects controlled by department 5, and the second subquery (which is correlated) selects all projects that the particular employee being considered works on. If the set difference of the first subquery result MINUS (EXCEPT) the second subquery result is empty, it means that the employee works on all the projects and is therefore selected.
-**** This is an example of cetrian types of universal quantification, as we will discuss in Section 8.6.7. One way to write this query is to use the construct (S2 EXCEPT S1) as explained next, and checking whether the result is empty.1
-*** 7.1.5 Explicit Sets and Renaming in SQL
-*** 7.1.6 Joined Tables in SQL and Outer Joins
-**** The concept of a joined table (or joined relation) was incorporated into SQL to permit users to specify a table resulting from a join operation in the FROM clause of a query. This construct may be easier to comprehend than mixing together all the select and join conditions in the WHERE clause.
-*** 7.1.7 Aggregate Functions in SQL
-**** Aggregate functions are used to summarize information from multiple tuples into a single-tuple summary. Grouping is used to create subgroups of tuples before summarization. Grouping and aggregation are required in many database applications, and we will introduce their use in SQL through examples.
-**** Example
-***** Q20: Find the sum of the salaries of all employees of the ‘Research’ department, as well as the maximum salary, the minimum salary, and the average salary in this department.
+***** This is an example of cetrian types of universal quantification, as we will discuss in Section 8.6.7. One way to write this query is to use the construct (S2 EXCEPT S1) as explained next, and checking whether the result is empty.1
+**** 7.1.5 Explicit Sets and Renaming in SQL
+**** 7.1.6 Joined Tables in SQL and Outer Joins
+***** The concept of a joined table (or joined relation) was incorporated into SQL to permit users to specify a table resulting from a join operation in the FROM clause of a query. This construct may be easier to comprehend than mixing together all the select and join conditions in the WHERE clause.
+**** 7.1.7 Aggregate Functions in SQL
+***** Aggregate functions are used to summarize information from multiple tuples into a single-tuple summary. Grouping is used to create subgroups of tuples before summarization. Grouping and aggregation are required in many database applications, and we will introduce their use in SQL through examples.
+***** Example
+****** Q20: Find the sum of the salaries of all employees of the ‘Research’ department, as well as the maximum salary, the minimum salary, and the average salary in this department.
 #+BEGIN_SRC sql
 SELECT SUM (Salary), MAX (Salary), MIN (Salary), AVG (Salary)
 FROM (EMPLOYEE JOIN DEPARTMENT ON Dno = Dnumber)
 WHERE Dname = ‘Research’;
 #+END_SRC
-***** Q22
+****** Q22
 #+BEGIN_SRC sql
 SELECT Lname,Fname
 FROM EMPLOYEE
 WHERE (select count(*) from DEPENDENT where Ssn = Essn)>=2
 #+END_SRC
-*** 7.1.8 Grouping: The GROUP BY and HAVING Clauses
-**** Example
-***** Q24: For each department, retrieve the department number, the number of employees in the department, and their average salary
+**** 7.1.8 Grouping: The GROUP BY and HAVING Clauses
+***** Example
+****** Q24: For each department, retrieve the department number, the number of employees in the department, and their average salary
 #+BEGIN_SRC sql
 SELECT Dno, COUNT (*), AVG (Salary)
 FROM EMPLOYEE
 GROUP BY Dno;
 #+END_SRC
-***** Q25: For each project, retrieve the project number, the project name, and the number of employees who work on that project.
+****** Q25: For each project, retrieve the project number, the project name, and the number of employees who work on that project.
 #+BEGIN_SRC sql
 SELECT Pnumber, Pname, COUNT (*)
 FROM PROJECT, WORKS_ON
 WHERE Pnumber = Pno
 GROUP BY Pnumber, Pname;
 #+END_SRC
-***** Query 28: For each department that has more than five employees, retrieve the department number and the number of its employees who are making more than $40,000
+****** Query 28: For each department that has more than five employees, retrieve the department number and the number of its employees who are making more than $40,000
 Below is incorrect because it will select only departments that have more than five
 employees who each earn more than $40,000
 #+BEGIN_SRC sql
@@ -342,10 +345,10 @@ GROUP BY Dno
  HAVING COUNT (*) > 5)
 GROUP BY Dno;
 #+END_SRC
-*** 7.1.9  Other SQL Constructs: WITH and CASE
-**** In Q28′, we defined in the WITH clause a temporary table BIG_DEPTS whose result holds the Dno’s of departments with more than five employees, then used this table in the subsequent query. Once this query is executed, the temporary table BIGDEPTS is discarded.
-**** example
-***** Q28': For each department that has more than five employees, retrieve the department number and the number of its employees who are making more than $40,000
+**** 7.1.9  Other SQL Constructs: WITH and CASE
+***** In Q28′, we defined in the WITH clause a temporary table BIG_DEPTS whose result holds the Dno’s of departments with more than five employees, then used this table in the subsequent query. Once this query is executed, the temporary table BIGDEPTS is discarded.
+***** example
+****** Q28': For each department that has more than five employees, retrieve the department number and the number of its employees who are making more than $40,000
 #+BEGIN_SRC sql
 WITH BIGDEPTS (Dno) AS
  ( SELECT Dno
@@ -357,7 +360,7 @@ FROM EMPLOYEE
 WHERE Salary>40000 AND Dno IN BIGDEPTS
 GROUP BY Dno;
 #+END_SRC
-***** U6'
+****** U6'
 #+BEGIN_SRC sql
 UPDATE EMPLOYEE
 SET Salary =
@@ -366,10 +369,10 @@ CASE WHEN Dno = 5 THEN Salary + 2000
  WHEN Dno = 1 THEN Salary + 3000
  ELSE Salary + 0 ;
 #+END_SRC
-*** 7.1.10 Recursive Queries in SQL
-**** In this section, we illustrate how to write a recursive query in SQL. This syntax was added in SQL:99 to allow users the capability to specify a recursive query in a declarative manner
-**** example
-***** Q29:
+**** 7.1.10 Recursive Queries in SQL
+***** In this section, we illustrate how to write a recursive query in SQL. This syntax was added in SQL:99 to allow users the capability to specify a recursive query in a declarative manner
+***** example
+****** Q29:
 #+BEGIN_SRC sql
 WITH RECURSIVE SUP_EMP (SupSsn, EmpSsn) AS
  ( SELECT SupervisorSsn, Ssn
@@ -381,19 +384,2206 @@ WITH RECURSIVE SUP_EMP (SupSsn, EmpSsn) AS
  SELECT*
  FROM SUP_EMP;
 #+END_SRC
-*** 7.1.11 Discussion and Summary of SQL Queries
-** 7.2 Specifying Constraints as Assertions and Actions as Triggers
-*** 7.2.1 Specifying General Constraints as Assertions in SQL
-*** 7.2.2 Introduction to Triggers in SQL
-** 7.3 Views (Virtual Tables) in SQL
-*** 7.3.1 Concept of a View in SQL
-*** 7.3.2 Specification of Views in SQL
-*** 7.3.3 View Implementation, View Update, and Inline Views
-*** 7.3.4 Views as Authorization Mechanisms
-** 7.4 Schema Change Statemetns in SQL
-*** 7.4.1 The DROP Command
-*** 7.4.2 The ALTER Command
-** 7.5 Summary
-** Review Question
-** Exercise
-** Selected Bibliography
+**** 7.1.11 Discussion and Summary of SQL Queries
+*** 7.2 Specifying Constraints as Assertions and Actions as Triggers
+**** 7.2.1 Specifying General Constraints as Assertions in SQL
+**** 7.2.2 Introduction to Triggers in SQL
+*** 7.3 Views (Virtual Tables) in SQL
+**** 7.3.1 Concept of a View in SQL
+**** 7.3.2 Specification of Views in SQL
+**** 7.3.3 View Implementation, View Update, and Inline Views
+**** 7.3.4 Views as Authorization Mechanisms
+*** 7.4 Schema Change Statemetns in SQL
+**** 7.4.1 The DROP Command
+**** 7.4.2 The ALTER Command
+*** 7.5 Summary
+*** Review Question
+*** Exercise
+*** Selected Bibliography
+
+* Fundamentals Of Database Systems Note
+:PROPERTIES:
+:NOTER_DOCUMENT: ../../../../Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::877++0.00]]
+:END:
+** Skeleton
+:PROPERTIES:
+:ID:       346d6d16-41cf-441c-8a90-e44efbf5406e
+:END:
+
+*** Cover
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1++0??Cover]]
+:END:
+
+*** Title Page
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::4++0??Title%20Page]]
+:END:
+
+*** Copyright Page
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::5++0??Copyright%20Page]]
+:END:
+
+*** Dedication
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::6++0??Dedication]]
+:END:
+
+*** Preface
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::8++0??Preface]]
+:END:
+
+*** Acknowledgments
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::14++0??Acknowledgments]]
+:END:
+
+*** Contents
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::18++0??Contents]]
+:END:
+
+*** About the Authors
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::31++0??About%20the%20Authors]]
+:END:
+
+*** part 1 Introduction to Databases
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::32++0??part%201%20Introduction%20to%20Databases]]
+:END:
+
+**** chapter 1 Databases and Database Users
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::34++0??chapter%201%20Databases%20and%20Database%20Users]]
+:END:
+
+***** 1.1 Introduction
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::35++0??1.1%20Introduction]]
+:END:
+
+***** 1.2 An Example
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::37++0??1.2%20An%20Example]]
+:END:
+
+***** 1.3 Characteristics of the Database Approach
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::41++0??1.3%20Characteristics%20of%20the%20Database%20Approach]]
+:END:
+
+***** 1.4 Actors on the Scene
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::46++0??1.4%20Actors%20on%20the%20Scene]]
+:END:
+
+***** 1.6 Advantages of Using the DBMS Approach
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::48++0??1.6%20Advantages%20of%20Using%20the%20DBMS%20Approach]]
+:END:
+
+***** 1.5 Workers behind the Scene
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::48++0??1.5%20Workers%20behind%20the%20Scene]]
+:END:
+
+***** 1.7 A Brief History of Database Applications
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::54++0??1.7%20A%20Brief%20History%20of%20Database%20Applications]]
+:END:
+
+***** 1.9 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::58++0??1.9%20Summary]]
+:END:
+
+***** 1.8 When Not to Use a DBMS
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::58++0??1.8%20When%20Not%20to%20Use%20a%20DBMS]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::59++0??Exercises]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::59++0??Review%20Questions]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::60++0??Selected%20Bibliography]]
+:END:
+
+**** chapter 2 Database System Concepts and Architecture
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::62++0??chapter%202%20Database%20System%20Concepts%20and%20Architecture]]
+:END:
+
+***** 2.1 Data Models, Schemas, and Instances
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::63++0??2.1%20Data%20Models,%20Schemas,%20and%20Instances]]
+:END:
+
+***** 2.2 Three-Schema Architecture and Data Independence
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::67++0??2.2%20Three-Schema%20Architecture%20and%20Data%20Independence]]
+:END:
+
+***** 2.3 Database Languages and Interfaces
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::69++0??2.3%20Database%20Languages%20and%20Interfaces]]
+:END:
+
+***** 2.4 The Database System Environment
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::73++0??2.4%20The%20Database%20System%20Environment]]
+:END:
+
+***** 2.5 Centralized and Client/Server Architectures for DBMSs
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::77++0??2.5%20Centralized%20and%20Client/Server%20Architectures%20for%20DBMSs]]
+:END:
+
+***** 2.6 Classification of Database Management Systems
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::82++0??2.6%20Classification%20of%20Database%20Management%20Systems]]
+:END:
+
+***** 2.7 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::85++0??2.7%20Summary]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::86++0??Exercises]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::86++0??Review%20Questions]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::87++0??Selected%20Bibliography]]
+:END:
+
+*** part 2 Conceptual Data Modeling and Database Design
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::88++0??part%202%20Conceptual%20Data%20Modeling%20and%20Database%20Design]]
+:END:
+
+**** chapter 3 Data Modeling Using the Entity–Relationship (ER) Model
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::90++0??chapter%203%20Data%20Modeling%20Using%20the%20Entity–Relationship%20(ER)%20Model]]
+:END:
+
+***** 3.1 Using High-Level Conceptual Data Models for Database Design
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::91++0??3.1%20Using%20High-Level%20Conceptual%20Data%20Models%20for%20Database%20Design]]
+:END:
+
+***** 3.2 A Sample Database Application
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::93++0??3.2%20A%20Sample%20Database%20Application]]
+:END:
+
+***** 3.3 Entity Types, Entity Sets, Attributes, and Keys
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::94++0??3.3%20Entity%20Types,%20Entity%20Sets,%20Attributes,%20and%20Keys]]
+:END:
+
+***** 3.4 Relationship Types, Relationship Sets, Roles, and Structural Constraints
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::103++0??3.4%20Relationship%20Types,%20Relationship%20Sets,%20Roles,%20and%20Structural%20Constraints]]
+:END:
+
+***** 3.5 Weak Entity Types
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::110++0??3.5%20Weak%20Entity%20Types]]
+:END:
+
+***** 3.6 Refining the ER Design for the COMPANY Database
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::111++0??3.6%20Refining%20the%20ER%20Design%20for%20the%20COMPANY%20Database]]
+:END:
+
+***** 3.7 ER Diagrams, Naming Conventions, and Design Issues
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::112++0??3.7%20ER%20Diagrams,%20Naming%20Conventions,%20and%20Design%20Issues]]
+:END:
+
+***** 3.8 Example of Other Notation: UML Class Diagrams
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::116++0??3.8%20Example%20of%20Other%20Notation:%20UML%20Class%20Diagrams]]
+:END:
+
+***** 3.9 Relationship Types of Degree Higher than Two
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::119++0??3.9%20Relationship%20Types%20of%20Degree%20Higher%20than%20Two]]
+:END:
+
+***** 3.10 Another Example: A UNIVERSITY Database
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::123++0??3.10%20Another%20Example:%20A%20UNIVERSITY%20Database]]
+:END:
+
+***** 3.11 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::125++0??3.11%20Summary]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::127++0??Exercises]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::127++0??Review%20Questions]]
+:END:
+
+***** Laboratory Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::134++0??Laboratory%20Exercises]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::135++0??Selected%20Bibliography]]
+:END:
+
+**** chapter 4 The Enhanced Entity–Relationship (EER) Model
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::138++0??chapter%204%20The%20Enhanced%20Entity–Relationship%20(EER)%20Model]]
+:END:
+
+***** 4.1 Subclasses, Superclasses, and Inheritance
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::139++0??4.1%20Subclasses,%20Superclasses,%20and%20Inheritance]]
+:END:
+
+***** 4.2 Specialization and Generalization
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::141++0??4.2%20Specialization%20and%20Generalization]]
+:END:
+
+***** 4.3 Constraints and Characteristics of Specialization and Generalization Hierarchies
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::144++0??4.3%20Constraints%20and%20Characteristics%20of%20Specialization%20and%20Generalization%20Hierarchies]]
+:END:
+
+***** 4.4 Modeling of UNION Types Using Categories
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::151++0??4.4%20Modeling%20of%20UNION%20Types%20Using%20Categories]]
+:END:
+
+***** 4.5 A Sample UNIVERSITY EER Schema, Design Choices, and Formal Definitions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::153++0??4.5%20A%20Sample%20UNIVERSITY%20EER%20Schema,%20Design%20Choices,%20and%20Formal%20Definitions]]
+:END:
+
+***** 4.6 Example of Other Notation: Representing Specialization and Generalization in UML Class Diagrams
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::158++0??4.6%20Example%20of%20Other%20Notation:%20Representing%20Specialization%20and%20Generalization%20in%20UML%20Class%20Diagrams]]
+:END:
+
+***** 4.7 Data Abstraction, Knowledge Representation, and Ontology Concepts
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::159++0??4.7%20Data%20Abstraction,%20Knowledge%20Representation,%20and%20Ontology%20Concepts]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::166++0??Review%20Questions]]
+:END:
+
+***** 4.8 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::166++0??4.8%20Summary]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::167++0??Exercises]]
+:END:
+
+***** Laboratory Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::174++0??Laboratory%20Exercises]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::177++0??Selected%20Bibliography]]
+:END:
+
+*** part 3 The Relational Data Model and SQL
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::178++0??part%203%20The%20Relational%20Data%20Model%20and%20SQL]]
+:END:
+
+**** chapter 5 The Relational Data Model and Relational Database Constraints
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::180++0??chapter%205%20The%20Relational%20Data%20Model%20and%20Relational%20Database%20Constraints]]
+:END:
+
+#+name: Figure_5.5
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220427_224600.png]]
+
+***** 5.1 Relational Model Concepts
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::181++0??5.1%20Relational%20Model%20Concepts]]
+:END:
+***** 5.2 Relational Model Constraints and Relational Database Schemas
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::188++0??5.2%20Relational%20Model%20Constraints%20and%20Relational%20Database%20Schemas]]
+:END:
+***** 5.3 Update Operations, Transactions, and Dealing with Constraint Violations
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::196++0??5.3%20Update%20Operations,%20Transactions,%20and%20Dealing%20with%20Constraint%20Violations]]
+:END:
+
+***** 5.4 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::200++0??5.4%20Summary]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::201++0??Exercises]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::201++0??Review%20Questions]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::206++0??Selected%20Bibliography]]
+:END:
+
+**** chapter 6 Basic SQL
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::208++0??chapter%206%20Basic%20SQL]]
+:END:
+
+***** 6.1 SQL Data Definition and Data Types
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::210++0??6.1%20SQL%20Data%20Definition%20and%20Data%20Types]]
+:END:
+
+***** 6.2 Specifying Constraints in SQL
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::215++0??6.2%20Specifying%20Constraints%20in%20SQL]]
+:END:
+
+***** 6.3 Basic Retrieval Queries in SQL
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::218++0??6.3%20Basic%20Retrieval%20Queries%20in%20SQL]]
+:END:
+#+name: Q2
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220427_224901.png]]
+
+***** 6.4 INSERT, DELETE, and UPDATE Statements in SQL
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::229++0??6.4%20INSERT,%20DELETE,%20and%20UPDATE%20Statements%20in%20SQL]]
+:END:
+
+***** 6.5 Additional Features of SQL
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::232++0??6.5%20Additional%20Features%20of%20SQL]]
+:END:
+
+***** 6.6 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::233++0??6.6%20Summary]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::234++0??Exercises]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::234++0??Review%20Questions]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::236++0??Selected%20Bibliography]]
+:END:
+
+***** 7.1 More Complex SQL Retrieval Queries
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::238++0??7.1%20More%20Complex%20SQL%20Retrieval%20Queries]]
+:END:
+
+**** chapter 7 More SQL: Complex Queries, Triggers, Views, and Schema Modification
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::238++0??chapter%207%20More%20SQL:%20Complex%20Queries,%20Triggers,%20Views,%20and%20Schema%20Modification]]
+:END:
+
+***** 7.2 Specifying Constraints as Assertions and Actions as Triggers
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::256++0??7.2%20Specifying%20Constraints%20as%20Assertions%20and%20Actions%20as%20Triggers]]
+:END:
+
+***** 7.3 Views (Virtual Tables) in SQL
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::259++0??7.3%20Views%20(Virtual%20Tables)%20in%20SQL]]
+:END:
+
+***** 7.4 Schema Change Statements in SQL
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::263++0??7.4%20Schema%20Change%20Statements%20in%20SQL]]
+:END:
+
+***** 7.5 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::265++0??7.5%20Summary]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::267++0??Exercises]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::267++0??Review%20Questions]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::269++0??Selected%20Bibliography]]
+:END:
+
+**** chapter 8 The Relational Algebra and Relational Calculus
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::270++0??chapter%208%20The%20Relational%20Algebra%20and%20Relational%20Calculus]]
+:END:
+
+***** 8.1 Unary Relational Operations: SELECT and PROJECT
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::272++0??8.1%20Unary%20Relational%20Operations:%20SELECT%20and%20PROJECT]]
+:END:
+
+***** 8.2 Relational Algebra Operations from Set Theory
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::277++0??8.2%20Relational%20Algebra%20Operations%20from%20Set%20Theory]]
+:END:
+
+***** 8.3 Binary Relational Operations: JOIN and DIVISION
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::282++0??8.3%20Binary%20Relational%20Operations:%20JOIN%20and%20DIVISION]]
+:END:
+
+***** 8.4 Additional Relational Operations
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::290++0??8.4%20Additional%20Relational%20Operations]]
+:END:
+
+***** 8.5 Examples of Queries in Relational Algebra
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::296++0??8.5%20Examples%20of%20Queries%20in%20Relational%20Algebra]]
+:END:
+
+***** 8.6 The Tuple Relational Calculus
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::299++0??8.6%20The%20Tuple%20Relational%20Calculus]]
+:END:
+
+***** 8.7 The Domain Relational Calculus
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::308++0??8.7%20The%20Domain%20Relational%20Calculus]]
+:END:
+
+***** 8.8 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::310++0??8.8%20Summary]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::311++0??Review%20Questions]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::312++0??Exercises]]
+:END:
+
+***** Laboratory Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::317++0??Laboratory%20Exercises]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::319++0??Selected%20Bibliography]]
+:END:
+
+**** chapter 9 Relational Database Design by ER- and EER-to-Relational Mapping
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::320++0??chapter%209%20Relational%20Database%20Design%20by%20ER-%20and%20EER-to-Relational%20Mapping]]
+:END:
+
+***** 9.1 Relational Database Design Using ER-to-Relational Mapping
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::321++0??9.1%20Relational%20Database%20Design%20Using%20ER-to-Relational%20Mapping]]
+:END:
+
+***** 9.2 Mapping EER Model Constructs to Relations
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::329++0??9.2%20Mapping%20EER%20Model%20Constructs%20to%20Relations]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::334++0??Exercises]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::334++0??Review%20Questions]]
+:END:
+
+***** 9.3 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::334++0??9.3%20Summary]]
+:END:
+
+***** Laboratory Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::336++0??Laboratory%20Exercises]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::337++0??Selected%20Bibliography]]
+:END:
+
+*** part 4 Database Programming Techniques
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::338++0??part%204%20Database%20Programming%20Techniques]]
+:END:
+
+**** chapter 10 Introduction to SQL Programming Techniques
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::340++0??chapter%2010%20Introduction%20to%20SQL%20Programming%20Techniques]]
+:END:
+
+***** 10.1 Overview of Database Programming Techniques and Issues
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::341++0??10.1%20Overview%20of%20Database%20Programming%20Techniques%20and%20Issues]]
+:END:
+
+***** 10.2 Embedded SQL, Dynamic SQL, and SQLJ
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::345++0??10.2%20Embedded%20SQL,%20Dynamic%20SQL,%20and%20SQLJ]]
+:END:
+
+***** 10.3 Database Programming with Function Calls and Class Libraries: SQL/CLI and JDBC
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::357++0??10.3%20Database%20Programming%20with%20Function%20Calls%20and%20Class%20Libraries:%20SQL/CLI%20and%20JDBC]]
+:END:
+
+***** 10.4 Database Stored Procedures and SQL/PSM
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::366++0??10.4%20Database%20Stored%20Procedures%20and%20SQL/PSM]]
+:END:
+
+***** 10.5 Comparing the Three Approaches
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::369++0??10.5%20Comparing%20the%20Three%20Approaches]]
+:END:
+
+***** 10.6 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::370++0??10.6%20Summary]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::371++0??Exercises]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::371++0??Review%20Questions]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::372++0??Selected%20Bibliography]]
+:END:
+
+**** chapter 11 Web Database Programming Using PHP
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::374++0??chapter%2011%20Web%20Database%20Programming%20Using%20PHP]]
+:END:
+
+***** 11.1 A Simple PHP Example
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::375++0??11.1%20A%20Simple%20PHP%20Example]]
+:END:
+
+***** 11.2 Overview of Basic Features of PHP
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::377++0??11.2%20Overview%20of%20Basic%20Features%20of%20PHP]]
+:END:
+
+***** 11.3 Overview of PHP Database Programming
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::384++0??11.3%20Overview%20of%20PHP%20Database%20Programming]]
+:END:
+
+***** 11.5 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::389++0??11.5%20Summary]]
+:END:
+
+***** 11.4 Brief Overview of Java Technologies for Database Web Programming
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::389++0??11.4%20Brief%20Overview%20of%20Java%20Technologies%20for%20Database%20Web%20Programming]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::390++0??Selected%20Bibliography]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::390++0??Exercises]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::390++0??Review%20Questions]]
+:END:
+
+*** part 5 Object, Object-Relational, and XML: Concepts, Models, Languages, and Standards
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::392++0??part%205%20Object,%20Object-Relational,%20and%20XML:%20Concepts,%20Models,%20Languages,%20and%20Standards]]
+:END:
+
+**** chapter 12 Object and Object-Relational Databases
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::394++0??chapter%2012%20Object%20and%20Object-Relational%20Databases]]
+:END:
+
+***** 12.1 Overview of Object Database Concepts
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::396++0??12.1%20Overview%20of%20Object%20Database%20Concepts]]
+:END:
+
+***** 12.2 Object Database Extensions to SQL
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::410++0??12.2%20Object%20Database%20Extensions%20to%20SQL]]
+:END:
+
+***** 12.3 The ODMG Object Model and the Object Definition Language ODL
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::417++0??12.3%20The%20ODMG%20Object%20Model%20and%20the%20Object%20Definition%20Language%20ODL]]
+:END:
+
+***** 12.4 Object Database Conceptual Design
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::436++0??12.4%20Object%20Database%20Conceptual%20Design]]
+:END:
+
+***** 12.5 The Object Query Language OQL
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::439++0??12.5%20The%20Object%20Query%20Language%20OQL]]
+:END:
+
+***** 12.6 Overview of the C++ Language Binding in the ODMG Standard
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::448++0??12.6%20Overview%20of%20the%20C++%20Language%20Binding%20in%20the%20ODMG%20Standard]]
+:END:
+
+***** 12.7 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::449++0??12.7%20Summary]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::451++0??Review%20Questions]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::452++0??Exercises]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::453++0??Selected%20Bibliography]]
+:END:
+
+**** chapter 13 XML: Extensible Markup Language
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::456++0??chapter%2013%20XML:%20Extensible%20Markup%20Language]]
+:END:
+
+***** 13.1 Structured, Semistructured, and Unstructured Data
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::457++0??13.1%20Structured,%20Semistructured,%20and%20Unstructured%20Data]]
+:END:
+
+***** 13.2 XML Hierarchical (Tree) Data Model
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::461++0??13.2%20XML%20Hierarchical%20(Tree)%20Data%20Model]]
+:END:
+
+***** 13.3 XML Documents, DTD, and XML Schema
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::464++0??13.3%20XML%20Documents,%20DTD,%20and%20XML%20Schema]]
+:END:
+
+***** 13.4 Storing and Extracting XML Documents from Databases
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::473++0??13.4%20Storing%20and%20Extracting%20XML%20Documents%20from%20Databases]]
+:END:
+
+***** 13.5 XML Languages
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::474++0??13.5%20XML%20Languages]]
+:END:
+
+***** 13.6 Extracting XML Documents from Relational Databases
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::478++0??13.6%20Extracting%20XML%20Documents%20from%20Relational%20Databases]]
+:END:
+
+***** 13.7 XML/SQL: SQL Functions for Creating XML Data
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::484++0??13.7%20XML/SQL:%20SQL%20Functions%20for%20Creating%20XML%20Data]]
+:END:
+
+***** 13.8 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::486++0??13.8%20Summary]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::487++0??Selected%20Bibliography]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::487++0??Exercises]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::487++0??Review%20Questions]]
+:END:
+
+*** part 6 Database Design Theory and Normalization
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::488++0??part%206%20Database%20Design%20Theory%20and%20Normalization]]
+:END:
+
+**** chapter 14 Basics of Functional Dependencies and Normalization for Relational Databases
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::490++0??chapter%2014%20Basics%20of%20Functional%20Dependencies%20and%20Normalization%20for%20Relational%20Databases]]
+:END:
+
+***** 14.1 Informal Design Guidelines for Relation Schemas
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::492++0??14.1%20Informal%20Design%20Guidelines%20for%20Relation%20Schemas]]
+:END:
+
+***** 14.2 Functional Dependencies
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::502++0??14.2%20Functional%20Dependencies]]
+:END:
+
+***** 14.3 Normal Forms Based on Primary Keys
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::505++0??14.3%20Normal%20Forms%20Based%20on%20Primary%20Keys]]
+:END:
+
+***** 14.4 General Definitions of Second and Third Normal Forms
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::514++0??14.4%20General%20Definitions%20of%20Second%20and%20Third%20Normal%20Forms]]
+:END:
+
+***** 14.5 Boyce-Codd Normal Form
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::518++0??14.5%20Boyce-Codd%20Normal%20Form]]
+:END:
+
+***** 14.6 Multivalued Dependency and Fourth Normal Form
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::522++0??14.6%20Multivalued%20Dependency%20and%20Fourth%20Normal%20Form]]
+:END:
+
+***** 14.7 Join Dependencies and Fifth Normal Form
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::525++0??14.7%20Join%20Dependencies%20and%20Fifth%20Normal%20Form]]
+:END:
+
+***** 14.8 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::526++0??14.8%20Summary]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::527++0??Review%20Questions]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::528++0??Exercises]]
+:END:
+
+***** Laboratory Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::532++0??Laboratory%20Exercises]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::533++0??Selected%20Bibliography]]
+:END:
+
+**** chapter 15 Relational Database Design Algorithms and Further Dependencies
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::534++0??chapter%2015%20Relational%20Database%20Design%20Algorithms%20and%20Further%20Dependencies]]
+:END:
+
+***** 15.1 Further Topics in Functional Dependencies: Inference Rules, Equivalence, and Minimal Cover
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::536++0??15.1%20Further%20Topics%20in%20Functional%20Dependencies:%20Inference%20Rules,%20Equivalence,%20and%20Minimal%20Cover]]
+:END:
+
+***** 15.2 Properties of Relational Decompositions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::544++0??15.2%20Properties%20of%20Relational%20Decompositions]]
+:END:
+
+***** 15.3 Algorithms for Relational Database Schema Design
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::550++0??15.3%20Algorithms%20for%20Relational%20Database%20Schema%20Design]]
+:END:
+
+***** 15.4 About Nulls, Dangling Tuples, and Alternative Relational Designs
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::554++0??15.4%20About%20Nulls,%20Dangling%20Tuples,%20and%20Alternative%20Relational%20Designs]]
+:END:
+
+***** 15.5 Further Discussion of Multivalued Dependencies and 4NF
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::558++0??15.5%20Further%20Discussion%20of%20Multivalued%20Dependencies%20and%204NF]]
+:END:
+
+***** 15.6 Other Dependencies and Normal Forms
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::561++0??15.6%20Other%20Dependencies%20and%20Normal%20Forms]]
+:END:
+
+***** 15.7 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::564++0??15.7%20Summary]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::565++0??Review%20Questions]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::566++0??Exercises]]
+:END:
+
+***** Laboratory Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::567++0??Laboratory%20Exercises]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::568++0??Selected%20Bibliography]]
+:END:
+
+*** part 7 File Structures, Hashing, Indexing, and Physical Database Design
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::570++0??part%207%20File%20Structures,%20Hashing,%20Indexing,%20and%20Physical%20Database%20Design]]
+:END:
+
+**** chapter 16 Disk Storage, Basic File Structures, Hashing, and Modern Storage Architectures
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::572++0??chapter%2016%20Disk%20Storage,%20Basic%20File%20Structures,%20Hashing,%20and%20Modern%20Storage%20Architectures]]
+:END:
+
+***** 16.1 Introduction
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::573++0??16.1%20Introduction]]
+:END:
+
+***** 16.2 Secondary Storage Devices
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::578++0??16.2%20Secondary%20Storage%20Devices]]
+:END:
+
+***** 16.3 Buffering of Blocks
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::587++0??16.3%20Buffering%20of%20Blocks]]
+:END:
+
+***** 16.4 Placing File Records on Disk
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::591++0??16.4%20Placing%20File%20Records%20on%20Disk]]
+:END:
+
+***** 16.5 Operations on Files
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::595++0??16.5%20Operations%20on%20Files]]
+:END:
+
+***** 16.6 Files of Unordered Records (Heap Files)
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::598++0??16.6%20Files%20of%20Unordered%20Records%20(Heap%20Files)]]
+:END:
+
+***** 16.7 Files of Ordered Records (Sorted Files)
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::599++0??16.7%20Files%20of%20Ordered%20Records%20(Sorted%20Files)]]
+:END:
+
+***** 16.8 Hashing Techniques
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::603++0??16.8%20Hashing%20Techniques]]
+:END:
+
+***** 16.9 Other Primary File Organizations
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::613++0??16.9%20Other%20Primary%20File%20Organizations]]
+:END:
+
+***** 16.10 Parallelizing Disk Access Using RAID Technology
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::615++0??16.10%20Parallelizing%20Disk%20Access%20Using%20RAID%20Technology]]
+:END:
+
+***** 16.11 Modern Storage Architectures
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::619++0??16.11%20Modern%20Storage%20Architectures]]
+:END:
+
+***** 16.12 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::623++0??16.12%20Summary]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::624++0??Review%20Questions]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::626++0??Exercises]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::629++0??Selected%20Bibliography]]
+:END:
+
+**** chapter 17 Indexing Structures for Files and Physical Database Design
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::632++0??chapter%2017%20Indexing%20Structures%20for%20Files%20and%20Physical%20Database%20Design]]
+:END:
+
+***** 17.1 Types of Single-Level Ordered Indexes
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::633++0??17.1%20Types%20of%20Single-Level%20Ordered%20Indexes]]
+:END:
+A record has two types of field: key field and non-key field. Key and non-key fields can be either ordered or non-ordered. Primary index file contains ordering key field.
+
+| Index file       | key field | ordered |
+| primary index    | Y         | Y       |
+| clustering index | N         | Y       |
+| Secondary index  | Y/N       | N       |
+
+***** 17.2 Multilevel Indexes
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::644++0??17.2%20Multilevel%20Indexes]]
+:END:
+
+***** 17.3 Dynamic Multilevel Indexes Using B-Trees and B+-Trees
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::648++0??17.3%20Dynamic%20Multilevel%20Indexes%20Using%20B-Trees%20and%20B+-Trees]]
+:END:
+
+***** 17.4 Indexes on Multiple Keys
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::662++0??17.4%20Indexes%20on%20Multiple%20Keys]]
+:END:
+
+***** 17.5 Other Types of Indexes
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::664++0??17.5%20Other%20Types%20of%20Indexes]]
+:END:
+
+***** 17.6 Some General Issues Concerning Indexing
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::669++0??17.6%20Some%20General%20Issues%20Concerning%20Indexing]]
+:END:
+
+***** 17.7 Physical Database Design in Relational Databases
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::674++0??17.7%20Physical%20Database%20Design%20in%20Relational%20Databases]]
+:END:
+
+***** 17.8 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::677++0??17.8%20Summary]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::678++0??Review%20Questions]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::679++0??Exercises]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::681++0??Selected%20Bibliography]]
+:END:
+
+*** part 8 Query Processing and Optimization
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::684++0??part%208%20Query%20Processing%20and%20Optimization]]
+:END:
+
+**** chapter 18 Strategies for Query Processing
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::686++0??chapter%2018%20Strategies%20for%20Query%20Processing]]
+:END:
+
+***** 18.1 Translating SQL Queries into Relational Algebra and Other Operators
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::688++0??18.1%20Translating%20SQL%20Queries%20into%20Relational%20Algebra%20and%20Other%20Operators]]
+:END:
+#+name: Figure_18.1
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220428_085411.png]]
+
+***** 18.2 Algorithms for External Sorting
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::691++0??18.2%20Algorithms%20for%20External%20Sorting]]
+:END:
+
+***** 18.3 Algorithms for SELECT Operation
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::694++0??18.3%20Algorithms%20for%20SELECT%20Operation]]
+:END:
+
+***** 18.4 Implementing the JOIN Operation
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::699++0??18.4%20Implementing%20the%20JOIN%20Operation]]
+:END:
+
+***** 18.5 Algorithms for PROJECT and Set Operations
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::707++0??18.5%20Algorithms%20for%20PROJECT%20and%20Set%20Operations]]
+:END:
+
+***** 18.6 Implementing Aggregate Operations and Different Types of JOINs
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::709++0??18.6%20Implementing%20Aggregate%20Operations%20and%20Different%20Types%20of%20JOINs]]
+:END:
+
+***** 18.7 Combining Operations Using Pipelining
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::712++0??18.7%20Combining%20Operations%20Using%20Pipelining]]
+:END:
+
+***** 18.8 Parallel Algorithms for Query Processing
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::714++0??18.8%20Parallel%20Algorithms%20for%20Query%20Processing]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::719++0??Review%20Questions]]
+:END:
+
+***** 18.9 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::719++0??18.9%20Summary]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::720++0??Selected%20Bibliography]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::720++0??Exercises]]
+:END:
+
+**** chapter 19 Query Optimization
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::722++0??chapter%2019%20Query%20Optimization]]
+:END:
+
+***** 19.1 Query Trees and Heuristics for Query Optimization
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::723++0??19.1%20Query%20Trees%20and%20Heuristics%20for%20Query%20Optimization]]
+:ID:       a50d7ec8-27a0-4fdf-bc88-79985428001f
+:END:
+
+#+name: Figure_19.1
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220427_225518.png]]
+
+#+name: example_of_transforming_a_query
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220427_230258.png]]
+
+#+name: Figure_19.2
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220427_230335.png]]
+
+#+name: Figure_19.2_continued
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220427_230820.png]]
+***** 19.2 Choice of Query Execution Plans
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::732++0??19.2%20Choice%20of%20Query%20Execution%20Plans]]
+:END:
+
+
+***** 19.3 Use of Selectivities in Cost-Based Optimization
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::741++0??19.3%20Use%20of%20Selectivities%20in%20Cost-Based%20Optimization]]
+:END:
+****** 19.3.1 Cost Components for Query Execution
+Database is considered small when all data can store in memory when query is executed, other it is considered as big.
+
+- I/O cost dominates in big database.
+- CPU cost dominates in small database.
+- On top of I/O and CPU cost,communication cost dominates in distributed database.
+******* types of cost
+******** data transferring specific cost
+- communication cost
+  cost of shipping query's result from database site to site that query originated.
+- I/O cost (access cost to secondary storage)
+  cost of transferring data block between secondary and main memory storage.
+******** memory specific cost
+- memory usage cost
+  As of [2022-04-28 Thu], I can't fully understand what this example of this cost.
+  cost of pertaining main memory buffer.
+- CPU cost (computation cost)
+  cost of performing in-memory operations such as sorting, merging
+******** Disk specific cost
+- disk storage cost
+  cost of storing intermediate file during query execution.
+****** 19.3.2 Catalog Information Used in Cost functions
+Information to calculate cost is stored in DBMS catalog.
+******* Information to calculate cost of query execution
+******** file's size
+Assuming that all records in are of the same type, file's size information involves the following
+- number of records (tuples) (r)
+- the average record size (R)
+- the number of file block (b)
+- the blockcing factor (bfr)
+******** block access time
+To access a block, one must access index file which is either primary index, secondary index, clustering index. This is case =the number of levels (x) of index file= is needed.
+******** selection cardinality (average of number of record that will satisfy all possible selection conditions)
+As of [2022-04-28 Thu], I can't fully understand selectivity. Given the selectivity explanation in the book, I don't think the book explain it clearly at all.
+
+To calculate cost of accessing a record in a table, =selection cardinatlity= (s) must be calculated as $s=sl*r$ where $sl$ is selectivity and $r$ is number of records. Selectivity is a percentage of records returns on a query, and it is calculated by $sl=1/NDV$ where $NDV$ is number of distinct values. $NDV$ is commonly annotated as $NDV(Arribute,Table)$.
+
+****** 19.3.3 Histograms
+
+***** 19.4 Cost Functions for SELECT Operation
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::745++0??19.4%20Cost%20Functions%20for%20SELECT%20Operation]]
+:END:
+#+caption: notation for variable used to calculate cost
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220428_104321.png]]
+
+****** 19.4.1 Example of Optimization of Selection Based on Cost Formulas
+Suppose that the EMPLOYEE file in Figure ref:Figure_5.5, $r_{E}=10k$ records stored in $b_{E}=2k$ disk blocks with block factor $bcr_{E}=5$ records/block and the following access path.
+
+1. A clustering index on Salary, with Levels $x_{Salary}=3$ and average selection cardinality $s_{salary}=20$
+  From above, we can derived selectivity of $sl_{Salary}=20/10,000=0.002$
+2. A secondary index on the key attribute Ssn, with $s_{Ssn}=4$ where $s_{ssn}=1$ and $sl_{Ssn}=0.0001$
+3. A secondary index on the nonkey attributed Dno, with $d_{Dno}=2$ and first-level index blocks $b_{l1Dno}=4$. There are NDV(Dno, EMPLOYEE) = 125 distinct values for Dno.
+
+   selectivity of Dno is
+
+***** 19.5 Cost Functions for the JOIN Operation
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::748++0??19.5%20Cost%20Functions%20for%20the%20JOIN%20Operation]]
+:END:
+
+***** 19.6 Example to Illustrate Cost-Based Query Optimization
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::757++0??19.6%20Example%20to%20Illustrate%20Cost-Based%20Query%20Optimization]]
+:END:
+
+***** 19.7 Additional Issues Related to Query Optimization
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::759++0??19.7%20Additional%20Issues%20Related%20to%20Query%20Optimization]]
+:END:
+
+***** 19.8 An Example of Query Optimization in Data Warehouses
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::762++0??19.8%20An%20Example%20of%20Query%20Optimization%20in%20Data%20Warehouses]]
+:END:
+
+***** 19.9 Overview of Query Optimization in Oracle
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::764++0??19.9%20Overview%20of%20Query%20Optimization%20in%20Oracle]]
+:END:
+
+***** 19.10 Semantic Query Optimization
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::768++0??19.10%20Semantic%20Query%20Optimization]]
+:END:
+
+***** 19.11 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::769++0??19.11%20Summary]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::770++0??Review%20Questions]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::771++0??Selected%20Bibliography]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::771++0??Exercises]]
+:END:
+
+*** part 9 Transaction Processing, Concurrency Control, and Recovery
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::774++0??part%209%20Transaction%20Processing,%20Concurrency%20Control,%20and%20Recovery]]
+:END:
+
+**** chapter 20 Introduction to Transaction Processing Concepts and Theory
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::776++0??chapter%2020%20Introduction%20to%20Transaction%20Processing%20Concepts%20and%20Theory]]
+:END:
+
+***** 20.1 Introduction to Transaction Processing
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::777++0??20.1%20Introduction%20to%20Transaction%20Processing]]
+:END:
+
+***** 20.2 Transaction and System Concepts
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::784++0??20.2%20Transaction%20and%20System%20Concepts]]
+:END:
+
+***** 20.3 Desirable Properties of Transactions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::788++0??20.3%20Desirable%20Properties%20of%20Transactions]]
+:END:
+
+***** 20.4 Characterizing Schedules Based on Recoverability
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::790++0??20.4%20Characterizing%20Schedules%20Based%20on%20Recoverability]]
+:END:
+
+***** 20.5 Characterizing Schedules Based on Serializability
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::794++0??20.5%20Characterizing%20Schedules%20Based%20on%20Serializability]]
+:END:
+***** 20.6 Transaction Support in SQL
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::804++0??20.6%20Transaction%20Support%20in%20SQL]]
+:END:
+
+***** 20.7 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::807++0??20.7%20Summary]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::808++0??Exercises]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::808++0??Review%20Questions]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::810++0??Selected%20Bibliography]]
+:END:
+
+**** chapter 21 Concurrency Control Techniques
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::812++0??chapter%2021%20Concurrency%20Control%20Techniques]]
+:END:
+From my understanding, as of [2022-04-27 Wed], serialization is realized when reordering of transaction's lock and unlock function will result in the same output
+
+***** 21.1 Two-Phase Locking Techniques for Concurrency Control
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::813++0??21.1%20Two-Phase%20Locking%20Techniques%20for%20Concurrency%20Control]]
+:END:
+
+****** binary locking
+According to binary locking, each data can be accessed by at most 1 transaction. In the other word, at most one transaction can hold the lock on a particular item.
+
+
+#+caption: operation for binary locks
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220427_175610.png]]
+
+****** Shared/exclusive Locks (Read/Write locks)
+
+According to shared/exclusive locks, each data can be read by unlimited number of transaction, but when transaction write the data, no write and read transaction can access the same data.
+
+It has one of the 3 possible states: read-locked, write-locked, and unlocked.
+
+#+caption: operation for shared/exclusive locks
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220427_175653.png]]
+****** Two-Phase locking (2PL)
+types of 2PL
+- simple 2PL
+  simple 2PL reads and write follow rules read_lock, write_lock and unlock provided in shared/exclusive locking rules
+
+- conservative 2PL (=locks all before starts=)
+
+  conservative 2PL requires a transaction to lock all items that transaction will access before transaction begin execution. This is done by predeclaring its read-set and write-set.
+
+- strict 2PL (=locks write until finish=)
+  a transaction doesn't released write_lock until the transaction is committed or aborted.
+
+- rigorous 2PL (=locks all until finish=)
+  a transaction doesn't release write_lock and read_lock until the transaction is committed or aborted.
+
+|                  | deadlock-free | exists invalid scenario | can run all possible serializable scheduels |
+| simple 2PL       | N             | NA                      | N                                           |
+| conservative 2PL | Y             | Y                       | NA                                          |
+| strict 2PL       | N             | NA                      | NA                                          |
+| rigorous 2PL     |               |                         |                                             |
+
+******* How to Guarantee Serialization with Two-Phase Locking (2PL) with Example :blog:database:
+:PROPERTIES:
+:ID:       04fc38c8-6903-46a5-9593-13cbe33c6c20
+:EXPORT_FILE_NAME: How to Guarantee Serialization with Two-Phase Locking (2PL) with Example
+:END:
+
+This is a summary on Chapter 21.1 Two-Phase Locking Techniques for Concurrency Control from Fundamental of Database system by Pearson 2015.
+
+The goal of this blog is to give a concrete example on how 2PL's schedule is =guaranteed to be serializable=.
+
+#+name: Figure_21.3
+#+caption: Figure 21.3
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220427_180350.png]]
+
+#+name: Figure_21.4
+#+caption: Figure 21.4
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220427_180447.png]]
+
+Figure ref:Figure_21.3 and figure ref:Figure_21.4 uses the same set of locks which is provided in Shared/Exclusive locks including read_lock, write_lock and unlock. However, figure ref:Figure_21.4 is considered 2PL while figure ref:Figure_21.3 is not. Note that 2PL is Shared/Exclusive locks with additional protocol called =two phase locking protocol=. The different between 2PL and shared/exclusive lock is that 2PL guarantee serialization while the other doesn't.
+
+The book also mentioned that while 2PL protocol guarantee sheduling serializability. It doesn't permit all possible serializable schedules.
+
+Serialization is achieved via by converting figure ref:Figure_21.3 to figure ref:Figure_21.4 because figure ref:Figure_21.4 reorders write_lock(X) and write_lock(Y) to be right before unlock(Y) and unlock(X), respectively.
+
+Naturally, two questions arises.
+
+Considering $T_1$, the first question is "why does order of write_lock(X) and unlock(Y) matter?" To answer this question, one have to think in term of constraint that would results in serialization.  In $T_{1}$, value of Y is read first. This means Y should be locked until =X = X+Y= is written. This condition is satisfied by placing write_lock(X) above unlock(Y). This can be read as "write X before unlock Y."
+
+To satisfy the above constraints, in $T_1$, write_lock have to be placed on X until =X = X +Y= is executed. This guarantees that X will not be changed until =X = X+Y= is executed. At the same time, $T_{1}$ doesn't need to be any constraint on Y except that $T_1$ needs to be informed of any changes made in Y before =X = X+Y= will be computed.
+
+
+Secondly, considering $T_1$, "can write_lock(X) be anywhere else above unlock(Y)?" The answer is yes, but the reason that it is placed right above unlock is for efficiency by reducing queue waiting time. Recall that when write_lock is called, neither read nor write can be called on the same data. =To guarantee this efficiency, distant between write_lock(X) and write_item(X) needs to be minimized=.
+***** 21.2 Concurrency Control Based on Timestamp Ordering
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::823++0??21.2%20Concurrency%20Control%20Based%20on%20Timestamp%20Ordering]]
+:END:
+#+name: Figure_22.2
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220427_214642.png]]
+
+When crash occurs in figure ref:Figure_22.2, using =increment logging with deffered update= approach, there is no need to do anything with $T_1$. $T_{2}$ and $T_{3}$ need to be redone from the checkpoint. $T_{4}$ and $T_{5}$ are ignore completely because crash happens before log information about transaction commit is not yet flushed to the disk.
+
+***** 21.3 Multiversion Concurrency Control Techniques
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::826++0??21.3%20Multiversion%20Concurrency%20Control%20Techniques]]
+:END:
+
+***** 21.4 Validation (Optimistic) Techniques and Snapshot Isolation Concurrency Control
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::829++0??21.4%20Validation%20(Optimistic)%20Techniques%20and%20Snapshot%20Isolation%20Concurrency%20Control]]
+:END:
+
+***** 21.5 Granularity of Data Items and Multiple Granularity Locking
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::831++0??21.5%20Granularity%20of%20Data%20Items%20and%20Multiple%20Granularity%20Locking]]
+:END:
+
+***** 21.6 Using Locks for Concurrency Control in Indexes
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::836++0??21.6%20Using%20Locks%20for%20Concurrency%20Control%20in%20Indexes]]
+:END:
+
+***** 21.7 Other Concurrency Control Issues
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::837++0??21.7%20Other%20Concurrency%20Control%20Issues]]
+:END:
+
+***** 21.8 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::838++0??21.8%20Summary]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::839++0??Review%20Questions]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::840++0??Exercises]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::841++0??Selected%20Bibliography]]
+:END:
+
+**** chapter 22 Database Recovery Techniques
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::844++0??chapter%2022%20Database%20Recovery%20Techniques]]
+:END:
+
+***** 22.1 Recovery Concepts
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::845++0??22.1%20Recovery%20Concepts]]
+:END:
+
+***** 22.2 NO-UNDO/REDO Recovery Based on Deferred Update
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::852++0??22.2%20NO-UNDO/REDO%20Recovery%20Based%20on%20Deferred%20Update]]
+:END:
+
+***** 22.3 Recovery Techniques Based on Immediate Update
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::854++0??22.3%20Recovery%20Techniques%20Based%20on%20Immediate%20Update]]
+:END:
+
+***** 22.4 Shadow Paging
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::857++0??22.4%20Shadow%20Paging]]
+:END:
+
+***** 22.5 The ARIES Recovery Algorithm
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::858++0??22.5%20The%20ARIES%20Recovery%20Algorithm]]
+:END:
+
+***** 22.6 Recovery in Multidatabase Systems
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::862++0??22.6%20Recovery%20in%20Multidatabase%20Systems]]
+:END:
+
+***** 22.7 Database Backup and Recovery from Catastrophic Failures
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::863++0??22.7%20Database%20Backup%20and%20Recovery%20from%20Catastrophic%20Failures]]
+:END:
+
+***** 22.8 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::864++0??22.8%20Summary]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::865++0??Review%20Questions]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::866++0??Exercises]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::869++0??Selected%20Bibliography]]
+:END:
+
+*** part 10 Distributed Databases, NOSQL Systems, and Big Data
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::870++0??part%2010%20Distributed%20Databases,%20NOSQL%20Systems,%20and%20Big%20Data]]
+:END:
+
+**** chapter 23 Distributed Database Concepts
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::872++0??chapter%2023%20Distributed%20Database%20Concepts]]
+:END:
+
+***** 23.1 Distributed Database Concepts
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::873++0??23.1%20Distributed%20Database%20Concepts]]
+:END:
+
+***** 23.2 Data Fragmentation, Replication, and Allocation Techniques for Distributed Database Design
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::878++0??23.2%20Data%20Fragmentation,%20Replication,%20and%20Allocation%20Techniques%20for%20Distributed%20Database%20Design]]
+:END:
+
+***** 23.3 Overview of Concurrency Control and Recovery in Distributed Databases
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::885++0??23.3%20Overview%20of%20Concurrency%20Control%20and%20Recovery%20in%20Distributed%20Databases]]
+:END:
+
+***** 23.4 Overview of Transaction Management in Distributed Databases
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::888++0??23.4%20Overview%20of%20Transaction%20Management%20in%20Distributed%20Databases]]
+:END:
+
+***** 23.5 Query Processing and Optimization in Distributed Databases
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::890++0??23.5%20Query%20Processing%20and%20Optimization%20in%20Distributed%20Databases]]
+:END:
+
+***** 23.6 Types of Distributed Database Systems
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::896++0??23.6%20Types%20of%20Distributed%20Database%20Systems]]
+:END:
+
+***** 23.7 Distributed Database Architectures
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::899++0??23.7%20Distributed%20Database%20Architectures]]
+:END:
+
+***** 23.8 Distributed Catalog Management
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::906++0??23.8%20Distributed%20Catalog%20Management]]
+:END:
+
+***** 23.9 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::907++0??23.9%20Summary]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::908++0??Review%20Questions]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::909++0??Exercises]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::911++0??Selected%20Bibliography]]
+:END:
+
+**** chapter 24 NOSQL Databases and Big Data Storage Systems
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::914++0??chapter%2024%20NOSQL%20Databases%20and%20Big%20Data%20Storage%20Systems]]
+:END:
+
+***** 24.1 Introduction to NOSQL Systems
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::915++0??24.1%20Introduction%20to%20NOSQL%20Systems]]
+:END:
+
+***** 24.2 The CAP Theorem
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::919++0??24.2%20The%20CAP%20Theorem]]
+:END:
+
+***** 24.3 Document-Based NOSQL Systems and MongoDB
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::921++0??24.3%20Document-Based%20NOSQL%20Systems%20and%20MongoDB]]
+:END:
+
+***** 24.4 NOSQL Key-Value Stores
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::926++0??24.4%20NOSQL%20Key-Value%20Stores]]
+:END:
+
+***** 24.5 Column-Based or Wide Column NOSQL Systems
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::931++0??24.5%20Column-Based%20or%20Wide%20Column%20NOSQL%20Systems]]
+:END:
+
+***** 24.6 NOSQL Graph Databases and Neo4j
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::934++0??24.6%20NOSQL%20Graph%20Databases%20and%20Neo4j]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::940++0??Review%20Questions]]
+:END:
+
+***** 24.7 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::940++0??24.7%20Summary]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::941++0??Selected%20Bibliography]]
+:END:
+
+**** chapter 25 Big Data Technologies Based on MapReduce and Hadoop
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::942++0??chapter%2025%20Big%20Data%20Technologies%20Based%20on%20MapReduce%20and%20Hadoop]]
+:END:
+
+***** 25.1 What Is Big Data?
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::945++0??25.1%20What%20Is%20Big%20Data?]]
+:END:
+
+***** 25.2 Introduction to MapReduce and Hadoop
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::947++0??25.2%20Introduction%20to%20MapReduce%20and%20Hadoop]]
+:END:
+
+***** 25.3 Hadoop Distributed File System (HDFS)
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::952++0??25.3%20Hadoop%20Distributed%20File%20System%20(HDFS)]]
+:END:
+
+***** 25.4 MapReduce: Additional Details
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::957++0??25.4%20MapReduce:%20Additional%20Details]]
+:END:
+
+***** 25.5 Hadoop v2 alias YARN
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::967++0??25.5%20Hadoop%20v2%20alias%20YARN]]
+:END:
+
+***** 25.6 General Discussion
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::975++0??25.6%20General%20Discussion]]
+:END:
+
+***** 25.7 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::984++0??25.7%20Summary]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::985++0??Review%20Questions]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::987++0??Selected%20Bibliography]]
+:END:
+
+*** part 11 Advanced Database Models, Systems, and Applications
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::990++0??part%2011%20Advanced%20Database%20Models,%20Systems,%20and%20Applications]]
+:END:
+
+**** chapter 26 Enhanced Data Models: Introduction to Active, Temporal, Spatial, Multimedia, and Deductive Databases
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::992++0??chapter%2026%20Enhanced%20Data%20Models:%20Introduction%20to%20Active,%20Temporal,%20Spatial,%20Multimedia,%20and%20Deductive%20Databases]]
+:END:
+
+***** 26.1 Active Database Concepts and Triggers
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::994++0??26.1%20Active%20Database%20Concepts%20and%20Triggers]]
+:END:
+
+***** 26.2 Temporal Database Concepts
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1005++0??26.2%20Temporal%20Database%20Concepts]]
+:END:
+
+***** 26.3 Spatial Database Concepts
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1018++0??26.3%20Spatial%20Database%20Concepts]]
+:END:
+
+***** 26.4 Multimedia Database Concepts
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1025++0??26.4%20Multimedia%20Database%20Concepts]]
+:END:
+
+***** 26.5 Introduction to Deductive Databases
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1030++0??26.5%20Introduction%20to%20Deductive%20Databases]]
+:END:
+
+***** 26.6 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1043++0??26.6%20Summary]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1045++0??Review%20Questions]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1046++0??Exercises]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1049++0??Selected%20Bibliography]]
+:END:
+
+**** chapter 27 Introduction to Information Retrieval and Web Search
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1052++0??chapter%2027%20Introduction%20to%20Information%20Retrieval%20and%20Web%20Search]]
+:END:
+
+***** 27.1 Information Retrieval (IR) Concepts
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1053++0??27.1%20Information%20Retrieval%20(IR)%20Concepts]]
+:END:
+
+***** 27.2 Retrieval Models
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1060++0??27.2%20Retrieval%20Models]]
+:END:
+
+***** 27.3 Types of Queries in IR Systems
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1066++0??27.3%20Types%20of%20Queries%20in%20IR%20Systems]]
+:END:
+
+***** 27.4 Text Preprocessing
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1068++0??27.4%20Text%20Preprocessing]]
+:END:
+
+***** 27.5 Inverted Indexing
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1071++0??27.5%20Inverted%20Indexing]]
+:END:
+
+***** 27.6 Evaluation Measures of Search Relevance
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1075++0??27.6%20Evaluation%20Measures%20of%20Search%20Relevance]]
+:END:
+
+***** 27.7 Web Search and Analysis
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1078++0??27.7%20Web%20Search%20and%20Analysis]]
+:END:
+
+***** 27.8 Trends in Information Retrieval
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1088++0??27.8%20Trends%20in%20Information%20Retrieval]]
+:END:
+
+***** 27.9 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1094++0??27.9%20Summary]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1095++0??Review%20Questions]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1097++0??Selected%20Bibliography]]
+:END:
+
+**** chapter 28 Data Mining Concepts
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1100++0??chapter%2028%20Data%20Mining%20Concepts]]
+:END:
+
+***** 28.1 Overview of Data Mining Technology
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1101++0??28.1%20Overview%20of%20Data%20Mining%20Technology]]
+:END:
+
+***** 28.2 Association Rules
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1104++0??28.2%20Association%20Rules]]
+:END:
+
+***** 28.3 Classification
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1116++0??28.3%20Classification]]
+:END:
+
+***** 28.4 Clustering
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1119++0??28.4%20Clustering]]
+:END:
+
+***** 28.5 Approaches to Other Data Mining Problems
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1122++0??28.5%20Approaches%20to%20Other%20Data%20Mining%20Problems]]
+:END:
+
+***** 28.7 Commercial Data Mining Tools
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1125++0??28.7%20Commercial%20Data%20Mining%20Tools]]
+:END:
+
+***** 28.6 Applications of Data Mining
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1125++0??28.6%20Applications%20of%20Data%20Mining]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1128++0??Review%20Questions]]
+:END:
+
+***** 28.8 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1128++0??28.8%20Summary]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1129++0??Exercises]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1130++0??Selected%20Bibliography]]
+:END:
+
+**** chapter 29 Overview of Data Warehousing and OLAP
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1132++0??chapter%2029%20Overview%20of%20Data%20Warehousing%20and%20OLAP]]
+:END:
+
+***** 29.1 Introduction, Definitions, and Terminology
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1133++0??29.1%20Introduction,%20Definitions,%20and%20Terminology]]
+:END:
+
+***** 29.2 Characteristics of Data Warehouses
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1134++0??29.2%20Characteristics%20of%20Data%20Warehouses]]
+:END:
+
+***** 29.3 Data Modeling for Data Warehouses
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1136++0??29.3%20Data%20Modeling%20for%20Data%20Warehouses]]
+:END:
+
+***** 29.4 Building a Data Warehouse
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1142++0??29.4%20Building%20a%20Data%20Warehouse]]
+:END:
+
+***** 29.5 Typical Functionality of a Data Warehouse
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1145++0??29.5%20Typical%20Functionality%20of%20a%20Data%20Warehouse]]
+:END:
+
+***** 29.6 Data Warehouse versus Views
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1146++0??29.6%20Data%20Warehouse%20versus%20Views]]
+:END:
+
+***** 29.7 Difficulties of Implementing Data Warehouses
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1147++0??29.7%20Difficulties%20of%20Implementing%20Data%20Warehouses]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1148++0??Review%20Questions]]
+:END:
+
+***** 29.8 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1148++0??29.8%20Summary]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1149++0??Selected%20Bibliography]]
+:END:
+
+*** part 12 Additional Database Topics: Security
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1150++0??part%2012%20Additional%20Database%20Topics:%20Security]]
+:END:
+
+**** chapter 30 Database Security
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1152++0??chapter%2030%20Database%20Security]]
+:END:
+
+***** 30.1 Introduction to Database Security Issues
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1153++0??30.1%20Introduction%20to%20Database%20Security%20Issues]]
+:END:
+
+***** 30.2 Discretionary Access Control Based on Granting and Revoking Privileges
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1160++0??30.2%20Discretionary%20Access%20Control%20Based%20on%20Granting%20and%20Revoking%20Privileges]]
+:END:
+
+***** 30.3 Mandatory Access Control and Role-Based Access Control for Multilevel Security
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1165++0??30.3%20Mandatory%20Access%20Control%20and%20Role-Based%20Access%20Control%20for%20Multilevel%20Security]]
+:END:
+
+***** 30.4 SQL Injection
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1174++0??30.4%20SQL%20Injection]]
+:END:
+
+***** 30.5 Introduction to Statistical Database Security
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1177++0??30.5%20Introduction%20to%20Statistical%20Database%20Security]]
+:END:
+
+***** 30.6 Introduction to Flow Control
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1178++0??30.6%20Introduction%20to%20Flow%20Control]]
+:END:
+
+***** 30.7 Encryption and Public Key Infrastructures
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1180++0??30.7%20Encryption%20and%20Public%20Key%20Infrastructures]]
+:END:
+
+***** 30.8 Privacy Issues and Preservation
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1184++0??30.8%20Privacy%20Issues%20and%20Preservation]]
+:END:
+
+***** 30.9 Challenges to Maintaining Database Security
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1185++0??30.9%20Challenges%20to%20Maintaining%20Database%20Security]]
+:END:
+
+***** 30.10 Oracle Label-Based Security
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1186++0??30.10%20Oracle%20Label-Based%20Security]]
+:END:
+
+***** 30.11 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1189++0??30.11%20Summary]]
+:END:
+
+***** Review Questions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1190++0??Review%20Questions]]
+:END:
+
+***** Exercises
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1191++0??Exercises]]
+:END:
+
+***** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1192++0??Selected%20Bibliography]]
+:END:
+
+*** appendix A Alternative Diagrammatic Notations for ER Models
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1194++0??appendix%20A%20Alternative%20Diagrammatic%20Notations%20for%20ER%20Models]]
+:END:
+
+*** appendix B Parameters of Disks
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1198++0??appendix%20B%20Parameters%20of%20Disks]]
+:END:
+
+**** C.1 Basic Retrievals in QBE
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1202++0??C.1%20Basic%20Retrievals%20in%20QBE]]
+:END:
+
+*** appendix C Overview of the QBE Language
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1202++0??appendix%20C%20Overview%20of%20the%20QBE%20Language]]
+:END:
+
+**** C.2 Grouping, Aggregation, and Database Modification in QBE
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1206++0??C.2%20Grouping,%20Aggregation,%20and%20Database%20Modification%20in%20QBE]]
+:END:
+
+*** Selected Bibliography
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1210++0??Selected%20Bibliography]]
+:END:
+
+**** A
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1246++0??A]]
+:END:
+
+*** Index
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1246++0??Index]]
+:END:
+
+**** C
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1248++0??C]]
+:END:
+
+**** B
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1248++0??B]]
+:END:
+
+**** D
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1250++0??D]]
+:END:
+
+**** E
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1254++0??E]]
+:END:
+
+**** G
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1256++0??G]]
+:END:
+
+**** F
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1256++0??F]]
+:END:
+
+**** I
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1257++0??I]]
+:END:
+
+**** H
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1257++0??H]]
+:END:
+
+**** L
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1259++0??L]]
+:END:
+
+**** K
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1259++0??K]]
+:END:
+
+**** J
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1259++0??J]]
+:END:
+
+**** M
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1260++0??M]]
+:END:
+
+
+**** O
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1262++0??O]]
+:END:
+
+**** P
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1263++0??P]]
+:END:
+
+**** Q
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1264++0??Q]]
+:END:
+
+**** R
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1265++0??R]]
+:END:
+
+**** S
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1267++0??S]]
+:END:
+
+**** T
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1270++0??T]]
+:END:
+
+**** U
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1272++0??U]]
+:END:
+
+**** Y
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1273++0??Y]]
+:END:
+
+**** X
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1273++0??X]]
+:END:
+
+**** W
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1273++0??W]]
+:END:
+
+**** V
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Fundamentals-of-Database-Systems-Pearson-2015-Ramez-Elmasri-Shamkant-B.-Navathe.pdf::1273++0??V]]
+:END:
+
+

@@ -1,1 +1,4 @@
 #+TITLE: General Note On Algorithm
+
+* sorting
+** merge sort

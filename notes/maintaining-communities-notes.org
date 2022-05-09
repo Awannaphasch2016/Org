@@ -1,2 +1,6 @@
 #+TITLE: Maintaining Communities Notes
+#+filetags: dao
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
 
+
+The page is outdated,redirect to [[file:blockchains/decentralized-autonomous-organization-note.org::*Maintain a community][Maintain a community]].

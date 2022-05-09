@@ -1,0 +1,55 @@
+#+TITLE: Blockchain Club Note
+#+FILETAGS: blockchain_club @sideproject
+
+* Blockchain Club
+** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+** Notes :note:
+** Meeting :meeting:
+** Schedule
+*** recurring :recurring:
+*** non-recurring :nonrecurring:
+** Delegation :waiting:
+** Tasks
+*** actionable :actionable:
+**** TODO add follow up on feed back every 5 days for blockchain club
+SCHEDULED: <2022-05-05 Thu>
+:PROPERTIES:
+:ID:       9b2acacd-3a7c-4ab3-be73-9487a375ccb3
+:END:
+
+:PROPERTIES:
+:ID:       355346df-9fd9-4de7-8962-7477670e6456
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-10 Sun 21:51]--[2022-04-10 Sun 21:52] =>  0:01
+:END:
+[2022-04-10 Sun 21:51]
+[[file:~/org/community/blockchain/curated-blockchain-content-note.org::*\[\[*EP 1 - Builder Jourey - Jeff Kauffman (JUMP )\]\[EP 1 - Builder Jourey - Jeff Kauffman (JUMP )\]\]][EP 1 - Builder Jourey - Jeff Kauffman (JUMP )]]
+*** incubation :incubation:
+**** learn what discord bot is and add discord bot to the dicord channel.
+**** add roles section on the member sidebar to have the following
+***** moderators
+***** user
+:PROPERTIES:
+:ID:       83f9c03f-9a44-4727-ad49-fba5fb7a7082
+:END:
+****** regular
+****** non-regular
+***** actions-specific
+****** moderator
+****** event manager
+**** check out typeform to make survey question.
+CLOSED: [2022-05-05 Thu 03:19]
+:PROPERTIES:
+:ID:       c0e43d12-085a-4f24-8372-63bcb5ddd782
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-30 Sat 11:36]--[2022-04-30 Sat 11:37] =>  0:01
+:END:
+[2022-04-30 Sat 11:36]
+[[file:~/org/notes/blockchains/blockchain-note.org::*demand mechanism][demand mechanism]]

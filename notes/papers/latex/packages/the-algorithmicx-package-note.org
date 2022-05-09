@@ -1,0 +1,14 @@
+#+TITLE: The Algorithmicx Package Note
+
+* The Algorithmicx Package
+:PROPERTIES:
+:NOTER_DOCUMENT: /home/awannaphasch2016/org/papers/the-algorithmicx-package.pdf
+:ID:       69219c17-d19e-48c7-afe1-1f7019c03f47
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithmicx-package.pdf::4++9.39]]
+:END:
+#+begin_src latex :tangle scratch.tex
+\begin{algorithmic}[lines]
+  \algrenewcommand{\algorithmiccomment[1]{\hskip3em$\rightarrow$ # 1}}
+  \State x \rightarrow x + 1
+\end{algorithmic}
+#+end_src

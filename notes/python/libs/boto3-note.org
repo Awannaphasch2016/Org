@@ -1,0 +1,879 @@
+#+TITLE: Boto3 Note
+#+filetags: boto3
+
+* Example :example:
+** kinesis :kinesis:
+*** using kinesis to capture twitter stream
+:PROPERTIES:
+:ID:       a132db11-04f1-4fae-9449-6b239aa49035
+:END:
+In =twitter-firehose.py=, put the following code.
+#+BEGIN_SRC python
+import boto3
+import json
+from datetime import datetime
+import calendar
+import random
+import time
+import sys
+from tweepy.streaming import StreamListener
+from tweepy import OAuthHandler
+from tweepy import Stream
+
+#Variables that contains the user credentials to access Twitter API
+consumer_key = ''
+consumer_secret =''
+access_token = ''
+access_token_secret = ''
+
+
+class TweetStreamListener(StreamListener):
+    # on success
+    def on_data(self, data):
+        tweet = json.loads(data)
+        try:
+            if 'text' in tweet.keys():
+                #print (tweet['text'])
+                # message = str(tweet)+',\n'
+                message = json.dumps(tweet)
+                message = message + ",\n"
+                print(message)
+                kinesis_client.put_record(
+                    DeliveryStreamName=stream_name,
+                    Record={
+                    'Data': message
+                    }
+                )
+        except (AttributeError, Exception) as e:
+                print (e)
+        return True
+
+    # on failure
+    def on_error(self, status):
+        print(status)
+
+
+stream_name = ''  # fill the name of Kinesis data stream you created
+
+if __name__ == '__main__':
+    # create kinesis client connection
+    kinesis_client = boto3.client('firehose',
+                                  region_name='',  # enter the region
+                                  aws_access_key_id='',  # fill your AWS access key id
+                                  aws_secret_access_key='')  # fill you aws secret access key
+    # create instance of the tweepy tweet stream listener
+    listener = TweetStreamListener()
+    # set twitter keys/tokens
+    auth = OAuthHandler(consumer_key, consumer_secret)
+    auth.set_access_token(access_token, access_token_secret)
+    # create instance of the tweepy stream
+    stream = Stream(auth, listener)
+    # search twitter for tags or keywords from cli parameters
+    query = sys.argv[1:] # list of CLI arguments
+    query_fname = ' '.join(query) # string
+    stream.filter(track=query)
+#+END_SRC
+
+In =twitter-kinesis.py= put the following code.
+#+BEGIN_SRC python
+import boto3
+import json
+from datetime import datetime
+import calendar
+import random
+import time
+import sys
+from tweepy.streaming import StreamListener
+from tweepy import OAuthHandler
+from tweepy import Stream
+
+#Variables that contains the user credentials to access Twitter API
+consumer_key = ''
+consumer_secret =''
+access_token = ''
+access_token_secret = ''
+
+
+class TweetStreamListener(StreamListener):
+    # on success
+    def on_data(self, data):
+        # decode json
+        tweet = json.loads(data)
+        # print(tweet)
+        if "text" in tweet.keys():
+            payload = {'id': str(tweet['id']),
+                                  'tweet': str(tweet['text'].encode('utf8', 'replace')),
+                                  'ts': str(tweet['created_at']),
+            },
+            print(payload)
+            try:
+                put_response = kinesis_client.put_record(
+                                StreamName=stream_name,
+                                Data=json.dumps(payload),
+                                PartitionKey=str(tweet['user']['screen_name']))
+            except (AttributeError, Exception) as e:
+                print (e)
+                pass
+        return True
+
+    # on failure
+    def on_error(self, status):
+        print(status)
+
+
+stream_name = ''  # fill the name of Kinesis data stream you created
+
+if __name__ == '__main__':
+    # create kinesis client connection
+    kinesis_client = boto3.client('kinesis',
+                                  region_name='',  # enter the region
+                                  aws_access_key_id='',  # fill your AWS access key id
+                                  aws_secret_access_key='')  # fill you aws secret access key
+    # create instance of the tweepy tweet stream listener
+    listener = TweetStreamListener()
+    # set twitter keys/tokens
+    auth = OAuthHandler(consumer_key, consumer_secret)
+    auth.set_access_token(access_token, access_token_secret)
+    # create instance of the tweepy stream
+    stream = Stream(auth, listener)
+    # search twitter for tags or keywords from cli parameters
+    query = sys.argv[1:] # list of CLI arguments
+    query_fname = ' '.join(query) # string
+    stream.filter(track=query)
+#+END_SRC
+
+** S3 :s3:
+*** using s3 select
+:PROPERTIES:
+:ID:       44a85aeb-fd31-4a12-9658-46d0f9110c20
+:END:
+#+BEGIN_SRC python
+import boto3
+s3 = boto3.client('s3')
+
+# bucket = 'faucrawler'
+# key = 'Data/RedditCrawler/corona/corona_countries/comment/data/after_date=2020-08-18_to_2020-08-21.pickle'
+
+bucket = 'testbasketwithboto'
+key = 'random_int_list'
+
+
+r = s3.select_object_content(
+        Bucket=bucket,
+        Key=key,
+        ExpressionType='SQL',
+        Expression="select count(*) from s3object s ",
+        InputSerialization={'CSV': {"FileHeaderInfo": "Use"}},
+        OutputSerialization={'CSV': {}},
+)
+
+
+for event in r['Payload']:
+    if 'Records' in event:
+        records = event['Records']['Payload'].decode('utf-8')
+        print(records)
+    elif 'Stats' in event:
+        statsDetails = event['Stats']['Details']
+        print("Stats details bytesScanned: ")
+        print(statsDetails['BytesScanned'])
+        print("Stats details bytesProcessed: ")
+        print(statsDetails['BytesProcessed'])
+    else:
+        print('nothing')
+#+END_SRC
+*** running query using AWS Athena on AWS s3
+demo_code's reference: https://gist.github.com/EdwardJRoss/66561eb91049d9838db71403bd07c950
+example_code.py
+#+BEGIN_SRC python
+import boto3                                    # python library to interface with S3 and athena.
+
+s3 = boto3.resource('s3')                       # Passing resource as s3
+client = boto3.client('athena')                 # and client as athena
+
+database = 'database_name'                      # Data base name
+s3_output = 's3://query-results-bucket/output_folder/'  # output location
+query=""" create external table data_base_name.table1 (
+'ID' Int,
+'Name' string,
+'Address' string)
+Location "s3://query-results-bucket/input_folder/";
+"""
+
+response = client.start_query_execution(QueryString=query,QueryExecutionContext={  'Database': database},
+                         ResultConfiguration={ 'OutputLocation': s3_output})
+#+END_SRC
+
+demo_code.py
+#+BEGIN_SRC python
+#!/usr/bin/env python
+"""Exploring different ways to fetch data from Athena"""
+from decimal import Decimal
+import codecs
+import datetime
+import random
+import string
+from urllib.parse import urlparse
+import pytz
+from boto3.session import Session
+from pyathena import connect
+import fastavro
+
+################################################################################
+## S3 Functions
+################################################################################
+
+def get_bucket_key(s3_path):
+    """Returns bucket name, key from s3_path of form s3://bucket/key"""
+    url = urlparse(s3_path)
+    if url.scheme != 's3':
+        raise ValueError(f'Unexpected scheme {url.scheme} in {s3_path}; expected s3')
+    return url.netloc, url.path.lstrip('/')
+
+
+def s3_stream(s3_location):
+    """Returns a stream of data from s3_location"""
+    # TODO: Pass Session/client arguments?
+    s3_client = Session().client('s3')
+    bucket_name, bucket_key = get_bucket_key(s3_location)
+    obj = s3_client.get_object(Bucket=bucket_name, Key=bucket_key)
+    # TODO: Chunk size?
+    return obj["Body"]
+
+
+# Assumes have a "sandbox" schema that can be written to
+def _temp_table_name(name_length=10, name_prefix="sandbox.temp_"):
+    """Generate a random string of fixed length """
+    letters = string.ascii_lowercase
+    return name_prefix + "".join(random.choices(letters, k=name_length))
+
+################################################################################
+## Athena CSV Parser
+################################################################################
+
+def _athena_iso8601_date(s):
+    return datetime.datetime.strptime(s, "%Y-%m-%d").date()
+
+def _athena_iso8601_datetime(s):
+    return datetime.datetime.strptime(s, "%Y-%m-%d %H:%M:%S.%f")
+
+def _athena_binary(s):
+    return codecs.decode(s.replace(" ", ""), "hex")
+
+def _athena_decimal(s):
+    return Decimal(s)
+
+
+_TYPE_MAPPINGS = {
+    "boolean": bool,
+    "real": float,
+    "float": float,
+    "double": float,
+    "tinyint": int,
+    "smallint": int,
+    "integer": int,
+    "bigint": int,
+    "decimal": _athena_decimal,
+    "char": str,
+    "varchar": str,
+    "array": str,  # Complex types to str
+    "row": str,  # Complex types to str
+    "varbinary": _athena_binary,
+    "map": str,  # Complex types to str
+    "date": _athena_iso8601_date,
+    "timestamp": _athena_iso8601_datetime,
+    "unknown": str,
+}
+
+def parse_athena_csv(lines, types):
+    """Parse a CSV output by Athena with types from metadata.
+    The CSV query results from Athena are fully quoted, except for nulls which
+    are unquoted. Neither Python's inbuilt CSV reader or Pandas can distinguish
+    the two cases so we roll our own CSV reader.
+    """
+    rows = _athena_parse_csv(lines)
+    type_mappers = [_TYPE_MAPPINGS[dtype] for dtype in types]
+    try:
+        header = next(rows)
+    except StopIteration:
+        raise ValueError("Can't parse header line in CSV")
+    if len(types) != len(header):
+        raise ValueError(f"Have header {len(header)} fields, but {len(types)} types")
+
+    for row in rows:
+        if len(header) != len(row):
+            raise ValueError(f"Got {len(row)} fields, expected {len(header)}")
+        values = [
+            mapper(v) if v is not None else v for mapper, v in zip(type_mappers, row)
+        ]
+        yield dict(zip(header, values))
+
+
+_QUOTE = '"'
+_ENDLINE = "\n"
+_SEP = ","
+def _athena_parse_csv(lines):
+    """Parse a CSV output by Athena
+    Returns nulls for unquoted fields
+    """
+    in_quote = False
+    paired_quote = False
+    chomp = False
+    history = ""
+    last_idx = 0
+    ans = []
+    for line in lines:
+        for idx, char in enumerate(line):
+            if not in_quote:
+                assert char in (
+                    _SEP,
+                    _ENDLINE,
+                    _QUOTE,
+                ), f"Unexpected character {char} outside of field"
+                # Read in nulls; unquoted fields
+                if char in (_SEP, _ENDLINE) and not chomp:
+                    ans.append(None)
+                if char == _QUOTE:
+                    in_quote = True
+                    last_idx = idx + 1
+                elif char == _ENDLINE:
+                    yield ans
+                    ans = []
+                chomp = False
+            else:
+                if char == _QUOTE:
+                    if paired_quote:
+                        paired_quote = False
+                    elif line[idx + 1] == _QUOTE:
+                        paired_quote = True
+                    else:
+                        data = history + line[last_idx:idx]
+                        data = data.replace('""', '"')
+                        ans.append(data)
+                        history = ""
+                        in_quote = False
+                        chomp = True
+                elif char == _ENDLINE:
+                    history += line[last_idx : idx + 1]
+                    last_idx = 0
+    assert not (history or ans), f"Leftover data: {history}, {ans}"
+
+
+################################################################################
+## Athena Helper Functions
+################################################################################
+
+def create_table_as(cursor, table, sql, parameters, with_data=True, **properties):
+    """Create table as the result of sql using parameters.
+    Properties are passed into the CTAS query as per the Athena Documentation.
+    https://docs.aws.amazon.com/athena/latest/ug/create-table-as.html
+    If with_data is False a new empty table with the same schema is created.
+    For example create_table_as("sandbox.test", "select 1", format='parquet')
+    """
+
+    def _format(x):
+        if isinstance(x, str):
+            return f"'{x}'"
+        if isinstance(x, Iterable):
+            return f"ARRAY[{', '.join([_format(xi) for xi in x])}]"
+        return str(x)
+
+    if properties:
+        property_str = (
+            "WITH ( "
+            + ",".join(f"{k} = {_format(v)}" for k, v in properties.items())
+            + " )"
+        )
+    else:
+        property_str = ""
+    ctas = f"""CREATE TABLE {table} {property_str} AS ( {sql} ) WITH {'' if with_data else 'NO'} DATA"""
+    cursor.execute(ctas, parameters)
+
+def drop_table(cursor, table: str) -> None:
+    """Drop table if it exists"""
+    cursor.execute(f"DROP TABLE IF EXISTS {table}")
+    # Could delete S3 data here
+
+def location_table(cursor, table: str):
+    """Returns the external S3 paths of the data in table"""
+    cursor.execute(f'select distinct "$path" from {table}')
+    rows = cursor.fetchall()
+    paths = [row[0] for row in rows]
+    return paths
+
+################################################################################
+## Query Athena
+################################################################################
+
+def query_direct(cursor, sql, parameters=None):
+    """Execute query using cursor and parameters, directly"""
+    cursor.execute(sql, parameters)
+    columns = [desc[0] for desc in cursor.description]
+    while True:
+        row = cursor.fetchone()
+        if row is None:
+            break
+        yield dict(zip(columns, row))
+
+
+def query(cursor, sql, parameters=None):
+    """Execute query using cursor and parameters, using CSV trick"""
+    cursor.execute(sql, parameters)
+    raw_stream = s3_stream(cursor.output_location)
+
+    # This comes from the .metadata file on S3
+    types = [x[1] for x in cursor.description]
+
+    # Stream the data
+    data_stream = codecs.getreader("utf-8")(raw_stream)
+
+    return parse_athena_csv(data_stream, types)
+
+
+def query_avro(cursor, sql, parameters=None):
+    """Execute query using cursor and parameters via avro
+    Query must have all columns named and valid types as for a CTAS statement"""
+    table = _temp_table_name()
+    try:
+        create_table_as(cursor, table, sql, parameters, format="AVRO")
+        for s3_location in location_table(cursor, table):
+            stream = s3_stream(s3_location)
+            # Note: We lose the schema here
+            for row in fastavro.reader(stream):
+                yield row
+    finally:
+        drop_table(cursor, table)
+
+
+
+def test():
+    cursor = connect().cursor()
+
+    print("Test parameter conversion")
+    params = {
+        "bool": True,
+        "int": 4300000000,
+        "float": 1e0,
+        "date": datetime.date(2018, 1, 1),
+        "datetime": datetime.datetime(2008, 9, 15, 3, 4, 5, 324000),
+        "str": "a🔥",
+        "null": None,
+    }
+
+    sql = "select " + ", ".join(f'%({p})s as "{p}"' for p in params)
+
+    q = list(query(cursor, sql, params))
+    assert q[0] == params
+
+    q = list(query_direct(cursor, sql, params))
+    assert q[0] == params
+
+
+    # sql_named = sql.replace('%(null)s', 'cast(%(null)s as varchar)')
+    # q = list(query_avro(cursor, sql_named, params))
+    # # Fails because of https://github.com/laughingman7743/PyAthena/issues/126
+    # assert q[0] == params
+
+    print("Test basic types")
+    sql = """select TRUE as "bool",
+                    4300000000 as "int",
+                    1e0 as "float",
+                    DECIMAL '0.1' as "decimal",
+                    to_utf8('ab') as "binary",
+                    'a🔥' as "string",
+                    DATE '2018-01-01' as "date",
+                    TIMESTAMP '2008-09-15 03:04:05.324' as "timestamp",
+                    cast(NULL as varchar) as "null"
+          """
+
+    result = {
+        'bool': True,
+        'int': 4300000000,
+        'float': 1e0,
+        'decimal': Decimal("0.1"),
+        'binary': b"ab",
+        'string': "a🔥",
+        'date': datetime.date(2018, 1, 1),
+        'timestamp': datetime.datetime(2008, 9, 15, 3, 4, 5, 324000),
+        'null': None,
+    }
+
+    q = list(query_direct(cursor, sql))
+    assert q[0] == result
+
+    q = list(query(cursor, sql))
+    assert q[0] == result
+
+
+    q = list(query_avro(cursor, sql))
+    # Avro includes timezone information, strip it away for test
+    q[0]['timestamp'] = q[0]['timestamp'].replace(tzinfo=None)
+    assert q[0] == result
+
+    print("Test newlines and nulls")
+
+    sql = """SELECT '\n', '\n\n', 'a\nb', '\n\n\n',
+                ',', '\t', '"', '\\', '\\n',
+                '', ' ', 'N/A', 'NULL', '''', NULL"""
+
+    result = ("\n", "\n\n", "a\nb", "\n\n\n", ",", "\t", '"', "\\", "\\n",
+                "", " ", "N/A", "NULL", "'", None,)
+
+    q = list(query_direct(cursor, sql))
+    assert tuple(q[0].values()) == result
+
+    q = list(query(cursor, sql))
+    assert tuple(q[0].values()) == result
+
+    print("Test compound types")
+
+    sql = "select ARRAY[1, 2, 3] as array, CAST(ROW(1, 2.0) AS ROW(x BIGINT, y DOUBLE)) as row, MAP(ARRAY[cast('foo' as varchar), cast('bar' as varchar)], ARRAY[1, 2]) as map"
+
+    result_str = {
+        'array': '[1, 2, 3]',
+        'row': '{x=1, y=2.0}',
+        'map': '{bar=2, foo=1}',
+    }
+
+    result = {
+        'array': [1, 2, 3],
+        'row': {'x': 1, 'y': 2.0},
+        'map': {'bar': 2, 'foo': 1},
+    }
+
+    q = list(query_direct(cursor, sql))
+    assert q[0] == result_str
+
+    q = list(query(cursor, sql))
+    assert q[0] == result_str
+
+
+    q = list(query_avro(cursor, sql))
+    assert q[0] == result
+
+if __name__ == '__main__':
+    test()
+#+END_SRC
+
+utility_code.py
+#+BEGIN_SRC python
+import boto3
+import pandas as pd
+import io
+import re
+import time
+
+params = {
+    'region': 'eu-central-1',
+    'database': 'databasename',
+    'bucket': 'your-bucket-name',
+    'path': 'temp/athena/output',
+    'query': 'SELECT * FROM tablename LIMIT 100'
+}
+
+
+session = boto3.Session()
+
+
+def athena_query(client, params):
+    response = client.start_query_execution(
+        QueryString=params["query"],
+        QueryExecutionContext={
+            'Database': params['database']
+        },
+        ResultConfiguration={
+            'OutputLocation': 's3://' + params['bucket'] + '/' + params['path']
+        }
+    )
+    return response
+
+
+def athena_to_s3(session, params, max_execution=5):
+    client = session.client('athena', region_name=params["region"])
+    execution = athena_query(client, params)
+    execution_id = execution['QueryExecutionId']
+    state = 'RUNNING'
+
+    while (max_execution > 0 and state in ['RUNNING', 'QUEUED']):
+        max_execution = max_execution - 1
+        response = client.get_query_execution(QueryExecutionId=execution_id)
+
+        if 'QueryExecution' in response and \
+                'Status' in response['QueryExecution'] and \
+                'State' in response['QueryExecution']['Status']:
+            state = response['QueryExecution']['Status']['State']
+            if state == 'FAILED':
+                return False
+            elif state == 'SUCCEEDED':
+                s3_path = response['QueryExecution']['ResultConfiguration'][
+                    'OutputLocation']
+                filename = re.findall('.*\/(.*)', s3_path)[0]
+                return filename
+        time.sleep(1)
+
+    return False
+
+# Deletes all files in your path so use carefully!
+def cleanup(session, params):
+    s3 = session.resource('s3')
+    my_bucket = s3.Bucket(params['bucket'])
+    for item in my_bucket.objects.filter(Prefix=params['path']):
+        item.delete()
+
+
+# Query Athena and get the s3 filename as a result
+s3_filename = athena_to_s3(session, params)
+
+# Removes all files from the s3 folder you specified, so be careful
+cleanup(session, params)
+
+#+END_SRC
+*** downlaod file from aws s3
+reference: https://boto3.amazonaws.com/v1/documentation/api/latest/guide/s3-example-download-file.html
+#+BEGIN_SRC python
+import boto3
+
+s3 = boto3.client('s3')
+s3.download_file('BUCKET_NAME', 'OBJECT_NAME', 'FILE_NAME'
+
+'''
+ Like their upload cousins, the download methods are provided by the S3 Client, Bucket, and Object classes, and each class provides identical functionality. Use whichever class is convenient.
+'''
+s3 = boto3.client('s3')
+with open('FILE_NAME', 'wb') as f:
+    s3.download_fileobj('BUCKET_NAME', 'OBJECT_NAME', f)
+#+END_SRC
+*** retrive/set/delete a bucket policy
+retrieve.py
+#+BEGIN_SRC python
+#=====================
+#==Rtrieve a bucket policy
+#=====================
+import boto3
+
+# Retrieve the policy of the specified bucket
+s3 = boto3.client('s3')
+result = s3.get_bucket_policy(Bucket='BUCKET_NAME')
+print(result['Policy'])
+#+END_SRC
+
+set.py
+#+BEGIN_SRC python
+#=====================
+#==Set a bucket policy
+#=====================
+import json
+
+# Create a bucket policy
+bucket_name = 'BUCKET_NAME'
+bucket_policy = {
+    'Version': '2012-10-17',
+    'Statement': [{
+        'Sid': 'AddPerm',
+        'Effect': 'Allow',
+        'Principal': '*',
+        'Action': ['s3:GetObject'],
+        'Resource': f'arn:aws:s3:::{bucket_name}/*'
+    }]
+}
+
+# Convert the policy from JSON dict to string
+bucket_policy = json.dumps(bucket_policy)
+
+# Set the new policy
+s3 = boto3.client('s3')
+s3.put_bucket_policy(Bucket=bucket_name, Policy=bucket_policy)
+
+
+#+END_SRC
+
+delete.py
+#+BEGIN_SRC python
+#=====================
+#==Delete a bucket policy
+#=====================
+s3 = boto3.client('s3')
+s3.delete_bucket_policy(Bucket='BUCKET_NAME')
+#+END_SRC
+*** bucket access control list (ACL)
+reference: https://boto3.amazonaws.com/v1/documentation/api/latest/guide/s3-example-access-permissions.html
+#+BEGIN_SRC python
+import boto3
+
+bucket_name = 'testbasketwithboto'
+
+# Retrieve a bucket's ACL
+s3 = boto3.client('s3')
+result = s3.get_bucket_acl(Bucket=bucket_name)
+print(result)
+#+END_SRC
+*** uploading files to AWS s3
+example.py
+#+BEGIN_SRC python
+import logging
+import os
+import pathlib
+import pickle
+from typing import Any
+from typing import Dict
+
+import boto3
+from botocore.exceptions import ClientError
+
+from global_params import DATA_PATH
+
+
+def upload_file(file_name, bucket, object_name=None, ExtraArgs: Dict =None):
+    """Upload a file to an S3 bucket
+
+    :param file_name: File to upload
+    :param bucket: Bucket to upload to
+    :param object_name: S3 object name. If not specified then file_name is used
+    :return: True if file was uploaded, else False
+    """
+
+    # If S3 object_name was not specified, use file_name
+    if object_name is None:
+        object_name = file_name
+
+    # Upload the file
+    s3_client = boto3.client('s3')
+    try:
+        response = s3_client.upload_file(
+            file_name, bucket, object_name,
+            ExtraArgs=ExtraArgs)
+
+    except ClientError as e:
+        logging.error(e)
+        return False
+
+def save_to_file(content: Any, saved_file: pathlib.Path) -> None:
+    """Save content to specified path."""
+    path = str(pathlib.Path(saved_file).parent)
+
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+    with open(str(saved_file.resolve()), "wb") as f:
+        pickle.dump(content, f)
+        print(f"saved at {f.name}")
+        print()
+
+import random
+random_int_list = random.randint(1,10)
+save_path = DATA_PATH / 'test/random_int_list.pickle'
+save_to_file(random_int_list,save_path)
+
+# The following ExtraArgs setting specifies metadata to attach to the S3 object.
+ExtraAgs_1 = {'Metadata': {'mykey': 'myvalue'}}
+# The following ExtraArgs setting assigns the canned ACL (access control list)
+# value 'public-read' to the S3 object.
+ExtraAgs_2 = {'ACL': 'public-read'}
+# # The ExtraArgs parameter can also be used to set custom or multiple ACLs.
+# ExtraAgs_3 =  \
+#     {
+#         'GrantRead': 'uri="http://acs.amazonaws.com/groups/global/AllUsers"',
+#         'GrantFullControl': 'id="01234567890abcdefg"',
+#     }
+
+ExtraArgs = {**ExtraAgs_1, **ExtraAgs_2,
+             # **ExtraAgs_3,
+             }
+
+bucket_name = 'testbasketwithboto'
+
+upload_file(str(save_path), bucket_name,
+            object_name='random_int_list_with_ExtraAgs',
+            ExtraArgs=ExtraArgs)
+
+'''
+The upload_file and upload_fileobj methods are provided by the S3 Client, Bucket, and Object classes. The method functionality provided by each class is identical. No benefits are gained by calling one class's method over another's. Use whichever class is most convenient.
+'''
+s3 = boto3.client('s3')
+with open("FILE_NAME", "rb") as f:
+    s3.upload_fileobj(f, "BUCKET_NAME", "OBJECT_NAME")
+
+#+END_SRC
+
+call_back_example.py
+#+BEGIN_SRC python
+import os
+import sys
+import threading
+
+class ProgressPercentage(object):
+
+    def __init__(self, filename):
+        self._filename = filename
+        self._size = float(os.path.getsize(filename))
+        self._seen_so_far = 0
+        self._lock = threading.Lock()
+
+    def __call__(self, bytes_amount):
+        # To simplify, assume this is hooked up to a single filename
+        with self._lock:
+            self._seen_so_far += bytes_amount
+            percentage = (self._seen_so_far / self._size) * 100
+            sys.stdout.write(
+                "\r%s  %s / %s  (%.2f%%)" % (
+                    self._filename, self._seen_so_far, self._size,
+                    percentage))
+            sys.stdout.flush()
+
+s3.upload_file(
+    'FILE_NAME', 'BUCKET_NAME', 'OBJECT_NAME',
+    Callback=ProgressPercentage('FILE_NAME')
+)
+#+END_SRC
+*** create new bucket in AWS S3
+reference: https://boto3.amazonaws.com/v1/documentation/api/latest/guide/s3-example-creating-buckets.html
+#+BEGIN_SRC python
+import logging
+import boto3
+from botocore.exceptions import ClientError
+
+
+def create_bucket(bucket_name, region=None):
+    """Create an S3 bucket in a specified region
+
+    If a region is not specified, the bucket is created in the S3 default
+    region (us-east-1).
+
+    :param bucket_name: Bucket to create
+    :param region: String region to create bucket in, e.g., 'us-west-2'
+    :return: True if bucket created, else False
+    """
+
+    # Create bucket
+    try:
+        if region is None:
+            s3_client = boto3.client('s3')
+            s3_client.create_bucket(Bucket=bucket_name)
+        else:
+            s3_client = boto3.client('s3', region_name=region)
+            location = {'LocationConstraint': region}
+            s3_client.create_bucket(Bucket=bucket_name,
+                                    CreateBucketConfiguration=location)
+    except ClientError as e:
+        logging.error(e)
+        return False
+
+    return True
+
+create_bucket("testbasketwithboto")
+
+#+END_SRC
+*** list all buckets in AWS S3
+reference: https://boto3.amazonaws.com/v1/documentation/api/latest/guide/s3-example-creating-buckets.html
+#+BEGIN_SRC python
+import boto3
+
+# Retrieve the list of existing buckets
+s3 = boto3.client('s3')
+response = s3.list_buckets()
+
+# Output the bucket names
+print('Existing buckets:')
+for bucket in response['Buckets']:
+    print(f'  {bucket["Name"]}')
+
+#+END_SRC

@@ -1,3 +1,37 @@
 #+TITLE: Functional Programming Note
+#+filetags: functional-programming
+
+* Blog :blog:
+** TODO What is Monads? Understand Monads by Implementing One in Scala. :scala:
+*** Fromal Definition of Mondas
+:PROPERTIES:
+:ID:       c4ce063f-3e36-4166-aeaa-665bb3c54354
+:END:
+#+name: monad's_definition
+#+BEGIN_QUOTE
+Monads is an algebraic pattern that implement a minimal set of monadic combinators and the implementation must obey associative law and identity law.
+#+END_QUOTE
+
+Definition of monads shown in ref:monad's_definition is quoted from chapter 11.2 in the book "Function Programming In Scala" by Paul Chiusano and Runar Bjarnason [[cite:&chiusano2014functional]].
+
+The provided definition is concised, but the book also mentioned in chapter 11.6 the very last sentences that understanding monads come from discovering monads usecases in different context, full quote is shown in ref:understanding_monads_is_by_learning_from_experience.
+
+#+name: understanding_monads_is_by_learning_from_experience
+#+BEGIN_QUOTE
+An abstract topic like this can’t be fully understood all at once. It requires an iterative approach where you keep revisiting the topic from different perspectives. When you discover new monads or new applications of them, or see them appear in a new context, you’ll inevitably gain new insight. And each time it happens, you might think to yourself, “ OK , I thought I understood monads before, but now I really get it.”
+#+END_QUOTE
+
+Definition of monads in ref:monad's_definition are wordy. Words like =algebraic pattern=, =monadic combinators=, and =associative law= and =identity law=. First of I need to come clean that I am no abstract algebra expert, so I will let you find qualify person who can answer what algebraic pattern. Still, knowning abstract algebra is not required to learn functional programming.
+
+According to the book [[cite:&chiusano2014functional]], an instance of monad must implement either of the following monadic combinator sets:
+- =unit= and =flatMap=
+- =unit= and =compose=
+- =unit=, =map=, and =join=
+The book doesn't provide any other explainable beyond that.
+
+The book mentions =identity law= and =associative law= as properties that monads must obey. monads obey =identity law= such that it provide a context for variables to be safely introduced and be substituted without any change in its interface. One can say that monad wraps a variable is isomorphic to the variable it wrapped.
+
+*** Bibliography :ignore:
+bibliography:/home/awannaphasch2016/org/papers/org-mode-bibtex.bib
 
 * Terminologies

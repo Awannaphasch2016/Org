@@ -1,10 +1,13 @@
 #+TITLE: Hugo Notes
 #+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: hugo
+
 
 * blog
 ** how to publish hugo blog with org mode subtree?
 :PROPERTIES:
 :EXPORT_FILE_NAME: how to publish hugo blog with org mode subtree?
+:ID:       0969eb6a-d174-4c54-9d7d-670e48366a9a
 :END:
 
 Prerequisite of this blog assumes that you already setup hugo blog by going through hugo [[https://gohugo.io/getting-started/quick-start/][quick start]] documentation.
@@ -18,7 +21,7 @@ There are few moving components you have to configure to have a seamless workflo
 1. converting org mode to org markdown.
 2. place converted markdown down file to content directory of your hugo site. (e.g. =path-to-hugo-site/hugo/quickstart/content/posts/=)
 
-The goal of these configuration is to let hugo file converter knows base directory of your hugo site directory, and name of the article.
+The goal of these configurations is to let hugo file converter knows base directory of your hugo site directory, and name of the article.
 
 You can set base directory of your hugo site by setting =:hugo_base_dir:= property at the top of your file. It should look like the following, for example,
 #+BEGIN_SRC org
@@ -31,9 +34,9 @@ Now, you are ready to publish your content. You can publish with =org-export-dis
 
 Done!!
 
-One minor inconvenient I want to point out is using this workflow one cannot identify location of the org file from converted markdown files shown in content directory of your hugo site. Because of the first point, everytimes you published the same content, new markdown is created. You have to delete the previous one manually.
+One minor inconvenient I want to point out is using this workflow one cannot identify location of the org file from converted markdown files shown in content directory of your hugo site. Because of the first point, every times you published the same content, new markdown is created. You have to delete the previous one manually.
 
-Slight inconvenient, but miles away from other publiccation workflow I have tried.
+Slight inconvenient, but miles away from other publication workflow I have tried.
 
 Peace out.
 

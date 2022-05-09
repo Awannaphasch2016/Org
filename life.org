@@ -2,21 +2,794 @@
 
 Life.org keeps tracks of things important in mylife.
 
-* Waiting :WAITING:
-* Getting a job
+* Pre made Answer to common Value Qualifying question
+** Tell us a little about yourself: Catch us up on who you are. What do you care about outside of work? What are your hobbies or interests?
+:PROPERTIES:
+:ID:       d08a930a-0624-48a9-a4f8-549427a76db6
+:END:
+I am an internal student from Thailand currently doing PhD students on self-supervised dynamic graph neural network at Florida Atlantic University.
+
+My hobbie is to curate my knowledge base by reading new interesting topics, refine content in my knowledge base (make highlight, write blog, write evergreen notes) and implement interesting application. (e.g https://github.com/danistefanovic/build-your-own-x#build-your-own-git)
+
+Outside of computer stuff, I love studying and experimenting with social dynamic skills such as talking to new group and understand group dynamics, etc. It sounds strange, but, in real like, it looks like friendly conversation.
+
+** Tell us about your professional life:  What was your favorite job? Does your current work life have a nexus to Crypto / Web3?
+:PROPERTIES:
+:ID:       bf9a7efa-5172-4afe-92d0-0fb48004ecc1
+:END:
+I have 3 life long projects:
+1. pen.el (personal assistance for workflow. It is, as of now, we called it emacs 2.0 which is emacs + resembrance agent AI. It uses prompt programming and our own semosis protocol to protect data trained on the language model.)
+
+link to pen.el project (https://github.com/semiosis/pen.el)
+
+2. Garun (a curated shared knowledged base with goal to collaborate on a knowledge work such as research using zettlekastin methods.)
+
+3. expert identification. (algorithm to discover "expert" and weight their opinion such that user can ask question similar to searching google for answer.)
+
+The goal of all of these projects are beyond my personal benefit. I genuinely want others to benefit from these projects. I don't think I have enough time in a day to move each project forward, so the only hope is to establish passionate community and work together to make them happen.
+
+Until recently, after observing blockchain ecosystem from outside, I started to understand DAO concepts. I am convinced that to move any of these projects forward. I need to first find a community that have shared interest. My first stop is FWB.
+
+Of course, there are more fundamental benefit of DAO like owning what you have contributed and socialize with blockchain enthusiastic people that attracts me.
+
+No one around me is interested in web3, blockchain, and AI. So, my only hope is to connect with alike people online. By learning from successful project like FWB, I hope to build DAO community for
+1. my own university, FAU
+2. Boca Raton City.
+3. Thailands
+** What can you bring to FWB? This could be skill, and expertise, a unique perspective, etc
+My main expertise is in graph-based machine learning engineer and artificial intelligence. I use Pytorch framework for deep learning.
+
+I code in Python, JavaScript, Lisp, Scala, and Solidity.
+I am open to learn other languages if it is required for a tasks.
+
+I know DevOps tools like Terraform, Docker.
+
+I occasionally use AWS as my main cloud services.
+
+I am using Window and WSL2 (Ubuntu) as my main operating system.
+
+Because I use Emacs, I learn about system configuration.
+
+I write alot because I constantly refine my thought in my knowledgebase. This doesn't mean my writing is good, but I am striving to be a better writer. Still, it is good enough to convey my message to reader, so if there are writing tasks, I love to help out.
+
+I can write in latex, org, and markdown.
+
+I am not sure what "a unique perspective" could mean in the case of FWB. I am no blockchain expert. I want to be one. I see lots of things that decentralize mechanism like blockchain can fix. I am sure with my skill set and unique view of the world I can be a high value member of the community.
+* Personal responsibility :personalresponsibility:
+:PROPERTIES:
+:ID:       941f4139-84b6-4f6c-9194-225b1b995175
+:END:
+** Special dates
+:PROPERTIES:
+:CATEGORY: Spacial Date
+:END:
+*** Birthdays
+**** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+**** Notes :note:
+**** Meeting :meeting:
+**** Schedule
+***** recurring :recurring:
+***** non-recurring :nonrecurring:
+**** Delegation :waiting:
+**** Tasks
+***** actionable :actionable:
+***** incubation :incubation:
+*** Anniversaries
+**** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+**** Notes :note:
+**** Meeting :meeting:
+**** Schedule
+***** recurring :recurring:
+***** non-recurring :nonrecurring:
+**** Delegation :waiting:
+**** Tasks
+***** actionable :actionable:
+***** incubation :incubation:
+*** Events
+**** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+**** Notes :note:
+**** Meeting :meeting:
+**** Schedule
+***** recurring :recurring:
+***** non-recurring :nonrecurring:
+**** Delegation :waiting:
+**** Tasks
+***** actionable :actionable:
+***** incubation :incubation:
+
+** Health and recreation :health:
+:PROPERTIES:
+:CATEGORY: Health
+:END:
+*** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+*** Notes :note:
+*** Meeting :meeting:
+*** Schedule
+**** recurring :recurring:
+**** non-recurring :nonrecurring:
+*** Delegation :waiting:
+*** Tasks
+**** actionable :actionable:
+***** TODO schedule time to check my eye and get a new lense of my glasses.
+:PROPERTIES:
+:ID:       58a8febe-ad2b-4a01-bc2e-9c08bb867c4d
+:END:
+:LOGBOOK:
+- State "TODO"       from "WAITING"    [2022-03-03 Thu 03:45]
+- State "WAITING"    from "TODO"       [2022-02-26 Sat 16:52] \\
+  check my student insurance whether it support or not.
+CLOCK: [2022-02-26 Sat 16:50]--[2022-02-26 Sat 16:51] =>  0:01
+:END:
+[2022-02-26 Sat 16:50]
+[[file:~/.doom.d/config.org::*Org Mode][Org Mode]]
+***** TODO schedule time to get my teeth check up.
+:PROPERTIES:
+:ID:       d559d97b-1cdf-4864-a156-7f0e6baa7eac
+:END:
+:LOGBOOK:
+- State "TODO"       from "WAITING"    [2022-03-03 Thu 03:46]
+- State "WAITING"    from "TODO"       [2022-02-26 Sat 16:51] \\
+  check my student insurance whether it support or not.
+CLOCK: [2022-02-26 Sat 16:51]--[2022-02-26 Sat 16:52] =>  0:01
+:END:
+[2022-02-26 Sat 16:51]
+[[file:~/.doom.d/config.org::*Org Mode][Org Mode]]
+**** incubation :incubation:
+** House maintenance :house:
+:PROPERTIES:
+:CATEGORY: Note
+:END:
+*** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+*** Notes :note:
+*** Meeting :meeting:
+*** Schedule
+**** recurring :recurring:
+**** non-recurring :nonrecurring:
+*** Delegation :waiting:
+**** WAITING waiting for 166.96 for electricity from Jared from Jan to March. :WAITING:
+:PROPERTIES:
+:ID:       fa12a493-be8d-4a63-b446-ed5ca1e745fb
+:END:
+:LOGBOOK:
+- State "WAITING"    from "TODO"       [2022-04-19 Tue 14:57]
+CLOCK: [2022-04-19 Tue 14:56]--[2022-04-19 Tue 14:57] =>  0:01
+:END:
+[2022-04-19 Tue 14:56]
+[[file:~/org/life.org::*call At&T and ask them how can I see my history of internet bill of my aprtment][call At&T and ask them how can I see my history of internet bill of my aprtment]]
+
+Total for the apartment from Jan to March: 142.47 + 125.80 + 71.66 = 339.93
+*** Tasks
+**** actionable :actionable:
+***** TODO go to CVS to buy mask for lyft
+****** buy binder for physical legisteration paper.
+The goal is to have separate binder for cars, home, schoo related legisteration, visa, etc.
+****** buy new back brush
+***** TODO figure out what kind of cleaning product I need to buy for toilet. and buy it at cvs :@errand:
+:PROPERTIES:
+:ID:       709f5f19-c457-42c0-8db0-345372f2129a
+:END:
+**** incubation :incubation:
+***** pay for FPL. and ask jared to pay me half.
+[2022-02-24 Thu 23:26]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*]]
+***** clean my couch. (prevent my back from getting rash)
+[2022-02-25 Fri 11:10]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*Entity types that do not have key attributes of their own are called weak entity types. In contrast, regular entity types that do have a key attributewhich include all the examples discussed so farare called strong entity types][Entity types that do not have key attributes of their own are called weak entity types. In contrast, regular entity types that do have a key attributewhich include all the examples discussed so farare called strong entity types]]
+***** talk to community about fixing internet. call AT&T and tell them that my cable is broken. how to fix it? :WAITING:
+:LOGBOOK:
+- State "WAITING"    from "NEXT"       [2022-02-28 Mon 17:10] \\
+  waiting for reply by oaks of boca office to decide on what I need to do and when it can be fixed.
+:END:
+[2022-02-26 Sat 00:35]
+[[file:~/org/todo.org::+FILETAGS: PERSONAL]]
+***** clean my toilet. :@errand:
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 09:49]--[2022-02-22 Tue 09:50] =>  0:01
+:END:
+[2022-02-22 Tue 09:49]
+[[file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/evaluation/sliding_window.py::def evaluate_epoch(self, ensemble_idx, epoch, num_batch_pair, checkpoint_loss):]]
+****** NEXT check if I have all the cleaning product to learn toilet, if not, buy it from cvs.
+** School Registeration + Payment + Student Insurance:school:
+:PROPERTIES:
+:ID:       91fd12c9-7f9b-4091-9ffa-54dce247db16
+:END:
+*** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+*** Notes :note:
+**** FAU Medical Insurance
+You can read about FAU medical insurance [[https://www.fau.edu/global/international/current/health-insurance/][here]].
+***** SHIP Waiver
+According to [[https://mail.google.com/mail/u/0/#inbox/FMfcgzGpFWVVPdztMJqjjtSpbSpFXxWS][this]] email. The SHIP waiver is only for graduate students who have the assistantship and working 20 hours per week on campus. Please check with Graduate College to see if your assistantship also covers 75% of your medical insurance in summer 2022. You can email gabenefits@fau.edu to confirm.
+***** Summer Insurance Coverage based on survey [[https://mail.google.com/mail/u/0/#search/isss%40fau.edu/FMfcgzGpFWVVPdztMJqjjtSpbSpFXxWS][here]].
+Summer Insurance Coverage begin 5/10/22 and end 8/13/22. Total coverage amount is $399.
+*** Meeting :meeting:
+*** Schedule
+**** recurring :recurring:
+***** Summer and Fall application for graudate teaching assitance
+<2022-10-29 Sat .+1y>
+***** Spring application for graudate teaching assitance
+<2022-04-06 Wed .+1y>
+**** non-recurring :nonrecurring:
+*** Delegation :waiting:
+**** WAITING waiting for reply to get answer whether cyber training is free for graduate student, [[https://mail.google.com/mail/u/0/#inbox/FMfcgzGpFWJzDRdplNrBKChvZCkMNTdM][here]] :WAITING:
+:PROPERTIES:
+:ID:       6be1b4b6-23e0-46b2-966e-9e9e60d63f9f
+:END:
+:LOGBOOK:
+- State "WAITING"    from "TODO"       [2022-04-14 Thu 19:19]
+CLOCK: [2022-04-14 Thu 19:18]--[2022-04-14 Thu 19:19] =>  0:01
+:END:
+[2022-04-14 Thu 19:18]
+[[file:~/org/life.org::*refactor and clean up scratch page][refactor and clean up scratch page]]
+
+**** WAITING waiting for respond from registration office about cost of registration for international student. :WAITING:
+:PROPERTIES:
+:ID:       c7ddb8e3-d574-43fc-8612-b556c8b930e0
+:END:
+:LOGBOOK:
+- State "WAITING"    from "TODO"       [2022-04-14 Thu 20:01]
+:END:
+link to email is [[https://mail.google.com/mail/u/0/#sent/QgrcJHsbgZwrgJGsHhbPkvGCVVZrkCTGVnq][here]]
+
+*** Tasks
+**** actionable :actionable:
+***** TODO look for class 2 classes to take during summer.
+:PROPERTIES:
+:ID:       d4f46e6a-700f-43b6-9262-dcd320cf0d39
+:END:
+last check 4/7/2022, there is classes to register.
+***** TODO figure out what I need to graduate from PhD. who do I talk to? what should I read? where do I get information? should I talk to dr zhu?
+:PROPERTIES:
+:ID:       6968e2c4-1015-4fd1-a26c-ca5b04faaf91
+:END:
+:LOGBOOK:
+CLOCK: [2022-02-27 Sun 11:27]--[2022-02-27 Sun 11:28] =>  0:01
+:END:
+[2022-02-27 Sun 11:27]
+[[file:~/org/notes/getting-things-done-gtd-note.org::*Horizontal Focus][Horizontal Focus]]
+***** TODO what does research fellowship mean?
+:PROPERTIES:
+:ID:       d3e7b059-0a71-41c4-9b33-d7f9bdc61edd
+:END:
+[2022-04-11 Mon 15:53]
+[[file:~/org/finance/ledger.org::*3: March][3: March]]
+***** TODO read about FAU medical insurance
+SCHEDULED: <2022-05-05 Thu>
+:PROPERTIES:
+:ID:       2cd02b81-41e2-4bf1-9ae9-b516a0aec03e
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-26 Tue 12:14]--[2022-04-26 Tue 12:15] =>  0:01
+:END:
+[2022-04-26 Tue 12:14]
+[[file:~/org/my-resume.org::*Photo & Tagline][Photo & Tagline]]
+
+see [[ https://www.fau.edu/global/international/current/health-insurance/][here]].
+***** TODO send (if i already send then check it) email to ISS whether I need to register for full credit during summer.
+SCHEDULED: <2022-05-05 Thu>
+:PROPERTIES:
+:ID:       8a7cf706-c3bd-4c3f-91de-2c246f9c0a2f
+:END:
+[2022-04-26 Tue 00:34]
+[[file:~/org/notes/papers/database/anatomy-of-a-database-sytem-note.org::*1. Introduction][1. Introduction]]
+***** TODO responds to mandatory f1 and j1 survey for summer 2022
+SCHEDULED: <2022-05-05 Thu>
+:PROPERTIES:
+:ID:       40a612e0-f36f-4cfe-acfb-4d79d62417a4
+:END:
+[2022-04-25 Mon 15:41]
+[[file:~/org/notes/papers/database/anatomy-of-a-database-sytem-note.org::*5.4.1 Latching in B+-Trees][5.4.1 Latching in B+-Trees]]
+see email [[https://mail.google.com/mail/u/0/#search/isss%40fau.edu/FMfcgzGpFWVVPdztMJqjjtSpbSpFXxWS][here]].
+**** incubation :incubation:
+** Passport and Visa :passport:visa:
+*** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+*** Notes :note:
+*** Meeting :meeting:
+*** Schedule
+**** recurring :recurring:
+**** non-recurring :nonrecurring:
+*** Delegation :waiting:
+*** Tasks
+**** actionable :actionable:
+**** incubation :incubation:
+***** check passport expired date
+:PROPERTIES:
+:ID:       b1907d52-75b7-4327-bcd5-ef0e8da1a77a
+:END:
+** Transportation :transportation:
+*** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+*** Notes :note:
+*** Meeting :meeting:
+*** Schedule
+**** recurring :recurring:
+**** non-recurring :nonrecurring:
+*** Delegation :waiting:
+*** Tasks
+**** actionable :actionable:
+***** TODO plan trip to blockchain event during summer.
+SCHEDULED: <2022-05-05 Thu>
+:PROPERTIES:
+:ID:       f8f81629-614e-4e43-9ac4-d5e584b4b514
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-26 Tue 11:34]--[2022-04-26 Tue 11:48] =>  0:14
+:END:
+[2022-04-26 Tue 11:34]
+[[file:~/.doom.d/config.el::add-to-list 'auto-mode-alist '("\\.dat\\'" . ledger-mode)]]
+States within USA that have active blockchain community are San Francisco, Tampa, and Miami.
+*** incubation :incubation:
+
+**** figure out how to use train
+:PROPERTIES:
+:ID:       df15b904-a122-40d8-9fe0-3a3581f5e26b
+:END:
+:LOGBOOK:
+- State "TODO"       from "CANCELLED"  [2022-05-05 Thu 03:34]
+- State "WAITING"    from "TODO"       [2022-04-19 Tue 18:43] \\
+  waiting for Iyaan to reply, so I can go with Iyann
+:END:
+[2022-04-19 Tue 18:43]
+[[file:~/org/life.org::*Are you a US resident for tax purposes?][Are you a US resident for tax purposes?]]
+** Technolgy, Computer, and Phone maintenance :compute:phone:
+:PROPERTIES:
+:CATEGORY: Task
+:END:
+*** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+*** Notes :note:
+*** Meeting :meeting:
+*** Schedule
+**** recurring :recurring:
+**** non-recurring :nonrecurring:
+*** Delegation :waiting:
+**** WAITING return router to nearest ups or fedex. they will need my 4 digit passcode for me to get my money back. (figure out what I need to send it back then tell jared to drop it off.) :WAITING:
+:PROPERTIES:
+:ID:       139f9012-0d09-4cde-bfd6-eeff44ffe4f5
+:END:
+:LOGBOOK:
+- State "WAITING"    from "TODO"       [2022-04-11 Mon 08:20] \\
+  getting confirmation from jared that he will do it.
+:END:
+[2022-03-16 Wed 17:04]
+[[file:~/org/notes/scala-note.org::*Assign an existing function/method to a function variables][Assign an existing function/method to a function variables]]
+***** TODO figure out how to get the shipping labels
+SCHEDULED: <2022-05-05 Thu>
+find in email about shipping back or other places.
+figure out which box to buy to ship it back.
+*** Tasks
+**** actionable :actionable:
+***** TODO figure out which ipad to buy
+:PROPERTIES:
+:ID:       e6cebd83-1893-44b4-a9eb-6fa03210057f
+:END:
+[2022-04-11 Mon 08:19]
+[[file:~/org/life.org::*incubation][incubation]]
+***** TODO set "call back message" if I missed someone called.
+SCHEDULED: <2022-05-05 Thu>
+:PROPERTIES:
+:ID:       53d5ee34-bd30-44a7-92df-d8d665c9be10
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-12 Tue 13:36]--[2022-04-12 Tue 14:16] =>  0:40
+CLOCK: [2022-04-12 Tue 13:17]--[2022-04-12 Tue 13:36] =>  0:19
+:END:
+[2022-04-12 Tue 13:17]
+[[file:~/org/PhD.org::*Meeting][Meeting]]
+***** TODO contact At&T and figure out what to do.
+SCHEDULED: <2022-05-05 Thu>
+:PROPERTIES:
+:ID:       13533014-cc8a-4f5f-8d6a-c4588a41f483
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-19 Tue 13:54]--[2022-04-19 Tue 13:55] =>  0:01
+:END:
+[2022-04-19 Tue 13:54]
+[[file:~/org/GTD.org::*Refiling + organizing][Refiling + organizing]]
+**** incubation :incubation:
+:PROPERTIES:
+:ID:       027179b6-92fe-4d41-a0fb-f431498ef9bc
+:END:
+***** setup onedrive for my window. (symlink all my wsl2 content to it. (create a new folder in onedrive base dir named "wsl2." is there a better way?). Once I am done with this. use oneNote todo handwriting stuff + emacs for typing. :emacs:garun:
+:LOGBOOK:
+CLOCK: [2022-02-27 Sun 00:51]--[2022-02-27 Sun 00:55] =>  0:04
+:END:
+[2022-02-27 Sun 00:51]
+***** Install Info Plus to get the history pesist functionality.
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 09:47]--[2022-02-20 Sun 09:49] =>  0:02
+:END:
+[2022-02-20 Sun 09:47]
+***** watch youtube video on how to solve storage problem both on laptop and phone
+:PROPERTIES:
+:ID:       c942b113-6d8b-46fe-bca4-ff40512d7fc8
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-19 Tue 14:00]--[2022-04-19 Tue 14:01] =>  0:01
+:END:
+[2022-04-19 Tue 14:00]
+[[file:~/org/refile.org::*figure out if I can send mail with ups boxes in FAU.][figure out if I can send mail with ups boxes in FAU.]]
+** Vehicle maintenance (e.g. car)
+:PROPERTIES:
+:CATEGORY: Vehicle
+:END:
+*** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+*** Notes :note:
+*** Meeting :meeting:
+*** Schedule
+**** recurring :recurring:
+**** non-recurring :nonrecurring:
+*** Delegation :waiting:
+*** Tasks
+**** actionable :actionable:
+**** incubation :incubation:
+** Keep in Contacts
+*** Shane from Pen.el
+**** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+**** Notes :note:
+**** Meeting :meeting:
+**** Schedule
+***** recurring :recurring:
+***** non-recurring :nonrecurring:
+**** Delegation :waiting:
+**** Tasks
+***** actionable :actionable:
+***** incubation :incubation:
+*** Bigg from thailand
+**** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+**** Notes :note:
+**** Meeting :meeting:
+**** Schedule
+***** recurring :recurring:
+***** non-recurring :nonrecurring:
+**** Delegation :waiting:
+**** Tasks
+***** actionable :actionable:
+***** incubation :incubation:
+****** facetime my friend big from thailand
+[2022-03-03 Thu 03:39]
+[[file:~/org/refile.org::*searching with org-rifle][searching with org-rifle]]
+*** Parents
+**** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+**** Notes :note:
+**** Meeting :meeting:
+**** Schedule
+***** recurring :recurring:
+***** non-recurring :nonrecurring:
+**** Delegation :waiting:
+**** Tasks
+***** actionable :actionable:
+****** TODO read and undersatnd visa and I-20
+SCHEDULED: <2022-05-05 Thu>
+:PROPERTIES:
+:ID:       7007e75b-4259-4d70-8169-572db3964d1d
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-16 Sat 09:49]--[2022-04-16 Sat 09:51] =>  0:02
+:END:
+[2022-04-16 Sat 09:49]
+[[file:~/org/notes/blockchains/blockchain-note.org::*Framework to think about non-fungible token (NFT)?][Framework to think about non-fungible token (NFT)?]]
+ask my mom about how visa and passport is issued?  when do I get to renew by visa? I know that with expired visa, I am still legal because of I-94 and I-20. I know that I-94 is about department-arrival information, but what exactly is I-20 used for? how is I-20 related to visa and password?
+***** incubation :incubation:
+** Errands
+*** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+*** Notes :note:
+*** Meeting :meeting:
+*** Schedule
+**** recurring :recurring:
+**** non-recurring :nonrecurring:
+*** Delegation :waiting:
+*** Tasks
+**** actionable :actionable:
+***** TODO clean my room, clothes, bathroom. fold my clothes. clean dishes
+SCHEDULED: <2022-05-05 Thu>
+:PROPERTIES:
+:ID:       b7372f43-95d8-4502-bf47-861b480ef7b7
+:END:
+:LOGBOOK:
+CLOCK: [2022-05-05 Thu 03:07]--[2022-05-05 Thu 03:25] =>  0:18
+:END:
+[2022-05-05 Thu 03:07]
+[[file:~/org/refile.org::*how much people get paid from writing on mirror.xyz. Can I query data from dune?][how much people get paid from writing on mirror.xyz. Can I query data from dune?]]
+**** incubation :incubation:
+
+* Personal Growth :personalgrowth:
+** Habits :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING: DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+*** NEXT 30 mins of picking actionable task and do them.
+SCHEDULED: <2022-04-20 Wed .+1d>
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: NEXT
+:ID:       9532ad91-6a28-4b1b-8294-d7dfeec4184b
+:END:
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-04-19 Tue 08:42]
+:END:
+*** NEXT refactor and clean up scratch page
+SCHEDULED: <2022-04-21 Thu .+2d>
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: NEXT
+:ID:       9532ad91-6a28-4b1b-8294-d7dfeec4184b
+:END:
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-04-19 Tue 14:17]
+- State "DONE"       from "TODO"       [2022-04-11 Mon 08:22]
+:END:
+*** NEXT check on waiting list. (any that I can take action today?)
+SCHEDULED: <2022-04-20 Wed .+1d>
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: NEXT
+:ID:       9532ad91-6a28-4b1b-8294-d7dfeec4184b
+:END:
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-04-19 Tue 19:50]
+- State "DONE"       from "NEXT"       [2022-04-16 Sat 13:28]
+- State "DONE"       from "NEXT"       [2022-04-14 Thu 19:30]
+- State "DONE"       from "NEXT"       [2022-04-13 Wed 14:58]
+- State "DONE"       from "NEXT"       [2022-04-12 Tue 14:14]
+- State "DONE"       from "TODO"       [2022-04-11 Mon 08:22]
+:END:
+*** NEXT Always buy 1 gallon of water on the way to walking home. Make sure to drink 1 gallon of water daily.
+SCHEDULED: <2022-04-22 Fri .+1d>
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: NEXT
+:END:
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-04-21 Thu 16:06]
+- State "DONE"       from "NEXT"       [2022-04-16 Sat 13:26]
+- State "DONE"       from "NEXT"       [2022-04-15 Fri 19:02]
+- State "DONE"       from "NEXT"       [2022-04-14 Thu 19:30]
+- State "DONE"       from "NEXT"       [2022-04-13 Wed 14:46]
+- State "DONE"       from "NEXT"       [2022-04-12 Tue 14:08]
+- State "DONE"       from "NEXT"       [2022-04-11 Mon 14:36]
+- State "DONE"       from "TODO"       [2022-04-10 Sun 07:53]
+- State "DONE"       from "TODO"       [2022-04-09 Sat 14:39]
+- State "DONE"       from "TODO"       [2022-04-08 Fri 12:42]
+- State "DONE"       from "TODO"       [2022-03-04 Fri 01:08]
+- State "DONE"       from "NEXT"       [2022-03-02 Wed 18:48]
+:END:
+[2022-02-26 Sat 16:57]
+[[file:~/org/todo.org::*Always buy 1 gallon of water on the way to walking home. Make sure to drink 1 gallon of water daily.][Always buy 1 gallon of water on the way to walking home. Make sure to drink 1 gallon of water daily.]]
+*** NEXT 1 hr work on errands tasks :@errand:
+SCHEDULED: <2022-04-20 Wed .+1d>
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: NEXT
+:ID:       f59d3ed2-a21f-417c-9b2a-f5424edcdd0f
+:LAST_REPEAT: [2022-04-19 Tue 18:42]
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-04-19 Tue 18:42]
+CLOCK: [2022-04-19 Tue 10:04]--[2022-04-19 Tue 10:05] =>  0:01
+- State "DONE"       from "NEXT"       [2022-04-14 Thu 20:03]
+- State "DONE"       from "NEXT"       [2022-04-12 Tue 14:14]
+- State "DONE"       from "NEXT"       [2022-04-11 Mon 08:17]
+- State "DONE"       from "NEXT"       [2022-04-10 Sun 21:25]
+:END:
+**** call At&T and ask them how can I see my history of internet bill of my aprtment
+**** fix iphone stoage problem
+:PROPERTIES:
+:ID:       af332a7b-5130-4954-aead-13f6a7f54162
+:END:
+**** Truebill
+***** setup networth
+:PROPERTIES:
+:ID:       616a8799-971e-483c-82a8-21a1fb287af2
+:END:
+***** setup spending budget
+***** cancel recurring subscription
+****** check if statfarm insurance is about car. cancle statefarm insurance.
+****** cancel tradingView
+****** cancel LA fitness
+****** cancel only fans
+****** cancle Amazon Web services.
+****** cancle Uber One
+****** what is security nationdes:billpay ID:security
+****** what is this uncategorized bill: see [[https://mail.google.com/mail/u/0/#inbox/FMfcgzGpFWJwfLwrLPWRFNssDldPXxWW][here]]
+****** what is microsoft in recurring
+****** what is Aw Boca Petroleu on [2022-04-14 Thu]
+****** what is "Checkcard Customercare.co"?
+https://mail.google.com/mail/u/0/#inbox/FMfcgzGpFWLGzfHHSrlrDHlRPqCgSchW
+***** lower At&T bill
+***** check paypay monthly payment statement, see [[https://mail.google.com/mail/u/0/#inbox/FMfcgzGmvpJWPnhrsCbWVxCJbnmmXRQX][here]].
+**** call bank of america
+***** get my credit score
+***** set credit card to my apartment
+**** paypal credit. https://mail.google.com/mail/u/0/#inbox/FMfcgzGmvpGDZHnQXKXdgNRkWWMCpTTh
+***** what is it?
+***** what is the benefit of having this?
+***** should I apply for it?
+
+**** robinhood tax status
+***** read this email ([[https://mail.google.com/mail/u/0/#inbox/FMfcgzGmvnzSHfLCTxsPhKcPxpSnRhhL][here]]) about tax still for my robinhood account.
+:PROPERTIES:
+:ID:       53f8bc9e-c96c-4b34-bd09-3c726cb76dc5
+:END:
+[[file:~/org/life.org::*look for class 2 classes to take during summer.][look for class 2 classes to take during summer.]]
+****** finish filling robinhood tax status confirmation form
+******* Are you a US resident for tax purposes?
+**** figure out a way to use bus to get to living green :@errand:
+:PROPERTIES:
+:ID:       267ae0c3-6490-4512-bd35-924922928887
+:END:
+[2022-04-16 Sat 12:02]
+[[file:~/org/PhD.org::*Habits][Habits]]
+** Notes :note:
+** Meeting :meeting:
+** Schedule
+*** recurring :recurring:
+*** non-recurring :nonrecurring:
+** Delegation :waiting:
+** Tasks
+*** actionable :actionable:
+*** incubation :incubation:
+* Getting a job :job:
+:PROPERTIES:
+:ID:       ec60ddf1-f536-4ed8-aee7-9ff764b8a47a
+:END:
 :LOGBOOK:
 CLOCK: [2022-03-02 Wed 11:28]--[2022-03-02 Wed 12:12] =>  0:44
 :END:
+** Notes :NOTE:
+*** Website to do job search
+**** [[https://angel.co/][angel.co]]
+*** internship
+**** getting credit for internship
+see the following email [[https://mail.google.com/mail/u/0/#inbox/FMfcgzGpFgwWntGSgSwMbJlNQQSmvMXw][Register your internship for credit]] for more inforamtion
+**** getting internship with F1 visa
+- ref
+  - [[https://mail.google.com/mail/u/0/#search/isss%40fau.edu/QgrcJHsTmbWmfNNdRvxMGBcmTcVbzdFrZjG][email reply from isss]]
+Student cant be approved for 2 semesters of CPT per degree.
 
-** TODO watch 1 of the interview to understand how coding interview is structured, so I can prepare each section accordingly
-SCHEDULED: <2022-03-04 Fri>
-** solutions tracking list
+CPT has to be applied per semester basis.
+
+For example, you may apply for CPT, to work off-campus for summer 2022 semester and the earliest you can start working (after approval and new I-20 for CPT) will be May 7th, 2022.
+
+step to apply for CPT
+
+- Student obtains job offer letter (for internship/CPT)  sample letter is attached to the email
+- Student completes CPT workshop/quiz (only required for first time applicants)
+- Student completes CPT application (.pdf fillable form) with necessary signatures (academic department/Career Center); student then uploads completed CPT application form and job offer through the CPT Application E-Form (the .pdf form is linked within the e-form for students to access)
+  - CPT pdf form:
+    - Section 1: completed by student  must indicate purpose of CPT: internship course offered by department for degree credit, research for thesis/dissertation, degree program requires internship experience to graduate (i.e., Honor’s college, Music, Sports Management majors to name a few), or the Career Center IDS 3949 course.
+    - Section 2: Academic department approval  confirm how this internship is integral to the student’s studies  is it required for degree completion yes/no  is the work full-time/part-time
+    - Section 3: Career Center approval (if applicable)  to confirm student has access to register for IDS 3949 and understands the requirements for the course  please email intern@fau.edu to start the CPT process with Career Center
+
+
+Here is CPT website for general information:
+
+https://www.fau.edu/global/international/employment-internship/
+
+** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+*** NEXT 30 mins. Find a company that I want to work for and submit a resume to it.
+SCHEDULED: <2022-05-06 Fri .+1d>
+:PROPERTIES:
+:REPEAT_TO_STATE: NEXT
+:STYLE: habit
+:END:
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-05-05 Thu 02:42]
+:END:
+**** finalize resume.
+** Meeting :MEETING:
+** Schedule
+*** recurring :recurring:
+*** non-recurring :nonrecurring:
+:PROPERTIES:
+:ID:       500d1611-ddd8-4742-ab72-b70757607ab5
+:END:
+** Task
+*** actionable :actionable:
+**** TODO rewrite my resume from scratch using org mode.
+:PROPERTIES:
+:ID:       254fef7d-66a7-4578-8ec8-2063062c56d2
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-04 Fri 18:50]--[2022-03-04 Fri 20:00] =>  1:10
+CLOCK: [2022-03-04 Fri 02:11]--[2022-03-04 Fri 02:49] =>  0:38
+CLOCK: [2022-03-02 Wed 20:54]--[2022-03-02 Wed 21:27] =>  0:33
+CLOCK: [2022-03-02 Wed 19:22]--[2022-03-02 Wed 19:30] =>  0:08
+:END:
+[[https://www.aidanscannell.com/post/org-mode-resume/][Creating a CV/Resume in Org-Mode using LaTeX Template   s]]
+look at this guy resume and replicate: https://github.com/HaoZeke/CV/blob/master/RG_Latest-cv.pdf
+
+**** TODO read about how to get internship as F1 student
+SCHEDULED: <2022-05-05 Thu>
+:PROPERTIES:
+:ID:       89595afa-a7b2-4961-ba57-54d4ca8ab43b
+:END:
+[2022-04-25 Mon 15:39]
+[[file:~/org/notes/papers/database/anatomy-of-a-database-sytem-note.org::*5.4.1 Latching in B+-Trees][5.4.1 Latching in B+-Trees]]
+
+read email [[https://mail.google.com/mail/u/0/#search/isss%40fau.edu/QgrcJHsTmbWmfNNdRvxMGBcmTcVbzdFrZjG][here]].
+*** incubation :incubation:
+**** solutions tracking list
 - note
   - if you can't think of new way to solve the question in 15 mins, look for solutions.
   - make a list of common problme-solving patterns
-*** algorithm interview
+***** algorithm interview
 use space repetition system here.
-*** system design interview
+***** system design interview
 - note
   - interview structure
     - ref
@@ -26,10 +799,66 @@ use space repetition system here.
     - 3. high-level design & key challenges [15 mins]
     - 4. deep dive [15 mins]
   - build 3 real systems to practice
-** NEXT rewrite my resume from scratch using org mode.
-SCHEDULED: <2022-02-27 Sun>
-:LOGBOOK:
-CLOCK: [2022-03-02 Wed 20:54]--[2022-03-02 Wed 21:27] =>  0:33
-CLOCK: [2022-03-02 Wed 19:22]--[2022-03-02 Wed 19:30] =>  0:08
+**** Algorithm, Computer Science & Deverlopers Fundamentals
+:PROPERTIES:
+:ID:       943b63de-68a7-4cdb-804c-038644e1bc59
 :END:
-[[https://www.aidanscannell.com/post/org-mode-resume/][Creating a CV/Resume in Org-Mode using LaTeX Template   s]]
+***** learning from leetcode :algorithms:
+Note: to learn algorithm and new language at the same time for each algorithm, reimplement them in all the language including (rust, javascript, golang, c, c++. python)
+**** plan out how to utilize linked in to be appeared as better propspect to be employed
+:PROPERTIES:
+:ID:       8901d2b7-4fe3-4766-b2c9-3a89acf2fbac
+:END:
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 11:10]--[2022-02-24 Thu 11:12] =>  0:02
+:END:
+[2022-02-24 Thu 11:10]
+[[file:~/org/school.org::*check my exam dates][check my exam dates]]
+
+**** watch 1 of the interview to understand how coding interview is structured, so I can prepare each section accordingly
+**** figure out how often I should post on linkedIn and what content I should tweet about? do research on this.
+**** submit my application to layer3
+:PROPERTIES:
+:ID:       41b0f09a-47bf-4f13-b33a-9d8ba8399063
+:END:
+:LOGBOOK:
+CLOCK: [2022-05-01 Sun 16:46]--[2022-05-01 Sun 16:48] =>  0:02
+:END:
+[2022-05-01 Sun 16:46]
+[[file:~/org/notes/blockchains/decentralized-autonomous-organization-note.org::*Metagovernance][Metagovernance]]
+submit application [[https://airtable.com/shrI9EqN4F8oV1NO1][here]].
+**** analyse jobs that I want to apply using data analyst technique
+:PROPERTIES:
+:ID:       dba4bd8d-13b3-4d73-8f07-9b340f3a68a3
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-26 Tue 12:02]--[2022-04-26 Tue 12:03] =>  0:01
+:END:
+[2022-04-26 Tue 12:02]
+[[file:~/org/my-resume.org::*LaTeX Config][LaTeX Config]]
+* Building online presents
+** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+** Notes :note:
+** Meeting :meeting:
+** Schedule
+*** recurring :recurring:
+*** non-recurring :nonrecurring:
+** Delegation :waiting:
+** Tasks
+*** actionable :actionable:
+**** TODO how much people get paid from writing on mirror.xyz. Can I query data from dune?
+SCHEDULED: <2022-05-05 Thu>
+:PROPERTIES:
+:ID:       a641437a-c4d0-4bda-abc4-ae74a73d7b7e
+:END:
+:LOGBOOK:
+CLOCK: [2022-05-01 Sun 20:48]--[2022-05-01 Sun 20:49] =>  0:01
+:END:
+[2022-05-01 Sun 20:48]
+*** incubation :incubation:
+

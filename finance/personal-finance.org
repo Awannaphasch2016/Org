@@ -5,36 +5,91 @@
 * Personal Finance
 ** Waiting :WAITING:
 ** Habits :habit:
-*** TODO fill in what i have paid for the day into my ledger file.
-SCHEDULED: <2022-03-03 Thu .+1d>
+*** NEXT check bank of america and truebill on spending activity.
+SCHEDULED: <2022-05-07 Sat .+2d>
 :PROPERTIES:
+:LAST_REPEAT: [2022-05-05 Thu 02:42]
+:REPEAT_TO_STATE: NEXT
 :STYLE: habit
-:REPEAT_TO_STATE: TODO
-:LAST_REPEAT: [2022-03-02 Wed 19:07]
+:ID:       188daebf-0001-4eb3-b1ea-31f08176aac2
 :END:
 :LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-05-05 Thu 02:42]
+- State "DONE"       from "NEXT"       [2022-04-19 Tue 14:24]
+- State "DONE"       from "NEXT"       [2022-04-14 Thu 19:43]
+- State "DONE"       from "NEXT"       [2022-04-13 Wed 15:44]
+- State "DONE"       from "NEXT"       [2022-04-13 Wed 15:42]
+- State "DONE"       from "TODO"       [2022-04-11 Mon 15:42]
+- State "DONE"       from "NEXT"       [2022-04-11 Mon 15:41]
+:END:
+*** NEXT fill in what i have paid for the day into my ledger file.
+SCHEDULED: <2022-05-07 Sat .+2d>
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: NEXT
+:LAST_REPEAT: [2022-05-05 Thu 02:43]
+:ID:       cd62b252-e1ad-4ae6-ae79-bd5fe5546396
+:END:
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-05-05 Thu 02:43]
+- State "DONE"       from "NEXT"       [2022-04-19 Tue 14:17]
+- State "DONE"       from "NEXT"       [2022-04-14 Thu 19:43]
+- State "DONE"       from "NEXT"       [2022-04-13 Wed 14:52]
+- State "DONE"       from "NEXT"       [2022-04-12 Tue 14:13]
+- State "DONE"       from "NEXT"       [2022-04-11 Mon 16:14]
+- State "DONE"       from "TODO"       [2022-04-11 Mon 08:13]
+- State "DONE"       from "TODO"       [2022-03-04 Fri 21:48]
 - State "DONE"       from "TODO"       [2022-03-02 Wed 19:07]
+:END:
+**** go through my monthly payment to check if I still pay for my car insurance
+:PROPERTIES:
+:ID:       a5dbb0f9-e298-4369-9393-1da59bcafc9e
 :END:
 ** Questions :QUESTION:
 ** Notes :NOTE:
 ** Tasks
-*** WAITING limit my daily/weekly/monthly budget. :WAITING:
-- State "WAITING"    from "TODO"       [2022-02-26 Sat 16:34] \\
-  I need to setup org ledger properly first. Start by going by a week worth of expenses.
+*** actionable :actionable:
+**** TODO apply for paypal credit :@errand:
+***** read the following email https://mail.google.com/mail/u/0/#inbox/FMfcgzGmvpGDZHnQXKXdgNRkWWMCpTTh
+****** what is paypal credit
+**** TODO make a phone call to bank of america to figure out how to get a credit card. (deliver to my apartment?)
+:PROPERTIES:
+:ID:       524a292e-01c2-46a9-875f-853cccd395f0
+:END:
 :LOGBOOK:
+CLOCK: [2022-03-15 Tue 13:58]--[2022-03-15 Tue 13:59] =>  0:01
+:END:
+[2022-03-15 Tue 13:58]
+[[file:~/org/refile.org::*find emacs package that support emacs speech input][find emacs package that support emacs speech input]]
+**** TODO figure out what is this amazon web service monthly charge. $150 per month.
+:PROPERTIES:
+:ID:       b7dad0cd-7e76-4444-8eb4-a404ac5ac0cd
+:END:
+[2022-03-02 Wed 18:29]
+[[file:~/org/finance/ledger.dat::Expenses:Drinks:Coffee $1.99]]
+
+**** TODO call bank of america to send me credit card. and get paypal credit card.
+SCHEDULED: <2022-05-05 Thu>
+:PROPERTIES:
+:ID:       dc449594-e247-4407-a454-59fddb6638ec
+:END:
+[2022-04-22 Fri 13:38]
+[[file:~/org/notes/finance/portfolio-management-note.org::*create invesetment path toward retiredment][create invesetment path toward retiredment]]
+*** incubation :incubation:
+**** limit my daily/weekly/monthly budget.
+- State "WAITING"    from "TODO"       [2022-02-26 Sat 16:34] \\
+:LOGBOOK:
+- State "TODO"       from "WAITING"    [2022-03-18 Fri 11:31]
 CLOCK: [2022-02-26 Sat 16:33]--[2022-02-26 Sat 16:34] =>  0:01
 :END:
 [2022-02-26 Sat 16:33]
 [[file:~/org/personal-finance.org::*Questions][Questions]]
-*** TODO figure out what is this amazon web service monthly charge. $150 per month.
-SCHEDULED: <2022-03-03 Thu>
-[2022-03-02 Wed 18:29]
-[[file:~/org/finance/ledger.dat::Expenses:Drinks:Coffee $1.99]]
-*** TODO cancle/figure out detail/adjust price all recurring subscription.
+***** I need to setup org ledger properly first. Start by going by a week worth of expenses.
+**** cancle/figure out detail/adjust price all recurring subscription.
 :LOGBOOK:
 CLOCK: [2022-03-02 Wed 18:32]--[2022-03-02 Wed 18:44] =>  0:12
 :END:
 [2022-03-02 Wed 18:32]
 [[file:~/org/finance/ledger.dat::Expenses:Drinks:Coffee $1.99]]
-**** cancle the following: LA fitness onlyfans, trading view, security nationaes: bill pay id: security, patreon, lucid chart, amazon prime.
-**** improve the following pay: AT&T.
+***** cancle the following: LA fitness onlyfans, trading view, security nationaes: bill pay id: security, patreon, lucid chart, amazon prime.
+***** improve the following pay: AT&T.

@@ -32,6 +32,16 @@ CPU (0avgtext+0avgdata 3300maxresident)k
 - ref
   - [[https://tex.stackexchange.com/questions/492093/what-does-kpsewhich-stand-for][What does kpsewhich stand for?]]
 As info kpathsea says (online manual here), Kpathsea is a library for path searching (e.g., for very quickly locating a given .sty file in a set of potentially large TEXMF trees, without doing a recursive directory tree traversal every time a given file is needed; this is important when compiling LaTeX documents using several packages, themselves requiring other packages, possibly various font files, etc.).* Environment variables
+** curl
+note: -d is used when "key" is in the body of json. (as compared to url string query paramter)
+#+BEGIN_SRC sh
+curl -v -X POST \
+  'https://r275xc9bmd.execute-api.us-east-1.amazonaws.com/test/helloworld?name=John&city=Seattle' \
+  -H 'content-type: application/json' \
+  -H 'day: Thursday' \
+  -d '{ "time": "evening" }'
+#+END_SRC
+
 ** list of helper commands
 *** whereis vs which
 =whereis= searches for "possibly useful" files, while =which= only searches for executables.
@@ -51,7 +61,6 @@ whatis whereis
 #+RESULTS:
 | whereis (1)          - locate the binary | source | and manual page files for a command |
 
-
 *** whatis
 provide tldr description of target command.
 #+BEGIN_SRC sh
@@ -61,6 +70,12 @@ whatis which
 #+RESULTS:
 |                                         |
 | which (1)            - locate a command |
+
+* How to
+** create zip file of content in current file
+#+BEGIN_SRC sh
+zip -r zipfolder.zip .
+#+END_SRC
 
 * PS
 - ref

@@ -1,0 +1,9 @@
+#+TITLE: Popup Note
+
+* Keybinding
+:PROPERTIES:
+:ID:       a0f35c8f-cd44-43f7-8ad2-171ca4d7e935
+:END:
+| Commands      | key | doom keys | custom keys | descriptions |
+| +popup/raise  | C-~ |           |             |              |
+| +popup/toggle |     | spc-~     |             |              |

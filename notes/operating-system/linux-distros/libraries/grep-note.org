@@ -1,0 +1,40 @@
+#+TITLE: Grep Note
+
+* FAQs
+:PROPERTIES:
+:ID:       0d5a6fa0-6ee9-4380-bcd4-c91e345a8708
+:END:
+** what is grep LookBehind and LookAhead?
+:PROPERTIES:
+:ID:       98ddfc85-57ab-4296-810f-9c2b2839046b
+:END:
+#+BEGIN_SRC sh :cache yes
+cat ~/Scratches/test.xml
+#+END_SRC
+
+#+RESULTS[f4822178694e08bb9f79baf7917f015d27639a2c]:
+: 0
+
+#+BEGIN_SRC sh :cache yes :results raw
+cat ~/Scratches/test.xml
+#+END_SRC
+
+#+RESULTS[45a02d901870f27e63e05805f9249c34677136bc]:
+
+
+/my/data</path>
+/global/data</paths>
+
+#+BEGIN_SRC sh
+cat ~/Scratches/tmp.py
+#+END_SRC
+
+#+RESULTS:
+|                      |
+|                      |
+| /my/data</path>      |
+| /global/data</paths> |
+|                      |
+|                      |
+| /my/data</path>      |
+| /global/data</paths> |

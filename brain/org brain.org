@@ -1,0 +1,26 @@
+
+
+* org roam
+:PROPERTIES:
+:ID:       dabf13cc-30f0-4036-ab47-da434fd801aa
+:BRAIN_PARENTS: c97bab09-dc03-4a11-a7b4-8d8a25edea10
+:NICKNAMES: roam%20like%20notes
+:BRAIN_EDGE_325924b7-abd0-44b5-aa99-5f561ab5f64a: age title
+:END:
+:RESOURCES:
+- [[https://roamresearch.com/][roam research website]]
+:END:
+
+* org brain
+:PROPERTIES:
+:ID:       778b0a00-7a1c-42fe-94ce-522871ea5ce5
+:BRAIN_PARENTS: 325924b7-abd0-44b5-aa99-5f561ab5f64a c97bab09-dc03-4a11-a7b4-8d8a25edea10
+:END:
+:RESOURCES:
+- [[https://github.com/Kungsgeten/org-brain][org brain github repo]]
+:END:
+
+If I have to be honest here, org brain has more potential than org roam. Its kinda hard to use though.
+
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220308_234001.png]]

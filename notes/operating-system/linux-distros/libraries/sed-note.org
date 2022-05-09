@@ -1,0 +1,14 @@
+#+TITLE: Sed Note
+#+filetags: sed
+
+* Use case
+** convert space separated file to comma separated file
+:PROPERTIES:
+:ID:       20cd2365-fb95-4512-b416-14ebcca08e49
+:END:
+#+BEGIN_SRC sh
+sed -r 's/^\s+//;s/\s+/,/g' -i example1.txt
+#+END_SRC
+where
+-i == inplace
+-r == regex

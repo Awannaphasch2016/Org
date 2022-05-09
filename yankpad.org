@@ -1,0 +1,439 @@
+#+TITLE: Yankpad
+
+* Category 1
+
+** Snippet title
+
+    Here's a text snippet I want to insert.
+
+** Snippet with keybinding                               :last:tag:is:key:o:
+
+    And here's another snippet. This snippet has tags, and the last of these
+    tags should be a key. This will bind the snippet to the key (in this case
+    "o") when first calling yankpad-map.
+
+** expandword: Snippet with keyword expansion
+
+    This snippet has a keyword; "expandword" in this case. If this category is
+    active, and you type the keyword into a buffer and use the "yankpad-expand"
+    command, the keyword will be replaced with this snippet.
+
+** more:expands: Multiple keywords
+
+    A snippet can have more than one keyword. This has both "more" and
+    "expands".
+
+** Regex expands                      :props:
+   :PROPERTIES:
+   :YP_EXPAND_REGEX: number\([[:digit:]]+\)
+   :END:
+
+   If you use the :props: tag the property drawer will not be included in the
+   snippet. Instead the snippet can include information used by Yankpad.
+
+   In this case we have set the property YP_EXPAND_REGEX which can be used instead
+   of the expand keyword. YP_EXPAND_REGEX should be a regular expression, and when
+   you use "yankpad-expand" the regex will be replaced with the snippet.
+
+   The cool thing here is that the entire snippet text is then, before
+   expansion, sent into the Emacs "format" function, with the OBJECTS argument
+   set to the match groups in the regex. %s
+
+   In this example, the "percent s" at the end of the last paragraph will be
+   replaced with the digit matched by the regex. So if I write "number12" and
+   use "yankpad-expand" the "percent s" will be replaced with 12.
+
+* Category 2
+
+  Descriptive lists will be treated as snippets. You can set them to be treated
+  as =abbrev-mode= abbrevs instead, by setting
+  =yankpad-descriptive-list-treatment= to abbrev. If a heading could be
+  considered to be a snippet, add the =snippetlist= tag to ignore the snippet
+  and scan it for descriptive lists instead.
+
+  - name :: Erik Sjöstrand
+  - key :: Typing "key" followed by `yankpad-expand' will insert this snippet.
+
+** Descriptive list example 2                  :snippetlist:
+
+   This heading would normally be considered a snippet, but because of the
+   =:snippetlist:= tag, it is scanned for descriptive lists instead.
+
+   - foo :: bar
+
+** Explaining categories
+
+    This snippet belongs to another category (named =Category 2=). Categories
+    are useful if you need several yankpads, for instance if you're a teacher
+    (like me) working with different courses.
+
+** yasnippet magic
+
+    If you have yasnippet installed (not a requirement), the content in each
+    snippet is actually executed by yasnippet! This means that you could run
+    elisp inside your snippets: `(+ 3 4)` and have handy tab stop fields.
+
+    | Student | Grade |
+    |---------+-------|
+    | $1      | $2    |
+
+    That's pretty handy!
+    $0
+
+** Code snippet examples
+
+    You can organize your snippets inside a category by using subtrees, like
+    this one. Only headings without children are considered as snippets.
+
+*** "Litterate programming" snippet                    :src:
+
+     Tagging a snippet with src says that only the content of source blocks
+     should be expanded. All other text (like this paragraph) is ignored.
+
+     #+BEGIN_SRC emacs-lisp
+     (message "This is part of the snippet")
+     #+END_SRC
+
+     If you have several source blocks, their content will be concatenated.
+
+     #+BEGIN_SRC emacs-lisp
+     (message "This is also part of the snippet!!!")
+     #+END_SRC
+
+*** The source block below will be executed if tag is func :func:
+     #+BEGIN_SRC emacs-lisp
+     ;; Instead of a src-block, the snippet may be named
+     ;; the same as an emacs-lisp function. This will then
+     ;; be executed without arguments (see next example).
+     (elfeed)
+     #+END_SRC
+
+** elfeed                                            :func:e:
+
+* Kitchen sink category
+:PROPERTIES:
+:INCLUDE:  Category 1|Category 2
+:END:
+
+** Include other categories
+
+Snippets from Category 1 and Category 2 will be appended to this category.
+This is done by setting the INCLUDE property of the category. Categories
+are separated by a pipe.
+
+* org-mode
+
+** Major-mode categories
+
+    If you have a category with the same name as a major-mode, that category will be
+    activated when switching major-mode. This only affects the local buffer and does
+    not modify the global category.
+#+BEGIN_SRC python
+hi
+#+END_SRC
+
+* my-projectile-project
+
+** Projectile based categories
+
+    If you have projectile installed (not a requirement) you can give a category
+    the same name as one of your projectile projects. That category will be
+    activated when using projectile-find-file on a file in the project.
+** Global category                                   :global:
+:PROPERTIES:
+:ID:       23a260ef-f91a-4bb5-a28d-1e48b15b01cd
+:END:
+** Always available
+
+    Snippets in a category with the :global: tag are always available for
+    expansion.
+* python-mode
+** pandas :pandas:
+*** Filter multilevel index with list as values
+Goal: Given the dataset, you must filter multilevel index namely 'state' and 'date', whose cells list value have length equal to 7.
+
+#+BEGIN_SRC python
+import pandas as pd
+import pathlib
+
+data_path = '/home/awannaphasch2016/Documents/Working/COVID19TrendPrediction/Data/Raw/COVID19Cases/StateLevels/us-states.csv'
+
+data = pd.read_csv(
+    data_path
+)
+
+df_by_date = pd.DataFrame(
+    data.fillna("NA")
+    .groupby(["state", "date"])["cases"]
+    .sum()
+    .sort_values()
+    .reset_index()
+)
+
+df_by_date['date'] = pd.to_datetime(df_by_date['date'], format='%Y-%m-%d')
+tmp = df_by_date.groupby(['state', pd.Grouper(key="date", freq="1W")])["cases"].apply(list)
+tmp1 = pd.Series.to_frame(tmp,name='node')
+tmp1[tmp1['node'].map(len) == 7 ]
+weekly_inter_node = np.array([i for i in tmp2.iloc[tmp2.index.get_level_values('date') == d]['node'].sort_index().values])
+#+END_SRC
+** visualization
+*** seaborn :seaborn:
+:PROPERTIES:
+:ID:       a34620a4-e0d6-460a-8af1-f391b2a38191
+:END:
+expected output: https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2FAdaptiveGraphStucture%2FFXhHw7bNd8.png?alt=media&token=c93fca9a-9f84-4e3a-ba07-980a698307b6
+
+
+note: numpy with more than 1 types will be automatically convert types of all values to 'object' type therefore, you must remember to convert type of row/colum of numpy array after convering from numpy to pandas.
+
+**** plot graph where x-axis is date.
+:PROPERTIES:
+:ID:       9a669915-e966-4a75-a927-b901037fd5fa
+:END:
+Setup files
+#+BEGIN_SRC python
+"""Correlation of intra-temporal dependencies"""
+
+from Models.Preprocessing import *
+from scipy.stats import  pearsonr
+from itertools import product
+from itertools import permutations
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+data_path = '/home/awannaphasch2016/Documents/Working/COVID19TrendPredictionData/Raw/COVID19Cases/StateLevels/us-states.csv'
+
+n_input = 5
+n_features = 1
+
+data = pd.read_csv(
+    str(BASEPATH / pathlib.Path(data_path))
+)
+
+df_by_date = pd.DataFrame(
+    data.fillna("NA")
+    .groupby(["state", "date"])["cases"]
+    .sum()
+    .sort_values()
+    .reset_index()
+)
+
+df_by_date['date'] = pd.to_datetime(df_by_date['date'], format='%Y-%m-%d')
+tmp = df_by_date.groupby([ pd.Grouper(key="date", freq="1W"), 'state'])["cases"].apply(np.array)
+tmp1 = pd.Series.to_frame(tmp,name='node')
+tmp2 = tmp1[tmp1['node'].map(len) == 7 ]
+date_indices = np.unique(tmp2.index.get_level_values('date'))
+
+weekly_inter_node = []
+for d in date_indices:
+    tmp = np.array([i for i in tmp2.iloc[tmp2.index.get_level_values('date') == d]['node'].sort_index().values])
+    weekly_inter_node.append(tmp)
+
+def corr_plot():
+    week_1 = weekly_inter_node[10]
+    x = week_1
+    clique_edges = list(product(range(x.shape[0]), range(x.shape[0])))
+    clique_edges_ps_corr = []
+    for i,j in clique_edges:
+        clique_edges_ps_corr.append(pearsonr(x[i, :],x[j, :])[0])
+    clique_edges_ps_corr_np = np.array(clique_edges_ps_corr).reshape(x.shape[0], x.shape[0])
+    clique_edges_ps_corr_df = pd.DataFrame(clique_edges_ps_corr_np)
+    plt.matshow(clique_edges_ps_corr_df)
+    cb = plt.colorbar()
+    cb.ax.tick_params(labelsize=14)
+    plt.title('clique pearson matrix')
+    plt.show()
+
+week_1 = weekly_inter_node[10]
+x = week_1
+nodes_permutation_index = list(permutations(range(x.shape[0]), r=2))
+#+END_SRC
+
+code to plot graph with date
+#+BEGIN_SRC python
+from datetime import datetime
+
+weekly_inter_node_ps_corr = []
+for i_, week in enumerate(weekly_inter_node):
+    # print(date_indices[i_])
+    utc = date_indices[i_].astype('<M8[s]').astype(int)
+    utc = datetime.utcfromtimestamp(utc)
+    utc_str = utc.strftime("%m-%d-%y")
+    print(f'week = {i_}: {utc_str}')
+    if week.shape[0] == 55:
+        for n_1,n_2 in nodes_permutation_index:
+            tmp = pearsonr(week[n_1,:], week[n_2,:])[0]
+            # weekly_inter_node_ps_corr.append((utc_str,tmp))
+            weekly_inter_node_ps_corr.append((i_, utc_str, tmp))
+            print(tmp)
+
+weekly_inter_node_ps_corr_np = np.array(weekly_inter_node_ps_corr)
+weekly_inter_node_ps_corr_df = pd.DataFrame(weekly_inter_node_ps_corr_np, columns=['Index','Date', 'Corr'])
+weekly_inter_node_ps_corr_df['DateOfYear'] = pd.to_datetime(weekly_inter_node_ps_corr_df['Date'], format='%m-%d-%y')
+weekly_inter_node_ps_corr_df.set_index('DateOfYear', inplace=True)
+weekly_inter_node_ps_corr_df.index = weekly_inter_node_ps_corr_df.index.dayofyear
+
+import pandas as pd
+import numpy as np
+import seaborn
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(12,5))
+chart = seaborn.boxplot(weekly_inter_node_ps_corr_df['Date'], weekly_inter_node_ps_corr_df['Corr'].values.astype(float), ax=ax)
+chart.set_xticklabels(chart.get_xticklabels(), rotation=45, horizontalalignment='right')
+plt.show()
+#+END_SRC
+* freeguplot
+:PROPERTIES:
+:ID:       2b2b58f3-69e1-4b8b-bf28-f9577a9464ec
+:END:
+** line + dot plot
+   :PROPERTIES:
+   :CUSTOM_ID: line-dot-plot
+   :END:
+
+#+BEGIN_SRC sh
+    seq 5 | awk '{print 2*$1, $1*$1}' | \
+        feedgnuplot --lines --points --legend 0 "data 0" --title "Test plot" --y2 1
+         --unset grid --terminal 'dumb 80,40' --exit
+#+END_SRC
+
+** send plot to stdout
+   :PROPERTIES:
+   :CUSTOM_ID: send-plot-to-stdout
+   :END:
+
+#+BEGIN_SRC sh
+    seq 5 | awk '{print 2*$1, $1*$1}' | feedgnuplot --line --terminal "dumb"
+#+END_SRC
+
+** select column for x-axis with --domain
+   :PROPERTIES:
+   :CUSTOM_ID: select-column-for-x-axis-with-domain
+   :END:
+
+#+BEGIN_SRC sh
+    seq 5 | awk '{print 2*$1, $1*$1}' | feedgnuplot --domain
+#+END_SRC
+
+** basic example
+   :PROPERTIES:
+   :CUSTOM_ID: basic-example
+   :END:
+
+#+BEGIN_SRC sh
+    seq 5 | awk '{print 2*$1, $1*$1}' | feedgnuplot --unset grid
+#+END_SRC
+
+** using vd with feedgnuplot: vd doesn't work as expected.
+   :PROPERTIES:
+   :CUSTOM_ID: using-vd-with-feedgnuplot-vd-doesnt-work-as-expected.
+   :END:
+
+#+BEGIN_SRC sh
+    seq 5 | awk 'BEGIN{print "col1,col2"}{print 2*$1","$1*$1}' | vd --delimiter=',' | feedgnuplot
+#+END_SRC
+
+** plot with error bar.
+   :PROPERTIES:
+   :CUSTOM_ID: plot-with-error-bar.
+   :END:
+
+#+BEGIN_SRC sh
+    echo '  1 2 1.7
+            2 3 2.6
+            3 4 3.5 ' | feedgnuplot --domain --rangesizeall 3 --with 'yerrorbars'
+#+END_SRC
+
+** 3D plot
+   :PROPERTIES:
+   :CUSTOM_ID: d-plot
+   :END:
+
+#+BEGIN_SRC sh
+    echo '1 2 1.7 2.3
+            2 3 2.6 3.4
+            3 4 3.5 4.5' | feedgnuplot --domain --rangesizeall 2 --3d
+
+    ## plot stream data and + datetime format
+    sar 1 -1 |
+      awk '$1 ~ /..:..:../ && $8 ~/^[0-9\.]*$/ {print $1,$8; fflush()}' |
+      feedgnuplot --stream --domain
+                   --lines --timefmt '%H:%M:%S'
+                   --set 'format x "%H:%M:%S"'
+#+END_SRC
+
+** bar plot
+   :PROPERTIES:
+   :CUSTOM_ID: bar-plot
+   :END:
+
+#+BEGIN_SRC sh
+    echo "# x label a b
+           5  aaa   2 1
+           6  bbb   3 2
+          10  ccc   5 4
+          11  ddd   2 1" | \
+    vnl-filter -p label,a,b | \
+    feedgnuplot --vnl \
+                --xticlabels \
+                --set 'style data histogram' \
+                --set 'style histogram rowstacked' \
+                --set 'boxwidth 0.8' \
+                --set 'style fill solid border lt -1' \
+                --autolegend \
+                --ymin 0 --unset grid
+#+END_SRC
+
+** histogram
+   :PROPERTIES:
+   :CUSTOM_ID: histogram
+   :END:
+
+*** histogram 1
+    :PROPERTIES:
+    :CUSTOM_ID: histogram-1
+    :END:
+
+#+BEGIN_SRC sh
+     N=20000;
+     Nsum=10;
+     binwidth=.1;
+     seq $N | \
+     perl -nE '$Nsum = '$Nsum';
+               $var  = '$Nsum' / 3.;
+               $s = 0; for $i (1..$Nsum) { $s += rand()*2-1; }
+               say $s/sqrt($var);' | \
+     feedgnuplot --histo 0 --binwidth $binwidth \
+                 --equation "($N * sqrt(2.*pi) * erf($binwidth/(2.*sqrt(2.)))) * \
+                                   exp(-(x*x)/(2.)) / \
+                                   sqrt(2.*pi) title \"Limit gaussian\" with lines lw 2"
+#+END_SRC
+
+*** historgram 2
+    :PROPERTIES:
+    :CUSTOM_ID: historgram-2
+    :END:
+
+```sh N=20000; binwidth=.1; for Nsum in 1 2 3; do seq $N | \
+ perl -nE '$, = " "; $Nsum = '$Nsum'; $var = '$Nsum' / 3.; $s = 0; for
+$i (1..$Nsum) { $s += rand()/2-1; } say $Nsum,$s/sqrt($var);'; done |\\
+feedgnuplot --dataid --histo 1,2,3 --binwidth $binwidth \
+ --autolegend \
+ --style 1 'with boxes fill transparent solid 0.3 border lt -1' \
+ --style 2 'with boxes fill transparent pattern 4 border lt -1' \
+ --style 3 'with boxes fill transparent pattern 5 border lt -1' \
+ --equation "($N / sqrt(2./pi) / erf($binwidth/(2./sqrt(2.)))) /\\
+exp(-(x/x)/(2.)) /\\
+sqrt(2./pi) title "Limit gaussian" with lines lw 2"
+
+* Default :global:
+** Fallback for major-mode categories
+
+   If you open a file, but have no category named after its major-mode, a
+   category named "Default" will be used instead (if you have it defined in your
+   Yankpad). It is probably a good idea to make this category global. You can
+   change the name of the default category by setting the variable
+   yankpad-default-category.

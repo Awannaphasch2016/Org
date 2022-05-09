@@ -1,0 +1,100 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/awannaphasch2016/org/personal-website.org
+
+
+* Archived Tasks
+
+** CANCELLED migrate all of my notes to blog in jykell. :CANCELLED:
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-18 Fri 11:45
+:ARCHIVE_FILE: ~/org/personal-website.org
+:ARCHIVE_OLPATH: Personal Website/Tasks/incubation/Building website using org mode.
+:ARCHIVE_CATEGORY: personal-website
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: PERSONAL @sideproject mywebsite incubation
+:END:
+- State "CANCELLED"  from "TODO"       [2022-02-26 Sat 12:09] \\
+  I decided to use hugo instead. The reason is simple, I never heard someone use jekll and org mode in the same sentence, but hugo and org mode is heard every where.
+https://orgmode.org/worg/org-tutorials/org-jekyll.html
+
+** DONE Building website using org mode.
+CLOSED: [2022-03-18 Fri 11:45]
+:PROPERTIES:
+:ID:       bdc92e5a-378e-4428-aea8-b3bd6e6fab59
+:ARCHIVE_TIME: 2022-03-18 Fri 11:45
+:ARCHIVE_FILE: ~/org/personal-website.org
+:ARCHIVE_OLPATH: Personal Website/Tasks/incubation
+:ARCHIVE_CATEGORY: personal-website
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: PERSONAL @sideproject mywebsite incubation
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-15 Tue 13:36]--[2022-03-15 Tue 13:48] =>  0:12
+:END:
+- ref
+  - Example of [[https://www.huxiaoxing.com/building-a-website-with-org-mode-files][Personal website that use org mode]].
+  - collection of [[https://orgmode.org/worg/org-web.html][Personal Webiste that use org mode]].
+  - choose website style that I like from [[https://orgmode.org/worg/org-web.html][Personal Websites that use Org mode]], and build mine.
+  - read the following tutorial: https://thackl.github.io/blogging-with-emacs-org-mode-and-jekyll
+- note
+  - my current blog is using jekyll but files are .md not .org.
+  - I started to add org files into my blogs directory without testing whether or not it will work. On top of that, I didn't even follow naming convention which, if I remember correct, are necessary to make jekyll works. Hence, I don't expect it to work, so debug it.
+*** build website with hugo + org mode .
+*** One I get my website running with jekyll or hugo, I need to merge my old blog post and articles. This includes changing file name and directory.
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 10:07]--[2022-02-22 Tue 10:08] =>  0:01
+:END:
+[2022-02-22 Tue 10:07]
+
+** DONE migrate content located at jykell dir to hugo dir. :mywebsite:
+CLOSED: [2022-03-18 Fri 11:45]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-18 Fri 11:45
+:ARCHIVE_FILE: ~/org/personal-website.org
+:ARCHIVE_OLPATH: Personal Website/Tasks/incubation
+:ARCHIVE_CATEGORY: personal-website
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: PERSONAL @sideproject incubation
+:END:
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 19:01]--[2022-02-26 Sat 19:11] =>  0:10
+:END:
+[2022-02-26 Sat 19:01]
+[[file:~/org/projects/sideprojects/website/my-website/hugo/quickstart/content/posts/hugo.md][file:~/org/projects/sideprojects/website/my-website/hugo/quickstart/content/posts/hugo.md]]
+
+** CANCELLED read my blogging set with Emacs, Org mode, ox-hugo, Hugo, Gitlab, and Netlify :READ:website: :LOGBOOK:CANCELLED:
+CLOSED: [2022-03-18 Fri 11:45]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-18 Fri 11:46
+:ARCHIVE_FILE: ~/org/personal-website.org
+:ARCHIVE_OLPATH: Personal Website/Tasks/incubation
+:ARCHIVE_CATEGORY: personal-website
+:ARCHIVE_TODO: CANCELLED
+:ARCHIVE_ITAGS: PERSONAL @sideproject mywebsite incubation
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from "TODO"       [2022-03-18 Fri 11:45] \\
+  I already finish building my blog, so no need to read
+:END:
+CLOCK: [2022-02-26 Sat 19:13]--[2022-02-26 Sat 19:14] =>  0:01
+:END:
+[2022-02-26 Sat 19:13]
+[[file:~/org/projects/sideprojects/website/my-website/hugo/quickstart/config.toml][file:~/org/projects/sideprojects/website/my-website/hugo/quickstart/config.toml]]
+
+** DONE write blog about how latex works, and how to use latex and debug it.
+CLOSED: [2022-03-18 Fri 11:46]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-18 Fri 11:46
+:ARCHIVE_FILE: ~/org/personal-website.org
+:ARCHIVE_OLPATH: Personal Website/Tasks/incubation
+:ARCHIVE_CATEGORY: personal-website
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: PERSONAL @sideproject mywebsite incubation
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-03 Thu 13:00]--[2022-03-03 Thu 13:01] =>  0:01
+:END:
+[2022-03-03 Thu 13:00]
+[[file:~/org/my-resume.org::*LaTeX Config][LaTeX Config]]

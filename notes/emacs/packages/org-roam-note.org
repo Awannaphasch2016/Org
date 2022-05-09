@@ -1,6 +1,9 @@
 #+TITLE: Org Roam Note
 
 * key binding
+:PROPERTIES:
+:ID:       985d1dab-8ceb-4916-b84d-547233072a18
+:END:
 | commands                          | key | doom keys | custom keys | descriptions   |
 | org-id-get-create                 |     | spc-m-I   |             | create node id |
 | org-roam-node-insert              |     | spc-n-r-i |             |                |
@@ -16,6 +19,9 @@
 | variables          | descriptions |
 | org-roam-directory |              |
 *** commands and functions
+:PROPERTIES:
+:ID:       2e925391-49d5-42a9-a101-4e7f7302ef7e
+:END:
 | commands                  | descriptions |
 | org-roam-db-autosync-mode |              |
 | completion-at-point       |              |

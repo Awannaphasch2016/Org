@@ -1,6 +1,19 @@
 #+TITLE: Books to read
 
+* Incubation
+:PROPERTIES:
+:ID:       62aca32b-d4e3-4ceb-b2cf-c264fc9829c1
+:END:
+
+**  download "forecasting principles and practice" for time series analysi
+:PROPERTIES:
+:ID:       2b7415d5-4260-4afa-a064-63b75187cd2b
+:END:
+[2022-03-14 Mon 02:48]
+[[file:~/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/main.org::*explains when sliding window should be used][explains when sliding window should be used]]
 * Recommended
+** [[https://breakingsmart.com/en/season-1/][Breaking Smart]]
+An in-depth exploration (~30k words) of how software is eating the world, based on research supported by Andreessen-Horowitz in 2014. The essays are free to read online.
 ** A Survival Guide for New consultants
 Mentioned in Learning Functional Programming in Scala.
 ** History books
@@ -22,6 +35,33 @@ Mentioned in Learning Functional Programming in Scala.
 **** Functional Reactive Programming
 ***** Reactive Programming in the Netflix API with RxJava
 Mentioned in Learning Functional Programming in Scala.
-*** TODO reading [[https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-4.html][Structure and Interpretation of Computer Programs]]
-**** NEXT reading [[https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-4.html][Structure and Interpretation of Computer Programs]] stopped [[https://sicp.sourceacademy.org/chapters/1.1.html][here]]
-*** TODO Read [[https://youtu.be/FihU5JxmnBg?t=2779][Why Programs Fails a guide to systematic debugging]] (read chapters 5-7, 11-14)
+*** reading [[https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-4.html][Structure and Interpretation of Computer Programs]]
+**** reading [[https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-4.html][Structure and Interpretation of Computer Programs]] stopped [[https://sicp.sourceacademy.org/chapters/1.1.html][here]]
+:PROPERTIES:
+:ID:       a84d438a-ac8d-4202-bf70-b01e2c1ea1a8
+:END:
+*** Read [[https://youtu.be/FihU5JxmnBg?t=2779][Why Programs Fails a guide to systematic debugging]] (read chapters 5-7, 11-14)
+:PROPERTIES:
+:ID:       7e525176-5957-4e89-9558-21c3bd57bdb8
+:END:
+** Financial
+*** recommended by Patrick Boyle
+**** Burton Malkiel, A Random Walk Down Wall Street (2007) https://amzn.to/2Hr2SW1
+**** Roger Lowenstein, Buffett: The Making of an American Capitalist (2008) https://amzn.to/3hUkFl6
+**** Jack Schwager, Market Wizards Series https://amzn.to/3a89diH
+**** Jack Schwager, Market Sense And Nonsense (2013) https://amzn.to/3jerS0Z
+**** Nassim Nicholas Taleb, Fooled By Randomness (2007) https://amzn.to/365wN08
+**** Victor Niederhoffer, Education of a Speculator (1998) https://amzn.to/2EuhMJZ
+**** Victor Niederhoffer, Practical Speculation (2004) https://amzn.to/2Hr3nzn
+**** Dimson, E., Marsh, P., and M. Staunton, Triumph of the Optimists: 101 Years of Global Investment Returns (2002) https://amzn.to/363JWXG
+**** Roger Lowenstein, When Genius Failed (2001) https://amzn.to/364aHv7
+**** Ivan Boesky, Merger Mania (1985) https://amzn.to/3crKszQ
+**** Howard Marks, The Most Important Thing  (2011) https://amzn.to/30n89EX
+**** Frank Partnoy, F.I.A.S.C.O. (1999) https://amzn.to/366gGj4
+**** Michael Lewis, Liars Poker (1989)   -  The Big Short (2010) https://amzn.to/3mPjhE1
+**** Gregory Zuckerman, The Man Who Solved the Market (2019) https://amzn.to/2FVOZi8
+*** Essential for Hedge fund
+**** [[https://www.streetofwalls.com/finance-training-courses/hedge-fund-training/hedge-fund-books/][hedge funds books]]
+:PROPERTIES:
+:ID:       67cf410f-2305-4d6e-8244-cb65f467707d
+:END:

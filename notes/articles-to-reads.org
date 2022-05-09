@@ -1,6 +1,166 @@
 #+TITLE: Articles To Read
 #+FILETAGS: LEARN read article
 
+* Incubation (to categorize article to read.)
+:PROPERTIES:
+:ID:       153fe617-875c-4802-a17e-a3aae1006c6e
+:END:
+** Amazing blogs or articles to boarden knowledge away from my responsibility :)
+:PROPERTIES:
+:ID:       5f9fa2aa-7920-42d3-8c5f-b4b586013aad
+:END:
+[[https://eli.thegreenplace.net/archives/all][Eli Bendersky's website]]
+[[https://www.gwern.net/index][Gwern Branwen]]
+**  read https://opensource.com/article/20/3/variables-emacs
+:PROPERTIES:
+:ID:       f6ac067f-6f17-4cfb-af0b-a91f5c550ff9
+:END:
+[2022-03-10 Thu 00:43]
+**  read https://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/
+:PROPERTIES:
+:ID:       83f4f54e-9892-4198-a51d-2a46d2212530
+:END:
+[2022-03-10 Thu 03:18]
+[[file:~/.emacs.d/modules/checkers/grammar/README.org::*Prerequisites][Prerequisites]]
+**  read https://stackoverflow.com/questions/48976079/how-to-transfer-files-with-tramp-using-scp-or-rsync
+:PROPERTIES:
+:ID:       aa471003-03bf-4650-97f0-666042d7fe2c
+:END:
+[2022-03-10 Thu 05:51]
+[[file:~/.emacs.d/modules/tools/biblio/README.org::*Description][Description]]
+**  read zotero beginner tutorial. https://libguides.unm.edu/Zotero/Import
+:PROPERTIES:
+:ID:       71ae7dc0-eb44-4e27-bc03-665a4e6889ae
+:END:
+[2022-03-10 Thu 11:40]
+[[file:~/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/main.org::*Introduction][Introduction]]
+**  understand completion ecosystem in emacs.
+:PROPERTIES:
+:ID:       8656d2b7-815b-408c-9c1d-44ee784a223e
+:END:
+[2022-03-10 Thu 11:41]
+[[file:~/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/main.org::*Introduction][Introduction]]
+
+[[https://github.com/clemera/helm-ido-like-guide][helm-ido-like-guide]]
+[[https://github.com/tmalsburg/helm-bibtex][helm-bibtex]]
+**  read this http://www.wouterspekkink.org/academia/writing/tool/doom-emacs/2021/02/27/writing-academic-papers-with-org-mode.html
+:PROPERTIES:
+:ID:       2c0ea1c8-f653-430d-ac5c-85de2377d9eb
+:END:
+[2022-03-10 Thu 11:43]
+[[file:~/org/refile.org::*understand completion ecosystem in emacs.][understand completion ecosystem in emacs.]]
+**  read about orderless. https://github.com/oantolin/orderless#style-dispatchers
+:PROPERTIES:
+:ID:       a1fdc200-58ad-4865-ba80-f6fe99c5d115
+:END:
+[2022-03-10 Thu 11:43]
+[[file:~/org/refile.org::*read this http://www.wouterspekkink.org/academia/writing/tool/doom-emacs/2021/02/27/writing-academic-papers-with-org-mode.html][read this http://www.wouterspekkink.org/academia/writing/tool/doom-emacs/2021/02/27/writing-academic-papers-with-org-mode.html]]
+**  read all of this blogs https://rgoswami.me/tags/orgmode/
+:PROPERTIES:
+:ID:       745dd991-d057-4775-8164-813be5cf14b2
+:END:
+[2022-03-10 Thu 11:43]
+[[file:~/org/refile.org::*read about orderless. https://github.com/oantolin/orderless#style-dispatchers][read about orderless. https://github.com/oantolin/orderless#style-dispatchers]]
+**  read [[https://kitchingroup.cheme.cmu.edu/blog/2017/01/03/Find-stuff-in-org-mode-anywhere/][how to find stuff in org-mode anywhere]]
+:PROPERTIES:
+:ID:       65e676d2-c7c7-4f9d-9e98-3e36a8455592
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-10 Thu 11:43]--[2022-03-10 Thu 11:44] =>  0:01
+:END:
+[2022-03-10 Thu 11:43]
+[[file:~/org/refile.org::*read this http://www.wouterspekkink.org/academia/writing/tool/doom-emacs/2021/02/27/writing-academic-papers-with-org-mode.html][read this http://www.wouterspekkink.org/academia/writing/tool/doom-emacs/2021/02/27/writing-academic-papers-with-org-mode.html]]
+**  read using orf-ref for citations and references https://kitchingroup.cheme.cmu.edu/blog/2014/05/13/Using-org-ref-for-citations-and-references/
+:PROPERTIES:
+:ID:       697640c2-20c0-4e64-b019-64590a921299
+:END:
+[2022-03-10 Thu 11:44]
+[[file:~/org/refile.org::*read \[\[https://kitchingroup.cheme.cmu.edu/blog/2017/01/03/Find-stuff-in-org-mode-anywhere/\]\[how to find stuff in org-mode anywhere\]\]][read how to find stuff in org-mode anywhere]]
+**  read chapter on working with logs file, TRAMP, shell chapter.
+:PROPERTIES:
+:ID:       2dd1b8a1-7717-433b-9c7b-63c0ebba736a
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-11 Fri 00:35]--[2022-03-11 Fri 00:37] =>  0:02
+:END:
+[2022-03-11 Fri 00:35]
+**  read learn about usepacakge! and straight.el
+:PROPERTIES:
+:ID:       5f58f5c9-6ac7-4cee-a637-21457a7b43f6
+:END:
+[2022-03-11 Fri 14:39]
+**  how to browser kill ring. read https://www.emacswiki.org/emacs/BrowseKillRing
+:PROPERTIES:
+:ID:       31bb43eb-08b4-4bcf-8d06-b8c8175c9562
+:END:
+[2022-03-11 Fri 14:40]
+**  how to cross references pages in hugo
+:PROPERTIES:
+:ID:       ee8a70ee-e857-4944-a476-ae337a8e41e1
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-11 Fri 15:09]--[2022-03-11 Fri 15:10] =>  0:01
+:END:
+[2022-03-11 Fri 15:09]
+[[file:~/org/notes/emacs/emacs-note.org::*Modifying Keybinding][Modifying Keybinding]]
+
+https://gohugo.io/content-management/cross-references/
+https://stackoverflow.com/questions/33225067/linking-pages-in-hugo-markdown
+**  hugo provide multiple edit (aka public) timestamp
+:PROPERTIES:
+:ID:       b51e5aee-508a-4543-bc97-0eac0bb64e48
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-11 Fri 15:40]--[2022-03-11 Fri 15:41] =>  0:01
+:END:
+[2022-03-11 Fri 15:40]
+[[file:~/org/notes/emacs/packages/evil-mode.org::*Emacs Package Explains: How to customize key binding in evil modes?][Emacs Package Explains: How to customize key binding in evil modes?]]
+**  read about how to implement redo/undo
+:PROPERTIES:
+:ID:       906421ec-ebea-43af-b15a-b3b7ff226eb1
+:END:
+[2022-03-11 Fri 21:39]
+[[file:~/Scratches/scratch.org::*test][test]]
+
+https://www.google.com/search?q=how+to+implement+undo&rlz=1C1CHBF_enUS941US941&oq=how+to+implement+undo+&aqs=chrome..69i57j0i512l6j0i22i30l3.4296j0j7&sourceid=chrome&ie=UTF-8
+**  read about how to select chapter for Thesis and order in which to write these chapter.
+:PROPERTIES:
+:ID:       a1664189-0f55-4007-b877-9da4d82a4b6f
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-13 Sun 22:55]--[2022-03-13 Sun 22:56] =>  0:01
+:END:
+[2022-03-13 Sun 22:55]
+[[file:~/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/main.org::*Dynamic Graph][Dynamic Graph]]
+**  read about doom emacs evil-escape https://discord.com/channels/406534637242810369/406554085794381833/952769882754285598
+:PROPERTIES:
+:ID:       f4b6024e-a9e8-459d-8bbb-6fc2877323d3
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-13 Sun 23:28]--[2022-03-13 Sun 23:29] =>  0:01
+:END:
+[2022-03-13 Sun 23:28]
+[[file:~/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/main.org::*Dynamic Graph][Dynamic Graph]]
+**  read [[https://thoughtbot.com/blog/thinking-in-types][thinking in types]]
+:PROPERTIES:
+:ID:       22660926-9a4c-41dd-b946-1625082c8639
+:END:
+[2022-03-17 Thu 02:05]
+[[file:~/Scratches/scala/playground1/Main.scala::// println(]]
+* Learning how to learn
+:PROPERTIES:
+:ID:       02780681-6e1e-440a-8c11-f14291322dea
+:END:
+** read 20 rules of formualting knowledge
+[2022-03-05 Sat 01:02]
+[[file:~/org/refile.org][file:~/org/refile.org]]
+* Articles related to Garun
+**  schedule time with Rohit Goswami and ask him about PKM, study + research workflow. (https://calendly.com/rg0swami)
+:LOGBOOK:
+CLOCK: [2022-03-04 Fri 23:33]--[2022-03-04 Fri 23:34] =>  0:01
+:END:
+[2022-03-04 Fri 23:33]
+[[file:~/org/my-resume.org::*LaTeX Config][LaTeX Config]]
 * Programming Articles
 ** ScalaCheck Website and the Property-based testing page on that site
 mentioned on Page 204 of learning functional programing in scala book.
@@ -11,4 +171,9 @@ one of the most neutral "Haskell vs Scala" discussions I've read.
 CLOCK: [2022-02-20 Sun 13:45]--[2022-02-20 Sun 13:46] =>  0:01
 :END:
 [2022-02-20 Sun 13:45]
-** TODO [[https://stackoverflow.com/questions/4590237/how-do-i-debug-my-program-when-it-hangs#:~:text=Use%20the%20debugger%20to%20find,take%20control%20of%20the%20process.][how do I figure out why program hangs?]]
+** [[https://stackoverflow.com/questions/4590237/how-do-i-debug-my-program-when-it-hangs#:~:text=Use%20the%20debugger%20to%20find,take%20control%20of%20the%20process.][how do I figure out why program hangs?]]
+:PROPERTIES:
+:ID:       77c450da-115d-45ba-b64f-d4cab1a141b2
+:END:
+* Investing
+** [[https://aswathdamodaran.blogspot.com/2022/05/in-search-of-steady-state-inflation.html][aswath damodaran's blog]]

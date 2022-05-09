@@ -1,0 +1,47 @@
+#+TITLE: Semosis
+
+
+* Invitation Message
+We do believe that are the most advance product for prompt engineering domain. All the product mentioned are the first of its kind. To the best of our knowledge, there is no similar product.
+
+Documentation is still weak, so if you have question please let me know.
+
+We plan to establish DAO to enhance new members on boarding process to the project.
+
+Semosis oragnization (https://github.com/semiosis) is a ecosystem of projects revolve around everything prompt engineering.
+
+Pen.el project (https://github.com/semiosis/pen.el) is a prompt engineering IDE with the end goal to be emacs 2.0 which basically an AI embedding emacs.
+
+prompt (https://github.com/semiosis/prompts) is a project supporting prompt engineering feature like templates, prompt scripts.  Prompt template we included are templates that prove to be working well for different prompt engineering tasks.
+
+Examplary (https://github.com/semiosis/examplary) is a domain language for writing prompt programming.
+
+ilambda (https://github.com/semiosis/ilambda) is a project supporting "imaginary programming." We created new paradigm of programming called "imaginary programming"" which is a style of programming that generate code from human language. There are many style in which we support. I have attached file regarding style we support. (please see the repo fore more information.) This approach is alot more flexible than what Codex project that OpenAI. We do think that our paradigm of programing is better fit into current state of software engineering.
+
+Engines (https://github.com/semiosis/engines) automatically optimize output speed and quality of prompt by selecting appropriate engineer for a task.
+
+In case you are interested in imaginary programming, we also have a draft of an imaginary programming paper (https://github.com/semiosis/imaginary-programming-thesis).
+
+There are other project that we have please take a look at Semosis project for more information.
+
+We always look for new contributor. If this project is something you are interested, please contact me. I am more than happy to discuss in more in-depth. Since we will be using DAO approach for growing our community, no technical skill is needed.
+
+* Semosis
+** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+** Notes :note:
+** Meeting :meeting:
+** Schedule
+*** recurring :recurring:
+*** non-recurring :nonrecurring:
+:PROPERTIES:
+:ID:       6faa3611-dfd0-4afa-8265-297111d2bc48
+:END:
+** Delegation :waiting:
+** Tasks
+*** actionable :actionable:
+*** incubation :incubation:

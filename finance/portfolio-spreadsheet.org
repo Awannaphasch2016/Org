@@ -1,0 +1,20 @@
+#+TITLE: Portfolio Spreadsheet
+
+* Metrics
+:PROPERTIES:
+:ID:       52076d44-516c-4858-9adf-cd829a2f72ea
+:END:
+** Total Supply
+$\text{Total Supply = Onchain supply - burned tokens}$
+* Investment Log
+| Coin | Amount Purchased | Date | Total Invested | Current value | Profit/loss | ROI | current price |
+|      |                  |      |                |               |             |     |               |
+* Investment Summary
+:PROPERTIES:
+:ID:       fb3a292c-46d9-4f9a-b2af-cb6e5b85ffe6
+:END:
+- Cost
+- Profit/Loss
+- Holding
+- Worst Return
+- Best Return

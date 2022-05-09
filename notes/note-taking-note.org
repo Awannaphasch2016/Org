@@ -1,0 +1,20 @@
+#+TITLE: Note Taking Note
+
+* blog :blog:
+** TODO Note Taking Pipeline framework.
+:PROPERTIES:
+:ID:       14e34658-9070-4b59-a39f-fb1a4054fba8
+:END:
+There are levels of data storage for n  ote taking
+- data lake
+  In this context, properties of data lake is the following
+  1. data is easily imported from external source without requirement on structure of data.
+- data warehouse
+  In this context, properties of data warehouse is the following
+  1. all data is structured based on relevancy.
+  2. all data is queryable via a question-oriented search.
+     Note that there is no requirement that all quried data must share any degree of relevancy. The constraint is that all related data to question-orineted query is returned.
+- data compression
+  In this context, properties of data  is the following
+  1. content of data is concise and consumable not just the writer but by anyone.
+     This required data to be compressed and linked together with goal to generate high-quality, high-compression output.

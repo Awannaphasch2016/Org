@@ -1,0 +1,38 @@
+#+TITLE: Org Brain Note
+
+* keybinding
+| commands                           | key         | doom keys | custom keys | descriptions                                     |
+| org-brain-visualize-mind-map       | m           |           |             | toggle between normal and mind-map visualization |
+| forward-button                     | j or TAB    |           |             | Goto next link                                   |
+| backward-button                    | k or S-TAB  |           |             | Goto previous link                               |
+| org-brain-visualize-back           | b           |           |             |                                                  |
+| org-brain-add-child-headline       | h or *      |           |             |                                                  |
+| org-brain-add-child                | c           |           |             |                                                  |
+| org-brain-remove-child             | C           |           |             |                                                  |
+| org-brain-annotate-edge            | e           |           |             |                                                  |
+| org-brain-add-parent               | p           |           |             |                                                  |
+| org-brian-remove-parent            | P           |           |             |                                                  |
+| org-brain-add-friendship           | f           |           |             |                                                  |
+| org-brain-remove-freindship        | F           |           |             |                                                  |
+| org-brian-pin                      | n           |           |             |                                                  |
+| org-brain-add-nickname             | N           |           |             |                                                  |
+| org-brain-select-dwin              | s           |           |             |                                                  |
+| org-brain-select-map               | S           |           |             |                                                  |
+| org-brain-set-title                | t           |           |             |                                                  |
+| org-brain-set-tags                 | T           |           |             |                                                  |
+| org-brain-delete-entry             | d           |           |             |                                                  |
+| org-brain-bisualize-add-resource   | l           |           |             |                                                  |
+| org-brain-open-resource            | r           |           |             |                                                  |
+| org-brain-visualize-paste-resource | C-y         |           |             |                                                  |
+| org-brain-visualize-attach         | a           |           |             |                                                  |
+| org-brain-archive                  | A           |           |             |                                                  |
+| org-brain-goto-current             | o           |           |             |                                                  |
+| org-brain-goto-                    | O           |           |             |                                                  |
+| org-brain-visualize                | v           |           |             |                                                  |
+| org-brain-visualize-follow         | V           |           |             |                                                  |
+| org-brain-visualize-random         | w           |           |             |                                                  |
+| org-brain-visualize-wander         | W           |           |             |                                                  |
+| org-toggle-inline-images           | C-c C-x C-v |           |             |                                                  |
+| Move prefix                        | M           |           |             |                                                  |
+| org-brain-refile                   | M r         |           |             |                                                  |
+| org-brain-change-local-parent      | M p         |           |             |                                                  |

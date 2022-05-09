@@ -1,0 +1,5 @@
+#+TITLE: Apigateway Note
+#+filetags: apigateway
+
+* Commands
+aws apigateway create-deployment --rest-api-id

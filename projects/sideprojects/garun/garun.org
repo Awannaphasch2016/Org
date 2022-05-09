@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       6ffa9220-2744-448a-ab30-5781ad44130e
+:END:
 #+TITLE: garun projects
 #+STARTUP: inlineimages
 #+FILETAGS: garun emacs PERSONAL @sideproject
@@ -20,9 +23,27 @@ Goal: I envision Garun to support the following things
 - provide optimized workflow via 'workflow mode.'
 - provide resembrance agents for each 'workflow mode'.
 - optimize for one screen/multiple screen.
-
 * Garun
 :LOGBOOK:
+CLOCK: [2022-03-07 Mon 15:07]--[2022-03-07 Mon 15:08] =>  0:01
+CLOCK: [2022-03-07 Mon 11:00]--[2022-03-07 Mon 14:50] =>  3:50
+CLOCK: [2022-03-07 Mon 01:38]--[2022-03-07 Mon 02:44] =>  1:06
+CLOCK: [2022-03-06 Sun 20:08]--[2022-03-07 Mon 01:38] =>  5:30
+CLOCK: [2022-03-06 Sun 12:46]--[2022-03-06 Sun 14:08] =>  1:22
+CLOCK: [2022-03-06 Sun 01:46]--[2022-03-06 Sun 02:42] =>  0:56
+CLOCK: [2022-03-06 Sun 01:45]--[2022-03-06 Sun 01:46] =>  0:01
+CLOCK: [2022-03-06 Sun 01:23]--[2022-03-06 Sun 01:45] =>  0:22
+CLOCK: [2022-03-04 Fri 23:03]--[2022-03-04 Fri 23:19] =>  0:16
+CLOCK: [2022-03-04 Fri 22:10]--[2022-03-04 Fri 22:32] =>  0:22
+CLOCK: [2022-03-04 Fri 22:06]--[2022-03-04 Fri 22:10] =>  0:04
+CLOCK: [2022-03-04 Fri 21:45]--[2022-03-04 Fri 22:06] =>  0:21
+CLOCK: [2022-03-04 Fri 21:39]--[2022-03-04 Fri 21:45] =>  0:06
+CLOCK: [2022-03-04 Fri 18:28]--[2022-03-04 Fri 18:48] =>  0:20
+CLOCK: [2022-03-04 Fri 17:41]--[2022-03-04 Fri 18:02] =>  0:21
+CLOCK: [2022-03-04 Fri 17:19]--[2022-03-04 Fri 17:30] =>  0:11
+CLOCK: [2022-03-03 Thu 19:50]--[2022-03-03 Thu 19:51] =>  0:01
+CLOCK: [2022-03-03 Thu 19:46]--[2022-03-03 Thu 19:50] =>  0:04
+CLOCK: [2022-03-03 Thu 19:38]--[2022-03-03 Thu 19:46] =>  0:08
 CLOCK: [2022-03-03 Thu 14:43]--[2022-03-03 Thu 16:25] =>  1:42
 CLOCK: [2022-03-03 Thu 14:00]--[2022-03-03 Thu 14:04] =>  0:04
 CLOCK: [2022-03-03 Thu 13:52]--[2022-03-03 Thu 14:00] =>  0:08
@@ -63,18 +84,12 @@ CLOCK: [2022-02-26 Sat 12:24]--[2022-02-26 Sat 12:40] =>  0:16
 CLOCK: [2022-02-26 Sat 12:17]--[2022-02-26 Sat 12:24] =>  0:07
 CLOCK: [2022-02-26 Sat 12:16]--[2022-02-26 Sat 12:17] =>  0:01
 :END:
-** Waiting :WAITING:
-*** WAITING figure out if i need lucid dream for flowchart workflow. If not, unsubscribe from it. :WAITING:
-:LOGBOOK:
-- State "WAITING"    from "TODO"       [2022-03-02 Wed 18:45] \\
-  try using lucid dream after I get an ipad, If I come to conclusion that I don't need it, cancle the subscription.
-CLOCK: [2022-03-02 Wed 18:44]--[2022-03-02 Wed 18:45] =>  0:01
-:END:
-[2022-03-02 Wed 18:44]
-[[file:~/org/finance/ledger.dat::Expenses:Drinks:Coffee $1.99]]
 ** Questions :QUESTION:
 ** Notes :NOTE:
-*** programming implementation design choise
+:PROPERTIES:
+:ID:       c0142900-5df4-4bfa-b13f-77019aeb5368
+:END:
+*** programming implementation design choice
 **** what language to use?
 **** which types of markdown style can I use? (org mode can't be used because gpl v3 license)
 alternative:
@@ -82,12 +97,12 @@ alternative:
 *** features underimplementation + known error
 **** uncaterogized
 **** doom emacs config
-***** TODO figure out why my configuration cannot be loaded to doom sandbox? is it sandbox error? :emacs:
+*****  figure out why my configuration cannot be loaded to doom sandbox? is it sandbox error? :emacs:
 :LOGBOOK:
 CLOCK: [2022-02-20 Sun 21:53]--[2022-02-20 Sun 21:55] =>  0:02
 :END:
 [2022-02-20 Sun 21:53]
-***** TODO figure out how to repeat last command in emacs (similar to ; in vim) :emacs:garun:
+*****  figure out how to repeat last command in emacs (similar to ; in vim) :emacs:garun:
 [2022-02-22 Tue 09:55]
 **** pdf related workflow
 ***** PROJECT when open pdf file PDFView is not a default (DocView is still in used). This is a unexpected behavior because when install pdf-tools PDFView should be automatically set as default
@@ -147,7 +162,7 @@ ref:
 note:
 this can be used when writing report for data science project as well [[https://www.youtube.com/watch?v=dljNabciEGg&ab_channel=HowardAbrams][literate devops]].
 ****** allow header property =:dir:= to be set as a starting point of directory in which code will be operate on.
-****** TODO recall how to substitue section of code in org babel block into another block. :emacs:garun:
+******  recall how to substitue section of code in org babel block into another block. :emacs:garun:
 :LOGBOOK:
 CLOCK: [2022-02-22 Tue 23:30]--[2022-02-22 Tue 23:32] =>  0:02
 :END:
@@ -182,7 +197,10 @@ I accidentally deleted enlarg-window-maximize, so I have to reimplement it
 I can see this become really use ful when combine with [[*PROJECT multi-layer text search filter. (design UI experience for piping sequence of regex output)][PROJECT multi-layer text search filter. (design UI experience for piping sequence of regex output)]]
 **** search and filter experience
 ***** PROJECT multi-layer text search filter. (design UI experience for piping sequence of regex output)
-***** TODO making jump to file/header more systemetic. (figure out a way to list only header of all orgs file. Then figure out a way to incrementally narrow down the search. similar to how org agenda has incremental search.)
+*****  making jump to file/header more systemetic. (figure out a way to list only header of all orgs file. Then figure out a way to incrementally narrow down the search. similar to how org agenda has incremental search.)
+:PROPERTIES:
+:ID:       1d110546-927e-49ff-9266-d2c5120773ec
+:END:
 :LOGBOOK:
 CLOCK: [2022-02-20 Sun 11:14]--[2022-02-20 Sun 11:15] =>  0:01
 :END:
@@ -191,7 +209,7 @@ CLOCK: [2022-02-20 Sun 11:14]--[2022-02-20 Sun 11:15] =>  0:01
 ***** searching with org-rifle :NOTE:emacs:garun:
 [2022-02-26 Sat 12:24]
 [[file:~/org/personal-website.org::*migrate all of my notes to blog in jykell.][migrate all of my notes to blog in jykell.]]
-***** TODO tabineAI (see [[https://www.tabnine.com/blog/17-cool-emacs-packages/][here]]) :emacs:garun:resembranceagent:
+***** tabineAI (see [[https://www.tabnine.com/blog/17-cool-emacs-packages/][here]]) :emacs:garun:resembranceagent:
 :LOGBOOK:
 CLOCK: [2022-02-26 Sat 12:40]--[2022-02-26 Sat 12:43] =>  0:03
 :END:
@@ -210,7 +228,7 @@ There are 2 ways to do this.
 **** colloborative features
 ***** real time coding
 ****** using Floobits to share code editing in real time (this allow sharing real time independent of text editor or IDE being used.)
-****** TODO learn to use Iedit for multi-occurrence editing in your buffer, see [[https://www.youtube.com/watch?v=xrNOLTAl1ug&ab_channel=AritraBhattacharjee][here]].
+******learn to use Iedit for multi-occurrence editing in your buffer, see [[https://www.youtube.com/watch?v=xrNOLTAl1ug&ab_channel=AritraBhattacharjee][here]].
 **** emails
 ***** I have problem setting up mu4e with doom emacs
 error is shown below
@@ -288,7 +306,10 @@ https://www.youtube.com/watch?v=mJjBZ4MZHBo&ab_channel=AndyStewart
 https://www.youtube.com/watch?v=z9W0pnShEWc&ab_channel=GavinFreeborn
 https://www.youtube.com/watch?v=HK_f8KTuR0s&ab_channel=MatthewZeng
 **** lispy
-***** NEXT figure out how to change lispy key binding. D for delete and y for yank. :emacs:
+***** figure out how to change lispy key binding. D for delete and y for yank. :emacs:
+:PROPERTIES:
+:ID:       569f2ad3-7bda-48fc-98bd-fccf8fe3afea
+:END:
 :LOGBOOK:
 CLOCK: [2022-02-20 Sun 21:56]--[2022-02-20 Sun 21:57] =>  0:01
 :END:
@@ -297,17 +318,20 @@ CLOCK: [2022-02-20 Sun 21:56]--[2022-02-20 Sun 21:57] =>  0:01
 **** window navigation + buffer + frame
 ref:
 [[https://www.youtube.com/watch?v=-H2nU0rsUMY&ab_channel=SystemCrafters][Hey Emacs, Don't Move My Windows! - Customizing display-buffer's behavior]]
-***** TODO implement =open in other window= behavior such that you can open bookmark, recent files, buffer etc to other buffer using =shift + enter=
-***** TODO create custom keybinding for scroll up and down other window. (make sure that it is intuitive and can be generalized to be combine with other key binding. )
-***** TODO implement =toggling= behavior for switching between previously visited window and next (current) window. (This is useful when using with =ace-window=)
-***** TODO create popup window in emacs (like what I use in vim)
-***** TODO figure out how to manipulate buffer by converting mini buffer such sa help to be a buffer. :garun:emacs:
+*****  implement =open in other window= behavior such that you can open bookmark, recent files, buffer etc to other buffer using =shift + enter=
+*****  create custom keybinding for scroll up and down other window. (make sure that it is intuitive and can be generalized to be combine with other key binding. )
+*****  implement =toggling= behavior for switching between previously visited window and next (current) window. (This is useful when using with =ace-window=)
+*****  create popup window in emacs (like what I use in vim)
+:PROPERTIES:
+:ID:       1410ba3e-c4a9-49b8-82b0-649c23d86b32
+:END:
+*****  figure out how to manipulate buffer by converting mini buffer such sa help to be a buffer. :garun:emacs:
 [2022-02-22 Tue 09:54]
 **** remote and cloud
 ***** improve cloud based emacs
-****** TODO learn to use tramp to connect to aws container cloud.
-****** TODO [[https://martin.baillie.id/wrote/emacs-tramp-over-aws-ssm-apis/][Emacs TRAMP over AWS SSM APIs]]
-******* NEXT figure out how to use tramp to connect to koko ssh
+******  learn to use tramp to connect to aws container cloud.
+******  [[https://martin.baillie.id/wrote/emacs-tramp-over-aws-ssm-apis/][Emacs TRAMP over AWS SSM APIs]]
+******* figure out how to use tramp to connect to koko ssh
 [2022-02-24 Thu 00:27]
 [[file:~/org/notes/emacs/packages/tramp-note.org::*How to access remote files ?][How to access remote files ?]]
 ******* DONE learn how to use scp so I can move large file between two machine easier.
@@ -318,14 +342,14 @@ CLOCK: [2022-02-24 Thu 00:28]--[2022-02-24 Thu 00:29] =>  0:01
 [[file:~/org/notes/emacs/packages/tramp-note.org::*References][References]]
 **** ledger
 **** Tracking Habits
-***** TODO implement habit trackings. I want to develope reading, synthesizing (given info in my knowledge base) habits 30 mins for each. :emacs:garun:
+*****  implement habit trackings. I want to develope reading, synthesizing (given info in my knowledge base) habits 30 mins for each. :emacs:garun:
 :LOGBOOK:
 CLOCK: [2022-02-23 Wed 09:32]--[2022-02-23 Wed 09:34] =>  0:02
 :END:
 [2022-02-23 Wed 09:32]
 [[file:~/org/refile.org::*dry my clothes.][dry my clothes.]]
 **** lsp
-***** TODO figure out why I get Use ="‘M-x customize-variable RET flycheck-checker-error-threshold’ to change the threshold or ‘SPC u C-c ! x’ to re-enable the checker.= when I open big python projects. How to get rid of all the error? should I obey these error? :WORK:emacs:garun:
+*****  figure out why I get Use ="‘M-x customize-variable RET flycheck-checker-error-threshold’ to change the threshold or ‘SPC u C-c ! x’ to re-enable the checker.= when I open big python projects. How to get rid of all the error? should I obey these error? :WORK:emacs:garun:
 :LOGBOOK:
 CLOCK: [2022-02-22 Tue 09:40]--[2022-02-22 Tue 09:42] =>  0:02
 :END:
@@ -338,30 +362,30 @@ CLOCK: [2022-02-22 Tue 10:21]--[2022-02-22 Tue 10:22] =>  0:01
 [2022-02-22 Tue 10:21]
 [[file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/evaluation/sliding_window.py::assert selected_sources_to_label\[:len_before\] == selected_sources_to_label_before]]
 **** snippet
-***** TODO dig into my past snippets and organised all those snippets to be searchbled and easy to retrieved and reuse. (such as yank pad, easy-collections, or other) :emacs:garun:
+*****  dig into my past snippets and organised all those snippets to be searchbled and easy to retrieved and reuse. (such as yank pad, easy-collections, or other) :emacs:garun:
 :LOGBOOK:
 CLOCK: [2022-02-22 Tue 09:56]--[2022-02-22 Tue 09:58] =>  0:02
 :END:
 [2022-02-22 Tue 09:56]
 **** evil related key binding
-***** TODO In term mode, figure out why =evil-append-line" include newline character. :emacs:garun:
+*****  In term mode, figure out why =evil-append-line" include newline character. :emacs:garun:
 :LOGBOOK:
 CLOCK: [2022-02-22 Tue 10:05]--[2022-02-22 Tue 10:06] =>  0:01
 :END:
 [2022-02-22 Tue 10:05]
 **** performance optimization
-***** TODO fix garbage collection code by implement k-time function :emacs:garun:
+*****  fix garbage collection code by implement k-time function :emacs:garun:
 [2022-02-22 Tue 18:21]
 [[file:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/hw2/main.scala][file:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/hw2/main.scala]]
-**** TODO enhance emacs bookmark features with bookmark+. learn to use bookmark+ feature and figure out how to integrate to my current workflow. should I replace bookmark with bookmark+?
+****  enhance emacs bookmark features with bookmark+. learn to use bookmark+ feature and figure out how to integrate to my current workflow. should I replace bookmark with bookmark+?
 :LOGBOOK:
 CLOCK: [2022-02-22 Tue 09:58]--[2022-02-22 Tue 09:59] =>  0:01
 :END:
 [2022-02-22 Tue 09:58]
-**** TODO can I zoom in on the section of code? (this can help with searching and stuff) :emacs:garun:
+****  can I zoom in on the section of code? (this can help with searching and stuff) :emacs:garun:
 [2022-02-22 Tue 10:20]
 [[file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/evaluation/sliding_window.py][file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/evaluation/sliding_window.py]]
-**** NEXT explore org-download, the goal is so that I can drag and drop images from internet or paste image from my clipboard. :emacs:garun:
+**** explore org-download, the goal is so that I can drag and drop images from internet or paste image from my clipboard. :emacs:garun:
 [2022-02-24 Thu 16:03]
 [[file:~/org/GTD.org::*write down my version of GTD purposed -> action models under Getting projects Creatively Under (7.48 hour left mins mark) for all aspect in life I want to achieve.][write down my version of GTD purposed -> action models under Getting projects Creatively Under (7.48 hour left mins mark) for all aspect in life I want to achieve.]]
 ***** solution for wsl is [[https://github.com/abo-abo/org-download/issues/178][here]].
@@ -436,7 +460,7 @@ CLOCK: [2022-02-20 Sun 17:29]--[2022-02-20 Sun 17:30] =>  0:01
 ****** DONE how to see my current clock-in task?
 [2022-02-20 Sun 17:41]
 [[file:~/org/refile.org::*LEARNING how do I clock in a task? is it work differently than punch in? (9. time clocking)][LEARNING how do I clock in a task? is it work differently than punch in? (9. time clocking)]]
-****** TODO figure out how to manually reset starting clock time? can I refresh clock to check if it responds to my manual change :emacs:garun:
+******  figure out how to manually reset starting clock time? can I refresh clock to check if it responds to my manual change :emacs:garun:
 :LOGBOOK:
 CLOCK: [2022-02-22 Tue 14:18]--[2022-02-22 Tue 14:19] =>  0:01
 :END:
@@ -470,7 +494,7 @@ CLOCK: [2022-02-20 Sun 11:12]--[2022-02-20 Sun 11:13] =>  0:01
 ****** DONE learn the basic of how to modified org agenda view.
 [2022-02-20 Sun 12:44]
 [[file:~/.doom.d/config.org::*Custom Agenda Views][Custom Agenda Views]]
-****** TODO style org agenda view so that it is easier to see. :emacs:
+******  style org agenda view so that it is easier to see. :emacs:
 :LOGBOOK:
 CLOCK: [2022-02-20 Sun 12:52]--[2022-02-20 Sun 12:53] =>  0:01
 :END:
@@ -481,7 +505,7 @@ CLOCK: [2022-02-20 Sun 12:52]--[2022-02-20 Sun 12:53] =>  0:01
 CLOCK: [2022-02-20 Sun 12:55]--[2022-02-20 Sun 12:56] =>  0:01
 :END:
 [2022-02-20 Sun 12:55]
-****** TODO hwo to narrow todo list (open with f12 t) incrementally. (mentioned in 8.4 Filtering)
+******  hwo to narrow todo list (open with f12 t) incrementally. (mentioned in 8.4 Filtering)
 :LOGBOOK:
 CLOCK: [2022-02-20 Sun 14:34]--[2022-02-20 Sun 14:35] =>  0:01
 :END:
@@ -517,7 +541,7 @@ CLOCK: [2022-02-20 Sun 23:49]--[2022-02-20 Sun 23:50] =>  0:01
 :END:
 [2022-02-20 Sun 23:49]
 [[file:~/.doom.d/config.org::*Report block][Report block]]
-****** TODO how to schedule recurrence task like weekly review to be the first task on every monday.
+******  how to schedule recurrence task like weekly review to be the first task on every monday.
 :LOGBOOK:
 CLOCK: [2022-02-20 Sun 23:14]--[2022-02-20 Sun 23:15] =>  0:01
 :END:
@@ -539,16 +563,16 @@ CLOCK: [2022-02-21 Mon 23:15]--[2022-02-21 Mon 23:23] =>  0:08
 ****** DONE learn how to filter org mode header by tags and tags all of the org-agenda-files accordingly.
 [2022-02-22 Tue 00:49]
 [[file:~/org/notes/incremental-learning.org::*learn about data science at commandline][learn about data science at commandline]]
-****** TODO how to pick tags from list of existing tags?
+******  how to pick tags from list of existing tags?
 [2022-02-22 Tue 01:12]
 [[file:~/org/notes/incremental-learning.org::*learning clojure][learning clojure]]
 ****** DONE learn how to filter org mode header by tags and tags all of the org-agenda-files accordingly.
 [2022-02-22 Tue 00:49]
 [[file:~/org/notes/incremental-learning.org::*learn about data science at commandline][learn about data science at commandline]]
-****** TODO how to pick tags from list of existing tags?
+******  how to pick tags from list of existing tags?
 [2022-02-22 Tue 01:12]
 [[file:~/org/notes/incremental-learning.org::*learning clojure][learning clojure]]
-****** TODO write notes on definition of tags in emacs, so it stay consistence. :gtd:@home:
+******  write notes on definition of tags in emacs, so it stay consistence. :gtd:@home:
 :LOGBOOK:
 CLOCK: [2022-02-21 Mon 22:02]--[2022-02-21 Mon 22:03] =>  0:01
 :END:
@@ -574,54 +598,72 @@ CLOCK: [2022-02-26 Sat 23:13]--[2022-02-26 Sat 23:30] =>  0:17
 [2022-02-26 Sat 23:13]
 [[file:~/org/notes/networking-note.org::*multiplexing is the ability to send more htan one signal over a single line or connection. In OpenSSH, multipliexing can re-sue and existing outgoing TCP connection form ultiple concurrent SSH session to a remote SSH server, avoiding the overhead of creating a new TCP connection and reauthenticating each time.][multiplexing is the ability to send more htan one signal over a single line or connection. In OpenSSH, multipliexing can re-sue and existing outgoing TCP connection form ultiple concurrent SSH session to a remote SSH server, avoiding the overhead of creating a new TCP connection and reauthenticating each time.]]
 ** Meeting :MEETING:
+** Delegation :WAITING:
+** Schedule
+*** recurring
+*** non-recurring
 ** Task
-*** TODO read or watch video about notion. compare and constrast why notion is better or worse than roam research/emacs. (what are functionality that I should add to emacs.)
+*** Actionable :actionable:
+:PROPERTIES:
+:ID:       f95bf2e4-66e9-4adc-8eb2-8e4f42fe32be
+:END:
+*** incubation :incubation:
+**** figure out if i need lucid dream for flowchart workflow. If not, unsubscribe from it.
+:LOGBOOK:
+- State "TODO"       from "WAITING"    [2022-04-11 Mon 08:23]
+- State "WAITING"    from "TODO"       [2022-03-02 Wed 18:45] \\
+  try using lucid dream after I get an ipad, If I come to conclusion that I don't need it, cancle the subscription.
+CLOCK: [2022-03-02 Wed 18:44]--[2022-03-02 Wed 18:45] =>  0:01
+:END:
+[2022-03-02 Wed 18:44]
+[[file:~/org/finance/ledger.dat::Expenses:Drinks:Coffee $1.99]]
+**** read or watch video about notion. compare and constrast why notion is better or worse than roam research/emacs. (what are functionality that I should add to emacs.)
 :LOGBOOK:
 CLOCK: [2022-02-24 Thu 22:40]--[2022-02-24 Thu 22:41] =>  0:01
 :END:
 [2022-02-24 Thu 22:40]
-*** TODO do research on ipad (or alike) to support notetaking by hands. (time to explore note taking by hands.) main focus should be to support research reading & highlighting process, and, also, writing as a process of expressing thought (this condition implies that "back-of-envolop" note should be able to easily stored and search via emacs or roam research. etc.)
+**** do research on ipad (or alike) to support notetaking by hands. (time to explore note taking by hands.) main focus should be to support research reading & highlighting process, and, also, writing as a process of expressing thought (this condition implies that "back-of-envolop" note should be able to easily stored and search via emacs or roam research. etc.)
 :LOGBOOK:
 CLOCK: [2022-02-24 Thu 22:37]--[2022-02-24 Thu 22:40] =>  0:03
 :END:
 [2022-02-24 Thu 22:37]
-*** TODO figure out a way to migrate content from roam research to emacs using org roam and others. What are features that I still need from roam research that may take too much time for me to implement or figure out to replicate in emacs?
+**** figure out a way to migrate content from roam research to emacs using org roam and others. What are features that I still need from roam research that may take too much time for me to implement or figure out to replicate in emacs?
 :LOGBOOK:
 CLOCK: [2022-02-24 Thu 22:53]--[2022-02-24 Thu 22:55] =>  0:02
 :END:
 [2022-02-24 Thu 22:53]
 [[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*domain defines all possible values for attribute.][domain defines all possible values for attribute.]]
-*** TODO skim through norang productivity tools topics and list out topics that I am interested in implementing. After than schedule my time to implement each of the sections.
+****  skim through norang productivity tools topics and list out topics that I am interested in implementing. After than schedule my time to implement each of the sections.
 :LOGBOOK:
 CLOCK: [2022-02-24 Thu 23:10]--[2022-02-24 Thu 23:11] =>  0:01
 :END:
 [2022-02-24 Thu 23:10]
 [[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*3.5 Weak Entity Types][3.5 Weak Entity Types]]
-*** TODO check out rememberance agent for emacs (see [[https://www.google.com/search?q=emacs+resembrance+agent&rlz=1C1CHBF_enUS941US941&oq=emacs+resembrance+agent&aqs=chrome..69i57j69i64.4756j0j7&sourceid=chrome&ie=UTF-8][here]].)
+****  check out rememberance agent for emacs (see [[https://www.google.com/search?q=emacs+resembrance+agent&rlz=1C1CHBF_enUS941US941&oq=emacs+resembrance+agent&aqs=chrome..69i57j69i64.4756j0j7&sourceid=chrome&ie=UTF-8][here]].)
 [2022-02-26 Sat 12:17]
 [[file:~/org/projects/sideprojects/garun/garun.org::*Questions][Questions]]
-*** TODO resembrance agent package, eva (see [[https://github.com/meedstrom/eva][here]]) :emacs:garun:resembranceagent:
+****  resembrance agent package, eva (see [[https://github.com/meedstrom/eva][here]]) :emacs:garun:resembranceagent:
 [2022-02-26 Sat 12:44]
 [[file:~/org/projects/sideprojects/garun/garun.org::*Task][Task]]
-*** TODO configure mode for cronjobs called crontabs mode?
+****  configure mode for cronjobs called crontabs mode?
 :LOGBOOK:
 CLOCK: [2022-02-26 Sat 18:00]--[2022-02-26 Sat 18:01] =>  0:01
 :END:
 [2022-02-26 Sat 18:00]
 [[file:~/Scratches/scratch.el::;]]
-*** TODO use stackoverflow package in emacs. (sx.el) The goal is not to search for answer. (but if it does better, that's even better.) Rather, the goal is to quickly ask question that I have in a seamless manner. :garun:emacs:
+****  use stackoverflow package in emacs. (sx.el) The goal is not to search for answer. (but if it does better, that's even better.) Rather, the goal is to quickly ask question that I have in a seamless manner. :garun:emacs:
 :LOGBOOK:
 CLOCK: [2022-02-26 Sat 23:06]--[2022-02-26 Sat 23:07] =>  0:01
 :END:
 [2022-02-26 Sat 23:06]
 [[file:~/org/notes/networking-note.org::*multiplexiing][multiplexiing]]
-*** TODO add voice to text to emacs.
+****  add voice to text to emacs.
 [2022-02-27 Sun 21:26]
 [[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*Suppose that we denote one such subset of attributes by SK; then for any two distinct tuples t1 and t2 in a relation state r of R, we have the constraint that: $t_1\[SK\] != t_2\[SK\]$][Suppose that we denote one such subset of attributes by SK; then for any two distinct tuples t1 and t2 in a relation state r of R, we have the constraint that: $t_1[SK] != t_2[SK]$]]
-*** TODO check out emamux. (interact with tmux from emacs.)
+****  check out emamux. (interact with tmux from emacs.)
 [2022-02-28 Mon 09:57]
 [[file:/ssh:koko-login.hpc.fau.edu:/mnt/beegfs/home/awannaphasch2016/Documents/Working/tgn/tmp.sh::/mnt/beegfs/home/awannaphasch2016/.conda/envs/py38/bin/python3 train_self_supervised.py -d reddit_10000 --use_memory --n_runs 1 --n_epoch 5 --bs 1000 --max_random_weight_range 5000 --use_random_weight_to_benchmark_ef_iwf]]
-*** TODO figure out a way to use terminal in emacs full time.
+****  figure out a way to use terminal in emacs full time.
 [2022-02-28 Mon 10:10]
 [[file:~/.doom.d/config.org::*multi-term][multi-term]]
 
@@ -633,12 +675,372 @@ https://www.google.com/search?q=workflow+of+using+terminal+in+emacs&rlz=1C1CHBF_
 https://emacs.stackexchange.com/questions/13861/combining-ssh-through-term-with-tramp-to-open-file-in-buffer
 http://sagarjha.github.io/multi-run/#:~:text=And%20Emacs%20supports%20multiple%20terminal,any%20of%20the%20above%20types.
 https://stackoverflow.com/questions/3993528/how-to-open-multiple-terminals
-*** TODO explore research + literater programming (e.g. org babel etc.) features in scimax.
-[2022-02-28 Mon 10:17]
-[[file:/ssh:koko-login.hpc.fau.edu:/mnt/beegfs/home/awannaphasch2016/Documents/Working/tgn/tmp.sh::/mnt/beegfs/home/awannaphasch2016/.conda/envs/py38/bin/python3 train_self_supervised.py -d reddit_10000 --use_memory --n_runs 1 --n_epoch 5 --bs 200 --ws_framework ensemble --custom_prefix tmp --ws_multiplier 1 --init_n_instances_as_multiple_of_ws 10]]
-*** TODO figure out clipboard system of linux and window. The goal is to figure out how to copy clipboard from window and paste the link to the clipboard to emacs.
+
+****  figure out clipboard system of linux and window. The goal is to figure out how to copy clipboard from window and paste the link to the clipboard to emacs.
 :LOGBOOK:
 CLOCK: [2022-03-03 Thu 01:21]--[2022-03-03 Thu 01:27] =>  0:06
 :END:
 [2022-03-03 Thu 01:21]
 [[file:~/org/notes/emacs/packages/org-download-note.org::*starting code doesn't work because powershell command doesn't creat file.][starting code doesn't work because powershell command doesn't creat file.]]
+****  divide my orgs direcotyr into subdirectory having separate version control. (Is it worth doing? by doing this, what will i learn? will it be worth the hassel?)
+:LOGBOOK:
+CLOCK: [2022-03-03 Thu 18:58]--[2022-03-03 Thu 18:59] =>  0:01
+:END:
+[2022-03-03 Thu 18:58]
+[[orgit:~/org/][~/org/ (magit-status)]]
+****  fork fpscala then clone it to local. Because I clone it from the original repo, I can't push it back.
+[2022-03-03 Thu 19:36]
+[[file:~/org/notes/scala/fp-in-scala/fpinscala/README.md::\[!\[Join the chat at https://gitter.im/fpinscala/fpinscala\](https://badges.gitter.im/Join%20Chat.svg)\](https://gitter.im/fpinscala/fpinscala?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)]]
+****  fork fpscala then clone it to local. Because I clone it from the original repo, I can't push it back.
+:LOGBOOK:
+CLOCK: [2022-03-03 Thu 19:36]--[2022-03-03 Thu 19:38] =>  0:02
+:END:
+[2022-03-03 Thu 19:36]
+[[file:~/org/notes/scala/fp-in-scala/fpinscala/README.md::\[!\[Join the chat at https://gitter.im/fpinscala/fpinscala\](https://badges.gitter.im/Join%20Chat.svg)\](https://gitter.im/fpinscala/fpinscala?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)]]
+****  learn about git work tree.
+[2022-03-03 Thu 19:19]
+[[file:~/org/notes/emacs/packages/magit.org::*Common Key Binding][Common Key Binding]]
+****  learn to use ledger efficiently. how to add account? how to add tranactions? with command.
+[2022-03-04 Fri 21:45]
+[[file:~/org/finance/ledger.dat::2022/03/03]]
+****  add features to drag and drag such that snapshot will save to firebase storage. ([[https://firebase.google.com/docs/storage/][cloud storage for firebase]])
+[2022-03-04 Fri 22:06]
+[[file:~/org/projects/sideprojects/garun/garun.org::*Garun][Garun]]
+****  where should let dropbox control?
+:LOGBOOK:
+CLOCK: [2022-03-04 Fri 23:21]--[2022-03-04 Fri 23:22] =>  0:01
+:END:
+[2022-03-04 Fri 23:21]
+**** read and implement post from reddit titled "Latex export with Inkscape Images and Draw.io Graphs in org mode." :emacs:garun:
+:PROPERTIES:
+:ID:       62a7a147-1e83-4326-9745-3245816c4072
+:END:
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 23:11]--[2022-02-26 Sat 23:12] =>  0:01
+:END:
+[2022-02-26 Sat 23:11]
+[[file:~/org/notes/networking-note.org::*multiplexing is the ability to send more htan one signal over a single line or connection. In OpenSSH, multipliexing can re-sue and existing outgoing TCP connection form ultiple concurrent SSH session to a remote SSH server, avoiding the overhead of creating a new TCP connection and reauthenticating each time.][multiplexing is the ability to send more htan one signal over a single line or connection. In OpenSSH, multipliexing can re-sue and existing outgoing TCP connection form ultiple concurrent SSH session to a remote SSH server, avoiding the overhead of creating a new TCP connection and reauthenticating each time.]]
+**** Emacs :emacs:
+:PROPERTIES:
+:ID:       6212442e-9dd5-4078-8d32-b137bfd12c02
+:END:
+***** customize emacs config
+****** learn from other emacs-config (additional feature can be found at garun project.)
+******* vanila emacs
+******** [[https://www.youtube.com/watch?v=1Ooi4KAd2FM&ab_channel=EmacsConfandEmacshangouts][EmacsConf 2021: Babel for academics - Asilata Bapat]]
+******** [[https://www.youtube.com/watch?v=ubpB83VRqXQ&ab_channel=EmacsConfandEmacshangouts][EmacsConf 2021: Using Org-Mode For Recording Continuous Professional Development - Philip Beadling]]
+******** [[http://endlessparentheses.com/archive.html][Endless parentheses articles]]
+******* doom-config
+******** [[https://dangirsh.org/projects/doom-config.html#jupyter][Dan Girshovich's doom config]]
+******** [[https://www.youtube.com/watch?v=5Q9435eIOVI&ab_channel=EmacsConfandEmacshangouts][EmacsConf 2021: Managing a research workflow (bibliographies, note-taking, and arXiv) - Ahmed Khaled]]
+
+****** discord + emacs, see [[https://github.com/Mstrodl/elcord][here]].
+******  integrate organice or [[https://github.com/tconfrey/BrainTool][BrainTool]] (which allow org-mode to be interacted via webbrowser)
+******* implement a feature in BrainTool, see [[https://github.com/tconfrey/BrainTool/issues/15][here]].
+******  [[https://github.com/emacsorphanage/emamux][interact with tmux from emacs]]
+****** [[https://mullikine.github.io/posts/an-emacs-mode-for-asciinema-playback/][implement asciinema mode in emacs]]
+******  write customc folding for mode that use bracket and space (like python).
+******  how to search emacs info?
+- https://superuser.com/questions/665930/how-can-i-search-emacs-built-in-manual#:~:text=The%20s%20command%20allows%20you,followed%20by%20RET%20will%20do.
+******  try [[https://github.com/cniles/axe][axe]] (emacs extension for AWS cli)
+******  make reading pdf compatible with org-noter for reproducible research.
+:PROPERTIES:
+:ID:       9455bda6-d6e2-4b10-b636-864dfba578ff
+:END:
+- ref
+  - [[https://www.youtube.com/watch?v=bTbiC6SamT4&ab_channel=EmacsConfandEmacshangouts][EmacsConf 2020 - 17 - Org-mode and Org-Roam for Scholars and Researchers - Noorah Alhasan]]
+  - [[https://www.youtube.com/watch?v=Wy9WvF5gWYg&ab_channel=Zaeph][Org-roam-bibtex - Quick Presentation]]
+tools may include the following
+- org-roam
+- org-roam-bibtex
+- org-roam-server
+- org-transclusion
+- org-super-agenda
+- org-sidebar
+
+******  LEARNING what exactly does doom sync do? I feel like this is a part of the puzzle that, sometimes, my own config doesn't load properly after doom/reload.
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 14:30]--[2022-02-20 Sun 14:34] =>  0:04
+CLOCK: [2022-02-20 Sun 14:27]--[2022-02-20 Sun 14:30] =>  0:03
+CLOCK: [2022-02-20 Sun 13:46]--[2022-02-20 Sun 14:27] =>  0:41
+CLOCK: [2022-02-20 Sun 13:42]--[2022-02-20 Sun 13:45] =>  0:03
+CLOCK: [2022-02-20 Sun 13:39]--[2022-02-20 Sun 13:40] =>  0:01
+CLOCK: [2022-02-20 Sun 13:27]--[2022-02-20 Sun 13:38] =>  0:11
+CLOCK: [2022-02-20 Sun 13:26]--[2022-02-20 Sun 13:27] =>  0:01
+:END:
+[2022-02-20 Sun 13:26]
+***** learn to implement in emacs using elisp
+******  what is speedbar?
+****** paper on evolution of emacs lisp, see [[https://dl.acm.org/doi/pdf/10.1145/3386324][here]].
+******  [[file:books/Writing GNU Emacs Extension - Bob Glickstein.org::*Using =this-command=][stop at this chaptor of 'writing with elisp..']]
+******  hwo to obtain a list of all functions exclusively provided by a certain major mode
+- https://emacs.stackexchange.com/questions/14208/how-to-obtain-a-list-of-all-functions-exclusively-provided-by-a-certain-major-mo
+******  writing efficient lisp code (optimize for speed and performance)
+- ref
+  - [[https://www.cs.utexas.edu/users/novak/lispeff.html][lisp style and efficiency]]
+  - [[https://www.emacswiki.org/emacs/CoRoutines][co routines]]
+  - [[https://elmord.org/blog/?entry=20190913-emacs-gc][Emacs performance, profiling, and garbage collection]]
+  - [[https://anuragpeshne.github.io/essays/emacsSpeed.html][Speeding Up Emacs]]
+  - [[https://nullprogram.com/blog/2018/05/31/][Emacs 26 Brings Generators and Threads]]
+  - [[https://www.emacswiki.org/emacs/ConcurrentEmacs][concurrent emacs]]
+****** learn lisp testing framework
+***** Contribute to EAF
+****** look at [[https://github.com/emacs-eaf/emacs-application-framework/wiki/Todo-List][EAF  list]] and pick one
+******  learn how visidata works before I attempt to implement visidata in EAF
+***** Understand Emacs at the deeper level
+- ref:
+    - [[https://tuhdo.github.io/c-ide.html][C/C++ Development Environment for Emacs]]
+****** learn about the following packages and workflow
+******* understand packagers mechanism and functionality
+******** learn org-babel
+*********  Figure out org-babel manipulate output from shell. (so I understand or able to debug scenario in which output of org-babel block are not as what I expected)
+********  learn about completion
+*********  understand prescient, see [[https://www.youtube.com/watch?v=T9kygXveEz0&ab_channel=SystemCrafters][here]].
+**********  figure out how ranking algorithm works.
+******* config workflow
+******** explore projects in the following github repo.
+********* =alphapapa= github for new seamless integration, [[https://github.com/alphapapa/org-ql][here]].
+********* [[https://github.com/akirak][akirak]]
+********  tree-sitter doesn't turn on =tree-sitter-hl-mode= on rustic mode, see [[file:~/.doom.d/config.org::*Emacs Tree Sitter][here]]
+******** understand window and buffer config
+******** set up emacs for SQL developement
+********  Learning how to use jupyter-notebook from [[https://youtu.be/RD0o2pkJBaI?t=1905][this tutorial.]]
+*********  [[https://www.reddit.com/r/emacs/comments/hk4fps/any_emacs_ipython_notebook_ein_users_willing_to/][Discussion on jupyter + emacs]]
+*********  add ob-ipython like advice from scimax environment.
+before this is added, I pretty much can't use emacs-jupyter as jupyter replacement, see [[file:~/org/projects/sideprojects/website/my-website/org-mode.org::*Dependences Packages][here]].
+
+scimax advice also have to be added on top of ob-ipython package itself, see [[https://youtu.be/dMira3QsUdg?t=133][here]].
+
+******** move section of code to scratch file, see [[https://emacs.stackexchange.com/questions/2810/how-to-copy-or-move-code-in-current-scope-to-end-of-another-file][here]] for reference.
+********  compare (diff) two regions, see [[https://emacs.stackexchange.com/questions/18369/how-do-i-compare-regions-in-the-same-file][here]] and [[https://www.gnu.org/software/emacs/manual/html_mono/ediff.html][ediff document]]for reference.
+******* LEARNING learn about the following org-model. org-crypt, org-gnus, org-bbdb, org-irc, org-
+:LOGBOOK:
+CLOCK: [2022-02-20 Sun 13:38]--[2022-02-20 Sun 13:39] =>  0:01
+:END:
+[2022-02-20 Sun 13:38]
+#+BEGIN_SRC emacs-lisp
+(setq org-modules (quote (org-bbdb
+                          org-bibtex
+                          org-crypt
+                          org-gnus
+                          org-id
+                          org-info
+                          org-jsinfo
+                          org-habit
+                          org-inlinetask
+                          org-irc
+                          org-mew
+                          org-mhe
+                          org-protocol
+                          org-rmail
+                          org-vm
+                          org-wl
+                          org-w3m)))
+#+END_SRC
+*******  LEARNING what is tag/category in org mode :emacs:
+[2022-02-20 Sun 14:41]
+*******  LEARNING what is interitance tags in org mode? :emacs:
+[2022-02-20 Sun 14:47]
+*******  learn about org sidebar. Can I integrated into my work flow? :emacs:garun:
+:L
+CLOCK: [2022-02-22 Tue 09:55]--[2022-02-22 Tue 09:56] =>  0:01
+:END:
+[2022-02-22 Tue 09:55]
+*******  learn to use yank pad to collect useful codes.
+[2022-02-22 Tue 09:56]
+****** learn the following mode
+******* kubernetes-mode with limited permission
+[[https://github.com/abrochard/kubel][kubel]]
+******* [[https://github.com/Silex/docker.el][docker mode]]
+******* [[https://github.com/emacsorphanage/terraform-mode][terraform mode]]
+******* twittering
+******* python mode unable to import module
+******* Dap mode
+*******  lsp mode
+********  learn how to evaluate or benchmark lsp performance.
+- Check lsp-doctor function first
+- And then check https://emacs-lsp.github.io/lsp-mode/page/performance/
+********  [[https://medium.com/ballerina-techblog/implementing-a-language-server-how-hard-can-it-be-part-1-introduction-c915d2437076][Implementing a Language Server…How Hard Can It Be??  Part 1 (Introduction)]]
+********  read and check the following before checking other things on the list
+********* https://github.com/ethereum/solidity/issues/7763
+********* https://www.reddit.com/r/neovim/comments/l6a5dy/nvim_lsp_support_for_solidity/
+******** Implement  lsp-mode for solidity from github issue, see [[https://github.com/ethereum/solidity/issues/7763][here]].
+*********  Implement lsp-mode for markdown from github issue, see [[https://github.com/emacs-lsp/lsp-mode/issues/3010][here]].
+********** Error: I am trying to solve
+********** how does =gopls= implement langauge server using =lsp-mode=?
+********  check whether python version and python environment are correctly set up. (as it should in without emacs)
+********  using flycheck with lsp-mode.
+Error:
+=flycheck-list-error=  and =lsp-treemacs-list-error= are not insync.
+=flycheck-list-error= shows =unable to import 'pandas' [import-error]=
+
+For =mspyls=, =lsp-treemacs-error-list= only shows error from =tgn= project.
+=mspyls= and =pyls=
+*******  Python mode
+********  how to auto format python mode to match code style guideline, see [[https://stackoverflow.com/questions/1288474/is-there-any-way-to-format-a-complete-python-buffer-in-emacs-with-a-key-press][here]].
+********  figure out how to interact better with repl.
+******* org mode
+****** learn package manager
+******* learn =straight.el= from tutorial. I stopped [[https://youtu.be/UmbVeqphGlc?t=262][here]].
+******  figure out how to use org category? how can I use org category with tags? read the =norang= for examples.
+:LOGBOOK:
+CLOCK: [2022-02-22 Tue 09:59]--[2022-02-22 Tue 10:00] =>  0:01
+:END:
+[2022-02-22 Tue 09:59]
+****  create capture for space repetition.
+:PROPERTIES:
+:ID:       e9e0af33-30ce-47a3-8e43-fbe4384a5419
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-05 Sat 11:43]--[2022-03-05 Sat 11:44] =>  0:01
+:END:
+[2022-03-05 Sat 11:43]
+[[file:~/org/notes/latex-note.org::*pdflatex, bibtex, pdflatex][pdflatex, bibtex, pdflatex]]
+****  fix drag and drop with org-download to work
+:PROPERTIES:
+:ID:       8f43ce93-83fd-4754-bdc6-97076d5423e0
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-06 Sun 19:34]--[2022-03-06 Sun 19:35] =>  0:01
+:END:
+[2022-03-06 Sun 19:34]
+[[file:~/.doom.d/config.org::*version 1][version 1]]
+****  get autocorrect completion in emacs
+:PROPERTIES:
+:ID:       39a6c066-dc8f-480a-84b0-9c22bc98694d
+:END:
+[2022-03-07 Mon 11:17]
+[[file:~/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/main.org::*1. Introduction][1. Introduction]]
+****  implement code to convert exported cacher json file (currently at ~/Download/Cacher/exported_dat.json) to org mode format.
+:PROPERTIES:
+:ID:       dfa542a7-02ff-4b93-bf91-4b03e55f4556
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-09 Wed 02:50]--[2022-03-09 Wed 02:52] =>  0:02
+:END:
+[2022-03-09 Wed 02:50]
+****  figure out how to use pass to store password
+:PROPERTIES:
+:ID:       0397c566-b450-41cd-a71d-c8319d7d3625
+:END:
+[2022-03-10 Thu 04:40]
+[[file:~/.emacs.d/modules/tools/pass/README.org::*Plugins][Plugins]]
+****  make elfeed score works
+:PROPERTIES:
+:ID:       cec23c29-a21a-4e13-9edf-41b2b91f1a9e
+:END:
+[2022-03-10 Thu 11:38]
+[[file:~/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/main.org::*Introduction][Introduction]]
+****  add this config into my doom https://gist.github.com/rka97/57779810d3664f41b0ed68a855fcab54
+:PROPERTIES:
+:ID:       e6cb4e9e-a0a6-41d1-bbc9-386f61f39353
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-10 Thu 11:38]--[2022-03-10 Thu 11:39] =>  0:01
+:END:
+[2022-03-10 Thu 11:38]
+[[file:~/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/main.org::*Introduction][Introduction]]
+****  check with this blog if I implement all of the feature it mentions https://rgoswami.me/posts/org-note-workflow/#indexing-notes
+:PROPERTIES:
+:ID:       0655d1ab-8b28-41a5-8298-6968e1f40996
+:END:
+[2022-03-10 Thu 11:39]
+[[file:~/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/main.org::*Introduction][Introduction]]
+****  connect to google calendar.
+:PROPERTIES:
+:ID:       5df1d127-0f33-4241-a0c1-159f132c3a3d
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-12 Sat 05:50]--[2022-03-12 Sat 05:51] =>  0:01
+:END:
+[2022-03-12 Sat 05:50]
+****  somehow figure out if zotxt is worth using if so, make it work in wsl2.
+:PROPERTIES:
+:ID:       9ec27371-020b-4cad-9d8f-d43fbd6b776b
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-12 Sat 17:54]--[2022-03-12 Sat 17:55] =>  0:01
+:END:
+[2022-03-12 Sat 17:54]
+[[file:~/org/notes/emacs/packages/zotxt-note.org::zotxt-emacs is an emacs package that work with zotxt, a Zotero plugin. Its main job is to manages citation keys for pandoc markdown documents. Support also extends to org mode links in Zotero files.]]
+****  figure out how to sync .bib from Zotero to a plain text.
+:PROPERTIES:
+:ID:       cef9ddfd-3267-40ff-b7eb-f625b28f168b
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-13 Sun 21:20]--[2022-03-13 Sun 21:21] =>  0:01
+:END:
+[2022-03-13 Sun 21:20]
+
+This [[https://mail.google.com/mail/u/0/#inbox/FMfcgzGpFWLGqJrFxdZFGcxMmwftxVjs][comment]] mention "I'm not sure how wsl2 works. If zotero is not listening on localhost, you could change the value of zotxt-url-base."
+****  check out this emacs project https://github.com/minad/osm
+:PROPERTIES:
+:ID:       212d93e4-20f5-48fa-a3ff-547fea124218
+:END:
+[2022-03-15 Tue 13:51]
+****  find emacs package that support emacs speech input
+:PROPERTIES:
+:ID:       dd716823-36aa-4d56-bcae-a93df5a7c547
+:END:
+[2022-03-15 Tue 13:55]
+[[file:~/org/refile.org::*buy new iPhone rest pad at the back of the phone case][buy new iPhone rest pad at the back of the phone case]]
+**** implement tags selection such that all existing tags shows up. (I still want the current template I have but I also want all of the tags to show up as well.)
+:PROPERTIES:
+:ID:       fb4b2f46-91ca-41dd-a1da-a06a0cb2898c
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-15 Tue 14:00]--[2022-03-15 Tue 14:01] =>  0:01
+:END:
+[2022-03-15 Tue 14:00]
+[[file:~/org/refile.org::*buy ipad. The goal is to add hand writing notes in to garun workflow][buy ipad. The goal is to add hand writing notes in to garun workflow]]
+****  define projectile projects, so I can select current project. This help separate notes and the project (involving writing, code.).
+:PROPERTIES:
+:ID:       99ff5b95-13eb-4ccb-b527-caf8cc11dc70
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-15 Tue 14:01]--[2022-03-15 Tue 14:02] =>  0:01
+:END:
+[2022-03-15 Tue 14:01]
+[[file:~/org/refile.org::*buy ipad. The goal is to add hand writing notes in to garun workflow][buy ipad. The goal is to add hand writing notes in to garun workflow]]
+****  org mode block evaluate in repl (https://github.com/diadochos/org-babel-eval-in-repl)
+:PROPERTIES:
+:ID:       4835f96e-3e29-4d46-ac0d-8824ac4b4dc4
+:END:
+[2022-03-16 Wed 15:58]
+[[file:~/org/notes/books/function-programming-in-scala-note.org::*5.3 Separating program description from evaluation][5.3 Separating program description from evaluation]]
+**** TODO read comment on eva project https://github.com/meedstrom/eva/issues/14.
+:PROPERTIES:
+:ID:       7fddc06b-98c5-4acc-a172-c8ec16bc2581
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-22 Tue 15:22]--[2022-03-22 Tue 15:23] =>  0:01
+:END:
+[2022-03-22 Tue 15:22]
+**** TODO check out beorg project
+:PROPERTIES:
+:ID:       abf90dc7-2096-4e76-a54c-d512dc0b6148
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-22 Tue 15:25]--[2022-03-22 Tue 15:26] =>  0:01
+:END:
+[2022-03-22 Tue 15:25]
+[[file:~/org/notes/emacs/packages/org-reveal-note.org::*Example][Example]]
+**** figure out how to filter things by amount of Effort property emacs.
+:PROPERTIES:
+:ID:       131bcf48-8918-43f9-922c-59bd966e9a0a
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-19 Tue 14:01]--[2022-04-19 Tue 14:02] =>  0:01
+:END:
+[2022-04-19 Tue 14:01]
+[[file:~/org/refile.org::*figure out if I can send mail with ups boxes in FAU.][figure out if I can send mail with ups boxes in FAU.]]
+**** figure out how to connect emacs to shell that is running outside of emas.
+:PROPERTIES:
+:ID:       88c96b6a-3ca1-495a-a92a-8cd698657f7b
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-29 Fri 13:51]--[2022-04-29 Fri 13:54] =>  0:03
+:END:
+[2022-04-29 Fri 13:51]
+[[file:~/org/notes/built-tools/sbt/examples/foo-build/src/main/scala/example/Hello.scala][file:~/org/notes/built-tools/sbt/examples/foo-build/src/main/scala/example/Hello.scala]]
+connect emacs to tmux.

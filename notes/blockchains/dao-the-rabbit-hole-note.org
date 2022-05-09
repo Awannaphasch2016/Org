@@ -1,0 +1,71 @@
+#+TITLE: Dao The Rabbit Hole Note
+
+
+* Dao The Rabbit Hole Note
+** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+** Notes :note:
+:PROPERTIES:
+:ID:       d7931288-2ad2-4d83-9ef5-ce0ad88a961f
+:END:
+*** Values of RH's community
+see [[https://twitter.com/flynnjamm/status/1479485964225503233?s=21][here]].
+1. Participation > speculation
+2. Minnows > whales
+3. Merit > signal
+*** Metagovernance
+:PROPERTIES:
+:ID:       edff2ff6-89b6-4c1d-9fbe-29e204ca63d8
+:END:
+The metagovernance activity reporting week begins Friday and ends Thursday [fn:1].
+
+** Meeting :meeting:
+** Schedule
+*** recurring :recurring:
+**** Down the RabbitHole (Onboarding Call)
+<2022-04-11 Mon +1w>
+**** Tactical Tuesday (Weekly Workshop)
+<2022-04-12 Tue +1w>
+**** Web 3 but make it cute
+<2022-04-12 Tue +1w>
+**** Wandering Wednesday (Panel Discussion)
+<2022-04-13 Wed +1w>
+**** Protocol Spotlights (Fireside Chat)
+:PROPERTIES:
+:ID:       bad8c149-80f8-4374-9973-e63599fe91c5
+:END:
+<2022-04-14 Thu +1w>
+**** RabbitHole community Hangout (AMA) & BookClub
+<2022-04-15 Fri +1w>
+***** Bookclub Notion Page (it is equivalent of Readme Page)
+:PROPERTIES:
+:ID:       9d70775d-367a-4322-ba89-867e8f4d8979
+:END:
+*** non-recurring :nonrecurring:
+** Delegation :waiting:
+** Tasks
+:PROPERTIES:
+:ID:       d385914c-c6af-4fbe-8289-f8197a469214
+:END:
+*** actionable :actionable:
+**** TODO figure out how NFT auction in RH works. then summarize to ryan, so he can decide whether to share his uncle art work.
+SCHEDULED: <2022-05-05 Thu>
+:PROPERTIES:
+:ID:       c8d5dc25-5f0d-428c-9100-1d51f86e7f1d
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-30 Sat 21:56]--[2022-04-30 Sat 21:57] =>  0:01
+:END:
+[2022-04-30 Sat 21:56]
+*** incubation :incubation:
+:PROPERTIES:
+:ID:       0e88f7dd-e2a7-4ae2-91dd-3275a009f946
+:END:
+
+* Footnotes
+
+[fn:1] https://metagov.rabbithole.gg/docs/instructions/reporting

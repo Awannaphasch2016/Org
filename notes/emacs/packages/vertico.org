@@ -2,6 +2,9 @@
 
 Unlike =Helm= and =Ivy= that have extra baggage, Vertico uses native emacs interace for minibuffer completions.
 
+* keybinding
+| commands       | key | doom keys | custom keys | descriptions                |
+| vertico-repeat |     | spc-'     |             | resume last vertico session |
 * Save minibuffer history
 to save history of minibuffer, vertico must be enable with =savehist-mode=
 basic config. see [[https://youtu.be/J0OaRy85MOo?t=625][here]].

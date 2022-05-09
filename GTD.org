@@ -25,32 +25,52 @@ CLOCK: [2022-02-21 Mon 22:26]--[2022-02-21 Mon 22:39] =>  0:13
 CLOCK: [2022-02-21 Mon 22:06]--[2022-02-21 Mon 22:26] =>  0:20
 :END:
 ** Waiting :WAITING:
-** TODO weekly review
-SCHEDULED: <2022-03-05 Sat +1w>
+** Schedule
+*** recurring :recurring:
+:PROPERTIES:
+:ID:       dd2acbc6-47c4-403c-82a0-1295f9d704fc
+:END:
+**** weekly review
+<2022-04-09 Sat +1w>
 :PROPERTIES:
 :ORDERED:  t
 :NOBLOCKING: t
 :RESET_CHECK_BOXES: t
 :LAST_REPEAT: [2022-02-26 Sat 13:10]
 :END:
-- State "DONE"       from "TODO"       [2022-02-26 Sat 13:10]
-- State "DONE"       from "TODO"       [2022-02-26 Sat 13:10]
-- State "DONE"       from "TODO"       [2022-02-26 Sat 13:09]
 note: make sure that action that I do on my projects are aligned with my vision, and purpose.( [[file:notes/getting-things-done-gtd-note.org::*Horizontal Focus][Horizontal Focus]])
 
 what to review:
-- [ ] Check follow-up folder
+- [ ] Check tasks in Delegation tags
 - [ ] Review weekly agenda =F12 a w=
 - [ ] Review clock report for past week =R=
   - check where we spent time (too much or too little) and rectify this week.
+- [ ] assign actions for tasks in incubation tags to actionables
 - [ ] Look at entire agenda for today =F12 SPC=
 - [ ] Review projects =F12 SPC= and =V= (I am not quite sure what this is) repeatedly to view each project.
 - start work
   - daily agenda first - knock off items
   - then work on NEXT tasks
-
-** Refiling  + organizing
+*** non-recurring :nonrecurring:
+** Tasks
+*** actionable :actionable:
+:PROPERTIES:
+:ID:       94611f2e-c7fb-452f-84ea-848521ba424a
+:END:
+*** incubation :incubation:
+**** Refiling  + organizing
+:PROPERTIES:
+:ID:       8df29ca2-fd65-4c1c-be76-fa9931fd8192
+:END:
 :LOGBOOK:
+CLOCK: [2022-04-19 Tue 13:58]--[2022-04-19 Tue 14:00] =>  0:02
+CLOCK: [2022-04-19 Tue 13:55]--[2022-04-19 Tue 13:57] =>  0:02
+CLOCK: [2022-04-19 Tue 10:17]--[2022-04-19 Tue 10:39] =>  0:22
+CLOCK: [2022-04-19 Tue 10:07]--[2022-04-19 Tue 10:15] =>  0:08
+CLOCK: [2022-03-18 Fri 11:05]--[2022-03-18 Fri 14:09] =>  3:04
+CLOCK: [2022-03-14 Mon 23:30]--[2022-03-15 Tue 02:00] =>  2:30
+CLOCK: [2022-03-04 Fri 01:19]--[2022-03-04 Fri 01:23] =>  0:04
+CLOCK: [2022-03-04 Fri 01:07]--[2022-03-04 Fri 01:15] =>  0:08
 CLOCK: [2022-03-03 Thu 03:39]--[2022-03-03 Thu 04:15] =>  0:36
 CLOCK: [2022-03-02 Wed 19:21]--[2022-03-02 Wed 19:22] =>  0:01
 CLOCK: [2022-03-02 Wed 17:50]--[2022-03-02 Wed 17:52] =>  0:02
@@ -75,7 +95,10 @@ CLOCK: [2022-02-24 Thu 11:28]--[2022-02-24 Thu 11:29] =>  0:01
 CLOCK: [2022-02-24 Thu 11:19]--[2022-02-24 Thu 11:24] =>  0:05
 CLOCK: [2022-02-24 Thu 10:53]--[2022-02-24 Thu 10:54] =>  0:01
 :END:
-*** WAITING assign schedule and deadline for tasks in todos/tasks and school (e.g exam date.) :@errand:WAITING:
+***** assign schedule and deadline for tasks in todos/tasks and school (e.g exam date.) :@errand:WAITING:
+:PROPERTIES:
+:ID:       2326f1fd-a2ae-49eb-bfff-0cd080e3e2d9
+:END:
 - State "WAITING"    from "TODO"       [2022-02-24 Thu 11:19] \\
   this task should be done after I foind out mid term deadline.
 :LOGBOOK:
@@ -83,6 +106,16 @@ CLOCK: [2022-02-24 Thu 11:18]--[2022-02-24 Thu 11:19] =>  0:01
 :END:
 [2022-02-24 Thu 11:18]
 [[file:~/org/GTD.org::*Refiling + organizing][Refiling + organizing]]
-*** DONE assign next task to each of my project.
-[2022-02-26 Sat 10:28]
-[[file:~/org/refile.org][file:~/org/refile.org]]
+
+**** collect yearly, month events, and important documentations (such as visa.) and put them into org agenda. I should also scan important documentation into pdf or other mean that can be easily store and search via emacs.
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 22:45]--[2022-02-24 Thu 22:47] =>  0:02
+:END:
+[2022-02-24 Thu 22:45]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*key attributes of entity types][key attributes of entity types]]
+****  put deadline of summer 2022 in my schedule. or schedule task to remind me to look at the summer 2022 schedule. (https://www.fau.edu/registrar/pdf/Summer2022_08182021.pdf)
+:PROPERTIES:
+:ID:       3641e843-5668-4a7c-a261-6d15d56ba9d7
+:END:
+[2022-02-24 Thu 16:04]
+[[file:~/org/GTD.org::*write down my version of GTD purposed -> action models under Getting projects Creatively Under (7.48 hour left mins mark) for all aspect in life I want to achieve.][write down my version of GTD purposed -> action models under Getting projects Creatively Under (7.48 hour left mins mark) for all aspect in life I want to achieve.]]

@@ -1,47 +1,26 @@
 #+FILETAGS: REFILE
 
 refile.org acts like a cabinet of all tasks because it is organized via GTD methods. (see ~/org/gtd.org for more information on gtd methodology)
-* TODO write about how latex works, and how to use latex and debug it.
-:LOGBOOK:
-CLOCK: [2022-03-03 Thu 13:00]--[2022-03-03 Thu 13:01] =>  0:01
+
+* TODO call At&t and lower prices of At&t phone plan
+:PROPERTIES:
+:ID:       0ba6efe6-af7d-48a2-9a09-286c6161520d
 :END:
-[2022-03-03 Thu 13:00]
-[[file:~/org/my-resume.org::*LaTeX Config][LaTeX Config]]
-* TODO what is tlmgr?
-[2022-03-03 Thu 13:02]
-[[file:~/org/my-resume.org::*LaTeX Config][LaTeX Config]]
-* TODO how does tex distribution differ? TeXLive.
-[2022-03-03 Thu 13:03]
-[[file:~/org/my-resume.org::*LaTeX Config][LaTeX Config]]
-* PHONE chat with iyann:PHONE:
-:LOGBOOK:
-CLOCK: [2022-03-03 Thu 13:51]--[2022-03-03 Thu 13:52] =>  0:01
+[2022-05-05 Thu 16:42]
+see the email [[https://mail.google.com/mail/u/0/#inbox/FMfcgzGpFgvPrmBdQdcWLkKrCDQBRbjq][here]]
+* TODO take Linkedin assessment.
+:PROPERTIES:
+:ID:       6fa069fd-d636-4937-98cd-052f9e7a8831
 :END:
-[2022-03-03 Thu 13:51]
-* TODO integrate space repetition into emacs.
-[2022-03-03 Thu 14:00]
-[[file:~/org/notes/operating-system/linux-distros/ubuntu/ubuntu-note.org::*where is apt-get installed packages?][where is apt-get installed packages?]]
-* DONE config latex for emacs
-CLOSED: [2022-03-03 Thu 18:49]
-[2022-03-03 Thu 18:44]
-[[file:~/org/notes/emacs/modes/org-mode-note.org::*categories vs tags.][categories vs tags.]]
-* TODO divide my orgs direcotyr into subdirectory having separate version control. (Is it worth doing? by doing this, what will i learn? will it be worth the hassel?)
-:LOGBOOK:
-CLOCK: [2022-03-03 Thu 18:58]--[2022-03-03 Thu 18:59] =>  0:01
+[2022-05-05 Thu 16:53]
+[[file:~/org/life.org::*solutions tracking list][solutions tracking list]]
+see the email [[https://mail.google.com/mail/u/0/#inbox/FMfcgzGpFgvNKRrxpzPTlSDtNXBDqsWM][here]].
+* WAITING where can I get bit-ask spread data of BTC? :WAITING:
+:PROPERTIES:
+:ID:       50c0b152-def0-4aea-83db-395513c4e3e7
 :END:
-[2022-03-03 Thu 18:58]
-[[orgit:~/org/][~/org/ (magit-status)]]
-* TODO schedule daily commit of all my notes.
 :LOGBOOK:
-CLOCK: [2022-03-03 Thu 19:00]--[2022-03-03 Thu 19:01] =>  0:01
+- State "WAITING"    from "TODO"       [2022-05-07 Sat 16:44]
+CLOCK: [2022-05-07 Sat 16:43]--[2022-05-07 Sat 16:44] =>  0:01
 :END:
-[2022-03-03 Thu 19:00]
-* TODO learn about git work tree.
-[2022-03-03 Thu 19:19]
-[[file:~/org/notes/emacs/packages/magit.org::*Common Key Binding][Common Key Binding]]
-* NEXT fork fpscala then clone it to local. Because I clone it from the original repo, I can't push it back.
-:LOGBOOK:
-CLOCK: [2022-03-03 Thu 19:36]
-:END:
-[2022-03-03 Thu 19:36]
-[[file:~/org/notes/scala/fp-in-scala/fpinscala/README.md::\[!\[Join the chat at https://gitter.im/fpinscala/fpinscala\](https://badges.gitter.im/Join%20Chat.svg)\](https://gitter.im/fpinscala/fpinscala?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)]]
+[2022-05-07 Sat 16:43]

@@ -1,0 +1,3 @@
+#+TITLE: Zotfile Note
+
+Zotfile is a Zotero plugin that manage files in Zotero. This include syncing between PDF and your storage of choice, extracting PDF annotation.

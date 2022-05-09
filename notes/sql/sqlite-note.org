@@ -1,0 +1,39 @@
+#+TITLE: Sqlite Note
+
+* How to
+** get table's schema
+:PROPERTIES:
+:ID:       5fca0804-65ac-41fe-bcab-91df9596ccc5
+:END:
+#+BEGIN_SRC python
+c = conn.cursor()
+c.execute(aspect_query)
+query_result =  c.fetchall()
+
+table_scheama =  c.execute("PRAGMA table_info('reddit_stream')").fetchall()
+#+END_SRC
+** connect and close database
+#+BEGIN_SRC python
+dbfile: str = \
+    'C:/Users/Anak/PycharmProjects/Covid19CookieCutter/Data/Processed/' \
+    'reddit_database.db'
+#connect
+conn = sqlite3.connect(dbfile)
+#execute query
+c = conn.cursor()
+c.execute(aspect_query)
+query_result =  c.fetchall()
+# coment and close
+conn.commit()
+conn.close()
+#+END_SRC
+** how to use where clause?
+#+BEGIN_SRC python
+aspect_query = f"""
+    select *
+    from {aspect_database_name}
+    where subreddit in ("word1", "word2") AND
+    (body LIKE "%word3%")
+    ;
+    """
+#+END_SRC

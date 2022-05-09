@@ -1,11 +1,295 @@
+:PROPERTIES:
+:ID:       46615078-5777-4487-8197-b1c6fd8641a0
+:END:
 #+title: PhD
 #+FILETAGS: @PhD WORK
+#+filetags: blockchain
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+
+
+* blog :blog:
+** Static Graph
+:PROPERTIES:
+:ID:       812326f6-d8f4-466c-b771-b2ecbf891e60
+:END:
+*** TODO Evolution of static graph Based Deep Learning Model (constantly update to be as up to date as possible)
+:PROPERTIES:
+:EXPORT_FILE_NAME: Evolution of static graph Based Deep Learning Model
+:END:
+
+At the beginning of graph based deep learning model, literature has tried to generalized convolution filter by generalized CNN grid filter for graph input. This only works for specific kind of graph that modified CNN grid is designed for. Another way to explore convolution filter is to convert graph from graph domain into frequency domain or Fourier domain. Filter in Fourier in domain is called spectral filter proposed by Defferard et al. [[cite:&defferrard2016convolutional]] by using K-localized convolutional neural network on graph. Based on [[cite:&defferrard2016convolutional]], Kipf el at. [[cite:&kipf2016semi]] purposed GCN where K is 1 and approximation of convolution filter is not learned by neural network instead filters parameters are calculated with Chebyshev approximation. GCN is one of the first GNN architecture that successfully applied as semi-supervised model. Downside of GCN is designed for transductive setting because graph Laplacian is known during the training. GraphSage [[cite:&hamilton2017inductive]] solves the problem by using generalized neighbor information aggregation function (message passing framework), instead of diffuse information to neighbor with graph Laplacian. This also helps reduce over-fitting. Models using graph Laplacian or alike such as GCN is called spectral-based GNN while models that use neighbor aggregation function is called spatial-based GNN.
+
+
+To understand dynamic graph, one must understand static network. In static network, one must consider type of network relationship (e.g idealize network, proximity network.), scale of network (e.g. a node as a single entity, a node as a group of entities.), and network variation (link types e.g. homogeneous network, heterogenous network, multilayer network). Each mentioned factors encounters its own unique challenges. Importantly, these factors must be considered before model designing phase begins otherwise network based models cannot be expected to be compared fairly with other models. Moreover, it provide mental framework to guide designing process. GNN is considered a modern solution to static graph modeling. GNN can be categorized into spectral GNN and spatial GNN. Layer of spectral GNN is a k-localized convolution filter where the filter is in Fourier domain, such as Laplacian matrix (k is 1) [[cite:&kipf2016semi]], to diffuse information between nodes via connected links. Later, spatial filter is invented by introduction of message passing framework [[cite:&gilmer2017neural]]. Spatial filter can be compute locally without the whole graph input. This means spatial GNN are inductive while spectral GNN are tranductive. In practice, the local computation can be compute in parallel to speed up computational process.
+
+History of deep learning solution of dynamic graph models can be traced back to 2016. At the time, literature explored methods of aggregating information on graph from node neighbor with varying weight, such as using tree like structure for NLP tasks and grid like structure. Furthermore, RNN had been used to learn temporal features while structure features are learned by CNN, GNN, or random walk. This can be done either by simply stacking temporal layer to structure layer or integrate temporal and structure components in to one layer [[cite:&seo2018structured]]. Note that 2016 is around the peak of RNN hype. Around the same time, research effort was put toward the development of convolution filters.
+**** Bibliography :ignore:
+bibliography:/home/awannaphasch2016/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/reference.bib
+
+** Dynamic Graph
+*** dynamic graph modeling
+**** TODO Understand Dynamic Graph: Overview - Evolution Of Dynamic Graph Based Deep Learning Models (constantly update to be as up to date as possible)
+:PROPERTIES:
+:EXPORT_FILE_NAME: Evolution Of Dynamic Graph Based Deep Learning Models
+:ID:       899cabb1-0c17-4d46-a9a7-508920bc74d0
+:END:
+
+The goal of the writing this blog is to summarize the evolution of dynamic graph based deep learning models.
+
+#+caption: The figure is taken from [[cite:&skardingFoundationsModelingDynamic2021]]. The figure shows types of models and their complexity that are used in dynamic network tasks where left is the least complex and right is the most complex: Static, Edge-weighted, Discrete, continuous. For taxonomy of DGNN refers to Figure ref:taxonomy.
+#+name: complexity of dynamic graph based models
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220416_134058.png]]
+
+In general,  model complexity increase over time as shown in ref:complexity. The article will focus on non-static. The rest edge-weighted, discrete, continuous model are included in the article. The article will be narrated based on timelines rather than explaining models within each category separately. The time line that we will follows as decided by the author the time of writing on [2022-04-16 Sat] is shown in figure ref:Timeline. The article will begin at GCRN-M1 and GCRN-M2 models.
+
+#+caption: The figure is taken from [[cite:&skardingFoundationsModelingDynamic2021]]. It shows timelines of models that are used to solve dynamic graph. This include static-based models (such as GCN and GNN) and dynamic-based model (such as TGN).
+#+name: Timeline of models used to solve dynamic graph tasks.
+#+attr_html: :width 700px
+[[file:./images/screenshot_20220416_140045.png]]
+
+#+caption: Picture is extracted from "Foundations and Modeling of Dynamic Networks Using Dynamic Graph Neural Networks: A Survey" [[cite:&skardingFoundationsModelingDynamic2021]]
+#+name: taxonomy of dynamic graph neural network.
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220416_133712.png]]
+
+The article starts at GCRN-M1 and GCRN-M2 models [[cite:&seo2018structured]]. These models are categorized stacked DGNN and was the first attempt to model DGNN model [[cite:&skardingFoundationsModelingDynamic2021]]. The model is inspired by convLSTM. convLSTM substitutes approximation of convolution operation from using neural network to convolution neural network.
+
+GCRN convolutional layers instead of fully connected layers.
+
+Xu et al. [[cite:&xu2019generative]] purposed G-GCN. The models disregard time and take into consideration only topology changes. This is done by extending variational Graph Autoencoder (VGAE) [[cite:&kipf2016variational]] to predict unseen node.
+
+
+In particular, according to dynamic graph modeling taxonomy [[cite:&skardingFoundationsModelingDynamic2021]], this paper concerns continuous dynamic graph neural network (continuous DGNN). Continuous DGNN update information for every time an event (edge instance) occurs. Furthermore, these type of model can use temporal difference, time invertal between event, as input parameter. Neural network component can be used to approximate point process parameters. This approach is called temporal point process based model (TPP). On the other hand, neural network can be used to encode temporal pattern by learning representation of time embedding vector. TGN falls into this category.
+
+***** todo list :noexport:
+****** reread and rewrite the current content.
+****** write summary on this
+GCRN-M1 & GCRN-M2?
+Know-Evolve
+WD-GCN & CD-GCN
+DyREP
+JODIE
+Streaming GNN
+DySAT
+EvolveGCN
+G-GCN
+T-GAT
+HDGNN
+TDGNN
+***** Bibliography :ignore:
+bibliography:/home/awannaphasch2016/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/reference.bib
+
+**** TODO Understand Dynamic Graph: Taxonomy - Dynamic Graph Models.
+:PROPERTIES:
+:EXPORT_FILE_NAME: Understand Dynamic Graph: Dynamic Graph Taxonomoy - Modeling Components To Be Aware Of Before Design Dynamic Graph Based Models.
+:END:
+
+When designing dynamic graph models, one must consider node dynamic, link duration, and temporal granularity. Node dynamic concerns presents of nodes. Link duration concerns presents of edges, and temporal granularity concern either discrete or continuous occurrence of events [[cite:&kazemiRepresentationLearningDynamica]].
+
+To understand dynamic graph, one must understand static network. In static network, one must consider type of network relationship (e.g idealize network, proximity network.), scale of network (e.g. a node as a single entity, a node as a group of entities.), and network variation (link types e.g. homogeneous network, heterogenous network, multilayer network). [[cite:&wanna2022network]]
+
+Dynamic graph input => classify by link duration, classify by condition in which link defined. (e.g. contact network, spatio-temporal network, spatio network, idealized network.)
+dyanmic graph can be preresented in many ways => lossless representation, lossy representation.
+representation of dynamic graph can be modified => synthetic link (e.g. convert temporal network to multilayer network such as multiplex).
+dynamic graph models are classify by the following aspects: topological evolution (including node dynamic) and  temporal granularity.
+
+
+Dynamic graph extends static graph to include time variables which added time dimension to the problem. With time dimension to consider, models also must consider the following factor in addition to static network's factors mentioned previously: temporal granularity [[cite:&skardingFoundationsModelingDynamic2021]], temporal properties, dynamic behavior on graph, and n-dimension topological evolution [[cite:&holme2015modern;&barrosSurveyEmbeddingDynamic2021]]. Temporal granularity concerns time information that are kept in a graph which broken down to unweighted static graph (no time information is preserved), weighted static graph, discrete graph (stack of multiple weighted static graph), continuous graph (all time information is preserved) [[cite:&skardingFoundationsModelingDynamic2021]]. Temporal properties concerns temporal features of an entity that compose a graph such as nodes, edges, and motifs. The temporal dimension can yield non-trivial temporal features such as interaction distribution (distribution of all edges overtime), interevent distribution (distribution of an edges/event over time), among others [[cite:&holme2012temporal;&holme2015modern]]. Interevent time distribution is the frequency distribution between the events. If the events are independent and drawn from a uniform distribution, then the inter-event time distribution will be exponential. However, empirical data set usually has fat-tailed, scale-free rather than uniform distribution. Coefficient of variation, bustiness, is used to characterized scale-free degree inter-event distribution. Dynamic behavior on graph concerns non-graph temporal features, such as communication behavior between nodes and substructure like motifs, and process on the network such as diffusion cascades. Lastly, n-dimension topological evolution involves structure evolution, features evolution, role evolution of nodes in a graph.
+
+
+At the time of writing, multiple taxonomies of dynamic graph models has been proposed. In this related work section, we will discuss previous attempts to categorize dynamic graph models into groups. Before discussing previous attempt, one should understand types of dynamic behavior that can affect dynamic graph models. There are two types of dynamic behaviors which are referred to in referenced literature by different names, nonetheless, we will refer to the two types as "dynamic behavior on graph" and "dynamic behavior over graph". One can think of dynamic behavior on graph as communication between nodes that happens via edges. Dynamic  behavior over graph can be think of as changes of graph as a whole over time. Intuitively, "dynamic behavior on graph" concerns micro (node/edges) levels while "dynamic behavior over graph" concern macro level --- concern graph as a whole. An example to emphasize on the difference, given that there exist a group of individuals, Evolution of individuals (nodes) "role" depends on when and how they interact. At the macro level, a member of a group may leave and join. This behavior also depends on time interval that experiment considers.
+
+Furthermore, design of models directly depend on dynamic behavior involved in dynamic graph. Hence, due to the factor mentioned above, it is very important to create an environment that is fair to make comparison between dynamic graph models. In addition to factor mentioned above, there are other factors that directly influence behavior on/over a graph including size of graph, node scale, etc, which beyond the scope of the paper. Empirical experiment has shown that combination of factors previously mentioned produces different temporal characteristic of dynamic graph either on/over the graph e.g. bustiness property cite:&holme2012temporal among other.
+
+
+Barros et al. cite:&barrosSurveyEmbeddingDynamic2021 categorized dynamic graph based on output embedding, model approaches, and dynamic behavior over graph. On the other than, Kazemi et al. [[cite:&kazemiRepresentationLearningDynamica]] discuss in-depth mathematical formulation of encoder-decoder. The discussion also cover other types of models that are more specialized such as dynamic knowledge graph and spatio-temporal graph.
+
+Skarding et al. [[cite:&skardingFoundationsModelingDynamic2021]] takes interesting approach to categorized dynamic graph based on edges duration into interaction networks, temporal networks, evolving networks, and strictly evolving networks. Furthermore, the paper classifies dynamic network models into statical models, stochastic actor oretied models, and dynamic network representation learning model. In comparison, Skarding et al. [[cite:&skardingFoundationsModelingDynamic2021]] and Kazemi et al. cite:&kazemiRepresentationLearningDynamica provides two different ways to categorize dynamic graph models. In contrast to Kazemi et al, Skarding et al. focus mainly on taxonomies of dynamic graph neural network including pseudo-dynamic model, edge-weighted model, discrete model, continuous models.
+
+Note that meaning of temporal networks is ambiguous outside of skarding et al's paper [[cite:&skardingFoundationsModelingDynamic2021]] context. In "Temporal Network" paper, Holme et al. [[cite:&holme2012temporal]] introduce "time-respecting" path as a property of temporal network. Graph with time-respect path contains edges whose weight value represents time when edges forms. We will adopt taxonomy presented in [[cite:&skardingFoundationsModelingDynamic2021]] because including adopting temporal network definition. This is unambiguous because time-respecting path has not explored at all in the machine learning at the time of writing. Furthermore, all types of dynamic graph can be represented as a form of multilayer graph. [[cite:&kivela2014multilayer]]
+**** TODO Understand Dynamic Graph: Taxonomy - Representation of Dynamic Graph.
+***** todo list :noexport:
+***** Bibliography :ignore:
+bibliography:/home/awannaphasch2016/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/reference.bib
+**** TODO Understand Dynamic Graph: Taxonomy - Dynamic Graph Input
+
+Before designing dynamic graph models, one must consider construction of dynamic graph input based on a given dataset. Then, models can be designed on top of constructed input. Dynamic graph construction is out of scope of this paper, but it is important to emphasize that model architecture is heavily dependent on input. Example of input graph construction are aggregated graph (edge-weighted graph [[cite:&qu2020continuous]]), synthetic link between static graph [[cite:&kapoor2020examining]], and different graph. When designing dynamic graph models, one must consider node dynamic, link duration, and temporal granularity. Node dynamic concerns presents of nodes. Link duration concerns presents of edges, and temporal granularity concern either discrete or continuous occurrence of events [[cite:&kazemiRepresentationLearningDynamica]].
+***** todo list :noexport:
+***** Bibliography :ignore:
+bibliography:/home/awannaphasch2016/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/reference.bib
+**** TODO Understand Dynamic Graph: Nodes - Scale of Nodes of Network
+:PROPERTIES:
+:EXPORT_FILE_NAME: Understand Dynamic Graph: Scale of Nodes of Network
+:END:
+scale of network (e.g. a node as a single entity, a node as a group of entities.) [[cite:&wanna2022network]]
+***** Bibliography :ignore:
+bibliography:/home/awannaphasch2016/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/reference.bib
+
+**** TODO Understand Dynamic Graph: Edges - link types
+:PROPERTIES:
+:EXPORT_FILE_NAME: Understand Dynamic Graph: link types
+:END:
+one must consider type of network relationship (e.g idealize network, proximity network.) [[cite:&wanna2022network]]
+***** Bibliography :ignore:
+bibliography:/home/awannaphasch2016/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/reference.bib
+
+**** TODO Understand Dynamic Graph: Edges - link duration
+
+***** Bibliography :ignore:
+bibliography:/home/awannaphasch2016/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/reference.bib
+**** TODO Understand Dynamic Graph: Temporal Dimension - temporal granularity
+n-dimension topological evolution [[cite:&holme2015modern;&barrosSurveyEmbeddingDynamic2021]]. Temporal granularity concerns time information that are kept in a graph which broken down to unweighted static graph (no time information is preserved), weighted static graph, discrete graph (stack of multiple weighted static graph), continuous graph (all time information is preserved) [[cite:&skardingFoundationsModelingDynamic2021]]
+***** Bibliography :ignore:
+bibliography:/home/awannaphasch2016/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/reference.bib
+
+**** TODO Understand Dynamic Graph: Temporal dimension - temporal properties
+Temporal properties concerns temporal features of an entity that compose a graph such as nodes, edges, and motifs. The temporal dimension can yield non-trivial temporal features such as interaction distribution (distribution of all edges overtime), interevent distribution (distribution of an edges/event over time), among others [[cite:&holme2012temporal;&holme2015modern]]. Interevent time distribution is the frequency distribution between the events. If the events are independent and drawn from a uniform distribution, then the inter-event time distribution will be exponential. However, empirical data set usually has fat-tailed, scale-free rather than uniform distribution. Coefficient of variation, bustiness, is used to characterized scale-free degree inter-event distribution.
+
+
+For static network, degree distribution is established itself as one of the most fundamental statistic. However, the argument does not hold true even for the simplest form of temporal network [[cite:&holme2015modern]]. Simple temporal feature such as time of node and edges first appearance, time interval of node/edges presents from beginning to the end under some conditions are more important factor concerning nodes dynamic and evolution of graph structure.
+
+Using data-driven approach, collected data usually contains too few data point to accurately measure temporal structure. Moreover, temporal structure, such as link burstiness, between node often has a fat-tailed distribution which is a problem when average over the value and most link occurs too little to be good representation of burstiness. Hence, we want to emphasize that quality of dataset that machine learning and deep learning models are trained on need to be improved by controlling quality over temporal properties of collected data. [[cite:&holme2015modern]]
+***** Bibliography :ignore:
+bibliography:/home/awannaphasch2016/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/reference.bib
+**** TODO Understand Dynamic Graph: Network/dynamic - dynamic behavior on graph
+Dynamic behavior on graph concerns non-graph temporal features, such as communication behavior between nodes and substructure like motifs, and process on the network such as diffusion cascades.
+***** Bibliography :ignore:
+bibliography:/home/awannaphasch2016/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/reference.bib
+**** TODO Understand Dynamic Graph: Network/dynamic - n-dimension topological evolution.
+n-dimension topological evolution [[cite:&holme2015modern;&barrosSurveyEmbeddingDynamic2021]].
+
+Lastly, n-dimension topological evolution involves structure evolution, features evolution, role evolution of nodes in a graph.
+***** Bibliography :ignore:
+bibliography:/home/awannaphasch2016/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/reference.bib
+**** TODO Understand Dynamic Graph: Network/structure - Input Graph Construction.
+:PROPERTIES:
+:EXPORT_FILE_NAME: Type Of Input Graph Construction Explained.
+:END:
+
+Dynamic graph construction is out of scope of this paper, but it is important to emphasize that model architecture is heavily dependent on input. Example of input graph construction are aggregated graph (edge-weighted graph [[cite:&qu2020continuous]]), synthetic link between static graph [[cite:&kapoor2020examining]], and different graph.
+
+In particular, according to dynamic graph modeling taxonomy [[cite:&kazemiRepresentationLearningDynamica]], this paper concerns continuous dynamic graph neural network (continuous DGNN). Continuous DGNN update information for every time an event (edge instance) occurs. Furthermore, these type of model can use temporal difference, time invertal between event, as input parameter. Neural network component can be used to approximate point process parameters. This approach is called temporal point process based model (TPP). On the other hand, neural network can be used to encode temporal pattern by learning representation of time embedding vector. TGN falls into this category.
+***** todo list :noexport:
+****** reread and rewrite the current content.
+***** Bibliography :ignore:
+bibliography:/home/awannaphasch2016/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/reference.bib
+
+**** TODO Understand Dynamic Graph: Network/structure - Edges Types (aka Variation of Network).
+:PROPERTIES:
+:EXPORT_FILE_NAME: Understand Dynamic Graph: Variation of Network.
+:END:
+network variation (link types e.g. homogeneous network, heterogenous network, multilayer network) [[cite:&wanna2022network]]
+***** Bibliography :ignore:
+bibliography:/home/awannaphasch2016/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/reference.bib
+
+*** dynamic graph tasks
+**** TODO Dynamic Graph Tasks: Taxonomy
+In general, performance between dynamic network based models are compared based on two main tasks link prediction and node classification. This is because these tasks are downstream task that can be tested on off-the-shelf approach. In static graph, link prediction task goal is to predict existence of pre-existence edges. On the other hand, according to Barros et al. [[cite:&barrosSurveyEmbeddingDynamic2021]], link prediction on dynamic graph task can be categorized into temporal link prediction and link completion. Similar to link prediction on static graph, link completion predicts existence of pre-existence edges at timestep $t$. Temporal link prediction task, on the other hands, predict new edges. In this paper, we evaluate models on temporal link prediction tasks.
+
+Dynamic node classification are less common compared to dynamic link prediction. This is because popular dataset for dynamic network tasks doesn't consider node labels. Commonly used dataset (within deep learning on dynamic graph domain) such as Reddit data provided node labels, but it is highly imbalance. Reddit data is used in the paper. In Dataset section, we will discuss the reproducible approach to create node labels for Reddit data.
+
+In attempt to solve general dynamic graph tasks models were evaluated on common tasks which includes link prediction (either temporal link prediction or link completion prediction) and dynamic node classification. Even when models were proposed to solve specific applications. It is still necessary that these papers provide evaluation on these common tasks. As a first step, dynamic network models literature extends existing static network models. Gu et al. [[cite:&qu2020continuous]] construct dynamic graph input into stack of weighted static graph by aggregating graph within fixed interval and feed the input to modified GCN model. More recently, models concerning continuous temporal granularity was purposed. TGAT was the first continuous DGNN to encode time by utilizing functional time embedding similar to time2vec. TGAT use information retrieval based attention which is parameterized by query, key, value --- first proposed by transformer [[cite:&vaswani2017attention]]. TGN [[cite:&rossi2020temporal]] adds memory module to TGAT. Our ensemble models is build on top of TGN.
+**** TODO Dynamic Graph Tasks: Dynamic Link prediction - temporal link prediction
+**** TODO Dynamic Graph Tasks: Dynamic Link prediction - link completion prediction
+**** TODO Dynamic Graph Tasks: Dynamic Node Classification -
+*** dynamic graph application
+**** TODO Dynamic Graph Applications: Taxonomy
+** Ensemble
+*** TODO Ensemble for Sequential Data.
+
+The goal of this blog is to establish generalized ensemble framework for sequential data. The way to do this is to use sliding window framework rather than train-val-test split as evaluation framework.
+
+Figure ref:dynamic-graph-diagram illustrate, at the bottom, dynamic graph diagram and, at the top, snapshot of a dynamic graph at specific timestep. This version of dynamic graph diagram is useful for visualizing sliding window on dynamic graph setting which we discuss in this section. In Figure ref:dynamic-graph-diagram, Dynamic graph diagram box denotes edge/node deletion and edge/node creation notation while the dynamic graph box at the top illustrate events that happens to the dynamic graph. Node creation is represented as the beginning of the thick horizontal line while the end of the line represent node deletion. Horizontal lines represent edges creation event. Arrow head of the horizontal line is direction of flow of edge event. No arrow means event can flow both way. Existence of edge event are represented as length of horizontal line attaches to horizontal line.
+
+Sliding window approaches turn any time series dataset into a supervised learning problem. Given that an instance in a dataset is an event with timestamp, train-test-split are a subset of sliding window where only one window is used for training and prediction. Consider dynamic networks observed at discrete time steps, $1,2,...,T$, the model is trained model on window $w_{t}$ where $t=1,2,...,T-1$ to predict score of $w_{\hat t}$ where $\hat t=2,3,...,T$, respectively. Because temporal properties of time window, $w$, depends on window size, $ws$, and interval of time, $\Delta t$, evaluating performance based on sliding window approach evaluate model's performance under various temporal conditions which depends on temporal properties such as temporal frequency, seasonality, cycles (business cycles, economy cycle, war, etc), serial correlation.
+
+Sliding window is specially important in dynamic based graph when applying ensemble models on top of dynamic graph models, as we will show later, overall performance depends on size of window, number of epoch per window, number of windows, number of batch per window, number of window, and time budget. Furthermore, sequence of windows allows one to apply a higher level of abstraction over sequence of events which may influence models design. Therefore, comparison between dynamic graph models are not fair without considering sliding window parameters and dynamic graph model parameters together.
+
+It is very important to understand that how DGNN update events --- stream data, one instance at a time, or in batch --- imply type of DGNN where continuous DGNNs train an event at a time while discrete DGNNs train batch of events at a time.
+
+#+name: dynamic-graph-diagram
+#+CAPTION: At the bottom box, dynamic graph diagram denote node/edge creation and deletion notation. The top box, dynamic graph, shows events that happens in the dynamic graph.
+#+attr_html: :width 500px
+[[file:~/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/images/dynamic-graph-diagram.png][dynamic graph diagram]]
+
+#+NAME: parameters
+#+CAPTION: Parameters symbols and descriptions
+|---------------------+---------------------------+--------------------------------------------------------------|
+|---------------------+---------------------------+--------------------------------------------------------------|
+|                     | parameters                | description                                                  |
+|---------------------+---------------------------+--------------------------------------------------------------|
+| window parameters   | $w_i$                     | i-th window                                                  |
+|                     | $ws$                      | window size                                                  |
+|                     | $\vert w \vert$           | number of window used during training                        |
+|                     | $bs$                      | batch size for a given window where $bs < ws$                |
+| temporal parameters | $stride$                  | window stride                                                |
+|                     | $pred\_next_{n}$          | predict instances that are in window that is n window away.  |
+|                     | $keep\_last\_n$           | number of window to keep as window slides forward            |
+|                     | $total\_training_windows$ | total number of instances to be trained for                  |
+|                     | $PW$                      | granularity of prediction. Prediction length during training |
+| ensemble parameters | $E_i$                     | i-th model in ensemble                                       |
+|                     | $\vert E \vert$           | number of models used in ensemble                            |
+|                     | $train\_w_{i}$            | i-th window is the first window to begin training            |
+
+#+name: pseducode for ensemble framework for sliding windows
+#+caption: pseducode for ensemble framework for sliding windows
+#+BEGIN_EXPORT latex
+\begin{algorithm}
+\begin{algorithmic}
+\REQUIRE  $Data$,$ws$,$bs$,$stride$,$C_{ws}$,$C_{PW}$
+\ENSURE $Score$
+\STATE $edge\_index = ws$
+\STATE $classifiers\_set = Empty$
+\WHILE{$edge\_index < data.size$}
+    \STATE $Ensembles = get\_all\_ensembles(window\_index, C_{ws})$
+    \FOR{each $index$ in $ensembles$}
+        \STATE $tepmoral\_parameters_set = get\_tepmoral\_parameters(C_{ws}, index)$
+        \FOR{$(pred\_next, keep\_last, stride)$ in $temporal_\_parameters\_set$}
+            \STATE $c = train\_classifier(pred\_next, keep\_last, strides, batch\_size, epoch)$
+            \STATE add $c$ to $classifier\_set$
+        \ENDFOR
+    \ENDFOR
+    \STATE $output = voting\_ensemble(classifier\_set)$
+\ENDWHILE
+\end{algorithmic}
+\end{algorithm}
+#+END_EXPORT
+
+
+#+name: symbols for ensemble framework
+#+CAPTION: symbols for ensemble framework
+#+attr_html: :width 500px
+[[file:~/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/images/screenshot_20220321_130824.png]]
+
+#+name: Ensemble Framework for Sliding Windows
+#+caption: Ensemble Framework for Sliding Windows
+#+attr_html: :width 500px
+[[file:~/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/images/screenshot_20220425_110609.png]]
+
+In sliding window evaluation setting, one needs to make sure proposed model and benchmark model is tested as fair as possible. Furthermore, to extract the most benefit from ensemble models, participated models should provide diverse predictive information. Table ref:parameters provides list of parameters that must be considered to maximize diversity of predictive information in ensemble models.
+
+According to Table ref:parameters, we categorize parameters of sliding window evaluation into four categories: windows parameters, temporal parameters, and ensemble parameter where each are collections of parameters and hyperparameters of windows, time, and ensembles models, respectively. Illustration of window parameters, temporal parameters, granularity parameters groups are provided in Figure ref:window_parameters, ref:temporal_parameters, and ref:granularity_parameters. Symbols used in figures followed Figure ref:symbols.
+
+# Granularity is determined by prediction length during training. This parameter is important because it tells the model to minimize its mistake for certain time interval. In the other word, a model whose prediction performance is optimized over 10 days will be different to model whose performance is optimized over one day. Larger model that is trained on larger granularity ignores short term stochasticity of temporal dependencies.
+
+It is important to note that temporal parameters can be applied "during ensemble formation" and "in-between ensemble formation." During ensemble formation referring to the modeling step where, given a fix set of training length, N number of individuals ensembles are trained. This step happens before finalize voting predictive score for an ensemble performance. On the other hand, in-between ensemble formation occurs after ensemble performance of the previous timestep is finalized and set of training instance is adjusted (window moves forward). This happens after previous training ended and before current training starts.
+
+#+name: ensemble_variation_2
+#+CAPTION: ensemble variation 2
+#+attr_html: :width 500px
+[[file:~/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/images/screenshot_20220425_110823.png]]
+
+# We proposed two ways of doing ensemble which are shown in Figure ref:ensemble_variation_1 and Figure. ref:ensemble_variation_2. Let fix =predict_name_n= to be 1, Figure. ref:ensemble_variation_1 has five windows from $w_0$ to $w_4$. Ensemble variation 1 output 3
+
+Using sliding window evaluation approach, there are a lot of combination of parameters that can effect model's predictive information. For this reason, one may consider using time budget to reduce size of solution space.
 
 * PhD
 :PROPERTIES:
 :ID:       46615078-5777-4487-8197-b1c6fd8641a0
 :END:
 :LOGBOOK:
+CLOCK: [2022-03-05 Sat 11:56]--[2022-03-05 Sat 11:57] =>  0:01
 CLOCK: [2022-03-03 Thu 18:32]--[2022-03-03 Thu 18:33] =>  0:01
 CLOCK: [2022-03-03 Thu 13:50]--[2022-03-03 Thu 13:51] =>  0:01
 CLOCK: [2022-03-03 Thu 12:05]--[2022-03-03 Thu 12:06] =>  0:01
@@ -54,63 +338,264 @@ CLOCK: [2022-02-20 Sun 22:56]--[2022-02-20 Sun 22:57] =>  0:01
 CLOCK: [2022-02-20 Sun 22:55]--[2022-02-20 Sun 22:56] =>  0:01
 CLOCK: [2022-02-20 Sun 22:52]--[2022-02-20 Sun 22:53] =>  0:01
 :END:
-** Waiting :WAITING:
-** Habits :habit:
+** Related to PhD Study (that doesn't belong to other)
+*** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:ID:       f440cd6a-8e4d-4e7c-b951-46e1e8cc9911
+:END:
+*** Notes :note:
+**** How to change from PhD to Master Degree?
+see email [[https://mail.google.com/mail/u/0/#inbox/QgrcJHsBqxpRxphrFrbFxqBNxmfBWVwvQPq][here]]
+**** FAU Cost per Credits hours
+- ref
+  - https://mail.google.com/mail/u/0/#inbox/QgrcJHsbgZwrgJGsHhbPkvGCVVZrkCTGVnq
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220419_180804.png]]
+**** Who do I contact regarding RA, TA and registration process?
+- ref
+  - https://mail.google.com/mail/u/0/#inbox/FMfcgzGmvpHMRLmXfhzWqqTMGbQncrxG
+Judy is Research Coordinator. She can help with RA stuff.
+Jean can help with registration process or related to my plan of study. Any things related to course work or forms needed for registration.
+Esther can help with TA related stuff.
+
+For tuition waiver, contact Esther or Judy.
+
+**** How to get tuition paid for?
+:PROPERTIES:
+:ID:       961b77fc-5470-4809-9b55-f9bebf516908
+:END:
+I either has to do 20 hours of GRA (Graduate Research Assistant) or GTA (Graduate Teaching Assistant).
+
+GRA is a position that is hired by a professor who has research (often the research is funded by a Grant). Task of GRA is to assignment by professor to do.
+
+GTA is a position that is hired by FAU. FAU will help pay for tuition with tuition waiver.
+
+TA application is open for summer & fall and spring. I need to check summer & fall to register summer and fall. I can't check just one of two option.
+**** NSF scholarship term and conditions.
+:PROPERTIES:
+:ID:       e437cc80-3645-4ae4-972a-7197b515f07a
+:END:
+the NSF award would only support 1/2 of your pay and tuition if you get a 10 hour TA. see this [[https://mail.google.com/mail/u/0/#sent/QgrcJHrnvrzxLdWtXSMqVLvRmsdsrcXcmtQ][mail]] for discussion.
+**** Tuition Benefits Policy for Graduate Students
+https://www.fau.edu/graduate/tuition-benefits/pdf/Tuition_Benefits_Policy_for_Graduate_Students.pdf
+*** Meeting :meeting:
+*** Schedule
+**** recurring :recurring:
+**** non-recurring :nonrecurring:
+:PROPERTIES:
+:ID:       f1a01fe4-5896-4546-9c4c-eb74cef4fd08
+:END:
+*** Delegation :waiting:
+*** Tasks
+**** actionable :actionable:
+***** TODO contact each of my advisors to explain to each of them about my PhD situations. (Why I am not making progress as I should.)
+:PROPERTIES:
+:ID:       2a357981-ce26-4857-a708-8320c9395bf9
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-14 Thu 19:49]--[2022-04-14 Thu 19:51] =>  0:02
+:END:
+[2022-04-14 Thu 19:49]
+**** incubation :incubation:
+** Writing Graduation Thesis
+*** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+*** Notes :note:
+*** Meeting :meeting:
+*** Schedule
+**** recurring :recurring:
+**** non-recurring :nonrecurring:
+*** Delegation :waiting:
+*** Tasks
+**** actionable :actionable:
+***** TODO Read about how to write Thesis for my PhD.
+SCHEDULED: <2022-05-05 Thu>
+:LOGBOOK:
+CLOCK: [2022-02-26 Sat 10:01]--[2022-02-26 Sat 10:02] =>  0:01
+:END:
+[2022-02-26 Sat 10:01]
+[[file:~/org/refile.org::*figure out a way to migrate content from roam research to emacs using org roam and others. What are features that I still need from roam research that may take too much time for me to implement or figure out to replicate in emacs?][figure out a way to migrate content from roam research to emacs using org roam and others. What are features that I still need from roam research that may take too much time for me to implement or figure out to replicate in emacs?]]
+***** TODO read about structure of PhD. how does it work? what is PhD candidate expected to do? what can he/she do? who should they contact? how to graduate?
+SCHEDULED: <2022-05-05 Thu>
+
+[2022-02-27 Sun 23:52]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*selects the project numbers of projects that have an employee with last name 'Smith' involved as manager, wheras the second nested query selects the project numbers of projects that have an employee with last name 'Smith' involved as work][selects the project numbers of projects that have an employee with last name 'Smith' involved as manager, wheras the second nested query selects the project numbers of projects that have an employee with last name 'Smith' involved as work]]
+**** incubation :incubation:
+** Working on next paper (whatever that mayb)
+:PROPERTIES:
+:ID:       5681fe75-6228-48cf-8c51-2c5a6d9478e9
+:END:
+*** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+*** Notes :note:
+****  question to answer to help with my own implementation
+***** figure out how tgn does semi-supervised learning for node classification.
+****** how does DDGCL uses GAN loss?
+****** what is DDGCL architecture like?
+****** is DDGCL generative or contrastive?
+****** is DDGCL reconstruct next window or current window?
+:PROPERTIES:
+:ID:       134b69d4-3b3f-4a2e-b27f-19e8477b3a90
+:END:
+****** to understand how DDGCL train, I have to read the following paper,
+1.MoCo
+2.E2E
+
+*** Meeting :meeting:
+*** Schedule
+**** recurring :recurring:
+**** non-recurring :nonrecurring:
+*** Delegation :waiting:
+:PROPERTIES:
+:ID:       6518db41-a658-4e54-a6d0-bc5029078238
+:END:
+*** Tasks
+**** actionable :actionable:
+**** incubation :incubation:
+***** collect literature that I read related to temporal graph and start connecting the dot between content. Think of doing this as building a solid ground to recall what I know and what I can do from knowning that I know what I know. (should I do it in emacs or roam research?)
+:LOGBOOK:
+CLOCK: [2022-02-24 Thu 22:50]--[2022-02-24 Thu 22:53] =>  0:03
+:END:
+[2022-02-24 Thu 22:50]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*domain defines all possible values for attribute.][domain defines all possible values for attribute.]]
+
+** Writing Ensemble Approaches for Streaming Networking Classification paper
+:LOGBOOK:
+CLOCK: [2022-03-17 Thu 10:45]--[2022-03-17 Thu 12:51] =>  2:06
+CLOCK: [2022-03-14 Mon 13:10]--[2022-03-14 Mon 13:39] =>  0:29
+CLOCK: [2022-03-14 Mon 11:50]--[2022-03-14 Mon 12:55] =>  1:05
+CLOCK: [2022-03-14 Mon 11:25]--[2022-03-14 Mon 11:44] =>  0:19
+CLOCK: [2022-03-14 Mon 10:54]--[2022-03-14 Mon 11:25] =>  0:31
+CLOCK: [2022-03-14 Mon 02:53]--[2022-03-14 Mon 03:37] =>  0:44
+CLOCK: [2022-03-14 Mon 02:48]--[2022-03-14 Mon 02:53] =>  0:05
+CLOCK: [2022-03-14 Mon 02:41]--[2022-03-14 Mon 02:48] =>  0:07
+CLOCK: [2022-03-14 Mon 01:39]--[2022-03-14 Mon 02:40] =>  1:01
+CLOCK: [2022-03-14 Mon 00:01]--[2022-03-14 Mon 00:17] =>  0:16
+CLOCK: [2022-03-13 Sun 23:29]--[2022-03-13 Sun 23:58] =>  0:29
+CLOCK: [2022-03-13 Sun 22:56]--[2022-03-13 Sun 23:28] =>  0:32
+CLOCK: [2022-03-13 Sun 22:50]--[2022-03-13 Sun 22:55] =>  0:05
+CLOCK: [2022-03-13 Sun 21:51]--[2022-03-13 Sun 22:24] =>  0:33
+CLOCK: [2022-03-04 Fri 16:02]--[2022-03-04 Fri 16:27] =>  0:25
+:END:
+*** Delegation :waiting:
+*** Habits :habit:
 :PROPERTIES:
 :CATEGORY: Habit
 :LOGGING: DONE(!)
 :ARCHIVE:  %s_archive::* Habits
 :END:
-*** TODO start daily writing and reading. (checkout template that I made for roam research to used as a building block. dont reinvent the wheel, but adjust things accordingly.) focus on synthesizing writing on PhD related topics. Could be something related to Thesis writing as well.
-:LOGBOOK:
-- State "DONE"       from "NEXT"       [2022-03-02 Wed 18:47]
-:END:
-[2022-02-26 Sat 16:56]
-[[file:~/org/PhD.org::*start daily writing and reading. (checkout template that I made for roam research to used as a building block. dont reinvent the wheel, but adjust things accordingly.) focus on synthesizing writing on PhD related topics. Could be something related to Thesis writing as well.][start daily writing and reading. (checkout template that I made for roam research to used as a building block. dont reinvent the wheel, but adjust things accordingly.) focus on synthesizing writing on PhD related topics. Could be something related to Thesis writing as well.]]
-SCHEDULED: <2022-03-03 Thu .+1d>
+**** NEXT 3 hrs research daily writing.
+SCHEDULED: <2022-05-06 Fri .+1d>
 :PROPERTIES:
 :STYLE: habit
 :REPEAT_TO_STATE: NEXT
 :END:
-*** TODO run some models on FAU HPC everyday. Related to PhD topics.
-SCHEDULED: <2022-03-03 Thu .+1d>
-:PROPERTIES:
-:REPEAT_TO_STATE: TODO
-:STYLE:    habit
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-05-05 Thu 02:10]
+- State "DONE"       from "NEXT"       [2022-04-11 Mon 14:36]
 :END:
-** Notes :NOTE:
-** Questions :QUESTION:
-** Meeting :MEETING:
-*** NEXT with Dr Zhu for Weekly progress report on PhD. Monday 2pm
-SCHEDULED: <2022-03-07 Mon 14:00 .+1w>
+***** refactor introduction to relative work.
+***** write psedocode
+**** NEXT 1 hr Daily PhD paper reading.
+SCHEDULED: <2022-05-06 Fri .+1d>
+:PROPERTIES:
+:REPEAT_TO_STATE: NEXT
+:STYLE:    habit
+:ID:       752a1386-e91d-441c-889f-1fd8fca6e9f2
+:END:
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-05-05 Thu 02:10]
+- State "DONE"       from "NEXT"       [2022-04-16 Sat 20:08]
+- State "DONE"       from "NEXT"       [2022-04-10 Sun 21:08]
+:END:
+***** Finish summarizing [[*Understand Dynamic Graph: Overview - Evolution Of Dynamic Graph Based Deep Learning Models (constantly update to be as up to date as possible)][Understand Dynamic Graph: Overview - Evolution Of Dynamic Graph Based Deep Learning Models (constantly update to be as up to date as possible)]]
+****** stop at "related work" section on "[[https://arxiv.org/pdf/1612.07659.pdf?ref=https://githubhelp.com][STRUCTURED SEQUENCE MODELING WITH GRAPH CONVOLUTIONAL RECURRENT NETWORK]]S".
+****** read WD-GCN after finish this read next dynamic graph in the time line.
+**** NEXT 1 hr. synthesize on topic related to my thesis (I can use content from my roam research.)
+SCHEDULED: <2022-05-07 Sat .+2d>
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: NEXT
+:ID:       b6d325c1-6a11-4a5b-bec6-90a034ee2b1b
+:END:
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-05-05 Thu 02:10]
+- State "DONE"       from "NEXT"       [2022-04-19 Tue 14:26]
+- State "DONE"       from "NEXT"       [2022-04-16 Sat 20:08]
+- State "DONE"       from "TODO"       [2022-04-11 Mon 16:13]
+- State "DONE"       from "TODO"       [2022-04-11 Mon 16:13]
+- State "DONE"       from "NEXT"       [2022-04-11 Mon 16:12]
+- State "DONE"       from "NEXT"       [2022-04-10 Sun 21:18]
+- State "DONE"       from "TODO"       [2022-04-08 Fri 12:39]
+:END:
+[2022-03-05 Sat 00:58]
+[[file:~/org/refile.org::*do daily synthesize topic related to my thesis using content from my roam research.][do daily synthesize topic related to my thesis using content from my roam research.]]
+***** finish writing [[*Evolution Of Dynamic Graph Based Deep Learning Models][Evolution Of Dynamic Graph Based Deep Learning Models]]
+*** Notes :NOTE:
+*** Questions :QUESTION:
+*** Meeting :MEETING:
+**** with Dr Zhu for Weekly progress report on PhD. Monday 2pm :CANCELLED:
+:PROPERTIES:
+:LAST_REPEAT: [2022-05-05 Thu 02:16]
+:END:
 :PROPERTIES:
 :LAST_REPEAT: [2022-02-28 Mon 16:53]
 :END:
 :LOGBOOK:
+- State "CANCELLED"  from              [2022-05-05 Thu 02:16] \\
+  somethink
+- State "CANCELLED"  from              [2022-05-05 Thu 02:16]
+- State "CANCELLED"  from              [2022-05-05 Thu 02:16]
 - State "DONE"       from "TODO"       [2022-02-28 Mon 16:53]
 - State "MEETING"    from "TODO"       [2022-02-27 Sun 12:00]
 - State "DONE"       from "TODO"       [2022-02-27 Sun 12:00]
 CLOCK: [2022-02-24 Thu 13:54]--[2022-02-24 Thu 14:41] =>  0:47
 :END:
 [2022-02-24 Thu 13:54]
-**** I notice that I worte description of the visualization incorrectly in  weekly progress report from 2/21/2022 - 2/24/2022.
-*** TODO with Dr Zhu for Weekly progress report on PhD. Thursday 2pm
-DEADLINE: <2022-03-03 Thu 14:00 .+1w>
-** Tasks
-*** Writing paper
-*** TODO question to answer to help with my own implementation :CANCELLED:
-**** figure out how tgn does semi-supervised learning for node classification.
-***** how does DDGCL uses GAN loss?
-***** what is DDGCL architecture like?
-***** is DDGCL generative or contrastive?
-***** is DDGCL reconstruct next window or current window?
-***** to understand how DDGCL train, I have to read the following paper,
-1.MoCo
-2.E2E
-*** TODO finalize conclusion of ensemble modele's performance on 10k instances.
-**** How many models given window size of 200 do I need to beat the benchmark? (I know that 48 models beat benchmark, I also know that ensemble with ws of 1000 and 9 models can't beat benchmark.)
-**** I need to increase number of models from 5 to 10. Does 10 models performance better? by how much?
-***** waiting on the following run from koko
+**** with Dr Zhu for Weekly progress report on PhD. Thursday 2pm
+:PROPERTIES:
+:LAST_REPEAT: [2022-03-04 Fri 01:13]
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from "TODO"       [2022-03-04 Fri 01:13] \\
+  I didn't finish task before the meeting
+:END:
+*** Schedule
+**** recurring :recurring:
+**** non-recurring :nonrecurring:
+***** complete first draft of Ensemble paper
+DEADLINE: <2022-05-13 Fri>
+*** Tasks
+**** actionable :actionable:
+***** TODO fix psedocode as dr Xhu suggestd.
+SCHEDULED: <2022-05-05 Thu>
+**** incubation :incubation:
+***** read [[https://arxiv.org/pdf/2104.11475.pdf][A study on Ensemble Learning for Time Series Forecasting and the need for Meta-Learning]]
+:PROPERTIES:
+:ID:       b1647026-a014-4942-b4a7-51d72d19c169
+:END:
+***** get conclusion from log results
+:PROPERTIES:
+:ID:       f8278f08-c946-4b0b-8e07-d1f0a06f991a
+:END:
+***** finalize conclusion of ensemble modele's performance on 10k instances.
+:PROPERTIES:
+:ID:       489755ca-4ea4-4513-ad7c-5b8a8697c718
+:END:
+****** How many models given window size of 200 do I need to beat the benchmark? (I know that 48 models beat benchmark, I also know that ensemble with ws of 1000 and 9 models can't beat benchmark.)
+****** I need to increase number of models from 5 to 10. Does 10 models performance better? by how much?
+******* waiting on the following run from koko
 #+BEGIN_SRC sh
 # log name is 1645725664.4413369
 /mnt/beegfs/home/awannaphasch2016/.conda/envs/py38/bin/python3 train_self_supervised.py -d reddit_10000 --use_memory --n_runs 1 --n_epoch 5 --bs 200  --ws_framework ensemble --custom_prefix tmp --ws_multiplier 1 --init_n_instances_as_multiple_of_ws 10
@@ -124,8 +609,8 @@ DEADLINE: <2022-03-03 Thu 14:00 .+1w>
 | /usr/bin/sh: | 1: | /mnt/beegfs/home/awannaphasch2016/.conda/envs/py38/bin/python3: | not | found                                                           |     |       |
 | $            |  $ | /usr/bin/sh:                                                    |  4: | /mnt/beegfs/home/awannaphasch2016/.conda/envs/py38/bin/python3: | not | found |
 
-**** I need to increase batch size from 200 to 1000. fix number of model to 5.
-***** waiting on the following run from koko
+****** I need to increase batch size from 200 to 1000. fix number of model to 5.
+******* waiting on the following run from koko
 #+BEGIN_SRC sh
 
 # log name is 1645727763.8540914
@@ -135,12 +620,12 @@ DEADLINE: <2022-03-03 Thu 14:00 .+1w>
 /mnt/beegfs/home/awannaphasch2016/.conda/envs/py38/bin/python3 train_self_supervised.py -d reddit_10000 --use_memory --n_runs 1 --n_epoch 5 --bs 1000  --ws_framework ensemble --custom_prefix tmp --ws_multiplier 1 --init_n_instances_as_multiple_of_ws 5 --fix_begin_data_ind_of_models_in_ensemble
 #+END_SRC
 
-**** get performance ensemble with original tgn models when train on 100k data and 200 1000 window size respectively.
-***** TODO add ap to node classification (after I test that it runs okay)
-***** TODO take a look at time encoding :CANCELLED:
+****** get performance ensemble with original tgn models when train on 100k data and 200 1000 window size respectively.
+******* add ap to node classification (after I test that it runs okay)
+******* take a look at time encoding :CANCELLED:
  - https://roamresearch.com/#/app/AdaptiveGraphStucture/page/9kGPbM8XG
 - https://www.google.com/search?q=time+encoding&rlz=1C1CHBF_enUS941US941&oq=time+encoding&aqs=chrome..69i57j0i512j0i20i263i512j0i512j0i22i30l6.4251j0j7&sourceid=chrome&ie=UTF-8
-***** TODO fix error in sliding_window :PhD:
+******* fix error in sliding_window :PhD:
 Traceback (most recent call last):
   File "<string>", line 1, in <module>
 NameError: name 'weight_observer_path' is not defined
@@ -149,104 +634,34 @@ CLOCK: [2022-02-22 Tue 15:23]--[2022-02-22 Tue 15:24] =>  0:01
 :END:
 [2022-02-22 Tue 15:23]
 [[file:/mnt/c/Users/terng/OneDrive/Documents/Working/tgn/evaluation/sliding_window.py::pd.DataFrame.from_dict(observer).to_pickle( str(weight_observer_path /weight_observer_file_name))]]
-***** NEXT make node classification work with the model. :@PhD:PhD:
+******* make node classification work with the model. :@PhD:PhD:
 :LOGBOOK:
 CLOCK: [2022-02-24 Thu 00:33]--[2022-02-24 Thu 00:34] =>  0:01
 :END:
 [2022-02-24 Thu 00:33]
 [[file:~/org/notes/emacs/packages/tramp-note.org::*tramp is buggy and freeze alot.][tramp is buggy and freeze alot.]]
-*** TODO add accuracy to link prediction log
-*** TODO finalize conclusion of ensemble modele's performance on 10k instances.
-:LOGBOOK:
-CLOCK: [2022-02-24 Thu 12:44]--[2022-02-24 Thu 12:45] =>  0:01
-:END:
-[2022-02-24 Thu 12:44]
-**** I need to increase number of models from 5 to 10. Does 10 models performance better? by how much?
-**** I need to increase batch size from 200 to 100. fix number of model to 5. Does bigger batch size performace better?
-**** compare ensemble with original tgn models.
-*** TODO collect literature that I read related to temporal graph and start connecting the dot between content. Think of doing this as building a solid ground to recall what I know and what I can do from knowning that I know what I know. (should I do it in emacs or roam research?)
-:LOGBOOK:
-CLOCK: [2022-02-24 Thu 22:50]--[2022-02-24 Thu 22:53] =>  0:03
-:END:
-[2022-02-24 Thu 22:50]
-[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*domain defines all possible values for attribute.][domain defines all possible values for attribute.]]
-*** TODO Read about how to write Thesis for my PhD.
-SCHEDULED: <2022-03-04 Fri>
-:LOGBOOK:
-CLOCK: [2022-02-26 Sat 10:01]--[2022-02-26 Sat 10:02] =>  0:01
-:END:
-[2022-02-26 Sat 10:01]
-[[file:~/org/refile.org::*figure out a way to migrate content from roam research to emacs using org roam and others. What are features that I still need from roam research that may take too much time for me to implement or figure out to replicate in emacs?][figure out a way to migrate content from roam research to emacs using org roam and others. What are features that I still need from roam research that may take too much time for me to implement or figure out to replicate in emacs?]]
-*** TODO draft content of the next paper. what are sections that I should have? what are references? collect logs of data I may need to use.
-SCHEDULED: <2022-03-04 Fri>
-:LOGBOOK:
-CLOCK: [2022-02-26 Sat 10:02]--[2022-02-26 Sat 10:03] =>  0:01
-:END:
-[2022-02-26 Sat 10:02]
-[[file:~/org/refile.org::*figure out a way to migrate content from roam research to emacs using org roam and others. What are features that I still need from roam research that may take too much time for me to implement or figure out to replicate in emacs?][figure out a way to migrate content from roam research to emacs using org roam and others. What are features that I still need from roam research that may take too much time for me to implement or figure out to replicate in emacs?]]
-*** TODO install and learn HPC slurm + emacs package. (slurm.el)
-SCHEDULED: <2022-03-04 Fri>
+****** I need to increase number of models from 5 to 10. Does 10 models performance better? by how much?
+****** compare ensemble with original tgn models.
+***** add accuracy to link prediction log
+***** install and learn HPC slurm + emacs package. (slurm.el)
 [2022-02-26 Sat 10:49]
 [[file:~/org/projects/sideprojects/garun/garun.org::*learn to use tramp to connect to aws container cloud.][learn to use tramp to connect to aws container cloud.]]
-*** TODO read and implement post from reddit titled "Latex export with Inkscape Images and Draw.io Graphs in org mode." :emacs:garun:
-:LOGBOOK:
-CLOCK: [2022-02-26 Sat 23:11]--[2022-02-26 Sat 23:12] =>  0:01
-:END:
-[2022-02-26 Sat 23:11]
-[[file:~/org/notes/networking-note.org::*multiplexing is the ability to send more htan one signal over a single line or connection. In OpenSSH, multipliexing can re-sue and existing outgoing TCP connection form ultiple concurrent SSH session to a remote SSH server, avoiding the overhead of creating a new TCP connection and reauthenticating each time.][multiplexing is the ability to send more htan one signal over a single line or connection. In OpenSSH, multipliexing can re-sue and existing outgoing TCP connection form ultiple concurrent SSH session to a remote SSH server, avoiding the overhead of creating a new TCP connection and reauthenticating each time.]]
-*** TODO figure out what I need to graduate from PhD. who do I talk to? what should I read? where do I get information? should I talk to dr zhu?
-SCHEDULED: <2022-03-03 Thu>
-:LOGBOOK:
-CLOCK: [2022-02-27 Sun 11:27]--[2022-02-27 Sun 11:28] =>  0:01
-:END:
-[2022-02-27 Sun 11:27]
-[[file:~/org/notes/getting-things-done-gtd-note.org::*Horizontal Focus][Horizontal Focus]]
-*** TODO Do i need to do 20 hours during summer to get tuition paid for? if yes, when can I register for summer TA?
-SCHEDULED: <2022-03-04 Fri>
-:LOGBOOK:
-CLOCK: [2022-02-27 Sun 11:28]--[2022-02-27 Sun 11:30] =>  0:02
-:END:
-[2022-02-27 Sun 11:28]
-[[file:~/org/notes/getting-things-done-gtd-note.org::*Horizontal Focus][Horizontal Focus]]
-*** TODO read about structure of PhD. how does it work? what is PhD candidate expected to do? what can he/she do? who should they contact? how to graduate?
-SCHEDULED: <2022-03-03 Thu>
-[2022-02-27 Sun 23:52]
-[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*selects the project numbers of projects that have an employee with last name 'Smith' involved as manager, wheras the second nested query selects the project numbers of projects that have an employee with last name 'Smith' involved as work][selects the project numbers of projects that have an employee with last name 'Smith' involved as manager, wheras the second nested query selects the project numbers of projects that have an employee with last name 'Smith' involved as work]]
-*** TODO how to send command via ssh to remote server?
+*****  how to send command via ssh to remote server?
 :LOGBOOK:
 CLOCK: [2022-02-28 Mon 08:55]--[2022-02-28 Mon 08:57] =>  0:02
 :END:
 [2022-02-28 Mon 08:55]
 [[file:~/org/PhD.org::*waiting on the following run from koko][waiting on the following run from koko]]
-*** TODO do a survey online on how peopel manage their research reference + make notes within emacs. (What are the tools stack they use? can I manage reference without Zotero? if I need to use Zotero, how can I make notes comfortable within emacs?)
-:LOGBOOK:
-CLOCK: [2022-02-28 Mon 10:12]--[2022-02-28 Mon 10:15] =>  0:03
-:END:
-[2022-02-28 Mon 10:12]
-[[file:~/org/refile.org::*figure out a way to use terminal in emacs full time.][figure out a way to use terminal in emacs full time.]]
-
-http://jacobzelko.com/workflow/
-*** TODO rearrange tasks related to PhD stuff.
-:LOGBOOK:
-CLOCK: [2022-02-28 Mon 17:25]--[2022-02-28 Mon 17:26] =>  0:01
-:END:
-[2022-02-28 Mon 17:25]
-[[file:~/org/PhD.org::*to understand how DDGCL train, I have to read the following paper,][to understand how DDGCL train, I have to read the following paper,]]
-*** TODO check dr zhu email and add IEEE template to overleaf online.
-SCHEDULED: <2022-03-03 Thu>
-:LOGBOOK:
-CLOCK: [2022-02-28 Mon 23:56]--[2022-02-28 Mon 23:57] =>  0:01
-:END:
-[2022-02-28 Mon 23:56]
-*** NEXT seriouly start learning latex.
-SCHEDULED: <2022-03-03 Thu>
-:LOGBOOK:
-CLOCK: [2022-03-03 Thu 11:51]--[2022-03-03 Thu 12:05] =>  0:14
-CLOCK: [2022-03-03 Thu 10:57]--[2022-03-03 Thu 11:07] =>  0:10
-CLOCK: [2022-03-03 Thu 09:38]--[2022-03-03 Thu 10:38] =>  1:00
-CLOCK: [2022-03-02 Wed 22:36]--[2022-03-02 Wed 22:37] =>  0:01
-:END:
-[2022-03-02 Wed 22:36]
-[[file:~/org/my-resume.org::*Photo & Tagline][Photo & Tagline]]
-*** TODO how to copy file from remote server to local server using Tramp?
+*****  how to copy file from remote server to local server using Tramp?
 [2022-03-03 Thu 00:01]
+***** dynamic link prediction papers to read
+:PROPERTIES:
+:ID:       85edd2e0-31d2-4e74-bc4a-6a3cf3990cc9
+:END:
+****** https://arxiv.org/abs/2106.06856
+****** https://ieeexplore.ieee.org/abstract/document/9378360
+****** https://ieeexplore.ieee.org/document/8761688
+****** https://arxiv.org/ftp/arxiv/papers/1206/1206.6394.pdf
+****** [[https://arxiv.org/pdf/1607.07330.pdf][Evaluating link prediction accuracy on dynamic networks iwth added and removed edges.]]
+This paper goes deeper into discussion regarding evaluation of link prediction on dynamic networks.
+It would be good to read to understand problem better, so I know how I can apply creativity.

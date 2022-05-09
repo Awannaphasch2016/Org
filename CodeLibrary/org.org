@@ -1,0 +1,12 @@
+#+PROPERTY: eval no-export
+* code library config
+:PROPERTIES:
+:ID:       21a74e9b-28ec-4e0f-9768-bdba3b420cac
+:END:
+#+BEGIN_SRC org :tangle config.org
+,** Code Library
+,#+BEGIN_SRC emacs-lisp
+(setq code-library-directory "~/org/CodeLibrary"
+      code-library-sync-to-gist t)
+,#+END_SRC
+#+END_SRC

@@ -1,0 +1,469 @@
+#+TITLE: Anatomy Of A Database System Note
+
+* Anatomy of Database system
+:PROPERTIES:
+:NOTER_DOCUMENT: /home/awannaphasch2016/org/papers/Anatomy-of-Database-System.pdf
+:NOTER_PAGE: [[pdf:~/org/papers/Anatomy-of-Database-System.pdf::47++0.00]]
+:END:
+** 1. Introduction
+:PROPERTIES:
+:ID:       fa692129-86e2-4438-9e05-836db39667e5
+:END:
+*** 1.1 Context
+#+caption: Main components of a DBMS
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220420_134602.png]]
+
+- process manager encapsulates and schedules the various takss in the system.
+- query processing engine
+- a shared transaction; contains storag, buffer management, concurrency, control and recovery;
+- shared utilities; memory management, disk space management, replication, and various batch utilities used for administration.
+*** 1.2 Structure of the Paper
+** 2. Process Models and hardware Architectures
+Decision of Process Models and hardware Architectures impacts scalability, protability, performnace of the database.
+*** 2.1 Uniprocessors and OS Threads
+:PROPERTIES:
+:ID:       219ef066-ec1a-4581-9525-276ddcc2b7a4
+:END:
+
+As a rule of thumbs, a good Server PRocess architecture provide non-blocking I/O, asynchronous I/O and a dispatcher thread to manage connection between client's requests and worker threads.
+
+list of process model from simplest to most sophisticated.
+- process per connection
+  sponse 1 process for each connection.
+  It is the easiest to implement because DMBS unit of work can be mapped to OS processes. The mapped OS processes still needs "shared memory" which can be accessed by all the processes to retrieve and send information about =shared data structure= (which live in =shared memory=) such as lock tables and buffer pools.
+
+- server process
+  There is a =dispatcher thread= listens for SQL commands.
+  Each commands runs in its own thread.
+
+- server process + I/O Processes
+  the model makes important assumption that asynchronous I/O is provided by the OS.
+  Each disk has a dedicated, single-threaded I/O.
+  This model allows DBMS to schedule an I/O requests of each disk separately. (because there is a dedicated thread.)
+
+  This model uses split-phase programming model [fn:1]. This involves two components: invoker and issued components. The first phrase is when invoker issues the command to another component and the second phrase is where the issued component notified invoker that the commands has complete executed.
+
+**** 2.1.1 Passing Data Across Threads
+Data can be passed across threads or process.
+
+***** The following interactions require data to be shared
+****** 1. disk I/O
+the most common asynchronous interaction in a database.
+the process involve
+1. issue an I/O requests
+2. while I/O is processed, a thread works on other pending tasks
+
+there are two I/O scenario
+1. DB I/O Requests: I/O for Buffer Pool
+   buffer pool contains caches table and index data.
+   The process architecture only concerns about buffer pool of heap data.
+
+   Data is move from buffer pool to disk in a unit of page.
+
+   A thread generate an I/O requests. The requests include free location of a page in buffer pool (called frame) and location on the disk. The thresh execute the requets by moving data from the disk to a frame.
+
+   reading and writing of pages are done asynchronously.
+
+2. Log I/O Requests: I/O for Log Tail.
+   database log is an array of entries stored on a set of disks. Log entries are generated during transaction processing. Log entries are placed in memory queue. The memory queue is called log tail. Log tail is periodically flush into log disk(s) in FIFO order. (synchronous)
+
+   transaction ==generate==> log entries ==store in==> log tail ==flush to==> disk.
+
+   commit transactions is infromed as complete if the entry log is flushed to disk. which is the end of query processing.
+
+   Performance Log I/O requests optimize trade off between logs latency and throughput. low commit latency means low throughput.
+****** 2. Client pulling data from buffer pool.
+This type of requests pull data based on users requests by moving data from disk to users.
+Query is optimized by predict requested data ahead of time. This is done by enqueuing results in advance of client requests.
+*** 2.2 DBMS Threads, OS Processe, and Mappings Between Them
+Main problem to discuss is existing solution regarding OS thread performance.
+
+For legacy, portability, and performance reason, commercial DBMS provides its own lightweight threads. The provided threads (instead of OS thread) do concurrent tasks in DMBS.
+
+Program manage these provided threads with asynchronous interfaces to control tasks scheduling routine. This requires reimplementation of OS logic in DBMS.
+
+These DBMS threads raise another set of design questions. How to map DBMS threads into OS processes?
+At the simplest level, the paper discuss mapping between DBMS threads and OS process. (no OS threads.)
+
+Without OS threads, one can map one DBMS thread per one physical devices that work with threads (CPU, disk). This assumption ensure mapping efficiency with absent of asynchronous I/O.
+
+**** 2.2.1 DBMS Threads, OS Threads and Current Commercial Systems
+To map between DBMS threads, OS process, and OS process, the paper focus on support of OS threads packages. the package may not efficient deal with ocncurrency needed by the DBMS.
+
+As OS threads matured, the mapping still use DBMS thread, but map them into OS threads rather than OS processes. This is easy to code. This focus on human layer to write more efficient code.
+
+Due to hardware design at the time of published, the collection of processes should be treat as a dispatchable unit. This is because memory size of a process is less than memory size on physical memory. Using a collection of processes alleviates this problem.
+
+The mapping can be configured as "Process-Per-User."
+
+*** 2.3 Parallelism, Process Models, and Memory Coordinate
+The section focuses on platforms with multiple CPUs. Multiple CPUs raise question on parallelism which  require solution for memory coordination.
+**** 2.3.1 Shared Memory
+shared memory means all processor can access the same RAM with similar performance.
+In this model, OS supports assignment of dispatchable units (Processes or threads) across processors, and all shared data structures continue to be accessible to all.
+
+The channel is to implement parallization of query execution across multiple CPUs.
+
+**** 2.3.2 Shared Nothing
+shared nothing parallel machine is a cluster of single-processor machines that communitcate over high-speed network interconnect. There is no direct access to memory of another processor.
+
+This can be built from collection of individual PCs. The platforms is called "clusters" and components PCs are called "blade servers."
+
+Query execution is parallized across multiple machines. To avoid data sharing, common architecture of these systems is to user "horizontal data partitioning." As the name suggested, it allows each processor to execute independently. Each machine will be assigned a data and it must be responsible with managing data such as locking and logging of the data.
+
+Query planner is responsible for partition data in tables and assign partitioned data to machines.
+Minimal processor coordination is required because data is assigned once at the beginning. For this reason, query execution performance depends on initial data partition by query planner.
+
+Data partition doesn't solve all the problem. processor coordination is still required to handle transaction completion, to provide load balancing, to support other mundane maintenance tasks such as exchanging control message to avoid deadlock detection among others.
+
+When partial failure happens, over all beahvior of DBMS is effected because there is no way to accessed parition data. The solution is to bring down all the machine and re implement query planner to exclude failed node. The second option is to skip the parition data that is stored in the failed node. The last approach is to employ redundancy schemes like "chained declustering," this spread copies of tuples across multiple nodes in the cluster. The approach trade off performance with redundancy.
+**** 2.3.3 Shared Disk
+Shared disk parallel machine is common in large non-cluster multiprocessors. The approach became more attractive as a result of development in Network Attached Storage (NAS) devices. NAS allows a network to be connected to a set of nodes.
+
+Same data can be copy into RAM on multiple machines. This model doesn't have any restriction on data sharing, so there is a need to explicitly coordinate data sharing. Distributed buffer pools contains share data.
+
+This model require complex code implementation. bad code can result in bottlenecks of workload.
+**** 2.3.4 None-Uniform Memory Acceess (NUMA)
+Access to remote data is significantly higher in this model.
+NUMA is similar to shared-nothing model because remote data is expensive and query planners avoid remote data access and treat it as shared-nothing system.
+
+*** 2.4 Admission Control
+:PROPERTIES:
+:ID:       2572fdca-94cb-4645-819f-c81c179fb5f2
+:END:
+This section address topic on managing concurrent requests.
+
+In general, workload increases from 0 to maximum then the workload radically decrease. The decrease of workflow happens when system "thrash." This happens when DBMS run out of memory pages in buffer pool. As a result, DBMS has to make time to replacing pages. In the other word, execution power is split to replace pages, hence, decrease in workload capability.
+
+This problem happens often with sorting, hash join, or query that required lots of memory. Another cause is dead lock which require system to be restarted. Lots of page switches in buffer pool happens during the restarts.
+
+Good admission control avoids thrashing and operate under thrashing threshold.
+
+The execution admission controller is aid by information provided by the query optimizer. This helps manage resources required by query.
+
+query plan does the following
+1. specify disk that the query will access and estimate number of I/Os per device
+2. estimates CPU load of the query based on operator in the query plan and number of tuples to be processed.
+3. estimate space to store data via memory footprint. (estimate future space of data from history of execution.)
+*** TODO 2.5 Standard Practice
+** 3. Storage Models
+This section concerns a design of DBMS as a choice of persistent storage.
+There are 2 options:
+1. direct interaction between driver and disks
+2. interaction with OS file system facilities
+These decision has impact on DBMS ability to control storage in space and time.
+Solution requires storage hierarchy.
+*** 3.1 Spatial Control
+This control where the data lie in disk.
+
+Sequenntial access to disk block is 10-100 times faster than random access.
+
+Disk density and disk arm have impact on the access speed.
+
+DBMS control spatial position of database lock on disk.
+
+**** raw disk access
+The best way is to requests directly to raw disk device interface because its address is a close approximation to physical storage location. Direct requests is required for peak access performance. Drawback of the technique is harder to port and DBA require entired disk which is expensive.
+
+The benefit of direct access is diluted as software and applications increase repositioning of data. (harder to predict location.)
+**** TODO create large file in OS file system to manage position of data.
+I don't really get how this one works.
+
+*** 3.2 Temporal Control: Buffering
+
+two problem that concern temporal control are correctness and performance.
+**** correctnesss
+Correctness of the data access depends on knowing time of disk write.
+Commit log must be sent to log decide before commit requests is sent to users.
+**** performance
+this is optimize with read-ahead (speculative reads) and write-behind (postponed, batched writes).
+File system logic depnds on continuity of physical byte offset in files which read and write require to make decision.
+
+Stream of reads in a query is often predictable to the DBMS, but the data may not be physically  contiguiouse on the disk. For this reason, predicting stream of data alone is not enough. In addition to stream of read, query planning require transaction information which contain in log tail so optimization efforts can be done by optimizing over transactions process by avoid lock contention and increase I/O throughput. This decision is made by DBMS because log tail is not available to OS.
+**** Dobule buffering
+double buffering is the extreme CPU overhead of memory copies. This happens as a consequence of increase in data redundancy (hence the name) to imporve correctness.
+
+Redundancy has 2 costs: waste of memory, waste time.
+
+In general, copying data may be a serious bottle nekc in DBMS performance. In practice, a well-tuned database is typically not I/O-bound. These database balance between demands and supply of data by manage buffer pool and disk I/O. Once the balance is acheived DBMS will be I/O-bound.
+
+*** 3.3 Buffer Management
+
+**** Frame
+Efficient database pages implement as a shared buffer pool. Buffer pool is organized as an array of frames.
+Frame is a region of memory of disk block. Note that frame doesn't have to be the same size as disk block, but fixed sized frames sidestep complexity of memory fragmentation and ease memory management.
+
+Block are copied from disk to frames (contained in buffer pool.
+
+The process of moving data from disk to memory requires "marshalling" which is a process of transforming memory representation of an object into data format suitable for storage or transmission.
+
+**** Page table
+page table is an array of metadata which maps virtual address and physical address. An entry in page table is assigned to a famme. Page table contains disk location. Page table is used to keep track changes of page. this information is used for "page replacement policy" to choose page to be replace when memory is overflow.
+
+In looping access patterns such as nested-loop join, recency of reference is a bad predictor of future. This is because first data and last data is in fact connected via loop, but is far apart in time. for this reason, LRU page replacement schemes known to perform poorly. To solve LRU poor performance, special LRU is implemented to account for nested-looped query.
+
+To improve on performance "page replacement policy," different page replacement strategy depends on the page type where primary index and secondary index employ different strategy. Example is Reiter's Domain Separation scheme.
+
+*** 3.4 Standard Practice
+allocate single large file in the filesystem on each disk and let DBMS manage placement of data via interfaces.
+** 4. Query Processor
+a relational query egines
+1. take a declaritaive SQL statement
+2. validates it
+3. create plan
+4. execute dataflow
+
+In general, relational query processing can be view as a single-user, single-threaded task. Concurrency is controled by [[*5 Transaction: Concurrency Control and Recovery][5 Transaction: Concurrency Control and Recovery]].
+
+query processor must explicitly pin and unpin buffer pool pages.
+
+The section focus on DML (Data Manipulation Language) statment including SELECT, INSERT, UPDATE, DELETE.
+*** 4.1 Parsing and Authorization
+parser check query for correctness and authorize whether user can execute the query. It then convert query to internal format.
+
+Syntax checking is done for correctness.
+
+Parser have 2 steps
+1. check for query correctness and table compatibility + convert to query to internal format.
+2. check for authorization and query constraint.
+
+During the first step, parser handles queries one "SELECT" block at a time.
+Parser works as followed.
+1. consider table in FROM one at a time.
+2. check if table is registered in catalog manager.
+   cacheing table may be performed at this stage. If it does, the command is added to internal query.
+3. check attribute reference in catalog.
+   This step internal data structure is refered from logic such as comparison operation. The compatibility of tables based on set operators are check at this step.
+
+During the authorization validation, parser check with catalog manager to ensure that usre has appropriate permission. It then validate violation of query constraints.
+**** 4.1.1 A note on Catalog management
+Catalog itself is stored as a set of tables in the database. Since catalog is a set of table, catalog is managed the same as other tables. However, for efficiency, cataglog is managed differently from normal tables. High traffic portions of the catalog is stored in main memory at the start of query process. Other catalog data is cached during parse time. (parse time happens before query processing)
+
+*** 4.2 Query Rewrite
+The goal of query rewrite is to simplify and optimize the query without chaining its semantics.
+
+Query rewriting is optimized using query input and metadata in catalog. No data is moved during the query rewriting.
+
+It rewrite internal representation of the query not the SQL statement.
+
+types of rewriting are the following
+**** view rewriting
+**** constraint arithmetic evaluation
+**** Logical rewriting of predicates
+**** semantic optimization
+**** subquery flattenin g and other heuristic rewrites.
+*** 4.3 Optimizer
+optimizer receive internal representation of query as input. Its job is to produce query plan which is a  dataflow diagram constructed as a graph of query operator.
+
+In early days, optimizer compile query plan into machine code. This is hardware specific and is not portable. To make compilation be cross-platform, query is interpreted (compiled to interpretable data structure) Compilation from interpreated data structure to machine code can be implemented individually.
+
+interpreated data structure can be either high-level abstraction (close to relational algebra notation) or op-codes. The paper only cover high-level abstraction for simplification.
+
+Types of query optimization
+**** plan space
+**** selectiveity estimation
+**** Search algorithm
+**** Parllelism
+**** Extensiblity
+**** Auto-tuning
+
+**** 4.3.1 A note on query compilaiton and recompilation
+The difficulties of query compilation happens during the selectivity estimation because optimizer uses "typical" values for estimation.
+
+In practice, query plan is pre-made manually to reduce overhead of query processing. This feature is used far more heavily than ad-hoc queries that are optimized at runtime.
+
+Reimplementation of query plans are necessary as database evolves. To help with query plan optimization, some vendors (e.g. IBM) put efforts in providing preditable performance. This lower frequency of query plan reoptimization. Other vendor (e.g. Microsoft) takes different approach by making their system self-tuning. This approach is done by frequently reoptimization plan, for example plan is adjusted as distribution of columns changes. This adaptive behavior is more efficent in dynamic environment.
+
+The distinction of the two approaches are self-reinforced by usecase of their customers. IBM focus on high performance which have predictable behavior while Microsoft focuses on low end.
+*** 4.4 Executor
+query executor receive query plan as input which is a fixed directed dataflow graph.
+Executor behavior depends heavily on level of abstraction provided by query plan. In low abstract such as op-code, executor acts similar to interpreter. In high abstraction, procedures are invoked based on operators presents in query plans.
+
+The modern query executor employ the iterator model which is a concept of object-oreinted programming where operators in query plan are implemented as object which extends =iterator= superclass.
+
+subclass of iterator (aka operator in query plan) can be used as input to any other. example of operators are filescan, indexscan, nested-loops join, etc.
+**** 4.4.1 Iterator Discussion
+property of iterator is that =they couple dataflow with control flow=. Iterator has =get_next()= call which return referenced data to a thread that called it. This means node in a graph can be ran by 1 thread because a thread returns in output with no side effect. Intuitively, the idea is similar to =pure function= in functional programming however the function is not pure because it is inspired by object-oriented design. This reduces bugs creation at the human-layer.
+
+***** single-threaded iterator architecture
+***** Parallel query execution
+In parallel query execution setting, there is no need for change in design of iterator. This is made possible by creating special exchange iterator which encapsulate parallelism and network communication.
+
+**** 4.4.2 Where's the Data?
+Iterator sidestep question of memory allocation during the query process. Each tuple has a fixed number of =tuple descriptor= pare-allocated: one for each of its inputs, and one for its output.
+
+The tuple descriptor is an array of column reference which each columns reference is composed of a reference to tuple and column offset of the tuple inside memory.
+
+Reference tuples in tuple descriptors can be stored in two ways. Firstly, tuples descriptor reference a BP-tuple which reside in pages in the buffer pool. The usage of page is tracked with pin count similar to other other pages. Secondly, tuple is allocated in memory heap, called "M-tuple".
+
+BP-tuple is located in buffer pool. M-tuple locates in memory-heaps. M-tuple is constructed by copy columns from the buffer pool. M-tuple is constructed during the query processing --- in-flight tuple structure. The benefit of copying tuple out of the buffer pool is when the tuple exists in the buffer pool for a long period of time. This is because space in buffer pool is more valuable than memory heap.
+
+The most efficient DBMS support both BP-tuples and M-tuples.
+**** 4.4.3 Data Modification Statement
+"Halloween problem" goes as following: "give everyone whose salary is under $20K a 10% raise." This results in repated raise of low-paid emplyee until they earn more than 20k.
+
+In this case, query plan is required to update tuples repeatedly before condition is satisfied then table is saved to update. The problem with this is that SQL semantics doesn't allowed an SQL  statement to "see" it own update.
+
+One way to do query plan is to avoid index on the updated column. (as of <2022-04-21 Thu>, I don't understand this.)
+Another way is to use batch =read-then-write scheme=. The operator return tuples to be modified and stored them in tempera file which are repeatedly scanned for update.
+*** 4.5 Access Methods
+Access methods manages access to data in disk such as heaps files (secondary index) and index files (primary index).
+
+search argument is passed to access methods layer because it is required by API access functions. Another reason to pass search argument is related to performance between heap scans as well as index scans.
+
+Access method execute on one tuple at a time.
+
+If SARG is satisfid, two outcomes are possible
+1. a page in buffer pool is pin.
+2. make a copy of the tuple to be returned.
+
+if SARG is not satisfied, two outcomes are possible
+1. pin count is decremented
+2. delete the copied tuple.
+
+SARGs allows =get_next()= calls to only return a tuple that satisfies, instead of all of tupels. As of <2022-04-21 Thu>, I can't really imagine why all tuple have to be returned because select conditions have to be validate somewhere, but I can't think of any where else other than during the page scan. If I am correct, ARGS is inevitable.
+
+Access methods have deep interactions with conccurency control and recovery of transaction.
+
+** 5 Transaction: Concurrency Control and Recovery
+transactional stroage manager have 4 deeply interwined components
+1. A lock manage for concurrency control
+2. A log manager for recovery
+3. A buffer pool for staging database I/Os
+4. Access methods for organizing data on disk
+
+*** 5.1 A Note on ACID
+ACID stands for
+- Atomicity
+  "all or nothing " guarantee of transaction.
+
+  Atomicity is guaranteed by locking (to prevent transient databse state) and logging (to ensure correctness of data that is visible). Logging confirms that transaction is complete, but locking is still required because logging doesn't guarantee state of data, hence data should be lock to guarantee state of data.
+
+- Consistency
+  A transaction can only commit if it leaves the database in a consistent state.
+
+  Consistency is managed by runtime checks. Recall that during constraint validation is done during query parsing step.
+
+- Isolation
+  concurrent transaction doesn't interact to each other.
+
+  Isolation is guaranteed by locking.
+
+- Durability
+  guarantee that the updates of a committed transaction will be visible in the database until they are overritten by another ocmmited tranaction.
+
+  Durability is guaranteed by logging.
+*** 5.2 Lock Manager and Latches
+seiralizability is a sequence of execution of transaction to be committed.
+
+**** 2PL
+In two-phase locking (2PL), transaction acquire locks on object before reading or writing them. Lock is released when transaction is commit or abort. This process is manage by =log manager=.
+
+Database locks refers to physical iterms (e.g. disk pages) or logical item (e.g. tuples, files). lock comes in different lock modes associated with lock-mode compability table.
+
+Lock manager can lock or remove locks in transaction. Other advance actions are lock_upgrade which upgrade logs to higher lock modes (e.g. shared mode to exclusive mode) and conditional_lock which must returns immediately to report whether it can perform lock if it cannot, considtional_lock actions will not wait in the queue.
+
+These functions are maintained by two data structure: a global lock table and transaction table. lock table contain hash key of lock names which is associated with modes. lock table store (transactionID, lock_mode). For transaction table which contain  (transactionID, pointer to thread state of transaction, list of pointers to all lock requests in the lock table). Tread state of a transaction is recorded to facilitate rescheduling for threads with waiting state. Pointer to locks quests are recorded to facilitate the removal of locks associated with target transaction.
+
+lock manager internally makes use of =deadlock detector DBMS thread=. The thread is periodically scan tables to look for deadlocks. If deadlock is found the same thread responsible for aborting one of the transaction involved in deadlocks.
+**** latch
+latch is an exclusion mechanism which provide exclusive access to internal DBMS data structure. Note that exclusivity is granted to DBMS data structure not DBMS thread.
+
+- latch resides in memory near the source they protect
+- latches are acquired or dropped by internal logic that control transaction.
+- locks requests takes factor of 10 more CPU cycles.
+
+latch API support latch(object, mode), unlatch(object) and conditional_latch(object,mode). latch modes are Shared and eXclusive.
+**** 5.2.1 Isolation Levels
+Isolation levels provides flexibility to serializability. Recall that definition of serializability requires all sequential transaction to be committed. The additional flexibility is consider weaker constraint, hence the name weak isolation scheme. Weak isolation schemes provides higher concurrency than strict serializability. The downside is ACID properties is not guaranteed.
+
+***** ANSI SQL isolation levels
+ANSI SQL define 4 "Isolution Levels" of a transaction as followed
+1. READ UNCOMMITTED
+   a transaction can read either committed or not committed data.
+   =READ UNCOMMITTED= is done with a read requests wihtout locks
+
+2. READ COMMITTED
+   a transaction read any committed data.
+   =READ COMMITTED= is done with a read requests that read committed data at any time but data must be locked during access and release after finish.
+
+3. REPEATABLE READ
+   a transaction read only one version of committed data.
+    =REPEATABLE READ= is done with a read requests that only can read data before or after end-of-transaction.
+4. SERIALIZABLE
+   No relaxation to serializability.
+
+The isolution levels doesn't provide declarative definition. Note that SQL is a declarative language which means SQL statement state desired output without implementation detail. The isolation levels is not declarative because its definition involve desired behavior in which transaction is expected to obey. hence, the definitions are ill-defined.
+
+***** TODO Additional level to ANSI SQL
+- CURSOR STABILITY
+- SNAPSHOT ISOLATION
+- READ CONSISTENCY
+*** 5.3 Log Manager
+log manager maintain durability of committed transaction. This facility "undo" like features by unroll aborted transaction to ensure atomicity. log manager maintain sequence of logs on disk and related data. Read logs should allow recreation of modified data that is proccessed by transaction provided in log. Logging must obey logging protocol.
+
+A standard lgoging protocol for database recovery is =Write-Ahead Loggin (WAL)= protocol. It consists of the following three steps.
+1. Each modification to database page should generate a log record. The record is flushed to log device before database page is flushed.
+2. Log must be flushed in order.
+3. log commit must be flushed to log device before commit requests returns as successful.
+
+The complexity of logging increases as a result of query optimization to improve performance. Efficient logs provides "fast path" (small log) toward transactions commit and provide high-performance rollback for quick recovery.
+
+To maximize speed of "fast path" log, "DIRECT, STEAL/NOT-FORCE" mode is used. The steps are as followed.
+1. object updated in place
+2. unpinned buffer pool frames can be "stolen" even if it contains uncommitted data.
+3. buffer pool pages doesn't need to be "forced" to flushed to database before commit requests returns to the user
+
+The policy gives the buffer manager freedom to manage memory and I/O policies. The policy allow data to be moved around between memory and disk independent of its committed state with a caveat that the process of moving data will not effect transactional correctness.
+
+The policy assume that undoing features is taken care of. The approach only suggest a way to optimize "fast path" log for high-performance logging.
+
+One to greatly improve crash recovery performance is to include database checkpoint. Unfortunately creation of Checkpoint is expensive during regular processing. More efficent checkpoint creation scheme is required. This is done by include only information just enough to perform log analysis and enable recreation of data structure during recovery.
+
+In addition to logging protocol for performance optimization, context in which transaction happens must also be logged. This includes "physical" information such as data structure specific to disk.
+*** 5.4 Locking and Logging in Indexes
+Index cannot be modified by user. It is managed by transactional schemes. The only job of transaction regarding index management can sum down to have index always returns trasactionally-consistentt tuple from database.
+**** TODO 5.4.1 Latching in B+-Trees
+B+ trees is stored in disk as pages. Data in B+ tree can be accessed with the buffer pool. This means there are possibility of deadlock where one index are required by write transactions by 2 or more threads. Deadlock problem is solved with 2PL. Note that transaction lock locks data within a page from access and locking data is undesired because the goal is to achieve concurrency.
+
+To avoid page lock that exists in 2PL, latches-bases schemes  have been developed. The key design involve change tree's =physical structure=. Physical structure emphasize on how data is stored physically on the disk. Example of modification of tree's physical structure is splitting page. These modification can be made outside of transactions with an assumption that all data can be correctly access.
+
+The paper mentions three latches-based schemes to avoid deadlocks in 2PL. These schemes introduce logic for =special-case currenency=.
+1. Conservative Schemes
+2. Latch-coupling schemes
+3. Right-link schemes
+**** 5.4.2 Logging for Physical Structures
+This section involves logic for =special-case logging=. This additional logging logic increase complexity in the code but make logging and recovery more efficient. The main idea is to partially keep structural index when transaction is aborted. The kept changes is assume to be isolated. In the other word, no other transaction interacts with the kept changes. Example of these structural changes are page splitting during inserting transaction. This reduces work required for recovery.
+
+Information whether to keep these structural index changes when apply "undo" process must be contained during the logging process. "redo-only" should be labeled for structural index changes that can be kept, otherwise the label is omitted.
+
+Transaction can results in repeatedly change in structure index. This implies some multiple step of structural index can be merged together into 1 step. ARIES calls this scenario =nested top actions=.
+**** 5.4.3 Next-Key Locking: Physical Surrogates for Logical Properties
+This section address challenge to provide full seriazability while allowing for tuple-record locks.
+
+One way to prevent the table from being modified is to latched the table. However, users don't have access to implement latching. Furthermore, given that users can manually latch the table. This will result in latched-deadlocks. In practice, latched-deadlock is a result of bug in DBMS code. Therefore, latching a table is not an option in this scenario.
+
+Accessing tuple with index are prone to phantom problems. Phantom problems occur when a transaction access tuples via an index in concurrency transaction environment. This occurs because when index is provided target tuple can be directly accessed. Therefore, in the case of value-range access, it is possible that concurrency transaction insert new tuple between the access value-range index. As a result, executing multiple select value-range query at different time step can result in different output record.
+
+Alternative to latching, locking mechanism is employed to prevent phantom problem. In principle, lock needs to lock logical spaces represented by query predicate. Note that predicate is a statement that evaluate to boolean value. This process is called =predicate locking= which is known to be expensive. This is because it requires a way to compare tuple overlap between arbitrary predicates. This can be done with hash-based lock table.
+
+Standard solution to phantom problem in B+tree is called "next-key locking." Next key locking modifies index insertion code to allocation an exclusive lock on the "next-key" tuple that exists in the index. Say inserted key is at k index, k+1 index is exclusively locked. This guarantees that no tuple can be inserted at k+1 which would be inbetween the previously inserted key and exclusively locked key.
+
+"next-key locking" is clever in that it uses physical object resources (a tuple stored on a disk) to solve logical concept (a predicate). In this case, physical object resources is considered as a semantic information. Because of rarity of its usecase, it is often overlooked by system designer.
+
+
+*** 5.5 Interdepedencies of Tranactional Stroage
+
+** 6. Shared Components
+*** 6.1 Memory Allocation
+**** 6.1.1 A Note on Memory Allocation for Query Operators
+*** 6.2 Disk Management Subsystems
+modularity of storage device is easy for user to setup and install, but it complicates DBMS implementations.
+*** 6.3 Replication Services
+*** 6.4 Batch Utilities
+** 7. Conclustion
+
+* Footnotes
+
+[fn:1] [[https://userpages.uni-koblenz.de/~unikorn/lehre/drako/ws14/04%20Sensornetze%20(VL15).pdf][split phrase programming]]

@@ -1,0 +1,25 @@
+#+TITLE: Adam Website Note
+
+* Adam Website
+** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+** Notes :note:
+** Meeting :meeting:
+** Schedule
+*** recurring :recurring:
+*** non-recurring :nonrecurring:
+** Delegation :waiting:
+** Tasks
+*** actionable :actionable:
+**** TODO check message from adam and update the site.
+SCHEDULED: <2022-05-05 Thu>
+:PROPERTIES:
+:ID:       f45907cf-0133-4370-9c2f-c14838c0f149
+:END:
+[2022-05-05 Thu 02:40]
+[[file:~/org/notes/blockchains/blockchain-note.org::*read blockchain papers. 1 hr.][read blockchain papers. 1 hr.]]
+*** incubation :incubation:

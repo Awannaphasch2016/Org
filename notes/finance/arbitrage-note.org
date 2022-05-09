@@ -1,0 +1,27 @@
+#+TITLE: Arbitrage Note
+
+* Blog :blog:
+** TODO survey on MEV arbitrage and MEV research
+- ref
+  - [[https://medium.com/dragonfly-research/we-live-in-a-mempool-backrunning-the-mev-crisis-a4ea0b493b05][Good mini survey on MEV mitigation strat]]
+*** frontrunner
+:PROPERTIES:
+:ID:       b353796e-f128-4135-8b55-f3d3e9b7166c
+:END:
+Frontrunner is a block that get information from block that received recent transaction. Frontrunner runs transaction address locally to check if a executing MEV strategy will result in profits. Profits is gained from taking winning reward (MEV) from winning block. In practice, frontrunner block imitates a winning block by simply replacing an address of the winning block with its own. Frontrunner increase market efficiency by speed up information propagation across block chain network.
+
+A significant portion of MEV transactions is routed through Flashbots, meaning generalized frontrunners aren't as effective as they used to be.
+
+*** gas golfing
+gas golfing is a techniques to reduce gas usage to execute MEV strategy.
+
+A few well-known gas golf techniques include: using addresses that start with a long string of zeroes (e.g. 0x0000000000C521824EaFf97Eac7B73B084ef9306) since they take less space (and hence gas) to store; and leaving small ERC-20 token balances in contracts, since it costs more gas to initialize a storage slot (the case if the balance is 0) than to update a storage slot. Finding more techniques to reduce gas usage is an active area of research among searchers.
+* Terminologies
+:PROPERTIES:
+:ID:       59246bde-0ea6-4c66-a24a-5626aa863812
+:END:
+** [[https://coinmarketcap.com/alexandria/glossary/slippage][slippage]]
+:PROPERTIES:
+:ID:       4391ab65-72d7-4ae7-9489-18ccc91718e1
+:END:
+**

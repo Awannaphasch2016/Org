@@ -1,0 +1,86 @@
+#+TITLE: Discord Note
+#+filetags: discord
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+
+
+* Reference
+** [[https://jagrosh.com/][jagrosh]]
+he write lots of discord's bots
+he wrote [[https://gist.github.com/jagrosh/342324d7084c9ebdac2fa3d0cd759d10][how to grow discord community article]]
+* blog :blog:
+** TODO How to create discord bots to get update from github repo?
+:PROPERTIES:
+:ID:       eed0a5b0-a73f-486d-a57c-ca16bdfe091d
+:END:
+- reference
+  - https://www.youtube.com/watch?v=ibtXXoMxaho&ab_channel=TheCodingTrain
+go to discord website to build discord bot. (https://discord.com/developers/docs/intro)
+
+add bot by adding client-AI (found at OAuth2 General on <2022-04-09 Sat> )
+https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&scope=bot
+
+youtube: https://www.youtube.com/watch?v=7A-bnPlxj4k&list=PLRqwX-V7Uu6avBYxeBSwF48YhAnSn_sA4&ab_channel=TheCodingTrain
+
+create folder -> npm init
+
+install discord.js with ~npm install discord.js~
+
+get bot token (bot -> reset Token for the first time to get the token.)
+
+firstly, one connects github repo to a website using Github Webhook feature, see [[https://docs.github.com/en/developers/webhooks-and-events/webhooks/about-webhooks][here]]. This means github will send notification to the website url when the target event occurs. Next, one need to get the bot to be aware of the events on the website.
+
+A discord server bot can get an event from returned objects from website registered in Github Webhook by using one of the HTTP methods including post/get/delete/patch/modify. What are all the required objects returned from webhooks that a bot need to produce new message to a target channel.
+
+1. bot has to know about webhook that is register to github.
+2. what do I need to make new message from webhook.
+3. what are events in discord.js that produce new message?
+4. get figure out how to get a webhook object.
+
+- reference
+ - [[https://www.youtube.com/watch?v=xuB1WQVM3R8&ab_channel=FoxyTechTips][How to find your Discord Token]]
+
+** TODO step by step of how to grow discord server/community
+:PROPERTIES:
+:ID:       7334cdee-5d73-4b82-b9f6-ed0cab722e3a
+:END:
+structure of cateogries and channels of discord server are as followed.
+- when to start a channel
+  - discord should have topic to focus on.
+  - what are the benefit of members joining the discord channel
+    easily get help. (how do we fix this?)
+    centralized of information related to Semosis project.
+  - invite other
+    put create-instant-invite in rules channel.
+  - How to use bot
+    - never give role for new member right away. (this equivalent of setting Verification Level to "None")
+    - use bot to check for valid account by sending thme e-mail to confirm (avoid spam)
+    - never give bot more permission that they need
+- advertising
+  - listing sites
+  - eternal outreach
+    - reddit
+    - ycombinator
+
+appearance
+- add emoji to channel (this distinguish the discord server to other serve that it shows that we care.)
+
+rules
+- In order to engage with the X server, you must make an intro in 🌈｜introductions: What are your skills? What projects are you working on/interested in? What do you hope to do at Seed Club?
+  - note
+    - make sure there is 10 mins time contraints before one can introduce themselves in introductions. This force interested member to look around and read content to prepare them better before joining.
+- tell member who to contact regarding X topics.
+- If you see something against the rules or something that makes you feel unsafe, let staff know. We want this server to be a welcoming space.
+- Treat everyone with respect. We have a zero-tolerance policy for toxic behavior. Absolutely no harassment, witch hunting, sexism, racism, or hate speech will be tolerated.
+- No spam or repetitive self-promotion (server invites, advertisements, etc.) without permission from a staff member. This includes DMing fellow members.
+- No NSFW or obscene content. This includes text, images, or links featuring nudity, sex, hard violence, or other graphically disturbing content.
+- Follow Discord's Terms of Service ([https://discord.com/terms](https://discord.com/terms))
+
+
+part of introduction
+- survey as part of introduction.
+  - member should take a survey (use airtable.) so main contributors know to leverage new member skills. (similar to how seed club does it.)
+    - don't show full length at once. incrementally add more rows as users give answer.
+- put a link in the introduction to open community standards page (using notions)
+- put mission statement, philosophy the project follows in introduction.
+
+Post jobs/roles positions so main contributors knows who to assigned task to.

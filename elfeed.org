@@ -1,0 +1,15 @@
+#+TITLE: elfeed
+#+filetags: elfeed
+
+* root :elfeed:
+** Programming :programming:
+** News :news:
+*** Top news :tops:
+** Command Line :cmd:
+*** https://www.reddit.com/r/commandline.rss
+** Emacs :emacs:
+*** https://www.reddit.com/r/emacs.rss
+*** org mode :orgmode:
+**** https://www.reddit.com/r/orgmode.rss
+*** doom emacs :doomemacs:
+**** https://www.reddit.com/r/DoomEmacs.rss

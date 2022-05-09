@@ -13,9 +13,18 @@ def fib(n: Int): Int = {
 
 fib(5) // should be(5)
 #+END_SRC
-
 * Exercise 3: Functional Data Structures
+:PROPERTIES:
+:ID:       7cde6cd6-d6fe-437d-bb7b-a75ead1a091a
+:END:
+what is from and find?
+from function?
+
+def find(p: (A) => Boolean: Option[A] )
 * Exercise 4: Handling Error Without Exceptions
+:PROPERTIES:
+:ID:       4fae3d89-2a3c-43a4-99fe-11a50bceeb2b
+:END:
 * Exercise 5: Strictness And Laziness
 * Exercise 6: Pure Functional State
 * Exercise 7: Purely Functional Parallelism

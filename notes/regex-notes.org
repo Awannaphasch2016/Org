@@ -2,6 +2,9 @@
 
 
 * Foundations
+:PROPERTIES:
+:ID:       189b43ae-a133-4f0d-ab6d-1f29cfa85966
+:END:
 ref:
 [[https://www.rexegg.com/regex-quickstart.html][Quick-Start: Regex Cheat Sheet]] ( this is good. very concise and to the point.)
 
@@ -9,11 +12,28 @@ I make notes on some of the notation that is harder to find from website.
 
 | notation | description |
 | \^       | not         |
+| (?N:)    | select      |
 
 ** [[https://www.rexegg.com/regex-quickstart.html#logic][Group]] (=()=) vs [[https://www.rexegg.com/regex-quickstart.html#classes][Character Classses]] (=[]=)
 group is usually represented by =(group)=
 Character classes is represented by =[character class]=
+** Inline modifier
 
-
+* Types of regular expression
+** Perl compatible regular expression (PCRE)
+** emacs regex
 * Examples
 [[file:books/data-science-at-cmd.org::*using back references to substitute with matched regex by index.][using back references to substitute with matched regex by index.]]
+#+BEGIN_SRC
+ [-+[:digit:]]                     digit or + or - sign
+ \(\+\|-\)?[0-9]+\(\.[0-9]+\)?     decimal number (-2 or 1.5 but not .2 or 1.)
+ \&lt;\(\w+\) +\1\&gt;                     two consecutive, identical words
+ \&lt;[[:upper:]]\w*                  word starting with an uppercase letter
+  +$                               trailing whitespaces (note the starting SPC)
+ \w\{20,\}                         word with 20 letters or more
+ \w+phony\&gt;                        word ending by phony
+ \(19\|20\)[0-9]\{2\}              year 1900-2099
+ ^.\{6,\}                          at least 6 symbols
+ ^[a-zA-Z0-9_]\{3,16\}$            decent string for a user name
+ <tag[^> C-q C-j ]*>\(.*?\)</tag>  html tag
+#+END_SRC

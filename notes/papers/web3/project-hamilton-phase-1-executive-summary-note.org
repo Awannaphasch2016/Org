@@ -1,0 +1,609 @@
+#+TITLE: Project Hamilton Phase 1 Executive Summary Note
+
+* Project Hamilton Phase 1 Executive Summary Note
+:PROPERTIES:
+:NOTER_DOCUMENT: ../../../papers/web3/project--hamilton-phase-1-executive-summary.pdf
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::1++4.73]]
+:ID:       7caae7a3-1d7e-49a5-89c7-43a54a92f383
+:END:
+
+** Skeleton
+
+*** Link on page 3: [[https://github.com/mit-dci/opencbdc-tx][https://github.com/mit-dci/opencbdc-tx]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::3++0.877602]]
+:ID:       ce69c481-b7e8-4576-9e3c-6793e7e0b327
+:END:
+
+*** Link on page 7: [[https://www.bis.org/publ/othp33.pdf][igital currencies: foundational principles and core features. BIS Working Group, 2020. https://www.bis.org/publ/othp33.pdf. [4] P. A. Bernstein, V. Hadzilacos, and N. Goodman. Concurrency control an]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::7++0.249735]]
+:END:
+
+*** Link on page 7: [[https://www.bis.org/publ/bppdf/bispap114.htm][bank digital currency. BIS Papers No 114, 2021. https://www.bis.org/publ/bppdf/bispap114.htm. [6] Central Bank of The Bahamas. Sand dolla]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::7++0.352008]]
+:END:
+
+*** Link on page 7: [[https://www.sanddollar.bs/][https://www.sanddollar.bs. [7] Committee on Payments and Market Infrastructures Markets Committe]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::7++0.377008]]
+:END:
+
+*** Link on page 7: [[https://www.elibrary.imf.org/view/journals/%20001/2020/104/001.2020.issue-104-en.xml][urpe, and P. Zhou. A survey of re-search on retail central]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::7++0.708801]]
+:END:
+
+*** Link on page 7: [[https://www.elibrary.imf.org/view/journals/%20001/2020/104/001.2020.issue-104-en.xml][bank digital currency, 2020. https://www.elibrary.imf.org/view/journals/ 001/2020/104/001.2020.issue-104-en.xml. [14] B. W. Lampson. Atomic transactions. I]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::7++0.726225]]
+:END:
+
+*** Link on page 8: [[https://www.riksbank.se/en-gb/payments--cash/e-krona/technical-solution-for-the-e-krona-pilot/][[18] Sveriges Riksbank. E-krona pilot phase 1. Sveriges Riks-bank Report, 2021. https://www.riksbank.se/en-gb/payments--cash/e-krona/technical-solution-for-the-e- krona-pilot/. [19] A. Usher, E. Reshidi, F. Rivadeneyra, S. Hendry, et al. The positive case for a CBDC.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::8++0.228775]]
+:END:
+
+*** Link on page 8: [[https://www.riksbank.se/en-gb/payments--cash/e-krona/technical-solution-for-the-e-krona-pilot/][https://www.riksbank.se/en-gb/payments--cash/e-krona/technical-solution-for-the-e- krona-pilot/. [19] A. Ushe]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::8++0.246199]]
+:END:
+
+*** Link on page 9: [[https://github.com/mit-dci/opencbdc-tx][https://github.com/mit-dci/opencbdc-tx]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::9++0.899134]]
+:END:
+
+*** Link on page 30: [[https://github.com/mit-dci/opencbdc-tx][https://github.com/mit-dci/opencbdc-tx]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::30++0.899134]]
+:ID:       48407d33-fba1-49aa-b013-8afbeaf8f602
+:END:
+*** References
+**** Link on page 41: [[https://libertystreeteconomics.newyorkfed.org/2021/12/why-central-bank-digital-currencies/][https://libertystreeteconomics.newyorkfed.org/2021/12/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::41++0.268521]]
+:END:
+
+**** Link on page 41: [[https://libertystreeteconomics.newyorkfed.org/2021/12/why-central-bank-digital-currencies/][why-central-bank-digital-currencies/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::41++0.280471]]
+:END:
+
+**** Link on page 41: [[https://eprint.iacr.org/2012/351][https:]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::41++0.308795]]
+:END:
+
+**** Link on page 41: [[https://eprint.iacr.org/2012/351][//eprint.iacr.org/2012/351.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::41++0.320746]]
+:END:
+
+**** Link on page 41: [[https://www.bis.org/cpmi/publ/d154.pdf][https://www.bis.org/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::41++0.361021]]
+:END:
+
+**** Link on page 41: [[https://www.bis.org/cpmi/publ/d154.pdf][cpmi/publ/d154.pdf.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::41++0.372971]]
+:END:
+
+**** Link on page 41: [[https://stats.bis.org/statx/toc/CPMI.html][Bank for International Settlements. BIS statistics explorer, 2019. https://stats.bis.org/statx/toc/CPMI.html]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::41++0.401295]]
+:END:
+
+**** Link on page 41: [[https://www.bis.org/publ/othp42_system_design.pdf][https:]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::41++0.469895]]
+:END:
+
+**** Link on page 41: [[https://www.bis.org/publ/othp42_system_design.pdf][//www.bis.org/publ/othp42 system design.pdf]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::41++0.481846]]
+:END:
+
+**** Link on page 41: [[https://www.bis.org/publ/othp33.pdf][https://www.bis.org/publ/othp33.pdf]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::41++0.522121]]
+:END:
+
+**** Link on page 41: [[https://www.bankofengland.co.uk/-/media/boe/files/paper/2020/central-bank-digital-currency-opportunities-challenges-and-design.pdf][https://www.bankofengland.co.uk/-]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::41++0.550446]]
+:END:
+
+**** Link on page 41: [[https://www.bankofengland.co.uk/-/media/boe/files/paper/2020/central-bank-digital-currency-opportunities-challenges-and-design.pdf][]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::41++0.562395]]
+:END:
+
+**** Link on page 41: [[https://www.bankofengland.co.uk/-/media/boe/files/paper/2020/central-bank-digital-currency-opportunities-challenges-and-design.pdf][opportunities-challenges-and-design.pdf.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::41++0.574346]]
+:END:
+
+**** Link on page 41: [[https://www.bot.or.th/English/FinancialMarkets/ProjectInthanon/Documents/20210308_CBDC.pdf][rency: The future of payments for corporates, 2021. https:]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::41++0.60267]]
+:END:
+
+**** Link on page 41: [[https://www.bot.or.th/English/FinancialMarkets/ProjectInthanon/Documents/20210308_CBDC.pdf][]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::41++0.614621]]
+:END:
+
+**** Link on page 41: [[https://www.bot.or.th/English/FinancialMarkets/ProjectInthanon/Documents/20210308_CBDC.pdf][Documents/20210308 CBDC.pdf.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::41++0.626571]]
+:END:
+
+**** Link on page 41: [[https://www.binance.com/en/busd][https://www.binance.com/en/busd]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::41++0.76377]]
+:END:
+
+**** Link on page 41: [[https://github.com/bitcoin/bitcoin][https://github.com/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::41++0.780145]]
+:END:
+
+**** Link on page 41: [[https://github.com/bitcoin/bitcoin][Bitcoin Core Developers. bitcoin/bitcoin]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::41++0.792095]]
+:END:
+
+**** Link on page 41: [[https://github.com/bitcoin-core/secp256k1][https://github.com/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::41++0.80847]]
+:END:
+
+**** Link on page 41: [[https://github.com/bitcoin-core/secp256k1][Bitcoin Core Developers. bitcoin-core/secp256k1.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::41++0.82042]]
+:END:
+
+**** Link on page 41: [[https://www.bis.org/publ/bppdf/bispap114.htm][https://www.bis.org/publ/bppdf/bispap114.htm]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::41++0.860694]]
+:END:
+
+**** Link on page 42: [[https://github.com/eBay/NuRaft][https://github.com/eBay/NuRaft]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.095367]]
+:END:
+
+**** Link on page 42: [[https://fasterdata.es.net/host-tuning/linux/][https://fasterdata.es.net/host-tuning/linux/.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.110967]]
+:END:
+
+**** Link on page 42: [[https://eprint.iacr.org/2018/962][https://eprint.iacr.org/2018/962]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.131217]]
+:END:
+
+**** Link on page 42: [[https://www.federalreserve.gov/newsevents/speech/brainard20191218a.htm][https://www.federalreserve.gov/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.15978]]
+:END:
+
+**** Link on page 42: [[https://www.federalreserve.gov/newsevents/speech/brainard20191218a.htm][newsevents/speech/brainard20191218a.htm]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.171731]]
+:END:
+
+**** Link on page 42: [[https://github.com/ethereum/solidity][https://github.com/ethereum/solidity]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.178018]]
+:END:
+
+**** Link on page 42: [[https://www.ecb.europa.eu/press/pr/date/2021/html/ecb.pr210414~ca3013c852.en.html][https://www.ecb.europa.eu/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.205567]]
+:END:
+
+**** Link on page 42: [[https://www.ecb.europa.eu/press/pr/date/2021/html/ecb.pr210414~ca3013c852.en.html][press/pr/date/2021/html/ecb.pr210414 ∼ ca3013c852.en.html]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.217518]]
+:END:
+
+**** Link on page 42: [[http://www.centralbank.org.bb/_economic-insightbb/getting-out-the-message][N. Brewster and S. Bishop. Getting out the message.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.240807]]
+:END:
+
+**** Link on page 42: [[https://haldus.eestipank.ee/sites/default/files/2021-07/Work%20stream%203%20-%20A%20New%20Solution%20-%20Blockchain%20and%20eID_1.pdf][https://haldus.eestipank.ee/sites/default/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.245067]]
+:END:
+
+**** Link on page 42: [[http://www.centralbank.org.bb/_economic-insightbb/getting-out-the-message][out-the-message]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.252758]]
+:END:
+
+**** Link on page 42: [[https://haldus.eestipank.ee/sites/default/files/2021-07/Work%20stream%203%20-%20A%20New%20Solution%20-%20Blockchain%20and%20eID_1.pdf][]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.257018]]
+:END:
+
+**** Link on page 42: [[https://haldus.eestipank.ee/sites/default/files/2021-07/Work%20stream%203%20-%20A%20New%20Solution%20-%20Blockchain%20and%20eID_1.pdf][20Solution%20-%20Blockchain%20and%20eID 1.pdf]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.268967]]
+:END:
+
+**** Link on page 42: [[https://www.ecb.europa.eu/paym/target/tips/profuse/shared/pdf/tips_crdm_uhb_v1.0.0.pdf][https://www.ecb.europa.eu/paym/target/tips/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.296518]]
+:END:
+
+**** Link on page 42: [[https://eprint.iacr.org/2019/191][https://eprint.iacr.org/2019/191]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.305221]]
+:END:
+
+**** Link on page 42: [[https://www.ecb.europa.eu/paym/target/tips/profuse/shared/pdf/tips_crdm_uhb_v1.0.0.pdf][profuse/shared/pdf/tips crdm uhb v1.0.0.pdf.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.308468]]
+:END:
+
+**** Link on page 42: [[https://www.ecb.europa.eu/paym/pdf/consultations/T2-T2S_Consolidation_User_Requirements_Document_T2_RTGS_v1.2_CLEAN.pdf][quirements doc- ument for T2-RTGS component, 2018. https://www.ecb.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.336018]]
+:END:
+
+**** Link on page 42: [[https://www.ecb.europa.eu/paym/pdf/consultations/T2-T2S_Consolidation_User_Requirements_Document_T2_RTGS_v1.2_CLEAN.pdf][europa.eu/paym/pdf/consultations/T2-T2S Consolidation User]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.347968]]
+:END:
+
+**** Link on page 42: [[https://www.ecb.europa.eu/paym/pdf/consultations/T2-T2S_Consolidation_User_Requirements_Document_T2_RTGS_v1.2_CLEAN.pdf][Requirements Document T2 RTGS v1.2 CLEAN.pdf]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.359918]]
+:END:
+
+**** Link on page 42: [[https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2018-May/015967.html][https://lists.linuxfoundation.org/pipermail/bitcoin-]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.387468]]
+:END:
+
+**** Link on page 42: [[https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2018-May/015967.html][dev/2018-May/015967.html.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.399418]]
+:END:
+
+**** Link on page 42: [[https://enaira.gov.ng/download/eNaira_Design_Paper.pdf][https:]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.426761]]
+:END:
+
+**** Link on page 42: [[https://enaira.gov.ng/download/eNaira_Design_Paper.pdf][Central Bank of Nigeria. Design paper for the eNaira. https: //enaira.gov.ng/download/eNaira Design Paper.pdf.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.438711]]
+:END:
+
+**** Link on page 42: [[https://www.sanddollar.bs][https://www.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.455324]]
+:END:
+
+**** Link on page 42: [[https://www.sanddollar.bs][Central Bank of The Bahamas. sanddollar.bs]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.467274]]
+:END:
+
+**** Link on page 42: [[https://www.sciencedirect.com/science/article/pii/0166531683900123][https://www.sciencedirect.com/science/article/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.478418]]
+:END:
+
+**** Link on page 42: [[https://www.centralbanking.com/fintech/cbdc/7529621/pboc-confirms-digital-currency-pilot][https://www.centralbanking.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.483888]]
+:END:
+
+**** Link on page 42: [[https://www.sciencedirect.com/science/article/pii/0166531683900123][pii/0166531683900123.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.490369]]
+:END:
+
+**** Link on page 42: [[https://www.centralbanking.com/fintech/cbdc/7529621/pboc-confirms-digital-currency-pilot][Central Banking Newsdesk, 2020. https://www.centralbanking.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.495837]]
+:END:
+
+**** Link on page 42: [[https://www.centralbanking.com/fintech/cbdc/7529621/pboc-confirms-digital-currency-pilot][pilot.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.507788]]
+:END:
+
+**** Link on page 42: [[https://www.centre.io/usdc][https://www.centre.io/usdc]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.5244]]
+:END:
+
+**** Link on page 42: [[https://libertystreeteconomics.newyorkfed.org/2020/08/token-or-account-based-a-digital-currency-can-be-both/][https://libertystreeteconomics.newyorkfed.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.569369]]
+:END:
+
+**** Link on page 42: [[https://libertystreeteconomics.newyorkfed.org/2020/08/token-or-account-based-a-digital-currency-can-be-both/][org/2020/08/token-or-account-based-a-digital-currency-can-be-]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.581319]]
+:END:
+
+**** Link on page 42: [[https://libertystreeteconomics.newyorkfed.org/2020/08/token-or-account-based-a-digital-currency-can-be-both/][both/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.593269]]
+:END:
+
+**** Link on page 42: [[https://github.com/google/googletest][https://github.com/google/googletest]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.636419]]
+:END:
+
+**** Link on page 42: [[https://github.com/google/leveldb][https://github.com/google/leveldb]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.652019]]
+:END:
+
+**** Link on page 42: [[https://www.forbes.com/sites/kashmirhill/2012/02/16/how-target-figured-out-a-teen-girl-was-pregnant-before-her-father-did/][https://www.forbes.com/sites/kashmirhill/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.746619]]
+:END:
+
+**** Link on page 42: [[https://setldevelopmentltd.box.com/shared/static/18mff2m990qabgzseiex3h7itq7qdnls.pdf][https://setldevelopmentltd.box.com/shared/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.750867]]
+:END:
+
+**** Link on page 42: [[https://www.forbes.com/sites/kashmirhill/2012/02/16/how-target-figured-out-a-teen-girl-was-pregnant-before-her-father-did/][2012/02/16/how-target-figured-out-a-teen-girl-was-pregnant-]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.758569]]
+:END:
+
+**** Link on page 42: [[https://setldevelopmentltd.box.com/shared/static/18mff2m990qabgzseiex3h7itq7qdnls.pdf][static/18mff2m990qabgzseiex3h7itq7qdnls.pdf]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.762817]]
+:END:
+
+**** Link on page 42: [[https://www.forbes.com/sites/kashmirhill/2012/02/16/how-target-figured-out-a-teen-girl-was-pregnant-before-her-father-did/][before-her-father-did/.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.770519]]
+:END:
+
+**** Link on page 42: [[https://zips.z.cash/protocol/protocol.pdf][https://zips.z.cash/protocol/protocol.pdf]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.798069]]
+:END:
+
+**** Link on page 42: [[https://arxiv.org/pdf/2105.11827.pdf][https://arxiv.org/pdf/2105.11827.pdf]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.803331]]
+:END:
+
+**** Link on page 42: [[https://www.diem.com/en-us/white-paper/][https://www.diem.com/en-us/white-]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.860457]]
+:END:
+
+**** Link on page 42: [[https://www.diem.com/en-us/white-paper/][Diem Foundation. Diem. https://www.diem.com/en-us/white- paper/.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.872407]]
+:END:
+
+**** Link on page 42: [[ https://www.elibrary.imf.org/view/journals/001/2020/104/001.2020.issue-104-en.xml][https://www.elibrary.imf.org/view/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.88902]]
+:END:
+
+**** Link on page 42: [[ https://www.elibrary.imf.org/view/journals/001/2020/104/001.2020.issue-104-en.xml][journals/001/2020/104/001.2020.issue-104-en.xml]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.90097]]
+:END:
+
+**** Link on page 42: [[https://www.eccb-centralbank.org/p/about-the-project][https://www.eccb-centralbank.org/p/about-the-project]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::42++0.90097]]
+:END:
+
+**** Link on page 43: [[https://github.com/UkoeHB/Mechanics-of-MobileCoin][https://github.com/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.095367]]
+:END:
+
+**** Link on page 43: [[https://github.com/UkoeHB/Mechanics-of-MobileCoin][UkoeHB. Mechanics of MobileCoin. UkoeHB/Mechanics-of-MobileCoin]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.107317]]
+:END:
+
+**** Link on page 43: [[https://www.getmonero.org/library/Zero-to-Monero-2-0-0.pdf][https://www.getmonero.org/library/Zero-to-Monero-]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.107317]]
+:END:
+
+**** Link on page 43: [[https://www.getmonero.org/library/Zero-to-Monero-2-0-0.pdf][2-0-0.pdf.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.119268]]
+:END:
+
+**** Link on page 43: [[https://web.archive.org/web/20201028121818/https://cryptonote.org/whitepaper.pdf][https://web.archive.org/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.165182]]
+:END:
+
+**** Link on page 43: [[https://web.archive.org/web/20201028121818/https://cryptonote.org/whitepaper.pdf][N. van Saberhagen. CryptoNote v 2.0. https://web.archive.org/ web/20201028121818/https://cryptonote.org/whitepaper.pdf]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.177131]]
+:END:
+
+**** Link on page 43: [[https://medium.com/aztec-protocol/why-hashes-dominate-in-snarks-b20a555f074c][https://medium.com/aztec-protocol/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.206063]]
+:END:
+
+**** Link on page 43: [[https://medium.com/aztec-protocol/why-hashes-dominate-in-snarks-b20a555f074c][why-hashes-dominate-in-snarks-b20a555f074c.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.218014]]
+:END:
+
+**** Link on page 43: [[https://elementsproject.org/features/confidential-transactions/investigation][https://elementsproject.org/features/confidential-]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.228857]]
+:END:
+
+**** Link on page 43: [[https://elementsproject.org/features/confidential-transactions/investigation][transactions/investigation]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.240807]]
+:END:
+
+**** Link on page 43: [[https://bitcoin.org/bitcoin.pdf][https://bitcoin.org/bitcoin.pdf]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.281321]]
+:END:
+
+**** Link on page 43: [[https://github.com/bitcoin/bips/blob/master/bip-0350.mediawiki][P. Wuille. Bech32m format for v1+ witness addresses, 2020. https://github.com/bitcoin/bips/blob/master/bip-0350.mediawiki.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.287827]]
+:END:
+
+**** Link on page 43: [[https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki][https://github.com/bitcoin/bips/blob/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.316759]]
+:END:
+
+**** Link on page 43: [[https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki][master/bip-0173.mediawiki.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.32871]]
+:END:
+
+**** Link on page 43: [[https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki][https://github.com/bitcoin/bips/blob/master/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.357641]]
+:END:
+
+**** Link on page 43: [[https://eprint.iacr.org/2018/241][https://eprint.iacr.org/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.362322]]
+:END:
+
+**** Link on page 43: [[https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki][bip-0340.mediawiki]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.369591]]
+:END:
+
+**** Link on page 43: [[https://eprint.iacr.org/2018/241][2018/241.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.374297]]
+:END:
+
+**** Link on page 43: [[https://ycharts.com/indicators/ethereum_chain_full_sync_data_size][https://ycharts.com/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.386573]]
+:END:
+
+**** Link on page 43: [[https://ycharts.com/indicators/ethereum_chain_full_sync_data_size][YCharts. Ethereum chain full sync data size. https://ycharts.com/ indicators/ethereum chain full sync data size.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.398523]]
+:END:
+
+**** Link on page 43: [[https://csrc.nist.gov/csrc/media/publications/fips/180/2/archive/2002-08-01/documents/fips180-2.pdf][https://csrc.nist.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.455324]]
+:END:
+
+**** Link on page 43: [[https://csrc.nist.gov/csrc/media/publications/fips/180/2/archive/2002-08-01/documents/fips180-2.pdf][NIST. Secure Hash Standard, 2002. https://csrc.nist.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.467274]]
+:END:
+
+**** Link on page 43: [[https://csrc.nist.gov/csrc/media/publications/fips/180/2/archive/2002-08-01/documents/fips180-2.pdf][01/documents/fips180-2.pdf.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.479225]]
+:END:
+
+**** Link on page 43: [[https://csrc.nist.gov/Projects/Post-Quantum-Cryptography][https://csrc.nist.gov/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.495837]]
+:END:
+
+**** Link on page 43: [[https://csrc.nist.gov/Projects/Post-Quantum-Cryptography][NIST. Post-quantum cryptography, 2016. https://csrc.nist.gov/ Projects/Post-Quantum-Cryptography]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.507788]]
+:END:
+
+**** Link on page 43: [[https://www.wearepay.uk/wp-content/uploads/Pay.UK-PFMI-Self-Assessment-Jun-20.pdf][https://www.wearepay.uk/wp-content/uploads/Pay.UK-PFMI-]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.588814]]
+:END:
+
+**** Link on page 43: [[https://www.wearepay.uk/wp-content/uploads/Pay.UK-PFMI-Self-Assessment-Jun-20.pdf][Self-Assessment-Jun-20.pdf.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.600764]]
+:END:
+
+**** Link on page 43: [[https://tornado.cash/Tornado.cash_whitepaper_v1.4.pdf][https://tornado.cash/Tornado.cash]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.68179]]
+:END:
+
+**** Link on page 43: [[https://tornado.cash/Tornado.cash_whitepaper_v1.4.pdf][whitepaper v1.4.pdf]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.693741]]
+:END:
+
+**** Link on page 43: [[https://www.itu.int/en/ITU-T/Workshops-and-Seminars/20180718/Documents/Yao%20Qian.pdf][https://www.itu.int/en/ITU-T/Workshops-and-Seminars/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.722304]]
+:END:
+
+**** Link on page 43: [[https://www.itu.int/en/ITU-T/Workshops-and-Seminars/20180718/Documents/Yao%20Qian.pdf][20180718/Documents/Yao%20Qian.pdf.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.734254]]
+:END:
+
+**** Link on page 43: [[https://www.corda.net][https://www.corda.net]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.750867]]
+:END:
+
+**** Link on page 43: [[http://www.righto.com/2014/02/ascii-bernanke-wikileaks-photographs.html][elson Mandela, WikiLeaks, photos, and Python software. http://www.righto.com/2014/02/ascii-]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.79138]]
+:END:
+
+**** Link on page 43: [[http://www.righto.com/2014/02/ascii-bernanke-wikileaks-photographs.html][bernanke-wikileaks-photographs.html]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.803331]]
+:END:
+
+**** Link on page 43: [[https://statoshi.info/d/000000009/unspent-transaction-output-set?orgId=1&refresh=10m][Statoshi.info. Bitcoin unspent transaction output set.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.831894]]
+:END:
+
+**** Link on page 43: [[https://statoshi.info/d/000000009/unspent-transaction-output-set?orgId=1&refresh=10m][set?orgId=1&refresh=10m]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.843843]]
+:END:
+
+**** Link on page 43: [[https://www.riksbank.se/globalassets/media/rapporter/e-krona/2021/e-krona-pilot-phase-1.pdf][https://www.riksbank.se/globalassets/media/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.872381]]
+:END:
+
+**** Link on page 43: [[https://www.riksbank.se/globalassets/media/rapporter/e-krona/2021/e-krona-pilot-phase-1.pdf][rapporter/e-krona/2021/e-krona-pilot-phase-1.pdf.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.884357]]
+:END:
+
+**** Link on page 43: [[https://tether.to/][https://tether.to/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/web3/project--hamilton-phase-1-executive-summary.pdf::43++0.90097]]
+:END:
+
+

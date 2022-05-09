@@ -1,0 +1,1667 @@
+#+TITLE: Function Programming In Scala Note
+
+* Function Programming In Scala Note
+:PROPERTIES:
+:NOTER_DOCUMENT: /home/awannaphasch2016/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::145++0.00]]
+:ID:       838cec7b-96c0-49ce-b4a9-82fa01c53511
+:END:
+
+** Skeleton
+*** Link on page 5: [[http://www.manning.com][For online information and ordering of this and other Manning books, please visit www.manning.com]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::5++0.108051]]
+:END:
+
+*** brief contents
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::6++0.237237??brief%20contents]]
+:END:
+
+*** contents
+
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::8++0.237237??contents]]
+:ID:       ba45adbf-7ab9-4bbb-8943-ed5c68351ac9
+:END:
+
+*** foreword
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::14++0.237237??foreword]]
+:END:
+
+*** preface
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::16++0.237237??preface]]
+:END:
+
+*** acknowledgments
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::17++0.237237??acknowledgments]]
+:END:
+
+*** about this book
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::18++0.237237??about%20this%20book]]
+:END:
+**** How this book is structured
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::18++0.454955??How%20this%20book%20is%20structured]]
+:END:
+
+***** Link on page 19: [[https://github.com/fpinscala/fpinscala/wiki][o be expanded by the community of readers, and are avail- able as an editable wiki at https://github.com/fpinscala/fpinscala/wiki]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::19++0.175258]]
+:END:
+
+**** Audience
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::19++0.205706??Audience]]
+:END:
+
+***** Link on page 19: [[http://www.scala-lang.org/documentation/books.html][language, you should supplement your reading with another book on Scala (http://scala-lang.org/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::19++0.52661]]
+:END:
+
+***** Link on page 19: [[http://www.scala-lang.org/documentation/books.html][supplement your reading with another book on Scala (http://scala-lang.org/ documentation/books.html]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::19++0.544267]]
+:END:
+
+***** Link on page 19: [[http://www.scala-lang.org/documentation/][on/books.html) or look up specific questions in the Scala language doc- umentation (http://scala-lang.org/documentation/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::19++0.565709]]
+:END:
+
+**** How to read this book
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::19++0.596096??How%20to%20read%20this%20book]]
+:ID:       681795dd-4db1-42b7-b74e-05f8eeb02cab
+:END:
+
+***** Link on page 19: [[https://github.com/fpinscala/fpinscla][rcises as you go through each chapter. Exercises, hints, and answers are all available at https://]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::19++0.838321]]
+:END:
+
+***** Link on page 19: [[https://github.com/fpinscala/fpinscla][you go through each chapter. Exercises, hints, and answers are all available at https:// github.com/fpinscala/fpinscla]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::19++0.855979]]
+:END:
+
+***** Link on page 20: [[https://groups.google.com/forum/#!topic/scala-functional/][https://groups.google.com/forum/#!topic/scala-functional/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::20++0.077691]]
+:END:
+
+**** Code conventions and downloads
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::20++0.732733??Code%20conventions%20and%20downloads]]
+:END:
+
+***** Link on page 20: [[https://github.com/fpinscala/fpinscala][de annotations accompany many of the listings, highlighting important concepts. To download the source code for the examples in the book, the exercise code, and]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::20++0.820033]]
+:END:
+
+***** Link on page 20: [[https://github.com/fpinscala/fpinscala][the chapter notes, please go to https://github.com/fpinscala/fpinscala or to the pub-]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::20++0.837691]]
+:END:
+
+***** Link on page 20: [[https://github.com/fpinscala/fpinscala][the chapter notes, please go to https://github.com/fpinscala/fpinscala or to the pub- lisher’s website at]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::20++0.85724]]
+:END:
+
+***** Link on page 20: [[http://www.manning.com/FunctionalProgramminginScala][please go to https://github.com/fpinscala/fpinscala or to the pub- lisher’s website at www.manning.com/FunctionalProgramminginScala.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::20++0.859042]]
+:END:
+
+**** Setting expectations
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::21++0.075075??Setting%20expectations]]
+:END:
+
+***** Link on page 21: [[https://groups.google.com/forum/#!topic/scala-functional/][ck, look at the hints and answers, 1 or take your questions to the Google Group (https://groups]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::21++0.395258]]
+:END:
+
+***** Link on page 21: [[https://groups.google.com/forum/#!topic/scala-functional/][hints and answers, 1 or take your questions to the Google Group (https://groups .google.com/forum/#!topic/scala-functional/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::21++0.413637]]
+:END:
+
+**** Author Online
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::21++0.563063??Author%20Online]]
+:END:
+
+***** Link on page 21: [[http://www.manning.com/FunctionalProgramminginScala][and other users. To access the forum and subscribe to it, point your web browser to www.manning.com/Functional]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::21++0.649763]]
+:END:
+
+***** Link on page 21: [[http://www.manning.com/FunctionalProgramminginScala][forum and subscribe to it, point your web browser to www.manning.com/Functional ProgramminginScala]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::21++0.66742]]
+:END:
+
+***** Link on page 21: [[https://github.com/fpinscala/fpinscala][https://github.com/fpinscala/fpinscala]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::21++0.890664]]
+:END:
+
+*** Part 1 Introduction to functional programming
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::22++0.214715??Part%201%20Introduction%20to%20functional%20programming]]
+:END:
+**** 1 What is functional programming?
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::24++0.168168??1%20What%20is%20functional%20programming?]]
+:END:
+
+***** 1.1 The benefits of FP: a simple example
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::25++0.244745??1.1%20The%20benefits%20of%20FP:%20a%20simple%20example]]
+:END:
+
+****** 1.1.1 A program with side effects
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::25++0.399399??1.1.1%20A%20program%20with%20side%20effects]]
+:END:
+
+****** 1.1.2 A functional solution: removing the side effects
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::27++0.471471??1.1.2%20A%20functional%20solution:%20removing%20the%20side%20effects]]
+:END:
+
+***** 1.2 Exactly what is a (pure) function?
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::30++0.292793??1.2%20Exactly%20what%20is%20a%20(pure)%20function?]]
+:END:
+
+***** 1.3 Referential transparency, purity, and the substitution model
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::31++0.412913??1.3%20Referential%20transparency,%20purity,%20and%20the%20substitution%20model]]
+:END:
+
+****** Link on page 31: [[https://github.com/pchiusano/fpinscala][me subtleties to this definition, and we’ll refine it later in this book. See the chapter notes at our GitHub site (https://github.com/pchiusano/fpinscala]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::31++0.891384]]
+:END:
+
+***** 1.4 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::34++0.075075??1.4%20Summary]]
+:END:
+
+**** 2 Getting started with functional programming in Scala
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::35++0.168168??2%20Getting%20started%20with%20functional%20programming%20in%20Scala]]
+:END:
+
+***** 2.1 Introducing Scala the language: an example
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::36++0.127628??2.1%20Introducing%20Scala%20the%20language:%20an%20example]]
+:END:
+
+***** 2.2 Running our program
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::38++0.546547??2.2%20Running%20our%20program]]
+:END:
+
+****** Link on page 38: [[https://github.com/fpinscala/fpinscala][d/or an IDE like IntelliJ or Eclipse. See the book’s source code repo on GitHub (https://github.com/fpinscala/fpinscala]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::38++0.630303]]
+:END:
+
+***** 2.3 Modules, objects, and namespaces
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::39++0.632132??2.3%20Modules,%20objects,%20and%20namespaces]]
+:END:
+
+***** 2.4 Higher-order functions: passing functions to functions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::40++0.534535??2.4%20Higher-order%20functions:%20passing%20functions%20to%20functions]]
+:END:
+
+****** 2.4.1 A short detour: writing loops functionally
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::41++0.076577??2.4.1%20A%20short%20detour:%20writing%20loops%20functionally]]
+:END:
+
+******* Link on page 42: [[http://mng.bz/bWT5][http://mng.bz/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::42++0.098862]]
+:END:
+
+******* Link on page 42: [[http://mng.bz/bWT5][compiler about this assumption using the tailrec annotation (http://mng.bz/ bWT5]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::42++0.115438]]
+:END:
+
+******* Link on page 42: [[http://mng.bz/GK8T][won’t talk much more about annotations in this book (you’ll find more information at http://mng.bz/GK8T]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::42++0.279042]]
+:END:
+
+******* Link on page 42: [[http://mng.bz/C29s][http://mng.bz/C29s]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::42++0.421204]]
+:END:
+
+****** 2.4.2 Writing our first higher-order function
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::42++0.567568??2.4.2%20Writing%20our%20first%20higher-order%20function]]
+:END:
+***** 2.5 Polymorphic functions: abstracting over types
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::43++0.666667??2.5%20Polymorphic%20functions:%20abstracting%20over%20types]]
+:END:
+
+****** 2.5.1 An example of a polymorphic function
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::44++0.076577??2.5.1%20An%20example%20of%20a%20polymorphic%20function]]
+:END:
+
+****** 2.5.2 Calling HOFs with anonymous functions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::45++0.459459??2.5.2%20Calling%20HOFs%20with%20anonymous%20functions]]
+:END:
+
+******* Link on page 46: [[http://mng.bz/qFMr][ordinary trait (an interface) provided by the standard Scala library (API docs link: http://mng.bz/qFMr]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::46++0.446429]]
+:END:
+
+***** 2.6 Following types to implementations
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::46++0.564565??2.6%20Following%20types%20to%20implementations]]
+:END:
+
+***** 2.7 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::49++0.244745??2.7%20Summary]]
+:END:
+
+**** 3 Functional data structures
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::50++0.168168??3%20Functional%20data%20structures]]
+:END:
+
+***** Link on page 50: [[https://github.com/fpinscala/fpinscala][may be challenging. As always, consult the hints or the answers at our GitHub site (https://github.com/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::50++0.574538]]
+:END:
+
+***** Link on page 50: [[https://github.com/fpinscala/fpinscala][; see the preface), or ask for help online if you need to.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::50++0.592195]]
+:END:
+
+***** 3.1 Defining functional data structures
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::50++0.624625??3.1%20Defining%20functional%20data%20structures]]
+:END:
+
+****** Link on page 51: [[http://mng.bz/R75t][is not at all sig- nificant for our purposes right now. See section 5.3 in the Scala Language Specification (http://mng.bz/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::51++0.87706]]
+:END:
+
+****** Link on page 51: [[http://mng.bz/R75t][nificant for our purposes right now. See section 5.3 in the Scala Language Specification (http://mng.bz/ R75t]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::51++0.892015]]
+:END:
+
+***** 3.2 Pattern matching
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::53++0.37988??3.2%20Pattern%20matching]]
+:END:
+
+****** Link on page 55: [[http://mng.bz/f4k9][vectors. Inside apply, the argument as will be bound to a Seq[A] (documentation at http://mng.bz/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::55++0.843817]]
+:END:
+
+****** Link on page 55: [[http://mng.bz/f4k9][apply, the argument as will be bound to a Seq[A] (documentation at http://mng.bz/ f4k9]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::55++0.860393]]
+:END:
+
+***** 3.3 Data sharing in functional data structures
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::56++0.075075??3.3%20Data%20sharing%20in%20functional%20data%20structures]]
+:END:
+
+****** 3.3.1 The efficiency of data sharing
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::57++0.234234??3.3.1%20The%20efficiency%20of%20data%20sharing]]
+:END:
+
+******* Link on page 58: [[http://mng.bz/Xhl8][there’s a purely functional sequence implementation, Vector (documentation at http://]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::58++0.413456]]
+:END:
+
+******* Link on page 58: [[http://mng.bz/Xhl8][a purely functional sequence implementation, Vector (documentation at http:// mng.bz/Xhl8]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::58++0.431114]]
+:END:
+
+****** 3.3.2 Improving type inference for higher-order functions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::58++0.503003??3.3.2%20Improving%20type%20inference%20for%20higher-order%20functions]]
+:END:
+
+***** 3.4 Recursion over lists and generalizing to higher-order functions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::59++0.351351??3.4%20Recursion%20over%20lists%20and%20generalizing%20to%20higher-order%20functions]]
+:END:
+
+****** 3.4.1 More functions for working with lists
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::62++0.741742??3.4.1%20More%20functions%20for%20working%20with%20lists]]
+:END:
+
+******* Link on page 64: [[http://mng.bz/vu45][http://mng.bz/vu45]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::64++0.440483]]
+:END:
+
+****** 3.4.2 Loss of efficiency when assembling list functions from simpler components
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::65++0.214715??3.4.2%20Loss%20of%20efficiency%20when%20assembling%20list%20functions%20from%20simpler%20components]]
+:END:
+
+***** 3.5 Trees
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::65++0.621622??3.5%20Trees]]
+:END:
+
+***** 3.6 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::68++0.253754??3.6%20Summary]]
+:END:
+
+**** 4 Handling errors without exceptions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::69++0.168168??4%20Handling%20errors%20without%20exceptions]]
+:ID:       6c0fa31e-70e9-43f1-bb94-0fcbf5e797fd
+:END:
+***** 4.1 The good and bad aspects of exceptions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::69++0.722222??4.1%20The%20good%20and%20bad%20aspects%20of%20exceptions]]
+:END:
+
+***** 4.2 Possible alternatives to exceptions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::71++0.702703??4.2%20Possible%20alternatives%20to%20exceptions]]
+:END:
+
+****** Link on page 71: [[http://mng.bz/f4k9][he API docs (http://mng.bz/f4k9]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::71++0.859492]]
+:END:
+
+***** 4.3 The Option data type
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::73++0.204204??4.3%20The%20Option%20data%20type]]
+:END:
+
+****** 4.3.1 Usage patterns for Option
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::74++0.076577??4.3.1%20Usage%20patterns%20for%20Option]]
+:END:
+
+******* Link on page 74: [[http://mng.bz/ha64][http://mng.bz/ha64]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::74++0.167781]]
+:END:
+
+******* Link on page 74: [[http://mng.bz/Pz86][http://]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::74++0.188772]]
+:END:
+
+******* Link on page 74: [[http://mng.bz/Pz86][ headOption and lastOption defined for lists and other iterables (http:// mng.bz/Pz86]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::74++0.206429]]
+:END:
+
+******* Link on page 76: [[http://mng.bz/0Qsr][2) for each element x in the sequence. See the definition of variance on Wikipedia (http://mng.bz/0Qsr]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::76++0.689222]]
+:END:
+
+****** 4.3.2 Option composition, lifting, and wrapping exception-oriented APIs
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::77++0.587087??4.3.2%20Option%20composition,%20lifting,%20and%20wrapping%20exception-oriented%20APIs]]
+:END:
+
+***** 4.4 The Either data type
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::81++0.548048??4.4%20The%20Either%20data%20type]]
+:ID:       8de999a1-ad3f-409b-aa31-a3f50538afaa
+:END:
+
+****** Link on page 82: [[http://mng.bz/106L][e Scala standard library (Option API is at http://mng.bz/fiJ5; Either API is at http://]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::82++0.263276]]
+:END:
+
+****** Link on page 82: [[http://mng.bz/fiJ5][er, both Option and Either exist in the Scala standard library (Option API is at http://mng.bz/fiJ5]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::82++0.263276]]
+:END:
+
+****** Link on page 82: [[http://mng.bz/106L][standard library (Option API is at http://mng.bz/fiJ5; Either API is at http:// mng.bz/106L]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::82++0.279853]]
+:END:
+
+***** 4.5 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::84++0.477477??4.5%20Summary]]
+:ID:       bf2a1e45-b0db-4a6a-8a58-ae4ada4d38f5
+:END:
+
+**** 5 Strictness and laziness
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::85++0.168168??5%20Strictness%20and%20laziness]]
+:END:
+***** 5.1 Strict and non-strict functions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::86++0.448949??5.1%20Strict%20and%20non-strict%20functions]]
+:ID:       67b24dd9-2e3c-4e42-8e1e-0f5ad936ebdc
+:END:
+An example of non-stictness function is the "short-circuit" Boolean function && and || where the second operation only evaluates if the first operation is true.
+ond) iftrue() else iffalse()
+    }
+
+    if2(true, println("true"), println("false"))
+  }
+}
+#+END_SRC
+
+Lazy syntax  can be used to delay evaluation of an expression until the expression is referred to.
+
+Lazy syntax can be used as followed
+#+BEGIN_SRC scala
+object tmp {
+  def main(args: Array[String]): Unit = {
+    def maybeTwice2(cond: Boolean, i: Int): Int = {
+      lazy val j = i
+      if (cond) j+j else 0
+    }
+
+    val x = maybeTwice2(true, {println("hi"); 1+41})
+    println(x)
+  }
+}
+#+END_SRC
+
+****** formal definition of strictness
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::88++4.68;;annot-88-0]]
+:ID:       /home/awannaphasch2016/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf-annot-88-0
+:END:
+
+****** non-strict function is said to take its "argument by name" rathe than take "argument by value".
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::89++0.00;;annot-89-0]]
+:ID:       /home/awannaphasch2016/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf-annot-89-0
+:END:
+
+***** 5.2 An extended example: lazy lists
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::89++0.127628??5.2%20An%20extended%20example:%20lazy%20lists]]
+:END:
+****** TODO 5.2.1 Memoizing streams and avoiding recomputation
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::90++0.076577??5.2.1%20Memoizing%20streams%20and%20avoiding%20recomputation]]
+:END:
+****** 5.2.2 Helper functions for inspecting streams
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::90++0.642643??5.2.2%20Helper%20functions%20for%20inspecting%20streams]]
+:END:
+***** 5.3 Separating program description from evaluation
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::91++0.403904??5.3%20Separating%20program%20description%20from%20evaluation]]
+:ID:       32b17c92-8888-41b8-9020-2699e3cbad16
+:END:
+
+***** 5.4 Infinite streams and corecursion
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::94++0.566066??5.4%20Infinite%20streams%20and%20corecursion]]
+:END:
+#+BEGIN_SRC scala
+val ones: Stream[Int] = Stream.cons(1,ones)
+#+END_SRC
+
+****** Link on page 97: [[http://lambda-the-ultimate.org/node/1277#comment-14313][assembling hasSubsequence from simpler functions using laziness, is from Cale Gibbard. See this post: http://lambda-the-ultimate.org/node/1277#comment-14313]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::97++0.891384]]
+:END:
+
+***** 5.5 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::98++0.444444??5.5%20Summary]]
+:ID:       25a57b48-afe4-48d6-b2df-e17f5d0e3347
+:END:
+
+**** 6 Purely functional state
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::99++0.168168??6%20Purely%20functional%20state]]
+:ID:       610c8778-de45-4137-bb72-554470a34dec
+:END:
+
+***** 6.1 Generating random numbers using side effects
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::99++0.548048??6.1%20Generating%20random%20numbers%20using%20side%20effects]]
+:END:
+
+****** Link on page 99: [[http://mng.bz/3DP7][o-random, but we’ll ignore this distinction. Scala API link: http://mng.bz/3DP7]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::99++0.845619]]
+:END:
+
+***** 6.2 Purely functional random number generation
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::101++0.075075??6.2%20Purely%20functional%20random%20number%20generation]]
+:END:
+
+***** 6.3 Making stateful APIs pure
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::102++0.696697??6.3%20Making%20stateful%20APIs%20pure]]
+:END:
+
+***** 6.4 A better API for state actions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::105++0.075075??6.4%20A%20better%20API%20for%20state%20actions]]
+:ID:       8edb5cd1-3e76-4a5a-ab3e-78f0885c6b79
+:END:
+#+BEGIN_SRC scala
+type Rand[+A] = RNG => (A, RNG)
+
+val int: Rand[Int] = _.nextInt
+
+def map[A,B](s: Rand[A])(f: A => B): Rand[B] = {
+  rng => {
+    val (a,rng2) = s(rng)
+    (f(a), rng2)
+  }
+}
+
+def nonNonNegative: Rand[Int] = map(nonNonNegative)(i => i - i % 2)
+#+END_SRC
+****** 6.4.1 Combining state actions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::106++0.214715??6.4.1%20Combining%20state%20actions]]
+:END:
+
+****** 6.4.2 Nesting state actions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::107++0.190691??6.4.2%20Nesting%20state%20actions]]
+:ID:       5d23feed-c115-4a02-9a5c-7ceef8af51dc
+:END:
+
+[[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::116++0.01][Functional Programming in Scala ( PDFDrive ).pdf: Page 116]]
+***** 6.5 A general state action data type
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::108++0.776276??6.5%20A%20general%20state%20action%20data%20type]]
+:END:
+#+BEGIN_SRC scala
+type Rand[+A] = RNG => (A, RNG)
+
+// create general type of a combinator
+type State[S, A] = S => (A, S)
+
+// wrap State type into a class
+case class State[S,+A](run: S => (A,S))
+
+// create Rand[A] type from general type State.
+type Rand[A] = State[RNG, A]
+#+END_SRC
+
+***** 6.6 Purely functional imperative programming
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::109++0.657658??6.6%20Purely%20functional%20imperative%20programming]]
+:END:
+
+***** 6.7 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::112++0.235736??6.7%20Summary]]
+:END:
+
+*** Part 2 Functional design and combinator libraries
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::114++0.214715??Part%202%20Functional%20design%20and%20combinator%20libraries]]
+:ID:       a1732d07-e50b-41a8-aa13-60f579e51b18
+:END:
+**** 7 Purely functional parallelism
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::116++0.168168??7%20Purely%20functional%20parallelism]]
+:END:
+
+***** 7.1 Choosing data types and functions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::117++0.537538??7.1%20Choosing%20data%20types%20and%20functions]]
+:ID:       f0daa31b-f58a-4b3d-b616-493c2c066aef
+:END:
+
+****** 7.1.1 A data type for parallel computations
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::118++0.764264??7.1.1%20A%20data%20type%20for%20parallel%20computations]]
+:END:
+
+****** 7.1.2 Combining parallel computations
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::121++0.226727??7.1.2%20Combining%20parallel%20computations]]
+:END:
+
+****** 7.1.3 Explicit forking
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::123++0.187688??7.1.3%20Explicit%20forking]]
+:END:
+
+***** 7.2 Picking a representation
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::125++0.238739??7.2%20Picking%20a%20representation]]
+:ID:       b78cd6a3-e956-4df4-be19-9089623889c3
+:END:
+
+***** 7.3 Refining the API
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::126++0.758258??7.3%20Refining%20the%20API]]
+:END:
+
+***** 7.4 The algebra of an API
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::131++0.28979??7.4%20The%20algebra%20of%20an%20API]]
+:END:
+
+****** 7.4.1 The law of mapping
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::131++0.617117??7.4.1%20The%20law%20of%20mapping]]
+:END:
+
+******* Link on page 133: [[http://mng.bz/Z9f1][apping.) 13 Can you prove it? You may want to read the paper “Theorems for Free!” (http://mng.bz/Z9f1]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::133++0.359583]]
+:END:
+
+****** 7.4.2 The law of forking
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::133++0.40991??7.4.2%20The%20law%20of%20forking]]
+:END:
+
+******* Link on page 133: [[http://mng.bz/Z9f1][he idea of free theorems was introduced by Philip Wadler in the classic paper “Theorems for Free!” (http://mng.bz/Z9f1]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::133++0.84706]]
+:END:
+
+****** 7.4.3 Breaking the law: a subtle bug
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::134++0.076577??7.4.3%20Breaking%20the%20law:%20a%20subtle%20bug]]
+:END:
+
+******* Link on page 134: [[http://mng.bz/urQd][ifferent implementations in the class java.util .concurrent.Executors ( API link: http://mng.bz/urQd]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::134++0.200844]]
+:END:
+
+****** 7.4.4 A fully non-blocking Par implementation using actors
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::136++0.129129??7.4.4%20A%20fully%20non-blocking%20Par%20implementation%20using%20actors]]
+:END:
+
+***** 7.5 Refining combinators to their most general form
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::141++0.244745??7.5%20Refining%20combinators%20to%20their%20most%20general%20form]]
+:END:
+
+****** Link on page 142: [[http://mng.bz/eZ4l][http://mng.bz/eZ4l]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::142++0.862195]]
+:END:
+
+***** 7.6 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::144++0.608108??7.6%20Summary]]
+:END:
+
+**** 8 Property-based testing
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::145++0.168168??8%20Property-based%20testing]]
+:END:
+
+***** 8.1 A brief tour of property-based testing
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::145++0.665165??8.1%20A%20brief%20tour%20of%20property-based%20testing]]
+:END:
+
+****** Link on page 145: [[http://mng.bz/n2j9][ed testing As an example, in ScalaCheck (http://mng.bz/n2j9]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::145++0.690123]]
+:END:
+
+****** Link on page 147: [[http://mng.bz/ZP8q][http://mng.bz/ZP8q]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::147++0.847871]]
+:END:
+
+***** 8.2 Choosing data types and functions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::148++0.244745??8.2%20Choosing%20data%20types%20and%20functions]]
+:END:
+
+****** 8.2.1 Initial snippets of an API
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::148++0.477477??8.2.1%20Initial%20snippets%20of%20an%20API]]
+:END:
+
+****** 8.2.2 The meaning and API of properties
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::149++0.531532??8.2.2%20The%20meaning%20and%20API%20of%20properties]]
+:END:
+
+****** 8.2.3 The meaning and API of generators
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::151++0.391892??8.2.3%20The%20meaning%20and%20API%20of%20generators]]
+:END:
+
+****** 8.2.4 Generators that depend on generated values
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::152++0.783784??8.2.4%20Generators%20that%20depend%20on%20generated%20values]]
+:END:
+
+****** 8.2.5 Refining the Prop data type
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::153++0.606607??8.2.5%20Refining%20the%20Prop%20data%20type]]
+:END:
+
+***** 8.3 Test case minimization
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::155++0.72973??8.3%20Test%20case%20minimization]]
+:END:
+
+****** Link on page 156: [[http://mng.bz/E24n][pproach (it’s also used by the Haskell library QuickCheck that ScalaCheck is based on: http://mng.bz/E24n]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::156++0.221835]]
+:END:
+
+***** 8.4 Using the library and improving its usability
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::157++0.597598??8.4%20Using%20the%20library%20and%20improving%20its%20usability]]
+:END:
+
+****** 8.4.1 Some simple examples
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::158++0.076577??8.4.1%20Some%20simple%20examples]]
+:END:
+
+******* Link on page 158: [[http://mng.bz/Pz86][ing the behavior of the function max , available as a method on List ( API docs link: http://]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::158++0.122736]]
+:END:
+
+******* Link on page 158: [[http://mng.bz/Pz86][8.4.1 Some simple examples Let’s revisit an example that we mentioned at the start of this chapter—specifying the behavior of the function max , available as a method on List ( API docs link: http:// mng.bz/Pz86]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::158++0.140393]]
+:END:
+
+******* Link on page 159: [[http://mng.bz/Pz86][http://mng.bz/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::159++0.138862]]
+:END:
+
+******* Link on page 159: [[http://mng.bz/Pz86][Write a property to verify the behavior of List.sorted ( API docs link: http://mng.bz/ Pz86]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::159++0.15652]]
+:END:
+
+****** 8.4.2 Writing a test suite for parallel computations
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::159++0.208709??8.4.2%20Writing%20a%20test%20suite%20for%20parallel%20computations]]
+:END:
+
+******* Link on page 162: [[http://mng.bz/4pUc][http://mng.bz/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::162++0.232375]]
+:END:
+
+******* Link on page 162: [[http://mng.bz/4pUc][We can even introduce ** as a pattern using custom extractors (http://mng.bz/ 4pUc]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::162++0.250033]]
+:END:
+
+***** 8.5 Testing higher-order functions and future directions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::163++0.617117??8.5%20Testing%20higher-order%20functions%20and%20future%20directions]]
+:END:
+
+***** 8.6 The laws of generators
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::165++0.273273??8.6%20The%20laws%20of%20generators]]
+:END:
+
+***** 8.7 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::165++0.726727??8.7%20Summary]]
+:END:
+
+
+**** 9 Parser combinators
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::167++0.168168??9%20Parser%20combinators]]
+:END:
+
+***** Link on page 167: [[http://mng.bz/DpNA][h the design of a combinator library for creating parsers. We’ll use JSON parsing (http://mng.bz/DpNA]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::167++0.380844]]
+:END:
+
+***** Link on page 168: [[http://mng.bz/w3zZ][http://mng.bz/w3zZ]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::168++0.305258]]
+:END:
+
+***** Link on page 168: [[http://mng.bz/aj8K][/mng.bz/w3zZ) or similar libraries in other languages (for instance, ANTLR in Java: http://mng.bz/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::168++0.321835]]
+:END:
+
+***** Link on page 168: [[http://mng.bz/aj8K][or similar libraries in other languages (for instance, ANTLR in Java: http://mng.bz/ aj8K]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::168++0.338411]]
+:END:
+
+***** 9.1 Designing an algebra, first
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::168++0.548048??9.1%20Designing%20an%20algebra,%20first]]
+:END:
+
+***** 9.2 A possible algebra
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::173++0.303303??9.2%20A%20possible%20algebra]]
+:END:
+
+****** 9.2.1 Slicing and nonempty repetition
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::175++0.076577??9.2.1%20Slicing%20and%20nonempty%20repetition]]
+:END:
+
+***** 9.3 Handling context sensitivity
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::177++0.645646??9.3%20Handling%20context%20sensitivity]]
+:END:
+
+***** 9.4 Writing a JSON parser
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::179++0.244745??9.4%20Writing%20a%20JSON%20parser]]
+:END:
+
+****** 9.4.1 The JSON format
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::179++0.765766??9.4.1%20The%20JSON%20format]]
+:END:
+
+******* Link on page 179: [[http://json.org][read Wikipedia’s description (http://mng.bz/DpNA) and the grammar specification (http://json.org]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::179++0.811925]]
+:END:
+
+******* Link on page 179: [[http://mng.bz/DpNA][already familiar with the JSON format, you may want to read Wikipedia’s description (http://mng.bz/DpNA]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::179++0.811925]]
+:END:
+
+****** 9.4.2 A JSON parser
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::180++0.489489??9.4.2%20A%20JSON%20parser]]
+:END:
+
+***** 9.5 Error reporting
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::181++0.421922??9.5%20Error%20reporting]]
+:END:
+
+****** 9.5.1 A possible design
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::182++0.490991??9.5.1%20A%20possible%20design]]
+:END:
+
+****** 9.5.2 Error nesting
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::183++0.388889??9.5.2%20Error%20nesting]]
+:END:
+
+****** 9.5.3 Controlling branching and backtracking
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::184++0.533033??9.5.3%20Controlling%20branching%20and%20backtracking]]
+:END:
+
+***** 9.6 Implementing the algebra
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::186++0.333333??9.6%20Implementing%20the%20algebra]]
+:END:
+
+****** 9.6.1 One possible implementation
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::187++0.304805??9.6.1%20One%20possible%20implementation]]
+:END:
+
+****** 9.6.2 Sequencing parsers
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::187++0.804805??9.6.2%20Sequencing%20parsers]]
+:END:
+
+****** 9.6.3 Labeling parsers
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::188++0.675676??9.6.3%20Labeling%20parsers]]
+:END:
+
+****** 9.6.4 Failover and backtracking
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::189++0.845345??9.6.4%20Failover%20and%20backtracking]]
+:END:
+
+****** 9.6.5 Context-sensitive parsing
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::190++0.57958??9.6.5%20Context-sensitive%20parsing]]
+:END:
+
+***** 9.7 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::192++0.292793??9.7%20Summary]]
+:END:
+
+*** Part 3 Common structures in functional design
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::194++0.214715??Part%203%20Common%20structures%20in%20functional%20design]]
+:ID:       ddd3ca93-3d03-480f-96c9-5f2c24e2d739
+:END:
+**** 10 Monoids
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::196++0.168168??10%20Monoids]]
+:END:
+
+***** 10.1 What is a monoid?
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::196++0.704204??10.1%20What%20is%20a%20monoid?]]
+:ID:       8bc99a80-e572-4b63-872b-9242c1bea5f7
+:END:
+****** Exercise 10.1
+#+BEGIN_SRC scala
+val intAddition: Monoid[Int] = new Monoid[Int] {
+  def op(a1: Int, a2: Int): a1 + a2
+  def zero: A = 0
+}
+
+val intMultiplication: Monoid[Int] = new Monoid[Int] {
+  def op(a1: Int, a2: Int): a1 * a2
+  def zero: A = 1
+}
+
+val booleanOr: Monoid[Int] = new Monoid[Int] {
+  def op(a1: Int, a2: Int): a1 || a2
+  def zero: A = false
+}
+
+val booleanAnd: Monoid[Int] = new Monoid[Int] {
+  def op(a1: Int, a2: Int): a1 && a2
+  def zero: A = True
+}
+#+END_SRC
+****** Exercise 10.2
+#+BEGIN_SRC scala
+
+#+END_SRC
+***** 10.2 Folding lists with monoids
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::199++0.406907??10.2%20Folding%20lists%20with%20monoids]]
+:END:
+
+***** 10.3 Associativity and parallelism
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::200++0.51952??10.3%20Associativity%20and%20parallelism]]
+:END:
+
+***** 10.4 Example: Parallel parsing
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::202++0.234234??10.4%20Example:%20Parallel%20parsing]]
+:END:
+M and N has two homomorphism f and g, where both f andThen g and g andThen f are an identity function.
+
+M.op(f(x),f(y))
+N.op(x,y)
+
+***** 10.5 Foldable data structures
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::204++0.27027??10.5%20Foldable%20data%20structures]]
+:END:
+***** 10.6 Composing monoids
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::205++0.629129??10.6%20Composing%20monoids]]
+:END:
+
+****** 10.6.1 Assembling more complex monoids
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::206++0.076577??10.6.1%20Assembling%20more%20complex%20monoids]]
+:END:
+
+****** 10.6.2 Using composed monoids to fuse traversals
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::207++0.186186??10.6.2%20Using%20composed%20monoids%20to%20fuse%20traversals]]
+:END:
+
+***** 10.7 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::207++0.558559??10.7%20Summary]]
+:END:
+
+**** 11 Monads
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::208++0.168168??11%20Monads]]
+:END:
+***** 11.1 Functors: generalizing the map function
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::208++0.528529??11.1%20Functors:%20generalizing%20the%20map%20function]]
+:ID:       a3f9763c-b25c-40e2-a8c0-164d0936d54b
+:END:
+#+BEGIN_SRC scala
+// functor lift a function taking A as argument into the same function taking type_constructor[A] as an argument.
+def map[A,B](ga: A)(f: A => B): B
+def map[A,B](ga: Gen[A])(f: A => B): Gen[B]
+def map[A,B](ga: Parser[A])(f: A => B): Parser[B]
+def map[A,B](ga: Option[A])(f: A => B): Option[B]
+
+trait Functor[F[_]] {
+  def map[A,B](as: F[A])(f: A => B): F[B] = as map f
+}
+#+END_SRC
+
+Functor of A, F[A], select subset of law" applied to A.
+***** 11.2 Monads: generalizing the flatMap and unit functions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::211++0.147147??11.2%20Monads:%20generalizing%20the%20flatMap%20and%20unit%20functions]]
+:END:
+The differences between functor and monads is that =functor define how type constructor will work with map= while =monads doesn't need to have type constuctor defined to work with any specific function=. For concrete example, monad's implementation of map2 shown in figure ref:Listing_11.2 cannot compile because monad Mon doesn't define how type constructor F will work with map2. Behavior of type constructor is defined by implementing trait function signature containing the type constructor, see figure ref:Listing_11.3
+
+When implementing a monad, a goal is to include a =minimal set of primitives= that construct a monad. =Minimal set of primitives= refers to a set of primitives data structure that compose all functions in a monad where the minimal set of primitives acts as interface between monads and class that monads is designed to supply monad instance, see ref:Listing_11.5. In figure ref:Listing_11.3, =map= and =flatmap= is not a =minimal set of primitives=. This is because map can be implemented with =flatmap= and =unit=. Figure ref:Listing_11.4 adjust the same monads to include a =minimal set of primitives= which involve =flatmap= and =unit=.
+
+#+name: Listing_11.2
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220426_212007.png]]
+
+#+name: Listing_11.3
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220426_212546.png]]
+
+#+name: Listing_11.4
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220426_214246.png]]
+
+#+name: Listing_11.5
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220426_214446.png]]
+
+****** 11.2.1 The Monad trait
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::212++0.076577??11.2.1%20The%20Monad%20trait]]
+:END:
+
+***** 11.3 Monadic combinators
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::214++0.313814??11.3%20Monadic%20combinators]]
+:END:
+
+***** 11.4 Monad laws
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::215++0.687688??11.4%20Monad%20laws]]
+:END:
+Because all monads is a functor, we expect to the following monad law to hold where Monad[F] is a Functor[F].
+
+****** 11.4.1 The associative law
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::215++0.783784??11.4.1%20The%20associative%20law]]
+:END:
+****** 11.4.2 Proving the associative law for a specific monad
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::217++0.201201??11.4.2%20Proving%20the%20associative%20law%20for%20a%20specific%20monad]]
+:END:
+x.flatMap(f).flatMap(g) == x.flatMap(a => f(a).map(g))
+
+x = genItem()
+f = Gen.choose(1,100)
+g = Order()
+
+x.flatMap(f)
+
+****** 11.4.3 The identity laws
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::218++0.481982??11.4.3%20The%20identity%20laws]]
+:END:
+
+***** 11.5 Just what is a monad?
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::219++0.825826??11.5%20Just%20what%20is%20a%20monad?]]
+:END:
+
+****** 11.5.1 The identity monad
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::220++0.6997??11.5.1%20The%20identity%20monad]]
+:END:
+
+****** 11.5.2 The State monad and partial type application
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::221++0.653153??11.5.2%20The%20State%20monad%20and%20partial%20type%20application]]
+:END:
+
+
+******* Link on page 222: [[http://mng.bz/u70U][type member (see the “Type Projection” section of the Scala Language Specification: http://mng.bz/u70U]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::222++0.799943]]
+:END:
+
+
+***** 11.6 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::225++0.075075??11.6%20Summary]]
+:ID:       2bce4d1c-ef88-4340-8191-ad7d8260ffdc
+:END:
+
+**** 12 Applicative and traversable functors
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::226++0.168168??12%20Applicative%20and%20traversable%20functors]]
+:END:
+
+***** 12.1 Generalizing monads
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::226++0.654655??12.1%20Generalizing%20monads]]
+:END:
+
+***** 12.2 The Applicative trait
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::227++0.370871??12.2%20The%20Applicative%20trait]]
+:END:
+
+***** 12.3 The difference between monads and applicative functors
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::229++0.399399??12.3%20The%20difference%20between%20monads%20and%20applicative%20functors]]
+:END:
+
+****** 12.3.1 The Option applicative versus the Option monad
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::230++0.076577??12.3.1%20The%20Option%20applicative%20versus%20the%20Option%20monad]]
+:END:
+
+****** 12.3.2 The Parser applicative versus the Parser monad
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::231++0.076577??12.3.2%20The%20Parser%20applicative%20versus%20the%20Parser%20monad]]
+:END:
+
+***** 12.4 The advantages of applicative functors
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::232++0.312312??12.4%20The%20advantages%20of%20applicative%20functors]]
+:END:
+
+****** 12.4.1 Not all applicative functors are monads
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::232++0.71021??12.4.1%20Not%20all%20applicative%20functors%20are%20monads]]
+:END:
+
+***** 12.5 The applicative laws
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::235++0.587087??12.5%20The%20applicative%20laws]]
+:END:
+
+****** 12.5.1 Left and right identity
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::235++0.681682??12.5.1%20Left%20and%20right%20identity]]
+:END:
+
+****** 12.5.2 Associativity
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::236++0.33033??12.5.2%20Associativity]]
+:END:
+
+****** 12.5.3 Naturality of product
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::237++0.25976??12.5.3%20Naturality%20of%20product]]
+:END:
+
+***** 12.6 Traversable functors
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::239++0.267267??12.6%20Traversable%20functors]]
+:END:
+
+***** 12.7 Uses of Traverse
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::240++0.779279??12.7%20Uses%20of%20Traverse]]
+:END:
+
+****** 12.7.1 From monoids to applicative functors
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::241++0.512012??12.7.1%20From%20monoids%20to%20applicative%20functors]]
+:END:
+
+****** 12.7.2 Traversals with State
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::242++0.720721??12.7.2%20Traversals%20with%20State]]
+:END:
+
+****** 12.7.3 Combining traversable structures
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::244++0.460961??12.7.3%20Combining%20traversable%20structures]]
+:END:
+
+****** 12.7.4 Traversal fusion
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::245++0.492492??12.7.4%20Traversal%20fusion]]
+:END:
+
+****** 12.7.5 Nested traversals
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::245++0.843844??12.7.5%20Nested%20traversals]]
+:END:
+
+****** 12.7.6 Monad composition
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::246++0.307808??12.7.6%20Monad%20composition]]
+:ID:       8c838dc2-00f4-4f5c-8159-30b113309007
+:END:
+
+***** 12.8 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::247++0.225225??12.8%20Summary]]
+:END:
+
+*** Part 4 Effects and I/O
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::248++0.214715??Part%204%20Effects%20and%20I/O]]
+:END:
+
+**** 13 External effects and I/O
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::250++0.168168??13%20External%20effects%20and%20I/O]]
+:END:
+
+***** 13.1 Factoring effects
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::250++0.684685??13.1%20Factoring%20effects]]
+:END:
+
+***** 13.2 A simple IO type
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::252++0.318318??13.2%20A%20simple%20IO%20type]]
+:END:
+
+****** 13.2.1 Handling input effects
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::253++0.427928??13.2.1%20Handling%20input%20effects]]
+:END:
+
+****** 13.2.2 Benefits and drawbacks of the simple IO type
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::256++0.776276??13.2.2%20Benefits%20and%20drawbacks%20of%20the%20simple%20IO%20type]]
+:END:
+
+***** 13.3 Avoiding the StackOverflowError
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::258++0.075075??13.3%20Avoiding%20the%20StackOverflowError]]
+:END:
+
+****** 13.3.1 Reifying control flow as data constructors
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::258++0.34985??13.3.1%20Reifying%20control%20flow%20as%20data%20constructors]]
+:END:
+
+****** 13.3.2 Trampolining: a general solution to stack overflow
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::260++0.554054??13.3.2%20Trampolining:%20a%20general%20solution%20to%20stack%20overflow]]
+:END:
+
+******* Link on page 260: [[http://mng.bz/ALiI][http://mng.bz/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::260++0.876429]]
+:END:
+
+******* Link on page 260: [[http://mng.bz/ALiI][6 If you aren’t familiar with the term coroutine, you may want to check out the Wikipedia page (http://mng.bz/ ALiI]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::260++0.892105]]
+:END:
+
+***** 13.4 A more nuanced IO type
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::262++0.075075??13.4%20A%20more%20nuanced%20IO%20type]]
+:END:
+
+****** 13.4.1 Reasonably priced monads
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::263++0.447447??13.4.1%20Reasonably%20priced%20monads]]
+:END:
+
+****** 13.4.2 A monad that supports only console I/O
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::264++0.424925??13.4.2%20A%20monad%20that%20supports%20only%20console%20I/O]]
+:END:
+
+****** 13.4.3 Pure interpreters
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::267++0.226727??13.4.3%20Pure%20interpreters]]
+:END:
+
+***** 13.5 Non-blocking and asynchronous I/O
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::268++0.707207??13.5%20Non-blocking%20and%20asynchronous%20I/O]]
+:END:
+
+****** Link on page 270: [[http://mng.bz/uojM][http://mng.bz/]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::270++0.846429]]
+:END:
+
+****** Link on page 270: [[http://mng.bz/uojM][15 16 Even this API is rather nicer than what’s offered directly by the nio package in Java (API at http://mng.bz/ uojM]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::270++0.862015]]
+:END:
+
+****** Link on page 271: [[http://mng.bz/uojM][http://mng.bz/uojM]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::271++0.077691]]
+:END:
+
+****** Link on page 271: [[http://mng.bz/X30L][try implementing an asyn- chronous read from an AsynchronousFileChannel ( API at http://mng.bz/X30L]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::271++0.096429]]
+:END:
+
+***** 13.6 A general-purpose IO type
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::271++0.235736??13.6%20A%20general-purpose%20IO%20type]]
+:END:
+
+****** 13.6.1 The main program at the end of the universe
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::271++0.539039??13.6.1%20The%20main%20program%20at%20the%20end%20of%20the%20universe]]
+:ID:       921e1848-367d-4f81-b4cf-66535511f3bd
+:END:
+
+***** 13.7 Why the IO type is insufficient for streaming I/O
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::272++0.325826??13.7%20Why%20the%20IO%20type%20is%20insufficient%20for%20streaming%20I/O]]
+:END:
+
+***** 13.8 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::274++0.166667??13.8%20Summary]]
+:END:
+
+**** 14 Local effects and mutable state
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::275++0.168168??14%20Local%20effects%20and%20mutable%20state]]
+:END:
+
+***** 14.1 Purely functional mutable state
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::275++0.663664??14.1%20Purely%20functional%20mutable%20state]]
+:END:
+
+***** 14.2 A data type to enforce scoping of side effects
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::277++0.244745??14.2%20A%20data%20type%20to%20enforce%20scoping%20of%20side%20effects]]
+:END:
+
+****** 14.2.1 A little language for scoped mutation
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::277++0.653153??14.2.1%20A%20little%20language%20for%20scoped%20mutation]]
+:END:
+
+****** 14.2.2 An algebra of mutable references
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::279++0.355856??14.2.2%20An%20algebra%20of%20mutable%20references]]
+:END:
+
+****** 14.2.3 Running mutable state actions
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::280++0.528529??14.2.3%20Running%20mutable%20state%20actions]]
+:END:
+
+****** 14.2.4 Mutable arrays
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::283++0.415916??14.2.4%20Mutable%20arrays]]
+:END:
+
+****** 14.2.5 A purely functional in-place quicksort
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::284++0.636637??14.2.5%20A%20purely%20functional%20in-place%20quicksort]]
+:END:
+
+***** 14.3 Purity is contextual
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::285++0.60961??14.3%20Purity%20is%20contextual]]
+:END:
+
+****** 14.3.1 What counts as a side effect?
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::287++0.246246??14.3.1%20What%20counts%20as%20a%20side%20effect?]]
+:END:
+
+***** 14.4 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::288++0.342342??14.4%20Summary]]
+:END:
+
+**** 15 Stream processing and incremental I/O
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::289++0.168168??15%20Stream%20processing%20and%20incremental%20I/O]]
+:END:
+
+***** 15.1 Problems with imperative I/O: an example
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::289++0.654655??15.1%20Problems%20with%20imperative%20I/O:%20an%20example]]
+:END:
+
+***** 15.2 Simple stream transducers
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::292++0.528529??15.2%20Simple%20stream%20transducers]]
+:END:
+
+****** 15.2.1 Creating processes
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::293++0.738739??15.2.1%20Creating%20processes]]
+:END:
+
+****** 15.2.2 Composing and appending processes
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::296++0.716216??15.2.2%20Composing%20and%20appending%20processes]]
+:END:
+
+****** 15.2.3 Processing files
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::299++0.076577??15.2.3%20Processing%20files]]
+:END:
+
+***** 15.3 An extensible process type
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::299++0.812312??15.3%20An%20extensible%20process%20type]]
+:END:
+
+****** 15.3.1 Sources
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::302++0.399399??15.3.1%20Sources]]
+:END:
+
+****** 15.3.2 Ensuring resource safety
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::304++0.076577??15.3.2%20Ensuring%20resource%20safety]]
+:END:
+
+****** 15.3.3 Single-input processes
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::306++0.42042??15.3.3%20Single-input%20processes]]
+:END:
+
+****** 15.3.4 Multiple input streams
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::308++0.612613??15.3.4%20Multiple%20input%20streams]]
+:END:
+
+****** 15.3.5 Sinks
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::311++0.076577??15.3.5%20Sinks]]
+:END:
+
+****** 15.3.6 Effectful channels
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::312++0.241742??15.3.6%20Effectful%20channels]]
+:END:
+
+****** 15.3.7 Dynamic resource allocation
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::312++0.752252??15.3.7%20Dynamic%20resource%20allocation]]
+:END:
+
+***** 15.4 Applications
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::313++0.827327??15.4%20Applications]]
+:END:
+
+***** 15.5 Summary
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::314++0.531532??15.5%20Summary]]
+:END:
+
+*** index
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::316++0.208709??index]]
+:END:
+**** Symbols
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::316++0.3003??Symbols]]
+:END:
+
+**** B
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::316++0.34985??B]]
+:END:
+**** A
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::316++0.424925??A]]
+:END:
+
+**** C
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::316++0.472973??C]]
+:END:
+
+**** D
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::317++0.244745??D]]
+:END:
+
+**** F
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::317++0.46997??F]]
+:END:
+
+**** E
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::317++0.83033??E]]
+:END:
+
+**** G
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::318++0.273273??G]]
+:END:
+
+**** H
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::318++0.396396??H]]
+:END:
+
+**** J
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::318++0.433934??J]]
+:END:
+
+**** K
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::318++0.542042??K]]
+:END:
+
+**** I
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::318++0.57958??I]]
+:END:
+
+**** L
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::318++0.606607??L]]
+:END:
+
+**** N
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::319++0.154655??N]]
+:END:
+
+**** O
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::319++0.354354??O]]
+:END:
+
+**** P
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::319++0.569069??P]]
+:END:
+
+**** M
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::319++0.68018??M]]
+:END:
+
+**** S
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::320++0.424925??S]]
+:END:
+
+**** Q
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::320++0.695195??Q]]
+:END:
+
+**** R
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::320++0.75976??R]]
+:END:
+
+**** U
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::321++0.454955??U]]
+:END:
+
+**** V
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::321++0.57958??V]]
+:END:
+
+**** T
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::321++0.59009??T]]
+:END:
+
+**** W
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::321++0.689189??W]]
+:END:
+
+**** Y
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Books/Functional Programming in Scala ( PDFDrive ).pdf::321++0.753754??Y]]
+:END:

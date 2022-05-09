@@ -1,6 +1,9 @@
 #+TITLE: Graphviz Note
 
 * hotkeys
+:PROPERTIES:
+:ID:       057f66d7-27a1-4b2e-9efd-ac24f3b4036a
+:END:
 | commands             | key     | doom keys | custom keys | descriptions |
 | graphviz-dot-preview | c-c c-p |           |             |              |
 | graphviz-dot-view    | c-c c-v |           |             |              |

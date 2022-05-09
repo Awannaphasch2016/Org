@@ -1,0 +1,13 @@
+#+TITLE: Window Note
+
+* Help
+** Alt + tab not working
+- ref
+  - https://www.youtube.com/watch?v=0xwwH5DZZuY&ab_channel=AddictiveTipsTV
+
+win + r => type 'regedit'
+go to 'Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer'
+create AltTabSettings (if not yet exist)
+edit it and change value data to 0
+open task manager
+click on 'explorer' app (if you don't have one open, open a new one) and restart

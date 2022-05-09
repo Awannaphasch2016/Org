@@ -1,0 +1,76 @@
+#+TITLE: Sbt note
+
+sbt (Scala Build Tool)
+
+* Blog :blog:
+** TODO Learn to use sbt. Hands on Guide.
+*** build-tools jargon
+In general, build-tools introduce a lot of new jargon. Relevant to this blog, the jargon that need to be explained are project, dependencies, plugins, and modules.
+
+A project is a root folder that contains all of your code related to your "project," hence the name.
+
+A project is allowed to have multiple sub-projects. Sub-projects can be viewed as libraries that you implemented. Sub-project may depend on other sub-projects. In the other word, library A may depends on library B. Therefore, a project is, by definition, just another library.
+
+Dependencies are jar files (aka libraries) which is a zip file that contains java classes. Note that dependencies are =external libraries= while sub-projects are =libraries that you implement=. [[https://search.maven.org/][Maven Central repository]] is the biggest repository that contains these jar files. sbt downloads jar files from these repositories.
+
+Plugins terminology is being replaced with module [fn:2]. On [2022-04-29 Fri], a quick google search "what is plugin in sbt?" shows the following results
+#+BEGIN_QUOTE
+A plugin can be a library used to implement a task. A plugin can define a sequence of sbt settings that are automatically added to all projects or that are explicitly declared for selected projects.
+#+END_QUOTE
+
+*** Hands on examples
+To start a scala project with =sbt=, go to =project_base_folder= and create =build.sbt=. As the name suggested, =build.sbt= contains all information about how to build a project.
+
+sbt will detect recursively all of the =main.scala= files in the project. It will let you choose which =main.scala= to execute.
+
+It is important to emphasize that to configure build for sub-project additional =build.sbt= must be created in the sub-projects. As of [2022-04-29 Fri], I am not sure how to configure =sub-project= yet.
+
+**** creating build.sbt
+To add plugins, one modifies =build.sbt= to include dependencies. Plugins are added to =plugins.sbt=. Global =build.sbt= and =plugins.sbt= are placed in =~/.sbt/= while local versions are placed in =project_base_folder/=.
+
+From my experience with sbt so far, scoping error in =build.sbt= is harder to detect for beginners because beginners are not yet familiar with sbt generated errors.
+
+For example, says I want to add =org.scalatest version 3.2.7= as a dependency, Trying learn from sbt tutorial [fn:1] (as of [2022-04-29 Fri]), I add the following in =build.sbt=
+
+#+BEGIN_SRC scala
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.7" % "test"
+#+END_SRC
+
+then I import =org.scalatest= in the main file
+#+BEGIN_SRC scala
+import org.scalatest
+#+END_SRC
+
+When I open =sbt= repl and run =reload=, =compile=, and =run= in order. I will get the following error
+#+BEGIN_SRC org
+[info] compiling 1 Scala source to /home/awannaphasch2016/Scratches/scala/target/scala-2.13/classes ...
+[error] /home/awannaphasch2016/Scratches/scala/main.scala:2:8: object scalacheck is not a member of package org
+[error] import org.scalacheck
+[error]        ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 0 s, completed Apr 29, 2022, 6:36:50 PM
+#+END_SRC
+
+According to [fn:3], syntax is
+#+BEGIN_SRC scala
+libraryDependencies += groupID % artifactID % revision % configuration
+#+END_SRC
+
+Therefore, the correct syntax is to removed "test" as shown below. Apparently, adding "test" forces sbt to only import test command to sbt repl. (configuration doesn't seems like a good name for this.)
+#+BEGIN_SRC scala
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.7"
+#+END_SRC
+
+
+
+* Commands
+** recompile on code change
+open sbt repl with =sbt= then write =~compile= (~ is important here.)[fn:1]
+* reference
+- [[https://www.youtube.com/watch?v=FS015lfyiMg&ab_channel=DevInsideYou][sbt Tutorial Part 1]]
+
+* Footnotes
+[fn:3] [[https://www.scala-sbt.org/1.x/docs/Library-Dependencies.html][sbt documentation: library depencies]]
+[fn:2] [[https://stackoverflow.com/questions/33771269/what-is-the-difference-between-plugins-dependencies-modules-and-sub-projects-i][stack overflow: What is the difference between plugins, dependencies, modules and sub-projects in play 2.4?]]
+[fn:1] [[https://www.scala-sbt.org/1.x/docs/sbt-by-example.html][sbt documentation: sbt by example]]

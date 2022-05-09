@@ -118,8 +118,84 @@ gpg-connect-agent /by e
 *** cryptographics hash function
 **** properties
 ***** collision-free
-***** hiding
+***** hiding property
 ***** puzzle friendly
+**** notes
+Realistically, we can't have collision free, but we can ahve collision resistance.
+** collision resistance
+*** note
+**** CRC codes (such as CRC32) has no collision resistance because we can simply compute the other plaintext by simple linear calculations using the first plaintext and its output.
+*** weak collision resistance
+*** strong collision resistance
+hash with strong collision resistance also has weak collision resistance, but the converse is not always the case.
+** collision free
+we called it strong collision resistance. Nobody can find $x \neq y$ such that that $H(x) = H(y)$. This mean there are collision, but it is very hard to find it.
+
+how to find a collision? one can use =brute force=
+If we randomly choose $2^{130} + 1$ inputs, there is a 0.998 probability that there will be a collision.
+On the average, we will have a collision after trying out $2^{128} + 1$ different inputs with $p > 0.5$.
+** hiding property
+This property is a consequence of "Weak collision Resistance."
+Given $h=H(x)$ it is infeasible to find x. Hold only if the number of possile inputs is large.
+
+Solution to achieve this property is as followed
+- if we want to hash values picked from a small set, we need to mix them with "nonce", $H(n||x)$.
+
+** Commitments as a security service
+*** note
+Analogy for commitment as a security service.
+- select a value, seal in a envelope, to keep it hidden, but as a prof to what value you had chosen put it on table in plain view.
+
+Commitment is similar to Integrity Service. The Diffrences is that you do not expose Message upfront.
+Commitment also use random number generator (RNG) to generate key.
+
+commitment as a security service
+- commit  to a message without disclosing the message. Provide an artifact of that commitment.
+- Others should be able to verify that the message was yours later once you disclose the message and its key.
+- commiment can be calculated from message and a secret key as followed: $com = Commit(message,key)$
+*** Properties
+**** Hiding: Message stays hidden.
+**** Binding: You will not be able to find a different message + key that gives the same hash.
+** Puzzle Friendly
+If k is random but known, then it is infeasible to find an x such that $H(k||x)$ is in a target (smaller) set.
+
+In the other word, where should be no other shortcut other than to search entire space.
+
+Ideally, the ideal hash function is a function that outputs "indepdent" random value for every possible input.
+* Non-repudiation service
+* Authentication
+** hash as Message Authentication Code (MAC)
+*** use cases
+**** to validate large files stored in unreliable environments.
+* Encryption Algorithm
+** SHA-256
+* Security Academic Problems.
+** Birthday Problem
+*** [[*weak collision resistance][Weak collision resistence for birthday problem]]
+In the room with "N" people, what is =the probability that a given person's birthday is same as at least one other person's=? How many people should have in the room so that the probability is greater than 0.5?
+
+solution is as followed
+- neglect leap day birthdays. Tehre are 365 possible birthdays.
+- Say "N" people in the room.
+- Say we know Alice's birthday then the probability that a second person does not have the same birthday as Alice is 364/365
+- The probability that none of them has the same birthday as Alice is $p=(364,/365)^{N-1}$
+- The probaiblity of the event that there is one or more in the room with same birthday is $1-p$
+- Therefore, finding "N" for $p<0.5$: $(364/365)^{N-1}<0.5$
+- solving for answer, we get $N=252.65$
+- Hence, $N>254$ that includes Alice.
+*** [[*strong collision resistance][Strong collision resistence for birthday problem]]
+In the room with "N" people, what is the probability that =any two people= have the same Birthday?
+How many people we should have in the room so that the probability is greater than 0.5?
+
+solution is as followed
+- first person's birthday, there are 365 possible birthdays.
+- second person's birthday, 364 possibilities.
+- so the number of different ways we can have the birthdays distributed among N people in such a way that no two are the same is $365*364*...*(365-N+1)$
+- But the total number of different wyas we can have the birthdays distributed among N people with no restrictions is $(365)^{N}$
+- so, $p = 1 - (365*354*...*(365-(n-1))/365^{n}$
+- So, N has to be greater than or equal to 23.
+- A rule of thumb approximates this as the square root of 365 which is about 19, not a number very far from 23.
+- Theoritically, this number is about square root of N.
 * FAQs
 ** Compare
 *** SSL vs telnet vs ftp vs ftp/s vs  rlogin vs rsh vs rcp

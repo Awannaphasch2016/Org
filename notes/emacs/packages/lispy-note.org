@@ -1,5 +1,15 @@
 #+TITLE: Lispy Note
 
+* Blog :blog:
+** Usages of Lispy. Examples Usecases Are Provided.
+To navigate between different sexp parenthesis tree, use h,j,k,l.
+To move sexp, use s,w.
+
+To add defun for a expression, one can do =(defun)= then =lispy-slurp= to get =(defun (expression))=
+To delete the whole expression inside a sexp, do =special-lispy-mark-list= then =backspace=.
+
+
+* Keybinding
 | description                               | command                 | Key                |
 | prettify                                  |                         | i                  |
 | jump to matched paren                     |                         | d                  |

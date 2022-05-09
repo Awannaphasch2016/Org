@@ -1,0 +1,116 @@
+#+TITLE: Token Engineering Common Note
+
+* Token Engineering Common (TEC)
+:PROPERTIES:
+:ID:       be07b312-92de-4467-a407-ff3ace551ff0
+:END:
+** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:ID:       f5eb64b4-1649-4f84-99a0-133a460a2162
+:END:
+** Notes :note:
+*** TEC
+[[https://forum.tecommons.org/][forum]] is the main place to ask question about TEC.
+*** omega intiative
+This explores distribute, ethos, and ethics of TE.
+Meeting notes can be find at [[https://docs.google.com/document/d/1SRvWH57956GjlRXxvVGgVF7w-Exvdi7TFhVwIbpPoLQ/edit#][omega main Notes]]
+** Meeting :meeting:
+** Schedule
+*** recurring :recurring:
+*** non-recurring :nonrecurring:
+**** Network Theory X TE meeting
+SCHEDULED: <2022-05-21 Sat 19:30>
+:PROPERTIES:
+:ID:       59ea4ebe-4f9c-4134-b4c5-b0e86c45766e
+:END:
+:LOGBOOK:
+CLOCK: [2022-05-06 Fri 13:52]--[2022-05-06 Fri 20:42] =>  6:50
+:END:
+[2022-05-06 Fri 13:52]
+[[file:~/org/notes/books/books-to-read.org::*Read \[\[https://youtu.be/FihU5JxmnBg?t=2779\]\[Why Programs Fails a guide to systematic debugging\]\] (read chapters 5-7, 11-14)][Read Why Programs Fails a guide to systematic debugging (read chapters 5-7, 11-14)]]
+** Delegation :waiting:
+** Tasks
+*** actionable :actionable:
+*** incubation :incubation:
+* Sampo
+** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+** Notes :note:
+*** omega
+*** [[https://app.clarity.so/Sampo/pages/d57ffb3e-9042-43ce-9342-4859084888bc][clarity chat room]]
+*** balance sheets
+:PROPERTIES:
+:ID:       476b8dda-8d9d-4038-a7e6-40417e1b035f
+:END:
+**** [[https://docs.google.com/spreadsheets/d/1Pd8feP0zW_mKaFesocYOMtpqTZMIUzWgZcQMUKmL6bI/edit#gid=595447914][Gravity Financial Statement]]
+**** [[https://docs.google.com/spreadsheets/d/1-Mh6vJ2Xqrsw8Gkd1v-D7r7zoyz87-pFFpdIrddBjGQ/edit#gid=860672135][Gravity Budget Sheet]]
+**** budget category
+- R&D
+  - research initiative & proposal iteration
+- website maintainace expense
+  - website design
+- education
+  - continuoused education activities
+  - graviton study plan
+- others
+  - networking & outreach
+  - case
+  - org development draft
+  - graviton
+- hire
+  - book club lead
+  - practice group lead
+  - treasury manager
+  - cordination manager
+  - operation manager
+- consulting
+  - advisory
+- content management
+  - content creation
+
+** Meeting :meeting:
+** Schedule
+*** recurring :recurring:
+*** non-recurring :nonrecurring:
+** Delegation :waiting:
+** Tasks
+*** actionable :actionable:
+**** TODO sampo data analyst subgroup
+SCHEDULED: <2022-05-05 Thu>
+:PROPERTIES:
+:ID:       991561cf-55d4-4eb3-87b2-9afeeaf44cf3
+:END:
+***** notes
+****** open collective
+[[https://opencollective.com/darkreader][ledger structure in open collective.]]
+***** Goal: build tools to keep track of ledger.
+****** task objective
+******* figure out rate of burn which category has the highest burn rate.
+******* understand if there is spending overlapped. :WAITING:
+:LOGBOOK:
+- State "WAITING"    from              [2022-05-08 Sun 03:14] \\
+  waiting for reply from data analyst team in sampo
+:END:
+******** WAITING add column to gravity budget sheet for mimum information required for proper book keeping. :WAITING:
+:PROPERTIES:
+:ID:       42d9b352-a8a4-46b4-aa82-479f3dc6864c
+:END:
+:LOGBOOK:
+- State "WAITING"    from              [2022-05-08 Sun 15:29] \\
+  waiting for bear100 to confirm that budget categorization
+:END:
+******* check if there is dry powder in wallet.
+**** TODO check out all TEC initiative and add TEC schedule ones I am interested in being involve.
+SCHEDULED: <2022-05-05 Thu>
+:PROPERTIES:
+:ID:       4e321ac0-4393-464d-a59b-ae2202177dca
+:END:
+
+*** incubation :incubation:

@@ -1,1 +1,44 @@
 #+TITLE: Dvc Note
+#+filetags: dvc
+
+* References
+:PROPERTIES:
+:ID:       34845ac4-cd80-4def-992f-fb6f3093325b
+:END:
+- Youtube
+
+  - [[https://www.youtube.com/watch?v=kLKBcPonMYw&ab_channel=DVCorg][Versioning
+    Data with DVC (Hands-On Tutorial!)]]
+  - [[https://www.youtube.com/watch?v=EE7Gk84OZY8&ab_channel=DVCorg][Sharing
+    Data and Models with DVC (Hands-On Data Science Tutorial!)]]
+  - [[https://www.youtube.com/watch?v=71IGzyH95UY&ab_channel=DVCorg][Machine
+    Learning Pipelines with DVC (Hands-On Tutorial!)]]
+
+* How to use DVC commandline
+
+- list content that is being version control by dvc.
+
+  - =dvc list https://github.com/iterative/dataset-registry get-started=
+
+- get data fron repo that is version controled by dvc .
+
+  - without metadata of where data is from.
+
+    - =dvc get https://github.com/iterative/dataset-registry use-cases/cats-dogs=
+
+  - with metadata of where data is from.
+
+    - =dvc import https://github.com/iterative/dataset-registry use-cases/cats-dogs=
+
+- check update
+
+  - =dvc update data/data.xml.dvc=
+
+* How to use DVC python api
+
+#+BEGIN_SRC python
+    import dvc.api
+
+    with dvc.api.open( "get-started/data.xml", repo="https://github.com/iterative/dataset-registry") as fd:
+        fd.read()
+#+END_SRC

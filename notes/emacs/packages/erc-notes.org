@@ -32,7 +32,7 @@ IRC client that comes with Emacs (see rcirc)
 * Navigate Channels and Other basic commands
 =M-x erc-tls= to connect to a particle IRC server address and you'll be prompted for your "nickname." (the name you will use on the server) and your password.
 
-=M-x erc-tls= is prefered over =M-x erc= because when the server supports SSL/TLS, it will ensure that you make a secure connection to the server!
+=M-x erc-tls= is prefered   over =M-x erc= because when the server supports SSL/TLS, it will ensure that you make a secure connection to the server!
 
 type =/join #somechannel= to join the channel
 type =/part= to leave the channel. (you can kill the buffer afterward)

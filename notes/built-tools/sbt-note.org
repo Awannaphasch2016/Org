@@ -1,5 +1,0 @@
-#+TITLE: Sbt note
-
-sbt (Scala Build Tool)
-* reference
-- [[https://www.youtube.com/watch?v=FS015lfyiMg&ab_channel=DevInsideYou][sbt Tutorial Part 1]]

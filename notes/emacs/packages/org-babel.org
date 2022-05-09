@@ -7,6 +7,9 @@
 
 * Writing literate programming with org-babel
 ** references
+:PROPERTIES:
+:ID:       6371c96d-34ad-4e70-9f2f-9bb133b89fdc
+:END:
 *** [[http://www.howardism.org/Technical/Emacs/literate-programming-tutorial.html][Introduction to literate programming with org-mode and org-babel by howard]]
 
 * Keybinding and command
@@ -29,3 +32,5 @@ Note: I haven't read about it much (just yet), just writing notes on things that
 ~:results output~ will output results as if is is evaluated by python kernel.
 * FAQs
 ** [[https://emacs.stackexchange.com/questions/34466/orgmode-babel-language-elisp-vs-emacs-lisp][orgmode - babel language elisp vs emacs-lisp]]
+** how to prevent multiple output insertion?
+=:cache yes= prevent multiple insertions.

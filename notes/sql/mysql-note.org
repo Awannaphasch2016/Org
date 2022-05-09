@@ -1,0 +1,51 @@
+#+TITLE: Mysql Note
+#+filetags: mysql
+
+* Example :example:
+** connect mysql connector in python
+:PROPERTIES:
+:ID:       e0c982fd-39a7-4dce-a784-337190c03f30
+:END:
+#+BEGIN_SRC python
+import mysql.connector
+
+# Connect to server
+cnx = mysql.connector.connect(
+    host="127.0.0.1",
+    port=3306,
+    user="root",
+    # password="Terng2258")
+    password="Terng2258")
+
+# Get a cursor
+cur = cnx.cursor()
+
+# Execute a query
+cur.execute("SELECT CURDATE()")
+
+# Fetch one result
+row = cur.fetchone()
+print("Current date is: {0}".format(row[0]))
+
+# Close connection
+cnx.close()
+#+END_SRC
+* How to
+** error
+*** can't start mysql server | Port 3306 in use by "Unable to open process"!
+stackoverflow: https://stackoverflow.com/questions/32173242/conflicting-ports-of-mysql-and-xampp
+#+BEGIN_SRC python
+1. open XMAPP
+2. go to setting -> open .ini file
+3. change port from 3306 to 3307 for both sql client and sql server.
+#+END_SRC
+* FAQs
+** where to download mysql driver?
+stackover: https://stackoverflow.com/questions/51468059/mysql-package-for-python-3-7
+#+BEGIN_SRC python
+install manually
+url: https://dev.mysql.com/downloads/connector/python/
+
+install using pip package manager
+url: pip install mysql-connector-python
+#+END_SRC

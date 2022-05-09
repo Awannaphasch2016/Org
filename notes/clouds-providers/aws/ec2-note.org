@@ -1,0 +1,101 @@
+#+TITLE: Ec2 Note
+#+filetags: ec2
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+
+* blog :blog:
+** Using Terraform to set up ec2 instances for data science projects. :terraform:
+:PROPERTIES:
+:EXPORT_FILE_NAME: Using Terraform to set up ec2 instances for data science projects.
+:END:
+*** Take Away
+  :PROPERTIES:
+  :CUSTOM_ID: take-away
+  :END:
+
+- you will learn how to automate ec2 setup using terraform that is
+  suited for data science project.
+
+*** Tools
+  :PROPERTIES:
+  :CUSTOM_ID: tools
+  :END:
+- EC2
+- Terraform
+*** Requirements
+  :PROPERTIES:
+  :CUSTOM_ID: requirements
+  :END:
+**** Knowledge Requirements
+   :PROPERTIES:
+   :CUSTOM_ID: knowledge-requirements
+   :END:
+
+- understand basic of how to create terraform project
+- understand basic of how to set up ec2 instances
+
+**** System Requirements
+   :PROPERTIES:
+   :CUSTOM_ID: system-requirements
+   :ID:       0fcaa251-3c8d-4bdb-bc43-4db4815d6444
+   :END:
+
+- WSL/Ubuntu
+
+  - I have only tested this in WSL
+
+- install all dependencies of cuda
+
+  - for list of software requirements, see
+
+    - https://www.tensorflow.org/install/gpu#linux_setup
+
+- optional
+
+  - Docker # References
+
+- Terraform AWS documentation
+
+  - https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#availability_zone
+
+- pytorch docker image
+
+  - https://github.com/anibali/docker-pytorch # Content
+
+*** Code
+  :PROPERTIES:
+  :CUSTOM_ID: code
+  :END:
+
+**** AWS
+   :PROPERTIES:
+   :CUSTOM_ID: aws
+   :END:
+
+1. export the following environment variables including
+
+   - AWS_ACCESS_KEY_ID
+   - AWS_SECRET_ACCESS_KEY
+   - AWS_DEFAULT_REGION
+
+**** Terraform
+   :PROPERTIES:
+   :CUSTOM_ID: terraform
+   :END:
+
+1. create terraform project
+2. In the project, create main.tf and copy&paste the following code
+
+#+BEGIN_EXAMPLE
+    resource "aws_instance" "web" {
+      ami = "ami-08962a4068733a2b6"
+      instance_type = "p3.8xlarge"
+      cpu_core_count = 16
+      cpu_threads_per_core = 2
+      tags = {
+        Name = "HelloWorld"
+      }
+
+    }
+#+END_EXAMPLE
+
+3. now you have ec2 running with

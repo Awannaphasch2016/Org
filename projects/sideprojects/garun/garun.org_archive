@@ -21,3 +21,38 @@ CLOCK: [2022-02-24 Thu 19:07]--[2022-02-24 Thu 19:17] =>  0:10
 :END:
 [2022-02-24 Thu 19:07]
 [[file:~/org/notes/database-note.org::*key attribute is an attribute whose values are distinct for each individual entity. More than 1 attribute can satisfy key attribute property.][key attribute is an attribute whose values are distinct for each individual entity. More than 1 attribute can satisfy key attribute property.]]
+
+** DONE integrate space repetition into emacs.
+CLOSED: [2022-03-04 Fri 22:28]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-04 Fri 22:28
+:ARCHIVE_FILE: ~/org/projects/sideprojects/garun/garun.org
+:ARCHIVE_OLPATH: Garun/Task
+:ARCHIVE_CATEGORY: garun
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: garun emacs PERSONAL @sideproject
+:END:
+[2022-03-03 Thu 14:00]
+[[file:~/org/notes/operating-system/linux-distros/ubuntu/ubuntu-note.org::*where is apt-get installed packages?][where is apt-get installed packages?]]
+
+** DONE jump to next error in emacs?
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-18 Fri 12:08
+:ARCHIVE_FILE: ~/org/projects/sideprojects/garun/garun.org
+:ARCHIVE_OLPATH: Garun/Task/incubation/Emacs/Understand Emacs at the deeper level/learn about the following packages and workflow/config workflow
+:ARCHIVE_CATEGORY: garun
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: garun PERSONAL @sideproject incubation emacs
+:END:
+
+** DONE get org agenda to display today calendar
+CLOSED: [2022-05-05 Thu 02:25]
+:PROPERTIES:
+:ID:       39833e4c-f009-4517-a924-a61ba7565875
+:ARCHIVE_TIME: 2022-05-05 Thu 02:25
+:ARCHIVE_FILE: ~/org/projects/sideprojects/garun/garun.org
+:ARCHIVE_OLPATH: Garun/Task/Actionable
+:ARCHIVE_CATEGORY: garun
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: garun emacs PERSONAL @sideproject actionable
+:END:

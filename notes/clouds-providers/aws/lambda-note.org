@@ -1,0 +1,21 @@
+#+TITLE: Lambda Note
+
+* How to
+** Update AWS Lambda function code with and without dependencies.
+:PROPERTIES:
+:ID:       e3cbc485-a74b-46f8-be4e-706018fb0511
+:END:
+see https://docs.aws.amazon.com/lambda/latest/dg/python-package.html
+#+BEGIN_SRC
+# note that `zip` is a linux command -> `sudo apt-get install zip` if zip is not yet installed
+#==========================
+#== update without dependencies
+#==========================
+1. zip my-deployment-package.zip test_upload_to_lambda.py
+
+2. aws lambda update-
+function-code --function-name MyLambdaFunction --zip-file fileb://my-deployment-package.zip --region us-east-2
+#==========================
+#== update with dependencies
+#==========================
+#+END_SRC

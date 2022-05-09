@@ -1,0 +1,23 @@
+#+TITLE: Cdk Note
+#+filetags: cdk
+
+* Commands
+#+BEGIN_SRC
+ `cdk ls`          list all stacks in the app
+ `cdk synth`       emits the synthesized CloudFormation template
+ `cdk deploy`      deploy this stack to your default AWS account/region
+ `cdk diff`        compare deployed stack with current state
+ `cdk docs`        open CDK documentation
+#+END_SRC
+* FAQs
+** how to setup project for cdk?
+- ref
+  - [[https://cdkworkshop.com/30-python/20-create-project/100-cdk-init.html][cdk init]]
+
+1. mkdir cdkworkshop && cd cdkworkshop
+2. cdk init sample-app --language python
+3. python3 -m venv .env
+4. .env\Scripts\activate.bat  # on window
+5. pip install -r requirements.txt
+6. cdk synth
+7. pytest

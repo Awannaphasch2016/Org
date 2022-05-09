@@ -1,0 +1,109 @@
+#+TITLE: Awk Note
+#+filetags: awk
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+
+* Blog :blog:
+** How to parse text with awk?
+:PROPERTIES:
+:EXPORT_FILE_NAME: How to parse text with awk?
+:ID:       11814501-6ddd-483f-a091-ac7539b1d400
+:END:
+
+- ref
+  - https://stackoverflow.com/questions/6284560/how-to-split-a-variable-by-a-special-character/6284596
+
+*** Awk Syntax
+:PROPERTIES:
+:ID:       5cdf0212-5a64-4059-8c64-2dffdaf913f2
+:END:
+#+BEGIN_SRC sh
+awk '(PATTERN1){...print something..} (PATTERN2){..print something..}'
+awk 'PATTERN1{...print something..} PATTERN2{..print something..}'
+#+END_SRC
+for each line, if PATTERNN is matched, command in {} will be executed.
+
+**** syntax
+`awk 'NR==1{print}' [FILE]`
+`awk 'NR==1' [FILE]`
+note
+    for line 1, print whole line
+`awk 'NR==1{}' [FILE]`
+note
+    for line 1, {} = don't do anything
+`awk 'NR==1{print} {print}' [FILE]`
+note
+    {} without condition is the same as condition always set to True.
+    for eaech line, each condition will be read 1 time
+    so this example line 1 will be printed 2 times while the rest of the line
+        will be printed 1 time.
+`awk '($0 ~ /e$/){print $0}' [FILE]`
+`awk '$0 ~ /e$/{print $0}' [FILE]`
+`awk '/e$/{print $0}' [FILE]`
+:awk:regex:example:terminology
+note
+    print line if first value ends with e.
+    ~ indicate that if statement of the rigth is matched, condition will be true.
+    /\<\>/ is regex
+*** Usecase of how to use awk.
+**** split input text by 'x'
+#+BEGIN_SRC sh
+echo 1920x1080 | awk -F"x" '{print $1, $2}'
+#+END_SRC
+**** split input text from a line
+#+BEGIN_SRC sh
+echo '$2 = 1920x1080' | awk -F"x" 'sub(/\$[0-9] += +/, "", $1){print $1, $2}'
+#+END_SRC
+**** writing function in .awk extension file
+***** example 1
+Goal: rounding number using awk
+
+1. create 'test.awk'
+   #+BEGIN_SRC sh
+func round(n){
+    n = n + 0.5
+    n = int(n)
+    return  n
+    }
+/^w/ && $2 9000 (print $1, $2/1024, round($2/1024) "K")
+   #+END_SRC
+2. run
+   #+BEGIN_SRC sh
+   awk -f test.awk [FILE]`
+   #+END_SRC
+
+***** example 2
+Goal: print number that is less than the current line number (line number start from 1)
+
+expected output:
+#+BEGIN_SRC
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+1 2 3 4 5 6
+1 2 3 4 5 6 7
+1 2 3 4 5 6 7 8
+1 2 3 4 5 6 7 8 9
+1 2 3 4 5 6 7 8 9 10
+#+END_SRC
+
+Solutions:
+1. create loop.awk
+   #+BEGIN_SRC sh
+func printloop(n){
+    for(i=1;i<=n;i++){
+        printf("%d ", i)
+        }
+    printf("
+")
+}
+
+{printloop($1)}
+
+   #+END_SRC
+
+2. run
+   #+BEGIN_SRC sh
+seq 10 | awk -f loop.awk
+   #+END_SRC

@@ -1,0 +1,24 @@
+#+TITLE: Metaverse Note
+
+* Blog :blog:
+** TODO Metaverse Core Technologies
+:PROPERTIES:
+:ID:       bbd32670-6277-4308-a69b-385bcadb13e9
+:END:
+*** Virtual Reality (VR)
+*** digital twin
+** TODO Application of Metaverse
+:PROPERTIES:
+:ID:       df6857e3-7d78-4e91-b992-c30607296767
+:END:
+*** Emergence Interactive Experience
+**** Online video conference
+*** Digital Asset
+:PROPERTIES:
+:ID:       a1d922bd-30be-4b22-bcb2-37268e21420e
+:END:
+**** Digital Real Estate
+**** Digital Arts
+:PROPERTIES:
+:ID:       c8f2d67b-6fe3-47a4-9eba-876aeb3cde25
+:END:

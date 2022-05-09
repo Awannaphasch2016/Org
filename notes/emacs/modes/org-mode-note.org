@@ -1,6 +1,8 @@
 #+TITLE: Org Mode Note
 #+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
 
+* References
+** Org mode FAQ, see [[https://orgmode.org/worg/org-faq.html#orgbaac432][here]].
 * Start here
 ** [[file:~/org/notes/emacs/packages/org-babel.org::*\[\[http://www.howardism.org/Technical/Emacs/literate-programming-tutorial.html\]\[Introduction to literate programming with org-mode and org-babel by howard\]\]][Introduction to literate programming with org-mode and org-babel by howard]]
 It basically explains all the usecase of org-babel blocks. very useful.
@@ -59,6 +61,112 @@ DEADLINE: <2022-03-03 Thu .+1w>
 - State "DONE"       from "TODO"       [2022-03-02 Wed 16:26]
 :END:
 #+END_SRC
+** How to write latex using org mode? Minmum things you need to know.
+:PROPERTIES:
+:EXPORT_FILE_NAME: How to write latex using org mode?. Minmum things you need to know.
+:END:
+
+What you need to know to start writing latex in org mode is to understand how =org-export-dispatch= include/exclude/map org mode component to latex equivalent. You can learn all about these info by reading org manual on the topic, [[https://orgmode.org/manual/Exporting.html][here]].
+
+You should know a little bit about org mode header arguments and LaTeX to fully follow the blog.
+
+In this blog, I will just present minimal info for you to start writing latex in org mode.
+
+This is the org header for a minimum use.
+#+BEGIN_SRC org
+,#+TITLE: Ensemble Approaches for Streaming Networking Classification
+,#+DATE: <2022-03-03 Thu>
+,#+AUTHOR: Anak Wannaphaschaiyong
+,#+EMAIL: awannaphasch2016@fau.edu
+,#+OPTIONS: toc:nil
+,#+LATEX_CLASS: IEEE
+#+END_SRC
+
+From above code, you need to define things to be used in =#+LATEX_CLASS=. LaTeX class's variable avaible in the header argument is defined in =org-latex-class=. From above you see that I define LaTeX class variable with =org-latex-class=.
+
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'org-latex-classes
+             '("IEEE" "\\documentclass{IEEEtran}"
+  ("\\section{%s}" . "\\section*{%s}")
+  ("\\subsection{%s}" . "\\subsection*{%s}")
+  ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+  ("\\paragraph{%s}" . "\\paragraph*{%s}")
+  ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+#+END_SRC
+
+From the doc you see that
+#+BEGIN_SRC org
+  (class-name
+    header-string
+    (numbered-section . unnumbered-section)
+    ...)
+#+END_SRC
+
+so, we get
+"IEEE" is a class name.
+
+~\\documentclass{IEEEtran}~ is =header-string=
+
+and
+#+BEGIN_SRC emacs-lisp
+("\\section{%s}" . "\\section*{%s}")
+  ("\\subsection{%s}" . "\\subsection*{%s}")
+  ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+  ("\\paragraph{%s}" . "\\paragraph*{%s}")
+  ("\\subparagraph{%s}" . "\\subparagraph*{%s}"
+#+END_SRC
+is list of ~(number-section . unnumbered-section)~
+
+Out of these components, its worth to understand that ~(number-section . unnumbered-section)~ directly mapped to how =org-export-dispatch= map org header to latex equivalent.
+
+Using the above ~(number-section . unnumbered-section)~, If you have content of org file as followed.
+#+BEGIN_SRC org
+,* first header
+,** second header
+,*** third header
+#+END_SRC
+
+First header will be map to section, second header will be mapped to subsection, and so on.
+
+Without these defined, =org-export-dispatch= will map first header to enumerate and whatever that is equivalent of subenumerate, and so on. (I don't recall the name percisely.)
+
+I provide example of minimum content below
+#+BEGIN_SRC org
+,#+TITLE: Ensemble Approaches for Streaming Networking Classification
+,#+DATE: <2022-03-03 Thu>
+,#+AUTHOR: Anak Wannaphaschaiyong
+,#+EMAIL: awannaphasch2016@fau.edu
+,#+OPTIONS: toc:nil
+,#+LATEX_CLASS: IEEE
+
+,* First Header
+
+Lorem $1+1$ ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem
+nisi, tincidunt tempus sem nec, elementum feugiat ipsum. Nulla in
+diam libero. nunc tristique ex a nibh egestas sollicitudin.
+
+\begin{equation}
+1+ 1
+\end{equation}
+
+- 1
+- 2
+- 3
+- 4
+
+,** sub header :noexport:
+Mauris efficitur vitae ex id egestas. Vestibulum ligula felis,
+pulvinar a posuere id, luctus vitae leo. Sed ac imperdiet orci, non
+elementum leo. Nullam molestie congue placerat. Phasellus tempor et
+libero maximus commodo.
+,* Second header
+something bruh
+#+END_SRC
+
+That's it.
+
+Peace.
+
 * Key binding
 ** Nagivation key binding
 | commands              | key | doom key  | custom key | description                                                   |
@@ -70,10 +178,15 @@ DEADLINE: <2022-03-03 Thu .+1w>
 | org-narrow-to-subtree |     | spc-m-s-n |            |                                                               |
 | widen                 |     | spc-m-n-N |            | opposite to org-narrow-to-subtree                             |
 ** General Key binding
-| commands                    | key         | doom key | custom key | description            |
-| org-footnote-action         |             | spc-m-f  |            | create footnotes       |
-| org-set-property            | c-c c-x p   | spc-m-o  |            | set properties of file |
-| expert org to html and open | c-c c-e h o |          |            | open file in browser   |
+:PROPERTIES:
+:ID:       cd1bdc56-8878-4711-8a78-c54b12f1050d
+:END:
+| commands                    | key         | doom key  | custom key | description            |
+| org-footnote-action         |             | spc-m-f   |            | create footnotes       |
+| org-set-property            | c-c c-x p   | spc-m-o   |            | set properties of file |
+| expert org to html and open | c-c c-e h o |           |            | open file in browser   |
+| org-toggle-link-display     |             | spc-m-l-t |            |                        |
+| org-id-get-create           |             | spc-m-I   |            |                        |
 ** Tag Searches
 | commands              | key   | doom keys | custom keys | descriptions |
 | org-match-sparse-tree | C-c / |           |             |              |
@@ -98,6 +211,9 @@ if you prefer video explaining, see [[https://youtu.be/lxkPeJS6keY?t=285][here]]
 | commands   | key     | doom keys | custom keys | descriptions |
 | org-refile | c-c c-w | spc-m-s-r |             |              |
 ** Clock
+:PROPERTIES:
+:ID:       e6d2b56a-c39a-4a9f-8058-1c18d77bed43
+:END:
 | commands            | key          | doom keys       | custom keys | descriptions                                                    |
 |                     |              | spc-u spc-m-c-l |             | open clock history selection buffer                             |
 | org-agenda-log-mode |              |                 |             | show all clock lines for today.                                 |
@@ -107,6 +223,9 @@ if you prefer video explaining, see [[https://youtu.be/lxkPeJS6keY?t=285][here]]
 *** reporting
 ** Block parameter
 *** types of header parameters
+:PROPERTIES:
+:ID:       2dafb779-f2ba-4c86-a440-f10a90078692
+:END:
 Use PROPERTY to speciy value of the entire files
 
 ref: [[*\[\[file:~/org/notes/emacs/packages/org-babel.org::*\\\[\\\[http://www.howardism.org/Technical/Emacs/literate-programming-tutorial.html\\\]\\\[Introduction to literate programming with org-mode and org-babel by howard\\\]\\\]\]\[Introduction to literate programming with org-mode and org-babel by howard\]\]][from here.]]
@@ -128,6 +247,9 @@ variables for a source block can be set in various ways
 Miscellaneous Input/Output
 of course, you have to have a collection of parameters that don’t fit elsewhere
 #+END_QUOTE
+* Funtions
+** org-element-at-point
+
 * Support of other languages
 ** latex
 *** key binding
@@ -139,7 +261,37 @@ of course, you have to have a collection of parameters that don’t fit elsewher
 - ref
   - https://karl-voit.at/2019/09/25/categories-versus-tags/
 I have decided to not use categories until it clear to me why I need it.
+** how does org mode knows about context around a point/cursor?
+=org-element-at-point= searches for context given a point in org file.
+=org-element-at-point= does this by seaching for org element around point.
+It returns ELEMENT in a form of (TYPE PROPS) where TYPE is defined in =org-element-all-elements= and PROPS is properties of that element.
 
+Given that ELEMENT is alreayd obtained, one can get context of an ELEMENT directly using =org-element-context=. Please note that =org-element-at-point= is run when input to =org-element-context= is nil.
+
+To get all list of ancestors of a given element, =org-element-lineage= can be used.
+Input to org-element is a DATUM which can be supplied by =org-element-context=.
+
+We can use context in various scenario.
+For example, given that you want to know header argument of an org-block, you can get the information with the following code.
+#+BEGIN_SRC emacs-lisp
+(org-babel-get-src-block-info nil
+                              (org-element-lineage
+	                       (org-element-context)
+	                       ;; Limit to supported contexts.
+	                       '(babel-call clock dynamic-block footnote-definition
+			                    footnote-reference inline-babel-call inline-src-block
+			                    inlinetask item keyword node-property paragraph
+			                    plain-list planning property-drawer radio-target
+			                    src-block statistics-cookie table table-cell table-row
+			                    timestamp)
+	                       t))
+
+#+END_SRC
+
+#+RESULTS:
+| emacs-lisp | (org-babel-get-src-block-info nil |
+
+To execute the src block, context is passed to =org-babel-execute-src-block= to execute.
 * Footnotes
 
 [fn:1] [[https://orgmode.org/manual/Repeated-tasks.html][8.3.2 repeated tasks]]

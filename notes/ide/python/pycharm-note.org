@@ -1,0 +1,20 @@
+#+TITLE: Pycharm Note
+#+filetags: pycharm
+
+* Error
+** source root is not recognize | run works, but debug does not work | ModuleNotFoundError: project module is not found error
+:PROPERTIES:
+:ID:       9dc8a388-d5bd-46b8-b6c6-8f570fb7248b
+:END:
+#+BEGIN_SRC
+Note: still not sure what the cause of the problem is.
+
+Answer that work from jetbrain discussion is provided below.
+first solution
+1) Please uncheck "Run with Python console" in your Run/Debug Configuration and try again.
+
+2) Try as described here https://youtrack.jetbrains.com/issue/PY-28457#focus=streamItem-27-2706036-0-0
+
+Note: Once you tried first solution, note that sometimes, root directory is still not set to PYTHONPATH, so you have to add PYTHONPATH in manually in the debug/run edit option under "Environment Variables."
+Note: Also test both run and debug, because sometimes, run works and other times debug works. Error is still unknown, but this solutions works so far.
+#+END_SRC

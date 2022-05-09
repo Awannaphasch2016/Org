@@ -1,0 +1,116 @@
+#+TITLE: Fpscala Chapter6 Purely Functional State Note
+
+* Fpscala Chapter6 Purely Functional State Note
+:PROPERTIES:
+:NOTER_DOCUMENT: /home/awannaphasch2016/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 7. Purely Functional Parallelism.pdf
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 7. Purely Functional Parallelism.pdf::4++5.01]]
+:END:
+
+** Skeleton
+
+*** Link on page 1: [[http://wisenet.fau.edu/class/scala/notes/book-code/fpinscala-dir/answers/src/main/scala/fpinscala/parallelism/Par.scala][Par ADT]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 7. Purely Functional Parallelism.pdf::1++0.658917]]
+:END:
+
+*** Link on page 1: [[http://wisenet.fau.edu/class/scala/notes/book-code/fpinscala-dir/answers/src/main/scala/fpinscala/parallelism/Nonblocking.scala][nonblocking version of the Par ADT]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 7. Purely Functional Parallelism.pdf::1++0.674026]]
+:END:
+
+*** Link on page 1: [[http://wisenet.fau.edu/class/scala/notes/book-code/fpinscala-dir/answers/src/main/scala/fpinscala/parallelism/Actor.scala][the Actor class]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 7. Purely Functional Parallelism.pdf::1++0.689136]]
+:END:
+
+*** Link on page 1: [[https://www.os-book.com/OS9/java-dir/5.pdf][Read more about synchronization in Java from the Operating Systems textbook (Java]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 7. Purely Functional Parallelism.pdf::1++0.960473]]
+:END:
+
+*** Link on page 2: [[https://www.os-book.com/OS9/java-dir/5.pdf][version). Programs using traditional methods for synchronization are very hard to reason about]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 7. Purely Functional Parallelism.pdf::2++0.024327]]
+:END:
+
+*** Link on page 4: [[http://wisenet.fau.edu/class/scala/notes/code-examples/Ch07/executorExample.scala][here]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 7. Purely Functional Parallelism.pdf::4++0.354213]]
+:END:
+
+*** Link on page 4: [[https://docs.scala-lang.org/overviews/core/futures.html][tutorial]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 7. Purely Functional Parallelism.pdf::4++0.889334]]
+:END:
+
+*** Link on page 8: [[https://docs.oracle.com/javase/10/docs/api/java/util/concurrent/ExecutorService.html][java.util.concurrent.ExecutorService]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 7. Purely Functional Parallelism.pdf::8++0.590925]]
+:END:
+
+*** Link on page 8: [[https://docs.oracle.com/javase/10/docs/api/java/util/concurrent/Future.html][Future]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 7. Purely Functional Parallelism.pdf::8++0.590925]]
+:END:
+
+*** Link on page 10: [[http://wisenet.fau.edu/class/scala/notes/code-examples/Ch07/parSum.scala][parSum.scala file]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 7. Purely Functional Parallelism.pdf::10++0.238375]]
+:END:
+
+*** Link on page 13: [[http://wisenet.fau.edu/class/scala/notes/code-examples/Ch07/parMapEx.scala][parMapEx.scala]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 7. Purely Functional Parallelism.pdf::13++0.783568]]
+:END:
+
+*** Link on page 15: [[http://wisenet.fau.edu/class/scala/notes/code-examples/Ch07/parReduce.scala][here]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 7. Purely Functional Parallelism.pdf::15++0.293776]]
+:END:
+
+*** Link on page 18: [[http://mng.bz/Z9f1][theoretical paper]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 7. Purely Functional Parallelism.pdf::18++0.347289]]
+:END:
+
+*** Link on page 18: [[https://docs.oracle.com/javase/10/docs/api/java/util/concurrent/Executors.html#newFixedThreadPool(int)][The java.util.concurrent.Executors class is a factory for ExecutorService objects, such as a fixed- size thread pool.]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 7. Purely Functional Parallelism.pdf::18++0.932773]]
+:END:
+
+*** Link on page 18: [[https://docs.oracle.com/javase/10/docs/api/java/util/concurrent/Executors.html][java.util.concurrent.Executors]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 7. Purely Functional Parallelism.pdf::18++0.932773]]
+:END:
+
+*** Link on page 19: [[http://wisenet.fau.edu/class/scala/notes/code-examples/Ch07/deadlockDemo.scala][source code]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 7. Purely Functional Parallelism.pdf::19++0.086024]]
+:END:
+
+*** Link on page 20: [[http://wisenet.fau.edu/class/scala/notes/book-code/fpinscala-dir/answers/src/main/scala/fpinscala/parallelism/Nonblocking.scala][nonblocking version of the Par ADT]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 7. Purely Functional Parallelism.pdf::20++0.040697]]
+:END:
+
+*** Link on page 20: [[http://wisenet.fau.edu/class/scala/notes/book-code/fpinscala-dir/answers/src/main/scala/fpinscala/parallelism/Actor.scala][the Actor class]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 7. Purely Functional Parallelism.pdf::20++0.055806]]
+:END:
+
+*** Link on page 20: [[https://www.scala-lang.org/api/current/scala/collection/immutable/Map.html][immutable map]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 7. Purely Functional Parallelism.pdf::20++0.535525]]
+:END:
+
+*** Link on page 21: [[http://wisenet.fau.edu/class/scala/notes/code-examples/Ch07/serialize.scala][source file]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 7. Purely Functional Parallelism.pdf::21++0.938441]]
+:END:
+
+*** Link on page 22: [[http://wisenet.fau.edu/class/scala/notes/code-examples/Ch07/wordCount.scala][wordCount.scala]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/Documents/Courses/FAU/2022/spring/functional-programming-with-scala/course-material/chapters/Chapter 7. Purely Functional Parallelism.pdf::22++0.677803]]
+:END:
+
+

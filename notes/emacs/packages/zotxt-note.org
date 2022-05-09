@@ -1,0 +1,3 @@
+#+TITLE: Zotxt-emacs Note
+
+zotxt-emacs is an emacs package that work with zotxt, a Zotero plugin. Its main job is to manages citation keys for pandoc markdown documents. Support also extends to org mode links in Zotero files.

@@ -1,0 +1,9 @@
+#+TITLE: Annotate Note
+
+* keybinding
+:PROPERTIES:
+:ID:       c176f181-019e-4787-9162-5615956d074c
+:END:
+| commands         | key     | doom keys | custom keys | descriptions |
+| annotate-anotate | C-c C-a |           |             |              |
+| annotate-delete  | C-c c-d |           |             |              |

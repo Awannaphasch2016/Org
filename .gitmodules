@@ -13,3 +13,9 @@
 [submodule "projects/sideprojects/website/my-website/hugo"]
 	path = projects/sideprojects/website/my-website/hugo
 	url = https://github.com/Awannaphasch2016/MyHugoWebsite.git
+[submodule "org-almanac"]
+	path = org-almanac
+	url = https://github.com/alphapapa/org-almanac.git
+[submodule "emacs-package-dev-handbook"]
+	path = emacs-package-dev-handbook
+	url = https://github.com/alphapapa/emacs-package-dev-handbook.git

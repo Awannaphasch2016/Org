@@ -1,0 +1,13 @@
+#+TITLE: Better Bibtex Note
+
+#+BEGIN_QUOTE
+Another Zotero plugins to keep bibtex entry consistent and accurate.
+#+END_QUOTE
+
+
+Better bibtex is a bibliographic management tool.
+It is a Zotero import/export module.
+
+* Features
+** avoid citation key clashes
+** bibkey key fields can be customized.

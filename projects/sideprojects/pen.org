@@ -1,16 +1,117 @@
 #+TITLE: Pen
 #+FILETAGS: pen PERSONAL @sideproject
 
+* blog :blog:
+** TODO Tokenomics of iNFT marketplace with pen.el
+:PROPERTIES:
+:ID:       67ce1405-fd48-401e-99e7-600eedcf56c5
+:END:
+#+caption: Example process from a decentalized collaborative learning model. The figure is borrowed from [fn:1]. In the figure, from what I understand on [2022-04-27 Wed], token is paid to computation resources (e.g. GPU cluster) to train model with provided data, and the trained model is also charged token to perform prediction.
+#+attr_html: :width 500px
+[[file:~/org/notes/deep-learning-and-machine-learning/images/screenshot_20220427_112407.png]]
+
+
+#+BEGIN_SRC org
+Data ===send-to====> generalized model ====training-scheme======> Multiple speciliazed task.
+#+END_SRC
+
+Note that training-scheme can be contributed by either new training-scheme or optimization of the same training-scheme.
+
+The goal for tokenomic design in this scenario is to align incentive to train models and use model. According to [fn:2], there are three steps to mechanism design.
+
+1. choose a goal
+2. choose a reward mechanism
+3. choose a reward function to match it.
+
+Goal is "to align incentive to train models and use model." The question to answer is the following
+
+1. why would anyone pay to train model? token is paid to whom when one train model?
+
+   One would want to pay to train model if model is a collective good that acts as a generalized model. The additional data that is provided by user is to train model to specialize in solving a specific task.
+
+
+2. why would anyone pay to use model?
+
+   One would want to pay to use model if model provide predictive tasks that satisfy one's need.
+
+3. Token is paid to whom?
+
+   Of course, token is paid to the model in pay-per-train scheme or pay-per-use scheme.
+
+   - Users who provide either data or training-scheme will be rewarded with fee in token.
+   - Users who train data will pay token fee to DAO, training-scheme provider, computation resource provider.
+   - Users who use model will pay token fee to data provider, training-scheme provider, DAO, and computation resource provider.
+
+* Understand startup structure
+:PROPERTIES:
+:ID:       2e481e09-445e-4539-af3c-a527ed06c814
+:END:
+** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+** Notes :note:
+** Meeting :meeting:
+** Schedule
+*** recurring :recurring:
+*** non-recurring :nonrecurring:
+** Delegation :waiting:
+** Tasks
+*** actionable :actionable:
+*** incubation :incubation:
+**** read about start up, what does founder need to know before starting a company?
+**** how to estimate value of the business?
+**** what is the road map for the project?
+:PROPERTIES:
+:ID:       f3d414ce-d08a-4448-9648-6623e63bbbf8
+:END:
+**** what is the cost of running the business? do i need investor to get it running?
+**** TODO watch youNoodle and join youNoodle.
+:PROPERTIES:
+:ID:       c45e807c-33b3-4349-9216-d97735f97ed3
+:END:
+
 * Pen
-** Waiting :WAITING:
+:PROPERTIES:
+:ID:       c63f516c-c4c6-451a-8e1d-598a2f980df1
+:END:
+** Delegation :waiting:
+*** WAITING waiting for discord to reply to my ticket about the fact that credentials used to create bots are incorrect. :WAITING:
+:PROPERTIES:
+:ID:       d6f143d4-c0d9-43ba-886d-a400c25ebbdb
+:END:
+:LOGBOOK:
+- State "WAITING"    from "TODO"       [2022-04-09 Sat 11:17]
+CLOCK: [2022-04-09 Sat 11:16]--[2022-04-09 Sat 11:17] =>  0:01
+:END:
+[2022-04-09 Sat 11:16]
+[[file:~/org/community/blockchain/curated-blockchain-content-note.org::*Week 2 content][Week 2 content]]
+check the following places for reply
+- https://stackoverflow.com/questions/71809364/failed-to-complete-official-tutorial-from-discord-documentation
+- https://www.reddit.com/r/discordapp/comments/tzv5de/failed_to_complete_official_tutorial_from_discord/
+- discord ticket should be sent to my email.
 ** Habits :habit:
 :PROPERTIES:
 :CATEGORY: Habit
 :LOGGING: DONE(!)
 :ARCHIVE:  %s_archive::* Habits
+:ID:       414afc1a-277b-490c-ac2f-847679ad3780
 :END:
-*** TODO 30 mins about pen.el codebase + prompt programming.
+*** CANCELLED 1 hour read or learn about pen.el codebase + prompt programming + build pen community. :CANCELLED:
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: NEXT
+:END:
 :LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-04-16 Sat 13:28]
+- State "DONE"       from "NEXT"       [2022-04-16 Sat 10:52]
+- State "DONE"       from "TODO"       [2022-04-13 Wed 16:54]
+- State "DONE"       from "TODO"       [2022-04-11 Mon 08:13]
+- State "DONE"       from "TODO"       [2022-04-10 Sun 19:54]
+- State "DONE"       from "TODO"       [2022-04-09 Sat 11:30]
+- State "DONE"       from "TODO"       [2022-04-08 Fri 15:38]
 - State "DONE"       from "TODO"       [2022-03-02 Wed 18:47]
 - State "TODO"       from "DONE"       [2022-02-26 Sat 16:56]
 :END:
@@ -18,21 +119,71 @@
   I have learn and install org habit
 [2022-02-24 Thu 22:58]
 [[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*3.2 A sample database application][3.2 A sample database application]]
-SCHEDULED: <2022-03-03 Thu .+1d/3d>
-:PROPERTIES:
-:STYLE: habit
-:REPEAT_TO_STATE: TODO
-:END:
-*** TODO read about startup information that i need to know. 30 mins
-SCHEDULED: <2022-03-02 Wed .+1d>
-:PROPERTIES:
-:STYLE:    habit
-:REEAT_TO_STATE: TODO
-:END:
+**** task
+***** write pen.el white paper
+****** help Shane Edit white paper
+pipeline that we discussion on [2022-04-12 Tue] meeting is the following
+1. Shane select article relate to content that will be added to the paper
+2. I read and edit the article and add it to Notion
+3. Shane and I help each other add and edit white paper content.
+****** writing draft in blockchain section of Pen.el white paper.
+***** Whatever Shane send me
+****** [[https://semiosis.github.io/posts/functional-consciousness/][functional consciousness]]
+****** [[https://en.wikipedia.org/wiki/Winograd_schema_challenge][winograd schema challenge]]
+
+***** building discord community
+****** refine discord community. (add a proper "introduction steps" when new member enter discord for the first time etc.)
+
+******* landing page should contain the following (use notion.)
+****** building discord bot
+******* write start-here page (use syndicate start-here page as a tepmlate.).
+******* implement bot to get update from github
+******** reference
+********* [[https://github.com/Falconerd/discord-bot-github][discord-bot-github]]
+********* [[https://discord.com/developers/docs/getting-started#running-your-app][getting starting tutorial from discord documentation]]
+*******
+**** learn
+***** learn pen.el codebase
 ** Questions :QUESTION:
+** Schedule
+*** recurring :recurring:
+*** non-recurring :nonrecurring:
+:PROPERTIES:
+:ID:       d414d75c-0be1-48e4-91d8-d6956dba1b86
+:END:
 ** Notes :NOTE:
-** Meeting :MEETING:
-** Tasks
+*** semiosis media
+**** gmail account: semosisdao@gmail.com
+**** [[https://learned-letter-778.notion.site/Semiosis-Under-Construction-c2da28e977a545dcbb2881a8d08a0aaa][semiosis's landing page]]
+:PROPERTIES:
+:ID:       fbd0788f-bed5-4efd-912b-2226f7f07451
+:END:
+*** pen killer function is designing prompt function.
+*** [[https://www.fau.edu/sbdc/][FAU sbdc]]
+#+BEGIN_SRC txt
+The Florida Small Business Development Center (SBDC) at Florida Atlantic University (FAU) offers high-level consulting and training to small and medium-sized businesses in Broward and Palm Beach Counties. The Florida SBDC at FAU has access to robust databases, business research resources and knowledgeable expert consultants who can help business owners and entrepreneurs successfully navigate the obstacles that come with the stages of the business life cycle, providing no-cost specialized services to fit their needs. From pre-venture businesses (exploring business feasibility) to established businesses (in business over three years), the SBDC at FAU can help. Consultations are confidential, one-on-one, either virtual or in-person.
+
+Services Include:
+
+International Market Planning
+Export Market Planning
+Government Contracting
+Strategic Planning
+Strategic Marketing Planning
+Access to Capital
+Loan Proposal Development
+Cash Flow Management
+Leveraging Social Media
+Feasibility Studies
+Targeted Market Research
+#+END_SRC
+*** [[https://www.fau.edu/innovation-and-business-development/][FAU pipeline for growth]]
+#+BEGIN_QUOTE
+it's also a major community and state resource to promote economic development and entrepreneurship. The university’s continuum flows from student ideation to faculty companies and inventions, to real-world, large-scale business. We’ve built the pipeline for your growth.
+#+END_QUOTE
+
+*** Places to apply for funding
+**** [[https://www.fau.edu/innovation-and-business-development/trin/][FAU Tech Runway Investor Network (FAU TRIN)]]
 *** builing startup on pen.el project
 - ref
   - research paper
@@ -52,13 +203,151 @@ SCHEDULED: <2022-03-02 Wed .+1d>
   - src/pen.el (server)
   - src/pen-client.el (thin client)
   - src/pen-custom.el (read ~/.pen/pen.yaml config file)
+** Meeting :MEETING:
+:PROPERTIES:
+:ID:       718d6d6a-747e-4ecc-b7d9-a9ccd28e1fbc
+:END:
+*** Pen meeting
+**** Notes
+***** topics to discuss
+:PROPERTIES:
+:ID:       917ebeae-6302-47a4-a0c0-e7e32a7765a6
+:END:
+just a friendly reminder, meeeting at 5 pm flodara today.
+Due to my time constraint, we should keep the meeting around 1 hours, so the meeting needs to be very focused.
 
-*** TODO understand startup structure
-**** TODO read about start up, what does founder need to know before starting a company?
-**** TODO how to estimate value of the business?
-**** TODO what is the road map for the project?
-**** TODO what is the cost of running the business? do i need investor to get it running?
-*** WAITING write out business plan required for me to execute pen.el start up plan. what does a founder need to know before starting a company? how to estimate value of the business? what is the time horizon (can I start doing it before starting the summer)? what do I need to know because deciding on the amount of money that pen.el need to continue the project? :WAITING:
+main topic of discussion will be
+- fill out the form [[https://www.fau.edu/innovation-and-business-development/][FAU's Innovation and Business Development Pipeline]]
+- setting up 2 office hours (each for you and I, so 4 hours in total). we can have things like "tutorial session," "chill with us." (aka coffee hours), will talk more in the meeting.
+- roadmaps for developer and road maps for community
+- discuss about what can be "killer features"
+- tasks for whiter paper to complete
+- design of DAO.
+
+if both of us can prepare presentation (not a hard restriction because I just told you now, but later meeting, we should put priority on this.), it should make the meeting alot more professional and possibly can be upload to social platform without much editing.
+**** pen Tue Meeting :CANCELLED:
+:PROPERTIES:
+:ID:       d4d42063-70c0-47d0-b268-ebcf680cfb74
+:LAST_REPEAT: [2022-04-19 Tue 13:57]
+:END:
+:LOGBOOK:
+- State "CANCELLED"  from              [2022-04-19 Tue 13:57] \\
+  I can continue the weekly meeting until Shane replies to me and start to be consistent again.
+:END:
+<2022-04-19 Tue 17:00 +1w>
+**** pen Fri Meeting
+<2022-04-15 Fri 17:00 +1w>
+***** Ask Shane about all of the API keys for language models that I should have.
+***** How to set up semosis blog?
+I think semiosis webpage looks good already. I will just have a link in notion call "Semiosis's content" to redirect to semiosis webpage.
+
+can you create semiosis's Archive blog (and put all of the old content there) and create a semiosis's blog  where new weekly content will be addeed
+***** cost of operation of play ground for prompt construction.
+***** how much money will flow as a revenue stream.
+** Tasks
+*** actionable :actionable:
+**** TODO writing draft in blockchain section of Pen.el white paper.
+:PROPERTIES:
+:ID:       033c02c1-7326-4afd-bfe9-05ef988e4f14
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-03 Sun 00:36]--[2022-04-03 Sun 00:48] =>  0:12
+:END:
+[[https://www.youtube.com/watch?v=qHsPj0h-KSQ&ab_channel=ShaneMulligan][Pen.el - Prompt Engineering in Emacs overview]]
+/mnt/c/Users/terng/Videos/pen.el/overview-penel-prompt-programming.webm
+**** WAITING get api key for language models products. (see discussion with Shane to recall the name of the companies) :WAITING:
+:PROPERTIES:
+:ID:       4ede5fd4-3bff-4cff-a6c1-e9bf23376c33
+:END:
+:LOGBOOK:
+- State "WAITING"    from "TODO"       [2022-04-14 Thu 20:07] \\
+  waiting for shane to tell me list of api keys for language model that I need to have.
+CLOCK: [2022-02-27 Sun 20:05]--[2022-02-27 Sun 20:06] =>  0:01
+:END:
+[2022-02-27 Sun 20:05]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*Several characteristics differentiate relations from ordinary tables or files. The first is that a relation is not sensitive to the ordering of tuples. The second involves the ordering of attributes in a relation schema and the corresponding ordering of values within a tuple. We gave an alternative definition of relation that does not require ordering of attributes, but we continued to use the first definition, which requires attributes and tuple values to be ordered, for convenience.][Several characteristics differentiate relations from ordinary tables or files. The first is that a relation is not sensitive to the ordering of tuples. The second involves the ordering of attributes in a relation schema and the corresponding ordering of values within a tuple. We gave an alternative definition of relation that does not require ordering of attributes, but we continued to use the first definition, which requires attributes and tuple values to be ordered, for convenience.]]
+*** incubation :incubation:
+**** Prompt Programming :progmptprogramming:
+:PROPERTIES:
+:ID:       ea1b0280-e000-4a0b-be33-ca2009d2a6c9
+:END:
+*****  reading [[https://generative.ink/posts/methods-of-prompt-programming/][methods of prompt programming]]
+*****  reading [[id:][GPT-3 creative fiction]] :gpt3:
+:PROPERTIES:
+:ID:       4c38592f-08b1-4f39-aa82-bcee4db0b41e
+:END:
+**** understand fundamental of blockchain
+:PROPERTIES:
+:ID:       36963cb9-9b6a-4166-8450-5ff077e5e6fb
+:END:
+- reading the following
+  - trying to understand ~encorse peers~ (~endorser transaction~) used in ~Hyperledger Fabric~
+    - I stopped [[https://hyperledger-fabric.readthedocs.io/en/release-2.2/peers/peers.html#peers-and-channels][here]]
+
+**** read or check out the following before moving on to other list.
+:PROPERTIES:
+:ID:       030942fb-a4dd-4baf-a768-2794641911a1
+:END:
+***** write essay or reimplement code from the following
+****** https://youtu.be/M576WGiDBdQ?t=1904
+****** https://youtu.be/M576WGiDBdQ?t=2833
+****** https://youtu.be/M576WGiDBdQ?t=4092
+****** use factory pattern to interact with contract from outside of the contract.
+ https://youtu.be/M576WGiDBdQ?t=8780
+****** what is the goal of factory pattern?
+****** what are the things that I can and cannot do without and with factory pattern?
+https://youtu.be/M576WGiDBdQ?t=11283
+https://youtu.be/M576WGiDBdQ?t=15770
+https://youtu.be/M576WGiDBdQ?t=22246
+****** malware stuff
+https://youtu.be/k-nFdF5FEwA?t=2702
+***** stuff to read
+****** https://ethereum.org/en/developers/docs/scaling/layer-2-rollups/
+****** https://www.google.com/search?q=evm+compatible&rlz=1C1CHBF_enUS941US941&oq=evm+&aqs=chrome.2.69i57j0i433i512j0i512l8.3560j0j7&sourceid=chrome&ie=UTF-8
+****** https://www.preciouschicken.com/blog/posts/short-sharp-solidity-pure-vs-view-vs-call/
+***** colony coin
+****** create colony for =pen.el=
+****** contribute to colony coin
+******* https://github.com/JoinColony/colonyDapp/labels/good-first-issue
+******* https://github.com/JoinColony/colonyNetwork/issues
+******** understanding this issue -> https://github.com/JoinColony/colonyNetwork/pull/1008
+- CoinMachine?
+- how to create smart contract?
+- check the following test
+  - test-contracts-coverage?
+  - test-reputation-coverage.
+  - chainid
+
+*****  hands on solidty from beginner to expert :solidity:
+- ref
+  - https://github.com/smartcontractkit/full-blockchain-solidity-course-py
+  - [[https://github.com/OpenZeppelin/openzeppelin-contracts][solidity template with zappenlin contract]]
+******  [[https://www.youtube.com/watch?v=M576WGiDBdQ&ab_channel=freeCodeCamp.org][Solidity, Blockchain, and Smart Contract Course  Beginner to Expert Python Tutorial]]
+******* I stop [[https://youtu.be/M576WGiDBdQ?t=12409][here]].
+- finish web three
+- work locally with brownie.
+*****  implement crypto with blockchain from scratc using javascript :javascript:
+- ref
+  - [[https://dev.to/freakcdev297/build-a-p2p-network-and-release-your-cryptocurrency-clf][Build a p2p network and release your cryptocurrency]]
+    - [[https://www.youtube.com/watch?v=aTCQvtO-jzc&ab_channel=FreakCdev][A Tutorial video about how to Implement a P2P Network and Releasing your Cryptocurrency on your blockchain in Javascript.]]
+  - [[https://dev.to/freakcdev297/creating-transactions-mining-rewards-mint-and-gas-fee-5hhf][Creating a cryptocurrency - Creating transactions, mining rewards, mint and gas fee]]
+  - [[https://dev.to/freakcdev297/creating-a-blockchain-in-60-lines-of-javascript-5fka][Creating a blockchain in 60 lines of Javascript]]
+**** schedule time to finish learning solidity tutorial on youtube, so I can start building blockchain project towards pen.el
+:PROPERTIES:
+:ID:       2fd9dfb5-9cf2-42a9-aead-11fd97c61cf8
+:END:
+[2022-02-24 Thu 23:14]
+[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*3.4.1 Relationship types, Sets, and Instances][3.4.1 Relationship types, Sets, and Instances]]
+**** TODO send nick ( from living green ), power point/article about blockchain.
+:PROPERTIES:
+:ID:       c321f5c0-10df-4c69-94af-094368090c47
+:END:
+[2022-04-10 Sun 13:02]
+[[file:~/Scratches/scala/playground1/Main.scala][file:~/Scratches/scala/playground1/Main.scala]]
+**** write out business plan required for me to execute pen.el start up plan. what does a founder need to know before starting a company? how to estimate value of the business? what is the time horizon (can I start doing it before starting the summer)? what do I need to know because deciding on the amount of money that pen.el need to continue the project? :WAITING:
+:PROPERTIES:
+:ID:       e972c7b7-ff36-47f3-ba8e-ce848a195b87
+:END:
 - State "WAITING"    from "TODO"       [2022-02-24 Thu 18:42] \\
   I need to map out purpose/principle/vision ( GTD methods) for my life and pen.el project (among other project) before begingin this step. actions should be postponeed until I can see my whole life at a higher level.
 :LOGBOOK:
@@ -66,10 +355,95 @@ CLOCK: [2022-02-24 Thu 18:39]--[2022-02-24 Thu 18:41] =>  0:02
 :END:
 [2022-02-24 Thu 18:39]
 [[file:~/org/notes/database-note.org::*ER][ER]]
-*** TODO get api key for language models products. (see discussion with Shane to recall the name of the companies)
-SCHEDULED: <2022-03-03 Thu>
-:LOGBOOK:
-CLOCK: [2022-02-27 Sun 20:05]--[2022-02-27 Sun 20:06] =>  0:01
+**** TODO watch recorded video about "Sucessfully Start Up Your Business"
+:PROPERTIES:
+:ID:       0348c07e-f849-4ec6-b390-5512eb8e8648
 :END:
-[2022-02-27 Sun 20:05]
-[[file:~/org/notes/books/database/fundamentals-of-database-systems-note.org::*Several characteristics differentiate relations from ordinary tables or files. The first is that a relation is not sensitive to the ordering of tuples. The second involves the ordering of attributes in a relation schema and the corresponding ordering of values within a tuple. We gave an alternative definition of relation that does not require ordering of attributes, but we continued to use the first definition, which requires attributes and tuple values to be ordered, for convenience.][Several characteristics differentiate relations from ordinary tables or files. The first is that a relation is not sensitive to the ordering of tuples. The second involves the ordering of attributes in a relation schema and the corresponding ordering of values within a tuple. We gave an alternative definition of relation that does not require ordering of attributes, but we continued to use the first definition, which requires attributes and tuple values to be ordered, for convenience.]]
+:LOGBOOK:
+CLOCK: [2022-04-13 Wed 15:16]--[2022-04-13 Wed 16:34] =>  1:18
+:END:
+[2022-04-13 Wed 15:16]
+[[file:~/org/projects/sideprojects/pen.org::*Pen][Pen]]
+
+* growing DAO community
+:PROPERTIES:
+:ID:       24961d34-0df6-45c8-9787-738c7d9937b5
+:END:
+** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+*** CANCELLED check samosas email :CANCELLED:
+:PROPERTIES:
+:STYLE: habit
+:REPEAT_TO_STATE: NEXT
+:ID:       a9ff55d7-06d5-4bb8-a60c-7977f7b5ad3e
+:END:
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-04-14 Thu 19:12]
+- State "DONE"       from "NEXT"       [2022-04-13 Wed 16:30]
+:END:
+** Notes :note:
+*** Token idea from Joshua Meyers.
+see the email [[https://mail.google.com/mail/u/0/#inbox/FMfcgzGpFWVVXzPBTQCvMJfKKRdgVFdM][here]].
+*** roadmap for building DOA community. ( from top to bottom )
+- complete landing page for semiosis by [2022-04-22 Fri]
+- design token mechanism to reward founders and early contributor. [2022-04-29 Fri]
+- complete discord on-boarding new member mechanism  [2022-05-06 Fri]
+- introduce DAO by using DAO template platform. (select 1) [2022-05-20 Fri]
+- complete content collection for 0 to hero's roadmap X-weeks programs educational blockchain communities [2022-05-27 Fri]
+** Meeting :meeting:
+** Schedule
+*** recurring :recurring:
+*** non-recurring :nonrecurring:
+** Delegation :waiting:
+*** WAITING mint "Evolution of Asset Transaction" article in mirror.xyz as NFT :WAITING:
+:PROPERTIES:
+:ID:       54e148b1-450a-41ad-a0c7-f9ba10750c9d
+:END:
+:LOGBOOK:
+- State "WAITING"    from              [2022-04-16 Sat 10:47] \\
+  waiting until bank of america transfer money to coinbase. So i have money to mint NFT.
+:END:
+this task is required to complete DAO RH tasks. see [[https://app.rabbithole.gg/skills/intro-to-nfts/MIRROR_PUBLISH][here]].
+
+*** WAITING join a Snapshot governance DAO to complete dao the rabbit hole tasks.. :WAITING:
+:PROPERTIES:
+:ID:       1bb01d35-72b7-4eef-9c42-12dc9b6a5929
+:END:
+:LOGBOOK:
+- State "WAITING"    from "TODO"       [2022-04-17 Sun 10:25] \\
+  waiting for moneny to transfer from bank of america to coinbase.
+CLOCK: [2022-04-17 Sun 10:24]--[2022-04-17 Sun 10:26] =>  0:02
+:END:
+[2022-04-17 Sun 10:24]
+[[file:~/org/refile.org::*pay for gnosis-safe creation.][pay for gnosis-safe creation.]]
+** Tasks
+*** actionable :actionable:
+*** incubation :incubation:
+:PROPERTIES:
+:ID:       c0eff343-05a8-4b1d-9178-0920c61f0c5b
+:END:
+**** revisit each member about pen.el
+:LOGBOOK:
+- State "WAITING"    from              [2022-04-08 Fri 15:35] \\
+  I should talk to member of the pen.el individually after infrastructure of discord is settup correctly. no need to wait until DAO is setup. not many people knows how DAO works anyway. if we set DAO later, members can start learning and contribute with us.
+:END:
+**** how should semosis/me/pen.el/blockchain community be branded? should it all be under semeosis? or should each has its own brand?
+:PROPERTIES:
+:ID:       4e9d6989-708c-4732-9eae-b02db04006ea
+:END:
+:LOGBOOK:
+CLOCK: [2022-04-12 Tue 18:09]--[2022-04-12 Tue 18:11] =>  0:02
+:END:
+[2022-04-12 Tue 18:09]
+[[file:~/org/projects/sideprojects/pen.org::*1 hour read or learn about pen.el codebase + prompt programming + build pen community.][1 hour read or learn about pen.el codebase + prompt programming + build pen community.]]
+* Footnotes
+:PROPERTIES:
+:ID:       cf37aedb-57ad-4b78-8ba1-134b7ec82f5b
+:END:
+[fn:3] [[https://www.youtube.com/watch?v=qHsPj0h-KSQ&ab_channel=ShaneMulligan][Pen.el - Prompt Engineering in Emacs overview]]
+[fn:2] [[https://www.youtube.com/watch?v=gCFlGLbI_kE&ab_channel=TechCrunch][Sam Williams: Mechanism Design 101]]
+[fn:1] [[https://assets.bosch.com/media/global/research/eot/bosch-eot-tokenomics-machine-to-machine_en.pdf][Economy of Things --- contribution to the community]]

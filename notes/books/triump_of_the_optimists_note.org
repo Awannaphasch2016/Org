@@ -1,0 +1,8 @@
+#+TITLE: Triump_of_the_optimists_note
+
+* Triump of the optimists note
+:PROPERTIES:
+:ID:       55a60bf2-6b9d-48c8-8ca4-e2baa76777f4
+:NOTER_DOCUMENT: ../../../Documents/Books/TRIUMPH_OF_THE_OPTIMISTS.pdf
+:NOTER_PAGE: [[pdf:~/Documents/Books/TRIUMPH_OF_THE_OPTIMISTS.pdf::8++0.00]]
+:END:

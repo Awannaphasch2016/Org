@@ -1,0 +1,28 @@
+
+
+* emacs
+:PROPERTIES:
+:ID:       c97bab09-dc03-4a11-a7b4-8d8a25edea10
+:BRAIN_CHILDREN: dabf13cc-30f0-4036-ab47-da434fd801aa 778b0a00-7a1c-42fe-94ce-522871ea5ce5
+:END:
+** emacs
+:PROPERTIES:
+:ID:       325924b7-abd0-44b5-aa99-5f561ab5f64a
+:BRAIN_PARENTS: software
+:BRAIN_FRIENDS: 2fdb96d8-1108-479b-9495-5dd0bc64366f
+:BRAIN_CHILDREN: 778b0a00-7a1c-42fe-94ce-522871ea5ce5
+:BRAIN_EDGE_dabf13cc-30f0-4036-ab47-da434fd801aa: age title
+:END:
+emacs is a part of FSF
+
+
+*** second brain
+:PROPERTIES:
+:ID:       6474a0e2-beb9-4e8e-8a04-62823dbb67c6
+:END:
+
+*** vim
+:PROPERTIES:
+:ID:       ecbb3892-278a-446a-acf4-8ff2662a6040
+:END:
+

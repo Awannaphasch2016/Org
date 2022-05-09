@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+
+\begin{document}
+\begin{algorithm*}
+\begin{algorithmic}
+\REQUIRE  $Data$,$ws$,$bs$,$stride$,$C_{ws}$,$C_{PW}$
+\ENSURE $Score$
+\STATE $window\_index \gets ws$
+
+\WHILE{$window\_index < data.size$}
+\STATE $Ensembles = get\_all\_ensembles(window\_index, C_{ws})$
+    \FOR{each $index$ in $ensembles$}
+        \STATE $tepmoral\_parameters_set = get\_tepmoral\_parameters(C_{ws}, index)$
+        \FOR{$(pred\_next, keep\_last, stride)$ in $temporal_\_parameters\_set$}
+            \STATE $c = train\_classifier(pred\_next, keep\_last, strides, batch\_size, epoch)$
+            \STATE add $c$ to $classifier\_set$
+        \ENDFOR
+    \ENDFOR
+    \STATE $output = voting\_ensemble(classifier\_set)$
+\ENDWHILE
+\end{algorithmic}
+\end{algorithm}
+\end{document}

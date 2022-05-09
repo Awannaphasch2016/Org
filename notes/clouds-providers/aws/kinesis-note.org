@@ -1,0 +1,8 @@
+#+TITLE: Kinesis Note
+#+filetags: kinesis
+
+* How to
+** list shardID of stream
+#+BEGIN_SRC sh
+aws kinesis list-shards --stream-name faucovidstreamsentiment
+#+END_SRC

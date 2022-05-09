@@ -1,0 +1,126 @@
+#+TITLE: Defi Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+
+* blog :blog:
+** TODO Understand Miner Earning Value (MEV)
+:PROPERTIES:
+:ID:       68333cbe-84ee-4615-b350-092ded5a387b
+:END:
+** TODO Understand stablecoin
+Goal of stablecoins are to make cryptocurrency more stable. As of [2022-05-01 Sun], from what I understand, stablecoins peg fiat currency and try to make sure that ratio of stablecoins:fiat is 1:1, see tether price, which is a stablecoin, in figure ref:tether_price.
+
+#+name: tether_price
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220501_121527.png]]
+
+Stablecoin can be used by trader and crypto. In the first usecase, stablecoins are pegged by crypto currency to reduce price's volatility. As of [2022-05-01 Sun], from what I understand, for this reason, when crypto volatility increase, volatility will be propagated to fiat currency that stablecoins peg. This stablecoin is adopted with a hypothesis that when volatility of crypto currency propagate to fiat currency, regulation will stablized the volatility in fiat currency which will propagate back to crypto currency resulting in more stable behavior due to regulation.
+
+It can be used as a "hold out" methods. When traders cash out on a crypto trade, there is a high fees to cash out by converting crypto to fiat. To reduce the fee, instead of cashing out crypto trade to fiat, one can cash out the trade to stablecoin.
+
+Stablecoin carries an inherent risk. Stablecoins are backed by companies with a promised to have invested fiat back by other fiats or assets. However, there is no way to be sure that companies do as it promised. Report could be manipulated.
+
+[What is the mechanism to make stablecoins more stable?]
+*** TODO Things to read
+**** [[https://www.coindesk.com/learn/whats-the-point-of-stablecoins-understanding-why-they-exist/#:~:text=Why%20use%20stablecoins%3F,just%20need%20one%20crypto%20wallet][What's the Point of Stablecions? Understanding Why They Exist]]
+** TODO Role of centralized exchanges in distributed blockchain environment.
+:PROPERTIES:
+:ID:       f12f693d-030c-448e-af23-75d1972784d7
+:END:
+custody to reduce human error risk.
+reduce cost (different between trading with centralized exchange and role of stable coin?)
+
+** TODO Understanding: Staking Mechanism in blockchain
+:PROPERTIES:
+:ID:       fb2a00d2-862d-4d16-8d30-a21beb718ba5
+:END:
+Staking token earns token holder cash flow as passive income without selling token. It is equivalent of a high-yield saving account. As of <2022-04-23 Sat>, the return are much higher than interest rate offers by banks
+
+Staking token is a "lockup" mechanism which as the name suggests token is lock away during a fixed time interval which mean token cannot be sold. The longer one stake their token can be interpreted as confident one's have in the project.
+
+In practice, staking is usually done via staking pool. the goal is to lower the barrier of entry of users. Validators acts as delegators (people who act on behalf of others) to run a staking pool and raise funds from a group of token holders. This is equivalent of saying "Given the current cost, stakers will pay validator to solve puzzle and every gained rewards will be sent to stakers." To justify actions with risk and reward, risk that stakers takes is (future rewards - future cost) will be more than (the current reward - the current cost) while validator takes on the opposite side of the trade.
+
+Type of coin staking.
+** TODO Defi Ecosystem
+:PROPERTIES:
+:ID:       babcccea-46ad-4704-8de6-cc734c836f3e
+:END:
+*** Assets Tokenization [fn:1]
+:PROPERTIES:
+:ID:       f9702a69-63ec-492a-8cc7-8142c4e1fd0f
+:END:
+Assets tokenizaiton platforms are used by financial institutions and institutional investors. The platfrom dematerialize assets by turning intangible assets into tokens. Tokens that backed by external reference provide liquidity for crypto exchange.
+*** Compliance & Identity [fn:1]
+Compilance and identity solutions implement rules and regulation in decentralized tokenize market.
+*** Marketplaces & Liquidity [fn:1]
+Liquidity provide Defi ecosystem liquidator rewards and provide trader low-cost and low-friction to switch between token-pairs liquidity pools.
+**** Automated Market Maker (AMM)
+:PROPERTIES:
+:ID:       1275fc15-76b2-4ffd-a558-2f984da8df9e
+:END:
+#+caption:List of AMM
+| AMM Name  | Symbol | Description |
+| SushiSwap |        |             |
+*** Infrastructure [fn:1]
+**** Wallets
+Example of Web3 infrastructure in Defi is crypto wallet.
+*** Lending   [fn:1]
+*** Payment   [fn:1]
+Payment providers enable secure, salable, and instant transaction on decentralized network.
+*** Prediction Markets   [fn:1]
+Prediction markets allows individuals to make money from prediction of events. Events include sport, economics event.
+*** Stable coins   [fn:1]
+:PROPERTIES:
+:ID:       7b922ee3-699a-4442-9317-740bc715243c
+:END:
+Stable coins were created to mitigate volatility of cryptocurrencies.
+*** TODO token bonding curve (TBC)
+:PROPERTIES:
+:ID:       4d9b3c1e-e782-4bff-b2a1-7992cc1c99b9
+:END:
+Bonding curve is a function of relationship between price and supply. In tokenomics, bonding curve is called token bonding curve (TBC). It needs a new name because bonding curve function, in addition to supply and supply,  minting/burning mechanisms are used to increase/decrease supply of tokens, respectively. TBC function is implemented in smart contract.
+
+TBC is a primitive price discovery mechanism. Price discovery is defined as followed [fn:4]
+#+BEGIN_QUOTE
+The price discovery process is the process of determining the price of an asset in the marketplace through the interactions of buyers and sellers.
+#+END_QUOTE
+
+
+When you "buy up" a bonding curve means you mint new tokens. As a result, token supply increases and cause price to increase. The process is vice versa when you "sell down" a bonding curve.
+
+According to [fn:2], TBC enable users to buy tokens outside of exchange. As of [2022-05-03 Tue] I don't understand why it enable this. As of [2022-05-03 Tue], I don't understand how TBC can be used for. Common use case for bonding cure are ICO (funding).
+
+[supply token vs reserve token?]
+
+Properties of TBC are as followed: [fn:4]
+1. TBC is a function of token's price and supply, see figure ref:example_of_TBC for illustration.
+2. monotonic function (always increasing)
+3. deterministic
+
+#+name: example_of_TBC
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220503_010647.png]]
+
+Parameters for TBC design are time, pricing, collateral, issuance, supply, function, and composition [fn:4].
+
+**** things to read
+***** [[https://github.com/bitsofether/awesome-bonding][awesome Binding]]
+***** common stack augmented bonding curve
+
+** TODO Curation markets
+** CBDC
+*** TODO High performance payment processing system design for central bank digital currencies
+:PROPERTIES:
+:ID:       bd89ef56-9dc7-4af1-b757-f8ad02f2dc70
+:END:
+
+**** Bibliography :ignore:
+:PROPERTIES:
+:ID:       877f0b57-bf5e-4bf6-aa78-4959584c1903
+:END:
+bibliography:~/org/papers/org-mode-bibtex.bib
+
+* Footnotes
+[fn:4] [[https://tokenengineeringcommunity.github.io/intro-to-bonding-curves/#/3][Intro to bonding curve slides]]
+[fn:3] [[https://www.youtube.com/watch?v=14hH0dKktvc&list=PLWYK_jGKZtaBiM5ToFyYoA7vNZdfbaVYu&ab_channel=EconomicsDesign][Explain Like I'm 5 years old: Token Bonding Curve 👀 1/3]]
+[fn:2] [[https://thegraph.academy/curators/introduction-to-bonding-curves/#:~:text=A%20bonding%20curve%20describes%20the,subsequent%20buyers%20with%20each%20purchase][An Introduction to Bonding Curves]].
+[fn:1] [[https://tokeny.com/defi-ecosystem/][Decentralized Finance (DeFi) Ecosystem]]

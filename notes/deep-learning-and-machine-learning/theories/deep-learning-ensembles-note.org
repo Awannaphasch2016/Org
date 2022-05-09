@@ -5,6 +5,9 @@
   - [[https://machinelearningmastery.com/weighted-average-ensemble-for-deep-learning-neural-networks/][Weighted Average Ensemble For Deep Learning Neural Networks]]
 
 ** Future direction of the article
+:PROPERTIES:
+:ID:       0c7a05d4-f0db-4c94-ab9d-fed5c889f54c
+:END:
 This section lists some ideas for extending the tutorial that you may wish to explore.
 
 Parallelize Grid Search. Update the grid search example to use the Joblib library to parallelize weight evaluation.

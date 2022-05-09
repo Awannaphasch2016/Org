@@ -1,6 +1,9 @@
 #+TITLE: Deep Learning And Machine Learning Python Utils
 
 * Grid search
+:PROPERTIES:
+:ID:       0333c822-f646-451c-b651-ffc9bb0a7e60
+:END:
 #+BEGIN_SRC python :noeval
 # grid search weights
 def grid_search(members, testX, testy):

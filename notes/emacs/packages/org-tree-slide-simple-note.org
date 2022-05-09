@@ -1,0 +1,9 @@
+#+TITLE: Org Tree Slide Simple Note
+* key binding
+:PROPERTIES:
+:ID:       c0954ce6-b577-4234-990e-867426a205e4
+:END:
+| commands | key | doom keys | custom keys | descriptions |
+|          | C-< |           |             |              |
+|          | C-> |           |             |              |
+|          |     | spc-t-p   |             |              |

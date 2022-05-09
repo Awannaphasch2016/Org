@@ -1,0 +1,9 @@
+#+TITLE: Videos To Watch
+
+* Incubation
+**  watch LOGICMOO INTRODUCTION PART 2 https://www.youtube.com/watch?v=oON8o6ioG08 as recommended by Shane.
+:PROPERTIES:
+:ID:       e9f9fc4d-201e-4507-9834-c0dd1659ee88
+:END:
+[2022-03-14 Mon 11:44]
+[[file:~/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/main.org::*Sliding Window Evaluation][Sliding Window Evaluation]]

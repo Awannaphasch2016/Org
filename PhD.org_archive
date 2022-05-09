@@ -75,3 +75,110 @@ CLOSED: [2022-02-28 Mon 17:25] DEADLINE: <2022-02-27 Sun>
 :ARCHIVE_TODO: DONE
 :ARCHIVE_ITAGS: @PhD WORK
 :END:
+
+** DONE seriouly start learning latex.
+CLOSED: [2022-03-04 Fri 18:47] SCHEDULED: <2022-03-03 Thu>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-03-04 Fri 18:46
+:ARCHIVE_FILE: ~/org/PhD.org
+:ARCHIVE_OLPATH: PhD/Tasks
+:ARCHIVE_CATEGORY: PhD
+:ARCHIVE_TODO: NEXT
+:ARCHIVE_ITAGS: @PhD WORK
+:END:
+:LOGBOOK:
+CLOCK: [2022-03-04 Fri 16:27]--[2022-03-04 Fri 17:19] =>  0:52
+CLOCK: [2022-03-04 Fri 01:46]--[2022-03-04 Fri 02:11] =>  0:25
+CLOCK: [2022-03-04 Fri 01:23]--[2022-03-04 Fri 01:46] =>  0:23
+CLOCK: [2022-03-03 Thu 11:51]--[2022-03-03 Thu 12:05] =>  0:14
+CLOCK: [2022-03-03 Thu 10:57]--[2022-03-03 Thu 11:07] =>  0:10
+CLOCK: [2022-03-03 Thu 09:38]--[2022-03-03 Thu 10:38] =>  1:00
+CLOCK: [2022-03-02 Wed 22:36]--[2022-03-02 Wed 22:37] =>  0:01
+:END:
+[2022-03-02 Wed 22:36]
+[[file:~/org/my-resume.org::*Photo & Tagline][Photo & Tagline]]
+
+** DONE figure out ensemble framework use image from draw.io
+CLOSED: [2022-03-22 Tue 11:22]
+:PROPERTIES:
+:ID:       a260d45c-8713-42fe-a702-13c3ea91e2f8
+:ARCHIVE_TIME: 2022-03-22 Tue 11:22
+:ARCHIVE_FILE: ~/org/PhD.org
+:ARCHIVE_OLPATH: PhD/Writing Ensemble Approaches for Streaming Networking Classification paper/Tasks/actionable
+:ARCHIVE_CATEGORY: PhD
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: @PhD WORK actionable
+:END:
+
+** DONE write introduction to cover 1 page.
+CLOSED: [2022-04-03 Sun 15:09]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-03 Sun 15:09
+:ARCHIVE_FILE: ~/org/PhD.org
+:ARCHIVE_OLPATH: PhD/Writing Ensemble Approaches for Streaming Networking Classification paper/Tasks/actionable
+:ARCHIVE_CATEGORY: PhD
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: @PhD WORK actionable
+:END:
+*** goal is to find general solution for solving static and dynamic node classification and link prediction. p
+:PROPERTIES:
+:ID:       c671ca81-356a-464e-91db-4c019de0a054
+:END:
+**** read the following paper apers
+***** Representation Learning for Dynamic Graphs A Survey
+- interpolation vs extrapolation
+  - solution for interpolation
+  - solution for extrapolation
+- real time? (Discrete time dynamic graph and continuous time dynamic graph)
+***** A {{Survey}} on {{Embedding Dynamic Graphs}}
+***** A {{Survey}} of {{Traffic Prediction}}: From {{Spatio-Temporal Data}} to {{Intelligent Transportation}}
+
+** PhD Workshop presentation on April 18
+SCHEDULED: <2022-04-18 Mon 13:00-16:00>
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-04-19 Tue 20:04
+:ARCHIVE_FILE: ~/org/PhD.org
+:ARCHIVE_OLPATH: PhD/Related to PhD Study (that doesn't belong to other)/Schedule/non-recurring
+:ARCHIVE_CATEGORY: PhD
+:ARCHIVE_ITAGS: @PhD WORK blockchain nonrecurring
+:END:
+see this [[https://mail.google.com/mail/u/0/#inbox/FMfcgzGmvpJVSwLHfBXJFsJLCMBlKgjw][link]] for more information.
+
+** DONE finish refactor introduction and related work Ensemble paper.
+CLOSED: [2022-05-05 Thu 02:19] SCHEDULED: <2022-04-13 Wed>
+:PROPERTIES:
+:ID:       1502458e-2fa8-45e9-8b86-858c55707909
+:Effort:   3:00
+:ARCHIVE_TIME: 2022-05-05 Thu 02:19
+:ARCHIVE_FILE: ~/org/PhD.org
+:ARCHIVE_OLPATH: PhD/Writing Ensemble Approaches for Streaming Networking Classification paper/Tasks/actionable
+:ARCHIVE_CATEGORY: PhD
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: @PhD WORK blockchain actionable
+:END:
+[2022-04-12 Tue 16:24]
+[[file:~/org/refile.org::refile.org acts like a cabinet of all tasks because it is organized via GTD methods. (see ~/org/gtd.org for more information on gtd methodology)]]
+
+** send my blog to be read and critique by all of the PhD candidate
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-05-05 Thu 02:22
+:ARCHIVE_FILE: ~/org/PhD.org
+:ARCHIVE_OLPATH: PhD/Related to PhD Study (that doesn't belong to other)/Tasks/incubation
+:ARCHIVE_CATEGORY: PhD
+:ARCHIVE_ITAGS: @PhD WORK blockchain incubation
+:END:
+the goal is to improve the content so it is useful for anyone that will be doing research on any particular topic mentioned in the blog
+
+** DONE PhD Workshop presentation on April 21
+CLOSED: [2022-05-05 Thu 03:39]
+:PROPERTIES:
+:ARCHIVE_TIME: 2022-05-05 Thu 03:40
+:ARCHIVE_FILE: ~/org/PhD.org
+:ARCHIVE_OLPATH: PhD/Related to PhD Study (that doesn't belong to other)/Schedule/non-recurring
+:ARCHIVE_CATEGORY: PhD
+:ARCHIVE_TODO: DONE
+:ARCHIVE_ITAGS: @PhD WORK blockchain nonrecurring
+:END:
+<2022-04-21 Thu 13:00-16:00>
+see this [[https://mail.google.com/mail/u/0/#inbox/FMfcgzGmvpJVSwLHfBXJFsJLCMBlKgjw][link]] for more information.
+

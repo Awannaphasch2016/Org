@@ -1,0 +1,6 @@
+
+* Free Software Foundation
+:PROPERTIES:
+:ID:       2fdb96d8-1108-479b-9495-5dd0bc64366f
+:BRAIN_FRIENDS: 325924b7-abd0-44b5-aa99-5f561ab5f64a
+:END:

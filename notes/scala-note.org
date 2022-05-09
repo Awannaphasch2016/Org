@@ -1,7 +1,48 @@
 #+TITLE: Scala Note
+#+filetags: scala
 
-* Basic and Fundamenta
+* Blog :blog:
+:PROPERTIES:
+:ID:       272cd343-9cb0-4314-9551-628665c8c340
+:END:
+* Basic and Fundamental
+** Type Conversion in Scala
+- ref
+  - https://www.baeldung.com/scala/type-casting
+  - [[https://stackoverflow.com/questions/4528960/any-differences-between-asinstanceofx-and-tox-for-value-types][Any differences between asInstanceOf[X] and toX for value types?]]
+*** Data Types
+#+BEGIN_SRC
+Boolean    true or false
+
+Byte       8-bit signed two's complement integer (-2^7 to 2^7-1, inclusive)
+           -128 to 127
+
+Short      16-bit signed two's complement integer (-2^15 to 2^15-1, inclusive)
+           -32,768 to 32,767
+
+Int        32-bit two's complement integer (-2^31 to 2^31-1, inclusive)
+           -2,147,483,648 to 2,147,483,647
+
+Long       64-bit two's complement integer (-2^63 to 2^63-1, inclusive)
+           -9,223,372,036,854,775,808 to +9,223,372,036,854,775,807
+
+Float      32-bit IEEE 754 single-precision float
+           1.40129846432481707e-45 to 3.40282346638528860e+38 (positive or negative)
+
+Double     64-bit IEEE 754 double-precision float
+           4.94065645841246544e-324 to 1.79769313486231570e+308 (positive or negative)
+
+Char       16-bit unsigned Unicode character (0 to 2^16-1, inclusive)
+           0 to 65,535
+
+String     a sequence of Chars          |            |
+#+END_SRC
+*** Byte, Short, Int, Long, and Char are called "integral types"
+*** Float and Double are called "numeric types"
 ** Nil
+:PROPERTIES:
+:ID:       a75a6a8c-daa0-444b-9770-3c086d974a43
+:END:
 Nill is equalent of List()
 #+BEGIN_SRC scala
 val empty1: List[Int] = List()
@@ -61,6 +102,9 @@ import org.junit.{Before => B4, _}
 #+END_SRC
 
 ** Assign an existing function/method to a function variables
+:PROPERTIES:
+:ID:       96967cec-b820-4abc-84d0-79589252ca67
+:END:
 #+BEGIN_SRC scala :results output
 object fp {
   def double1(i: Int): Int = (i * 2)
@@ -195,7 +239,16 @@ object p3 {
   }
 }
 #+END_SRC
+** Nothing
+:PROPERTIES:
+:ID:       b3649490-d765-4641-91b2-692645d2bdc4
+:END:
+Nothing is the base class that Nil, Unit, and None derive from.
+
 ** Options (Some and None)
+:PROPERTIES:
+:ID:       e165f854-7222-48bb-9a77-1a67eb44381c
+:END:
 #+BEGIN_SRC scala
 sealed trait Option[+A]
 case class Some[+A](get: A) extends Option[A]
@@ -275,7 +328,15 @@ object p3 {
 }
 #+END_SRC
 ** this
-*** auxiliary constructor
+ref: [[https://www.geeksforgeeks.org/scala-this-keyword/][scala this keyword]]
+From what I understand, =this= keyword in scala is similar to =self= keyword in Python. The different is that =this= is used to defined a class constructor.
+
+There are three usecases for this: [fn:1]
+1. use this to refer to the current object's variables. (refer to object's variables)
+2. use this to pass current object as an argument. (refer to the object itself)
+3. use this to select one of many constructor of the current object. (refer to the object's constructor)
+
+*** Example
 #+BEGIN_SRC scala
 // Scala program to illustrate this keyword
 class Addition(i:Int)
@@ -299,6 +360,9 @@ object GFG
 }
 
 #+END_SRC
+
+#+RESULTS:
+
 ** getOrElse
 #+BEGIN_SRC scala
 object p3 {
@@ -313,6 +377,9 @@ object p3 {
   }
 }
 #+END_SRC
+
+#+RESULTS:
+
 ** try catch
 #+BEGIN_SRC scala
 def safeDiv(x: Int, y: Int): Either[Exception, Int] = {
@@ -435,13 +502,52 @@ println(m3_tuple) // Some((1, 2, -1)) , with a tuple inside
 ** function composition
 *** function.compose
 *** function.andThen
+** state actions
+:PROPERTIES:
+:ID:       d69554d2-d997-45ba-88d4-0bb4c9255ca6
+:END:
+state actions (state transition) is a type of function that transform its own function state from one to the next while producing output value at each transition.
+
+state is a function with state such as RNG
+action is output of the function. (I think its not the best name ever)
+** Types
+*** Type Alias
+- ref
+  - https://www.baeldung.com/scala/type-declaration
+#+BEGIN_SRC scala
+object ListIntFunctions {
+  // types alias
+  type IntItems = List[Int]
+}
+
+// types alias for functions types
+type IntToString = Int => String
+#+END_SRC
+**** illegal type alias
+- it’s illegal to create a type alias with a reference to itself:
+- we cannot create a type alias to a type that has required parameters without defining them:
+- we are unable to select a part of another type that has more than one element, like Tuple:
+*** Type Member
+#+BEGIN_SRC scala
+trait Repeat {
+  type RepeatType
+  def apply(item: RepeatType, reps: Int): RepeatType
+}
+#+END_SRC
+
 * Scala Specification
 ** [[file:books/scal-puzzlers.org::*This puzzle make use of "The Scala Language Specification, Section 5.1.1" which produce adapting argument lists behavior.][This puzzle make use of "The Scala Language Specification, Section 5.1.1" which produce adapting argument lists behavior.]]
+* Scala build tools
+** sbt
+
 * Scala Compiler
 ** Eta Expansion (expand scala method to function.)
 ** Scala Compiler Commandlines
 ***  The Scala compiler's -Xlint option enables recommended additional warnings that you can use to flag suspicious language usage.
 * Examples
+:PROPERTIES:
+:ID:       debe9437-039e-4a65-a1be-ae2bdd59b88b
+:END:
 ** implement sum with recursion
 *** tail-recursion
 **** closure property
@@ -523,11 +629,13 @@ object ob{
 ** scala standard library, see [[https://www.scala-lang.org/api/current/][here]].
 
 * FAQs
-** functions vs methods
-** how to create scala projects with sbt?
+** How to create scala projects with sbt?
 note: scala/scala-seed.g8 is a template
 
 create new scala project in the current directory.
 #+BEGIN_SRC sh
 sbt new scala/scala-seed.g8
 #+END_SRC
+* Footnotes
+
+[fn:1] [[https://stackoverflow.com/questions/2411270/when-should-i-use-this-in-a-class][When should I use "this" in a class?]]

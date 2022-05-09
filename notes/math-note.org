@@ -1,0 +1,12 @@
+#+TITLE: Math Note
+
+* operation
+** function composition
+:PROPERTIES:
+:ID:       7fdbd5ce-7b3e-4250-94c3-e10a451aab4f
+:END:
+function composition is represented as $\circ$.
+It takes two functions and output new function.
+
+for example
+$h = (g \circ h)(x) = g(h(x))$

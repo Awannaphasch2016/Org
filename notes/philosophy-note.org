@@ -1,0 +1,20 @@
+#+TITLE: Philosophy Note
+
+* blog :blog:
+** TODO Philosophy of decision making of an open source project as public goods.
+:PROPERTIES:
+:ID:       c8fe0a23-ab74-4492-b698-b3b1eab272f2
+:END:
+
+Open source opens to public information of programmable objects for reusability. This doesn't necessary required decision pipeline to be decentralized. [fn:2]
+
+The core of design of any open source project must decide on trade-off between degree of specialization (such as seamless integration; Apple is an example of this.) or generalization (aka modularity; Linux is an example of this) [fn:2]. In my opinion, I believe that trade off between generalization and specialization are emphasized at different degree. This depends on layer of programmable solution stacks, open source projects provide. This derives from the following hypothesis: "There exists no solution for project with maximum generalizibility that can solve a problem with any degree of specialization."
+
+[incentive misalignment between capitalism and freedom of exchange of ideas]
+[tragedy of common]
+[problem of incentive misalignemnt of semantic versioning between developing better technology and users]
+
+* Footnotes
+
+[fn:2] [[https://youtu.be/VcuEm53f5GM?list=PLM4u6XbiXf5qXKZixrDpN3ZSwH_8UabPq&t=1363][Cryptonetworks and Cities: Analogies at 22:43 mins]]
+[fn:1] [[https://www.youtube.com/watch?v=VcuEm53f5GM&list=PLM4u6XbiXf5qXKZixrDpN3ZSwH_8UabPq&index=25&ab_channel=a16z][Cryptonetworks and Cities: Analogies]]

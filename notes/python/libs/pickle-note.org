@@ -1,0 +1,22 @@
+#+TITLE: Pickle Note
+#+filetags: pickle
+
+* how to
+** save data to file
+:PROPERTIES:
+:ID:       ce9bdf84-9c0f-4fdd-a86e-41e8ec1db68a
+:END:
+#+BEGIN_SRC python
+def save_to_file(content: Any, saved_file: pathlib.Path) -> None:
+    """Save content to specified path."""
+    path = str(pathlib.Path(saved_file).parent)
+
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+    with open(str(saved_file.resolve()), "wb") as f:
+        pickle.dump(content, f)
+        print(f"saved at {f.name}")
+        print()
+
+#+END_SRC

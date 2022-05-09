@@ -1,0 +1,245 @@
+#+TITLE: The Algorithms Bundle Note
+
+* The Algorithms Bundle Note
+:PROPERTIES:
+:NOTER_DOCUMENT: /home/awannaphasch2016/org/papers/the-algorithms-bundle.pdf
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::1++1.32]]
+:END:
+
+** Skeleton
+:PROPERTIES:
+:ID:       c2c61cc0-83dc-4248-beac-05388e8878dc
+:END:
+
+*** Link on page 1: [[mailto:rbrito@ime.usp.br][rbrito@ime.usp.br]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::1++0.263494]]
+:END:
+
+*** Introduction
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::1++0.739126??Introduction]]
+:END:
+
+*** Installation
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::2++0.543519??Installation]]
+:END:
+
+*** Environment: algorithmic
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::2++0.710347??Environment:%20algorithmic]]
+:END:
+
+**** The Simple Statement
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::3++0.157578??The%20Simple%20Statement]]
+:END:
+
+**** The if-then-else Statement
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::3++0.613788??The%20if-then-else%20Statement]]
+:END:
+#+BEGIN_SRC latex
+\documentclass{article}
+\usepackage{algorithmic}
+
+\begin{document}
+\begin{algorithmic}[1]
+  \IF {some condition is true}
+  \STATE do some processing
+  \ELSIF{ some other condition is true }
+  \STATE do some processing
+  \ELSE
+  \STATE do the default action
+  \ENDIF
+\end{algorithmic}
+\end{document}
+#+END_SRC
+
+**** The for Loop
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::4++0.441413??The%20for%20Loop]]
+:END:
+#+BEGIN_SRC latex
+\documentclass{article}
+\usepackage{algorithmic}
+
+\begin{document}
+\begin{algorithmic}[1]
+  \FOR{$1=0$ to $10$}
+  \STATE carry out some processing
+  \ENDFOR
+  \FOR{$1=0$ \TO $10$}
+  \STATE carry out some processing
+  \ENDFOR
+\end{algorithmic}
+\end{document}
+#+END_SRC
+
+**** The while Loop
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::5++0.486452??The%20while%20Loop]]
+:END:
+#+BEGIN_SRC latex
+\documentclass{article}
+\usepackage{algorithmic}
+
+\begin{document}
+\begin{algorithmic}[1]
+  \WHILE{some condition holds}
+  \STATE carry out some processing
+  \ENDWHILE
+\end{algorithmic}
+\end{document}
+#+END_SRC
+
+**** The repeat-until Loop
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::5++0.771396??The%20repeat-until%20Loop]]
+:END:
+
+**** The Infinite Loop
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::6++0.354908??The%20Infinite%20Loop]]
+:END:
+
+**** The Logical Connectives
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::6++0.646128??The%20Logical%20Connectives]]
+:END:
+
+**** The Precondition
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::7++0.317783??The%20Precondition]]
+:END:
+
+**** The Postcondition
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::7++0.567758??The%20Postcondition]]
+:END:
+
+**** Returning Values
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::8++0.157578??Returning%20Values]]
+:END:
+
+**** Printing Messages
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::8++0.726996??Printing%20Messages]]
+:END:
+
+**** Comments
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::9++0.299018??Comments]]
+:END:
+
+**** An Example
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::9++0.756078??An%20Example]]
+:END:
+
+**** Options/Customization
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::10++0.658292??Options/Customization]]
+:END:
+
+*** Environment: algorithm
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::14++0.244682??Environment:%20algorithm]]
+:END:
+
+**** General
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::14++0.281357??General]]
+:END:
+
+**** An Example
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::14++0.417096??An%20Example]]
+:END:
+#+BEGIN_SRC latex
+\documentclass{article}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+
+\begin{document}
+\begin{algorithm}
+\caption{Calculate $y = x^n$}
+\label{alg1}
+\begin{algorithmic}
+\REQUIRE $n \geq 0 \vee x \neq 0$
+\ENSURE $y = x^n$
+\STATE $y \leftarrow 1$
+\IF{$n < 0$}
+\STATE $X \leftarrow 1 / x$
+\STATE $N \leftarrow -n$
+\ELSE
+\STATE $X \leftarrow x$
+\STATE $N \leftarrow n$
+\ENDIF
+\WHILE{$N \neq 0$}
+\IF{$N$ is even}
+\STATE $X \leftarrow X \times X$
+\STATE $N \leftarrow N / 2$
+\ELSE[$N$ is odd]
+\STATE $y \leftarrow y \times X$
+\STATE $N \leftarrow N - 1$
+\ENDIF
+\ENDWHILE
+\end{algorithmic}
+\end{algorithm}\end{document}
+#+END_SRC
+
+**** Options
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::15++0.630591??Options]]
+:END:
+
+**** Customization
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::15++0.796338??Customization]]
+:END:
+
+*** References in Algorithms
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::16++0.629864??References%20in%20Algorithms]]
+:END:
+
+*** Known Issues
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::17++0.547598??Known%20Issues]]
+:END:
+
+**** Link on page 17: [[http://www.ctan.org/tex-archive/help/Catalogue/entries/memoir.html][memoir]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::17++0.552336]]
+:END:
+
+**** Link on page 17: [[http://www.ctan.org/tex-archive/help/Catalogue/entries/tocbibind.html][tocbibind]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::17++0.552336]]
+:END:
+
+**** Link on page 17: [[http://groups.google.com/group/comp.text.tex/browse_thread/thread/4094e0c4f4fbd83e/a80a3f4666c794f0?fwc=1][has been discussed]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::17++0.584986]]
+:END:
+
+**** Link on page 17: [[http://www.ctan.org/tex-archive/help/Catalogue/entries/memoir.html][ate 2005 that algorithms may have bad interactions with the tocbibind or the memoir]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::17++0.600081]]
+:END:
+
+**** Link on page 17: [[http://www.ctan.org/tex-archive/help/Catalogue/entries/tocbibind.html][en discussed in late 2005 that algorithms may have bad interactions with the tocbibind]]
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::17++0.600081]]
+:END:
+
+*** General Hints
+:PROPERTIES:
+:NOTER_PAGE: [[pdf:~/org/papers/the-algorithms-bundle.pdf::18++0.157578??General%20Hints]]
+:ID:       f3d1265a-a23d-467c-aae4-2c1a06bc0eff
+:END:
+
+

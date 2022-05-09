@@ -1,0 +1,18 @@
+#+TITLE: Penel White Paper
+
+* Pen.el paper
+** What are prompts?
+** Pen.el project - Prompt engineering in emacs
+*** What is Pen.el?
+*** Built-in library of prompt functions  ▼
+*** How to build your own prompt functions ▼
+*** Using prompts
+**** For coding assistance
+***** How to use ▼
+**** As a learning tool
+***** Apostrope
+***** Paracosm ▼
+** Blockchain
+*** DAO
+*** Currency
+*** NFTs

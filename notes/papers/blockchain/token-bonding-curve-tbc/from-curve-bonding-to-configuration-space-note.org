@@ -1,0 +1,8 @@
+#+TITLE: From Curve Bonding To Configuration Space Note
+
+* From Curve Bonding To Configuration Space Note
+:PROPERTIES:
+:NOTER_DOCUMENT: /home/awannaphasch2016/org/papers/from-curved-bonding-to-configuration-spaces.pdf
+:NOTER_PAGE: [[pdf:~/org/papers/from-curved-bonding-to-configuration-spaces.pdf::2++2.76]]
+:ID:       b18fcc2a-4036-4600-99ff-85791deee144
+:END:

@@ -1,0 +1,303 @@
+#+TITLE: Decentralized Autonomous Organization Note
+#+filetags: dao
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+
+* Blog :blog:
+** Maintain a community
+*** TODO Evaluate health of a DAO
+:PROPERTIES:
+:ID:       7e7e43ed-d8d7-45bf-a113-b68409c3e1fe
+:END:
+
+Any medium of exchange is a form of share believe. Money is a share believe. One can think of money as global shared believe whose value is determined by underlying economy. In tokenomics, token are a share believe within community. One can think of token as local shared believe whose value is determined by underlying tokenized economy (aka tokenomy).
+
+[write a transition from local believe -> meme value -> sticky factor ]
+[what are properties healthy dao?]
+
+we have to make decision on rewards system and run simulation to evaluate configuration of rewards. To simulate, it requires smart model of reality which requires systematic ways to receive feedback from DAO stakeholders, contributors, and users.
+
+**** DAO overview
+***** Objectives of DAO
+- Governance as an arbitration process
+  - e.g. conflict resolution
+- Governance as incentive enabler (reward, resource, allocation)
+  - Incentive alignment as discuss previously
+- Governance as content control
+- Governance to decentralize central control
+  - balance controls between types of players in governance. (next slide)
+- Democracy as a target
+- Decentralization as a target
+***** Players in DAO
+- Mining Nodes
+  - Normal nodes
+    - local block upupdates
+  - Masternodes
+    - real time block updates
+- Token and Coin Holders
+- Users
+  - may not be token holder.
+- Contributors
+  - e.g. developers, content creators.
+- Delegates/Representations
+  - members who are selected to perform governance tasks.
+    - e.g. selection of jury during court settlement.
+  - Representations are randomly selected based on reputations and expertise.
+- Founders
+  - incentive mechanism changes as DOA mature.
+    - reward creators and early members are higher.
+    - creators and early members privilege disappear as project mature, and rewards are more fair toward contribution.
+- Federation.
+  - group of "capable" members pre-selected by Founders.
+- Others DApps
+  - how to merge DApps that implement different incentive/rewards/token mechanism.
+  - I speculate that, in the near future, there should be a DApps that keep tracks of reputation (or other metadata of an account) across DApps.
+    - Similar to how stock exchange keeps tracks of stock prices.
+***** Mechanisms of Governance
+Token mechanism (such as Air drop, social token, token to represent voting power) are the most basic component that other mechanism built on.
+
+- Constitution
+  - rules setter mechanism
+- Reputation
+  - credit scoring mechanism
+  - control negativity of the platform
+  - e.g. your investing decision is correct. developer contribution.
+- Participation and Incentives
+  - advertising, marketing mechanism.
+  - e.g. writing blogs post
+- Stakeholder Sanctions
+  - suspension, penalty mechanism
+- Voting Processes and Right
+  - voting protocol.
+    - Work driven vs vote driving. (next slide)
+- Proposal
+  - proposed project to be vote on.
+    - e.g. Bright Moment have 1000 members around the world vote for country to hold NFT museum from local artist.
+- Forking
+  - Settle project vision conflict
+    - There are 105 Bitcoin fork projects.
+
+**** Simulation to measure DAO health
+***** TEAcademy-TEforDAOs (GGGDAOist)
+:PROPERTIES:
+:ID:       dc6fb1e9-7925-4c00-9589-9250bd7dc880
+:END:
+TEAcademy-TEforDAOs (GGGDAOist) slides on simulation of DAO health can be found on slides [[https://docs.google.com/presentation/d/1t83kaiw4ByFeke3aR0LJOAt1Mz6t_7hKZlBxjLPcFxA/edit#slide=id.gf3e2b46857_0_202][here]].
+
+[DAO intelligence = data, models, KPI(s), dashboard, and simulations accessible for anyone in a DAO]
+
+- model of DAO system = classification(contributors) / policy / KPI
+  - classification of contributors into groups which will be classified based on behavior pattern. Then, we can evaluate important of influence that each group have on DAO health.
+  - a policy controls access to funding.
+
+- DAO health = Community Health + Governance Health + Financial Health
+  - The goal of DAO health is to be used as KPI such as KPI accurately reflect success of DAO (meme factors?)
+
+According to equation shown above goal of simulation is to find best policy that leads to healthiest DAO over $n$ funding rounds. The runs are average over m Monte Carlo runs.
+
+#+caption: Illustration of network's character of hubs and broker.
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220506_150354.png]]
+
+#+caption: Simulation's paramters and values
+| Parameter          | Value                                 |
+| objective function | network density                       |
+| policies           | health, funds, contributors, proposal |
+| node types         | broker, hubs                          |
+| edge types         | NA                                    |
+
+#+caption: policies and conditions
+| Policy       | Conditions                                               |
+|--------------+----------------------------------------------------------|
+| Health       | more successful proposal       = higher health score     |
+| Funds        | higher health score            = more funds              |
+| Contributors | higher health score            = more contributor        |
+| Proposal     | more contributors & more funds = more succesful proposal |
+
+Note that sucessful work is defined as collaboration through a sucessful proposal.
+Definition of edge and nodes in DAO graph
+non-self loop edges = a collaboration between nodes which is maintained through a successful proposal
+self loop edges = self loop is considered a special case where a node can work individually.
+
+
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220506_144751.png]]
+
+[are we considering dynamic graph? give them class of network]
+
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220506_144958.png]]
+
+**** Evaluate Meme Value with Meme metrics
+Example of data analysis from a RH quests from 7/26/2021 - 7/30/2021: see the following [[https://dune.com/drethereum/RabbitHole:-theGraph][link]].
+
+Level of community's enthusiasm and member's activity contribute to "sticky factor." The higher sticky factor, the higher members retention rate. Sticky factor can be are measured by "meme value." According to [fn:4], in summary, level shared believe identifies DAO survival. DAO survival is determined by internal funding mechanism. Internal funding mechanism is a subset of token mechanism. Meme factor measures shared believe level which determine token value and influence token mechanism incentives.
+
+Suggestion of way to evaluate meme is
+
+- "circulation of active token"
+- "distribution of participate activity per day/week/month"
+- "ratio of active members"
+- "rate of new members gains per day/week/month,"
+- "distribution of number of maximum actives days of users,"
+- "distribution of days users have joined the community,"
+- "How long does it take a new member to be active if at all."
+- via network metrics such as network density.
+
+Without a way to measure a system, one can't design a way to improve the system. In this case, we want to grow a community, so we need to measure meme activity.
+
+"you can't improve what you don't measure" -- Peter Drucker
+**** Future Work
+***** viable system model (VSM)
+VSM is a adaptive system and evolve such that its properties are preserved.
+
+*** TODO How to grow DAO community?
+I made a promised on [2022-04-30] Sat to share this blog with @evolve from discord when it reads to published.
+
+**** create sticky factor to increase meme value
+:PROPERTIES:
+:ID:       15237986-512a-4746-a8fb-6f33d737417f
+:END:
+As of now, discord is the best option for form a community. Some communities choose telegram, due to privacy reason. Both options have their own reasons to be chosen. However, if one want to focus on building a community, discord should be the best option for the simple reason that discord was created as a tool to build community while telegram is simply just a group chat. Big difference.
+
+The goal is to want people to come back to the discord community. One way is to attract members with "activity reward". For example, MEE6 bots give people level and rank. Personally, I really like the idea because levels and rank allow members to compare his/her activity with other members. This is important because one can rationalize one's action to justify level of community's enthusiasm as a whole. Similarly, Socket Bridge provide a badge token to those who contribute to the community such as chatting in discord channel or daily lock in to socket bridge website.
+
+Level of community's enthusiasm and member's activity contribute to "sticky factor." The higher sticky factor, the higher members retention rate. Sticky factor can be are measured by "meme value." According to [fn:4], in summary, level shared believe identifies DAO survival. DAO survival is determined by internal funding mechanism. Internal funding mechanism is a subset of token mechanism. Meme factor measures shared believe level which determine token value which influence token mechanism incentives. see [[*Evaluate meme factor of a DAO][Evaluate meme factor of a DAO]] for more information about meme evaluation.
+
+*** TODO How to Build a Strong Community in Web3 Environment with Social Token?
+:PROPERTIES:
+:ID:       00a08a4d-5344-449e-a7fd-a21264769144
+:END:
+- reference
+  - https://medium.com/seedclub/introducing-seed-club-a-social-token-incubator-490c0474421b
+
+Core principle of Web3 can be summarized as "owing all the data your generated, and earning stake of the project you contribute."
+
+Hence, things that member of web3 should be aware of before joining any web3 community are
+- How can you be sure that you will not get locked into this platform when your value no longer align with the rest of the community and you are ready to move on?
+
+The difficulty of building community in Web3 is the process involve designing economic mechanism (aka incentive alignment mechanism.)
+
+successful social token project to learn from are $KARMA, $WHALE, $JAMM, $CHERRY, $ALEX.
+** Governance
+*** TODO What is decentralized autonomous organization (dao) and why is it important for the future of decentralized economy?
+:PROPERTIES:
+:EXPORT_FILE_NAME: What is decentralized autonomous organization (dao) and why is it important for the future of decentralized economy?
+:ID:       ad6bb838-78ab-4b44-938a-964a28005b18
+:END:
+There are two types of Decentralized Autonomouse Organization (DAO): [[cite:&el2021decentralized]]
+- Vote-driven DAO (traditional DAO)
+- work-driven DAO (First presented in Colony white paper.) [[cite:&rea2020colony]]
+
+Main Ethereum DAO platforms are Aragon, DAOstack, DAOhaus, and Colony.
+
+**** Bibliography :ignore:
+bibliography:/home/awannaphasch2016/org/papers/org-mode-bibtex.bib
+
+*** TODO Tax system in DAO
+*** TODO Tokenomics for open source DAO as public goods
+:PROPERTIES:
+:ID:       17d4bdef-a59e-430a-89ae-296d3711d9a0
+:END:
+On <2022-04-24 Sun>, my idea is to keep align maximum-interestingness with capitalism via discount of future token. Its an idea build on top of work-driven dao where people can start working on features and they changes will not be terminated if not enough people find it "bad" enough. This way any developers can invest their time on to work on features that their care about, hence, obey maximum-interestingness. To aligning maximum-interestingness to financial incentive, one can imagine that a developer have to open up feature announcement which comes with new token pools, but the token pools are only local medium of exchange between people who work on and believe in the features. Once the feature is accepted to realease with the main project, These token will be added to the total token pools and are tradable between participate of the main project. One can think of this as feature-based token. This idea is originated with an assumption that people who use the feature will somehow wants to or need to pay for the features which results in buying in feature-based token.
+
+I haven't throught about the idea enough to confirm that this mechanism doesn't encourage forking. Even it encourage forking, it is consider bad incentive?
+*** TODO Recuiting and managing distributed workforce in DAO
+:PROPERTIES:
+:ID:       9dfb40cc-dccc-47b8-a083-55ba7aea2d9a
+:END:
+
+Goal is RRR: which is to hire the Right people at the Right time in the Right place. [fn:3]
+
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220424_171717.png]]
+
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220424_172106.png]]
+
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220424_173114.png]]
+
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220424_172421.png]]
+
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220424_173056.png]]
+
+**** On boarding process
+#+caption: a reference from [fn:3]
+#+BEGIN_QUOTE
+A strong onboarding process can increase productivity by 70%
+#+END_QUOTE
+
+
+
+**** Case Study
+The challenges is to grow from team of 5 to 20 people in 6 months [fn:3]
+** Metagovernance
+:PROPERTIES:
+:ID:       72216e50-cbb9-4913-ac14-3e8e3c2a9c85
+:END:
+
+*** TODO Understand Metagovernance.
+:PROPERTIES:
+:ID:       a313fa94-7e0b-452b-af96-aeb6314f8f2d
+:END:
+
+The rabbithole uses its own voting rights as an intermediate layer, connecting projects and users, with the final outcome of the vote being decided by the users,[fn:1]
+
+RabbitHole's metagovernance focuses on bringing together a group of crypto users to participate in the governance of projects where the treasury holds governance tokens. metagovernance is a niche area that involves voting, policy, education, research, etc., forming a complete chain.
+
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220419_185207.png]]
+
+#+caption: Ecosystem Guides
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220419_190449.png]]
+
+**** Problems found in the metagovernance process
+***** Because most users do not hold governance tokens themselves, they are not highly motivated to participate in the governance process, believing that it is not in their interest.
+***** Few users participate in governance, which is a real problem faced by all community governance, and there may be times when a few people represent the majority.
+***** When initiating a vote on a protocol expert, many users do not have a deep understanding of the content of the proposal, and many times they follow the recommendations published by the relevant expert, and tend to travel their voting rights based on the existing voting trends when voting.
+**** How to increase user motivation?
+***** Create a compensation mechanism, which is an approach almost all projects consider when pushing, as it is a 100% winning technique to engage users. Pushing users into teams, doing team-like work (projects left to community autonomy), maybe they should get paid for similar work.
+:PROPERTIES:
+:ID:       ea984481-5675-41d8-bc81-612089b42354
+:END:
+***** Create a reward mechanism, for discord active users maybe add xp and roles,, or poap\nft, even if these have no practical value, but seem to be well received as a symbol of their work.
+***** Improve the role of on-chain credentials, and strengthen cooperation with different governance projects to expand the reach of on-chain credentials and do cross-coverage of users on both sides. (This could be the future trend of community governance in the web3 ecosystem, where everything is interconnected and growing together)
+**** How voting weight is calculated
+***** Fei protocol
+Voting weight is equal to the sum of your delegated, held, and staked TRIBE. For held TRIBE, if it is delegated, then it is not double-counted. For staked FEI-TRIBE LP, only the TRIBE portion is counted and the unclaimed TRIBE does not count.[fn:2]
+
+**** Bibliography :ignore:
+:PROPERTIES:
+:ID:       48043bc6-68c2-422b-9dbc-2ce7ad80eae5
+:END:
+*** TODO What a regular DAO members can take action toward metagovernance?
+:PROPERTIES:
+:ID:       e03e41a4-6447-4220-b89e-9cdfd0973604
+:END:
+
+#+caption: Voting flow chart. Illustration is from [fn:1]
+#+attr_html: :width 700px
+[[file:./images/screenshot_20220419_185957.png]]
+* Categorize DAOs by usecase.
+:PROPERTIES:
+:ID:       b63119d1-3379-469e-a4e5-c7d8c7c2991c
+:END:
+- social daos e.g. friend with benefit
+- court daos e.g. Kleros
+- fundraising daos (ICO) e.g.
+- investing DAOs e.g. The LAO.
+- knowledge base DAOs
+- DAOs that sells product e.g. Bring Moment
+
+* Footnotes
+:PROPERTIES:
+:ID:       cdfaa3c2-f756-4fbc-ad46-18399b25e9c2
+:END:
+
+[fn:4] [[https://cryptonat.substack.com/p/tokenomics-101?s=r][Tokenomics 101: The Basics of EValuating Cryptocurrencies -- DeFriday #19]]
+[fn:3] [[https://www.youtube.com/watch?v=HXMnut5m8_M&list=PLM4u6XbiXf5oDP6DFeEoNP5K_Epy1RAx4&index=15&ab_channel=TechCrunch][Tina Ferguson: Managing Distributed Workforces]]
+[fn:2] https://docs.fei.money/governance/snapshot-voting
+[fn:1] [[https://mirror.xyz/leeyde.eth/qtlbChJ0s3fPsDp13KOxIzlgQxTaN8_McFDEpaSvw24][community Governance| What can we do in metagovernance?]]

@@ -1,0 +1,137 @@
+#+TITLE: Ledger
+#+PROPERTY: header-args :tangle ledger.dat
+
+
+* Education Cost
+:PROPERTIES:
+:ID:       eab4117c-3a46-42ac-ae97-11ab22777867
+:END:
+
+| Semester | credits | Cost |
+| Spring   |       9 |      |
+| Summer   |       9 |      |
+| Fall     |       6 |      |
+
+* Montly Estimate Budget
+** calculated on [2022-04-14 Thu]
+| Category                  | Cost |
+| apartment rent            |      |
+| daily food and drink cost |      |
+| transportation            |      |
+| phone internet cost       |      |
+| apartment internet cost   |      |
+| miscellaneous             |      |
+
+* 2021
+** 1: January
+** 2: February
+** 3: March
+** 4: April
+** 5: May
+** 6: June
+** 7: July
+** 8: August
+** 9: September
+#+BEGIN_SRC ledger
+2021/09/15
+    Expenses:Drinks:Coffee                     $6.96
+    Expenses:Drinks:Coffee                     $5.08
+    Expenses:Meals:Dinning                    $48.26
+    Expenses:Entertaining:Activity            $50.00
+    Expenses:Health:Eye Exam                 $208.00
+    Expenses:Unknown                          $39.23
+    Assets:Saving                           $-357.53
+2021/09/16
+    Expenses:Drinks:Coffee                     $4.55
+    Expenses:Drinks:Water                      $1.99
+    Expenses:Meals:Lunch                       $9.62
+    Expenses:Meals:Dinners                    $14.93
+    Expenses:Recurring:Education              $39.00
+    Expenses:Recurring:Education               $9.99
+    Assets:Saving                            $-80.08
+2021/09/17
+    Expenses:Drinks:Water                      $2.59
+    Expenses:Drinks:Coffee                     $8.59
+    Expenses:Recurring:Education               $9.99
+    Assets:Saving                            $-21.17
+    Expenses:Utility:Internet                 $95.19
+    Expenses:Entertaining:Alcohol $44.00
+    Expenses:Entertaining:Hooka                $8.00
+    Expenses:Meals:Dinning                    $18.08
+    Assets:Saving                           $-165.77
+2021/09/18
+    Expenses:Recurring:Gym                    $35.30
+    Expenses:Drinks:Water                      $6.96
+    Expenses:Drinks:Coffee                     $2.59
+    Expenses:Meals:Dining                     $15.08
+    Assets:Saving                            $-59.93
+2021/09/19
+    Expenses:Drinks:Water                      $1.99
+    Expenses:Drinks:Coffee                     $6.96
+    Assets:Saving                             $-8.95
+#+END_SRC
+** 10: October
+** 11: November
+** 12: December
+* 2022
+** 1: January
+** 2: February
+** 3: March
+:PROPERTIES:
+:ID:       e08872ef-ebec-40d4-838f-25c689790aee
+:END:
+#+BEGIN_SRC ledger
+2022/03/02
+    Expenses:Drinks:Coffee                     $6.15
+    Expenses:Meals:Dinning                     $9.62
+    Assets:Saving                            $-15.77
+2022/03/03
+    Expenses:Drinks:EnergyDrink                $6.40
+    Expenses:Meals:Dinning                    $10.80
+    Assets:Saving                            $-17.20
+2022/03/04
+    Expenses:Drinks:EnergyDrink                $6.40
+    Expenses:Meals:Dinning                     $9.62
+    Assets:Saving                            $-16.02
+#+END_SRC
+
+** 4: April
+#+BEGIN_SRC ledger
+2022/04/11
+    Expenses:Drinks:EnergyDrink                $5.30
+    Expenses:Meals:Dinning                     $9.62
+    Expenses:Meals:Dinning                    $10.80
+    Assets:Saving                            $-25.72
+2022/04/12
+    Expenses:Drinks                            $8.96
+    Expenses:Meals:Dinning                    $10.80
+    Assets:Saving                            $-19.76
+2022/04/13
+    Expenses:Drinks:Coffee                     $5.62
+    Expenses:Drinks                            $8.96
+    Expenses:Meals:Dinning                     $9.62
+    Expenses:Meals:Dinning                     $7.49
+    Assets:Saving                            $-31.69
+2022/04/14
+    Expenses:Drinks                           $14.52
+    Expenses:Drinks:Coffe                      $5.62
+    Expenses:Meals:Dinning                     $9.62
+    Assets:Saving                            $-29.76
+2022/04/16
+    Expenses:Recurring:Education:CloudGuru                    $39.00
+    Expenses:Investment:Coinbase             $100.00
+    Assets:Saving                            $-139.00
+2022/04/19
+    Expenses:Entertaining:Boxing              $10.00
+    Expenses:Transportation:Lyft               $7.26
+    Assets:Saving                            $-17.26
+#+END_SRC
+** 5: May
+** 6: June
+** 7: July
+** 8: August
+** 9: September
+** 10: October
+** 11: November
+** 12: December
+

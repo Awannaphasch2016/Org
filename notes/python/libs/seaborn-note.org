@@ -1,0 +1,20 @@
+#+TITLE: Seaborn Note
+#+filetags: seaborn
+
+* Example
+** plot using boxplot
+:PROPERTIES:
+:ID:       b6b84ca1-8bd7-4f3c-89c6-0a726655d000
+:END:
+#+BEGIN_SRC python
+import seaborn
+import matplotlib.pyplot as plt
+
+seaborn.set(style='whitegrid')
+fmri = seaborn.load_dataset("fmri")
+
+seaborn.boxplot(x="timepoint",
+                y="signal",
+                data=fmri)
+plt.show()
+#+END_SRC

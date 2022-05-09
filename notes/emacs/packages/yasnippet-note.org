@@ -1,0 +1,5 @@
+#+TITLE: Yasnippet Note
+
+* Start here
+- ref
+  - [[https://joaotavora.github.io/yasnippet/snippet-development.html][how to write a snippet?]]

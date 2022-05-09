@@ -1,0 +1,13 @@
+#+TITLE: Dot Note
+
+* Example
+#+BEGIN_SRC dot :file scratch.png :cmdline -Kdot -Tpng :cache yes
+graph {
+    z [label="H(x) = H(y)"];
+    x -- z ;
+    y -- z ;
+}
+  #+END_SRC
+
+  #+RESULTS[5e59e95c29446df6bef9d2caa91ea3f083bdf89a]:
+  [[file:scratch.png]]

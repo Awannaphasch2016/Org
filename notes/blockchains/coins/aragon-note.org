@@ -1,0 +1,26 @@
+#+TITLE: Aragon Note
+#+filetags: aragon dao
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+
+* Blog :blog:
+** TODO DAO: How does Aragon (ANT) works?
+:PROPERTIES:
+:EXPORT_FILE_NAME: DAO: How does Agaron works?
+:ID:       a3af9631-59e9-43f7-bd5c-11c22e65904f
+:END:
+
+Aragon is built on top of Etherem. It is used to provide decentralized governance to a decentralized community.
+
+Aragon consists of apps which can be thought of as provided services whose functionality are uncouple. In design pattern in software engineering, this is equivalent of "separate of concern" principle which a well design software should obey.
+These apps includes token apps, voting apps, finance app, and agent apps.
+- Finance apps responsible for allocation of moneys.
+- Agent apps responsible for providing an interface to interact with smart contracts.
+- Token apps responsible for managing "membership" of the community.
+- Vote apps responsible for decision making mechanism.
+
+To setup a voting withing community, "Court" must be entablished. This is done by injecting fund, ANJ native token, to the court which is done by deposite ANT into bonding smart contracts. ANJ is short for "Aragon Network Juror." That's it. ANJ funded to the court, will be rewarded to participates.
+
+Don't be confused between ANJ and ANT. one can think of ANT as an actual money while ANJ can be thought of as a giftcard can only be used in specific place, in this case, the place is the "court."
+
+How can one get more ANJ?
+is ANT gained by minting? if yes, is the minting mechanism the same as Ether?

@@ -1,0 +1,8 @@
+#+TITLE: Colab Note
+
+* FAQs
+** How do I install a library permanently in Colab?:
+- ref
+  - https://stackoverflow.com/questions/55253498/how-do-i-install-a-library-permanently-in-colab
+
+colab notebook: https://colab.research.google.com/drive/1KpMDi9CjImudrzXsyTDAuRjtbahzIVjq

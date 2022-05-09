@@ -1,9 +1,15 @@
 #+TITLE: Docker Notes
 
 * References
+:PROPERTIES:
+:ID:       1cd8601f-c274-4dd3-ad1d-52ddae49e986
+:END:
 To learn more, this [[~/.emacs.d/modules/tools/docker/README.org][README]] seems to be the best source.
 
 * Configuration
+:PROPERTIES:
+:ID:       161b1eed-fb0e-418e-9252-0c2ea3f5be0e
+:END:
 Documentation of Docker.el Configuration is [[https://github.com/Silex/docker.el][here]].
 * [[https://github.com/Silex/docker.el#quickstart][Key binding]]
 * Terminology

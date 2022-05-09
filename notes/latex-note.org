@@ -1,6 +1,85 @@
 #+TITLE: Latex Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
 
-* Using latex in org mode
+* Blog
+** Install LaTeX on Ubuntu is not as simple as you think.
+:PROPERTIES:
+:EXPORT_FILE_NAME: Install LaTeX on Ubuntu is not as simple as you think.
+:END:
+
+First of all, I am no expert in LaTeX. I am just a dude who has (a lot) of trouble installing LaTeX and was trying to solve it.
+
+From this experience, I learn important lesson is always start digging from the official documentation of the target packages/libraries. This is because there are many two types of solution in general: =general solution= and =environment specific solution=.
+
+In this case, its clearly a environment specific problem which required environemnt speicific solution.
+
+Before jump in to the solution, lets me explain diganosis of a broken LaTeX state and what I wanted to achieve.
+
+First of all, I wanted to write research paper with LaTeX in org-mode Emacs and sync it to Overleaf, so my advisor can review it and see my progress.
+
+I first encountered the problem when I tried to update LaTex packages with =tlmgr=. it shows the following error message.
+#+BEGIN_SRC txt
+erros-tlmgr: unexpected return value from verify_checksum: -5
+#+END_SRC
+
+What is that? you asked. If you have know abit about security, you know that fail to verify checksum means key or content of the package is corrupted. Apprently, the maintainer of (CTAN? LaTeX?) this have his key to expire every year. What should you do now? I don't know how to solve the solution from this clue either, so I tried approaching it from another perspective.
+
+Gathering more information, I found that =apt-get= install =texlive= (~apt-get install texlive-latex-extra.~) into different directory than "general solution" that I found. After a bit more digging, I realised that LaTeX depedencies installed in Ubuntu is outdated, and it is more generally accepted to install LaTeX with this thing call =install-tl.sh= script.
+
+=install-tl.sh= script itself has distro specific version either =window= or =Unix= (distro is put as a suffix in the name). Nonetheless, you can just install =install-tl.sh= which will support all distro. In my case, I use =install-tl-ubuntu.sh=
+
+Apparently, by running =./install-tl.sh= script, your problem should disapear. Of course, there is a catch, it only solved your problem if this is the first approach you used to install LaTeX. If you installed it with Ubuntu =apt-get=, some weird dependencies conflict may still persist.
+
+To make sure that you only have 1 version of LaTeX which is managed by =install-tl.sh=, you need to remove all packages of LaTeX and its depenencies! by running ~sudo apt-get purge texlive-base~. Then you still have to manually check if there are another dependencies of TeX. (maybe installed by other apt-get packagkes.) by running ~dpkg -l | grep texlive~ and manually remove leftover dependencies with ~apt purge texlive-XXX~
+
+Also, you need to restart computer and then add =/usr/local/texlive/2021/bin/x86_64-linux= (or something similar) to PATH environment variable.
+
+And that's it, hence, the title.
+
+peace.
+
+* Error Logs
+** can't install anything with =tlmgr=
+*** encounter error =/usr/bin/tlmgr: unexpected return value from verify_checksum: -5=. I don't have this dir =/usr/local/texlive/2019= why?
+**** resources
+***** https://tex.stackexchange.com/questions/520603/issue-with-texlive-2019
+***** https://tex.stackexchange.com/questions/528634/tlmgr-unexpected-return-value-from-verify-checksum-5
+***** https://tex.stackexchange.com/questions/55437/how-do-i-update-my-tex-distribution/55459#55459
+***** https://tex.stackexchange.com/questions/1092/how-to-install-vanilla-texlive-on-debian-or-ubuntu
+***** https://tex.stackexchange.com/questions/137428/tlmgr-cannot-setup-tlpdb
+
+* Tools
+* Other Files Types
+** .cls extension
+** .sty extension
+* Tex Distribution system
+** MiKTeX
+cross-platform TeX distribution  for Mac, Linux, and Windows
+** MacTeX
+TeX Distribution for Mac
+** TeX Live
+cross-platform TeX distribution for Windows and Linux.
+
+TeX Live is a free distribution of the TeX typesetting system that includes many TeX-related programs, fonts, and macros pacakges, including LaTeX.
+* Package Manager
+** tlmgr (the native TeX Live Manager)
+tlmgr is a native TeX Live manager.
+* LaTeX Packages
+** BibTeX
+** algorithm
+see [[file:papers/latex/packages/the-algorithms-bundle-note.org::*Environment: algorithmic][algorithmic syntax here]].
+* Latex Compiler
+** pdflatex
+** bibtex
+** latexmk
+latexmk deals with conversion between latex related file extensions. To do this, it is required to deal with intermediaries file, such as .aux, and house keeping job related to conversion process, such as -c option for cleaning/removing non-essential files.
+*** commands
+**** =-shell-escape=
+run external commands from inside the tex file
+
+The problem is that it allows for almost everything. A tex file is meant to be portable, and one shouldn't have to fear any security issue when compiling a third-party file. So by default, this primitive is disabled.
+
+If an user needs to use it, he needs to explicitely tell the compiler that he trusts the author of the file with shell interaction, and that's exactly the point of the optional --shell-escape argument.* Using latex in org mode
 ** creating simple latex in org mode
 - ref
   - https://opensource.com/article/18/4/how-create-latex-documents-emacs
@@ -79,12 +158,45 @@
     - Link one
     - Link two
 #+END_SRC
-* Tex Distribution system
-** TeX Live
-TeX Live is a free distribution of the TeX typesetting system that includes many TeX-related programs, fonts, and macros pacakges, including LaTeX.
-* Package Manager
-** tlmgr (the native TeX Live Manager)
-tlmgr is a native TeX Live manager.
+* LaTeX related file extension
+** .aux
+aux stands for auxiliary.
+
+aux files contains information like color maps, coordinate system information, transformation data, projection infiormation, statistics, and crossreferences.
 * FAQs
-** how to compile latex?
+** how is LaTeX compiled?
+LaTeX compiled down to .dvi, .ps (PostScript) or .pdf.
+
+One way to compile is to compiled with LaTeX editor compiler.
+
+Another way to compile is to use command line.
+There are two commandline: =latex= and =pdflatex=.
+=latex [filename].tex= converts .tex to .dvi.
+=pdflatex [filename].pdf= converts .tex to .pdf.
+
+Given that you have .dvi file, you can compile to .ps and .pdf.
+=dvips -o [filename].ps [filename].dvi= converts .dvi to .pdf.
+=dvipdfm [filename].dvi= converts .dvi to .pdf.
+
+** how to compile LaTeX to pdf?
 ~pdflatex <path to .tex file>~
+** What is =\write18=?
+- ref
+  - [[https://tex.stackexchange.com/questions/76105/what-does-restricted-write18-enabled-mean-and-why-does-texlive-keep-reporting][What does "restricted \write18 enabled" mean and why does TexLive keep reporting it?]]
+  - [[https://tex.stackexchange.com/questions/20444/what-are-immediate-write18-and-how-does-one-use-them][What are \immediate & \write18 and how does one use them?]]
+For years \write18 has been used as a back door to the operating system. Syntactically TeX treats it as writing to a file, but register 18 is treated as a pre-opened file that in fact executes commands.
+
+"unrestricted" write18 means that you can execute any command so if you allow this and run a TeX file that someone sent you it may execute arbitrary code, email your password file to a spam bot or whatever.
+
+That is obviously a security risk but there are some commands that are naturally part of the Tex distribution that you might want to always allow (such as image and font conversion) so web2c allows you (or the texlive maintainers by default) to set up a set of "allowed, safe" commands and these are allowed to run in restricted mode.
+
+The third alternative is never to execute commands at all from \write18
+** How to manage Bibliography in LaTex?
+** Why conversion between .tex (e.g. via pdflatex) to other file type produce so many files?
+- ref
+  - https://tex.stackexchange.com/questions/11123/prevent-pdflatex-from-writing-a-bunch-of-files
+** Why won't LaTeX generate any output?
+- ref
+  - [[https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#Getting_current_LaTeX_document_to_use_your_.bib_file][Why won't LaTeX generate any output?]]
+
+* Footnotes

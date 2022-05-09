@@ -1,0 +1,9 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /home/awannaphasch2016/org/notes/built-tools/sbt/examples/foo-build/target/scala-2.12/foo-build_2.12-0.1.0-SNAPSHOT.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/awannaphasch2016/org/notes/built-tools/sbt/examples/foo-build/target/scala-2.12/classes/example[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example/Hello$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/awannaphasch2016/org/notes/built-tools/sbt/examples/foo-build/target/scala-2.12/classes/example/Hello$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	example/Hello.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/awannaphasch2016/org/notes/built-tools/sbt/examples/foo-build/target/scala-2.12/classes/example/Hello.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

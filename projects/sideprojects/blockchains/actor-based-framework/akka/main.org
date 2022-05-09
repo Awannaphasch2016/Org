@@ -1,0 +1,7 @@
+#+TITLE: Main
+
+* Readme
+:PROPERTIES:
+:ID:       6146393e-345b-4089-974a-0fef784f5e71
+:END:
+This projects implement [[https://www.freecodecamp.org/news/how-to-build-a-simple-actor-based-blockchain-aac1e996c177][How to build a simple actor-based blockchain]]

@@ -1,0 +1,10 @@
+#+TITLE: Flyspell Note
+
+* command line
+:PROPERTIES:
+:ID:       337d38f1-092c-4b68-9f47-3a302cadc08b
+:END:
+| commands                   | key   | doom keys | custom keys | descriptions |
+| flyspell-auto-correct-word | C-M-i |           |             |              |
+| flyspell-goto-next-error   | C-,   |           |             |              |
+| flyspell-correct-wraper    |       |           | z .         |              |

@@ -1,5 +1,12 @@
 #+TITLE: Notes
 
+* Blog
+** TODO Using terminal in Emacs.
+The goal is to cover all the basic usecases one would need to start using terminal effortlessly within emacs.
+
+To open multiple terminal, a neat trick is to rename file buffer that terminal is opened [fn:1].
+
+To open file from terminal, one can just =M-x find-file= in the terminal buffer. This is because terminal buffer is just another terminal.
 
 
 * Doom behavior that could cause error
@@ -16,8 +23,26 @@ If =$EMACS= environment variable is not set or incorrectly set, you will get =Ca
 * Help section and related info
 To open doom emacs documentation, use =doom/help.= which is binded to =spc-h-d-h=
 * Notes for Users
+:PROPERTIES:
+:ID:       64cff068-4e80-464f-b9cb-6e577a0ea3f5
+:END:
 ** Keybinding and Commands
+:PROPERTIES:
+:ID:       fdbcd28e-343c-48c2-ab6a-deefbb20f7d7
+:END:
+*** scratch pad
+:PROPERTIES:
+:ID:       d80825f3-dd69-46b6-a378-d95fcacb4fa5
+:END:
+| commands                              | key | doom keys | custom keys | descriptions |
+| doom/switch-to-scratch-buffer         |     | spc-b-X   |             |              |
+| doom/switch-to-project-scratch-buffer |     | spc-p-X   |             |              |
+| doom/open-scratch-buffer              |     | spc-x     |             |              |
+| doom/open-project-scratch-buffer      |     | spc-p-x   |             |              |
 *** Search in Doom
+:PROPERTIES:
+:ID:       aa87b05e-c055-42c1-8b69-54ea01f99f1b
+:END:
 **** bookmark-based search
 | commands         | key | doom keys           | custom keys | descriptions                |
 | consult-bookmark |     | spc-s-m  OR spc-ret |             | conduct a book mark search. |
@@ -57,6 +82,12 @@ To open doom emacs documentation, use =doom/help.= which is binded to =spc-h-d-h
 | +default/yank-buffer-path                     |     | spc-f-y   |             | Copy the current buffer's path to the kill ring.          |
 | +default/yank-buffer-path-relative-to-project |     | spc-f-Y   |             | Copy the current buffer's relative path to the kill ring. |
 | doom/delete-this-file                         |     | spc-f-D   |             | delete the current file                                   |
+*** editing
+| commands   | key | doom keys | custom keys | descriptions                |
+| embark act |     |           |             | send command to emabark act |
+*** ace
+| commands   | key | doom keys | custom keys | descriptions |
+| ace-window |     | spc-w-a   |             |              |
 
 * Notes for Developers
 ** Directory and Files Organization (How is doom-emacs connected to emacs?)
@@ -92,3 +123,10 @@ Furthermore, the top of =dap-mode-autoloads.el= mentioned that the file is autom
 Note: I could have confirmed by doing =git stash=, but it turns out that elpa doesn't use git to clone (This is why =straight.el= was proposed in the first place, see [[file:~/org/notes/emacs/package-manager/straight.org::*Features][here]])
 
 From abit more digging, I realised that doom emacs have the behavior of reloading/recompiling packages to reduce initialization time, but this cause loading and initialization errors.
+
+* FAQ
+** how to open multiple terminal in emacs?
+see [[*How to use terminal in Emacs][How to use terminal in Emacs]]
+* Footnotes
+
+[fn:1] [[https://stackoverflow.com/questions/2785950/more-than-one-emacs-terminal][stackoverflow: More than one emacs terminal]]

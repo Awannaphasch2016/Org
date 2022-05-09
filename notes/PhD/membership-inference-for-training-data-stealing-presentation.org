@@ -1,0 +1,18 @@
+#+TITLE: Membership Inference For Training Data Stealing Presentation
+
+* Membership Inference For Training Data Stealing Presentation
+
+** Attack Model
+#+attr_html: :width 300px
+[[file:./images/screenshot_20220421_134226.png]]
+
+** Shadow Model for Black-box Attack
+:PROPERTIES:
+:ID:       e443642f-f1eb-464b-bb34-58d55c3d1c73
+:END:
+#+attr_html: :width 300px
+[[file:./images/screenshot_20220421_134332.png]]
+
+** Inference Attack methods
+#+attr_html: :width 300px
+[[file:./images/screenshot_20220421_134516.png]]
