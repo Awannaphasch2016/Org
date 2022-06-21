@@ -1,0 +1,5 @@
+#+TITLE: Rjsx Note
+
+* keybinding
+| commands                 | key     | doom keys | custom keys | descriptions |
+| rjsx-rename-tag-at-point | C-c C-r |           |             |              |

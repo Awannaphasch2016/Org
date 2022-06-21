@@ -4,3 +4,6 @@
 ** Terminology
 *** Widget
 **** All actions in the editor are performed by ‘widgets’. A widget’s job is simply to perform some small action.
+:PROPERTIES:
+:ID:       2e7924ed-d33f-4609-8c6c-be781bee5cd6
+:END:

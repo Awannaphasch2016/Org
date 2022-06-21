@@ -4,10 +4,14 @@
 * Narrative And Numbers The Value Of Stories In Business
 :PROPERTIES:
 :NOTER_DOCUMENT: /home/awannaphasch2016/Documents/Books/Narrative and Numbers_ The Value of Stories in Business ( PDFDrive ).pdf
-:NOTER_PAGE: [[pdf:~/Documents/Books/Narrative and Numbers_ The Value of Stories in Business ( PDFDrive ).pdf::4++0.00]]
+:NOTER_PAGE: [[pdf:~/Documents/Books/Narrative and Numbers_ The Value of Stories in Business ( PDFDrive ).pdf::257++0.00]]
+:ID:       6048a613-aac3-49b7-941b-6a80311cf6be
 :END:
 
 ** Skeleton
+:PROPERTIES:
+:ID:       5d873932-48ac-4fca-83b0-98b87df6605e
+:END:
 
 *** Contents
 :PROPERTIES:
@@ -22,11 +26,13 @@
 *** 1 A Tale of Two Tribes
 :PROPERTIES:
 :NOTER_PAGE: [[pdf:~/Documents/Books/Narrative and Numbers_ The Value of Stories in Business ( PDFDrive ).pdf::12++0.207481??1%20A%20Tale%20of%20Two%20Tribes]]
+:ID:       f3efa549-7272-453c-b1ab-d0358b1afd8d
 :END:
 
 *** 2 Tell Me a Story
 :PROPERTIES:
 :NOTER_PAGE: [[pdf:~/Documents/Books/Narrative and Numbers_ The Value of Stories in Business ( PDFDrive ).pdf::21++0.207481??2%20Tell%20Me%20a%20Story]]
+:ID:       d11a616a-793c-49bf-aabc-ec13115e05cd
 :END:
 
 *** 3 The Elements of Storytelling
@@ -97,6 +103,7 @@
 *** 16 The Endgame
 :PROPERTIES:
 :NOTER_PAGE: [[pdf:~/Documents/Books/Narrative and Numbers_ The Value of Stories in Business ( PDFDrive ).pdf::274++0.207481??16%20The%20Endgame]]
+:ID:       9e02e02f-de2c-4d33-a531-d1173b4f8019
 :END:
 
 *** notes

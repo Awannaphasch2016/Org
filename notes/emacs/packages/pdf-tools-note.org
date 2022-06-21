@@ -660,7 +660,11 @@ I stopped here because to I am unable to locate where =/home/awannaphasch2016/an
 To dig into it further, I first need to locate the file and knowledge about how C program is built and how ld works may come in handy if I am on the right track on debugging this problem.
 ***** I found solution by keeping =:tools pdf= and remove =(package! pdf-tools)= from packages.el
 * Keybinding
+:PROPERTIES:
+:ID:       d5e61c73-7183-4b03-88d5-76e8efafcb6c
+:END:
 | commands                                  | key       | doom keys | custom keys | descriptions |
 | pdf-annot-add-highlight-markup-annotation | C-c c-a h |           |             |              |
+| pdf-annot-delete                          | C-c C-a D |           |             |              |
 | pdf-annot-add-text-annotation             | c-c c-a t |           |             |              |
 |                                           |           |           |             |              |

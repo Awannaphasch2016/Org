@@ -56,7 +56,44 @@
 *** PhD Researcher
 *** Teaching Assistant
 ** Projects
-*** Project 1
+*** AI
+**** recommender system
+*** application
+**** chat
+**** browser
+**** bit torrent client
+**** git
+*** web design
+**** API design
+*** system design
+**** server-client
+***** load balancer
+*** programming language implementation
+**** language server for ANAK language
+**** my own language called ANAK
+**** parse ANAK language with tree-sitter.
+**** DSL
+*** text editor
+**** implement text editor
+*** database
+**** implement database
+*** system
+**** kernel
+**** debugger
+**** docker
+**** virtual machine
+**** commandline tools
+*** typesetting
+**** paragraph layout in typesetting
+*** algorithms collections
+**** fuzzy search algorithm
+*** blockchain
+**** optimization
+***** cross DEX arbitrage optimization
+**** visualization
+***** DUNE dashboard
+**** token engineering
+***** indexed protocol for ideas based on Zettlekasten.
 *** Do not export this project
 ** Publication :noexport:
 #+begin_export latex
@@ -70,6 +107,13 @@
 ** Volunteering
 * CV Column two
 ** Skills
+*** API: REST, OpenAPI, GraphQL, gRPC
+*** IDE: Emacs, LSP, tree-sitter
+*** Programming Language: Python, Common Lisp, ELisp, Rust, Go, TypeScript, JavaScript
+*** Cloud stacks: Terraform, Docker, AWS, EC2, API Gateway, Lambda, Kinesis, S3, DynamoDB
+*** Database: PostgreSQL, SQLite, MySQL
+*** Blockchain: Solidity, Token engineering, DUNE, The Graph
+*** Prompt Programming: GPT-3
 ** Education
 ** My Life Philosophy :noexport:
 ** Schievements

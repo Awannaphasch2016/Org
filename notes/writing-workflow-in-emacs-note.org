@@ -1,3 +1,17 @@
 #+TITLE: Writing Workflow In Emacs Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
 
 This file contains all notes about ways to enhance writing experience this may include spell-checking, grammar-checking. etc
+
+* Blog
+** Useful Emacs Command And Snippets For Writing
+:PROPERTIES:
+:EXPORT_FILE_NAME: Useful Emacs Command And Snippets For Writing
+:ID:       be149e4a-39d8-460f-9781-50afbc0878f2
+:END:
+
+Scimax video on useful command related to writing can be found [[https://www.youtube.com/watch?v=q0KFusAaqu4&t=39s&ab_channel=JohnKitchin][here]].
+
+*** Commands
+| commands          | key | doom keys | custom keys | descriptions |
+| capitalize-region |     |           |             |              |

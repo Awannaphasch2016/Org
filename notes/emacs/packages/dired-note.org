@@ -1,5 +1,10 @@
 #+TITLE: Dired Note
 
 * key binding and command
+:PROPERTIES:
+:ID:       54602075-31f4-48ee-b702-ec29d164482d
+:END:
 | commands                         | key | doom keys | custom keys | descriptions                                   |
 | dired-copy-filename-as-killright |     | Y         |             | with spc-u 0, absoluate path to file is copied |
+| dired-do-chmod                   |     | M         |             |                                                |
+| dired-omit-mode                  |     | spc-m-h   |             |                                                |

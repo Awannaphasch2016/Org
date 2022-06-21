@@ -21,6 +21,30 @@ export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
 #+END_SRC
 
 My friend gets it working by replacing =:0= with =:0.0=. I couldn't tell you why, but that's something to be careful about.
+** Getting emacs-everywhere to work with wsl2?
+
+TOPIC: fail to send execute command from window terminal to send command to be executed in wsl2.
+---------------------------
+attempt:
+
+default is Ubuntu 20.04.
+I set variable in win32 using /p flag.
+I just use the example from https://devblogs.microsoft.com/commandline/share-environment-vars-between-wsl-and-windows/
+
+--------------------------
+goal:
+my goal is I want to do the following:
+set keybinding in window such that when I press the key, window terminal will send command to wsl2 (ubuntu) to execute emacs command to open emacs in existing X window. (port of the X window is set with $DISPLAY.)
+
+I am not really sure how process get created and what environment variables that it inherets. Is it possible to somehow ask window terminal to use process that have wsl2 ubuntu environment variables?
+
+my failed attempt above is to create a share environment variable between window and wsl2 which I don't think would have solve my goal because I just want to have a process that have environment variables of wsl2 to execute emacs command.
+
+===========================
+The exact emacs command I am trying to use is emacsclient -e "(emacs-everywhere)" which send to  command to emacs daemon to execute
+Image
+my attempt maybe completely off. I am not familiar with system programming, so any advice is appreciated.
+
 
 * Configuration
 ** open files from within wsl2 using window applicationa

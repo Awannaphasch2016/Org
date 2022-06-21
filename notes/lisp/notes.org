@@ -5,6 +5,9 @@ to see reference and documentttion of elisp, open info page using =info= (=spc-h
 * Fundametals concepts
 ** Data Structure
 *** hash table
+:PROPERTIES:
+:ID:       f1c058bb-0602-416f-bfd5-470f11ba517f
+:END:
 
 example of how to check hashtable[fn:2]
 #+BEGIN_SRC emacs-lisp
@@ -14,7 +17,7 @@ example of how to check hashtable[fn:2]
 *** symbol
 symbol is an object with a name.[fn:1]
 
-In Scheme and Racket, a symbol is like an immutable string that happens to be interned so that symbols can be compared with eq? (fast, essentially pointer comparison). Symbols and strings are separate data types
+In Scheme and Racket, a symbol is like an immutable string that happens to be interned so that symbols can be compared with =eq=? (fast, essentially pointer comparison). Symbols and strings are separate data types
 *** vectors
 Vectors are self-evaluating; that is, the result of evaluating a vector is the vector itself. Its
 subexpressions are not evaluated. So if you write:
@@ -82,8 +85,13 @@ intern basically return symbol whose name property matches input string
 ** Buffers
 *** Mini Buffer
 ~read-string~ read input from mini buffer
+** Keymap
+a mode save list of keybinding (called "keymap") in a variable with suffix "map" e.g. evil-mode-map
 * Learning by example
 ** Differences of interactive argument
+:PROPERTIES:
+:ID:       484d8677-4607-4c01-a670-05ad6d601a41
+:END:
 - ref
   - [[https://emacs.stackexchange.com/questions/13886/what-is-a-raw-prefix-argument-capital-p-in-interactive][What is a raw prefix argument? (capital P in interactive)]]
 ~(interactive "P")~ recognize prefix symbol like =C-u=, =M-x= etc. before convert args to number.

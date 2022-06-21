@@ -2,15 +2,10 @@
 #+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
 
 * Blog :blog:
-** TODO Arbitrage with Mine Extractable Value (MEV)
-*** things to read
-**** Papers
-:PROPERTIES:
-:ID:       b2e91da7-7a29-46c6-af23-bd978dc91839
-:END:
-[[https://www.econbiz.de/Record/applying-the-genetic-based-neural-networks-to-volatility-trading-wang-shinn-wen/10005080815][APPLYING THE GENETIC-BASED NEURAL NETWORKS TO VOLATILITY TRADING]]
-[[https://arxiv.org/pdf/2106.04028.pdf][Deep Learning Statistical Arbitrage∗]]
 ** TODO How to Establish Benchmark Return to decide on Investment Oppotunity and associated Risk
+:PROPERTIES:
+:ID:       c31c69cd-e257-413e-91b5-34b78de85878
+:END:
 A good portfolio must allocate assets.
 
 Each assets class dividens

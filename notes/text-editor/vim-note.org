@@ -1,5 +1,14 @@
 #+TITLE: Vim Note
 
 
+* macro
+** defining macro
+- start defining macro by pressing =q<register>=.
+- define macro
+- finish defining macro by pressing =q=
+** use macro
+To use macro 1 time, =@<register>=
+To use macro N time, =n@<register>=
+
 * set relative line number
 ~:set number relativenumber~

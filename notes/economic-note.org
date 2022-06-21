@@ -53,3 +53,47 @@ Property are better stored fo value than money because it has utility, but they 
 Asset is things that hold value. In this case, value is evaluated based on suppply-demand mechanism.
 
 Security is a financial instrument. It is a type of financial asset. Government of a country determines asset that can be categorized as security or non-security.
+* Data
+:PROPERTIES:
+:ID:       84ff272e-0938-49be-bf52-e1020c0d00cd
+:END:
+#+BEGIN_SRC python :results output :cache yes
+import requests
+import json
+import prettytable
+from pathlib import Path
+import pandas as pd
+import numpy as np
+headers = {'Content-type': 'application/json'}
+data = json.dumps({"seriesid": ['LNS11300000'],"startyear":"2019", "endyear":"2022"})
+p = requests.post('https://api.bls.gov/publicAPI/v1/timeseries/data/', data=data, headers=headers)
+json_data = json.loads(p.text)
+data_dir = Path("/home/awannaphasch2016/Data/Economics/us_bureau_of_labor_statistics/")
+data = []
+for series in json_data['Results']['series']:
+
+    # x =prettytable.PrettyTable(["series id","year","period","value","footnotes"])
+    seriesId = series['seriesID']
+    for item in series['data']:
+        year = item['year']
+        period = item['period']
+        value = item['value']
+        footnotes=""
+        # for footnote in item['footnotes']:
+        #     if footnote:
+        #         footnotes = footnotes + footnote['text'] + ','
+        if 'M01' <= period <= 'M12':
+            # x.add_row([seriesId,year,period,value,footnotes[0:-1]])
+            data.append([seriesId,year,period,value))
+    data_df = pd.DataFrame(data, columns=["series id","year","period","value"])
+    data_df.to_csv(str(data_dir / (seriesId + '.txt')),'w')
+    print(data_df.head)
+    # output = open(str(data_dir / (seriesId + '.txt')),'w')
+    # output.write (x.get_string())
+    # output.write (x.get_string())
+    # output.close()
+print('done')
+#+END_SRC
+
+#+RESULTS[5fec3a60b3aa028cc17b92faf5f352ddaa7e01e3]:
+: done

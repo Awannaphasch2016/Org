@@ -128,6 +128,9 @@ self loop edges = self loop is considered a special case where a node can work i
 [[file:./images/screenshot_20220506_144958.png]]
 
 **** Evaluate Meme Value with Meme metrics
+:PROPERTIES:
+:ID:       f6276f8a-3ff0-42f8-b77b-cb746e80a7c1
+:END:
 Example of data analysis from a RH quests from 7/26/2021 - 7/30/2021: see the following [[https://dune.com/drethereum/RabbitHole:-theGraph][link]].
 
 Level of community's enthusiasm and member's activity contribute to "sticky factor." The higher sticky factor, the higher members retention rate. Sticky factor can be are measured by "meme value." According to [fn:4], in summary, level shared believe identifies DAO survival. DAO survival is determined by internal funding mechanism. Internal funding mechanism is a subset of token mechanism. Meme factor measures shared believe level which determine token value and influence token mechanism incentives.
@@ -146,6 +149,12 @@ Suggestion of way to evaluate meme is
 Without a way to measure a system, one can't design a way to improve the system. In this case, we want to grow a community, so we need to measure meme activity.
 
 "you can't improve what you don't measure" -- Peter Drucker
+
+DAOs enables fluidity of contribution and collaboration which means it's often much easier to attact top talent than it is to retain it. According to Llama blog [fn:5], it uses the following metrics to track community health.
+- % of contributors who are active
+- % of contributors retained after 3 months
+- Time between joining & first contribution
+- time between contribution & payment
 **** Future Work
 ***** viable system model (VSM)
 VSM is a adaptive system and evolve such that its properties are preserved.
@@ -296,7 +305,7 @@ Voting weight is equal to the sum of your delegated, held, and staked TRIBE. For
 :PROPERTIES:
 :ID:       cdfaa3c2-f756-4fbc-ad46-18399b25e9c2
 :END:
-
+[fn:5] [[https://llama.mirror.xyz/q1hcX8cbL3RGjUCETxlf6GyEURnQCHa_-rQqJ2yN8ng][Economic Infrastructure for DAOs]]
 [fn:4] [[https://cryptonat.substack.com/p/tokenomics-101?s=r][Tokenomics 101: The Basics of EValuating Cryptocurrencies -- DeFriday #19]]
 [fn:3] [[https://www.youtube.com/watch?v=HXMnut5m8_M&list=PLM4u6XbiXf5oDP6DFeEoNP5K_Epy1RAx4&index=15&ab_channel=TechCrunch][Tina Ferguson: Managing Distributed Workforces]]
 [fn:2] https://docs.fei.money/governance/snapshot-voting

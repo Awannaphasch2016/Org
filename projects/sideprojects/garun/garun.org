@@ -23,6 +23,14 @@ Goal: I envision Garun to support the following things
 - provide optimized workflow via 'workflow mode.'
 - provide resembrance agents for each 'workflow mode'.
 - optimize for one screen/multiple screen.
+- compute scoring for task priority. (One can pick and choose tasks from the task priority list to create daily planning each day.)
+  - this features is inspired by Amplenote. I just saw it here [fn:1]
+- daily planning that one create should be sync to modern online calendar apps.
+- provide notes/thought (seedling) to resurface itself automatically via space everything.
+- garun should provide inference that automate manual step.
+  - the inference must be low false negative, its okay to have high false positive as a trade off
+  - example of this is
+    - garun inferences a string that resemble directory and provide a function that would open directory from the inference string.
 * Garun
 :LOGBOOK:
 CLOCK: [2022-03-07 Mon 15:07]--[2022-03-07 Mon 15:08] =>  0:01
@@ -1044,3 +1052,7 @@ CLOCK: [2022-04-29 Fri 13:51]--[2022-04-29 Fri 13:54] =>  0:03
 [2022-04-29 Fri 13:51]
 [[file:~/org/notes/built-tools/sbt/examples/foo-build/src/main/scala/example/Hello.scala][file:~/org/notes/built-tools/sbt/examples/foo-build/src/main/scala/example/Hello.scala]]
 connect emacs to tmux.
+
+* Footnotes
+
+[fn:1] [[https://www.youtube.com/watch?v=voEkgvYETdM&ab_channel=ShuOmi][5 Best Productivty Features that Made Me Switch to Amplenote]]

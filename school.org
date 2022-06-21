@@ -10,6 +10,8 @@
 :ARCHIVE:  %s_archive::* Habits
 :END:
 ** Notes :note:
+*** my office hours
+**** tuesday & thrusday 1PM-3PM
 ** Meeting :meeting:
 ** Schedule
 *** recurring :recurring:
@@ -20,5 +22,11 @@ see [[https://mail.google.com/mail/u/0/#inbox/FMfcgzGpFgzqCdfcKjmgwTkdpwDlzTlg][
 
 ** Delegation :waiting:
 ** Tasks
+:PROPERTIES:
+:ID:       740630ca-9947-4443-af32-e13dea53b441
+:END:
 *** actionable :actionable:
+:PROPERTIES:
+:ID:       f9a4a45f-18da-4d07-9035-febef5474838
+:END:
 *** incubation :incubation:

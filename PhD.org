@@ -55,7 +55,7 @@ In general,  model complexity increase over time as shown in ref:complexity. The
 
 The article starts at GCRN-M1 and GCRN-M2 models [[cite:&seo2018structured]]. These models are categorized stacked DGNN and was the first attempt to model DGNN model [[cite:&skardingFoundationsModelingDynamic2021]]. The model is inspired by convLSTM. convLSTM substitutes approximation of convolution operation from using neural network to convolution neural network.
 
-GCRN convolutional layers instead of fully connected layers.
+[GCRN convolutional layers instead of fully connected layers]
 
 Xu et al. [[cite:&xu2019generative]] purposed G-GCN. The models disregard time and take into consideration only topology changes. This is done by extending variational Graph Autoencoder (VGAE) [[cite:&kipf2016variational]] to predict unseen node.
 
@@ -89,9 +89,12 @@ When designing dynamic graph models, one must consider node dynamic, link durati
 
 To understand dynamic graph, one must understand static network. In static network, one must consider type of network relationship (e.g idealize network, proximity network.), scale of network (e.g. a node as a single entity, a node as a group of entities.), and network variation (link types e.g. homogeneous network, heterogenous network, multilayer network). [[cite:&wanna2022network]]
 
-Dynamic graph input => classify by link duration, classify by condition in which link defined. (e.g. contact network, spatio-temporal network, spatio network, idealized network.)
-dyanmic graph can be preresented in many ways => lossless representation, lossy representation.
+Dynamic graph input => classify by link duration, by condition in which link defined. (e.g. contact network, spatio-temporal network, spatio network, idealized network.)
+
+Dynamic graph can be presented in many ways => lossless representation, lossy representation.
+
 representation of dynamic graph can be modified => synthetic link (e.g. convert temporal network to multilayer network such as multiplex).
+
 dynamic graph models are classify by the following aspects: topological evolution (including node dynamic) and  temporal granularity.
 
 
@@ -114,7 +117,7 @@ Note that meaning of temporal networks is ambiguous outside of skarding et al's 
 bibliography:/home/awannaphasch2016/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/reference.bib
 **** TODO Understand Dynamic Graph: Taxonomy - Dynamic Graph Input
 
-Before designing dynamic graph models, one must consider construction of dynamic graph input based on a given dataset. Then, models can be designed on top of constructed input. Dynamic graph construction is out of scope of this paper, but it is important to emphasize that model architecture is heavily dependent on input. Example of input graph construction are aggregated graph (edge-weighted graph [[cite:&qu2020continuous]]), synthetic link between static graph [[cite:&kapoor2020examining]], and different graph. When designing dynamic graph models, one must consider node dynamic, link duration, and temporal granularity. Node dynamic concerns presents of nodes. Link duration concerns presents of edges, and temporal granularity concern either discrete or continuous occurrence of events [[cite:&kazemiRepresentationLearningDynamica]].
+Before designing dynamic graph models, one must consider construction of dynamic graph input based on a given dataset. Then, models can be designed on top of constructed input. Example of input graph construction are aggregated graph (edge-weighted graph [[cite:&qu2020continuous]]), synthetic link between static graph [[cite:&kapoor2020examining]], and different graph. When designing dynamic graph models, one must consider node dynamic, link duration, and temporal granularity. Node dynamic concerns presents of nodes. Link duration is duration that edges exists, and temporal granularity concern either discrete or continuous occurrence of events [[cite:&kazemiRepresentationLearningDynamica]].
 ***** todo list :noexport:
 ***** Bibliography :ignore:
 bibliography:/home/awannaphasch2016/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/reference.bib
@@ -139,6 +142,9 @@ bibliography:/home/awannaphasch2016/Documents/MyPapers/EnsembleStreamingNetworkC
 ***** Bibliography :ignore:
 bibliography:/home/awannaphasch2016/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/reference.bib
 **** TODO Understand Dynamic Graph: Temporal Dimension - temporal granularity
+:PROPERTIES:
+:ID:       3620f84a-ba30-4a13-aa1c-38d01168c321
+:END:
 n-dimension topological evolution [[cite:&holme2015modern;&barrosSurveyEmbeddingDynamic2021]]. Temporal granularity concerns time information that are kept in a graph which broken down to unweighted static graph (no time information is preserved), weighted static graph, discrete graph (stack of multiple weighted static graph), continuous graph (all time information is preserved) [[cite:&skardingFoundationsModelingDynamic2021]]
 ***** Bibliography :ignore:
 bibliography:/home/awannaphasch2016/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/reference.bib

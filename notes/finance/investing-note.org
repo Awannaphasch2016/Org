@@ -1,0 +1,17 @@
+#+TITLE: Investing Note
+
+* blog :blog:
+** TODO Valuation of cash flow generating assets
+:PROPERTIES:
+:ID:       cf8fc463-8fc0-40bc-a391-86b9dbe75afb
+:END:
+Cash flow generating assets are anythings can have economic value including: markets/sectors/companies, see [[file:~/org/notes/economic-note.org::*Asset vs Property vs Security][Asset vs Property vs Security]]. Gold, bitcoin, drawing cannot be value.
+
+see [[https://roamresearch.com/#/app/AdaptiveGraphStucture/page/uoj3Kw9Q2][3 main variables for value calcuation]] is based on [[https://roamresearch.com/#/app/AdaptiveGraphStucture/page/YpjLU2vh7][Seedling: efficient market hypothesis theory.]]
+** TODO Valuation MBA Project: Analyses Value of X Company.
+*** risk analysis
+:PROPERTIES:
+:ID:       0a36e89c-c76c-4d0a-8954-9c07c320293d
+:END:
+types of uncertainty
+| estimation | micro economic | macro economic |

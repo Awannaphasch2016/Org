@@ -70,6 +70,10 @@ whatis which
 #+RESULTS:
 |                                         |
 | which (1)            - locate a command |
+** xclip
+:PROPERTIES:
+:ID:       387b7972-0e39-43fd-a967-20dfa4437b52
+:END:
 
 * How to
 ** create zip file of content in current file

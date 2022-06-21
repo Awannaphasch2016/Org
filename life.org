@@ -3,6 +3,9 @@
 Life.org keeps tracks of things important in mylife.
 
 * Pre made Answer to common Value Qualifying question
+:PROPERTIES:
+:ID:       a7f6c5aa-38bd-4295-852c-59f4f7e4fb55
+:END:
 ** Tell us a little about yourself: Catch us up on who you are. What do you care about outside of work? What are your hobbies or interests?
 :PROPERTIES:
 :ID:       d08a930a-0624-48a9-a4f8-549427a76db6
@@ -708,6 +711,8 @@ CLOCK: [2022-03-02 Wed 11:28]--[2022-03-02 Wed 12:12] =>  0:44
 ** Notes :NOTE:
 *** Website to do job search
 **** [[https://angel.co/][angel.co]]
+**** blockchain/crypto/web3 related jobs
+https://cryptocurrencyjobs.co/
 *** internship
 **** getting credit for internship
 see the following email [[https://mail.google.com/mail/u/0/#inbox/FMfcgzGpFgwWntGSgSwMbJlNQQSmvMXw][Register your internship for credit]] for more inforamtion
@@ -734,7 +739,6 @@ step to apply for CPT
 Here is CPT website for general information:
 
 https://www.fau.edu/global/international/employment-internship/
-
 ** Habit :habit:
 :PROPERTIES:
 :CATEGORY: Habit

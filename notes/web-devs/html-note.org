@@ -1,6 +1,9 @@
 #+TITLE: HTML Notes
 
 * example of CSS expression
+:PROPERTIES:
+:ID:       cea3490f-8b2c-4754-b9c1-b211f9e60ea1
+:END:
 the following example uses =scrapy shell=
 - select all elements -> =response.css('*').getall()=
 - select all elements that have head element -> =response.css('head').getall()=

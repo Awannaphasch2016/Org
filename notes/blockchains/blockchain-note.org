@@ -688,6 +688,14 @@ DAO hardfork (mentioned at https://youtu.be/VcuEm53f5GM?list=PLM4u6XbiXf5qXKZixr
 :ID:       85e4c857-d657-42ce-827e-e8937d05ef47
 :END:
 ** SPL-token
+* Content
+** Understand transaction information
+*** etherscan
+:PROPERTIES:
+:ID:       78bcbb60-f996-4233-bc68-aefd781b5c45
+:END:
+wallet address has 42 character example =0x73278a12a96b95b37ba35149A958FB8e02F35f5A=.
+
 * FAQs
 ** How long does it takes for bitcoin to generate collision crash?
 :PROPERTIES:

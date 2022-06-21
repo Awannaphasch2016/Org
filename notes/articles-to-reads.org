@@ -177,3 +177,10 @@ CLOCK: [2022-02-20 Sun 13:45]--[2022-02-20 Sun 13:46] =>  0:01
 :END:
 * Investing
 ** [[https://aswathdamodaran.blogspot.com/2022/05/in-search-of-steady-state-inflation.html][aswath damodaran's blog]]
+* Token Engineering and Tokenomics
+** [[https://block.science/resources][block science: recommend read]]
+** [[https://te-academy.notion.site/Getting-Ready-for-TE-Fundamentals-3d497830b5e748079dcf013c27cbf277][token engineer: get ready]]
+*** [[https://docs.google.com/document/d/1lxjitvzklAuDy00176Fzwmr-sP_GRJmSCxZmzareMK8/edit][reading list from token engineering academy]]
+:PROPERTIES:
+:ID:       31dae525-0558-4964-9092-33566cf9730e
+:END:

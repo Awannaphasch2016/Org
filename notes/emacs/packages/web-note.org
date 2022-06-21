@@ -1,0 +1,77 @@
+#+TITLE: Web Note
+
+* keybinding
+:PROPERTIES:
+:ID:       b3d1b800-2bc0-4eb4-a0fe-85cfa5314712
+:END:
+| commands                | key | doom keys | custom keys | descriptions   |
+| web-mode-element-vanish |     | spc-m-e-v |             | remove element |
+** source code
+#+BEGIN_SRC emacs-lisp
+(map! :map web-mode-map
+        (:localleader
+          :desc "Rehighlight buffer" "h" #'web-mode-buffer-highlight
+          :desc "Indent buffer"      "i" #'web-mode-buffer-indent
+          (:prefix ("a" . "attribute")
+            "b" #'web-mode-attribute-beginning
+            "e" #'web-mode-attribute-end
+            "i" #'web-mode-attribute-insert
+            "n" #'web-mode-attribute-next
+            "s" #'web-mode-attribute-select
+            "k" #'web-mode-attribute-kill
+            "p" #'web-mode-attribute-previous
+            "p" #'web-mode-attribute-transpose)
+          (:prefix ("b" . "block")
+            "b" #'web-mode-block-beginning
+            "c" #'web-mode-block-close
+            "e" #'web-mode-block-end
+            "k" #'web-mode-block-kill
+            "n" #'web-mode-block-next
+            "p" #'web-mode-block-previous
+            "s" #'web-mode-block-select)
+          (:prefix ("d" . "dom")
+            "a" #'web-mode-dom-apostrophes-replace
+            "d" #'web-mode-dom-errors-show
+            "e" #'web-mode-dom-entities-encode
+            "n" #'web-mode-dom-normalize
+            "q" #'web-mode-dom-quotes-replace
+            "t" #'web-mode-dom-traverse
+            "x" #'web-mode-dom-xpath)
+          (:prefix ("e" . "element")
+            "/" #'web-mode-element-close
+            "a" #'web-mode-element-content-select
+            "b" #'web-mode-element-beginning
+            "c" #'web-mode-element-clone
+            "d" #'web-mode-element-child
+            "e" #'web-mode-element-end
+            "f" #'web-mode-element-children-fold-or-unfold
+            "i" #'web-mode-element-insert
+            "k" #'web-mode-element-kill
+            "m" #'web-mode-element-mute-blanks
+            "n" #'web-mode-element-next
+            "p" #'web-mode-element-previous
+            "r" #'web-mode-element-rename
+            "s" #'web-mode-element-select
+            "t" #'web-mode-element-transpose
+            "u" #'web-mode-element-parent
+            "v" #'web-mode-element-vanish
+            "w" #'web-mode-element-wrap)
+          (:prefix ("t" . "tag")
+            "a" #'web-mode-tag-attributes-sort
+            "b" #'web-mode-tag-beginning
+            "e" #'web-mode-tag-end
+            "m" #'web-mode-tag-match
+            "n" #'web-mode-tag-next
+            "p" #'web-mode-tag-previous
+            "s" #'web-mode-tag-select))
+
+        :g  "M-/" #'web-mode-comment-or-uncomment
+        :i  "SPC" #'self-insert-command
+        :n  "za"  #'web-mode-fold-or-unfold
+        :nv "]a"  #'web-mode-attribute-next
+        :nv "[a"  #'web-mode-attribute-previous
+        :nv "]t"  #'web-mode-tag-next
+        :nv "[t"  #'web-mode-tag-previous
+        :nv "]T"  #'web-mode-element-child
+        :nv "[T"  #'web-mode-element-parent)
+    #+END_SRC

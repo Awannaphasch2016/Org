@@ -15,8 +15,10 @@
 #+END_SRC
 * Key binding
 
-| commands | key | doom keys | custom keys | descriptions |
-|          |     |           |             |              |
+| commands                 | key | doom keys | custom keys | descriptions |
+| dap-breakpoint-condition |     |           |             |              |
+| dap-delete-all-sessions  |     |           |             |              |
+| dap-ui-repl              |     | spc-d-.   |             |              |
 
 * FAQs
 

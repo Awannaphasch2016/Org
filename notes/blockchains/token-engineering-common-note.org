@@ -12,11 +12,105 @@
 :ID:       f5eb64b4-1649-4f84-99a0-133a460a2162
 :END:
 ** Notes :note:
-*** TEC
+*** contacts
+**** to get jobs related
+***** markop
+***** hanners717
+*** [[https://token-engineering-commons.gitbook.io/tec-handbook/hatch-101/faq/budget-and-reward-system][TEC source]]
+:PROPERTIES:
+:ID:       f93ad346-a579-410d-aab2-6e0b5b507c6f
+:END:
+*** TEC forum
 [[https://forum.tecommons.org/][forum]] is the main place to ask question about TEC.
+*** audit
+**** [[https://hackmd.io/@lPFQ61eAQAap3vUN520DPw/ByS69fqQq#33-Operations][jan - mar audit]]
 *** omega intiative
 This explores distribute, ethos, and ethics of TE.
 Meeting notes can be find at [[https://docs.google.com/document/d/1SRvWH57956GjlRXxvVGgVF7w-Exvdi7TFhVwIbpPoLQ/edit#][omega main Notes]]
+*** Structure of TEC
+:PROPERTIES:
+:ID:       5004931b-eb1d-4bcb-b966-bb4f7613e28f
+:END:
+This content most fit here. If I understand the structure correctly.
+
+I just wanna share a very rough categorization of working group's responsibility.
+ I think it is important to understand the overview of DAO components based on existing provided services.
+You can use this to think about what TCE currently has, what TCE will need, what can we outsource.
+
+🕊｜gravity  is
+- [[Decentralized Autonomous Organization (DAO)/services/Treasury Management]]
+
+"Sampo Analysts"  is
+- [[Decentralized Autonomous Organization (DAO)/services/Treasury Management]]
+
+💸｜sampo  is
+- [[Decentralized Autonomous Organization (DAO)/services/Growth]]
+
+💸｜reward-system  is
+- [[Decentralized Autonomous Organization (DAO)/services/Token services]]
+
+🏘｜communitas  is
+- [[Decentralized Autonomous Organization (DAO)/services/Community]]
+- [[Decentralized Autonomous Organization (DAO)/services/Growth/User onboarding]]
+
+🕵｜transparency is
+-  [[Decentralized Autonomous Organization (DAO)/services/Operations/Project Management]]
+
+🧩｜te-governance-guild  and 🙌🏽｜soft-gov  are
+- [[Decentralized Autonomous Organization (DAO)/services/Governance]]
+
+TEA is
+- [[Decentralized Autonomous Organization (DAO)/services/Growth/Education]]
+- [[Decentralized Autonomous Organization (DAO)/services/Growth/Research]]
+
+🔬｜labs  is
+- [[Decentralized Autonomous Organization (DAO)/services/Growth/Education]]
+
+📡｜comms is
+-  [[Decentralized Autonomous Organization (DAO)/services/Growth/Education]]
+- [[Decentralized Autonomous Organization (DAO)/services/Growth/User onboarding]]
+
+I think we missed one. (I am sure we don't need it right now)
+- [[Decentralized Autonomous Organization (DAO)/services/Risk Management]]. Example is hiring of Gauntlet by Compond.
+
+#+name: DAO_services
+#+attr_html: :width 1000px
+[[file:./images/screenshot_20220511_171206.png]]
+
+Figure ref:DAO_services can be found at [[https://roamresearch.com/#/app/AdaptiveGraphStucture/page/_Z5SXt8JI][my roam research link]]
+*** TEC proposal
+**** [[https://docs.google.com/spreadsheets/d/12_PK_G9-gGxPOm-mdl5dlfdh9GSZGuI5gkTLkWlfNcY/edit#gid=1328397541][TEC Decision Tracking]]
+**** [[https://docs.google.com/spreadsheets/d/1Wwio-Ysqn_mzbPw7hEIz5jg3zZJGlrLATBGHR6bImhI/edit#gid=1484400937][TWG_Proposal_Activity]]
+*** funding pool reserve & fund movement
+1,571,223.57 WXDAI were setn from the hatch to TEC and the balance. balance is composed of 3 pools.
+**** 3 pools
+***** LaserTag
+***** Rewards board
+***** Common Pool
+*** pools information
+there are 2 pools:  non-redeemable pool (dedicated to support TE projects and TEC Operations.) and the redeemable pool. (dedicated to create an economic system for DAO)
+*** augmented bonding curve
+*** conviction voting
+*** wallet infor
+reserve pool = =4a3C145c35Fa0daa58Cb5BD93CE905B086087246=
+common pool = =01d9c9Ca040e90fEB47c7513d9A3574f6e1317bD=
+
+TEC token contract = =5dF8339c5E282ee48c0c7cE8A7d01a73D38B3B27=
+
+LaserTag             =\xf41deff41016216346270e302dc0a5dd4913dada=
+Transparency         =\x7b0c465bf242166423370f6e0bcdf7b11e89ed75=
+Stewards             =\xa3b2391a209b906fe29d4d4285782f18e38fa525=
+Gravity              =\xffbd35255008f86322051f2313d4b343540e0e00=
+Rewards Board        =\x2723875bff110974e712019e4ab631dcac97910d=
+Communitas           =\x0fe03a31c0ab491c287414585d77b15d06547675=
+TE Academy T.E.A.M   =\xdb533912fe7349392e6255d359a8b9ac1a6174bd=
+Animation T.E.A.M    =\x43617575bb783bdf7b358f6f3f08451a3cbcb73e=
+Translations T.E.A.M =\x5d5f9889393057d970af916c5b2d39c14d0d5614=
+Twitter T.E.A.M      =\xc711a763f81d09259d7bd59acbe4eee9770c194f=
+Hubspot T.E.A.M      =\xc61d393944c01b2e8c396b036c23f226f9bf8eaf=
+Legal Multisig       =\x814bf8e8feb8797b601c35541f87e004ede951a8=
+Marketing T.E.A.M    =\xc61d393944c01b2e8c396b036c23f226f9bf8eaf=
+
 ** Meeting :meeting:
 ** Schedule
 *** recurring :recurring:
@@ -35,6 +129,7 @@ CLOCK: [2022-05-06 Fri 13:52]--[2022-05-06 Fri 20:42] =>  6:50
 ** Tasks
 *** actionable :actionable:
 *** incubation :incubation:
+
 * Sampo
 ** Habit :habit:
 :PROPERTIES:
@@ -45,13 +140,20 @@ CLOCK: [2022-05-06 Fri 13:52]--[2022-05-06 Fri 20:42] =>  6:50
 ** Notes :note:
 *** omega
 *** [[https://app.clarity.so/Sampo/pages/d57ffb3e-9042-43ce-9342-4859084888bc][clarity chat room]]
+:PROPERTIES:
+:ID:       dae9ab6e-5800-463f-9caf-37b0b179a8a9
+:END:
+*** [[https://gardens.1hive.org/#/xdai/garden/0x1fc7e8d8e4bbbef77a4d035aec189373b52125a8][on chain governance voting website]]
 *** balance sheets
 :PROPERTIES:
 :ID:       476b8dda-8d9d-4038-a7e6-40417e1b035f
 :END:
 **** [[https://docs.google.com/spreadsheets/d/1Pd8feP0zW_mKaFesocYOMtpqTZMIUzWgZcQMUKmL6bI/edit#gid=595447914][Gravity Financial Statement]]
+:PROPERTIES:
+:ID:       3c2b878a-8ae6-489f-aa59-8ed430c0638c
+:END:
 **** [[https://docs.google.com/spreadsheets/d/1-Mh6vJ2Xqrsw8Gkd1v-D7r7zoyz87-pFFpdIrddBjGQ/edit#gid=860672135][Gravity Budget Sheet]]
-**** budget category
+**** budget categories
 - R&D
   - research initiative & proposal iteration
 - website maintainace expense
@@ -74,11 +176,49 @@ CLOCK: [2022-05-06 Fri 13:52]--[2022-05-06 Fri 20:42] =>  6:50
   - advisory
 - content management
   - content creation
+*** proposal for auditing
+**** scope of work
+***** transparency team
+****** make data availble by releasing audit.
+***** sampo team
+****** growth.
+**** requirement
+***** transparency team
+****** make all information transparency. that's it.
+****** automate data gathering and aggregation task.
+***** sampo team
+****** whatever make sampo analyst identify and reduce cost.
+******* find duplicate cost
+******* find bad spending
+****** create MVP 2-3 week push deadline from [2022-05-20 Fri]
+DEADLINE: <2022-05-30 Mon>
+Phases:
+- Near-real time, complete treasury picture (with working group multisigs)
+- Near-real time, complete working group budget and spending picture
+- No actual cash flow projections --
+	- No revenues (yet!)
+	- Too difficult to predict spending because of conviction voting
+	- Can maybe do working group spending projections
+	- Griff offered to pull together some projection here!
+
+**** todo list
+***** read [[*\[\[https://hackmd.io/@lPFQ61eAQAap3vUN520DPw/ByS69fqQq#33-Operations\]\[jan - mar audit\]\]][jan - mar audit]]
+***** add comment to [[https://app.clarity.so/Sampo/notes/16ab8d40-14b9-433d-bf91-5cc5df8287c3][Sampo Analysts Work Products]] using information from my notes and meeting notes.
+***** figure out how to write purposal. write it. send to rex to review.
+***** figure out what data can be obtained automatically from on chain by using DUNE
+***** create budget.
+***** create category follow ref:DAO_services and [[*budget categories][budget categories]].
+***** create google sheet template to reduce workload of each group.
+start from [[https://docs.google.com/spreadsheets/d/11Nab4iUhejHeZH-lCnKVXwkLvEw47H5AW4w6-8Oosg4/edit#gid=0][sampo financial analysis needs.]] use these [[https://docs.google.com/spreadsheets/d/11Nab4iUhejHeZH-lCnKVXwkLvEw47H5AW4w6-8Oosg4/edit#gid=0][balance sheets]] as example.
+**** cost calculation
+[[https://roamresearch.com/#/app/AdaptiveGraphStucture/page/9p0Ug4hJ9][Seedling: tax/fee calculation in DAO based on cost and risk]]
 
 ** Meeting :meeting:
 ** Schedule
 *** recurring :recurring:
 *** non-recurring :nonrecurring:
+**** meeting with @gene @bear100 @Zeptimus in sampo voice channel
+SCHEDULED: <2022-05-10 Tue 11:00>
 ** Delegation :waiting:
 ** Tasks
 *** actionable :actionable:
@@ -113,4 +253,24 @@ SCHEDULED: <2022-05-05 Thu>
 :ID:       4e321ac0-4393-464d-a59b-ae2202177dca
 :END:
 
+*** incubation :incubation:
+* omega
+** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+** Notes :note:
+*** [[https://docs.google.com/document/d/1SRvWH57956GjlRXxvVGgVF7w-Exvdi7TFhVwIbpPoLQ/edit#heading=h.86q71katkp9v][Notes of omega's weekly call]]
+*** people who have cool illutration about philosophy of blockchain/web3
+@Letty, @solsista , @stef , @durgadas
+** Meeting :meeting:
+** Schedule
+*** recurring :recurring:
+
+*** non-recurring :nonrecurring:
+** Delegation :waiting:
+** Tasks
+*** actionable :actionable:
 *** incubation :incubation:

@@ -2,5 +2,8 @@
 
 * Key binding and commands
 
-| commands                       | key     | doom key | custom key | description             |
-| ein:process-find-file-callback | c-c c-o |          |            | use to open .ipynb file |
+| commands                                    | key     | doom key | custom key | description             |
+| ein:process-find-file-callback              | c-c c-o |          |            | use to open .ipynb file |
+| ein:worksheet-insert-cell-above-km          | c-c c-a |          |            |                         |
+| ein:worksheet-insert-cell-below-km          | c-c c-b |          |            |                         |
+| ein:worksheet-execute-cell-and-goto-next-km |         | M-return |            |                         |

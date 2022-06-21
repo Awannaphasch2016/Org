@@ -1,0 +1,24 @@
+#+TITLE: Compound Note
+
+* Compound
+** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+** Notes :note:
+:PROPERTIES:
+:ID:       cdebdd10-23be-43f2-955c-8ad7f9a2801d
+:END:
+*** [[https://compound.finance/governance/proposals][compnd's governance website]]
+*** [[https://www.comp.xyz/t/auditing-compound-protocol/2543/2][compond forum]]
+
+** Meeting :meeting:
+** Schedule
+*** recurring :recurring:
+*** non-recurring :nonrecurring:
+** Delegation :waiting:
+** Tasks
+*** actionable :actionable:
+*** incubation :incubation:

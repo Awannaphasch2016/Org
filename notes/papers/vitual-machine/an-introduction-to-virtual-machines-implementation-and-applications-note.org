@@ -1,0 +1,24 @@
+#+TITLE: An Introduction To Virtual Machines Implementation And Applications Note
+
+* An Introduction To Virtual Machines Implementation And Applications Note
+:PROPERTIES:
+:NOTER_DOCUMENT: /home/awannaphasch2016/Documents/PaperSummary/VirtualMachine/an-introduction-to-virtual-machine-implementation-and-applications.pdf
+:NOTER_PAGE: [[pdf:~/Documents/PaperSummary/VirtualMachine/an-introduction-to-virtual-machine-implementation-and-applications.pdf::12++5.00]]
+:END:
+** chapter 1: Introduction
+** chapter 2: virtual machien principels
+*** virtual machine implementation
+*** an early view of virtual machiens
+*** a systemetic taxonomy
+** chapter 3: full system virutalization-VMWare
+*** Hosted approach - VMWare workstation
+*** Hypervisor approach - VMWare ESX Server
+** Chapter 4 Para Virtualization - Xen
+*** CPU
+*** Memory
+*** I/O devices
+*** Doain 0 - the adminstration Interface
+:PROPERTIES:
+:ID:       0351f415-97af-4925-959d-5a861d17fc5b
+:END:
+** chapter 5: application of Virtual Machine

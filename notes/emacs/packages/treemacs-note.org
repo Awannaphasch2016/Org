@@ -1,0 +1,9 @@
+#+TITLE: Treemacs Note
+
+* keybinding
+| commands                   | key | doom keys | custom keys | descriptions |
+| treemacs-root-up           | M-H |           |             |              |
+| treemacs-root-down         | M-L |           |             |              |
+| treemacs-goto-parent-node  | M-h |           |             |              |
+| treemacs-previous-neighbor | M-p |           |             |              |
+| treemacs-next-neighbor     | M-n |           |             |              |

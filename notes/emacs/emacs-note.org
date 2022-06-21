@@ -201,7 +201,12 @@ Sometimes, major mode or minor mode may define their keybinding using mode-hook.
 This blog summarizes =Emacs Internal Manual under Emacs topic on chapter 49.3 Key Binding Chapter=. We have learn that keymap priority based on context from highest to lowest: region in buffer, minor mode, and major mode.
 
 Lastly, I have learned that vanilla Emacs doesn't exc. I can't say what exactly.
+* Reference
+** [[https://github.com/caiorss/Emacs-Elisp-Programming/blob/master/Elisp_Programming.org][emacs lisp tutorial in markdown]]
 * Map of Contents (MOCs)
+:PROPERTIES:
+:ID:       f12c0c70-1af9-487f-84cb-ea1a4a8cf29b
+:END:
 ** ~+eval/region~ and ~+eval/buffer~ doesn't send results from overlays to ~Message~ buffer, but ~eros-eval-last-sexp~ does.
 *** Background (information and description of goal)
 - note
@@ -209,6 +214,9 @@ Lastly, I have learned that vanilla Emacs doesn't exc. I can't say what exactly.
   - What is your expectation of the results?
 
 From my brief investigation, I notice that although all commands evaluate lisp code, it wasn't implemented on the same commands. (not much similarity beyond eval and overlays)
+** How to Use File and Directory Local Variables
+This MOCs is inspired by [fn:2]
+*** file local variables
 * Terms and Concepts
 ** struct
 example of struct
@@ -263,8 +271,33 @@ A name that is lexically bound is looked up only in bindings in the lexical envi
 
 A name that is dynamically bound is looked up only in bindings in the dynamic environment of the name  that is, in all bindings which have been created since the program began and which have not yet been destroyed. When there are multiple bindings in the dynamic environment, the most recently created one is used. So if “a” is dynamically bound, the code above prints “2” because both binding (1) and binding (2) have been created by the time “a” is evaluated, but binding (2) was created more recently.
 ** defcustom
+
+** local variables
+
+move variable between file and dir level
+| commands                                 | key | doom keys | custom keys | descriptions |
+| copy-dir-locals-to-file-locals           |     |           |             |              |
+| copy-file-locals-to-dir-locals           |     |           |             |              |
+| copy-dir-locals-to-file-locals-prop-line |     |           |             |              |
+
+*** file local variable
+| commands                   | key | doom keys | custom keys | descriptions                                      |
+| add-file-local-variable    |     |           |             |                                                   |
+| delete-file-local-variable |     |           |             |                                                   |
+| enable-local-variables     |     |           |             | control use of local variables in files you visit |
+| safe-local-eval-forms      |     |           |             | safe eval forms                                   |
+| safe-local-variable-values |     |           |             | safe variable-value pairs (saved to custom-file)  |
+
+*** directory local variable
+| commands               | key | doom keys | custom keys | descriptions |
+| add-dir-local-variable |     |           |             |              |
+|                        |     |           |             |              |
+**** .dir-locals
 * Help sections and related info
 ** looking up documentation, see [[https://discourse.doomemacs.org/t/how-to-debug-issues/55#looking-up-documentation-3][here]].
+:PROPERTIES:
+:ID:       9e2582e8-3bb4-4f20-9a9a-535b42bcbec9
+:END:
 
 | commands                     | key     | doom keys | custom keys | descriptions          |
 | helpful-function -> add-hook |         |           |             |                       |
@@ -991,6 +1024,9 @@ Emacs uses GnuPG via the =epa= lbirary to automatically encrypt and decrypt andy
 1. list packages with =M-x list-packages=
 2. Once in =Package Munu= buffer, run =package-menu-mark-upgrades= (default key binding is =U=) to mark all packages to be updated.
 ** What is relationship of emacs =exec-path= and environment variable =$PATH=
+:PROPERTIES:
+:ID:       5a83d8b4-d28a-451a-8ec2-b9449828f4ac
+:END:
 - ref
   - https://emacs.stackexchange.com/questions/550/exec-path-and-path
 ** shell-mode vs term-mode?
@@ -1002,5 +1038,6 @@ Shell mode buffers the input and sends it to the process on newline. Terminal mo
 Shell mode works like a regular buffer with the usual emacs key bindings. Terminal mode doesn't intercept most control characters unless you explicitly put it into line mode.
 
 * Footnotes
+[fn:2] [[https://www.youtube.com/watch?v=tw2-rI2bxSg&ab_channel=SystemCrafters][Emacs Tips - How to Use File and Direectory Local Variables]]
 
 [fn:1] https://youtu.be/2TSKxxYEbII?t=1164

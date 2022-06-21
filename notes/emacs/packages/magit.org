@@ -16,6 +16,9 @@ The intermediate steps of an interactive rebase are done with a detached HEAD (p
 
 * Common Key Binding
 To remove stash, regions or files, type ~x~ to "discard the change."
+
+| commands           | key | doom keys | custom keys | descriptions                                       |
+| magit-file-untrack |     |           |             | similar to =git rm=; used to remove file in origin |
 * Git Commands and Function
 ** Clone
 To clone from github, one can use ~user/reponame~.

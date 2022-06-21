@@ -16,6 +16,16 @@ A significant portion of MEV transactions is routed through Flashbots, meaning g
 gas golfing is a techniques to reduce gas usage to execute MEV strategy.
 
 A few well-known gas golf techniques include: using addresses that start with a long string of zeroes (e.g. 0x0000000000C521824EaFf97Eac7B73B084ef9306) since they take less space (and hence gas) to store; and leaving small ERC-20 token balances in contracts, since it costs more gas to initialize a storage slot (the case if the balance is 0) than to update a storage slot. Finding more techniques to reduce gas usage is an active area of research among searchers.
+
+** TODO Arbitrage with Mine Extractable Value (MEV)
+*** things to read
+**** Papers
+:PROPERTIES:
+:ID:       b2e91da7-7a29-46c6-af23-bd978dc91839
+:END:
+[[https://www.econbiz.de/Record/applying-the-genetic-based-neural-networks-to-volatility-trading-wang-shinn-wen/10005080815][APPLYING THE GENETIC-BASED NEURAL NETWORKS TO VOLATILITY TRADING]]
+[[https://arxiv.org/pdf/2106.04028.pdf][Deep Learning Statistical Arbitrage∗]]
+
 * Terminologies
 :PROPERTIES:
 :ID:       59246bde-0ea6-4c66-a24a-5626aa863812
@@ -24,4 +34,3 @@ A few well-known gas golf techniques include: using addresses that start with a 
 :PROPERTIES:
 :ID:       4391ab65-72d7-4ae7-9489-18ccc91718e1
 :END:
-**

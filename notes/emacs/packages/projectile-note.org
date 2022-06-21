@@ -1,3 +1,11 @@
 #+TITLE: Projectile Note
 
 * commands and Key binding
+:PROPERTIES:
+:ID:       4b77bfb6-6464-4b9e-bb7d-81332d746fbb
+:END:
+| commands               | key | doom keys | custom keys | descriptions |
+| projectile-recentf     |     | spc-p-r   |             |              |
+| projectile-find-file   |     | spc-p-f   |             |              |
+| projectile-run-project |     | spc-p-R   |             |              |
+| magit-todos-list       |     | spc-p-t   |             |              |

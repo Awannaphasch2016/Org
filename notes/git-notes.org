@@ -1,7 +1,14 @@
 #+TITLE: Git Notes
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: git
 
 * Map of Contents (MOCs)
-** How to write better git comment message
+** Writing better git comment message
+:PROPERTIES:
+:EXPORT_FILE_NAME: Writing better git comment message
+:ID:       d97a2bb1-2338-48e4-804e-53532952c7cd
+:END:
+
 - ref
   - [[https://www.youtube.com/watch?v=Hlp-9cdImSM&ab_channel=KieCodes][How to commit better with Git.]]
 
@@ -11,7 +18,43 @@ Whenever I have something that works (meaning, doesn't break anything for anyone
 
 In practice that means a few times per hour. At least a couple of times every hour, with 5 being quite a bit.
 #+END_QUOTE
+** Time Travelers Guide To Navigate Git Commit History. :git:autodidact:
+:PROPERTIES:
+:ID:       14bccff3-0e48-4167-82db-d34562c7bd5b
+:EXPORT_FILE_NAME: Time Travelers Guide To Navigate Git Commit History.
+:END:
+One of principle I follow is
 
+#+name: qoute
+#+BEGIN_QUOTE
+never rely on others' people goodwill.
+and
+always expect other to be evil when it is possible.
+#+END_QUOTE
+
+In quote ref:qoute, type of =evil= falls into incompetent evil and irresponsible evil. Putting this principle into practice, one must understand structures that govern behavior of people given a particular pursuit of goal.
+
+In this scenario, I refers =structure= as =git log=  and =a particular pursuite of goal= as =learning and understanding a piece of code such as open source code.=
+
+A common practice to understand open source is to "read readme.md", "read documentation", or "look at examples." All of these violate the principle since it expects other to have readme, documentation, and examples or you to look at.
+
+What is the alternative? you asked. One alternative would be to look at git history and go back into git commit history and inspect the bare minimum that make the very thing you want to learn work at all. This approach remove boiler plate of dependencies that make the feature you wanted to learn work with other components (which, often than not, you don't care about it).
+
+Before you commit to learn from a particular piece of code, you have to skim through. Given that you found the code on github, the quickest way is to go to =users/git-repo/commits/branch?before=most-recent-comment+total-number-of-commits=. For example, on [2022-06-15 Wed] at 6.35 PM GMT-4 =torvalds/linux= repo on github as =1105072= commits  =https://github.com/torvalds/linux/commits/master?before=afe9eb14ea1cbac5d91ca04eb64810d2d9fa22b0+1105072= shows commit page where the most bottom commit is the first commit of Linux ever committed using git version control.
+
+When using =before= argument (alternatively, you can use =after= argument), commit timeline can be visualized as followed.
+
+#+name: git-commit-timeline
+#+BEGIN_SRC org
+                 [--------github-commit-page-------]
+(-inf)-(-2)-(-1)-(target-commit)-(+1)-(+2)-...-(+35)-...-(+inf)
+#+END_SRC
+
+where left commit is older and =github commit page= can contain at most 35 commits.
+Note: math to show commits on =commit page= may be abit off, but you get the idea.
+
+*** list of TODO :noexport:
+- add content on how to use git blame to learn code
 * Command line
 login
 #+BEGIN_SRC sh :noeval
@@ -23,6 +66,9 @@ upload tmp2.txt file to gist with description "my test gist."
 echo 'anak' >  tmp2.txt | gh gist create -d "my test gist" -f tmp2.txt
 #+END_SRC
 * Authentication
+:PROPERTIES:
+:ID:       6bfd5143-9db8-4edf-9afc-5b2d8770c81b
+:END:
 ** Credential caching
 ref:
 Stack overflow: [[https://stackoverflow.com/questions/6565357/git-push-requires-username-and-password][Permanently authenticating git repos]]
