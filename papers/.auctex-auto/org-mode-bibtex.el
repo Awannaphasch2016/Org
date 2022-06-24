@@ -27,6 +27,10 @@
     "reucassel2021convex"
     "covex2021tokenomics"
     "scholtz2020technical"
-    "lovejoy2022high"))
+    "lovejoy2022high"
+    "boyer2016package"
+    "wanna2022smallest"
+    "wanna2022asking"
+    "damodaran2017narrative"))
  :bibtex)
 

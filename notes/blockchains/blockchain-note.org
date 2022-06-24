@@ -271,6 +271,9 @@ So at this point, you might be asking "How are the two markets influence one ano
 The only factor that tight the market together is "incentive of the miner." The only reason that miner mines coins is because the coin can be traded in the "coin market" with "real money". And it just happens that the mined coins are, in facts, consist of blocks which provide supply to the "computation market."
 
 *** Footnote
+:PROPERTIES:
+:ID:       1517b7d0-1327-416e-a61b-0548df78509a
+:END:
 [fn:1] [[https://www.eastshore.xyz/factors-affecting-cryptocurrency-mining-profit/][Factors Affecting Cryptocurrency Mining Profits]]
 
 *** Bibliography :ignore:

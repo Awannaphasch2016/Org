@@ -49,6 +49,9 @@ Peace out.
 ** HUGO_BASE_DIR
 ** HUGO_SECTION
 * run hugo server
+:PROPERTIES:
+:ID:       ff04fdd4-6a01-4d0f-8683-bde7e3035f0c
+:END:
 this command has to be run at the hugo base directory.
 my blog currently located at =~/org/projects/sideprojects/website/my-website/hugo/quickstart=
 

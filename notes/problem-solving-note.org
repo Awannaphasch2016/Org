@@ -1,0 +1,13 @@
+#+title: Problem Solving Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+
+* Blog :blog:
+:PROPERTIES:
+:ID:       85686edb-2b91-4626-aa9a-c8a24927ae14
+:END:
+** Mental Framework Approach To Any Problem Solving :mental_framework:
+:PROPERTIES:
+:ID:       35fb8e89-f8cf-4198-9aeb-4df1863208e5
+:END:
+[[https://roamresearch.com/#/app/AdaptiveGraphStucture/page/XSdabnqJV][Seedling: a problem should be broken down into states and protocols]]
+https://roamresearch.com/#/app/AdaptiveGraphStucture/page/KsVatWqFJ

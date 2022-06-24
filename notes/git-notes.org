@@ -3,6 +3,9 @@
 #+filetags: git
 
 * Map of Contents (MOCs)
+:PROPERTIES:
+:ID:       5b232725-c117-41cc-8dee-72cdcb2f2679
+:END:
 ** Writing better git comment message
 :PROPERTIES:
 :EXPORT_FILE_NAME: Writing better git comment message
@@ -55,6 +58,35 @@ Note: math to show commits on =commit page= may be abit off, but you get the ide
 
 *** list of TODO :noexport:
 - add content on how to use git blame to learn code
+** Automate Github workflow using github (gh) command line.
+use github command for the following things
+| commands                       | descriptions                   |
+| gh repo create <new-repo-name> | create new repo on your github |
+| gh repo list                   | list all of my github repo     |
+
+I am sure that Delete repo
+command of gh needs scope to operate. (e.g.  delete_repo scope)
+Therefore, you need the following command:
+
+#+BEGIN_SRC sh
+gh auth refresh -h github.com -s delete_repo
+#+END_SRC
+
+This will raise Authenticate Git with your Github credentials? to make sure that real you wanted to expand on the scope.
+
+what scope you ask? It is a OAuth Scope. More precisely, personal token scope that you need to set to use github API. ref:token-scope.
+
+#+name: token-scope
+#+caption: scope available for personal access token
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220622_152447.png]]
+
+For more reference on github =CLI= see [[https://cli.github.com/manual][github cli manual]].
+
+That's it.
+Peace.
+
+
 * Command line
 login
 #+BEGIN_SRC sh :noeval
