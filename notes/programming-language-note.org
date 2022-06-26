@@ -1,0 +1,18 @@
+#+title: Programming Language Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+
+* Blog :blog:
+** The "Best" Programming Language :programming_language:
+:PROPERTIES:
+:ID:       16d34d64-f854-468c-bdee-40115e81b585
+:END:
+
+** TODO A Brief Discussion On "Model of Computation" :model_of_computation:
+
+=Model of computation= concerns 2 properties: power and expressiveness. Turing machine has great power, but limited level of expressiveness. Other models of =model of computation= are =actor model=, =pi calculus=, =communicating sequential process=. [fn:1]
+
+=Model of computation= is categorized into interactive/non-interactive computation [fn:2]. It is well known that =interactive model= is more powerful than non-interactive ones.
+
+*** Footnotes
+[fn:1] [[https://wiki.c2.com/?ModelsOfComputation][Models of computation]]
+[fn:2] [[https://wiki.c2.com/?InteractiveComputationIsMorePowerfulThanNonInteractive][Interactive Computation is more powerful than non-interactive]]
