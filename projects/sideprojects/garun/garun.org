@@ -31,6 +31,11 @@ Goal: I envision Garun to support the following things
   - the inference must be low false negative, its okay to have high false positive as a trade off
   - example of this is
     - garun inferences a string that resemble directory and provide a function that would open directory from the inference string.
+
+* Blog :blog:
+:PROPERTIES:
+:ID:       31d13ebf-a62c-45f8-bfab-d48728e63d06
+:END:
 * Garun
 :LOGBOOK:
 CLOCK: [2022-03-07 Mon 15:07]--[2022-03-07 Mon 15:08] =>  0:01

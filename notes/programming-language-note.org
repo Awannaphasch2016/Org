@@ -8,6 +8,8 @@
 :END:
 
 ** TODO A Brief Discussion On "Model of Computation" :model_of_computation:
+- Last Edit
+  - [2022-06-26 Sun]
 
 =Model of computation= concerns 2 properties: power and expressiveness. Turing machine has great power, but limited level of expressiveness. Other models of =model of computation= are =actor model=, =pi calculus=, =communicating sequential process=. [fn:1]
 
