@@ -1,4 +1,15 @@
 #+TITLE: Completion Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: completion
+
+* Blog :blog:
+** A Note of X where X is Emacs's completion framework.
+
+Ivy is a minibuffer completion package.
+
+Swiper is defined as "Ivy-enhanced alternative to Isearch." Swiper uses ivy as a backend.
+
+Counsel is defined as "a colletion of Ivy-enhanced versions of common Emacs commands". Counsel supplements completion functionality that ivy provides by replacing Emacs command with Counsel equivalent commands. The goal of command substitution is to provide a customised commands that make the best use of ivy.
 
 * Choosing between =ivy-bibtex=, =helm-bibtex=, and =citar=.
 :PROPERTIES:

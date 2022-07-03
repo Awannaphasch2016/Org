@@ -1,0 +1,7 @@
+#+title: Search Engine Note
+
+* Blog
+** Search Engine War
+:PROPERTIES:
+:ID:       932b2bf6-c953-4b3a-b3cd-dea77737f358
+:END:

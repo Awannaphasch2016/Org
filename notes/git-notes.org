@@ -85,7 +85,8 @@ For more reference on github =CLI= see [[https://cli.github.com/manual][github c
 
 That's it.
 Peace.
-
+** A Note on X where X = Git Forge
+A forge is a web-based collaborative software platform for developing and distributing computer application. Example include Github and Gitlab.
 
 * Command line
 login

@@ -1057,6 +1057,16 @@ CLOCK: [2022-04-29 Fri 13:51]--[2022-04-29 Fri 13:54] =>  0:03
 [2022-04-29 Fri 13:51]
 [[file:~/org/notes/built-tools/sbt/examples/foo-build/src/main/scala/example/Hello.scala][file:~/org/notes/built-tools/sbt/examples/foo-build/src/main/scala/example/Hello.scala]]
 connect emacs to tmux.
+**** add functionality to completion at point
+I am talking about completion at point.
+
+for example,
+I imagine a completion that filter candidate like spc-s-b or alike.
+
+imagine you wanna search for =+default/search-buffer= and you write +def/search and completion will show
+1. list with def as prefix
+   which show all that match the following regex (+def).*
+2. list with (def).*\/(search).
 
 * Footnotes
 

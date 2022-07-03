@@ -1,4 +1,43 @@
 #+TITLE: Magit
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: magit
+
+* Blog :blog:
+** Debug: authenticate git forge for Github using ghub
+*** Background
+:PROPERTIES:
+:ID:       4e10e953-5e42-4093-9828-4712e8d9dc2a
+:END:
+As of [2022-07-02 Sat], I can't figure out why I can't authenticate using =ghub-request= which is the documented in ghub document.
+
+The ghub document state the following:
+#+BEGIN_QUOTE
+Together the FORGE and HOST arguments specify the forge type and instance. In addition to that, it is also necessary to specify on whose behalf the request is being made, which can be done using the USERNAME and AUTH arguments. For example:
+
+(ghub-request "GET" "/user" nil
+              :forge 'github
+              :host "api.github.com"
+              :username "tarsius"
+              :auth 'forge)
+#+END_QUOTE
+
+*** What I have done so far.
+I narrowed down the problem and found that running the following result in error.
+#+BEGIN_SRC emacs-lisp
+(ghub--token "api.github.com" "awannaphasch2016" 'forge nil 'github)
+#+END_SRC
+
+I get the following error.
+#+BEGIN_SRC md
+Eval error ***  Required Github token ("awannaphasch2016^forge" for "api.github.com") does not exist.
+See https://magit.vc/manual/ghub/Getting-Started.html
+or (info "(ghub)Getting Started") for instructions.
+(The setup wizard no longer exists.)
+#+END_SRC
+
+Furthermore, I also don't understand the =ghub--token= function. Looking at arguments, I
+
+
 
 * references
 - System Crafters

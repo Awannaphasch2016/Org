@@ -1,0 +1,76 @@
+#+title: Org Table Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: org_table
+
+
+* Blog :blog:
+** X 101 where X = org spreadsheet :beginner:
+
+
+| Date       | Category         | Amount |
+|------------+------------------+--------|
+| 2014/01/14 | Supplies         |  43.97 |
+| 2014/02/15 | Supplies         |  56.48 |
+| 2014/02/11 | Book             |  17.99 |
+| 2014/06/10 | Kinesis Keyboard | 289.16 |
+| 2014/08/22 | Books            |  18.99 |
+| 2014/08/23 | Printer          |  99.96 |
+| 2014/08/25 | Books            |   7.50 |
+| 2014/08/30 | Supplies         |  58.26 |
+| 2014/09/15 | Books            |  21.49 |
+|------------+------------------+--------|
+|            | Total:           | 613.80 |
+#+TBLFM: @>$3=vsum(@2..@-1);%.2f
+
+- @> The @ specifies a row, and this refers to the last row in a table.
+- $3 The $ specifies a column, so this refers to the third column.
+- vsum A vertical sum function with parameters given in parenthesis
+- @2 The second row. Notice that it the Amount header is @1 and the dashes separating the header from the body is ignored.
+- @-1 The next to the last row. Using these relative references mean that we can add rows to our table, and still have the sum formula work.
+
+| Date       | Category         | Amount |
+|------------+------------------+--------|
+| 2014/01/14 | Supplies         |  43.97 |
+| 2014/02/15 | Supplies         |  56.48 |
+| 2014/02/11 | Book             |  17.99 |
+| 2014/06/10 | Kinesis Keyboard | 289.16 |
+| 2014/08/22 | Books            |  18.99 |
+| 2014/08/23 | Printer          |  99.96 |
+| 2014/08/25 | Books            |   7.50 |
+| 2014/08/30 | Supplies         |  58.26 |
+| 2014/09/15 | Books            |  23.49 |
+|------------+------------------+--------|
+#+TBLFM: @10$3=21.49+2
+
+- C-c C-c on cell with value =:=21.49+2= will output =23.49= which result in the following fomular =@10$3=21.49+2=
+
+#+NAME: expenses
+| Category                 | Amount                       |
+|--------------------------+------------------------------|
+| Office Supplies/Expenses | :=remote(supplies,@>$3);%.2f |
+|--------------------------+------------------------------|
+| Total:                   | 0.00                         |
+#+TBLFM: @2$2=remote(supplies,@>$3);%.2f
+
+** Why does org-table so slow?
+* keybinding
+:PROPERTIES:
+:ID:       4b5819d8-13f4-48cd-9b3b-764bb0940738
+:END:
+
+- typing =|- Tab= will fill the row with =|---|=
+- <N> indicate N column width
+
+| <3>                                     |                 |           | <1>         |                     |
+| commands                                | key             | doom keys | custom keys | descriptions        |
+| org-table-create-or-convert-from-region | C-c /           |           |             |                     |
+| org-table-sum                           | C-c +           | something | hi          |                     |
+| org-table-copy-down                     | S-RET           |           |             |                     |
+| org-edit-special                        | C-c '           |           |             |                     |
+| org-table-edit-field                    | C-c             |           |             |                     |
+| org-table-transpose-table-at-point      |                 |           |             |                     |
+| org-table-import                        |                 |           |             |                     |
+| org-table-export                        |                 |           |             |                     |
+| org-table-toggle-column-width           | C-c TAB         |           |             |                     |
+| org-table-expand                        | C-u C-c TAB     |           |             | expands all columns |
+| org-table-shrink                        | C-u C-u C-c TAB |           |             | shrink all columns  |

@@ -1,0 +1,8 @@
+#+title: The Forest Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+
+* Blog :blog:
+:PROPERTIES:
+:ID:       47bdc214-c032-4250-9bfc-cc8c1ff04d41
+:END:
+** Design of The Forest

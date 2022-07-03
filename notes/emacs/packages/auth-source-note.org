@@ -1,4 +1,6 @@
 #+TITLE: Auth Source Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: auth_source
 
 The =auth-source= library looks for passwords in a set of sources configured by the variable =auth-sources=.
 
@@ -15,6 +17,25 @@ You can add additional auth sources to this list if you store your passwords ano
 - KWallet
 
 You should try the =M-x customize= (customize UI) for configuring the possible optinons.
+
+* Blog :blog:
+** Implementation of X where X = Emac's auth-source.
+:PROPERTIES:
+:EXPORT_FILE_NAME: Implementation of X where X = Emac's auth-source.
+:END:
+
+As an example, I will use =api.github.com= as a API endpoint.
+
+If I use =~/.authinfo.gpg= as an auth-sources file. (variable name is =auth-sources=), I need to add the following to the file where I need to sub value into =user-username= and =user-password=.
+#+BEGIN_SRC org
+machine api.github.com login user-name password user-password
+#+END_SRC
+
+~auth-source-search~ is a function that retrieve password from your specify auth-sources file. You can use it as followed. This will output list of property where =:secret= key has your password as its value.
+#+BEGIN_SRC emacs-lisp
+(apply #'auth-source-search
+       (append '(:host "api.github.com" :user "awannaphasch2016^forge") (list :max 1)))
+#+END_SRC
 
 * References
 ** Tutorials

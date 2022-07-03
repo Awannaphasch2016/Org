@@ -1,0 +1,36 @@
+#+title: World Wide Web Www Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: www
+
+* Blog :blog:
+** TODO Brief Journey from Web 1 to Web 3
+** TODO A Note on Web's Neutrality.
+
+** TODO A Note on Web's Universality.
+:PROPERTIES:
+:ID:       ae0bce22-11f8-4a31-b17f-543811393d2b
+:END:
+*** current solution
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220627_200045.png]]
+
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220627_200229.png]]
+
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220627_200424.png]]
+** TODO A Note on World Wide Web
+*** exchanging information was hard
+diffferent hardware, different software
+*** innovation was hard
+:PROPERTIES:
+:ID:       bfc83374-8aaf-4eb2-bae4-797f6e9214c8
+:END:
+for which machines do we build?
+for which operating system do we build
+*** "permissionless innovation"
+influence of "permissionless innovation" give the world Ebay, Twitter, Uber, and Amazon.
+*** decentralized was common back in the time of www creation, but what is not common is =universality=. (works anywhere with anything.)
+
+*** Bibliography :ignore:
+bibliography:/home/awannaphasch2016/org/papers/org-mode-bibtex.bib

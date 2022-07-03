@@ -1,0 +1,52 @@
+#+title: Solid Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: solidk:
+
+
+* Blog :blog:
+** Understand The Solid
+:PROPERTIES:
+:ID:       376540ea-e1df-4a4e-8feb-e82df1eb118b
+:END:
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220627_200045.png]]
+
+*** the solid is about choice
+*** the solid ecosystem enables people to pick the apps they need, while storing their data wherever they want
+*** The solid design
+**** the solid server acts as a data pod that stores and guards your data.
+***** a regular web server
+***** application-agnostic
+***** just like your website
+your data can be opened with any app.
+**** a typical data pod can contain any data you create or need online.
+such as profile, photos, comments, likes
+**** solid clients are browsers or native apps that read from or write to your data pod.
+***** you give apps permission
+***** other give you permissions
+***** apps deliver a unified experience
+browse your friends' pictures along with yours
+**** Solid backends
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220627_204213.png]]
+*** Difficulty caused by The Solid paradigm shift away from current state of web2
+**** Interpotability
+***** The current approach to building APIs does not play with with decentralization
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220627_204405.png]]
+
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220627_204520.png]]
+***** If we all store our own data, how do we connect it to others' data?
+***** How can apps share data without too many prior aggrements?
+I think this problem can be solved using cloud-service permission practices like iam permission, role and etc.
+***** How do we integrate data from multiple data pods?
+****** link to other data as followed
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220627_205556.png]]
+****** Data shapes and their semantics enable layered compatibility
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220627_205652.png]]
+****** different source data can be concatenated
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220627_205854.png]]

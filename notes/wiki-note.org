@@ -3,14 +3,66 @@
 #+filetags: wiki
 
 * Blog :blog:
-** A Note on Wiki
+:PROPERTIES:
+:ID:       d064d8d7-82ef-442e-8701-2f3bd5c40f82
+:END:
+** TODO A Note on Federate Wiki :federate_wiki:
 
+** TODO Philosophy, Implementation, Utility Of Ideas Organization.
+*** Connectivity of idea as data
+**** spatial connection
+***** local
+****** before www
+Zettlekasten (connecting ideas via human language)
+Hypercard [fn:2] (connecting idea via "card")
+wiki (connecting ideas via hypertext, a sequence of characters.)
+***** global
+www (connecting applications via ip address exists on the internet).
+wikipedia (only 1 version can exists via consensus of the crowd)
+***** local-global
+all modern "information management tools" e.g. roam research, emacs, notion. Their differences are address in
+Detail of implementation is addressed in "computability of ideas as data"
+
+**** spatial-temporal connection
+***** next step is we need to create local network of idea that can interact freely online.
+****** federated wiki (global and local wiki are connected via commit changes, version control's commit history. spatial-temporal connection)
+
+*** Protocol to connect idea as data.
+
+page, block, backlink (first introduced by roam research), visual connection (drawing, mindmaps)
+
+**** I think a page should have the following: template, data, power of data computability.
+
+**** using metadata
+- tags
+- timestamp
+- source reference
+*** Compatibility of idea as data
+The differences lie in framework's design of how data is structured, connect spatially, or temporal (see below in "temporal connection section").
+
+On top of organization design, compatibility of data is another important design different. (
+1. notion way of storing data directly in database.
+2. unix way of data as characters which adopted by emacs
+3. federate wiki way of using API to send and receive data.
+*** Searchability of idea as data
+data query, pattern matching, language embedding (GPT-3), jump between neighbor
+*** Utility of ideas as data
+**** manually
+recall, creativity, taking a snapshot of =representation of understanding=
+**** automatically (this is new)
+resembrance agent, completion, recommendation
+*** Footnotes
+:PROPERTIES:
+:ID:       bacfd013-689e-4f9c-83a2-da12800729ab
+:END:
+[fn:2] The computer chronicles - Hypercarrd (1987)
 ** Wiki Wars :history:
 https://www.google.com/search?q=does+wikipedia+win+wiki+wars%3F&rlz=1C1CHBF_enUS941US941&oq=does+wikipedia+win+wiki+wars%3F&aqs=chrome..69i57j33i160l4j33i299.8877j0j7&sourceid=chrome&ie=UTF-8
 
 ** What the f*** is wiki.c2.com? and its potential for mainstream adoption.
 :PROPERTIES:
 :EXPORT_FILE_NAME: What the f*** is wiki.c2.com? and its potential for mainstream adoption.
+:ID:       3f813aae-77e5-4186-8dd8-b3af13a3ff75
 :END:
 
 - last edit
@@ -54,6 +106,6 @@ Ultimately, integrating and using =The Forest= driven by =resembrance= agent cap
 That's it.
 Peace.
 
-* Footnotes
+*** Footnotes
 
 [fn:1] [[https://news.ycombinator.com/item?id=12705774][The c2 wiki was down]]

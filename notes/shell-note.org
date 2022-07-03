@@ -1,6 +1,9 @@
 #+TITLE: Shell Note
 
 * Zsh
+:PROPERTIES:
+:ID:       1d72932f-98c5-4037-8f6a-d2c9f12f13ba
+:END:
 ** Terminology
 *** Widget
 **** All actions in the editor are performed by ‘widgets’. A widget’s job is simply to perform some small action.

@@ -31,6 +31,7 @@
     "boyer2016package"
     "wanna2022smallest"
     "wanna2022asking"
-    "damodaran2017narrative"))
+    "damodaran2017narrative"
+    "verborgh2019solid"))
  :bibtex)
 

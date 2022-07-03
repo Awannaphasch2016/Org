@@ -201,6 +201,19 @@ Sometimes, major mode or minor mode may define their keybinding using mode-hook.
 This blog summarizes =Emacs Internal Manual under Emacs topic on chapter 49.3 Key Binding Chapter=. We have learn that keymap priority based on context from highest to lowest: region in buffer, minor mode, and major mode.
 
 Lastly, I have learned that vanilla Emacs doesn't exc. I can't say what exactly.
+** A Note on X where X = "Byte Compile File In (Doom) Emacs"
+Emacs will use =.elc= whenever its availble otherwise it will fall back to =.el=.
+
+Sometimes, when you open Emacs, you see that source code is byte compiled. The byte compiler is an elisp based compiler that will take elisp, parse it, expand out macros and optimise code, it allows for some noticeable speed gains but also can lead to some debugging hell,
+
+To see actual source code, one can remove =.elc= file of the file you want to inspect, see below. Reopen emacs and you should see non-compile source code.
+#+BEGIN_SRC
+rm -rf EMACSDIR/.local/straight/**/*.elc
+#+END_SRC
+
+Removing =.elc= implies that you are expected decrease in efficiency. However, I think performance drop should not be noticeable. You can always recompile the file.
+
+Doom will not regenerate the byte compile files until you tell it too by calling doom build.
 * Reference
 ** [[https://github.com/caiorss/Emacs-Elisp-Programming/blob/master/Elisp_Programming.org][emacs lisp tutorial in markdown]]
 * Map of Contents (MOCs)

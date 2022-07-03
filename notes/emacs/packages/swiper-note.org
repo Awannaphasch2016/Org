@@ -1,0 +1,5 @@
+#+title: Swiper Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: swiper
+
+* Blog :blog:
