@@ -6,7 +6,7 @@
 * Start here
 ** [[file:~/org/notes/emacs/packages/org-babel.org::*\[\[http://www.howardism.org/Technical/Emacs/literate-programming-tutorial.html\]\[Introduction to literate programming with org-mode and org-babel by howard\]\]][Introduction to literate programming with org-mode and org-babel by howard]]
 It basically explains all the usecase of org-babel blocks. very useful.
-* Blog
+* Blog :blog:
 ** How to set local variable for a specific mode? :latex:config:
 :PROPERTIES:
 :EXPORT_FILE_NAME: How to set local variable for a specific mode?
@@ -166,6 +166,7 @@ something bruh
 That's it.
 
 Peace.
+
 
 * Key binding
 ** Nagivation key binding

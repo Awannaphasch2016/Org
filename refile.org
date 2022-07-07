@@ -24,3 +24,8 @@ see the email [[https://mail.google.com/mail/u/0/#inbox/FMfcgzGpFgvNKRrxpzPTlSDt
 CLOCK: [2022-05-07 Sat 16:43]--[2022-05-07 Sat 16:44] =>  0:01
 :END:
 [2022-05-07 Sat 16:43]
+* TODO Review Vagrant
+:PROPERTIES:
+:ID:       65f2419a-6ed3-40d7-84f1-cddc4e6e2206
+:END:
+[2022-07-04 Mon 00:08]

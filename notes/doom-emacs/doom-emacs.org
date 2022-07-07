@@ -84,33 +84,50 @@ To open doom emacs documentation, use =doom/help.= which is binded to =spc-h-d-h
 | consult-bookmark |     | spc-s-m  OR spc-ret |             | conduct a book mark search. |
 
 **** .doom.d/.emasc.d search
-| commands | key | doom keys | custom keys | descriptions |
-|          |     | spc-f-P   |             |              |
-|          |     | spc-f-p   |             |              |
-|          |     | spc-f-e   |             |              |
-|          |     | spc-f-E   |             |              |
+| commands               | key | doom keys | custom keys | descriptions                                                               |
+|                        |     | spc-f-P   |             |                                                                            |
+|                        |     | spc-f-p   |             |                                                                            |
+|                        |     | spc-f-e   |             |                                                                            |
+|                        |     | spc-f-E   |             |                                                                            |
+| +default/search-emacsd |     | spc-s-e   |             | conduct a text search recursively in files under the =use-emacs-directory= |
 **** project-based search
 | commands                | key | doom keys | custom keys | descriptions                                                        |
 | project-tile-find-file  |     | spc-spc   |             | conduct a file search recursively under the current project folder. |
 | +default/search-project |     | spc-s-p   |             | conduct a text search recursively under the current project root.   |
-
-**** content-based search
-| commands               | key | doom keys           | custom keys | descriptions                                                               |
-| consult-imenu          |     | spc-s-i             |             | conduct symbol search on the current buffer                                |
-| +default/search-buffer |     | spc-s-b             |             | conduct text search on the current buffer                                  |
-| +default/search-cwd    |     | spc-s-d             |             | conduct text search recursively in files under the current folder          |
-| +default/search-emacsd |     | spc-s-e             |             | conduct a text search recursively in files under the =use-emacs-directory= |
-
+**** buffer search
+| commands                                                     | key | doom keys | custom keys | descriptions                                                                            |
+| consult-imenu                                                |     | spc-s-i   |             | conduct symbol search on the current buffer                                             |
+| +default/search-buffer                                       |     | spc-s-b   |             | conduct text search on the current buffer                                               |
+| helm-semantic-or-imenu (consult-imenu built on this command) |     | spc-s-h   |             | Preconfigured helm for semantic or imenu.                                               |
+**** directory search
+| commands            | key | doom keys | custom keys | descriptions                                                      |
+| +default/search-cwd |     | spc-s-d   |             | conduct text search recursively in files under the current folder |
+**** org-directory search
+| commands                     | key | doom keys | custom keys | descriptions                                  |
+| +default/org-notes-search    |     | spc n s   |             | Perform a text search on org-directory.       |
+| +default/org-notes-headlines |     | spc n S   |             | Jump to an Org headline in org-agenda-files.  |
+| +default/find-in-notes       |     | spc n f   |             | Find a file under org-directory, recursively. |
+| +default/browse-notes        |     | spc n F   |             | Browse files from org-directory.              |
+**** org agenda search
+| commands           | key | doom keys | custom keys | descriptions                   |
+| org-agenda         |     | spc o a a |             |                                |
+| org-tags-view      |     | spc o a m |             | browse tags                 |
+| org-todo-list      |     | spc o a t |             |                                |
+| org-search-view    |     | spc o a v |             |                                |
+| consult-org-agenda |     | spc m /   |             | Jump to an Org agenda heading. |
+**** citation/bibliograph  search
+:PROPERTIES:
+:ID:       d3cf80b8-09c8-48ac-80fd-61cc4a5b5900
+:END:
+| commands         | key | doom keys | custom keys | descriptions |
+| org-cite-insert  |     | spc m @   |             |              |
+| citar-open-entry |     | spc m b   |             |              |
 **** buffer/file-based search
 | commands                      | key | doom keys        | custom keys | descriptions                                      |
 | find-file                     |     | spc-. OR spc-f-f |             | conduct file search under the current folder      |
 | +default/find-file-under-here |     | spc-f-F          |             | conduct file recursively under the current folder |
 | consult-recent-file           |     | spc-f-r          |             | conduct recently opened file search               |
 | -                             |     | spc-s-B          |             | search in all open buffer.                        |
-**** symbol-based search
-| commands                                                     | key | doom keys | custom keys | descriptions                                                                            |
-| consult-imenu                                                |     | spc-s-i   |             | Search symbol in general. In org mode, it only search leaves of the nodes tree in orgs. |
-| helm-semantic-or-imenu (consult-imenu built on this command) |     | spc-s-h   |             | Preconfigured helm for semantic or imenu.                                               |
 
 *** Files nad Directory Modification
 | commands                                      | key | doom keys | custom keys | descriptions                                              |

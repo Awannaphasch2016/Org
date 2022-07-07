@@ -1,5 +1,10 @@
 #+TITLE: Window Note
 
+
+* keybinding
+| key           | descriptions                             |
+| win + alt + r | start record the whole screen. No audio. |
+
 * Help
 ** Alt + tab not working
 - ref

@@ -1,0 +1,6 @@
+#+title: Cloud Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: cloud
+
+* Blog :blog:
+** TODO X IDE in Emacs where X = Data Science or Machine Learning

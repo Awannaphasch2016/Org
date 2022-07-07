@@ -1,6 +1,5 @@
 #+TITLE: Spreadsheets Note
 
-
 * Examples
 - ref
   - [[https://www.youtube.com/watch?v=15aDIvb5LJs&ab_channel=AndreasWittmannIT-BeratungGmbH][Emacs Spreadsheet Demo]]

@@ -5,6 +5,9 @@
 
 * Blog :blog:
 ** X 101 where X = org spreadsheet :beginner:
+:PROPERTIES:
+:ID:       2e0d97dd-45e8-4efc-b8db-c3d1aae59876
+:END:
 
 
 | Date       | Category         | Amount |
@@ -53,6 +56,8 @@
 #+TBLFM: @2$2=remote(supplies,@>$3);%.2f
 
 ** Why does org-table so slow?
+=org-define-lookup-function= has =org-lookup-%s= in it.
+** X implementation where X = org-table :implementation:
 * keybinding
 :PROPERTIES:
 :ID:       4b5819d8-13f4-48cd-9b3b-764bb0940738

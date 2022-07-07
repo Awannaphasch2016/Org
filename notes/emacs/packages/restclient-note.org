@@ -1,0 +1,11 @@
+#+title: Restclient Note
+#+filetags: restclient_mode
+
+* Blog :blog:
+** X 101 where X = Emacs restclient-mode :rest:
+#+BEGIN_SRC
+#
+GET http://localhost:4000/events
+# hi
+GET https://api.login.yahoo.com/oauth2/get_token
+#+END_SRC

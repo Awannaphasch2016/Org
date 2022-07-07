@@ -1,0 +1,6 @@
+#+title: Terminal In Emacs
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+
+* FAQ :faq:
+** How to exit Vim in Emacs's terminal with evil mode enable? :emacs:vim:
+~C-z~ which as default is mapped to ~evil-emacs-state~ which disable =evil mode= in =vterm=. You should be able to use any terminal command like it is expected to by =vterm=.

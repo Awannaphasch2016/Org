@@ -6,7 +6,7 @@
 :PROPERTIES:
 :ID:       4271d45a-cfae-4c3c-8090-28900120205d
 :END:
-** How to refactor Terraform. :legacy:
+** TODO How to refactor Terraform. :legacy:
 :PROPERTIES:
 :ID:       0e5c9277-c0ae-4cd4-92bc-0118fc9c0a3a
 :EXPORT_FILE_NAME: How to refactor Terraform

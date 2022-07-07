@@ -202,6 +202,9 @@ This blog summarizes =Emacs Internal Manual under Emacs topic on chapter 49.3 Ke
 
 Lastly, I have learned that vanilla Emacs doesn't exc. I can't say what exactly.
 ** A Note on X where X = "Byte Compile File In (Doom) Emacs"
+:PROPERTIES:
+:ID:       bfdef48a-0f01-4853-968e-89ebc95a4d9f
+:END:
 Emacs will use =.elc= whenever its availble otherwise it will fall back to =.el=.
 
 Sometimes, when you open Emacs, you see that source code is byte compiled. The byte compiler is an elisp based compiler that will take elisp, parse it, expand out macros and optimise code, it allows for some noticeable speed gains but also can lead to some debugging hell,

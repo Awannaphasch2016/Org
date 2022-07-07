@@ -4,6 +4,9 @@
 
 * Blog :blog:
 ** Debug: authenticate git forge for Github using ghub
+:PROPERTIES:
+:ID:       4c1da0c9-2734-43eb-83ff-4862f536e2e6
+:END:
 *** Background
 :PROPERTIES:
 :ID:       4e10e953-5e42-4093-9828-4712e8d9dc2a
