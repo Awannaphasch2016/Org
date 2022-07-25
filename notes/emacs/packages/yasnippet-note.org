@@ -1,5 +1,24 @@
 #+TITLE: Yasnippet Note
+#+filetags: yasnippet
+
 
 * Start here
-- ref
+- Ref
   - [[https://joaotavora.github.io/yasnippet/snippet-development.html][how to write a snippet?]]
+* Blog :blog:
+** TODO Using X where X = Emacs' yasnippet
+:PROPERTIES:
+:ID:       80346b5d-f8ec-4fad-ac01-192f3244f970
+:END:
+To embed elisp code, write ~`(elisp-code-here)~ [fn:1] .
+As an example, I have a snippet named "shell block with random name."
+#+BEGIN_SRC org
+,#+name: `(* (random 100000) (random 100000))`
+,#+BEGIN_SRC sh
+$0
+,#+END_SRC
+#+END_SRC
+
+*** Footnotes
+
+[fn:1] [[https://joaotavora.github.io/yasnippet/snippet-development.html][how to write a snippet?]]

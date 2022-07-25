@@ -1,5 +1,8 @@
 #+TITLE: Visidata Notes
 
+* keybinding
+| key | doom keys | descriptions |
+| a   |           | new row      |
 * Unintuitive behavior (at least,to me)
 ** Naming conflict
 :PROPERTIES:

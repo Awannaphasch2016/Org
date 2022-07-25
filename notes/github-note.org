@@ -1,0 +1,18 @@
+#+title: Github Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: github
+
+
+* Blog :blog:
+* Navigation on Github Website
+** find file by name
+:PROPERTIES:
+:ID:       8d162f64-1d31-410a-b23b-553e51919b88
+:END:
+There are multiple ways to search file by name on Github repo.
+1. Using Github search keyword, typing ~in:path [your-filename]~ in search bar will search file by name. There is another keyword ~filenames:[your-filename]~ [fn:2].
+2. On Github repo, there should be button =Go to File= where you can click to search file by name [fn:1].
+
+* Footnotes
+[fn:2] [[https://stackoverflow.com/questions/18991908/is-it-possible-to-search-for-a-particular-filename-on-github][Is it possible to search for a particular filename on GitHub?]]
+[fn:1] [[https://docs.github.com/en/search-github/searching-on-github/finding-files-on-github][Finding Files on Github]] on [2022-07-22 Fri]

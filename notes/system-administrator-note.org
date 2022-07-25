@@ -1,0 +1,96 @@
+#+title: System Administrator Note
+
+
+* How Tos
+** inspect RAM
+*** free
+#+BEGIN_SRC sh :noeval
+free -g
+#+END_SRC
+
+** inspecting kernel & processes in Linux kernel
+*** kernel
+**** dmseg
+:PROPERTIES:
+:ID:       ec5de3fc-8a08-4370-b04a-bdef5fdb8783
+:END:
+
+*** processes
+**** aux
+:PROPERTIES:
+:ID:       c19eabce-2c87-407a-8416-4660118d8c1e
+:END:
+#+BEGIN_SRC sh
+
+#+END_SRC
+**** dstat
+:PROPERTIES:
+:ID:       51b9a363-fcbb-4daf-8b24-c2c556aa92b6
+:END:
+dstat is used to get overall summarization of processes workload.
+
+#+name: 290791810
+#+BEGIN_QUOTE
+dstat is a versatile, all-in-one system resources statistics generating tool, it combines information from several other tools such as vmstat, mpstat, iostat, netstat and ifstat.
+#+END_QUOTE
+
+
+dstat can be installed with =apt-get= as followed.
+#+BEGIN_SRC sh :noeval
+sudo apt-get install dstat
+#+END_SRC
+
+#+name: 217662687
+#+BEGIN_SRC sh
+dstat
+#+END_SRC
+
+#+name: 1830506976
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220713_211248.png]]-
+
+Code ref:217662687 (which default to ~dstat -cdngy~) outputs image ref:1830506976.
+
+| group     | col name | description                                          |
+|-----------+----------+------------------------------------------------------|
+| cpu usage | usr      | user                                                 |
+|           | sys      | system                                               |
+|           | idl      | number of idle process                               |
+|           | wai      | waiting process                                      |
+|           | hiq      | hard interrupt process                               |
+|           | siq      | soft interrupt process                               |
+|-----------+----------+------------------------------------------------------|
+| disk      | read     | total number of read operation to disk               |
+|           | writ     | total number of write operation to disk              |
+|-----------+----------+------------------------------------------------------|
+| network   | recv     | total amount of bytes received on network interfaces |
+|           | send     | total amount of bytes send on network interfaces     |
+|-----------+----------+------------------------------------------------------|
+| paging    | in       | number of times information is copied into memory    |
+|           | out      | number of times information is copied out of memory  |
+|-----------+----------+------------------------------------------------------|
+| system    | int      | number of interrupts                                 |
+|           | csw      | number of context switches                           |
+** inspect network
+*** netstat (network status)
+*** ip
+:PROPERTIES:
+:ID:       d8baccf2-8148-4ec5-a2a4-e99915e4a8fb
+:END:
+#+BEGIN_SRC sh :noeval
+ip addr --all
+#+END_SRC
+
+#+name:
+#+BEGIN_SRC sh :noeval
+ip route
+#+END_SRC
+#+name: name
+
+*** traceroute
+*** ip
+*** nsloopup
+:PROPERTIES:
+:ID:       dc1ab83d-11a2-43ab-93fe-275267919f55
+:END:
+get device name.

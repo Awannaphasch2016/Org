@@ -1,0 +1,48 @@
+#+title: Command Line Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: commandline
+
+* Blog :blog:
+** TODO Cheat Sheet At Command Line :cheatsheet:
+*** https://github.com/chubin/cheat.sh
+:PROPERTIES:
+:ID:       93ab5715-70cc-4906-89af-89ea4522cb72
+:END:
+*** testing download/upload speed
+#+BEGIN_SRC sh
+curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -
+#+END_SRC
+*** display information about your operating system
+:PROPERTIES:
+:ID:       f4d0e076-9141-45e9-8516-15059ce2195e
+:END:
+#+BEGIN_SRC sh
+curl -sL https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch | bash
+#+END_SRC
+** TODO Creating a command line
+~oclif~ is a framework that make it easy to create command.
+* Tools
+:PROPERTIES:
+:ID:       33205d2f-43d0-4bb3-9e40-27df8be4a515
+:END:
+|----------+-------------------|
+| commands | description       |
+|----------+-------------------|
+| scrot    | taking screenshot |
+|----------+-------------------|
+** Commands
+*** scrot
+:PROPERTIES:
+:ID:       af353bdd-f071-4dda-8ed3-5317be540b91
+:END:
+Note that ~scrot~ will take screenshot of an X11 app (if you use X11 protocol to display graphics) that was selected last.
+
+#+BEGIN_SRC sh :noeval
+scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f ~/Scratches/'
+#+END_SRC
+This will create a file called something like 2000-10-30_2560x1024_scrot.png and moves it to your =~/Scratches= directory.
+** software suite
+*** ImageMagick
+#+BEGIN_QUOTE
+ImageMagick, invoked from the command line as magick, is a free and open-source cross-platform software suite for displaying, creating, converting, modifying, and editing raster images.
+#+END_QUOTE

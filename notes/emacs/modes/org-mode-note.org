@@ -10,6 +10,7 @@ It basically explains all the usecase of org-babel blocks. very useful.
 ** How to set local variable for a specific mode? :latex:config:
 :PROPERTIES:
 :EXPORT_FILE_NAME: How to set local variable for a specific mode?
+:ID:       de4ad009-116d-4a46-b042-8dc7a2275dd8
 :END:
 
 This type of tutorial/question is best to present with an example.
@@ -64,6 +65,7 @@ DEADLINE: <2022-03-03 Thu .+1w>
 ** How to write latex using org mode? Minmum things you need to know.
 :PROPERTIES:
 :EXPORT_FILE_NAME: How to write latex using org mode?. Minmum things you need to know.
+:ID:       dd7c2443-c0ef-4831-97e1-5c3527f76d7d
 :END:
 
 What you need to know to start writing latex in org mode is to understand how =org-export-dispatch= include/exclude/map org mode component to latex equivalent. You can learn all about these info by reading org manual on the topic, [[https://orgmode.org/manual/Exporting.html][here]].
@@ -167,6 +169,10 @@ That's it.
 
 Peace.
 
+** TODO X Implementation where X = org-display-inline-images.
+:PROPERTIES:
+:ID:       4b0d1dcf-faa2-41aa-8404-fc471f899b6c
+:END:
 
 * Key binding
 ** Nagivation key binding

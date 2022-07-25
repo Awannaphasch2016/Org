@@ -2,8 +2,6 @@
 :ID:       ccedd660-b2d5-404d-a2c1-81fd88a91bf7
 :END:
 #+TITLE: spanish
-# -*- mode: org; coding: utf-8 -*-
-#+STARTUP: showall
 
 # examples of card definitions for use with org-drill.
 # Cards, AKA topics, have the 'drill' tag. Note that the higher-level headings

@@ -39,7 +39,21 @@ or (info "(ghub)Getting Started") for instructions.
 #+END_SRC
 
 Furthermore, I also don't understand the =ghub--token= function. Looking at arguments, I
+** TODO X implementation where X = Magit's transient. :transient:
+On [2022-07-10 Sun], ~(transient-define-prefix NAME ... )~ defines NAME with defalias.
 
+Lets =NAME= be =docker=. This is defined in =docker-core.el=, ~(transient)~ macro expands defalias to the following:
+#+BEGIN_SRC emacs-lisp
+...
+  (defalias 'docker
+    (lambda nil
+      (interactive)
+      (run-hooks 'docker-open-hook)
+      (transient-setup 'docker)))
+...
+#+END_SRC
+
+As of [2022-07-10 Sun], I assume with certain level of confident that =docker-open-hook= make a call to ~(docker-utils-define-transient-arguments docker)~ which receive arguments provided by users in interactive fashion.
 
 
 * references

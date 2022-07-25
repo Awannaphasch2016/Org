@@ -207,7 +207,7 @@ Lastly, I have learned that vanilla Emacs doesn't exc. I can't say what exactly.
 :END:
 Emacs will use =.elc= whenever its availble otherwise it will fall back to =.el=.
 
-Sometimes, when you open Emacs, you see that source code is byte compiled. The byte compiler is an elisp based compiler that will take elisp, parse it, expand out macros and optimise code, it allows for some noticeable speed gains but also can lead to some debugging hell,
+Sometimes, when you open Emacs, you see that source code is byte compiled. The byte compiler is an elisp based compiler that will take elisp, parse it, expand out macros and optimize code, it allows for some noticeable speed gains but also can lead to some debugging hell,
 
 To see actual source code, one can remove =.elc= file of the file you want to inspect, see below. Reopen emacs and you should see non-compile source code.
 #+BEGIN_SRC
@@ -216,7 +216,37 @@ rm -rf EMACSDIR/.local/straight/**/*.elc
 
 Removing =.elc= implies that you are expected decrease in efficiency. However, I think performance drop should not be noticeable. You can always recompile the file.
 
-Doom will not regenerate the byte compile files until you tell it too by calling doom build.
+Doom will not regenerate the byte compile files until you tell it too. This is done by calling doom build.
+
+Above method works as long as =.elc= is present. The existence of =.elc= implies that emacs compile the =.el= with elisp compiler. However, there are other cases that will leave compile code without having emacs compile =.el= directly. First case is when you install Emacs using OS package managers such as =apt= in =Ubuntu distro=. In this case, built in compiled code can be found at =/usr/share/emacs/28.1/= if your Emacs version is 28.1.
+
+clone locally -> load-file, load-library, load-path (choose one depends on interface of ~load~ command you want to use) -> you should be able to jump to from var/def directly to source.
+
+*** Footnotes
+[fn:1] [[https://emacs.stackexchange.com/questions/53056/how-can-i-check-the-implementation-of-a-builtin-function][How can I check the implementation of a builtin function?]]
+[fn:2] http://git.savannah.gnu.org/cgit/emacs.git/tree/
+[fn:3] https://github.com/emacs-mirror/emacs
+[fn:4] https://www.gnu.org/software/emacs/manual/html_node/eintr/Loading-Files.html
+** TODO Navigate Emacs info manual. Yes, you need to learn it because you can (efficiently) learn Emacs.
+a node is defined as
+#+BEGIN_QUOTE
+A node contains text describing a specific topic at a specific level of detail
+#+END_QUOTE
+
+menu is defined as
+#+BEGIN_QUOTE
+A menu is a list of other nodes you can move to.  It is actually just part of the text of the node formatted specially so that Info can interpret it.
+#+END_QUOTE
+
+node ,topic, index, menu
+
+
+dir info (nodes in (dir)Top are indexed)
+
+info-menu (node has to have menu)
+Info-virtual-index (nodes need to be index.)
+info-search (string matching)
+
 * Reference
 ** [[https://github.com/caiorss/Emacs-Elisp-Programming/blob/master/Elisp_Programming.org][emacs lisp tutorial in markdown]]
 * Map of Contents (MOCs)
@@ -233,82 +263,6 @@ From my brief investigation, I notice that although all commands evaluate lisp c
 ** How to Use File and Directory Local Variables
 This MOCs is inspired by [fn:2]
 *** file local variables
-* Terms and Concepts
-** struct
-example of struct
-#+BEGIN_SRC emacs-lisp
-;; define struct
-(cl-defstruct person name age sex)
-
-;; how struct can be used
-(setq dave (make-person :name "Dave" :sex 'male))
-(setq other (copy-person dave))
-(eq dave other)
-(eq (person-name dave) (person-name other))
-(person-p dave)
-(person-p [1 2 3 4])
-(person-p "Bogus")
-(person-p '[cl-struct-person counterfeit person object])
-#+END_SRC
-** garbage collector | garbage collection
-** syntax
-*** what is #?
-read [[https://stackoverflow.com/questions/4873810/what-does-mean-in-lisp][here]].
-example
-#+BEGIN_SRC emacs-lisp
-(let ((foo 42))
-  (flet ((foo () 'bar))
-    (list foo (function foo) #'foo (foo))))
-#+END_SRC
-
-#+RESULTS:
-| 42 | foo | foo | bar |
-
-** Lexical binding vs dynamic binding
-:PROPERTIES:
-:ID:       e15c4443-c2a2-4fff-b9f1-b83ac25de8d6
-:END:
-- ref
-  - [[https://www.emacswiki.org/emacs/DynamicBindingVsLexicalBinding][dynamic binding vs lexical binding]]
-lexical binding (static binding) and dynamic binding refer to how variables are looked up by their names.
-
-The main different between lexical bound and dynamic bound is that with dynamic bound all value that has been binding since the program started always exists while program is being executed.
-#+BEGIN_SRC emacs-lisp
-(let ((a 1))                            ; binding (1)
-    (let ((f (lambda () (print a))))
-    (let ((a 2))                        ; binding (2)
-        (funcall f))))
-#+END_SRC
-=lexical bound= looks up binding in the lexical environemnt while =dynamic bound= looks up binding in the dynamic environment.
-
-In the other word, in dynamic environment, all of the bindings since the started of the program are not destroyed as long as program is still running. In constrast to lexical environment, bindings are only defined within the scope that it is first defined.
-
-A name that is lexically bound is looked up only in bindings in the lexical environment of the name  that is, in bindings that enclose the name in the source code. So if “a” is lexically bound, the code above prints “1”, because only binding (1) is in the lexical environment. When there are multiple bindings in the lexical environment, the innermost one is used.
-
-A name that is dynamically bound is looked up only in bindings in the dynamic environment of the name  that is, in all bindings which have been created since the program began and which have not yet been destroyed. When there are multiple bindings in the dynamic environment, the most recently created one is used. So if “a” is dynamically bound, the code above prints “2” because both binding (1) and binding (2) have been created by the time “a” is evaluated, but binding (2) was created more recently.
-** defcustom
-
-** local variables
-
-move variable between file and dir level
-| commands                                 | key | doom keys | custom keys | descriptions |
-| copy-dir-locals-to-file-locals           |     |           |             |              |
-| copy-file-locals-to-dir-locals           |     |           |             |              |
-| copy-dir-locals-to-file-locals-prop-line |     |           |             |              |
-
-*** file local variable
-| commands                   | key | doom keys | custom keys | descriptions                                      |
-| add-file-local-variable    |     |           |             |                                                   |
-| delete-file-local-variable |     |           |             |                                                   |
-| enable-local-variables     |     |           |             | control use of local variables in files you visit |
-| safe-local-eval-forms      |     |           |             | safe eval forms                                   |
-| safe-local-variable-values |     |           |             | safe variable-value pairs (saved to custom-file)  |
-
-*** directory local variable
-| commands               | key | doom keys | custom keys | descriptions |
-| add-dir-local-variable |     |           |             |              |
-|                        |     |           |             |              |
-**** .dir-locals
 * Help sections and related info
 ** looking up documentation, see [[https://discourse.doomemacs.org/t/how-to-debug-issues/55#looking-up-documentation-3][here]].
 :PROPERTIES:
@@ -816,7 +770,6 @@ Return a predicate that returns non-nil if all PREDS do so.
       (push (match-string 1) matches))
     (nreverse matches)))
 #+END_SRC
-
 
 ** Customization
 *** set keys binding

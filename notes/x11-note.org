@@ -1,0 +1,4 @@
+#+title: X11 Note
+
+| commands | descriptions                |
+| xclip    | read/write via x11 protocol |

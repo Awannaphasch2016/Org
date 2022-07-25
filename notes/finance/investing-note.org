@@ -1,4 +1,6 @@
 #+TITLE: Investing Note
+#+filetags: investing
+
 
 * blog :blog:
 ** TODO Valuation of cash flow generating assets
@@ -15,3 +17,8 @@ see [[https://roamresearch.com/#/app/AdaptiveGraphStucture/page/uoj3Kw9Q2][3 mai
 :END:
 types of uncertainty
 | estimation | micro economic | macro economic |
+** Investing IDE :investing_ide:
+*** TODO Investing And Trading Tools In Command Line :commandline:trading:
+#+BEGIN_SRC sh :noeval
+curl rate.sx
+#+END_SRC

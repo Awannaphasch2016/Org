@@ -3,11 +3,13 @@
 #+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
 
 * Blog :blog:
-** Evolution of Asset Transaction
+** Evolution of Asset Transaction :asset:
 :PROPERTIES:
 :EXPORT_FILE_NAME: Evolution of Asset Transaction
 :ID:       d97b1200-f8af-4277-9786-fe3ce103bfa6
 :END:
+
+Hello, guys
 
 This essay is my interpretation of a discussion on "NFTing the World for the General Good" episode on Real Vision TV. The information in the essay are adapted to fit rational narrative that I have in my brain.
 

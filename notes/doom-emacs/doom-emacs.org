@@ -6,6 +6,7 @@
 ** Using terminals in Doom Emacs. :terminal:
 :PROPERTIES:
 :EXPORT_FILE_NAME: Using terminals in Doom Emacs.
+:ID:       ca6dd3fd-54f7-4932-baf7-55ccde776f23
 :END:
 
 To open multiple terminal, a neat trick is to rename file buffer that terminal is opened [fn:1].
@@ -13,37 +14,101 @@ To open multiple terminal, a neat trick is to rename file buffer that terminal i
 To open file from terminal, one can just =M-x find-file= in the terminal buffer.
 
 *** Footnotes
+
 [fn:1] [[https://stackoverflow.com/questions/2785950/more-than-one-emacs-terminal][stackoverflow: More than one emacs terminal]]
 ** Keybinding In Doom Emacs :doom:keybinding:
 :PROPERTIES:
 :EXPORT_FILE_NAME: Keybinding In Doom Emacs
+:ID:       66ee45f0-ffe9-40d0-b33d-50b96fb98b50
 :END:
 
-Doom Emacs has its own keybinding system. A more accurate access would be Doom Emacs keybinding system is a wrapper over evil mode such that it is smoothly compatible with Emacs.
+Doom Emacs has its own keybinding system. A more accurate explaination is
+#+BEGIN_QUOTE
+Doom Emacs keybinding system is a wrapper over evil mode such that it is smoothly compatible with Emacs.
+#+END_QUOTE
 
-If you use Evil mode without Emacs configuration framework such as Spacemacs or Doom Emacs, it is frustrating to  know if your keybinding is setup properly and will always work as expected at any circumstances. The usually point of failure is when your keybinding is overwritten by other packages. Most of the time, creators of those packages don't use evil-mode, so their implementation don't respect evil-mode, rightfully so.
+If you use Evil mode without Emacs configuration framework such as Spacemacs or Doom Emacs, it is frustrating to  know if your keybinding is setup properly and whether it will always work as expected in any circumstances. A common point of failure is when your keybinding is overwritten by some packages. Most of the time, creators of those packages don't use evil-mode, so their implementations don't respect evil-mode, rightfully so.
 
-This is annoying because there is no peace of mind. You can't assume that it will always works in all cases. It always a process of "lets try it here, there, what about that, ...". Because of this, sometimes if I don't need the binding that BADLY, I don't even try it.
+This is annoying because there is no peace of mind. You can't assume that it will always works in all cases. It always a process of "lets try it here, there, what about that, ...". Because of this, if I don't need the binding that BADLY, I don't even try it.
 
-Another annoying point is it is one of those problem that you think it should be fixed long along. Also, its one of those that is not that hard to try to solve, but it isn't that interesting enough. You also have to expect iterative process of re-implementing things whenever edge cases came up. tedious process of boringness. And because it is solvable, you can't even blame others, but yourself to not solve it.
+Another annoying point is it is one of those problem that you think it should be fixed long along. Also, its one of those that is not that hard to try to solve, but it isn't interesting enough. On top of that, you also have to expect iterative process of re-implementing things whenever edge cases came up. tedious process of boringness. And because it is solvable, you can't even blame others, but yourself.
 
-Thanks God.
+Thanks God. Dooms Emacs solves this problem for us. I am not sure how much Doom Emacs fixed this problem. To my knowledge, I have no problem YET using Doom Emacs keybinding configuration system.
 
-Dooms Emacs solves this problem for us. I am not sure how much Doom Emacs fixed this problem. To my knowledge, I have no problem YET using Doom Emacs keybinding configuration system.
+Assuming that you use evil-mode and use ~map!~ to modify your key [fn:4], you have to answer the following question.
+1. What is the keymap you will use? (=:map=)
+2. Do you expect to use your keymap in "evil state" or "emacs state"?
+3. Is there any condition you want to be true to enable the key? (=:when=)
+4. Which prefix option do you choose, if any? is it =:leader=, =:localleader=, or =:prefix= (your customize prefix).
+5. What is the mode you want to enable your keymap? (=:after=)
 
-About how to use it. I think its pretty obvious from provided examples in documentation.
-I will just explains how to think about it before setup your own key.
+As an example, I have =org-cdlatex-mode= enable when I open org mode file and =`= (uptick key) is map to ~cdlatex-math-symbol~ command when I am in =evil-insert-state=. I eval the following expression to assign =`= to nil to allow me to type =`= in =evil-insert-state=.
+#+BEGIN_SRC emacs-lisp :noeval
+(map! :after org-cdlatex-mode
+  (:map org-cdlatex-mode-map
+    "`" nil))
+#+END_SRC
 
-Assuming that you use evil-mode,
-1. which map you will to use the key? (=:map=)
-2. which "evil state" or "emacs state" you expect to use the key?
-3. is there any condition you want to be true to enable the key? (:when)
-4. Do you use any prefix? if yes, is it =:leader=, =:localleader=, or =:prefix= (your customize prefix).
-
-That's it really.
+Without =map!=, you will have to write hook to run after =org-cdlatex-mode= is enable as followed.
+#+name: rebind_uptick_in_org_cdlatex_mode_map
+#+BEGIN_SRC emacs-lisp :noeval
+(defun org-cdlatex-mode-map-hook ()
+  (define-key org-cdlatex-mode-map (kbd "`") nil))
+(eval-after-load 'org-cdltex-mode
+  (add-hook ''org-cdllatex-mode-hook 'org-cdlatex-mode-map-hook))
+#+END_SRC
+As of [2022-07-11 Mon], I am not sure what is the difference usage between ~with-eval-after-load~ vs ~eval-after-load~.
 
 That's it.
 Peace.
+
+*** Footnotes
+[fn:4] =!= suffix indicate Doom Emacs implementation.
+
+** X Implementation Where X = Doom Emacs's +lookup/ Command. :lookup:doom:
+:PROPERTIES:
+:EXPORT_FILE_NAME: X Implementation Where X = Doom Emacs's +lookup Command
+:ID:       c40d1650-ec6d-44df-83aa-3ce6f424159e
+:END:
+
+I was trying to figure out ~+lookup/definition~ that open in other window. In one of the issue, Henrik [fn:2] mention that some =lookup= backend (As an example, =xref= is a built in backend for lookup) are asynchronous and there is no standardized mechanism to talk to them to see whether the command runs successfully [fn:3].
+
+lets call this new command ~+lookup/definition-other-window~
+Current possible solutions are
+1. ignore validation step to make sure that the command runs succesfully.
+2. when the command is called, switch to other window then run ~+lookup/definition~ command.
+   It can be implemented as followed
+   #+BEGIN_SRC emacs-lisp
+(dolist (fn '(definition references))
+  (fset (intern (format "+lookup/%s-other-window" fn))
+        (lambda (identifier &optional arg)
+          "TODO"
+          (interactive (list (doom-thing-at-point-or-region)
+                             current-prefix-arg))
+          (let ((pt (point)))
+            (switch-to-buffer-other-window (current-buffer))
+            (goto-char pt)
+            (funcall (intern (format "+lookup/%s" fn)) identifier arg)))))
+   #+END_SRC
+
+I just thinks its interesting, so I figure I write something about it.
+
+That's it.
+Peace.
+
+*** Footnotes
+:PROPERTIES:
+:ID:       8a341485-75ff-4d99-bc38-7aa885a13440
+:END:
+[fn:2] Henrik is a creator of Doom Emacs.
+[fn:3] https://github.com/doomemacs/doomemacs/issues/3397#issuecomment-649124705
+** TODO X Implementation Where X = `~/.emacs.d/bin/doom run`
+:PROPERTIES:
+:ID:       0be5fb6a-6ddc-4b02-b6f1-5040909d902e
+:END:
+
+=user-emacs-directory= is =/home/awannaphasch2016/.emacs.d/.local/cache/=
+
 
 * Doom behavior that could cause error
 ** skipping recompiling/reloading packing (by using cache), see example of the error here ([[*how to fix error that is caused by running the whole =init.el=.]]).
@@ -75,12 +140,13 @@ To open doom emacs documentation, use =doom/help.= which is binded to =spc-h-d-h
 | doom/switch-to-project-scratch-buffer |     | spc-p-X   |             |              |
 | doom/open-scratch-buffer              |     | spc-x     |             |              |
 | doom/open-project-scratch-buffer      |     | spc-p-x   |             |              |
+| anak/toggle-scratch-buffer            |     |           | spc-"       |              |
 *** Search in Doom
 :PROPERTIES:
 :ID:       aa87b05e-c055-42c1-8b69-54ea01f99f1b
 :END:
 **** bookmark-based search
-| commands         | key | doom keys           | custom keys | descriptions                |
+| commands         | key | doom keys           | custom keys | descriptions                |
 | consult-bookmark |     | spc-s-m  OR spc-ret |             | conduct a book mark search. |
 
 **** .doom.d/.emasc.d search
@@ -109,12 +175,12 @@ To open doom emacs documentation, use =doom/help.= which is binded to =spc-h-d-h
 | +default/find-in-notes       |     | spc n f   |             | Find a file under org-directory, recursively. |
 | +default/browse-notes        |     | spc n F   |             | Browse files from org-directory.              |
 **** org agenda search
-| commands           | key | doom keys | custom keys | descriptions                   |
-| org-agenda         |     | spc o a a |             |                                |
-| org-tags-view      |     | spc o a m |             | browse tags                 |
-| org-todo-list      |     | spc o a t |             |                                |
-| org-search-view    |     | spc o a v |             |                                |
-| consult-org-agenda |     | spc m /   |             | Jump to an Org agenda heading. |
+| commands           | key | doom keys            | custom keys | descriptions                   |
+| org-agenda         |     | spc o a a            |             |                                |
+| org-tags-view      |     | spc o a m OR spc n m |             | browse tags                    |
+| org-todo-list      |     | spc o a t            |             |                                |
+| org-search-view    |     | spc o a v            |             |                                |
+| consult-org-agenda |     | spc m /              |             | Jump to an Org agenda heading. |
 **** citation/bibliograph  search
 :PROPERTIES:
 :ID:       d3cf80b8-09c8-48ac-80fd-61cc4a5b5900
@@ -123,6 +189,9 @@ To open doom emacs documentation, use =doom/help.= which is binded to =spc-h-d-h
 | org-cite-insert  |     | spc m @   |             |              |
 | citar-open-entry |     | spc m b   |             |              |
 **** buffer/file-based search
+:PROPERTIES:
+:ID:       793db9b0-1713-4d50-bd5c-4f127e1776cf
+:END:
 | commands                      | key | doom keys        | custom keys | descriptions                                      |
 | find-file                     |     | spc-. OR spc-f-f |             | conduct file search under the current folder      |
 | +default/find-file-under-here |     | spc-f-F          |             | conduct file recursively under the current folder |

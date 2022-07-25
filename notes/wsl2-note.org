@@ -1,5 +1,6 @@
 #+TITLE: Wsl2 Note
 #+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: wsl2
 
 * blog :blog:
 ** Enable x11 display in WSL2
@@ -45,6 +46,55 @@ The exact emacs command I am trying to use is emacsclient -e "(emacs-everywhere)
 Image
 my attempt maybe completely off. I am not familiar with system programming, so any advice is appreciated.
 
+============
+sending command to wsl2 from powershell
+#+BEGIN_SRC sh :noeval
+wsl path -e sh -c "some commands"
+#+END_SRC
+
+it is impossible because by design window process is not encourage to communicate to wsl2 process. This is to prevent process conflict. Make sense.
+
+** A Note of X where X = wsl2 :note:
+:PROPERTIES:
+:ID:       a8bc64ad-78ec-4ddc-8741-819b5fc7b5da
+:END:
+wsl2 works with Linux system call and have faster speed compared to wsl.
+
+#+name: 110279260
+#+caption: wsl_architecture
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220713_235721.png]]
+
+According to picture ref:110279260, translation layer of Windows NT Kernel tracks system call of wsl2. Downside of wsl2 is there will always be delay to adapt wsl2 to broken update from Linux.
+
+things that can break/be slow are translation of filesystems/memory model/permission models are different.
+
+#+name: 4832032672
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220714_003356.png]]
+
+Picture ref:4832032672, yellow arrow show input/output through socket (Linux's vsocket)
+
+#+name: 5338651560
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220714_004347.png]]
+
+Plan9 File server.
+
+#+name: 926262857
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220714_005158.png]]
+
+#+name: 3268789592
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220714_010256.png]]
+
+#+name: 2219512842
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220714_010345.png]]
+
+*** Footnotes
+[fn:1] [[https://www.youtube.com/watch?v=lwhMThePdIo&ab_channel=MicrosoftDeveloper][The new Windows subsystem for Linux architecture: a deep dive]]
 
 * Configuration
 ** open files from within wsl2 using window applicationa

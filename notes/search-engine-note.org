@@ -1,4 +1,5 @@
 #+title: Search Engine Note
+#+filetags: search_engine
 
 * Blog
 ** Search Engine War

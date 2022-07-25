@@ -1,0 +1,134 @@
+#+title: Aws Iam Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: iam
+
+* Blog :blog:
+** A Note of X where X = AWS IAM services.
+:PROPERTIES:
+:EXPORT_FILE_NAME: A Note of X where X = AWS IAM services.
+:ID:       90da68e3-9478-4255-b787-f753111f668b
+:END:
+
+In =AWS IAM=, a =policy= is the smallest entity of permission. There are types of policies: =resources-based policy=, =identity-based policy=, and =session-based policy=.
+
+#+name: aws_policies
+#+caption: aws policies
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220711_154129.png]]
+
+Policies can be attached to the following "identity": =user= (1 account can have more than 1 users), =role=, and =group= (a group has many =user=) [fn:1]. =user=, =role=, and =group= are called =identity=. In AWS identity is called =IAM identity= and =user=, =role=, and =group= are called =IAM user=, =IAM role=, and =IAM user group=, respectively.
+
+Roles are used for "task-oriented policy." Imagine the following scenario where you want to create policies to allow =AWS lambda= to read from =AWS S3= storage and store data to =AWS dynamoDB= database. You don't care who will do this task. You only care about the task. More specifically, collection of policies that make the task possible.
+
+*** Footnotes
+
+[fn:1] [[https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html][IAM Identities (users, user groups, and roles)]]
+** Setup AWS credentials for your AWS account and create new user. :setup:
+:PROPERTIES:
+:EXPORT_FILE_NAME: Setup AWS credentials for your AWS account and create new user.
+:END:
+
+**** AWS credentials and configuration to your AWS account.
+AWS configuration file and credential file can be found at =~/.aws/config= and =~/.aws/credentials=.
+
+Once that done, you can use the following to get your account information.
+#+BEGIN_SRC sh :noeval
+aws sts get-caller-identity
+#+END_SRC
+
+It will not show secret key =aws_access_key_id= and =aws_secret_access_key= which you have set. It will only show information of your account including: =UserId=, =AccountId=, =Arn=.
+
+**** AWS users
+Note that 1 account has 1 root and can have many =IAM user=.
+
+Word of advice is to not NEVER use root account directly. ALWAYS create IAM users within your account. You can create user as followed
+#+BEGIN_SRC sh :noeval
+aws iam create-user --user-name <new-user-name>
+#+END_SRC
+
+Then you have to create password for the new user.
+#+BEGIN_SRC sh :noeval
+aws iam create-login-profile --user-name <new-user-name> --password <password>
+#+END_SRC
+
+If you are admin (root user) and have to create new user for other, says your co-worker. Using the below command, your coworker (or anyone) will be asked to create new password when you login to the new username for the first time.
+#+BEGIN_SRC sh :noeval
+aws iam create-login-profile --user-name <new-user-name> --password-reset-required --password <password-to-be-changed>
+#+END_SRC
+
+You can check that user is created using the following
+#+BEGIN_SRC sh :noeval
+aws iam list-users
+#+END_SRC
+
+
+* Content
+** get account-id and arn
+~aws sts get-caller-identity~
+~aws sts get-caller-identity --query "Account" --output text~
+** login as IAM users
+go to the following link =https://account_alias_or_id.signin.aws.amazon.com/console/=.
+** create new user
+~aws iam create-user --user-name Adam~
+** list all users and their policies
+:PROPERTIES:
+:ID:       9efd3ec7-ffbe-4afb-b9c5-70ac80ee5d9c
+:END:
+#+BEGIN_SRC sh :results raw
+aws iam list-users
+#+END_SRC
+
+#+BEGIN_SRC sh :results raw
+aws iam list-user-policies --user-name Anak
+#+END_SRC
+
+#+BEGIN_SRC sh :results raw
+aws iam list-attached-user-policies --user-name Adam
+#+END_SRC
+}
+
+#+BEGIN_SRC sh :results raw
+aws iam list-groups-for-user
+#+END_SRC
+
+For each group
+#+BEGIN_SRC sh :results raw
+aws iam list-group-policies
+#+END_SRC
+
+#+BEGIN_SRC sh :results raw
+aws iam list-attached-group-policies
+#+END_SRC
+
+** IAM user login profile
+*** check IAM users login profile.
+~aws iam get-login-profile --user-name Anak~
+*** check if users has password see [[https://awsbytes.com/how-to-check-if-an-iam-user-has-a-login-profilepassword/][here]].
+Retrieves the user name for the specified IAM user. A login profile is created when you create a password for the user to access the Amazon Web Services Management Console. If the user does not exist or does not have a password, the operation returns a 404 (NoSuchEntity ) error.
+*** create user log profiles (this is done by creating password for user)
+ ~aws iam create-login-profile --user-name Adam --password Change2022 --password-reset-required~
+** Policies + Permissions + Roles
+*** Attach new policies to group-policies
+~aws iam attach-group-policy --policy-arn arn:aws:iam::aws:policy/AmazonEC2FullAccess --group-name ExpertCrypto~
+*** Attach a new user to group-policies
+~aws iam add-user-to-group --group-name ExpertCrypto --user-name test~
+** show aws configuration
+~aws configure~
+** How to manage acess keys
+:PROPERTIES:
+:ID:       8c2202eb-4c41-4abb-a963-ff442a0710d6
+:END:
+reference: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey
+#+BEGIN_SRC
+To manage an IAM user's access keys from the AWS CLI, run the following commands.
+
+To create an access key: aws iam create-access-key
+
+To disable or reenable an access key: aws iam update-access-key
+
+To list a user's access keys: aws iam list-access-keys
+
+To determine when an access key was most recently used: aws iam get-access-key-last-used
+
+To delete an access key: aws iam delete-access-key
+#+END_SRC

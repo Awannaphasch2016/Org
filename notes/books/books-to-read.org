@@ -44,6 +44,14 @@ Mentioned in Learning Functional Programming in Scala.
 :PROPERTIES:
 :ID:       7e525176-5957-4e89-9558-21c3bd57bdb8
 :END:
+*** Paul Graham's Lisp Book, https://sep.yimg.com/ty/cdn/paulgraham/onlisp.pdf?t=1595850613&
+*** [[http://broiler.astrometry.net/~kilian/The_Art_of_Computer_Programming%20-%20Vol%201.pdf][The art of computer programming by Donald Knuth]]
+*** Performance Tools
+[[https://www.amazon.com/Performance-Tools-Addison-Wesley-Professional-Computing/dp/0136554822?crid=94QXI9ES5J3W&keywords=bpf+performance+tools&qid=1657162384&sprefix=bpf+performance+tools,aps,67&sr=8-1&linkCode=sl1&tag=djwarecg-20&linkId=00aea26e30e2902b925c2ca193169309&language=en_US&ref_=as_li_ss_tl][BPF Performance Tools]]
+*** compiler
+[[https://www.amazon.com/Compilers-Principles-Techniques-Tools-2nd/dp/0321486811?crid=2XL47OJWATOXM&keywords=Dragon+book+compilers&qid=1657161851&sprefix=dragon+book+compilers,aps,78&sr=8-1&linkCode=sl1&tag=djwarecg-20&linkId=dbcb7b2559085bb48b49ab0180a71e87&language=en_US&ref_=as_li_ss_tl][Compiler: principles, Techniques, and tools]]
+*** [[https://www.doc-developpement-durable.org/file/Projets-informatiques/cours-&-manuels-informatiques/Linux/Linux%20Kernel%20Development,%203rd%20Edition.pdf][linux kernel devlopement]]
+
 ** Financial
 *** recommended by Patrick Boyle
 **** Burton Malkiel, A Random Walk Down Wall Street (2007) https://amzn.to/2Hr2SW1
@@ -65,3 +73,5 @@ Mentioned in Learning Functional Programming in Scala.
 :PROPERTIES:
 :ID:       67cf410f-2305-4d6e-8244-cb65f467707d
 :END:
+** learning to learn
+*** [[https://wtf.tw/ref/meadows.pdf][Thinking in system]]

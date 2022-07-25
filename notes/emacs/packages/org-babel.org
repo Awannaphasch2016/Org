@@ -2,6 +2,8 @@
 #+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
 #+FILETAGS: org-babel notes
 
+[[id:0605f0e7-f67b-4e05-add5-283238d8e50c][test]]
+
 * Blog :blog:
 ** X implementation where X = executing org babel block in Doom Emacs. :implementation:doom:org_babel:
 :PROPERTIES:

@@ -1,0 +1,130 @@
+#+title: Elisp Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: elisp
+
+* Blog :blog:
+** TODO A Note Of X Where X = Elisp's Macro. :macro:
+:PROPERTIES:
+:ID:       b50da090-8e08-4e53-b288-903e1cb28c64
+:END:
+*** how to use `
+:PROPERTIES:
+:ID:       122de7e8-dc25-43e6-a205-8c61a5754678
+:END:
+b              => (ba bb bc)		; assume b has this value
+`(a b c)       => (a b c)		; backquote acts like quote
+`(a ,b c)      => (a (ba bb bc) c)	; insert the value of b
+`(a ,@b c)     => (a ba bb bc c)	; splice in the value of b
+
+* Terms and Concepts
+** struct
+#+name: 331611189
+#+BEGIN_QUOTE
+The Common Lisp “structure” mechanism provides a general way to define
+data types similar to C’s ‘struct’ types.  A structure is a Lisp object
+containing some number of “slots”, each of which can hold any Lisp data
+object.
+#+END_QUOTE
+
+
+ref:331611189 is quoted from [[info:cl#Structures][cl#Structures]].
+
+example of struct
+#+BEGIN_SRC emacs-lisp
+;; define struct
+(cl-defstruct person name age sex)
+
+;; how struct can be used
+(setq dave (make-person :name "Dave" :sex 'male))
+(setq other (copy-person dave))
+(eq dave other)
+(eq (person-name dave) (person-name other))
+(person-p dave)
+(person-p [1 2 3 4])
+(person-p "Bogus")
+(person-p '[cl-struct-person counterfeit person object])
+#+END_SRC
+
+#+RESULTS:
+
+** garbage collector | garbage collection
+** syntax
+*** what is #?
+read [[https://stackoverflow.com/questions/4873810/what-does-mean-in-lisp][here]].
+example
+#+BEGIN_SRC emacs-lisp
+(let ((foo 42))
+  (flet ((foo () 'bar))
+    (list foo (function foo) #'foo (foo))))
+#+END_SRC
+
+#+RESULTS:
+| 42 | foo | foo | bar |
+
+** Lexical binding vs dynamic binding
+:PROPERTIES:
+:ID:       e15c4443-c2a2-4fff-b9f1-b83ac25de8d6
+:END:
+- ref
+  - [[https://www.emacswiki.org/emacs/DynamicBindingVsLexicalBinding][dynamic binding vs lexical binding]]
+lexical binding (static binding) and dynamic binding refer to how variables are looked up by their names.
+
+The main different between lexical bound and dynamic bound is that with dynamic bound all value that has been binding since the program started always exists while program is being executed.
+#+BEGIN_SRC emacs-lisp
+(let ((a 1))                            ; binding (1)
+    (let ((f (lambda () (print a))))
+    (let ((a 2))                        ; binding (2)
+        (funcall f))))
+#+END_SRC
+=lexical bound= looks up binding in the lexical environemnt while =dynamic bound= looks up binding in the dynamic environment.
+
+In the other word, in dynamic environment, all of the bindings since the started of the program are not destroyed as long as program is still running. In constrast to lexical environment, bindings are only defined within the scope that it is first defined.
+
+A name that is lexically bound is looked up only in bindings in the lexical environment of the name  that is, in bindings that enclose the name in the source code. So if “a” is lexically bound, the code above prints “1”, because only binding (1) is in the lexical environment. When there are multiple bindings in the lexical environment, the innermost one is used.
+
+A name that is dynamically bound is looked up only in bindings in the dynamic environment of the name  that is, in all bindings which have been created since the program began and which have not yet been destroyed. When there are multiple bindings in the dynamic environment, the most recently created one is used. So if “a” is dynamically bound, the code above prints “2” because both binding (1) and binding (2) have been created by the time “a” is evaluated, but binding (2) was created more recently.
+** defcustom
+
+** local variables
+
+move variable between file and dir level
+| commands                                 | key | doom keys | custom keys | descriptions |
+| copy-dir-locals-to-file-locals           |     |           |             |              |
+| copy-file-locals-to-dir-locals           |     |           |             |              |
+| copy-dir-locals-to-file-locals-prop-line |     |           |             |              |
+
+*** file local variable
+| commands                   | key | doom keys | custom keys | descriptions                                      |
+| add-file-local-variable    |     |           |             |                                                   |
+| delete-file-local-variable |     |           |             |                                                   |
+| enable-local-variables     |     |           |             | control use of local variables in files you visit |
+| safe-local-eval-forms      |     |           |             | safe eval forms                                   |
+| safe-local-variable-values |     |           |             | safe variable-value pairs (saved to custom-file)  |
+
+*** directory local variable
+| commands               | key | doom keys | custom keys | descriptions |
+| add-dir-local-variable |     |           |             |              |
+|                        |     |           |             |              |
+**** .dir-locals
+** advices
+#+BEGIN_QUOTE
+The “advice” feature lets you add to the existing definition of a
+function, by “advising the function”.  This is a cleaner method than
+redefining the whole function.
+#+END_QUOTE
+
+#+name: 4066926762
+#+BEGIN_SRC emacs-lisp
+(defun my-double (x)
+  (* x 2))
+(defun my-increase (x)
+  (+ x 1))
+(advice-add 'my-double :filter-return #'my-increase) :w
+
+(my-double 3)
+#+END_SRC
+
+#+RESULTS:
+: 7
+
+Code ref:4066926762 returns 7 because advice "add function to the existing definition" of ~my-double~.

@@ -1,1 +1,41 @@
 #+title: Vagrant Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: vagrant
+
+* Blog :blog:
+** A Note Of X Where X = Vagrant
+:PROPERTIES:
+:ID:       2c7b0def-fa90-46b0-9c77-bd5947acd915
+:END:
+In Vagrantfile, you need to specify the following
+- vagrant "box" to be use as a base vm.
+- port forwarding
+  #+BEGIN_SRC sh :noeval
+  config.vm.network "forwarded_port", guest: 80, host: 8080
+  #+END_SRC
+- network address to connect to.
+  #+BEGIN_SRC sh :noeval
+  config.vm.box = "ubuntu/focal64"
+  #+END_SRC
+- VM provider + resource configuration
+  #+BEGIN_SRC sh :noeval
+  config.vm.provider "virtualbox" do |vb|
+      vb.name = "hk_vagrant_docker"
+      vb.memory = 4096
+      vb.cpus = 4
+  #+END_SRC
+- command to run when VM is launched.
+  - things to install in VM.
+    #+BEGIN_SRC :noeval
+  config.vm.provision "shell", inline: <<SHELL
+      ...
+      SHELL
+    #+END_SRC
+
+vagrant basic commands
+#+BEGIN_SRC sh :noeval
+vagrant status
+vagrant up
+vagrant halt
+vagrant ssh
+#+END_SRC

@@ -1,5 +1,5 @@
 #+TITLE: Terraform Note
-#+filetags: terraform
+#+filetags: terraform devops
 #+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
 
 * Blog :blog:
@@ -57,3 +57,10 @@ cd $module_name && touch \
         - [Interpolation Syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html)
       - new concepts is "Expression" and "Built-in Functions"
         - expressions are used to refer to or compute rvalues iwthin a configuration
+** TODO A Note of X where X = Terraform.
+terraform commands
+#+BEGIN_SRC sh :noeval
+terraform init
+terraform plan
+terraform apply
+#+END_SRC
