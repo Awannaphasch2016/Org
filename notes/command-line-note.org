@@ -20,7 +20,16 @@ curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.p
 curl -sL https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch | bash
 #+END_SRC
 ** TODO Creating a command line
+:PROPERTIES:
+:ID:       1fbecf3b-b122-485a-a55c-bcc0c639d5ca
+:END:
 ~oclif~ is a framework that make it easy to create command.
+
+*** Footnotes
+[fn:1] [[https://blog.heroku.com/cli-flags-get-started-with-oclif][CLI Flags in Practice + How to Make Your Own CLI Command with oclif]]
+[fn:2] [[http://www.commandlinefu.com/][commandlifefu.com]]
+[fn:3] [[https://github.com/oclif/oclif][github:oclif]]
+
 * Tools
 :PROPERTIES:
 :ID:       33205d2f-43d0-4bb3-9e40-27df8be4a515
