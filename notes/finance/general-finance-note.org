@@ -1,4 +1,15 @@
 #+TITLE: Finance Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: finance
+
+
+* Blog :blog:
+** Justifying Existent Of Company. :philosophy:company:
+:PROPERTIES:
+:EXPORT_FILE_NAME: Justifying Existent Of Company
+:ID:       c390ea30-7e52-46d0-9353-8f66e3c6e5f7
+:END:
+TBD
 
 * double ledger bookkeeping
 ledger requires the sum of the amount changes of all accounts in each tranaction to be 0.

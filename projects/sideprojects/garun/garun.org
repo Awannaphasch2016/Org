@@ -36,6 +36,29 @@ Goal: I envision Garun to support the following things
 :PROPERTIES:
 :ID:       31d13ebf-a62c-45f8-bfab-d48728e63d06
 :END:
+** TODO What You Think Is What You Get :gui:philosophy:
+** TODO Evolution Of Personal Knowledge Management
+
+Recalled that Internet and WWW was invented in 1983 and 1989, respectively. Internet was invented to connect information. Naturally, WWW was invented to preserved information loss and increase efficiency to organize and maintain information within teams. For more information of WWW, see my blog titled "Design of World Wide Web."
+
+Short after, in 1993, Ward Cunningham introduced a new framework to use hyperlink to management information within teams, called wiki (not Wikipedia). Cunningham later recognized fundamental flaw of wiki that it doesn't have built-in mechanism to separate between personal notes and group's notes. Not until 2011, when Cunningham proposed "federate wiki" to solve exactly that mentioned problem. Federate wiki implements  client-server where an individual gets to manage his/her own notes within his/her own personal server.
+
+Furthermore, an individual can choose which notes to keep private or make public. When notes are made public, others can discover the note and "connect" to it. More precisely, one can connect to others' note by make a "commit-connections". I coil the term "commit-connections" out of necessity to describe that connection is not just a link like hypertext, the connection is made between version of commit. The idea is not new, it is an idea borrowed from git. Making a new commit-connection is equivalent to making a new branch where the one who make the connection own the new branch. Exactly, merging between branches should be possible, but this may prove to be too technical for personal use. Since, federate wiki was introduced to solve both personal and team's knowledge management. Providing more options shouldn't and couldn't be perceived as bad.
+
+
+** TODO Solution To Personal Knowledge Management: A Necessity of Personal Server
+:PROPERTIES:
+:ID:       5c650873-184c-4764-9614-b4be15c3f065
+:END:
+I wrote an article named "Evolution Of Personal Knowledge Management."
+
+In this article, I explain why personal server will solve personal knowledge management by reducing friction caused by transferring YOUR information between-apps. Next, I argue that personal server enables full customization of YOUR internet navigation experience.
+
+*** Bibliography :ignore:
+bibliography:/home/awannaphasch2016/org/papers/org-mode-bibtex.bib
+
+** TODO The KILLER App for Urbit: Introduce Garun
+
 * Garun
 :LOGBOOK:
 CLOCK: [2022-03-07 Mon 15:07]--[2022-03-07 Mon 15:08] =>  0:01

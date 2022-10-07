@@ -15,7 +15,16 @@ b              => (ba bb bc)		; assume b has this value
 `(a b c)       => (a b c)		; backquote acts like quote
 `(a ,b c)      => (a (ba bb bc) c)	; insert the value of b
 `(a ,@b c)     => (a ba bb bc c)	; splice in the value of b
+** TODO How To Jump To Cl-Defstruct Like Jumping To Function With Find-Function?
+:PROPERTIES:
+:EXPORT_FILE_NAME: How To Jump To Cl-Defstruct Like Jumping To Function With Find-Function?
+:END:
+jumping to definition of a function defined in ~cl-defstruct~ is not possible [fn:1].
 
+[fn:1] this is very interesting. May worth exploring latter.
+
+*** Footnotes
+[fn:1] https://emacs.stackexchange.com/questions/32571/jump-to-a-cl-defstruct-defined-function-like-find-function
 * Terms and Concepts
 ** struct
 #+name: 331611189
@@ -128,3 +137,22 @@ redefining the whole function.
 : 7
 
 Code ref:4066926762 returns 7 because advice "add function to the existing definition" of ~my-double~.
+
+** declare
+
+#+BEGIN_SRC emacs-lisp
+(defun ivy-insert-action (x)
+  (with-ivy-window
+   (insert x)))
+
+(defun add-integer (a b)
+  (declare (integer a b))
+  (the integer (+ a b)))
+
+(add-integer 3 7)
+
+(defun my/add-integer (a b)
+  (+ a b))
+
+(my/add-integer 3 7)
+#+END_SRC

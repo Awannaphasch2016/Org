@@ -26,9 +26,14 @@ curl -sL https://raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch |
 ~oclif~ is a framework that make it easy to create command.
 
 *** Footnotes
+
 [fn:1] [[https://blog.heroku.com/cli-flags-get-started-with-oclif][CLI Flags in Practice + How to Make Your Own CLI Command with oclif]]
 [fn:2] [[http://www.commandlinefu.com/][commandlifefu.com]]
 [fn:3] [[https://github.com/oclif/oclif][github:oclif]]
+** TODO Debugging a system with kexec-tools
+
+*** Footnotes
+[fn:1] [[https://www.youtube.com/watch?v=0bkpQ_6jsEM&ab_channel=AllSystemsGo%21][Kexec/Kdump under the hood]]
 
 * Tools
 :PROPERTIES:
@@ -50,6 +55,7 @@ Note that ~scrot~ will take screenshot of an X11 app (if you use X11 protocol to
 scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f ~/Scratches/'
 #+END_SRC
 This will create a file called something like 2000-10-30_2560x1024_scrot.png and moves it to your =~/Scratches= directory.
+*** kexec/kdump
 ** software suite
 *** ImageMagick
 #+BEGIN_QUOTE

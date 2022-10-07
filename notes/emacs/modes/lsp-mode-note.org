@@ -92,3 +92,8 @@ lsp-clients.el predefined servers have priority -1, lower than external packages
 
 ** select the server per project
 You may create dir-local for each of the projects and specify list of lsp-enabled-clients.
+** blacklisted
+#+BEGIN_SRC emacs-lisp :noeval
+(setf (lsp-session-folders-blacklist (lsp-session)) nil) ; reset lsp blacklist to nil
+(lsp-session-folders-blacklist (lsp-session)) ; get value of bloacklist slot from lsp-session
+#+END_SRC

@@ -1,9 +1,13 @@
 * Writing GNU Emacs Extensions - Bob Glickstein
 :PROPERTIES:
 :NOTER_DOCUMENT: /mnt/c/users/terng/OneDrive/Documents/Books/Writing GNU Emacs Extensions - Bob Glickstein.pdf
+:ID:       5d0d3996-e163-4684-90e3-fa154c835755
 :END:
 
 ** Customizing Emacs
+:PROPERTIES:
+:ID:       695ef875-c6fd-42a1-b48d-923082dcbc4c
+:END:
 *** backspace and delete
 *** Lisp
 *** Keys and Strings
@@ -23,6 +27,9 @@
 *** The Symptom
 *** A Cure
 *** Declaring Variables
+:PROPERTIES:
+:ID:       2f11d739-cc35-44ff-ba1e-4ae0c31121a1
+:END:
 #+BEGIN_SRC emacs-lisp
 (defvar unscroll-to nil
   "Text position for next call to 'unscroll'.")

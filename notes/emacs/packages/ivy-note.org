@@ -1,0 +1,25 @@
+#+title: Ivy Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: ivy
+
+* Blog :blog:
+** TODO A Note on X where X = Emacs' Ivy package :tutorial:
+:PROPERTIES:
+:ID:       0d503d71-a716-4086-b8ad-5f0b0bd9e4e7
+:END:
+When I played around with ivy package for the first time, I encountered error related to =ivy window= stuff. For example, when you open Emacs with clean initial state (not loading old Emacs's state), evaluate then run the following example function will failed. Note that the example function is provided in ivy's documentation [fn:1].
+
+#+BEGIN_SRC emacs-lisp :noeval
+(defun ivy-insert-action (x)
+  (with-ivy-window
+    (insert x)))
+#+END_SRC
+
+Turns out, Ivy has its own concept of window which I will call "ivy window". From the example above, the function cannot run for the first try because ~with-ivy-window~ is a macro which call ~ivy-last~ and ~ivy-last~ was set to nil if ivy has not yet called. That's it. Until ivy is called, ~ivy-state-window~ which is ~~window~ property of ~(cl-defstruct ivy-state [...])~ are set to nil.
+
+*** Footnotes
+:PROPERTIES:
+:ID:       c36e72c5-78ac-4467-8f16-b3f56c92a2d5
+:END:
+
+[fn:1] https://oremacs.com/swiper/#actions

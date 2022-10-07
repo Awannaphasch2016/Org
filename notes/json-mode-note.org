@@ -1,5 +1,0 @@
-#+title: Json Mode Note
-
-* keybinding
-| commands             | key | doom keys | custom keys | descriptions |
-| json-reformat-region |     |           |             |              |

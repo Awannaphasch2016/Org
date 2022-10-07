@@ -1,0 +1,5 @@
+#+title: Json Snatcher Note
+
+* keybinding
+| commands            | key | doom keys | custom keys | descriptions                            |
+| json-mode-show-path |     | spc m p   |             | copy path of a json's element at point. |

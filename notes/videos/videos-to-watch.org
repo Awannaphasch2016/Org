@@ -1,9 +1,160 @@
 #+TITLE: Videos To Watch
 
 * Incubation
+** [[https://www.youtube.com/watch?v=LN2shXeJNz8&ab_channel=TED][Bill joy: what i'm worried about, what I'm excited about]]
+** [[https://www.youtube.com/watch?v=59BN1EdCOdc&ab_channel=KampSolutions][107. Bill Joy | kamp solutions podcast]]
 **  watch LOGICMOO INTRODUCTION PART 2 https://www.youtube.com/watch?v=oON8o6ioG08 as recommended by Shane.
 :PROPERTIES:
 :ID:       e9f9fc4d-201e-4507-9834-c0dd1659ee88
 :END:
 [2022-03-14 Mon 11:44]
 [[file:~/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/main.org::*Sliding Window Evaluation][Sliding Window Evaluation]]
+** MLOP
+https://www.youtube.com/watch?v=S-kn4mmlxFU&ab_channel=Weights%26Biases
+https://www.youtube.com/watch?v=a2Lc9kEgEM8&ab_channel=DVCorg
+** hacking
+https://www.youtube.com/watch?v=TnRn3Kn_aXg&ab_channel=HACKADAY
+https://www.youtube.com/watch?v=G8lrwmsx8KA&ab_channel=DavidBombal
+** operating system (os)
+*** wsl2
+https://www.youtube.com/watch?v=63wVlI9B3Ac&ab_channel=MicrosoftDeveloper
+https://www.youtube.com/watch?v=PdxXlZJiuxA&ab_channel=MicrosoftDeveloper
+https://www.youtube.com/watch?v=yCK3easuYm4&ab_channel=DavidBombal
+*** uncategorized
+https://www.youtube.com/watch?v=nFAhlj0p6dA&ab_channel=MikeLevin
+[[https://www.youtube.com/watch?v=74IoF-bI8Iw&ab_channel=DavidWright][linux crach analysis lecture]]
+[[https://www.youtube.com/watch?v=w8XnnG68rqE&ab_channel=DevConf][Introbution to Linux Kernel Crash Analysis - Alex Juncu]]
+[[https://www.youtube.com/watch?v=3NXge5RChcs&ab_channel=AndreasKling][OS hacking: let's debug a GCC crash on SerenityOS]]
+[[https://www.youtube.com/watch?v=6l0ulgv1OJ4&ab_channel=LinuxKernelFoundation][Linux Kernel Debugging, Kdump, Crash Tool Basics Part 1]]
+[[https://www.youtube.com/watch?v=V5b4VtHu4hw&ab_channel=PrashantLakhera][Debugging Kernel Issue Part 1]]
+[[https://www.youtube.com/watch?v=HBOwoSyRmys&ab_channel=TheLinuxFoundation][Using Serial kdb/ kgdb to debug the linux kernel]]
+[[https://www.youtube.com/watch?v=X6nJXCzupEM&ab_channel=FreeandOpenSourceSoftwareConference%28FrOSCon%29e.V][linux kernel debugging for sysadmins]].
+*** unix
+**** https://www.youtube.com/watch?v=z3Nw5o9dS7Q&ab_channel=OsLecturesForAll
+**** [[https://www.youtube.com/watch?v=FbDebSinSQo&ab_channel=FOSDEM][Unix Architecture Evolution from the 1970 PDP-7 to the 2018 FreeBSD Important Milestones and Lesson…]]
+**** [[https://www.youtube.com/watch?v=boahlBmc-NY&ab_channel=CityTV.nl][t-dose 2016, from UNIX to linux, a time lapse of 45 years, hendrik jan thomassen]]
+**** [[https://www.youtube.com/watch?v=P01T4G5I2lk&ab_channel=VivekHaldar][read a paper: the unix time-sharing system]]
+**** [[https://www.youtube.com/watch?v=eCYkzciF28E&ab_channel=VivekHaldar][read a paper: evolution of the unix system architecture]]
+*** linux
+**** [[https://www.youtube.com/watch?v=KobYWL1LtW4&list=PLWK00SLo2KcQi1hlP2_allMWeG19MkQa7&ab_channel=DJWare][linux internal]]
+**** [[https://www.youtube.com/watch?v=DG6EQD0DDs4&ab_channel=DJWare][logical volume management: LVM]]
+** compiler
+*** [[https://www.youtube.com/watch?v=9W0Vxa6eqjA&ab_channel=Computerphile][porting compiler - computerphile]]
+** web develpement
+*** [[https://www.youtube.com/watch?v=RH0o-QjnwDg&ab_channel=Computerphile][sgml html xml what's the differnece? (part1) computerphile]]
+** computer science
+*** [[https://www.youtube.com/watch?v=pP_zIJSp3WA&ab_channel=Computerphile][the uncol problem - computerphile]]
+*** [[https://www.youtube.com/watch?v=TiJn9D6lZ-Y&ab_channel=Computerphile][improving intermediate codes - computerphile]]
+** internet + www + networking
+https://www.youtube.com/watch?v=EnAZB8GI97c&ab_channel=MattTurner
+https://www.youtube.com/watch?v=PYTG7bvpvRI&ab_channel=JuriyBura
+https://www.youtube.com/watch?v=hiKPPy584Mg&ab_channel=AmazonWebServices
+https://www.youtube.com/watch?v=_IOZ8_cPgu8&ab_channel=ITkFunde
+** history
+*** [[https://www.youtube.com/watch?v=LBigxrdgKtY&list=PLlRFEj9H3Oj6-srSAgLb-ZGVNGlo3v14X&index=37&ab_channel=ChuckSeverance][internet history technology, and security]]
+*** [[https://www.youtube.com/watch?v=b0O3rsKjSOs&ab_channel=Computerphile][origins of the web -computephiel]]
+** cyber security
+*** [[https://www.youtube.com/watch?v=R49SvFbbI3c&ab_channel=GoldmanSachs][an evolution in hte cybersecurity landscape]]
+*** [[https://www.youtube.com/watch?v=ExULG36K_2E&ab_channel=HarvardExtensionSchool][evolution of cybersecurity, heather hinton]]
+*** [[https://www.youtube.com/watch?v=Kf7k0wGR41I&ab_channel=FORVIS][evolution of cybersecurity]]
+*** [[https://www.youtube.com/watch?v=oGLYPKlw2dM&ab_channel=protocol][the evolution of cybersecurity (different one)]]
+** filesystem
+*** https://www.youtube.com/watch?v=qykUb8-Nxxw&ab_channel=CNCF%5BCloudNativeComputingFoundation%5D
+*** https://www.youtube.com/watch?v=6m3GuoaxRNM&ab_channel=BSDTV
+*** [[https://www.youtube.com/watch?v=sLR17lUjTpc&ab_channel=C%2FC%2B%2BDublinUserGroup][writing linux filesystem for fun]]
+*** [[https://www.youtube.com/watch?v=l1ZK_yMVcKQ&ab_channel=USENIX][fast '13 - a study of linux file system evolution]]
+*** [[https://www.youtube.com/watch?v=xrgkRMf5SWM&ab_channel=JohnVincentCayetano][evolution of file system and data processing]]
+*** [[https://www.youtube.com/watch?v=o6eEBJZsS4U&ab_channel=FOSDEM][evolution of file system and disk management in HelenOS]]
+*** [[https://www.youtube.com/watch?v=AwOHa2GKd5w&ab_channel=USENIX][let's build a distributed file system]]
+*** [[https://www.youtube.com/watch?v=wN6IwNriwHc&ab_channel=linux.conf.au][database as filesystem]]
+** database
+*** [[https://www.youtube.com/watch?v=SdW5RKUboKc&ab_channel=CMUDatabaseGroup][01 - history of database (CMU databases / spring 2020)]]
+*** [[https://www.youtube.com/watch?v=HiXoEQzf-Zg&ab_channel=NoSQLmattersConference][database history from codd to brewer and beyond by doug turnbull]]
+*** [[https://www.youtube.com/watch?v=RtaKzTN-0Hc&ab_channel=Prof.KeehyungKim][history of database and relational database]]
+*** [[https://www.youtube.com/watch?v=uPkgvnBRtE4&ab_channel=CockroachDB][a brief history of databases]]
+*** [[https://www.youtube.com/watch?v=nowcBsX_4kc&ab_channel=Prof.Dr.JensDittrich%2CBigDataAnalytics][a footnote about the yound history of database systems]]
+** software development methodology
+*** [[https://www.youtube.com/watch?v=DrpY3V-O4lE&ab_channel=SpringI%2FO][collaborative contract  driven developement by billy korando @ Spring I/O 2019]]
+** investing
+*** [[https://www.youtube.com/watch?v=VjuL1TH_cWY&ab_channel=TheCompound][secrets of the greatest hedge fund of all time]]
+** David Patterson - A New Golden Age for Computer Architecture: History, Challenges and Opportunities
+https://www.youtube.com/watch?v=kFT54hO1X8M&ab_channel=UBCComputerScience
+** The Evolution of Computing [Documentary] (Vacuum Tube to Transistor to Integrated Circuit)
+https://www.youtube.com/watch?v=ZBZnSteT72A&ab_channel=Futurology%E2%80%94AnOptimisticFuture
+** original object oriented programming (smalltalk, pharo)
+*** [[https://www.youtube.com/watch?v=FAk3Ec8hmzk&ab_channel=esugboard][polyglot notebooks with squeak/smalltalk on the graalVM]]
+*** [[https://www.youtube.com/watch?v=9ipuDFeDf90&ab_channel=esugboard][Live coding the web platform with Caffeine]]
+*** [[https://www.youtube.com/watch?v=KDs7JpSQir8&ab_channel=esugboard][Kutoa: programming the web in smalltalk]]
+***  [[https://www.youtube.com/watch?v=P2mh92d-T3Y&ab_channel=esugboard][dan ingalls: object-oriented programming]]
+*** [[https://www.youtube.com/watch?v=NTRLK2F_THY&ab_channel=TRIZInitiative][alan kay object oriented programming "OOP" TAlk - sound repaired]]
+*** [[https://www.youtube.com/watch?v=oKg1hTOQXoY&ab_channel=JeffGonis][alan kay at OOPSLA 1997 - the computer revolution hasn't happend yet]]
+** browser
+*** [[https://www.youtube.com/watch?v=k8OwP0FC7Uo&ab_channel=esugboard][a browser-based IDE for cloud-hosted gemstone]]
+** virutalization
+*** [[https://www.youtube.com/results?search_query=evolution+of+virtualization+&sp=mAEB][evolution of virualization]]
+** prop tech
+*** commercial property automation
+https://www.youtube.com/watch?v=0oooy5aYEog&list=PLn4xYjrkve9HrzSrs0Wr-i9hNj_toojxw&index=5&ab_channel=SapphireVentures
+** hardware
+*** https://www.youtube.com/watch?v=pANo55hBo9g&ab_channel=GMODISM
+*** [[https://www.youtube.com/watch?v=C-RtLnagFuQ&ab_channel=RobertFeranec][how to create difficult FPGA designs with CPU, MCU, PCIE, (with adam tayler)]]
+*** [[https://www.youtube.com/watch?v=lY5kucyhKFc&ab_channel=media.ccc.de][34c3 - everythign you want to know about x86 microcode, but might have been afraid to ask]]
+*** [[https://www.youtube.com/watch?v=WBe4WEOjlK8&ab_channel=rj45Creates][micorcode!- build a CPU from scratch]]
+** literate progarmming  + literate devops
+*** [[https://www.youtube.com/watch?v=vVJSn8gCh_I&ab_channel=EmacsConfandEmacshangouts][emacsconf 2015 - literate devops - howard abrams]]
+** Editor, IDE and their experience
+*** emacs
+**** [[https://emacsconf.org/2020/talks/24/][analyze code quality through emacs: a smart forensics appraoch and the story of a hack]]
+**** [[https://www.youtube.com/watch?v=FwDsuz0waIY&ab_channel=EmacsConfandEmacshangouts][emacsconf 2021: tree-edit structural editing for java, python, c, and beyond! - Ethan leba]]
+*** [[https://www.youtube.com/watch?v=LEUXI3I_IZg&ab_channel=ColinCarr][Bill joy - ex and vi editors and csh.]]
+*** [[https://www.youtube.com/watch?v=2Z43y94Dfzk&ab_channel=ComputerHistoryMuseum][alto system project: larry teestler demonstration of gypsy]]
+*** [[https://www.youtube.com/watch?v=cd4_O3TqArs&ab_channel=mahmoodsheikh][real reason emacs is superior - org+latex+sagemath]]
+** [[https://www.youtube.com/watch?v=EVkHgKCqAcI&ab_channel=ErlangSolutions][matt might -winning the war on error: solving halting problem, curing cancer -code mesh 2017]]
+** [[https://www.youtube.com/watch?v=69k-72xKnd4&ab_channel=ThinkingDigitalConference][aral balkan - freei s a lie]]
+** programming language
+*** [[https://www.youtube.com/watch?v=NlClzGbemu8&ab_channel=StrangeLoopConference]["poems in an accidental langauge" by Kat compton]]
+*** [[https://www.youtube.com/watch?v=Rk76BurH384&ab_channel=KennethFriedman][Gerry sussman: we really don't know how to computer! ( with slides)]]
+*** [[https://www.youtube.com/watch?v=_ahvzDzKdB0&ab_channel=BillPugh][how to grow a language by guy steele]]
+*** [[https://www.youtube.com/watch?v=7HKbjYqqPPQ&ab_channel=GuySteele][2017 ACM PPoPP keynote: it's time for a new old language]]
+*** [[https://www.youtube.com/watch?v=f3rP3JRq7Mw&ab_channel=ErlangSolutions][robert virding - on language desing (lamgda days 2016)]]
+*** [[https://www.youtube.com/watch?v=X7k46-cQAVc&ab_channel=OW2][choosing the right progrmaming language for GUI implementations]]
+*** [[https://www.youtube.com/watch?v=Sg4U4r_AgJU&ab_channel=UniversityofNottingham][computer scinece- brain kernighan on succesful language design]]
+
+** web developement
+*** [[https://www.youtube.com/watch?v=bk3icU8iIto&ab_channel=GOTOConferences][phoenix a web framework for the new web jose valim goto 2016]]
+** functional programming language
+*** elixir
+**** [[https://www.youtube.com/watch?v=Jf5Hsa1KOc8&ab_channel=CodeSync][celebrating the 10 years of elixir | jose Valim | elixirConf EU 2022]]
+**** [[https://www.youtube.com/watch?v=dPRt5pOIFHk&ab_channel=WelcometotheJungleStudio][behind the code: the one who created elixir]]
+** glamorious toolkit (GT)
+*** [[http://demodriven.com/][demo driven developement]]
+** urbit related
+*** [[https://www.youtube.com/watch?v=A9n2J24Jg2Y&ab_channel=ComputerHistoryMuseum][chunk thacker, "personal distributed computing - the alto and ehternet hardware"]]
+** math
+*** group theory
+**** [[https://www.youtube.com/watch?v=KufsL2VgELo&ab_channel=Nemean][researchers use group thoery to speeed up algorithms - introduction to groups]]
+**** [[https://www.youtube.com/watch?v=gI3p3PmHPk8&ab_channel=Vector7][how to use group theory in physics?]]
+** Devops technologies
+*** [[https://www.youtube.com/watch?v=wgyTBpXMUyw&ab_channel=TheLinuxFoundation][evolving themes in orchestration - an operator's persepctive - hans raj nahata, verizon.]]
+*** [[https://www.youtube.com/watch?v=iRaai1IBlB0&ab_channel=freeCodeCamp.org][Learn Terraform (asnd AWS) by building a Dev Environment]]
+*** [[https://www.youtube.com/watch?v=PGyhBwLyK2U&ab_channel=freeCodeCamp.org][DevOps with GitLab CI Course - Build Pipelien and Deploy to AWS]]
+** cloud
+*** [[https://www.youtube.com/watch?v=_gWfFEuert8&ab_channel=freeCodeCamp.org][OpenStack Tutorial - Operate your Own private Cloud]]
+*** [[https://www.youtube.com/watch?v=gxpX_mubz2A&ab_channel=Wolfgang%27sChannel][How to make your Own VPN (and Why You would want to)]]
+*** [[https://www.youtube.com/watch?v=l0d_C1z8LzY&ab_channel=SkillMeUP][operations evolution for the cloud | cloud maker | skill me.up academy]]
+*** [[https://www.youtube.com/watch?v=yWMkE2b2Yvg&ab_channel=CNCF%5BCloudNativeComputingFoundation%5D][cloud native live: bringing the edge in to your data center]]
+*** https://www.youtube.com/watch?v=Vpc1uxJi37E&ab_channel=NDCConferences
+*** https://www.reddit.com/r/devops/comments/9qw4yb/personal_projects_for_learning_these_devops_tools/
+*** https://www.youtube.com/watch?v=MzNk5BlqE5I&ab_channel=GoogleCloudTech
+*** https://www.youtube.com/watch?v=YXkt4SDxkAc&ab_channel=AWSOnlineTechTalks
+*** https://www.youtube.com/watch?v=T56lZb7WNLc&ab_channel=HashiCorp
+*** https://www.youtube.com/watch?v=hEv9w16p41k&ab_channel=HashiCorp
+** [[https://www.youtube.com/watch?v=gI8ym9aRopc&ab_channel=VMRay][VMRay co-founders talk about the evolution of sandbox tehcnology on the risky business podcast]]
+** [[https://www.youtube.com/watch?v=aUaTl0X1Kwg&ab_channel=OpenInfrastructureFoundation][verizon cloud platform -operating and evoluing openstack at scale]]
+** Devops
+*** [[https://www.youtube.com/watch?v=vt0mlm_Jgwg&ab_channel=SamsungNetworks][samsung's cloud orchestrator]]
+*** [[https://www.youtube.com/watch?v=qykUb8-Nxxw&ab_channel=CNCF%5BCloudNativeComputingFoundation%5D][k9p - kubernetes as 9p files - terin stock, cloudflare]]
+*** [[https://www.youtube.com/watch?v=vh4-1OoeBUs&ab_channel=TheLinuxFoundation][evolution of the cloud infrastructure reference model and its applicaiton]]
+*** [[https://www.youtube.com/watch?v=GMkDspeHANQ&ab_channel=Docker][evolution for container orchestration in alibaba cloud]]
+** text editor + ide
+*** [[https://www.youtube.com/watch?v=TBnPxe4e6Ek&ab_channel=RasputinMachine][this is why acme is great]]

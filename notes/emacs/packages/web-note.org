@@ -4,8 +4,13 @@
 :PROPERTIES:
 :ID:       b3d1b800-2bc0-4eb4-a0fe-85cfa5314712
 :END:
-| commands                | key | doom keys | custom keys | descriptions   |
-| web-mode-element-vanish |     | spc-m-e-v |             | remove element |
+| commands                                 | key                  | doom keys | custom keys | descriptions |
+| web-mode-navigate                        | C-c C-n              |           |             |              |
+| web-mode-mark-and-expand                 | C-c C-Enter, C-c C-m |           |             |              |
+| web-mode-snippet-insert                  | C-c C-s              |           |             |              |
+| web-mode-whitespaces-show                | C-c C-w              |           |             |              |
+| web-mode-element-children-fold-or-unfold | C-c C-e f            | spc m e f |             |              |
+| web-mode-element-close                   | C-c C-e /            |           |             |              |
 ** source code
 #+BEGIN_SRC emacs-lisp
 (map! :map web-mode-map
@@ -75,3 +80,5 @@
         :nv "]T"  #'web-mode-element-child
         :nv "[T"  #'web-mode-element-parent)
     #+END_SRC
+
+    #+RESULTS:

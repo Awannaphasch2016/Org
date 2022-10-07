@@ -42,7 +42,8 @@ Each step of assets transaction evolution create new types of object and new typ
 This blog provide one mental framework to think about the world and emphasize on significant of blockchain technology.
 
 That's it.
-Peace.
+Peace..
+
 ** TODO Asset vs Property vs Security
 :PROPERTIES:
 :ID:       b3436ffd-1c76-486c-9a31-7b33d3018313
@@ -55,6 +56,68 @@ Property are better stored fo value than money because it has utility, but they 
 Asset is things that hold value. In this case, value is evaluated based on suppply-demand mechanism.
 
 Security is a financial instrument. It is a type of financial asset. Government of a country determines asset that can be categorized as security or non-security.
+
+** Incentives Of Owning Money. :money:philosophy:
+:PROPERTIES:
+:EXPORT_FILE_NAME: Incentives Of Owning Money.
+:ID:       e8682929-2a0a-4147-9769-62784a3ef245
+:END:
+- Edit History
+  - last edit on [2022-07-30 Sat]
+
+Money is the most flexible medium of exchange. For more detail please refer to my blog named "Money Is A Type of Token."
+
+Motivation drive efforts. Effort is a seed of creation and innovation. It just happens that money provides universal motivation due to its utility which is measured by speed of conversion from itself to other assets. Money has fastest conversion rates. It is important to remember that Utility of token or money exists at all as a result of shared believe.
+
+That's it.
+Peace.
+
+** Money Is A Type Of Token. :tokenomic:money:philosophy:
+:PROPERTIES:
+:ID:       d38a900f-636c-4e40-ac2c-37c0a979115d
+:EXPORT_FILE_NAME: Money Is A Type Of Token.
+:END:
+- Edit History
+  - last edit on [2022-07-30 Sat]
+    - I can refine this blog more by consolidating the current content to my notes on roam research. I don't have time to do this at the time of writing.
+
+In theory, there is no need for "medium" of exchange. Any exchange can be anything as long as seller and buyer agree upon. Therefore, one can argue that there will always exist a sequence of exchanges of agreements that satisfy any pair of sellers and buyers. In theory, this approach of exchange is possible only because there exists a hidden assumption that everyone knows each other and an exchange is completed in an instant without time delay. In practice, an exchange is contraint by time and spatial distant in physical world. That's it. using this approach, not all exchanges are possible and exchanges that are possible are not efficient.
+
+In the other word, properties of exchangeable agreement are
+1. Resistance to falsification
+
+But, what exactly make exchangeable items efficient for adoption in an economy?
+
+Imagine a graph of items where nodes are items and edges are agreeable exchange, we get a clique. The most efficient medium of exchange is a node with highest betweeness centrality. Clique has the least betweeness centrality and star graph has the highest betweeness centrality.
+
+But what item should be picked as a medium of exchange? Its properties are as followed [fn:1]
+
+1. Transportable
+2. Common and obtainable
+3. Low preservation cost
+4. Recognizable
+5. Consistent
+6. Dividable
+7. Large market value with respect to weight and volume
+8. Value common holdings
+9. The only utility of medium of exchange is its ability to be medium of exchange and nothing else.
+
+Ultimately, properties of medium of exchange are required to guarantee absolute trust between sellers and buyers that an exchange happened according to their agreements. To put it simply, medium of exchange must be undoubtedly trusted by the two parties. That's it. Any medium of exchange is a share believe of trust that the medium satisfies its properties.
+
+Money is a share believe in modern economic. One can think of money as global shared believe. In tokenomics, token are a share believe within community. One can think of token as local shared believe. Similar to economic in general, value of token depends on supply and demands. Lets value of meme factor be between 0 to 1. Due to the locality property of token, memes factor is also required to evaluate level of community shared believe. Note that meme factor of money is 1.
+
+#+BEGIN_QUOTE
+The only utility of medium of exchange is its ability to be medium of exchange and nothing else.
+#+END_QUOTE
+
+This property of medium of exchange is subtle but really important. This is because, without this property, it is possible for the exact copied of the same medium of exchange to be valued unevenly within the economy.
+
+That's it.
+peace.
+
+*** Footnotes
+[fn:1] https://corporatefinanceinstitute.com/resources/knowledge/economics/medium-of-exchange/
+
 * Data
 :PROPERTIES:
 :ID:       84ff272e-0938-49be-bf52-e1020c0d00cd
@@ -97,5 +160,4 @@ for series in json_data['Results']['series']:
 print('done')
 #+END_SRC
 
-#+RESULTS[5fec3a60b3aa028cc17b92faf5f352ddaa7e01e3]:
-: done
+#+RESULTS[c5548b39e963b42d1691503d01101f6a9e6cafbd]:

@@ -1,4 +1,11 @@
 #+TITLE: Npm Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: npm
+
+
+* Blog :blog:
+** TODO NPM runtime error :error:debug:
+
 
 At the time of writing (=February 6, 2022=), npm fail to run with the following error.
 #+BEGIN_SRC org :noeval
@@ -33,3 +40,13 @@ SyntaxError: Invalid or unexpected token
 #+BEGIN_SRC sh :noeval
 which npm
 #+END_SRC
+** NPM environment conflict when Conda is not fully deactivate its environment :debug:
+By default Conda activate =base= environment, this default behavior change value of environment variables. One of the variable is =HOST= whose value is set to =x86_64-conda-linux-gnu= in respond.
+
+You can deactivate =base= environment with ~conda deactivate~. Doing so will change =HOST= variable's value to =[name-of-your-desktop]=, in my case it is =DESKTOP-5MMF71L=.
+
+To change environment variable locally, ReactJS documentation suggests that I can put project's local environment variables to =.env=. I put the following in =.env=.
+#+BEGIN_SRC env
+HOST=localhost
+#+END_SRC
+Unfortunately, running ~npm start~ doesn't detect local environment variables specified in =.env=.

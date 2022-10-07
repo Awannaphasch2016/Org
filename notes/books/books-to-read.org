@@ -12,16 +12,55 @@
 [2022-03-14 Mon 02:48]
 [[file:~/Documents/MyPapers/EnsembleStreamingNetworkClassificaition/main.org::*explains when sliding window should be used][explains when sliding window should be used]]
 * Recommended
+** The structure of Scientific revolutions
+https://www.lri.fr/~mbl/Stanford/CS477/papers/Kuhn-SSR-2ndEd.pdf
+** [[https://designingreality.org/][desinging reality]]
 ** [[https://breakingsmart.com/en/season-1/][Breaking Smart]]
 An in-depth exploration (~30k words) of how software is eating the world, based on research supported by Andreessen-Horowitz in 2014. The essays are free to read online.
+** [[https://wtf.tw/ref/meadows.pdf][thinking in system]]
+** Object-Oriented Software Construction
 ** A Survival Guide for New consultants
 Mentioned in Learning Functional Programming in Scala.
+** Pharo
+*** [[https://books.pharo.org/booklet-ReflectiveCore/html/][a simple reflective object kernel]]
+*** [[https://books.pharo.org/updated-pharo-by-example/pdf/2018-09-29-UpdatedPharoByExample.pdf][pharo by examples]]
+** browser
+*** [[https://browser.engineering/][web browser engineering]]
+*** [[https://hpbn.co/][high performance browser networking]]
+** algorithm
+*** [[http://www.cl72.org/110dataAlgo/Algorithms%20%20%20Data%20Structures%20=%20Programs%20\[Wirth%201976-02\].pdf][Algorithm + data structures = programs]]
 ** History books
 *** The Innovators: How a Group of Hackers, Geniuses, and Geeks Created the Digital Revolution  by Walter Isaacson
 Mentioned in Learning Functional Programming in Scala.
 *** The Innovators by Walter Isaacson
 Mentioned in Learning Functional Programming in Scala.
 ** Programming books
+*** AI
+**** [[https://vdoc.pub/download/semantic-information-processing-og6qea43k480][semantic information processing]]
+*** [[http://jmc.stanford.edu/articles/mcc59/mcc59.pdf][programs with common sense by john mccarthy]]
+*** [[file:/C:/Users/terng/Downloads/computation-finite-and-infinite-machines_compress.pdf][computation: finate and infinite machines by marvin L. minsky]]
+*** IoT
+**** [[file:/C:/Users/terng/Downloads/programming-the-internet-of-things-an-introduction-to-building-integrated-device-to-cloud-iot-solutions-1nbsped-1492081418-9781492081418_compress.pdf][programming the internet of things: an introduction to building integrated device-to-cloud IoT solutions]]
+*** web developer
+**** [[file:/C:/Users/terng/Downloads/\[JAVASCRIPT\]\[High%20Performance%20JavaScript\].pdf][high performance javascript]]
+*** operating system
+**** [[https://www.amazon.com/Operating-Systems-Three-Easy-Pieces/dp/198508659X/ref=pd_bxgy_img_sccl_1/142-6648674-9892311?pd_rd_w=fvSTf&content-id=amzn1.sym.7757a8b5-874e-4a67-9d85-54ed32f01737&pf_rd_p=7757a8b5-874e-4a67-9d85-54ed32f01737&pf_rd_r=JZKK7TJ1X1GEZYGWBMPD&pd_rd_wg=uwPVx&pd_rd_r=5a826dd3-cfbf-40d6-b6e5-90a565eeaf12&pd_rd_i=198508659X&psc=1][operating systems: three easy pieces]]
+**** [[https://cs3210.cc.gatech.edu/r/unix6.pdf][a commentary on the sixth edition unix operating system]]
+*** compiler + interpreter
+**** [[https://www.amazon.com/Crafting-Interpreters-Robert-Nystrom/dp/0990582930?crid=2QDLX0DS3MQMO&keywords=crafting+interpreters&qid=1662349194&sprefix=crafting+interprete,aps,246&sr=8-1&linkCode=sl1&tag=systemcrafter-20&linkId=4ebc0d79673535a81e79d91cd1771dc8&language=en_US&ref_=as_li_ss_tl][crafting interpreters]]
+**** [[https://kupdf.net/download/steven-s-muchnick-advanced-compiler-design-and_5a991f80e2b6f50c26845592_pdf][advanced compiler design implementation]]
+**** [[https://www-2.dc.uba.ar/staff/becher/dragon.pdf][the dragon book]]
+**** [[http://acs.pub.ro/~cpop/SMPA/Computer%20Architecture%20A%20Quantitative%20Approach%20(5th%20edition).pdf][computer architecture: a quantitative appraoch]]
+*** [[https://monoskop.org/images/e/e0/Raymond_Eric_S_The_Cathedral_and_the_Bazaar_rev_ed.pdf][cathedral and the brazzar]]
+*** [[http://www.exemark.com/FORTH/ChuckMooreBook.pdf][a problem-oriented langauge]]
+*** system architecture
+**** [[file:/C:/Users/terng/Downloads/vdoc.pub_the-locus-distributed-system-architecture.pdf][the LOCUS distributed system architecture]]
+**** [[file:/C:/Users/terng/Downloads/05331643-MIT.pdf][naming and synchronization in a decentralized computer system]]
+*** Unix
+**** [[https://web.mit.edu/~simsong/www/ugh.pdf][The UNIX-haters handbook]]
+**** [[http://www.acad.bg/ebook/ml/Society%20of%20Mind.pdf][society of mind]]
+*** Internet
+**** [[https://www.cs.csustan.edu/~john/classes/previous_semesters/CS3000_Communication_Networks/2015_02_Spring/Notes/chap20.html][Notes on chapter Twenty -- Internetwokring: concepts, achitecture, and protocols]]
 *** [[https://www.geeksforgeeks.org/top-10-books-that-every-programmer-must-read-once/][Top 10 Books That Every Programmer Must Read Once]]
 *** Real World Haskell
 Mentioned in Learning Functional Programming in Scala.
@@ -44,7 +83,9 @@ Mentioned in Learning Functional Programming in Scala.
 :PROPERTIES:
 :ID:       7e525176-5957-4e89-9558-21c3bd57bdb8
 :END:
-*** Paul Graham's Lisp Book, https://sep.yimg.com/ty/cdn/paulgraham/onlisp.pdf?t=1595850613&
+*** Lisp
+**** [[https://www.amazon.com/Lisp-Small-Pieces-Christian-Queinnec-ebook/dp/B00AKE1U6O?keywords=lisp+in+small+pieces&qid=1662349218&sprefix=lisp+in+smap,aps,179&sr=8-1&linkCode=sl1&tag=systemcrafter-20&linkId=ea0792ede8dc779d1fb5f77f1dfc1910&language=en_US&ref_=as_li_ss_tl][lisp in small pieces]]
+**** Paul Graham's Lisp Book, https://sep.yimg.com/ty/cdn/paulgraham/onlisp.pdf?t=1595850613&
 *** [[http://broiler.astrometry.net/~kilian/The_Art_of_Computer_Programming%20-%20Vol%201.pdf][The art of computer programming by Donald Knuth]]
 *** Performance Tools
 [[https://www.amazon.com/Performance-Tools-Addison-Wesley-Professional-Computing/dp/0136554822?crid=94QXI9ES5J3W&keywords=bpf+performance+tools&qid=1657162384&sprefix=bpf+performance+tools,aps,67&sr=8-1&linkCode=sl1&tag=djwarecg-20&linkId=00aea26e30e2902b925c2ca193169309&language=en_US&ref_=as_li_ss_tl][BPF Performance Tools]]

@@ -3,9 +3,41 @@
 #+filetags: www
 
 * Blog :blog:
-** TODO Brief Journey from Web 1 to Web 3
-** TODO A Note on Web's Neutrality.
+** TODO Brief Journey from Web 1 to Web 3.
 
+connect data (ARPANET) -> connect website (Internet) -> connect ideas (WWW) -> connect people (Web2) -> connect personal server (pub3 & Web5)
+
+A creation of WWW jumped start more sophisticated usage of hypermedia. In 1994, WWW's support for e-commerce was added to W3C standard -- an open standard for WWW, 5 years after WWW was proposed for the first time and 1 year after Mosaic was launched. Mosaic was an X-Window based GUI. Mosaic was the first X-Window based GUI browser that was compatible with all personal computer's hardware. This is the reason why 1994 -- a year after Mosaic was launched -- is now known as "Year of the Web" [fn:2]. This sequence of events should remind us that user experience is what drive technology's adoption.
+
+According to ref:294620700 [fn:2], CERN intended for the web to be opened to anyone and prevent the web to be locked up into proprietary system.
+#+name: 294620700
+#+BEGIN_QUOTE
+An essential point was that the web should remain an open standard for all to use and that no-one should lock it up into a proprietary system.
+#+END_QUOTE
+
+Unfortunately, web1 has evolved into web2 which, by design, implies that web2 company such as Facebook users data are locked up to few giant corporations. This is exactly what CERN worried about, see quote ref:294620700.
+
+In 1950, computer experts was able to get access to computer for a few minuite at a time to flip switch and put paper tape [fn:3]. In 1960, surprisingly, computer had become very inaccessible and very difficult to use due to attempt to be economically efficient as a result of batch processing machines. On average, one may get to run programs on computers 1 or 2 runs a day. 1960 used punched card and still no computer screen. I refers to 1950s and 1960s because I see similarity in today clouds-services in that users today, in 2022, finds cloud computing not accessible due to increase in complexity from building on old technology. New problems require new solution. Due to difficulty of using computers, John McCarthy proposed time-sharing computer ideas and gave birth to Multics. Later, Ken Thompson developed Unix on Multic. Unix was the attempts to create a layer of abstract on top of time sharing machine to avoid complexity of directly interacting with time sharing machine. To be exact, Unix abstracts experience of using terminal to interact with time sharing machine to an experience of resemble experienec of using personal computer. Similarly, due to difficulty of using cloud computing, Curtis Yarvin has invented Urbit with a goal to make cloud computing simpler and more accessible to non-technical users..
+
+Ken thompson was ask to comment on "what will be the future of operating system"? He replied as followed [fn:4]
+#+BEGIN_QUOTE
+I think, in general, operating systems are going to disappear because the home maintenance of the operating system is terrible ... My wife should not need to be system administrator to use computer... I think that the so-called evolution is that an operating system is going to be nothing but a screen that's shipped over a wire to the cloud...that should be the future... From a user's point of view, you will not be able to tell whether you're running on Amazon or Google or somebody else's piece of the cloud, and I hope that they would get together. Now, I have no hope for that. Absolutely no hope.
+#+END_QUOTE
+
+There is also a video on Youtube where Brian Kernighan made a comment that "UNIX was designed for programmers." [fn:5]
+
+Brain Kernighan was asked "What are the good ideas that didn't make it out of Bell Labs?" He replied [fn:6]
+#+BEGIN_SRC
+...Most of the tools had flavor of minimality of being small, compact, and good for their particular purposes ...  After moore laws came along, people forget about simplicity, so things became more baroque and rococo... Another things thing that seems to be lost is compatibility where its harder to get things to work together.
+#+END_SRC
+He added [fn:6]
+#+BEGIN_QUOTE
+Maybe the additional complexity came from internet revolution which introduce the idea that computers no longer need to be self-contained, but rather, they are devices that talk to other devices using a variety of networking technology...This is where we need to focus on making things work together and make them simpler.
+#+END_QUOTE
+
+
+
+** TODO A Note on Web's Neutrality.
 ** TODO A Note on Web's Universality.
 :PROPERTIES:
 :ID:       ae0bce22-11f8-4a31-b17f-543811393d2b
@@ -19,6 +51,7 @@
 
 #+attr_html: :width 500px
 [[file:./images/screenshot_20220627_200424.png]]
+
 ** TODO A Note on World Wide Web
 *** exchanging information was hard
 diffferent hardware, different software
@@ -31,6 +64,59 @@ for which operating system do we build
 *** "permissionless innovation"
 influence of "permissionless innovation" give the world Ebay, Twitter, Uber, and Amazon.
 *** decentralized was common back in the time of www creation, but what is not common is =universality=. (works anywhere with anything.)
+*** A creation of WWW jumped start more sophisticated usage of hypermedia. In 1994, WWW's support for e-commerce was added to W3C, 5 years after WWW was proposed for the first time and 1 year after Mosaic was launched. Mosaic was an X-Window based GUI. Mosaic was the first X-Window based GUI browser that was compatible with all personal computer's hardware. This is the reason why 1994 -- a year after Mosaic was launched -- is now known as "Year of the Web." This sequence of events should remind us that user experience is what drive technology's adoption.
+
+and This is when e-commerce were
+
+*** Bibliography :ignore:
+:PROPERTIES:
+:ID:       bf3d09de-8ce1-4bf2-a21e-51354767d839
+:END:
+bibliography:/home/awannaphasch2016/org/papers/org-mode-bibtex.bib
+** TODO Design of World Wide Web.
+:PROPERTIES:
+:ID:       0b5bbb2d-b58a-407d-b5a3-78558b0d8b8d
+:END:
+
+#+name: 44263648
+#+attr_html: :width 500px
+[[file:./images/screenshot_20220805_183355.png]]
+
+World Wide Web (WWW) was created as a part of information management with CERN [[cite:&berners1989information]]. Tim Berner-Lee recognized that CERN involves lots of ever-chaining projects and ideas which required a non-linear way of managing information. This is in contrast to Hierarchical information management which was a popular approach (and the only approach?) within CERN.
+
+In "Information Management: A Proposal," [[cite:&berners1989information]], Lee argued that hierarchical information management approach was not a
+
+In efficient way of managing information result in information loss which can sometimes be permanent. To be more precise, I quote from "Information Management: A Proposal." [[cite:&berners1989information]]
+#+BEGIN_QUOTE
+The technical details of past projects are sometimes lost forever, or only recovered after a detective investigation in an emergency. Often, the information has been recorded, it just cannot be found.
+#+END_QUOTE
+
+While internet was invented to connect information, WWW was invented to preserved information loss and, at the same time, increase efficiency to organize and maintain information within teams.
+
+ways to connects: hyperlink (text to text), commit-connect (connect new version of text, a modified text, to old version of the same text).
+
+Current implementation of smallest unit of connection are page, block, block-commit.
+
 
 *** Bibliography :ignore:
 bibliography:/home/awannaphasch2016/org/papers/org-mode-bibtex.bib
+** Html is a Bad Design. :html:design:
+:PROPERTIES:
+:ID:       6057238f-08fa-45be-8bef-c1146e4fcf6b
+:EXPORT_FILE_NAME: Html is a Bad Design
+:END:
+Alan Kay famously critique World Wide Web (WWW) where HTML is originated. He publicly dislike HTML as followed
+#+BEGIN_QUOTE
+Things like [HTML] happens when we let physicists play with computer.
+#+END_QUOTE
+
+He stated that HTML is a bad markup language because people who build HTML thinks their way of representing web page is the only way. He mentioned a (older and) better alternative to HTML is to define protocol based on ordered region on a tape --- back when tapes were still popular means of storage in 1950's. This protocol is more "dynamic" or "adaptive" in that the first regions that is read in to the machine define boundary of the rest of the region. This protocol is used in modern RAM to define regions -- such as swap files, files descriptors etc -- with an exception that the value of the first is decided by designers and the rest of the regions are kept.
+
+
+* Footnotes
+[fn:2] https://home.cern/science/computing/birth-web/short-history-web
+[fn:3] https://youtu.be/dsMKJKTOte0?t=965
+[fn:4] [[https://youtu.be/dsMKJKTOte0?t=3650][a video of ken thompson replied to a question "what will be the future of operating system."]]
+[fn:5] [[https://www.youtube.com/watch?v=v0ON23Y4W68&ab_channel=LexClips][UNIX was designed for programmers | Brian Kernighan and Lex Fridman]]
+[fn:6] [[https://www.youtube.com/watch?v=NE03ora3tBY&ab_channel=Computerphile][Bell Labs' Research (Prof Brian Kernighan) - Computerphile]]
+[fn:7] Alan Key mentioned the quote in https://www.youtube.com/watch?v=NTRLK2F_THY&ab_channel=TRIZInitiative

@@ -1,10 +1,26 @@
 #+TITLE: Articles To Read
 #+FILETAGS: LEARN read article
 
+
 * Incubation (to categorize article to read.)
 :PROPERTIES:
 :ID:       153fe617-875c-4802-a17e-a3aae1006c6e
 :END:
+** unqualified reservations
+https://www.unqualified-reservations.org/
+** porn shit
+How to hire a pornstar? https://www.google.com/search?q=pornstar+near+me&rlz=1C1CHBF_enUS941US941&oq=pornstar+near+me&aqs=chrome..69i57.3306j0j7&sourceid=chrome&ie=UTF-8
+- automate porn stuff
+  - https://www.google.com/search?q=automate+porn+download&rlz=1C1CHBF_enUS941US941&oq=automate+porn+download+&aqs=chrome..69i57.9775j0j7&sourceid=chrome&ie=UTF- 
+  - https://towardsdatascience.com/comparison-of-the-best-nsfw-image-moderation-apis-2018-84be8da65303
+  - https://blog.vicetemple.com/how-to-start-a-porn-site/
+  - https://www.quora.com/How-do-you-manage-your-porn-collection
+  - https://videohubapp.com/en/
+  - https://stashapp.cc/
+  - https://www.reddit.com/r/webdev/comments/g3hcbx/help_finding_a_porn_api/
+** proptech
+https://www.latch.com/
+https://therealdeal.com/miami/
 ** Amazing blogs or articles to boarden knowledge away from my responsibility :)
 :PROPERTIES:
 :ID:       5f9fa2aa-7920-42d3-8c5f-b4b586013aad
@@ -147,6 +163,31 @@ CLOCK: [2022-03-13 Sun 23:28]--[2022-03-13 Sun 23:29] =>  0:01
 :END:
 [2022-03-17 Thu 02:05]
 [[file:~/Scratches/scala/playground1/Main.scala::// println(]]
+** personal knowledge management (PKM)
+*** PKM infrastructure of BeepBoop
+https://beepb00p.xyz/myinfra.html
+** latex
+*** writing resume in latex
+:PROPERTIES:
+:ID:       c6812d40-c370-4898-826f-304d5fcd8581
+:END:
+https://medium.com/@primogodec/how-did-i-design-my-cv-in-latex-bb4e5cc9f5fd
+https://www.youtube.com/watch?v=S6tYHWAQKIM&ab_channel=MatheusAugustodaSilva
+https://www.youtube.com/watch?v=-TRcPIPkZz8&ab_channel=QuantitativeBytes
+https://www.youtube.com/watch?v=RyhQk8IoRV0&ab_channel=PhysicsMatters
+https://www.youtube.com/watch?v=pudH9exMH7c&ab_channel=RITSEC
+https://www.overleaf.com/learn/latex/How_to_write_a_LaTeX_class_file_and_design_your_own_CV_(Part_1)
+*** Latex + other writing workflow
+:PROPERTIES:
+:ID:       c87b21c3-f1f3-4859-acf6-0771e793b784
+:END:
+https://www.reddit.com/r/emacs/comments/g8ecpj/comment/foo64ge/
+https://castel.dev/post/research-workflow/
+https://github.com/cdominik/cdlatex
+https://www.youtube.com/watch?v=avn7-aVpP9I&ab_channel=ZeebaTV
+https://www.youtube.com/watch?v=mLzFJcLpDFI&ab_channel=ProtesilaosStavrou
+https://www.youtube.com/watch?v=if1W58SrClk&ab_channel=NiklasEklund
+https://github.com/tecosaur/LaTeX-auto-activating-snippets
 * Learning how to learn
 :PROPERTIES:
 :ID:       02780681-6e1e-440a-8c11-f14291322dea
@@ -161,7 +202,170 @@ CLOCK: [2022-03-04 Fri 23:33]--[2022-03-04 Fri 23:34] =>  0:01
 :END:
 [2022-03-04 Fri 23:33]
 [[file:~/org/my-resume.org::*LaTeX Config][LaTeX Config]]
+
 * Programming Articles
+** [[https://security.stackexchange.com/questions/168452/how-is-sandboxing-implemented][how is sandboxing implemented?]]
+** operating system
+*** journalctl (this info should help me improve OS debugging.)
+https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs
+*** [[https://blog.aqwari.net/9p/][writing a 9p server from scratch]]
+*** [[http://9p.io/plan9/about.html][plan 9 from bell labs]]
+*** wsl2
+**** Guix on WSL2
+https://gist.github.com/giuliano108/49ec5bd0a9339db98535bc793ceb5ab4
+** file system
+*** [[https://www.geeksforgeeks.org/file-system-implementation-in-operating-system/][file system implementation in operating system]]
+** [[https://stackoverflow.com/questions/6852189/python-and-smalltalk-metaprogramming-capabilities-comparison][python and smalltalk - metaprogramming capabilities comparison]]
+** [[https://blog.metaobject.com/2019/03/lisp-macros-delayed-evaluation-and.html][lisp macros, delayed evaluation and the evolution of smalltalk]]
+** [[https://stackoverflow.com/questions/432922/significant-new-inventions-in-computing-since-1980][Significant new inventions in computing since 1980]]
+** [[https://www3.nd.edu/~pbui/teaching/cse.30341.fa18/project06.html][Implementation of simple file system]]
+** [[https://insearchofsecrets.com/2014/08/04/lisp-smalltalk-and-the-power-of-symmetry/][Lips, Smalltalk, and the Power of Symmetry]]
+** compiler
+*** [[https://ieeexplore.ieee.org/abstract/document/9796463?casa_token=Fjb_AsaNmukAAAAA:KF7itRBtwZ2yy72fL5Meg8Yva4y7joplQHSZQdSAOUTKtT2Jk4w11Z_C1BbRxXexXg5ww-A][NEMIANA: cross-platform execution migration for debugging]]
+** debugger
+*** [[https://research.ibm.com/publications/a-case-for-cross-domain-observability-to-debug-performance-issues-in-microservices][a case for cross-domain observability to debug performance issues in microservices]]
+*** [[https://scholar.google.com/scholar?hl=en&as_sdt=0%2C10&as_ylo=2022&q=tools+for+cloud+computing+debug&btnG][tools for cloud computing debug]]=
+** Lisp
+*** https://news.ycombinator.com/item?id=14727881
+** programming language
+*** [[https://acorwin.com/2016/05/07/why-is-no-one-writing-language-runtimes/][why is no one writing language runtimes]]
+*** [[https://joshondesign.com/2013/03/05/ometa1][a magically delicious wordprocessor with OMeta]]
+*** [[https://www.google.com/search?q=alex+warth+use+ometa+to+build+ometa&rlz=1C1CHBF_enUS941US941&oq=alex+warth+use+ometa+to+build+ometa&aqs=chrome..69i57.7181j0j7&sourceid=chrome&ie=UTF-8][alex warth use ometa to build ometa search result]]
+*** [[https://news.ycombinator.com/item?id=13035577][what does alan kay think of functional programming?]]
+** smalltalk
+*** [[https://www.reddit.com/r/programming/comments/9bf34/alan_kay_were_running_on_fumes_technologically/][alan kay: "we're running on fumes technologically today. the sad truth is that 20 years or so of commercialization have almost ocmpletely missed the point of what personal computing is about."]]
+*** [[https://www.cs.virginia.edu/~evans/cs655/readings/smalltalk.html][design principles behind smalltalk]]
+*** [[https://news.ycombinator.com/item?id=11939851#11940893][Alan kay has agreed to do an AMA on hacker news]]
+*** [[https://news.ycombinator.com/item?id=14333824#:~:text=%3E-,Macros%20just%20don't%20fit%20into%20Smalltalk%3B%20they've,the%20developers%20are%20using%20it][hacker news: smalltalk doesn't need macros because it has classes instead.]].
+** Cloud related
+:PROPERTIES:
+:ID:       c19a575b-456b-45c8-8070-afde9cfd6877
+:END:
+*** [[https://www.youtube.com/watch?v=_8mbJ3PGVUk&ab_channel=AWSEvents][aws re:invent 2021 - what's new in serverless]]
+*** [[https://www.youtube.com/watch?v=N74AIXPgH7Q&t=15s&ab_channel=Postman][building clodu-agnostic severless apis: eric swildens, nimberlla | post/con 2019]]
+*** [[https://medium.com/pragmatic-programmers/robots-in-the-cloud-858a79ab05a9][robots in the cloud]]
+*** [[https://medium.com/@michael2012zhao_67085/webassembly-for-cloud-workloads-a2bd229b4a12][webassembly for cloud workloads]]
+*** [[https://learnk8s.io/visualise-dependencies-kubernetes][how to you virtualized dependencies in your kubernetes YAML files?]]
+*** [[https://dale-bingham-soteriasoftware.medium.com/using-nats-to-implement-service-mesh-functionality-part-1-service-discovery-5f2e6088843b][using NATS to implement service mesh functionality, part 1: service discovery]]
+*** [[https://medium.com/nerd-for-tech/building-cloud-native-apps-part-1-393d250cf107#:~:text=Container%20technologies%20do%20not%20require,create%20the%20Cloud%20Actor%20Model][multi cloud application: part 1]].
+*** webassembly (wasm)
+**** [[https://news.ycombinator.com/item?id=14342511][opinion on future impact of wasm]]
+**** [[https://www.chrislynch.link/tech/why-i-think-webassembly-is-a-bad-idea][why i think webassembly is a bad idea]]
+**** [[https://charted.space/orthogonal-persistence.html][orthogonal persistence, webassembly, and rust]]
+**** [[https://github.com/wasmCloud/examples][wasmcloud examples]]
+**** [[https://medium.com/leaningtech/webvm-client-side-x86-virtual-machines-in-the-browser-40a60170b361][webVM: server-less x86 virtual machines in the brwoser]]
+**** [[https://twitter.com/alexpignotti/status/1488508101120638978?t=lfD02mmX5uP-fTANsROMvA&s=19][twitter: webassembly powered x86 virtual machines in the browser?]]
+** devops
+** web developers
+*** [[https://medium.com/javascript-scene/12-books-every-javascript-developer-should-read-9da76157fb3][12 books every javascript developer should read]]
+** [[https://jpaulm.github.io/fbp/][flow-based programming]]
+** internet + www + wiki
+*** [[https://gist.github.com/ldodds/a7f901c7f0118e83a645][xanadu summary]]
+*** [[https://xanadu.com/xUniverse-D6][the xanadu parallel universe: visibly connected pages and documents for a new kind of writing]]
+** Urbit
+*** https://www.youtube.com/watch?v=w31bCsJJ-GQ&ab_channel=dcSpark
+*** [[https://news.ycombinator.com/item?id=23397238][what is the urbit for?]]
+*** [[http://tunes.org/~iepos/joy.html][the thoery of concatenative combinators]]
+*** [[https://www.reddit.com/r/programming/comments/nktl3a/urbit_the_good_the_bad_and_the_insane/][urbit: the good, the bad, and the insance]]
+*** [[https://interestingsoup.com/running-urbit-arch64-on-a-k3s-pod/][deploying urbit on a raspberry pi 4 K3S pod]]
+*** [[https://urbit.org/blog/urbithost-interview][an interview with urbithost]]
+*** [[http://tunes.org/~iepos/joy.html][the theory of concatenative combinators]]
+*** [[https://news.ycombinator.com/item?id=23034608][hacker new: urbit os]]
+*** [[https://konfou.xyz/posts/urbit-an-alien-system-software/][Urbit, an alien system software]]
+:PROPERTIES:
+:ID:       cbfef957-1c64-4120-ac4d-81b1360c53c2
+:END:
+*** [[https://groups.google.com/a/urbit.org/g/dev/c/IfVD9ifYmlM][hosting a ship on kubernetes: how to make the ames UDP port accessible?]]
+*** [[https://hatryx-lastud.tlon.network/newsletter/urbit-takeoff-is-here][Urbit Takeoff is Here]]
+*** [[https://holo.host/][holo: distributed marketplace for cloud hosting peer to peer applications]]
+*** [[https://harvesterhci.io/][harvester: the open source infrastructure (HCI) solution for a cloud native world]]
+*** [[https://github.com/urbit/awesome-urbit][urbit awesome]]
+** text editor + ide + interactive environment
+*** livly kernel
+**** [[https://lively-next.org/][livelye kernel: doc]]
+**** [[https://github.com/LivelyKernel/lively.next][lively.next]]
+*** glamorious toolkit (GT)
+**** [[https://www.youtube.com/watch?v=TgF4b0-DHhc&list=PLfrs5bwLJOoBtfhXJ4mqcQ4ktpQOEBTvP&index=4&ab_channel=GlamorousToolkit][personal server using glamorous toolkist]]
+**** [[https://twitter.com/offrayLC/status/1483821532661141514][tweet: implementing wiki in glamorious toolkit]]
+**** [[https://medium.com/@girba][tudor girba blogs]]
+**** [[https://lepiter.io/feenk/][feenk blog]]
+**** [[https://lepiter.io/feenk/introducing-lepiter--knowledge-management--e2p6apqsz5npq7m4xte0kkywn//][introducing lepiter: knowledge managment + multi-language notebooks + moldable devlopement]]
+*** [[https://www.youtube.com/watch?v=s_o8dwzRlu4&ab_channel=TechWorldwithNana][cloudmacs]]
+*** [[https://github.com/omar-polo/sam.el][sam.el]]
+*** emacs
+**** connect edebug to repl
+https://emacs.stackexchange.com/questions/36918/edebug-repl-ielm
+**** [[https://notes.alexkehayias.com/emacs-in-the-browser-using-codespaces/][emacs in the browser using codespace]]
+**** system admins with emacs
+https://www.reddit.com/r/emacs/comments/cj17xe/system_administration_with_emacs/
+**** space repetition
+***** org drill + org agende
+https://numbersmithy.com/spaced-repetition-in-emacs-org-mode/
+***** plain implementation
+https://ag91.github.io/blog/2020/09/04/the-poor-org-user-spaced-repetition/
+**** [[https://github.com/ag91/moldable-emacs][moldable emacs]]
+**** https://github.com/ag91/code-compass
+**** [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Input-to-Processes.html][39.7 sending input to processes]]
+**** [[https://github.com/ag91][ag91's github has lots of cool emacs projects]]
+**** Emacs packages to explore
+***** personal finance (alternative to ledger)
+[[https://github.com/md-arif-shaikh/expenses][Expense]]
+***** neo4j in emacs.
+https://github.com/tmtxt/n4js.el
+***** docker mode by Shane
+https://mullikine.github.io/posts/docker-mode-el/
+***** stock tracker
+https://github.com/beacoder/stock-tracker
+***** gcloud-tramp
+https://gist.github.com/jackrusher/36c80a2fd6a8fe8ddf46bc7e408ae1f9
+***** cloudmacs
+ https://github.com/karlicoss/cloudmacs
+***** karlicoss has lots of cool projects that can be integrate in my workflow
+https://github.com/karlicoss
+****** promnesia
+https://github.com/karlicoss/promnesia#motivation
+***** Use this hugo theme
+https://github.com/jborichevskiy/hugo-theme-hello-friend
+***** emacs as restclient replacement
+https://github.com/alf/ob-restclient.el
+https://www.reddit.com/r/emacs/comments/kl54j3/using_emacs_orgmode_as_rest_client_replacement/
+https://www.google.com/search?q=rest+client+mode+to+org+bable&rlz=1C1CHBF_enUS941US941&oq=rest+client+mode+to+org+bable&aqs=chrome..69i57j33i10i160l2.6088j0j7&sourceid=chrome&ie=UTF-8
+***** Emacs screen recording.
+https://metaredux.com/posts/2019/12/08/recording-screencasts-with-emacs.html
+***** commandline tools
+****** awesome console services
+https://github.com/chubin/awesome-console-services#Geolocation
+****** cheat sheet
+https://github.com/chubin/cheat.sh
+***** Christopher Mackinga's github (lots of Bash)
+https://github.com/Nan0Scho1ar?page=2&tab=repositories
+
+**** emacs + doom emacs 
+:PROPERTIES:
+:ID:       a2904e71-20ea-45a8-9dc7-cb8caa7a166d
+:END:
+https://www.reddit.com/r/emacs/comments/ucldkz/are_we_living_in_the_golden_age_of_emacs/
+https://www.murilopereira.com/emacs-from-catching-up-to-getting-ahead/
+https://www.sastibe.de/2018/05/2018-05-11-emacs-org-mode-rest-apis-stocks/
+https://vxlabs.com/2017/06/03/querying-restful-webservices-into-emacs-orgmode-tables/
+** [[https://www.medialit.org/reading-room/john-culkin-sj-man-who-invented-media-literacy-1928-1993][john culkin, sj: the man who invented media literacy 1928 - 1993]]
+** web3 + blockchain
+*** multi chain wallter
+https://blockchain.works-hub.com/learn/working-at-multis-use-clojure-to-build-the-best-crypto-wallet-88978
+*** [[https://nakamotoinstitute.org/authors/timothy-c-may/][Timothy c. May's blog]]
+*** [[https://cryptovc.substack.com/p/token-web3api-web3-wasm-runtime-for][web3api - web3 wasm runtime for universally compatible smart contract APIs]]
+*** [[https://www.youtube.com/watch?v=qUZuaNkEvGU&ab_channel=FutureState][solid:inrupt]]
+*** [[https://www.youtube.com/watch?v=XYtfAMBWrnU&ab_channel=OutlierVentures][an overview of solid and a comparison to sovrin]]
+
+** artificial intelligence
+*** [[https://devops.com/blackswan-technologies-launches-worlds-first-ai-operating-system-raises-28-million-in-funding-to-pioneer-next-generation-of-enterprise-software/][blackswan technologies launches world's first ai operating system, raises $28 million in funding to pioneer next generation of enterprise software]]
+** Cyberpunk
+*** [[https://news.ycombinator.com/item?id=965982][Aaron Swartz: How I Hire Programmers]]
+*** [[http://cds.cern.ch/record/2639699/files/Proposal_Nov-1990.pdf][worldwideweb proposal for a hypertext project]]
+*** [[http://pespmc1.vub.ac.be/Papers/StructuringKnowledge.html][distinction and entailment types]]
+** Unix
+*** [[http://www.princeton.edu/~hos/frs122/unixhist/chen.htm][The dissemination of Unix, with a focus on what went on within Bell labs]]
+
 ** ScalaCheck Website and the Property-based testing page on that site
 mentioned on Page 204 of learning functional programing in scala book.
 ** Jesper Nordenberg on "Haskell vs Scala"
@@ -175,6 +379,7 @@ CLOCK: [2022-02-20 Sun 13:45]--[2022-02-20 Sun 13:46] =>  0:01
 :PROPERTIES:
 :ID:       77c450da-115d-45ba-b64f-d4cab1a141b2
 :END:
+
 * Investing
 ** [[https://aswathdamodaran.blogspot.com/2022/05/in-search-of-steady-state-inflation.html][aswath damodaran's blog]]
 * Token Engineering and Tokenomics

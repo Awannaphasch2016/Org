@@ -675,14 +675,14 @@ A miner choose whether to commit pool cannibalism or mine honestly.
 ***** Proof of Work (PoW)
 ***** Proof of Space (PoSpace)
 
-** History of blockchain
+** TODO History of blockchain
 *** Lesson learned from Etherem
 :PROPERTIES:
 :ID:       1a6f88be-7df9-4844-9963-221d3dda4345
 :END:
 
 DAO hardfork (mentioned at https://youtu.be/VcuEm53f5GM?list=PLM4u6XbiXf5qXKZixrDpN3ZSwH_8UabPq&t=1002) [fn:12].
-** Data Analysis on Blockchain Data
+** TODO Data Analysis on Blockchain Data
 :PROPERTIES:
 :ID:       4538520e-695c-46fb-b653-f77c229cb9d7
 :END:

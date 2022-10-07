@@ -1,0 +1,31 @@
+#+title: Hoon Note
+
+* Hoon GTD
+:PROPERTIES:
+:ID:       7775985c-3a1f-4660-8203-fb62296bc1a8
+:END:
+** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+** Notes :note:
+*** Hoon School Live (HSL) meeting.
+**** https://us06web.zoom.us/j/83009256760
+:PROPERTIES:
+:ID:       2912d23c-3894-484a-b2f7-96d6d94f3204
+:END:
+** Meeting :meeting:
+*** Hoon School Live Office hour
+**** Mon 8 a.m US Central Time with =~dinlep-rambep=
+**** Mon 8 p.m US Central Time with =~tinnus-mapbus=
+**** Wed 6 a.m US Central Time with =~dinlep-rambep=
+**** Wed 8 a.m US Central Time with =~tinnus-mapbus=
+** Schedule
+*** recurring :recurring:
+*** non-recurring :nonrecurring:
+** Delegation :waiting:
+** Tasks
+*** actionable :actionable:
+*** incubation :incubation:

@@ -1,0 +1,339 @@
+#+title: Counsel Jq Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: counsel-jq
+
+* Blog :blog:
+:PROPERTIES:
+:ID:       70f0e1c0-3737-4d1a-adba-a319d8ac8db5
+:END:
+** TODO X Implementation where X = Emacs' counsel-js. :implementation:
+:PROPERTIES:
+:ID:       6e8fb41b-dbaa-4b1a-85a8-62962d6af3e9
+:EXPORT_FILE_NAME: X Implementation where X = Emacs' counsel-js
+:END:
+
+Vocabulary of Ivy package
+- COLLECTION
+- COMPLETION
+- x-cand
+- ACTION
+- PROMPT
+- PREDICATE
+
+I write a blog titled "X implementation where X = Emacs' general completion functions"  which investigate how completion functions in emacs works in general.
+
+
+~counsel-jq-json~ specifies command will be passed to jq.
+#+BEGIN_SRC emacs-lisp
+(defun counsel-jq-json (&optional query)
+  "Call 'jq' with the QUERY with a default of '.'."
+  (with-current-buffer
+      ;; The user entered the `counsel-jq` query in the minibuffer.
+      ;; This expression uses the most recent buffer ivy-read was
+      ;; invoked from.
+      (ivy-state-buffer ivy-last)
+    (call-process-region
+     (point-min)
+     (point-max)
+     counsel-jq-command
+     nil
+     counsel-jq-buffer
+     nil
+     "-M"
+     (or query "."))))
+#+END_SRC
+
+Hence, =query= argument must be understood by =jq=. I wrote blog titled "Using jq command tools to filter JSON" which summarize =jq='s syntax.
+
+To modify prompt completion behavior, I need to figure out how ~counsel-jq~ and ~ivy-read~. ~counsel-jq~ doesn't directly call ~counsel-jq-json~, instead it calls ~counsel-jq-query-function~ which simply is a wrapper of ~counsel-jq-json~.
+
+#+name: 7052686176
+#+BEGIN_SRC emacs-lisp :noeval
+(print ivy-last)
+#+END_SRC
+
+Code ref:7052686176 output the following as an example.
+
+#+name: 2205742070
+#+BEGIN_SRC emacs-lisp :noeval
+#s(ivy-state "jq query: " counsel-jq-query-function nil nil "." nil nil nil nil nil #<frame  *Minibuf-1* – Doom Emacs 0x78b1590> #<window 110 on package.json> #<buffer package.json> nil
+             (1
+              ("s"
+               (lambda
+                 (_)
+                 (display-buffer counsel-jq-buffer))
+               "show")
+              ("i" ivy--action-insert "insert")
+              ("w" ivy--action-copy "copy"))
+             nil ivy--regex-plus nil t nil "/home/awannaphasch2016/Downloads/npm/Examples/calculator/" counsel-jq
+             #("\"calculator\"" 0 12
+               (fontified nil))
+             nil t nil
+             (:ivy-data
+              (:all-candidates
+               (#("\"calculator\"" 0 12
+                  (fontified nil)))
+               :text ".name")))
+#+END_SRC
+
+To understand =ivy-state=, my focus naturally shifted to ~ivy--acition-X~ and ~(:ivy-data [...])~ from output ref:2205742070. From inspecting ref:2205742070 output of ~ivy-last~ whose struct type is ~ivy-state~, I asked myself the following question.
+
+#+name: 1000834497
+#+BEGIN_QUOTE
+What exactly is ~ivy--action-X~?
+#+END_QUOTE
+
+
+~ivy-call~ checks whether there are =ivy's action= to be applied to =ivy-last= whose value is alist data structure. I found =ivy-last= to be interesting. From ivy-last's value shown in ref:2205742070, evaluate ~(ivy-state-action ivy-last)~ outputs the following ref:8445376317.
+
+#+name: 8445376317
+#+BEGIN_SRC emacs-lisp :noeval
+(1
+ ("s"
+  (lambda
+    (_)
+    (display-buffer counsel-jq-buffer))
+  "show")
+ ("i" ivy--action-insert "insert")
+ ("w" ivy--action-copy "copy"))
+#+END_SRC
+
+~ivy--get-action~ is implemented to use the first element of alist as "index pointer" to indicate which actions will be selected. From output ref:8445376317, ~("s" (lambda (_) (display-buffer counsel-jq-buffer)) "show")~ will be picked. Thinking about it more. I guess there are not many other ways to do it.
+
+The last thing to investigate is the following section in ~ivy-read~. Next is to answer
+
+#+name: 457133600
+#+BEGIN_QUOTE
+how does ivy-read implement "read a string in the minibuffer, with completion."
+#+END_QUOTE
+
+#+BEGIN_SRC emacs-lisp
+(unwind-protect
+         (minibuffer-with-setup-hook
+             #'ivy--minibuffer-setup
+           (let* ((hist (or history 'ivy-history))
+                  (minibuffer-completion-table collection)
+                  (minibuffer-completion-predicate predicate)
+                  (ivy-height (ivy--height caller))
+                  (resize-mini-windows (unless (display-graphic-p)
+                                         'grow-only)))
+             (if (and ivy-auto-select-single-candidate
+                      ivy--all-candidates
+                      (null (cdr ivy--all-candidates)))
+                 (progn
+                   (setf (ivy-state-current ivy-last)
+                         (car ivy--all-candidates))
+                   (setq ivy-exit 'done))
+               (condition-case err
+                   (read-from-minibuffer
+                    prompt
+                    (ivy-state-initial-input ivy-last)
+                    (make-composed-keymap keymap ivy-minibuffer-map)
+                    nil
+                    hist)
+                 (error
+                  (unless (equal err '(error "Selecting deleted buffer"))
+                    (signal (car err) (cdr err))))))
+             (when (eq ivy-exit 'done)
+               (ivy--update-history hist))))
+      (let ((session (or (plist-get extra-props :session)
+                         (unless (or (minibufferp)
+                                     (null (ivy-state-action ivy-last))
+                                     (eq (ivy--get-action ivy-last) #'identity))
+                           caller))))
+        (when session
+          (setf (ivy-state-extra-props ivy-last)
+                (plist-put extra-props :ivy-data `(:all-candidates ,ivy--all-candidates
+                                                   :text ,ivy-text)))
+          (ivy--alist-set 'ivy--sessions session ivy-last)))
+      (ivy--cleanup))
+#+END_SRC
+
+So far, I understand how minibuffer is constructed and how selected option is processed and output to output file, such as =*jq-json*=.
+
+What I want to understand how does ~ivy-read~ update =CANDIDATE= while I update =ivy-minibuffer= by typing into prompt?
+
+Conceptually, implementation of ~ivy-read~ is easy to understand. By design, ivy implements "action," "configuration," and "functionality" separately. I define the referenced terminologies as followed
+- I define "action" as a command that will be run, read sequentially to compose specific ivy's behavior, hence ivy's behaviors can be recorded and replayed accurately while remain fully customizable.
+- I define "functionality" as functions defined by ~defun~.
+
+From ~ivy-configure~, it is easy to see that configuration is implemented into separate "alist set" into "window," "format," "display," for example. These "alist set" are customizable to =caller= which is manually passed whose value is name of function that call ~ivy-read~.
+
+Due to this modular implementation, =caller= can selectively pass custom value as keys to assign to configurable "alist set." ref:1266963050 shows ivy's usage example.
+
+#+name: 1266963050
+#+BEGIN_SRC emacs-lisp :noeval
+(ivy-read "jq query: " #'counsel-jq-query-function
+            :action #'(1
+                      ("s" (lambda (_)
+                             (display-buffer counsel-jq-buffer))
+                             "show"))
+            :initial-input "."
+            :dynamic-collection t
+            :caller 'counsel-jq)
+#+END_SRC
+
+At this point, I figure that the "auto update while typing to prompt" behavior is not defined by =ivy= package, instead, I figure it could be defined as behavior of =minibuffer=. This is because while I was debugging ~read-from-minibuffer~ also have the behavior.
+
+#+BEGIN_SRC emacs-lisp :noeval
+(cl-defun ivy-read
+    [...]
+    (read-from-minibuffer
+                        prompt
+                        (ivy-state-initial-input ivy-last)
+                        (make-composed-keymap keymap ivy-minibuffer-map)
+                        nil
+                        hist)
+    [...]
+)
+#+END_SRC
+
+I found that value of =COLLECTION= is a function whose job is to filter subset of list of all =CANDIDATE=. I also found that when I type input to prompt of ~counsel-jq~, a list of =CANDIDATE= are updated as the prompt changes. That's it. =COLLECTION= is applied per character changes.
+
+Knowing that list is update per changer changes, ~ivy-read~'s documentation confirms that =UPDATE-FN= is the one that does the update, see ref:5610136464.
+
+#+name: 5610136464
+#+BEGIN_SRC org :noeval
+UPDATE-FN is called each time the candidate list is re-displayed.
+#+END_SRC
+
+Reading documented description and reading functions' name, I decided to explore ~ivy--update-minibuffer~. which is called by ~ivy--exhibit~. I think ~ivy--exhibit~ is responsible for replacing "old minibuffer" to "new minibuffer" among other clean up work.
+
+Investigating ~ivy--update-minibuffer~, I suspect that ~ivy--magic-file-slash~ may be responsible for the "auto update while typing to prompt" behavior that I wanted. From ~ivy--update-minibuffer~ code shown in ref:239916440,
+
+#+name: 239916440
+#+BEGIN_SRC emacs-lisp :noeval
+(defun ivy--update-minibuffer ()
+  (prog1
+      (if (ivy-state-dynamic-collection ivy-last)
+          ;; while-no-input would cause annoying
+          ;; "Waiting for process to die...done" message interruptions
+          (let ((inhibit-message t)
+                coll in-progress)
+            (unless (or (equal ivy--old-text ivy-text)
+                        (eq this-command 'ivy-resume))
+              (while-no-input
+                (setq coll (ivy--dynamic-collection-cands ivy-text))
+                (when (eq coll 0)
+                  (setq coll nil)
+                  (setq ivy--old-re nil)
+                  (setq in-progress t))
+                (setq ivy--all-candidates (ivy--sort-maybe coll))))
+            (when (eq ivy--all-candidates 0)
+              (setq ivy--all-candidates nil)
+              (setq ivy--old-re nil)
+              (setq in-progress t))
+            (when (or ivy--all-candidates
+                      (and (not (get-process " *counsel*"))
+                           (not in-progress)))
+              (ivy--set-index-dynamic-collection)
+              (ivy--format ivy--all-candidates)))
+        (cond (ivy--directory
+               (cond ((or (string= "~/" ivy-text)
+                          (and (string= "~" ivy-text)
+                               ivy-magic-tilde))
+                      (ivy--cd (ivy--magic-tilde-directory ivy--directory)))
+                     ((string-match "/\\'" ivy-text)
+                      (ivy--magic-file-slash))))
+              ((eq (ivy-state-collection ivy-last) #'internal-complete-buffer)
+               (when (or (and (string-match "\\` " ivy-text)
+                              (not (string-match "\\` " ivy--old-text)))
+                         (and (string-match "\\` " ivy--old-text)
+                              (not (string-match "\\` " ivy-text))))
+                 (setq ivy--all-candidates
+                       (if (= (string-to-char ivy-text) ?\s)
+                           (ivy--buffer-list " ")
+                         (ivy--buffer-list "" ivy-use-virtual-buffers)))
+                 (setq ivy--old-re nil))))
+        (with-current-buffer (ivy-state-buffer ivy-last)
+          (ivy--format
+           (ivy--filter ivy-text ivy--all-candidates))))
+    (setq ivy--old-text ivy-text)))
+#+END_SRC
+
+According to ref:239916440, ~ivy--update-minibuffer~ updates and filtering =CANDIDATE=. For more detail, ref:865141317 set =ivy--all-candidates= by calling ~ivy--buffer-list~ which calls ~all-completions~. ~all-completions~ is documented as "Search for partial matches to STRING in COLLECTION," see its documentation for more information. In short, ~all-completions~ are a filtering mechanism.
+
+#+name: 865141317
+#+BEGIN_SRC emacs-lisp :noeval
+(setq ivy--all-candidates
+      (if (= (string-to-char ivy-text) ?\s)
+          (ivy--buffer-list " ")
+        (ivy--buffer-list "" ivy-use-virtual-buffers)))
+#+END_SRC
+
+So far, I know how candidates are filtered, but I still need to know "which function does ivy calls to completes prompt when pressing TAB?"
+
+Using ~helpful-key~, I found that pressing =TAB= in "ivy minibuffer" calls ~ivy-partial-or-done~ which calls ~ivy-partial~. ~ivy-partial~ is documented as followed:
+
+#+BEGIN_SRC org :noeval
+Complete the minibuffer text as much as possible.
+#+END_SRC
+
+According to ~ivy-partial~, tab completion insertion is done with the insert expression shown in ref:267770646.
+
+#+name: 267770646
+#+BEGIN_SRC emacs-lisp :noeval
+(defun ivy-partial ()
+  "Complete the minibuffer text as much as possible."
+  (interactive)
+  [...]
+      (insert
+       (ivy-state-current ivy-last))
+   [...]
+)
+#+END_SRC
+
+Interestingly, I found that value of ~ivy-state-current~ are assigned as =text that are currently highlighted in ivy minibuffer=. Note that ~ivy-state-current~ by itself doesn't provide much information about what value it holds. It is used in multiple functions, and each function treats ~ivy-state-current~ as if it uses different value. To know how ~ivy-state-current~ is updated, we need to search for code that change value of =ivy-state-current= such as ref:2265496590.
+
+#+name: 2265496590
+#+BEGIN_SRC emacs-lisp :noeval
+(setf (ivy-state-current ivy-last)
+      (car ivy--all-candidates))
+#+END_SRC
+
+
+
+Another function to explore is ~ivy-completing-read~ which could help explains the "auto update while typing to prompt" behavior that I am investigating.
+
+*** Maybe, I need to investigate the following more.
+- I suspect that the behavior that I am looking for classified as "completing behavior" and I found defun named ~ivy-completing-read~.
+- how recursive ~ivy-read~ work?
+- ~ivy-mode~ calls ~ivy-completing-read~ instead of ~ivy-read~ and the two functions doesn't call each other. How are the two functions connected?
+
+*** Investigation Note
+:PROPERTIES:
+:ID:       545c6df8-902c-4ea5-a83b-bbedc810c3ab
+:END:
+I narrowed investigation down to =dynamic-collection= and recursive ~ivy-read~.
+
+I found that dynamic collection and actions are used? and where are they called?
+
+Using ~+default/search-buffer~, There are two places that match "dynamic-collection defun": ~ivy--set-index-dynamic-collection~ and ~ivy--dynamic-collection-cands~ (where "cands" stands for "candidate")
+
+Upon future investigation, I notice that the two functions are called in ~ivy--update-minibuffer~ which is called by ~ivy-exhibit~.
+
+
+* Counsel-jq GTD
+** Habit :habit:
+:PROPERTIES:
+:CATEGORY: Habit
+:LOGGING:  DONE(!)
+:ARCHIVE:  %s_archive::* Habits
+:END:
+** Notes :note:
+** Meeting :meeting:
+** Schedule
+*** recurring :recurring:
+*** non-recurring :nonrecurring:
+** Delegation :waiting:
+** Tasks
+*** actionable :actionable:
+:PROPERTIES:
+:ID:       9c2aee1d-c659-4e26-ab17-d01cbbfa6d83
+:END:
+*** incubation :incubation:
+:PROPERTIES:
+:ID:       4f903ef4-f196-46ef-ade4-3f2cf4e1aa5f
+:END:
+**** list of possible improvment on counsel-jq
+***** when open counsel-jq and type "keys," list of keys are shown. I want to press TAB on the keys and it will automatically add the selected word in completion.

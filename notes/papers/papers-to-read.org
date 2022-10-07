@@ -1,0 +1,63 @@
+#+title: Papers To Read
+
+* Incubation
+:PROPERTIES:
+:ID:       adb79d19-43ae-41d4-b32d-18d82f2c47fc
+:END:
+** programming language
+*** [[https://www.infoq.com/articles/mop/#:~:text=Definition%204%3A%20Metamodel%20Oriented%20Programming,class%2Dbased%20cogent%2DDSL][metamodel oriented programming]].
+*** [[http://www.ibm-1401.info/Meta-II-schorre.pdf][a syntax-oriented compiler writing language]]
+** [[https://www.humprog.org/~stephen/research/papers/kell19unix-personal.pdf][ubix, plan 9 and the lurking smalltalk]]
+** [[http://doc.cat-v.org/bell_labs/structural_regexps/se.pdf][structural regular expression]]
+** [[http://doc.cat-v.org/bell_labs/utah2000/utah2000.pdf][systems software research is irrelevant]]
+** artificial intelligence (AI)
+*** [[https://exhibits.stanford.edu/ai/catalog/kf190cg0706][situations, actions, and causal laws]]
+** Unix
+*** [[https://dsf.berkeley.edu/cs262/unix.pdf][The UNIX time-sharing system]]
+** cyberpunk
+*** [[http://www.daviddfriedman.com/The_Machinery_of_Freedom_.pdf][The machinery of freedom]]
+*** [[https://groups.csail.mit.edu/mac/classes/6.805/articles/crypto/cypherpunks/may-crypto-manifesto.html][The crypto anarchaist manifesto]]
+** urbit
+*** [[http://www.vpri.org/pdf/rn2006002_nsfprop.pdf][steps toward the reinvention of programming a compact and practical model of personal computing as a self-exploratorium]]
+*** [[https://link.springer.com/chapter/10.1007/3-540-45809-3_15][The personal Server: changing the way we think about ubiquitous computing]]
+*** [[https://media.urbit.org/whitepaper.pdf][urbit: a solid-state interpreter]]
+*** [[http://www.roywant.com/cv/papers/2001/2001-05%20(Tech-Report)%20%20Personal%20Server%20Short%20paper.pdf][the personal server: the center of your ubiquitous world]]
+*** Realizing the information future: the inter and beyond (1994)
+*** [[https://www.academia.edu/7674084/An_alternative_history_of_Unix][An alternative history of Unix]]
+** Internet + www + wii + networking protocol
+*** [[https://dl.acm.org/doi/pdf/10.1145/2034574.2034812][frenetic: a network programming langauge]]
+*** [[https://ieeexplore.ieee.org/document/414637][fundamental design issues for the future internet]]
+*** [[https://www.w3.org/DesignIssues/][Architectural and philosophical points]]
+*** [[http://nms.lcs.mit.edu/6829-papers/bravenewworld.pdf][rethinking the desing of the internet: the end-to-end arguemnts vs the brave new world]]
+** distributed computing
+*** [[https://www.distributed-systems.net/my-data/papers/2000.osr-das.pdf][the distrbiuted asci supercomputer project]]
+*** [[https://www.google.com/search?q=distributed+super+computer+pdf&rlz=1C1CHBF_enUS941US941&oq=distributed+super+computer+pdf&aqs=chrome..69i57.13577j0j7&sourceid=chrome&ie=UTF-8][distrubted super computer search result]]
+** operating system
+*** [[https://www.hindawi.com/journals/ijrc/2016/2478907/][operating system conepts for reconfigurable computing: review and survey]]
+*** [[https://css.csail.mit.edu/6.824/2014/papers/plan9.pdf][plan 9 from bell labs]]
+*** [[https://dsf.berkeley.edu/cs262/unix.pdf][the UNIX time-sharing system]]
+** [[https://cr.yp.to/bib/1995/wirth.pdf][a plea for lean software]]
+** [[https://dl.acm.org/doi/pdf/10.1145/1283920.1283936][the 1980 ACM tying aware lecture: the emperor's old clothes by charles antony and richard hoare]]
+** glamorious toolkit (GT)
+*** [[https://dl.feenk.com/docs/2021-03-20-feenk-explainable-systems.pdf][explainable systems]]
+** language design
+*** [[https://dl.acm.org/doi/pdf/10.1145/1297081.1297086?casa_token=ue30hIDzLJAAAAAA:UjEJpdcbRA6NAgB2UjqMYinF9YxrFhXTVltCOyAqjnp97rX43a11tVF11xh0gVt64aOKLe6pKgpK][OMeta: an object-oriented language for pattern matching]]
+** original object oriented programming ( smalltalk, pharo )
+*** [[https://dl.acm.org/doi/pdf/10.1145/512760.512762][the smalltalk-27 programming system]]
+*** [[http://coweb.cc.gatech.edu:8888/squeakbook/uploads/back%20to%20the%20future.pdf][back to the future: the story of squeeak, a practical smalltalk written in itself]]
+** filesystem
+*** [[https://dl.acm.org/doi/pdf/10.1145/3465405][survey of distributed file system design choices]]
+*** [[https://www.usenix.org/legacy/event/hotos09/tech/full_papers/seltzer/seltzer.pdf][hierarchical file systems are dead]]
+*** [[https://dl.acm.org/doi/10.1145/3465405][survey of distributed file system design choices]]
+** web3 + blockchain
+*** [[https://basicattentiontoken.org/static-assets/documents/BasicAttentionTokenWhitePaper-4.pdf][basic attention token (BAT): blockchain based digital advertising]]
+*** [[https://v1.cosmos.network/resources/whitepaper][cosmos whitepaper]]
+** text editor + ide
+*** [[https://xi-editor.io/docs.html][how Xi works]]
+*** [[https://9p.io/sys/doc/acme/acme.pdf][acme: a user interface for programmers]]
+** [[http://www.lemis.com/grog/Documentation/PUS/porting_unix_software-complete.pdf][porting unix sfotware]]
+** compiler
+*** [[https://www.plantation-productions.com/Webster/RollYourOwn/CompilerBook/CHAP03.PDF][3 compilers construction and bootstrapping]]
+*** [[https://web.archive.org/web/20160327044521/www.colorforth.com/POL.htm][programming a problem-oriented-language]]
+** cloud
+*** [[https://people.mpi-sws.org/~rossberg/papers/Haas,%20Rossberg,%20Schuff,%20Titzer,%20Gohman,%20Wagner,%20Zakai,%20Bastien,%20Holman%20-%20Bringing%20the%20Web%20up%20to%20Speed%20with%20WebAssembly.pdf][bringing the web up to speed with web assembly]]

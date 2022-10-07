@@ -34,6 +34,10 @@ docker logs
 :ID:       ebb52e57-c112-48da-bdb3-64a0a32d6fcd
 :END:
 ** What Is X Where X Is Docker's Image? :docker_image:
+:PROPERTIES:
+:EXPORT_FILE_NAME: What Is X Where X Is Docker's Image?
+:ID:       2bfa257b-e0ac-4f11-952d-b4fe0a83bb8d
+:END:
 
 - Edit log
   - [2022-07-25 Mon]

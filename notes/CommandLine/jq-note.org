@@ -1,0 +1,38 @@
+#+title: Jq Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: jg cmd json
+
+* Blog :blog:
+** Using jq command tools to filter JSON. :json:
+:PROPERTIES:
+:EXPORT_FILE_NAME: Using jq command tools to filter JSON.
+:ID:       ad0cd82b-6a18-4acc-a156-fdf98d5d6661
+:END:
+This blog summarizes =jq= documentation's tutorial [fn:1].
+
+If you can fully understand what the following command do, you don't need read the rest of the blog. That's pretty much sum up all =jq= can do.
+#+BEGIN_SRC sh
+curl 'https://api.github.com/repos/stedolan/jq/commits?per_page=5' | jq '[.[] | {message: .commit.message, name: .commit.committer.name, parents: [.parents[].html_url]}]'
+#+END_SRC
+
+If you are still confused, read on.
+
+There are only 4 concepts in =jq= shown below.
+
+#+BEGIN_SRC sh :noeval
+
+# pipelining
+jq '.[] | {name: [.key[].childkey]} '
+
+# only apply to list
+jq '.[0]' # select first json from a list
+jq '.[]' # pass each json in a list one at a time.
+
+# apply to non-list
+jq '[[[[{name: .key.childkey},{name: .otherkey.childotherkey}]]]]' # only accept 1. nested lists of json 2. json
+
+
+#+END_SRC
+
+*** Footnotes
+[fn:1] https://stedolan.github.io/jq/tutorial/

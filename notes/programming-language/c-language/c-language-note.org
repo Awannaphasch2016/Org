@@ -1,0 +1,26 @@
+#+title: C Language Note
+
+stricter compiler flags
+#+name: 933045613
+#+BEGIN_SRC sh :noeval
+-Wall -Wextra -Werror -02 -std=c99 -pedantic
+#+END_SRC
+In summary, ~-Wall -Wextra -Werror~ flags specify preferences of what type of error to display and ~-std=c99 -pedantic~ flags specify from which specification standard should gcc compiler. That's it. Things that don't compile with specify standard will be considered as either error or warning.
+
+* pointer decay
+It's said that arrays "decay" into pointers. A C++ array declared as int numbers [5] cannot be re-pointed, i.e. you can't say numbers = 0x5a5aff23. More importantly the term decay signifies loss of type and dimension; numbers decay into int* by losing the dimension information (count 5) and the type is not int [5] any more. Look here for cases where the decay doesn't happen.
+
+* lsp installation
+** ccls
+#+BEGIN_SRC sh :noeval
+git clone --depth=1 --recursive https://github.com/MaskRay/ccls
+cd ccls
+
+# Download "Pre-Built Binaries" from https://releases.llvm.org/download.html
+# and unpack to /path/to/clang+llvm-xxx.
+# Do not unpack to a temporary directory, as the clang resource directory is hard-coded
+# into ccls at compile time!
+# See https://github.com/MaskRay/ccls/wiki/FAQ#verify-the-clang-resource-directory-is-correct
+cmake -H. -BRelease -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/path/to/clang+llvm-xxx
+cmake --build Release
+#+END_SRC

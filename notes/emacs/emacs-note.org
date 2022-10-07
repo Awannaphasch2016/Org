@@ -227,7 +227,7 @@ clone locally -> load-file, load-library, load-path (choose one depends on inter
 [fn:2] http://git.savannah.gnu.org/cgit/emacs.git/tree/
 [fn:3] https://github.com/emacs-mirror/emacs
 [fn:4] https://www.gnu.org/software/emacs/manual/html_node/eintr/Loading-Files.html
-** TODO Navigate Emacs info manual. Yes, you need to learn it because you can (efficiently) learn Emacs.
+** TODO Navigate Emacs info manual. Yes, you need to learn it before you can (efficiently) learn Emacs.
 a node is defined as
 #+BEGIN_QUOTE
 A node contains text describing a specific topic at a specific level of detail

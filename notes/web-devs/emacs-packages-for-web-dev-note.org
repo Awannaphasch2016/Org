@@ -1,0 +1,7 @@
+#+title: Emacs Packages For Web Dev Note
+
+* current packages
+** web-mode
+** emmet-mode
+** impatient-mode
+To use impatient mode you need to turn on =impatient-mode= then execute ~httpd-start~. By doing so, ~httpd-start~ will connect =impatient-mode= to =localhost:8080/imp=.

@@ -10,3 +10,20 @@
 :END:
 web1 (read web) => web2 (read-write web) => web3 (read-write-value web)
 web1 (local storage) => web2 (centralized storage) => web3 (decnetralized storage)
+
+*** Footnotes
+[fn:1] [[https://sites.cs.ucsb.edu/~almeroth/classes/F10.176A/papers/internet-history-09.pdf][A Brief History Of The Internet]]
+
+** TODO Transition from Ethereum 1.0 to Ethereum 2.0.
+:PROPERTIES:
+:ID:       65fbcd84-4b79-4b56-8f4b-a8e58abbc298
+:END:
+According to "A brief history of internet" [[cite:&leiner2009brief]], similar major transition of protocol occurred in the past during the beginning of invention of internet.
+#+BEGIN_QUOTE
+One of the more interesting challenges was the transition of the ARPANET host protocol from NCP to TCP/IP as of January1, 1983. This was a “flag-day” style transition, requiring all hosts to convert simultaneously or be left having to communicate via rather ad-hoc mechanisms. This transition was carefully planned within the community over several years before it actually took place and went surprisingly smoothly (but resulted in a distribution of buttons saying “I survived the TCP/IP transition”).
+#+END_QUOTE
+
+I found that. This transition is similar to transition from Ethereum 1.0 to Ethereum 2.0, but significantly more complexity.
+
+*** Bibliography :ignore:
+bibliography:/home/awannaphasch2016/org/papers/org-mode-bibtex.bib

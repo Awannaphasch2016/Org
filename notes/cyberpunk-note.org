@@ -1,0 +1,17 @@
+#+title: Cyberpunk Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: cyberpunk
+
+* Blog :blog:
+** TODO A Note on X where X = cyberpunk
+Before a man gained capability to manipulate electrons with science, at the point in which society was failing, there was urges to recreate a better society using ashes of maps of the past. For the first time in history, postmodernism provides a new perspective to recreate a totally different -- not better -- society unbounded by unforeseeable ever changing future.
+
+Fredric Jameson define cyberpunk moment as followed
+#+BEGIN_QUOTE
+cyberpunk, for all its energies and qualities, can be historically be interpreted as science fiction's doomed attempt at a counteroffensive, and a final effort to reconquer a readership alienated by the difficulties of contemporary science.
+#+END_QUOTE
+
+Essence of humans are to be the same. Essence of cyborgs are to be different. Because humans are composed of pre-defined parts, but composition of cyborgs are upper bounded by technology.
+*** Footnotes
+[fn:1] [[https://www.youtube.com/watch?v=9vM0oIEhMag&ab_channel=ReasonTV][Cypherpunks Write Code]]
+[fn:2] [[https://www.youtube.com/watch?v=Nvor7hhDKTs&list=PLz0jTCYnPINVf_IY7vxxGJqlX5BAwZtNz&index=11&ab_channel=Jonas%C4%8Ceika-CCKPhilosophy][The Cultural Significance of Cyberpunk]]

@@ -12,15 +12,15 @@ Ivy is a minibuffer completion package.
 
 Swiper is defined as "Ivy-enhanced alternative to Isearch." Swiper uses ivy as a backend.
 
-Counsel is defined as "a collection of Ivy-enhanced versions of common Emacs commands". Counsel supplements completion functionality that ivy provides by replacing Emacs command with Counsel equivalent commands. The goal of command substitution is to provide a customized commands that make the best use of ivy.
+Counsel is defined as "a colletion of Ivy-enhanced versions of common Emacs commands". Counsel supplements completion functionality that ivy provides by replacing Emacs command with Counsel equivalent commands. The goal of command substitution is to provide a customised commands that make the best use of ivy.
 
-** TODO X Implementation Where X = Emacs' General Completion Functions. :implementation:
+** X implementation where X = Emacs' general completion functions :implementation:
 :PROPERTIES:
 :ID:       71d16729-1279-4f84-9347-8f372cab5543
 :END:
 use ivy-wrap = t, so prommpt completion can be incrementally added. Maybe, incremental behavior is equivalent of reading =ivy-read= recursively? I am still unsure.
 
-the behavior that I want for counsel-jq's prompt completion is similar to ~completing-read~. Unformatunately, ~copmleting-read~ is defined in C. Other completion packages in emacs are created to expands on ~completing-read~ functionality such as nice UI displaying.
+the behavior that I want for counsel-jq's prompt completion is similar to ~completing-read~. Unformatunately, ~copmleting-read~ is defined in C. I speculate that other completion packages in emacs are created to expands on ~completing-read~ functionality such as nice UI displaying.
 
 According to documentation, ~completing-read~ means =Read a string in the minibuffer, with completion.=  ~find-file~ uses ~completing-read~ to =read a string in the minibuffer, with prompt completion upon finish=. All ~find-file~ does is wrapper of ~completing-read~ for files and directory completion.
 
