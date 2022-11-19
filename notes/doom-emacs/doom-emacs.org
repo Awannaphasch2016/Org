@@ -146,7 +146,7 @@ To open doom emacs documentation, use =doom/help.= which is binded to =spc-h-d-h
 :ID:       aa87b05e-c055-42c1-8b69-54ea01f99f1b
 :END:
 **** bookmark-based search
-| commands         | key | doom keys           | custom keys | descriptions                |
+| commands         | key | doom keys           | custom keys | descriptions                |
 | consult-bookmark |     | spc-s-m  OR spc-ret |             | conduct a book mark search. |
 
 **** .doom.d/.emasc.d search
@@ -161,6 +161,9 @@ To open doom emacs documentation, use =doom/help.= which is binded to =spc-h-d-h
 | project-tile-find-file  |     | spc-spc   |             | conduct a file search recursively under the current project folder. |
 | +default/search-project |     | spc-s-p   |             | conduct a text search recursively under the current project root.   |
 **** buffer search
+:PROPERTIES:
+:ID:       d245742b-7abc-4545-9b1e-84c7661fa197
+:END:
 | commands                                                     | key | doom keys | custom keys | descriptions                                                                            |
 | consult-imenu                                                |     | spc-s-i   |             | conduct symbol search on the current buffer                                             |
 | +default/search-buffer                                       |     | spc-s-b   |             | conduct text search on the current buffer                                               |

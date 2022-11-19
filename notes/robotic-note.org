@@ -1,0 +1,7 @@
+#+title: Robotic Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: robotic
+
+* Blog :blog:
+** What is Homogeneous Transformation in Robotic?
+**

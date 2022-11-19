@@ -1,5 +1,6 @@
 #+TITLE: Lsp Mode Note
-
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: lsp
 
 There ara separate projects involve in emacs ~lsp-mode~.
 - main lsp website is hosted by Microsoft. (because Microsoft creates it)
@@ -8,7 +9,23 @@ There ara separate projects involve in emacs ~lsp-mode~.
     contents inside the website is the most updated about emacs-lsp
     since I am using emacs, documentation of lsp should be refers to emacs-lsp instead of the main lsp webiste by Microsoft.
 
+
+* Blog :blog:
+** TODO How does LSP server and LSP client communicate? :lsp:
+:PROPERTIES:
+:ID:       0a14ad39-1a85-4883-a03a-6e9373220d71
+:END:
+
+format of data used for communication is json
+1. open file: send open-read server
+2. type: send to server for every word type
+3. goto definition: If not implement, respond with failed message, otherwise respond with success message.
+4. close file: send close to server
+
 * Error
+:PROPERTIES:
+:ID:       9b48f79a-4cb9-4ec2-b31b-b1234e25812c
+:END:
 ** Errors and Debugging log (logs of how I debug it).
 *** LSP :: There are no language servers supporting current mode `python-mode' registered with `lsp-mode'.
 

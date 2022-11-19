@@ -1,7 +1,22 @@
 #+TITLE: Functional Programming Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
 #+filetags: functional-programming
 
 * Blog :blog:
+** What It Feels Like To Program In Functional Programming?
+:PROPERTIES:
+:ID:       ec9f027f-d634-4337-a42b-d1a378ee2d35
+:EXPORT_FILE_NAME: What It Feels Like To Program In Functional Programming?
+:END:
+In functional programming, functions is as composable as specified type of input and output. One can look at pure functions as set of tools that are designed to prevent misuse. Hence, when developers are not aware of existing tools for a task they are working on, they will admittedly feel a lots of fiction to make things work. In my opinion, it is essential to continuously discover new tools and how they use together. Assuming that one is aware of all the tools and knows how to use them, coding experience should feel fictionless and less opinionated as compared to imperative code.
+
+
+Comparing functional programming to imperative programming is like comparing mainframe Multics to Unix. Programming in Multics mainframe minimizes harmful unintended consequence -- only a fixed set of securely tested utility operations are allowed. On the other hand, Unix maximize(-ish) useful unintended consequence -- side effects are expected and encouraged e.g. using pipe to glue system calls.
+
+
+That's it.
+Peace.
+
 ** TODO What is Monads? Understand Monads by Implementing One in Scala. :scala:
 *** Fromal Definition of Mondas
 :PROPERTIES:

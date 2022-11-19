@@ -1,0 +1,53 @@
+#+title: Robotic Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: robotic
+
+* Blog :blog:
+** TODO Homogeneous Transformation
+the homogeneous transformation matrices for translations and scaling, in the plane and the space.
+
+* Topics in Robotic
+** Matrix Notation in Robotic
+
+#+name: 258151240
+#+attr_html: :width 500px
+[[file:./images/screenshot_20221115_192935.png]]
+
+** Pre- and Post- multiplication
+For $A \cdot B$, A is a pre multiplication of B, and B is a post multiplication of A.
+
+#+name: 148319500
+#+attr_html: :width 500px
+[[file:./images/screenshot_20221115_192901.png]]
+
+#+name: 9193303608
+#+attr_html: :width 500px
+[[file:./images/screenshot_20221115_192919.png]]
+*** Footnotes
+[fn:1] [[http://www.me.unm.edu/~starr/teaching/me582/postmultiply.pdf][pre- and postmultiplication by transformation operation]]
+** linear and angular velocities
+#+name: 55169085
+#+attr_html: :width 500px
+[[file:./images/screenshot_20221115_193700.png]]
+
+*** Rodrigues Formular
+#+name: 819578706
+#+attr_html: :width 500px
+[[file:./images/screenshot_20221115_194111.png]]
+** Orientation Matrix System
+*** rotation matrix
+*** Quaternion Matrix
+:PROPERTIES:
+:ID:       b2154dc8-b651-468c-b19f-31f954c22f37
+:END:
+#+name: 9416186130
+#+attr_html: :width 500px
+[[file:./images/screenshot_20221115_194358.png]]
+
+#+name: 1173690000
+#+attr_html: :width 500px
+[[file:./images/screenshot_20221115_194625.png]]
+
+#+name: 3949307780
+#+attr_html: :width 500px
+[[file:./images/screenshot_20221115_194708.png]]

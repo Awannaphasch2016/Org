@@ -2,6 +2,9 @@
 
 * Blog :blog:
 ** Usages of Lispy. Examples Usecases Are Provided.
+:PROPERTIES:
+:ID:       7a68ac50-61ed-4314-bf92-3de28e7e2abb
+:END:
 To navigate between different sexp parenthesis tree, use h,j,k,l.
 To move sexp, use s,w.
 

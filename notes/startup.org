@@ -1,0 +1,36 @@
+#+title: Startup
+
+* Andrew Ng
+Product, Growth, fundrasing.
+
+* Prked
+** Questions
+*** Milestone
+**** 100k hosts in 1 years.
+***** 4 stadium 1k hosts
+***** 400 stadium 100k hosts.
+***** 10 dollars cost per hosts
+
+*** Fundrasing
+**** are you seed or pre-seed?
+**** cofounder problem 35%? how much should vest for how long?
+**** how much do you know you need?
+**** how should you value the company? it is in the growth period.
+**** should we care about number of investors?
+**** should we do RUV? will there be reputation problem in the future?
+**** strategy to gamify the process. fundraising hack.
+*** Growth
+**** I think we should start growing quickly based on metrics.
+We only have 4 stadium so far, but demands has been exceeding what we are able to provide.
+**** Prked have growth hack as followed
+***** TicTok
+***** search engine.
+***** AI-generated problems.
+***** Criaglist to put posters.
+**** What we need to do next.
+***** Focus on Hosts trust first. (because we need scale).
+***** Partnership program for top earner.
+
+* Glossary
+** highly repeatable strategy to improve traction.
+** customer discovery

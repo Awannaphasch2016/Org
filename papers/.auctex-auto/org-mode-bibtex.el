@@ -34,6 +34,6 @@
     "damodaran2017narrative"
     "verborgh2019solid"
     "leiner2009brief"
-    "berners1989information"))
+    "pedersen2008agricultural"))
  :bibtex)
 

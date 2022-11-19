@@ -4,6 +4,7 @@
 :PROPERTIES:
 :ID:       adb79d19-43ae-41d4-b32d-18d82f2c47fc
 :END:
+** [[https://www.gwern.net/docs/cs/algorithm/1982-perlis.pdf][epigram on programming]]
 ** programming language
 *** [[https://www.infoq.com/articles/mop/#:~:text=Definition%204%3A%20Metamodel%20Oriented%20Programming,class%2Dbased%20cogent%2DDSL][metamodel oriented programming]].
 *** [[http://www.ibm-1401.info/Meta-II-schorre.pdf][a syntax-oriented compiler writing language]]

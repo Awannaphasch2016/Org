@@ -1,4 +1,77 @@
 #+title: Hoon Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: hoon urbit
+
+
+* Blog :blog:
+** Iteration and Recursion in Hoon. :hoon:functionalprogramming:
+:PROPERTIES:
+:ID:       9d84aaae-336d-4dfb-874f-1c816f12640f
+:EXPORT_FILE_NAME: Iteration and Recursion in Hoon
+:END:
+Code below is a part of =Exercise: A Playing Card Library= [fn:1] section in =Hoon School 7. Libraries=.
+#+BEGIN_SRC hoon :noeval
+++  shuffle-deck
+  |=  [unshuffled=deck entropy=@]
+  ^-  deck
+  =/  shuffled  *deck
+  =/  random  ~(. og entropy)
+  =/  remaining  (lent unshuffled)
+  |-
+  ?:  =(remaining 1)
+    :_  shuffled
+    (snag 0 unshuffled)
+  =^  index  random  (rads:random remaining)
+  %=  $
+    shuffled      [(snag index unshuffled) shuffled]
+    remaining     (dec remaining)
+    unshuffled    (oust [index 1] unshuffled)
+  ==
+#+END_SRC
+
+Notice that random card is selected from the following 2 lines.
+#+BEGIN_SRC hoon
+shuffled      [(snag index unshuffled) shuffled]
+unshuffled    (oust [index 1] unshuffled)
+#+END_SRC
+
+~unshuffled~ remove random card.
+~shuffled~ select the same random card that is removed by ~unshuffled~.
+
+*** Footnotes
+[fn:1] https://developers.urbit.org/guides/core/hoon-school/H-libraries#exercise-a-playing-card-library
+** How to write printable Error in Hoon? :hoon:
+:PROPERTIES:
+:ID:       f9101a23-1b93-4d22-95a1-df6150c17413
+:EXPORT_FILE_NAME: How to write printable Error in Hoon?
+:END:
+
+Goal is to have ~~(ram re [%rose ["|" "(" ")"] [%leaf "1"] [%leaf "2"] [%leaf "fizz"] [%leaf "4"] [%leaf "buzz"] ~])~
+
+I was having a difficult time trying to compose rather simple code. In particular, I was trying to "substitute" value =[%leaf "1"] [%leaf "2"] [%leaf "fizz"] [%leaf "4"] [%leaf "buzz"]= inside of =%rose= data-structure, and I was having a hard time about typing system. Turned out, a simple of act of "substituting value" would require me to change a chain of typing issue.
+
+I was surprised by an immediate step up in difficulty to solve a simple problem. Then, I realized that I was approaching solving solve from imperative programming point of view. Once I recognized this, I was able to quickly solve the problem, by rethinking step to solution. I do this by step back and search for functions to compose a solution. On this topic, I wrote an article called "What It Feels Like To Program In Functional Programming?"
+
+The solution to compose a printable error is as simple as it should be. Rather than "substitute a value" inside of =%rose=, I can deconstruct target =%rose= data structure -- a cell --, and recompose =%rose= data structure with =~[[%leaf "1"] [%leaf "2"] [%leaf "fizz"] [%leaf "4"] [%leaf "buzz"]]= at the end using a rune that outputs a cell, see below.
+
+The goal is to compose =%tank= as a cell.
+#+BEGIN_SRC hoon
+:+  %rose  ["|" "(" ")"]
+  ~[[%leaf "1"] [%leaf "2"] [%leaf "fizz"] [%leaf "4"] [%leaf "buzz"]]
+#+END_SRC
+
+
+That's it.
+Peace.
+** TODO Implement your own X in Hoon where X = language server client. :lsp:language_server_client:
+- what is notification used for?
+- what is connection between eyre and lsp?
+- how does notification, requests, and responds works together? I mainly don't know how notification work.
+- I don't know what the following mean ~lsp  ~(. lsp-core bowl)~.
+** TODO Implement your own X in Hoon where X = language server server. :lsp:language_server_server:
+** TODO Diving into Urbit's core code.
+- where is arm defined?
+  I can't find where =+>= is. I was searching for [%lsgr], but prefix %ls doens't exist in the code base.
 
 * Hoon GTD
 :PROPERTIES:
@@ -11,11 +84,28 @@
 :ARCHIVE:  %s_archive::* Habits
 :END:
 ** Notes :note:
+*** [[https://media.urbit.org/docs/hooncard-2022-04-03.pdf][hoon urbit reference card]]
+*** receord HSL
 *** Hoon School Live (HSL) meeting.
-**** https://us06web.zoom.us/j/83009256760
+**** recorded lesson
+***** [[https://www.youtube.com/watch?v=GnkNgqh23zs&list=PLR4NQL5fPgqqjmCyhfFjP2F5E1nofT8zC&index=15&ab_channel=NealDavis~lagrev-nocfep][Hoon School Live · Session ~2022.02 · Lessons]]
+**** zoom meeting
+:PROPERTIES:
+:ID:       a16a39de-0410-4600-990b-e460cf5ad9e0
+:END:
+***** https://us06web.zoom.us/j/83009256760
 :PROPERTIES:
 :ID:       2912d23c-3894-484a-b2f7-96d6d94f3204
 :END:
+**** homeworks
+***** hw1
+***** [[https://docs.google.com/forms/d/e/1FAIpQLSdqxEXSLZIWT9yAvdNbSo8HYRo8C7F9JMI95fEP_B7DsDCB5g/viewform][hw2]]
+**** submitted homeworks
+***** [[https://mail.google.com/mail/u/0/#search/hoon/FMfcgzGqQmVXDDvGXPWpLlBbZrTSCtTn][hw1 submitted]]
+***** [[https://mail.google.com/mail/u/0/#inbox/FMfcgzGqQvqnXJFJpZtSvbvLRqGrpsvW][hw2 submitted]]
+*** FAU Hackathon
+**** federate wiki
+***** [[https://docs.google.com/document/d/1DG2IS04xzVsEGwdla5Q5bfJ6o_j8ABZDYSVsOGstHKY/edit#][doc]]
 ** Meeting :meeting:
 *** Hoon School Live Office hour
 **** Mon 8 a.m US Central Time with =~dinlep-rambep=

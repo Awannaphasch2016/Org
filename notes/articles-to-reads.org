@@ -1,13 +1,14 @@
 #+TITLE: Articles To Read
 #+FILETAGS: LEARN read article
 
-
 * Incubation (to categorize article to read.)
 :PROPERTIES:
 :ID:       153fe617-875c-4802-a17e-a3aae1006c6e
 :END:
+
 ** unqualified reservations
 https://www.unqualified-reservations.org/
+
 ** porn shit
 How to hire a pornstar? https://www.google.com/search?q=pornstar+near+me&rlz=1C1CHBF_enUS941US941&oq=pornstar+near+me&aqs=chrome..69i57.3306j0j7&sourceid=chrome&ie=UTF-8
 - automate porn stuff
@@ -204,7 +205,12 @@ CLOCK: [2022-03-04 Fri 23:33]--[2022-03-04 Fri 23:34] =>  0:01
 [[file:~/org/my-resume.org::*LaTeX Config][LaTeX Config]]
 
 * Programming Articles
-** [[https://security.stackexchange.com/questions/168452/how-is-sandboxing-implemented][how is sandboxing implemented?]]
+** regular expression
+*** [[https://www.oilshell.org/archive/Thompson-1968.pdf][programming technique]] by Ken thompson
+** terminal
+*** [[https://www.warp.dev/][warp terminal]] (terminal for the 21th century)
+*** [[https://security.stackexchange.com/questions/168452/how-is-sandboxing-implemented][how is sandboxing implemented?]]
+*** [[https://github.com/vercel/hyper][hyper terminal]]
 ** operating system
 *** journalctl (this info should help me improve OS debugging.)
 https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs
@@ -263,24 +269,57 @@ https://gist.github.com/giuliano108/49ec5bd0a9339db98535bc793ceb5ab4
 *** [[https://gist.github.com/ldodds/a7f901c7f0118e83a645][xanadu summary]]
 *** [[https://xanadu.com/xUniverse-D6][the xanadu parallel universe: visibly connected pages and documents for a new kind of writing]]
 ** Urbit
-*** https://www.youtube.com/watch?v=w31bCsJJ-GQ&ab_channel=dcSpark
-*** [[https://news.ycombinator.com/item?id=23397238][what is the urbit for?]]
-*** [[http://tunes.org/~iepos/joy.html][the thoery of concatenative combinators]]
-*** [[https://www.reddit.com/r/programming/comments/nktl3a/urbit_the_good_the_bad_and_the_insane/][urbit: the good, the bad, and the insance]]
-*** [[https://interestingsoup.com/running-urbit-arch64-on-a-k3s-pod/][deploying urbit on a raspberry pi 4 K3S pod]]
-*** [[https://urbit.org/blog/urbithost-interview][an interview with urbithost]]
-*** [[http://tunes.org/~iepos/joy.html][the theory of concatenative combinators]]
-*** [[https://news.ycombinator.com/item?id=23034608][hacker new: urbit os]]
-*** [[https://konfou.xyz/posts/urbit-an-alien-system-software/][Urbit, an alien system software]]
+*** essential read
+**** priority
+***** [[https://media.urbit.org/docs/hooncard-2022-04-03.pdf][Urbit: A solid-state interpreter]]
+***** [[https://lachlankermode.com/2022.09.21-deconstructing-urbit.pdf][Deconstructing Urbit: the polics of software as infrastructure]]
+***** https://urbit.org/blog
+***** https://urbit.org/blog/common-objections-to-urbit
+***** https://developers.urbit.org/reference
+***** https://roadmap.urbit.org/current
+***** https://developers.urbit.org/blog
+***** [[https://blog.timlucmiptev.space/][~timluc-miptev blog]]
+***** [[https://gist.github.com/belisarius222][ted-blackman's blog]]
+***** [[https://ngnghm.github.io/blog/2015/12/25/chapter-7-platforms-not-applications/][chapter 7: platforms not application]]
+:PROPERTIES:
+:ID:       41c88913-f8dc-404f-94a5-3138c546d3d3
+:END:
+***** https://www.quartus.co/blog
+**** non-priority
+***** [[https://docs.google.com/document/d/1jwaH7IPg4wSLtT965mOdiafs-PUDTlBsXJpOJ5lKumM/edit][contacts Protocol]]
+*** non-essential read
+**** https://www.youtube.com/watch?v=w31bCsJJ-GQ&ab_channel=dcSpark
+**** http://c10m.robertgraham.com/p/manifesto.html
+**** [[https://news.ycombinator.com/item?id=23397238][what is the urbit for?]]
+**** [[http://tunes.org/~iepos/joy.html][the thoery of concatenative combinators]]
+**** [[https://www.reddit.com/r/programming/comments/nktl3a/urbit_the_good_the_bad_and_the_insane/][urbit: the good, the bad, and the insance]]
+**** [[https://interestingsoup.com/running-urbit-arch64-on-a-k3s-pod/][deploying urbit on a raspberry pi 4 K3S pod]]
+**** [[https://urbit.org/blog/urbithost-interview][an interview with urbithost]]
+**** [[http://tunes.org/~iepos/joy.html][the theory of concatenative combinators]]
+**** [[https://news.ycombinator.com/item?id=23034608][hacker new: urbit os]]
+**** [[https://konfou.xyz/posts/urbit-an-alien-system-software/][Urbit, an alien system software]]
 :PROPERTIES:
 :ID:       cbfef957-1c64-4120-ac4d-81b1360c53c2
 :END:
-*** [[https://groups.google.com/a/urbit.org/g/dev/c/IfVD9ifYmlM][hosting a ship on kubernetes: how to make the ames UDP port accessible?]]
-*** [[https://hatryx-lastud.tlon.network/newsletter/urbit-takeoff-is-here][Urbit Takeoff is Here]]
-*** [[https://holo.host/][holo: distributed marketplace for cloud hosting peer to peer applications]]
-*** [[https://harvesterhci.io/][harvester: the open source infrastructure (HCI) solution for a cloud native world]]
-*** [[https://github.com/urbit/awesome-urbit][urbit awesome]]
+**** [[https://groups.google.com/a/urbit.org/g/dev/c/IfVD9ifYmlM][hosting a ship on kubernetes: how to make the ames UDP port accessible?]]
+**** [[https://hatryx-lastud.tlon.network/newsletter/urbit-takeoff-is-here][Urbit Takeoff is Here]]
+**** [[https://holo.host/][holo: distributed marketplace for cloud hosting peer to peer applications]]
+**** [[https://harvesterhci.io/][harvester: the open source infrastructure (HCI) solution for a cloud native world]]
+**** [[https://github.com/urbit/awesome-urbit][urbit awesome]]
+**** [[https://medium.com/smalltalk-talk/lisp-smalltalk-and-the-power-of-symmetry-8bd96aaa0c0c][Lisp, Smalltalk, and the Power of Symmetry]]
+**** https://www.varunsrinivasan.com/writing/
+**** https://www.marsreview.org/issue2/
+** Semiosis
+*** https://www.conjecture.dev/research
+*** https://semiosis.github.io/about/
+*** [[https://philosophybear.substack.com/p/language-models-are-nearly-agis-but][language models are nearly AGIs but we don't notice it because we keep shifting the bar]]
+*** [[https://jmcdonnell.substack.com/p/the-near-future-of-ai-is-action-driven][The Near Future of AI is ACtion-Driven]]
+*** https://generative.ink/posts/
+*** https://www.eleuther.ai/
 ** text editor + ide + interactive environment
+*** QED (line editing + multi file editing)
+**** https://www.reddit.com/r/vim/comments/1o6s9m/some_qed_ex_vi_historical_documents/
+**** [[https://www.bell-labs.com/usr/dmr/www/qed.html][an incomplete history of QED Text Editor]]
 *** livly kernel
 **** [[https://lively-next.org/][livelye kernel: doc]]
 **** [[https://github.com/LivelyKernel/lively.next][lively.next]]

@@ -1,0 +1,9 @@
+#+title: Language Server Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: lsp
+
+* Blog :blog:
+:PROPERTIES:
+:ID:       a286272d-b926-44ce-b183-0eede7cb031f
+:END:
+** C-section code
