@@ -2,6 +2,17 @@
 
 * creating org capture template
 ** examples
+:PROPERTIES:
+:ID:       5474f311-98ec-4ec3-9dd6-7235a97515d9
+:END:
 #+BEGIN_SRC emacs-lisp
 (see how orsetq org-roam-capture-templates '(("d" "default" plain "%?" :target (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title} ") :unnarrowed t)))
 #+END_SRC
+
+** Hotkeys
+:PROPERTIES:
+:ID:       1c0be3c7-d143-4fb9-b5ee-3bc4762a6f2a
+:END:
+
+| commands    | key | doom keys | custom keys | descriptions |
+| org-capture |     | spc-n-n   |             |              |

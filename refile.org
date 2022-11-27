@@ -2,35 +2,49 @@
 
 refile.org acts like a cabinet of all tasks because it is organized via GTD methods. (see ~/org/gtd.org for more information on gtd methodology)
 
-* TODO call At&t and lower prices of At&t phone plan
+* TODO buy ticket to where Bill's live (arrive on Dec 5.) then Buy a ticket to Miami (arrived on Dec. 10)
 :PROPERTIES:
-:ID:       0ba6efe6-af7d-48a2-9a09-286c6161520d
-:END:
-[2022-05-05 Thu 16:42]
-see the email [[https://mail.google.com/mail/u/0/#inbox/FMfcgzGpFgvPrmBdQdcWLkKrCDQBRbjq][here]]
-* TODO take Linkedin assessment.
-:PROPERTIES:
-:ID:       6fa069fd-d636-4937-98cd-052f9e7a8831
-:END:
-[2022-05-05 Thu 16:53]
-[[file:~/org/life.org::*solutions tracking list][solutions tracking list]]
-see the email [[https://mail.google.com/mail/u/0/#inbox/FMfcgzGpFgvNKRrxpzPTlSDtNXBDqsWM][here]].
-* WAITING where can I get bit-ask spread data of BTC? :WAITING:
-:PROPERTIES:
-:ID:       50c0b152-def0-4aea-83db-395513c4e3e7
+:ID:       616d234b-8c56-406d-a083-1125066059bd
 :END:
 :LOGBOOK:
-- State "WAITING"    from "TODO"       [2022-05-07 Sat 16:44]
-CLOCK: [2022-05-07 Sat 16:43]--[2022-05-07 Sat 16:44] =>  0:01
+CLOCK: [2022-11-23 Wed 23:12]--[2022-11-23 Wed 23:13] =>  0:01
 :END:
-[2022-05-07 Sat 16:43]
-* TODO Review Vagrant
+[2022-11-23 Wed 23:12]
+[[file:~/org/notes/articles-to-reads.org::*https://urbit.org/blog/common-objections-to-urbit][https://urbit.org/blog/common-objections-to-urbit]]
+* TODO writing Urbit's federated wiki grants.
 :PROPERTIES:
-:ID:       65f2419a-6ed3-40d7-84f1-cddc4e6e2206
+:ID:       badb0a3e-f402-40a0-9354-89b1d6155101
 :END:
-[2022-07-04 Mon 00:08]
-* TODO test
+[2022-11-24 Thu 02:30]
+[[file:~/Downloads/gpt_index/gpt_index/prompts/default_prompts.py::"Provide choices in the following format: 'ANSWER: <numbers>' and explain why "]]
+* TODO When I have time, take my time to under how MEV works in details
 :PROPERTIES:
-:ID:       ef922731-61a9-4d4c-a1cb-17a6675f1610
+:ID:       cf0c2c6c-42ff-4a34-a1e3-cb184fcdfec9
 :END:
-[2022-07-14 Thu 22:27]
+[2022-11-24 Thu 22:34]
+[[file:~/org/notes/prompt-engineering/prompt-collections.org::*Give Historical Content][Give Historical Content]]
+* TODO create minor mode for ~anak/tree-edit~ myself.
+:PROPERTIES:
+:ID:       4c368a8f-e228-4ec6-977f-6d522b1d0971
+:END:
+:LOGBOOK:
+CLOCK: [2022-11-25 Fri 01:32]--[2022-11-25 Fri 01:34] =>  0:02
+:END:
+[2022-11-25 Fri 01:32]
+[[file:/tmp/publish/now-n-next.org::*implement structure navigation in hoon.][implement structure navigation in hoon.]]
+
+I couldn't get ~tree-edit~ too work. It feels too buggy.
+
+I planned to build my own minor mode for which will provide similar functionality as ~tree-edit~.
+* TODO read interview alrogithm's article https://hackernoon.com/50-data-structure-and-algorithms-interview-questions-for-programmers-b4b1ac61f5b0
+:PROPERTIES:
+:ID:       c2588af9-2737-4c01-bcbf-3a44a4bec3ef
+:END:
+[2022-11-26 Sat 14:43]
+[[file:~/org/notes/books/books-to-read.org::*\[\[https://www.google.com/search?q=dark+agge+ahead&rlz=1C1CHBF_enUS941US941&oq=dark+agge+ahead&aqs=chrome..69i57j46i13i512j0i13i512j0i22i30j0i5i13i30j0i390l3.3377j0j7&sourceid=chrome&ie=UTF-8\]\[Dark Age Ahead\]\]][Dark Age Ahead]]
+* TODO work on algorithms in python. (most interviewed question)
+:PROPERTIES:
+:ID:       19d187fa-927b-4a40-a417-2800561e8dda
+:END:
+[2022-11-26 Sat 16:55]
+[[file:/tmp/publish/now-n-next.org::*]]

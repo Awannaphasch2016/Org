@@ -1,6 +1,9 @@
 #+TITLE: Lispy Note
 
 * Blog :blog:
+:PROPERTIES:
+:ID:       de3426fa-2662-481a-86c5-9df43f96c9a7
+:END:
 ** Usages of Lispy. Examples Usecases Are Provided.
 :PROPERTIES:
 :ID:       7a68ac50-61ed-4314-bf92-3de28e7e2abb
@@ -25,3 +28,14 @@ To delete the whole expression inside a sexp, do =special-lispy-mark-list= then 
 |                                           | lispy-kill-sentence     | M-k                |
 | remove current paren                      | lispy-splice            | <normal-state> M-s |
 | search for occurence within current paren | special-lispy-occurs    | y                  |
+
+#+startup: showall indent
+#+startup: hidestars
+#+begin_html
+---
+layout: default
+title: title
+excerpt: excerpt
+---
+
+blog

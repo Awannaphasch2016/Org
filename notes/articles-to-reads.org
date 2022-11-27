@@ -165,8 +165,26 @@ CLOCK: [2022-03-13 Sun 23:28]--[2022-03-13 Sun 23:29] =>  0:01
 [2022-03-17 Thu 02:05]
 [[file:~/Scratches/scala/playground1/Main.scala::// println(]]
 ** personal knowledge management (PKM)
-*** PKM infrastructure of BeepBoop
+
+*** essential read
+**** https://arl.human.cornell.edu/linked%20docs/Alexander_A_Pattern_Language.pdf
+**** https://monoskop.org/images/f/ff/Alexander_Christopher_Notes_on_the_Synthesis_of_Form.pdf
+**** [[http://en.bp.ntu.edu.tw/wp-content/uploads/2011/12/06-Alexander-A-city-is-not-a-tree.pdf][a city is not a tree]]
+**** The timeless way of building
+**** The architecture of complexity
+**** PKM infrastructure of BeepBoop
 https://beepb00p.xyz/myinfra.html
+*** non essential read
+**** language pattern
+http://stack.fed.wiki/view/welcome-visitors/view/wiki-app-stack/view/top-down-overview
+**** internet + www + wiki
+***** [[https://gist.github.com/ldodds/a7f901c7f0118e83a645][xanadu summary]]
+:PROPERTIES:
+:ID:       14bd8997-d538-4032-89f3-2789d164029f
+:END:
+***** [[https://xanadu.com/xUniverse-D6][the xanadu parallel universe: visibly connected pages and documents for a new kind of writing]]
+***** http://splash.fed.wiki.org/view/federated-wiki-design-principles
+
 ** latex
 *** writing resume in latex
 :PROPERTIES:
@@ -226,24 +244,28 @@ https://gist.github.com/giuliano108/49ec5bd0a9339db98535bc793ceb5ab4
 ** [[https://stackoverflow.com/questions/432922/significant-new-inventions-in-computing-since-1980][Significant new inventions in computing since 1980]]
 ** [[https://www3.nd.edu/~pbui/teaching/cse.30341.fa18/project06.html][Implementation of simple file system]]
 ** [[https://insearchofsecrets.com/2014/08/04/lisp-smalltalk-and-the-power-of-symmetry/][Lips, Smalltalk, and the Power of Symmetry]]
-** compiler
-*** [[https://ieeexplore.ieee.org/abstract/document/9796463?casa_token=Fjb_AsaNmukAAAAA:KF7itRBtwZ2yy72fL5Meg8Yva4y7joplQHSZQdSAOUTKtT2Jk4w11Z_C1BbRxXexXg5ww-A][NEMIANA: cross-platform execution migration for debugging]]
 ** debugger
 *** [[https://research.ibm.com/publications/a-case-for-cross-domain-observability-to-debug-performance-issues-in-microservices][a case for cross-domain observability to debug performance issues in microservices]]
 *** [[https://scholar.google.com/scholar?hl=en&as_sdt=0%2C10&as_ylo=2022&q=tools+for+cloud+computing+debug&btnG][tools for cloud computing debug]]=
-** Lisp
-*** https://news.ycombinator.com/item?id=14727881
-** programming language
-*** [[https://acorwin.com/2016/05/07/why-is-no-one-writing-language-runtimes/][why is no one writing language runtimes]]
-*** [[https://joshondesign.com/2013/03/05/ometa1][a magically delicious wordprocessor with OMeta]]
-*** [[https://www.google.com/search?q=alex+warth+use+ometa+to+build+ometa&rlz=1C1CHBF_enUS941US941&oq=alex+warth+use+ometa+to+build+ometa&aqs=chrome..69i57.7181j0j7&sourceid=chrome&ie=UTF-8][alex warth use ometa to build ometa search result]]
-*** [[https://news.ycombinator.com/item?id=13035577][what does alan kay think of functional programming?]]
-** smalltalk
-*** [[https://www.reddit.com/r/programming/comments/9bf34/alan_kay_were_running_on_fumes_technologically/][alan kay: "we're running on fumes technologically today. the sad truth is that 20 years or so of commercialization have almost ocmpletely missed the point of what personal computing is about."]]
-*** [[https://www.cs.virginia.edu/~evans/cs655/readings/smalltalk.html][design principles behind smalltalk]]
-*** [[https://news.ycombinator.com/item?id=11939851#11940893][Alan kay has agreed to do an AMA on hacker news]]
-*** [[https://news.ycombinator.com/item?id=14333824#:~:text=%3E-,Macros%20just%20don't%20fit%20into%20Smalltalk%3B%20they've,the%20developers%20are%20using%20it][hacker news: smalltalk doesn't need macros because it has classes instead.]].
-** Cloud related
+** programming language & compiler
+*** programming lanague
+**** [[https://acorwin.com/2016/05/07/why-is-no-one-writing-language-runtimes/][why is no one writing language runtimes]]
+**** [[https://joshondesign.com/2013/03/05/ometa1][a magically delicious wordprocessor with OMeta]]
+**** [[https://www.google.com/search?q=alex+warth+use+ometa+to+build+ometa&rlz=1C1CHBF_enUS941US941&oq=alex+warth+use+ometa+to+build+ometa&aqs=chrome..69i57.7181j0j7&sourceid=chrome&ie=UTF-8][alex warth use ometa to build ometa search result]]
+**** [[https://news.ycombinator.com/item?id=13035577][what does alan kay think of functional programming?]]
+**** Lisp
+***** https://news.ycombinator.com/item?id=14727881
+**** minikanren
+***** https://www.proquest.com/docview/304903505/E30282E6EF13453CPQ/1
+***** http://webyrd.net/scheme-2013/papers/HemannMuKanren2013.pdf
+***** https://www.youtube.com/watch?v=09OyKjX4Sik&ab_channel=ACMSIGPLAN
+***** https://www.youtube.com/watch?v=5Q9x16uIsKA&ab_channel=ClojureTV
+***** https://www.youtube.com/watch?v=fHK-uS-Iedc&ab_channel=ClojureTV
+**** prolog
+***** http://cliplab.org/~logalg/doc/The_Art_of_Prolog.pdf
+*** compiler
+**** [[https://ieeexplore.ieee.org/abstract/document/9796463?casa_token=Fjb_AsaNmukAAAAA:KF7itRBtwZ2yy72fL5Meg8Yva4y7joplQHSZQdSAOUTKtT2Jk4w11Z_C1BbRxXexXg5ww-A][NEMIANA: cross-platform execution migration for debugging]]
+*https://github.com/rksm/clj-org-analyzer* Cloud related
 :PROPERTIES:
 :ID:       c19a575b-456b-45c8-8070-afde9cfd6877
 :END:
@@ -263,30 +285,35 @@ https://gist.github.com/giuliano108/49ec5bd0a9339db98535bc793ceb5ab4
 **** [[https://twitter.com/alexpignotti/status/1488508101120638978?t=lfD02mmX5uP-fTANsROMvA&s=19][twitter: webassembly powered x86 virtual machines in the browser?]]
 ** devops
 ** web developers
+:PROPERTIES:
+:ID:       0acdbfe5-174e-47bf-86fa-d4fc7edce29e
+:END:
 *** [[https://medium.com/javascript-scene/12-books-every-javascript-developer-should-read-9da76157fb3][12 books every javascript developer should read]]
 ** [[https://jpaulm.github.io/fbp/][flow-based programming]]
-** internet + www + wiki
-*** [[https://gist.github.com/ldodds/a7f901c7f0118e83a645][xanadu summary]]
-*** [[https://xanadu.com/xUniverse-D6][the xanadu parallel universe: visibly connected pages and documents for a new kind of writing]]
 ** Urbit
 *** essential read
 **** priority
+***** https://substack.com/profile/26029097-noah-kumin
 ***** [[https://media.urbit.org/docs/hooncard-2022-04-03.pdf][Urbit: A solid-state interpreter]]
-***** [[https://lachlankermode.com/2022.09.21-deconstructing-urbit.pdf][Deconstructing Urbit: the polics of software as infrastructure]]
 ***** https://urbit.org/blog
 ***** https://urbit.org/blog/common-objections-to-urbit
 ***** https://developers.urbit.org/reference
 ***** https://roadmap.urbit.org/current
 ***** https://developers.urbit.org/blog
+:PROPERTIES:
+:ID:       70b8f15c-fd67-4478-b956-66f1bc431af2
+:END:
 ***** [[https://blog.timlucmiptev.space/][~timluc-miptev blog]]
-***** [[https://gist.github.com/belisarius222][ted-blackman's blog]]
-***** [[https://ngnghm.github.io/blog/2015/12/25/chapter-7-platforms-not-applications/][chapter 7: platforms not application]]
+***** [[https://gist.github.com/belisarius222][ted-blackman's blog (rovnys-ricfer)]]
 :PROPERTIES:
 :ID:       41c88913-f8dc-404f-94a5-3138c546d3d3
 :END:
+***** https://ajlamarc.netlify.app/blog/2022-11-19-urbit-setup/
 ***** https://www.quartus.co/blog
 **** non-priority
+***** [[https://ngnghm.github.io/blog/2015/12/25/chapter-7-platforms-not-applications/][chapter 7: platforms not application]]
 ***** [[https://docs.google.com/document/d/1jwaH7IPg4wSLtT965mOdiafs-PUDTlBsXJpOJ5lKumM/edit][contacts Protocol]]
+***** [[https://lachlankermode.com/2022.09.21-deconstructing-urbit.pdf][Deconstructing Urbit: the polics of software as infrastructure]]
 *** non-essential read
 **** https://www.youtube.com/watch?v=w31bCsJJ-GQ&ab_channel=dcSpark
 **** http://c10m.robertgraham.com/p/manifesto.html
@@ -309,29 +336,71 @@ https://gist.github.com/giuliano108/49ec5bd0a9339db98535bc793ceb5ab4
 **** [[https://medium.com/smalltalk-talk/lisp-smalltalk-and-the-power-of-symmetry-8bd96aaa0c0c][Lisp, Smalltalk, and the Power of Symmetry]]
 **** https://www.varunsrinivasan.com/writing/
 **** https://www.marsreview.org/issue2/
+** Algorithm Design and implementation
+*** essential read
+**** [[http://norvig.com/sudoku.html][explaining how to approach solving sudoku]]
+
 ** Semiosis
-*** https://www.conjecture.dev/research
-*** https://semiosis.github.io/about/
-*** [[https://philosophybear.substack.com/p/language-models-are-nearly-agis-but][language models are nearly AGIs but we don't notice it because we keep shifting the bar]]
-*** [[https://jmcdonnell.substack.com/p/the-near-future-of-ai-is-action-driven][The Near Future of AI is ACtion-Driven]]
-*** https://generative.ink/posts/
-*** https://www.eleuther.ai/
+*** essential
+**** priority
+***** https://tmabraham.github.io/blog/github_copilot
+***** https://langchain.readthedocs.io/en/latest/
+***** https://www.basedash.com/
+***** https://buildspace.so/builds
+***** https://medium.com/mlearning-ai/the-ai-prompt-is-the-new-search-f596aff27639
+***** https://www.google.com/search?q=prompt+search+engine&rlz=1C1CHBF_enUS941US941&oq=prompt+search+engine&aqs=chrome..69i57j0i390l4j69i60.4111j0j7&sourceid=chrome&ie=UTF-8
+:PROPERTIES:
+:ID:       11af54d1-34e8-427d-bde9-48fc60ff6131
+:END:
+***** https://www.section.io/engineering-education/forward-and-backward-chaining-in-ai/
+**** non-priority
+*** non-essential
+**** https://www.conjecture.dev/research
+**** https://semiosis.github.io/about/
+**** [[https://philosophybear.substack.com/p/language-models-are-nearly-agis-but][language models are nearly AGIs but we don't notice it because we keep shifting the bar]]
+**** [[https://jmcdonnell.substack.com/p/the-near-future-of-ai-is-action-driven][The Near Future of AI is ACtion-Driven]]
+**** https://generative.ink/posts/
+**** https://www.eleuther.ai/
 ** text editor + ide + interactive environment
 *** QED (line editing + multi file editing)
 **** https://www.reddit.com/r/vim/comments/1o6s9m/some_qed_ex_vi_historical_documents/
 **** [[https://www.bell-labs.com/usr/dmr/www/qed.html][an incomplete history of QED Text Editor]]
-*** livly kernel
-**** [[https://lively-next.org/][livelye kernel: doc]]
-**** [[https://github.com/LivelyKernel/lively.next][lively.next]]
-*** glamorious toolkit (GT)
-**** [[https://www.youtube.com/watch?v=TgF4b0-DHhc&list=PLfrs5bwLJOoBtfhXJ4mqcQ4ktpQOEBTvP&index=4&ab_channel=GlamorousToolkit][personal server using glamorous toolkist]]
-**** [[https://twitter.com/offrayLC/status/1483821532661141514][tweet: implementing wiki in glamorious toolkit]]
-**** [[https://medium.com/@girba][tudor girba blogs]]
-**** [[https://lepiter.io/feenk/][feenk blog]]
-**** [[https://lepiter.io/feenk/introducing-lepiter--knowledge-management--e2p6apqsz5npq7m4xte0kkywn//][introducing lepiter: knowledge managment + multi-language notebooks + moldable devlopement]]
+*** Robert Krahn. (He has the most similar vision of IDE to me)
+**** https://robert.kra.hn/
+*** cloxp (clojure IDE that uses lively.next as kernel to )
+**** http://cloxp.github.io/
+**** http://cloxp.github.io/cloxp-intro.html
+*** ace text editor
+https://ace.c9.io/
+*** Inspector and Debugger
+**** https://gbracha.blogspot.com/2012/11/debug-mode-is-only-mode.html
+*** smalltalk familiy
+**** smalltalk
+***** [[http://ftp.squeak.org/docs/Self-4.0-UI-Framework.pdf][Morphic: The Self User Interface Framework]]
+***** [[http://worrydream.com/EarlyHistoryOfSmalltalk/][early history of smalltalk]]
+***** [[https://www.reddit.com/r/programming/comments/9bf34/alan_kay_were_running_on_fumes_technologically/][alan kay: "we're running on fumes technologically today. the sad truth is that 20 years or so of commercialization have almost ocmpletely missed the point of what personal computing is about."]]
+***** [[https://www.cs.virginia.edu/~evans/cs655/readings/smalltalk.html][design principles behind smalltalk]]
+***** [[https://news.ycombinator.com/item?id=11939851#11940893][Alan kay has agreed to do an AMA on hacker news]]
+***** [[https://news.ycombinator.com/item?id=14333824#:~:text=%3E-,Macros%20just%20don't%20fit%20into%20Smalltalk%3B%20they've,the%20developers%20are%20using%20it][hacker news: smalltalk doesn't need macros because it has classes instead.]].
+**** livly kernel
+***** [[https://lively-next.org/][livelye kernel: doc]]
+***** [[https://github.com/LivelyKernel/lively.next][lively.next]]
+*** moldable IDE
+**** glamorious toolkit (GT)
+***** [[https://www.youtube.com/watch?v=TgF4b0-DHhc&list=PLfrs5bwLJOoBtfhXJ4mqcQ4ktpQOEBTvP&index=4&ab_channel=GlamorousToolkit][personal server using glamorous toolkist]]
+***** [[https://twitter.com/offrayLC/status/1483821532661141514][tweet: implementing wiki in glamorious toolkit]]
+***** [[https://medium.com/@girba][tudor girba blogs]]
+***** [[https://lepiter.io/feenk/][feenk blog]]
+***** [[https://lepiter.io/feenk/introducing-lepiter--knowledge-management--e2p6apqsz5npq7m4xte0kkywn//][introducing lepiter: knowledge managment + multi-language notebooks + moldable devlopement]]
+***** https://medium.com/feenk/one-rendering-tree-918eae49bcff
+**** [[https://github.com/ag91/moldable-emacs][moldable emacs]]
 *** [[https://www.youtube.com/watch?v=s_o8dwzRlu4&ab_channel=TechWorldwithNana][cloudmacs]]
 *** [[https://github.com/omar-polo/sam.el][sam.el]]
 *** emacs
+**** productivity tools
+***** https://github.com/rksm/clj-org-analyzer
+**** searches
+***** https://github.com/nvim-telescope/telescope.nvim/wiki/Showcase
 **** connect edebug to repl
 https://emacs.stackexchange.com/questions/36918/edebug-repl-ielm
 **** [[https://notes.alexkehayias.com/emacs-in-the-browser-using-codespaces/][emacs in the browser using codespace]]
@@ -342,12 +411,17 @@ https://www.reddit.com/r/emacs/comments/cj17xe/system_administration_with_emacs/
 https://numbersmithy.com/spaced-repetition-in-emacs-org-mode/
 ***** plain implementation
 https://ag91.github.io/blog/2020/09/04/the-poor-org-user-spaced-repetition/
-**** [[https://github.com/ag91/moldable-emacs][moldable emacs]]
 **** https://github.com/ag91/code-compass
 **** [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Input-to-Processes.html][39.7 sending input to processes]]
 **** [[https://github.com/ag91][ag91's github has lots of cool emacs projects]]
 **** Emacs packages to explore
+:PROPERTIES:
+:ID:       23d3bdba-924c-4b89-92e1-8618ae62a29c
+:END:
 ***** personal finance (alternative to ledger)
+:PROPERTIES:
+:ID:       b589a164-2827-4031-b72b-fe76f6389ddd
+:END:
 [[https://github.com/md-arif-shaikh/expenses][Expense]]
 ***** neo4j in emacs.
 https://github.com/tmtxt/n4js.el
@@ -389,12 +463,19 @@ https://www.sastibe.de/2018/05/2018-05-11-emacs-org-mode-rest-apis-stocks/
 https://vxlabs.com/2017/06/03/querying-restful-webservices-into-emacs-orgmode-tables/
 ** [[https://www.medialit.org/reading-room/john-culkin-sj-man-who-invented-media-literacy-1928-1993][john culkin, sj: the man who invented media literacy 1928 - 1993]]
 ** web3 + blockchain
-*** multi chain wallter
+*** essential
+**** priority
+***** https://mirror.xyz/0x08477a125e282201BacCF4AE2e6136d1F0cEEE36/fNd7kLNFYkq-VMjeRFJ5MjmyzDgNwqmWacYYxXiK27A
+***** https://stark.mirror.xyz/n2UpRqwdf7yjuiPKVICPpGoUNeDhlWxGqjulrlpyYi0
+**** non-priority
+*** non-essential
+*** unclassify
+**** multi chain wallter
 https://blockchain.works-hub.com/learn/working-at-multis-use-clojure-to-build-the-best-crypto-wallet-88978
-*** [[https://nakamotoinstitute.org/authors/timothy-c-may/][Timothy c. May's blog]]
-*** [[https://cryptovc.substack.com/p/token-web3api-web3-wasm-runtime-for][web3api - web3 wasm runtime for universally compatible smart contract APIs]]
-*** [[https://www.youtube.com/watch?v=qUZuaNkEvGU&ab_channel=FutureState][solid:inrupt]]
-*** [[https://www.youtube.com/watch?v=XYtfAMBWrnU&ab_channel=OutlierVentures][an overview of solid and a comparison to sovrin]]
+**** [[https://nakamotoinstitute.org/authors/timothy-c-may/][Timothy c. May's blog]]
+**** [[https://cryptovc.substack.com/p/token-web3api-web3-wasm-runtime-for][web3api - web3 wasm runtime for universally compatible smart contract APIs]]
+**** [[https://www.youtube.com/watch?v=qUZuaNkEvGU&ab_channel=FutureState][solid:inrupt]]
+**** [[https://www.youtube.com/watch?v=XYtfAMBWrnU&ab_channel=OutlierVentures][an overview of solid and a comparison to sovrin]]
 
 ** artificial intelligence
 *** [[https://devops.com/blackswan-technologies-launches-worlds-first-ai-operating-system-raises-28-million-in-funding-to-pioneer-next-generation-of-enterprise-software/][blackswan technologies launches world's first ai operating system, raises $28 million in funding to pioneer next generation of enterprise software]]

@@ -1,0 +1,76 @@
+#+title: Emacs Display
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: emacs
+
+* Blog :blog:
+** TODO Note on X where X is "overlay" in Emacs :note:overlay:
+:PROPERTIES:
+:ID:       cc06e24a-7de4-4574-81e7-6e4be2cd4681
+:END:
+You can use overlays to alter the appearance of a buffer’s text on the screen.
+An overlay is an object that belongs to a particular buffer
+
+The visual effect of an overlay is the same as of the corresponding text property (see Text Properties). However, due to a different implementation, overlays generally don’t scale well
+
+An overlay uses markers to record its beginning and end; thus, editing the text of the buffer adjusts the beginning and end of each overlay so that it stays with the text. When you create the overlay, you can specify whether text inserted at the beginning should be inside the overlay or outside, and likewise for the end of the overlay.
+
+example of how overlay works.
+#+BEGIN_SRC emacs-lisp :noeval
+;; Create an overlay.
+(setq foo (make-overlay 1 10))
+     ⇒ #<overlay from 1 to 10 in display.texi>
+(overlay-start foo)
+     ⇒ 1
+(overlay-end foo)
+     ⇒ 10
+(overlay-buffer foo)
+     ⇒ #<buffer display.texi>
+;; Give it a property we can check later.
+(overlay-put foo 'happy t)
+     ⇒ t
+;; Verify the property is present.
+(overlay-get foo 'happy)
+     ⇒ t
+;; Move the overlay.
+(move-overlay foo 5 20)
+     ⇒ #<overlay from 5 to 20 in display.texi>
+(overlay-start foo)
+     ⇒ 5
+(overlay-end foo)
+     ⇒ 20
+;; Delete the overlay.
+(delete-overlay foo)
+     ⇒ nil
+;; Verify it is deleted.
+foo
+     ⇒ #<overlay in no buffer>
+;; A deleted overlay has no position.
+(overlay-start foo)
+     ⇒ nil
+(overlay-end foo)
+     ⇒ nil
+(overlay-buffer foo)
+     ⇒ nil
+;; Undelete the overlay.
+(move-overlay foo 1 20)
+     ⇒ #<overlay from 1 to 20 in display.texi>
+;; Verify the results.
+(overlay-start foo)
+     ⇒ 1
+(overlay-end foo)
+     ⇒ 20
+(overlay-buffer foo)
+     ⇒ #<buffer display.texi>
+;; Moving and deleting the overlay does not change its properties.
+(overlay-get foo 'happy)
+     ⇒ t
+#+END_SRC
+
+
+Note that ~overlays-at~ by default set over to be from current-point (~point~) to first non-space character of new line.
+* Note
+:PROPERTIES:
+:ID:       e369b4a1-b808-4046-bbc6-cc300aaf14de
+:END:
+| commands  | key | doom keys | custom keys | descriptions          |
+| goto-char |     |           |             | go to point in buffer |

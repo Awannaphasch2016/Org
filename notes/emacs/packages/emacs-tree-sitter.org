@@ -9,6 +9,9 @@ So basically, from what I understand, tree-sitter is a generalized idea that can
 - Written in c, targetting all major platforms (and WASM)
 
 * Talks
+:PROPERTIES:
+:ID:       91417695-2009-4779-9ec5-8ffa01c052a7
+:END:
 ** [[https://www.youtube.com/watch?v=ZwibVdNtFjs&ab_channel=EmacsConfandEmacshangouts][EmacsConf 2020 - 23 - Incremental Parsing with emacs-tree-sitter.]]
 * Applications
 - Tree-sitter is a general idea in which minor/major mode  and integration packages can be built on top e.g. imenu, evil, xref, hideshow, polymode.

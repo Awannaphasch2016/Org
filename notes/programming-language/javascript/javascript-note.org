@@ -1,0 +1,15 @@
+#+TITLE: Javascript Note
+
+* note
+** ~==~ vs ~===~
+~==~ does type conversion then compare data (which guarantee to have the same type)
+~===~ compare data and types
+** String
+:PROPERTIES:
+:ID:       c9bce8f3-8921-47f3-8354-626bd66aeeba
+:END:
+
+
+#+BEGIN_SRC js
+print('hi')
+#+END_SRC

@@ -1,0 +1,7 @@
+#+title: Bash Code
+
+
+* Count all the lines of code in a directory recursively?
+#+BEGIN_SRC bash :noeval
+find . -name '*.php' | xargs wc -l
+#+END_SRC

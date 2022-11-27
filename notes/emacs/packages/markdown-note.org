@@ -1,0 +1,15 @@
+#+title: Markdown Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: markdown emacs
+
+
+* Blog :blog:
+** X implementation where X = "markdown-preview" in Emacs :implementation:
+~markdown-preview~ pass HTML file to ~browse-url~
+~browse-url~ has the following algorithm
+1. prepare argument to use with specify url
+2. check for "url handle" (which is prefix to url e.g. =file:=)
+3. expand file name according to "url handle"
+4. find suitable function to browse url
+5. setup environment variable for display e.g. =DISPLAY= and =WAYLAND_DISPLAY=
+6. apply function with argument

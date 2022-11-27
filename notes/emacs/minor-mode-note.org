@@ -1,0 +1,9 @@
+#+title: Minor Mode Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: emacs minor_mode
+
+* Blog :blog:
+** TODO Implementing X where X = "Emacs's minor mode" :minor_mode:implementation:
+:PROPERTIES:
+:ID:       18f059ea-aa52-4f72-81d4-0778fd3b1136
+:END:

@@ -3,6 +3,9 @@
 #+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
 
 * Blogs :blog:
+:PROPERTIES:
+:ID:       e88e1388-bd02-4146-9014-b3f693246605
+:END:
 ** Building fundamental in Emacs: How to customize key binding in vanilla Emacs?
 :PROPERTIES:
 :EXPORT_FILE_NAME: Building fundamental in Emacs: How to customize key binding in vanilla Emacs?
@@ -210,9 +213,6 @@ Emacs will use =.elc= whenever its availble otherwise it will fall back to =.el=
 Sometimes, when you open Emacs, you see that source code is byte compiled. The byte compiler is an elisp based compiler that will take elisp, parse it, expand out macros and optimize code, it allows for some noticeable speed gains but also can lead to some debugging hell,
 
 To see actual source code, one can remove =.elc= file of the file you want to inspect, see below. Reopen emacs and you should see non-compile source code.
-#+BEGIN_SRC
-rm -rf EMACSDIR/.local/straight/**/*.elc
-#+END_SRC
 
 Removing =.elc= implies that you are expected decrease in efficiency. However, I think performance drop should not be noticeable. You can always recompile the file.
 
@@ -220,14 +220,17 @@ Doom will not regenerate the byte compile files until you tell it too. This is d
 
 Above method works as long as =.elc= is present. The existence of =.elc= implies that emacs compile the =.el= with elisp compiler. However, there are other cases that will leave compile code without having emacs compile =.el= directly. First case is when you install Emacs using OS package managers such as =apt= in =Ubuntu distro=. In this case, built in compiled code can be found at =/usr/share/emacs/28.1/= if your Emacs version is 28.1.
 
-clone locally -> load-file, load-library, load-path (choose one depends on interface of ~load~ command you want to use) -> you should be able to jump to from var/def directly to source.
+clone locally -> load-file/load-library/load-path (choose one depends on interface of ~load~ command you want to use) -> you should be able to jump to from var/def directly to source.
 
-*** Footnotes
-[fn:1] [[https://emacs.stackexchange.com/questions/53056/how-can-i-check-the-implementation-of-a-builtin-function][How can I check the implementation of a builtin function?]]
-[fn:2] http://git.savannah.gnu.org/cgit/emacs.git/tree/
-[fn:3] https://github.com/emacs-mirror/emacs
-[fn:4] https://www.gnu.org/software/emacs/manual/html_node/eintr/Loading-Files.html
+To remove all =.elc=, run (not recommend.)
+#+BEGIN_SRC
+rm -rf EMACSDIR/.local/straight/**/*.elc
+#+END_SRC
+
 ** TODO Navigate Emacs info manual. Yes, you need to learn it before you can (efficiently) learn Emacs.
+:PROPERTIES:
+:ID:       8b381186-77ae-416c-ac78-70f5364b7711
+:END:
 a node is defined as
 #+BEGIN_QUOTE
 A node contains text describing a specific topic at a specific level of detail
@@ -246,7 +249,6 @@ dir info (nodes in (dir)Top are indexed)
 info-menu (node has to have menu)
 Info-virtual-index (nodes need to be index.)
 info-search (string matching)
-
 * Reference
 ** [[https://github.com/caiorss/Emacs-Elisp-Programming/blob/master/Elisp_Programming.org][emacs lisp tutorial in markdown]]
 * Map of Contents (MOCs)
@@ -450,6 +452,9 @@ A mode's backend can use Xref in many ways. For example,
 2. Another approach is to scan throught relevant files and build database of symbols references. etags is one of the built-in example. Disadvantage of this approach is the reference tables need to be kept upto date.
 *** Modes
 **** edebug mode
+:PROPERTIES:
+:ID:       be24fe6d-24f3-4a06-b163-a9488daa2703
+:END:
 - ref
   - tutorial
     - [[https://youtu.be/QRBcm6jFJ3Q?t=416][2015-04-08 Emacs Lisp Development Tips with John Wiegley]]
@@ -803,7 +808,13 @@ one can use =ielm= REPL using below commands
 | +eval/open-repl-other-window |     | spc-o-r   |             |              |
 | +eval/open-repl-other-window |     | C-c o r   |             |              |
 ** Debugging Techniques
-*** check if elisp function is defined
+:PROPERTIES:
+:ID:       babc26d9-a9dd-42ea-953b-18c207005031
+:END:
+*** print debugging in elisp
+http://xahlee.info/emacs/emacs/elisp_printing.html
+
+*** check if elisi function is defined
 ref: http://ergoemacs.org/emacs/elisp_check_defined.html
 
 check function
@@ -979,6 +990,27 @@ for more quick introduction, read [[https://akrl.sdf.org/][here]].
 =gc-elapsed= variable accumulated time elapsed in garbage collections.
 ~(setq garbage-collection-message t)~ to see log gc process.
 =gc-cons-threshold= represents the "Number of bytes of consing between garbage collections."
+*** regression test
+*** use trace.el to  trace the execution of fucntion involved in the problem.
+the packages provide functions
+- ~trace-function-foreground~ and ~trace-function-background~ for tracing function calls
+- ~trace-values~ for adding values of select vairables to the trace.
+#+BEGIN_SRC emacs-lisp
+(defun hi ()
+  "hi")
+
+(trace-function-foreground 'hi)
+(hi)
+
+(defun fact (n)
+  (if (= n 0) 1
+    (* n (fact (1- n)))))
+
+(fact 5)
+(trace-function-foreground 'fact)
+#+END_SRC
+*** debug-watch
+
 ** Report Bugs
 =straight-visit-package-website= quickly open that package's homepage in your browser.
 * FAQs
@@ -1007,6 +1039,11 @@ Shell mode buffers the input and sends it to the process on newline. Terminal mo
 Shell mode works like a regular buffer with the usual emacs key bindings. Terminal mode doesn't intercept most control characters unless you explicitly put it into line mode.
 
 * Footnotes
-[fn:2] [[https://www.youtube.com/watch?v=tw2-rI2bxSg&ab_channel=SystemCrafters][Emacs Tips - How to Use File and Direectory Local Variables]]
 
-[fn:1] https://youtu.be/2TSKxxYEbII?t=1164
+[fn:2] http://git.savannah.gnu.org/cgit/emacs.git/tree/
+
+[fn:1] [[https://emacs.stackexchange.com/questions/53056/how-can-i-check-the-implementation-of-a-builtin-function][How can I check the implementation of a builtin function?]]
+
+[fn:4] https://www.gnu.org/software/emacs/manual/html_node/eintr/Loading-Files.html
+
+[fn:3] https://github.com/emacs-mirror/emacs

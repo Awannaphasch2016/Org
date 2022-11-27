@@ -1,0 +1,15 @@
+#+title: 31 Position
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: position
+
+
+* Blog :blog:
+:PROPERTIES:
+:ID:       afd2464b-6fbf-495f-a74f-0f6665204b43
+:END:
+** TODO Moving Point In Emacs :point:
+#+BEGIN_SRC emacs-lisp
+(setq pos (save-excursion (goto-char pos)
+                          (forward-word (if forwardp 1 -1))
+                          (point)))
+#+END_SRC

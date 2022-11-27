@@ -1,0 +1,9 @@
+#+title: Better Jumper Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: better_jumper
+
+* Blog :blog:
+** TODO Pushing New State To Better Jumper's Struct :note:
+:PROPERTIES:
+:ID:       e95a561b-f465-4155-a9f6-6ab06fcb839a
+:END:

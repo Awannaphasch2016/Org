@@ -1,0 +1,18 @@
+#+title: Glossary Note
+
+* locus
+:PROPERTIES:
+:ID:       80161667-2056-4440-8f10-71ae16cb33b8
+:END:
+The locus is the specific position in a file where that error occurred
+* Emac's Syntax
+** hashtag
+:PROPERTIES:
+:ID:       47e67e45-c253-438d-ae41-397986a94b28
+:END:
+Quote from https://stackoverflow.com/questions/16801396/when-should-emacs-function-syntax-be-used below
+#+BEGIN_QUOTE
+function (aka #') is used to quote functions, whereas quote (aka ') is used to quote data. Now, in Emacs-Lisp a symbol whose function cell is a function is itself a function, so #'symbol is just the same as 'symbol in practice (tho the intention is different, the first making it clear that one is not just talking about the symbol "symbol" but about the function named "symbol").
+
+The place where the difference is not just stylistic is when quoting lambdas: '(lambda ...) is an expression which evaluates to a list whose first element is the symbol lambda. You're allowed to apply things like car and cdr to it, but you should not call it as if it were a function (although in practice it tends to work just fine). On the contrary #'(lambda ...) (which can be written just (lambda ...)) is an expression which evaluates to a function. That means you can't apply car to it, but the byte-compiler can look inside #'(lambda ...), perform macro-expansion in it, warn you if what it finds doesn't look kosher, etc...; For lexical-binding it even has to look inside in order to find the free variables to which that function refers.
+#+END_QUOTE

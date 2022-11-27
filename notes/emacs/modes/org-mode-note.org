@@ -4,6 +4,9 @@
 * References
 ** Org mode FAQ, see [[https://orgmode.org/worg/org-faq.html#orgbaac432][here]].
 * Start here
+:PROPERTIES:
+:ID:       b1902643-31a5-4c8c-af1d-60637377825a
+:END:
 ** [[file:~/org/notes/emacs/packages/org-babel.org::*\[\[http://www.howardism.org/Technical/Emacs/literate-programming-tutorial.html\]\[Introduction to literate programming with org-mode and org-babel by howard\]\]][Introduction to literate programming with org-mode and org-babel by howard]]
 It basically explains all the usecase of org-babel blocks. very useful.
 * Blog :blog:
@@ -175,6 +178,7 @@ Peace.
 :END:
 
 * Key binding
+
 ** Nagivation key binding
 | commands              | key | doom key  | custom key | description                                                   |
 | org-shiftdown         |     |           |            | depends on context. similar to how c-c c-c depends on context |
@@ -194,9 +198,9 @@ Peace.
 | expert org to html and open | c-c c-e h o |           |            | open file in browser   |
 | org-toggle-link-display     |             | spc-m-l-t |            |                        |
 | org-id-get-create           |             | spc-m-I   |            |                        |
-** Tag Searches
-| commands              | key   | doom keys | custom keys | descriptions |
-| org-match-sparse-tree | C-c / |           |             |              |
+** Tag
+| commands              | key   | doom keys   | custom keys | descriptions           |
+| org-match-sparse-tree | C-c / |             |             |                        |
 * Features
 ** Timers
 *** Key binding

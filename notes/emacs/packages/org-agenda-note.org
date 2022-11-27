@@ -65,6 +65,9 @@ For backward compatibility, and also for typing speed, there is also a different
 ** in agenda mode, \ (will convert next command to emacs commands rather than evil) then mark tasks with =m= and applied bulk archived command with =B $=.
 
 * Key binding
+:PROPERTIES:
+:ID:       f2ff8e61-f797-4b99-86d4-56fdec851e27
+:END:
 | commands           | key | doom keys | custom keys | descriptions                        |
 | org-agenda         |     | spc-o-a-a |             |                                     |
 | org-tags-view      |     | spc-o-a-m |             |                                     |

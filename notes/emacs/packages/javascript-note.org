@@ -1,5 +1,0 @@
-#+TITLE: Javascript Note
-
-synxtax highlighting (tree-sitter)
-debug (lsp)
-js2

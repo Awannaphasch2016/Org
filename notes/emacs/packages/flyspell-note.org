@@ -1,4 +1,62 @@
 #+TITLE: Flyspell Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: flyspell
+
+
+* Blog :blog:
+:PROPERTIES:
+:ID:       8a6b89c6-2b69-48d4-93f5-cf366aa6e2e6
+:END:
+** TODO A Note On X Where X = Flyspell Package In Emacs :note:emacs:
+:PROPERTIES:
+:ID:       05ed3d6a-86ae-406d-a878-26617258e17c
+:END:
+Flyspell puts =overlay= on the word that it think is spelling error, called it ~flyspell-overlay~.
+
+Data structure of overlay data is ~(#<overlay from 352 to 379 in scratch.org> #<overlay from 358 to 362 in scratch.org>)~
+
+Moving current point to flyspell error overlay is described in ref:goto-flyspell-error. Note that I use implementation in ~evil-command.el~ because ~flyspell-goto-next-error~ is in ~.elc~ which contains binary of compiled ~.el~. The code does the following -- not precise, but its provide abstract mental structure to follow.
+1. check if flyspell-overlay exist on a page
+2. save point. adjust point position.
+3. check if point is inside flyspell-overlay. then move point accordingly.
+
+#+name: goto-flyspell-error
+#+BEGIN_SRC emacs-lisp
+(defun evil--next-flyspell-error (forwardp)
+  (when (evil--flyspell-overlays-in-p (point-min) (point-max))
+    (let ((pos (point))
+          limit
+          ov)
+      (when (evil--flyspell-overlay-at pos forwardp)
+        (if (/= pos (point-min))
+            (setq pos (save-excursion (goto-char pos)
+                                      (forward-word (if forwardp 1 -1))
+                                      (point)))
+          (setq pos (point-max))))
+      (setq limit (if forwardp (point-max) (point-min))
+            ov (evil--flyspell-overlay-after pos limit forwardp))
+      (if ov
+          (goto-char (overlay-start ov))
+        (when evil-search-wrap
+          (setq limit pos
+                pos (if forwardp (point-min) (point-max))
+                ov (evil--flyspell-overlay-after pos limit forwardp))
+          (when ov
+            (goto-char (overlay-start ov))))))))
+#+END_SRC
+
+
+Note that Doom Emacs has module for spell checking -- located at =~/.emacs.d/modules/checkers/spell/autoload/+flyspell.el= -- which will use evil implementation if evil-mode is turned on.
+#+BEGIN_SRC emacs-lisp :noeval
+(defun +spell/next-error ()
+  "Jump to next flyspell error."
+  (interactive)
+  (call-interactively
+   (if (featurep 'evil)
+       #'evil-next-flyspell-error
+     #'flyspell-goto-next-error)))
+#+END_SRC
+
 
 * command line
 :PROPERTIES:

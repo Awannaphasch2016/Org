@@ -1,0 +1,24 @@
+#+title: Simple Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: simple_el emacs
+
+* Blog :blog:
+** TODO X Implementation where X = "error-next function in simple.el" :devtools:
+:PROPERTIES:
+:ID:       3290d734-8c48-4c3f-ad0b-24b6f2eff9c8
+:END:
+
+error-next works as followed
+1. check for acceptable buffer.
+2. use suitable function to jump to next error position.
+   This is based on loading order of mode.
+   Value ~next-error-function~ of last loaded mode that set ~next-error-function~ will be used.
+
+   #+BEGIN_SRC emacs-lisp :noeval
+   (funcall next-error-function (prefix-numeric-value arg) reset)
+   #+END_SRC
+3. output relevant message.
+
+*** Footnotes
+
+[fn:1] https://doc.endlessparentheses.com/Fun/next-error

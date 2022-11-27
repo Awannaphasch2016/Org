@@ -116,3 +116,5 @@ Mentioned in Learning Functional Programming in Scala.
 :END:
 ** learning to learn
 *** [[https://wtf.tw/ref/meadows.pdf][Thinking in system]]
+** Philosophy
+*** [[https://www.google.com/search?q=dark+agge+ahead&rlz=1C1CHBF_enUS941US941&oq=dark+agge+ahead&aqs=chrome..69i57j46i13i512j0i13i512j0i22i30j0i5i13i30j0i390l3.3377j0j7&sourceid=chrome&ie=UTF-8][Dark Age Ahead]]

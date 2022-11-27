@@ -1,0 +1,6 @@
+#+title: 27 Compilation And Testing Program
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: compilation_mode emacs
+
+* Blog :blog:
+**

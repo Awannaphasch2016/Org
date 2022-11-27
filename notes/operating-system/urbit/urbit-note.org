@@ -1,0 +1,27 @@
+#+title: Urbit Note
+
+* Blog :blog:
+** TODO Getting started on Urbit: What you need to know
+I received =booting comet failed= error when I tried to boot up comet with Port app using =start without an ID= options.
+#+BEGIN_SRC
+16:25:27 tried to create, but C:\Users\terng\AppData\Roaming\Port\piers\tmp already exists
+normal usage: C:\Users\terng\AppData\Local\port\app-1.9.1\resources\resources\win\urbit C:\Users\terng\AppData\Roaming\Port\piers\tmp
+#+END_SRC
+I received similar error when I tried to boot up planet with Port app using =Boot a fresh ID= option.
+
+** TODO Operating System For The Internet
+*** Footnotes
+:PROPERTIES:
+:ID:       321848af-3f62-4173-bbdf-da8cd7da2d7c
+:END:
+[fn:1] At https://youtu.be/EZrHzyqIYIQ?t=3531, Alan Kay mentioned Dave Reed's PhD dissertation titled "Design of Operating system for the internet" in 1978. I can't find paper with the same title of the same year, but I can find Dissertation of Dave Reed from MIT in 1978 with different title. I am not sure if it is the same thing.
+
+[fn:2] "The LOCUS Distributed System Architecture"
+[fn:3] "The Society Of Mind" by Minsky
+** Layer 2 Urbit
+:PROPERTIES:
+:ID:       fae9e711-f657-423f-a914-923d80004d6a
+:END:
+ "Hoon smart contract" located at /lib/naive.hoon in your ship's pier, as well as other proximal topics.
+
+ Bridge's functionality is to transfer their ship to layer 2 or perform layer 2 action.

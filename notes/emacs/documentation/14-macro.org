@@ -1,0 +1,27 @@
+#+title: 14 Macro
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: macro elisp emacs
+
+
+
+* Blog :blog:
+** TODO A Notee of X where X = "elisp macro" :note:
+:PROPERTIES:
+:ID:       e414a8b7-47a8-43b0-8dda-b20fbb646d12
+:END:
+
+Example of implementation of simple macro is provided ref:9666915.
+
+#+name: 9666915
+#+BEGIN_SRC emacs-lisp :noeval
+(defmacro t-becomes-nil (variable)
+  `(if (eq ,variable t)
+       (setq ,variable nil)
+     ,variable))
+(defvar foo 'hi)
+(t-becomes-nil foo)
+#+END_SRC
+
+~declare~ is used with either ~defun~ or ~defmacro~. It has form of ~(declare spec)~. SPEC specifies additional information about the function or macro on how its arguments and body should be evaluated. To put it simple, ~declare~ provides structure to ~defun~ or ~defmacro~ when it is evaluated.
+
+To debug macro, you need to use =declare form= which is written as ~(debug edebug-form-spec)~.

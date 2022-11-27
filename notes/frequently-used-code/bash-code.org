@@ -1,0 +1,19 @@
+#+title: Bash Code
+
+
+
+* Coduntd all the lines of code in a directory recursively?
+:PROPERTIES:
+:ID:       972cda48-5376-493b-a223-93fd99065d69
+:END:
+#+BEGIN_SRC sh :noeval
+find . -name '*' | xargs wc -l
+#+END_SRC
+
+example output
+#+BEGIN_SRC md
+      0 .
+      9 ./hi.org
+      8 ./bash-code.org
+     17 total
+#+END_SRC

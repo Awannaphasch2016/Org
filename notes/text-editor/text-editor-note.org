@@ -1,0 +1,18 @@
+#+title: Text Editor Note
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: text_editor
+
+
+* Blog :blog:
+** TODO Principles of Code Navigation
+:PROPERTIES:
+:ID:       401b2d19-030c-4afd-90a1-224f26556233
+:END:
+
+code navigation is separated into different class
+- structural nagivation
+- text nagivation
+- mode-dependent navigation
+
+
+1. something

@@ -1,0 +1,8 @@
+#+title: 19 Edebug
+#+hugo_base_dir: /home/awannaphasch2016/org/projects/sideprojects/website/my-website/hugo/quickstart
+#+filetags: emacs
+
+* Blog :blog:
+:PROPERTIES:
+:ID:       55375de1-4c2b-4a34-9741-8b638570eb62
+:END:

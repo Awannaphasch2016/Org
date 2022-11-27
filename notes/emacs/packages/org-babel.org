@@ -163,6 +163,9 @@ Peace.
 :ID:       6371c96d-34ad-4e70-9f2f-9bb133b89fdc
 :END:
 *** [[http://www.howardism.org/Technical/Emacs/literate-programming-tutorial.html][Introduction to literate programming with org-mode and org-babel by howard]]
+:PROPERTIES:
+:ID:       cbc7899f-90d5-451e-a479-d69a8e3aa4d2
+:END:
 
 * Keybinding and command
 | commands                            | key       | doom keys | custom keys | descriptions                                                               |
@@ -171,6 +174,7 @@ Peace.
 | org-babel-remove-result-one-or-many | c-c c-v k |           |             | remove all results blocks                                                  |
 | org-babel-logb-ingest               | C-c C-v i |           |             | Add all named source blocks defined in FILE to org-babel-library-of-babel. |
 | org-babel-demarcate-block           |           |           |             | org babel split block into two                                             |
+| org-babel-insert-header-arg         | c-c c-v j |           |             |                                                                            |
 * using results from one code block in another org-mode
 ref: https://kitchingroup.cheme.cmu.edu/blog/2019/02/12/Using-results-from-one-code-block-in-another-org-mode/
 

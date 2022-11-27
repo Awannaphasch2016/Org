@@ -1,0 +1,249 @@
+#+title: Prompt Collections
+
+Note:
+- a variable is represented as =<INPUT>=
+
+* Sentiment Analysis
+** Output Binary
+#+BEGIN_SRC
+Is the following sentence good or bad: "<TEXT>"
+pick answer between good or bad:
+#+END_SRC
+*** example
+#+BEGIN_SRC
+Is the following sentence good or bad: "I love you."
+pick answer between good or bad:
+
+good
+#+END_SRC
+** Output Number within range
+
+#+BEGIN_SRC
+From scale of 0 to 10 where score of 0 is the worse and score of 10 is the best.
+what is the score of: "<TEXT>"
+pick answer between the specified scale above:
+#+END_SRC
+*** example
+#+BEGIN_SRC
+From scale of 0 to 10 where score of 0 is the worse and score of 10 is the best.
+what is the score of: "I hate you"
+pick answer between the specified scale above:
+#+END_SRC
+* Classification
+#+BEGIN_SRC
+There is 2 paragraph with syntax [Index1]: [Content]:
+1: [TEXT]
+2: [TEXT]
+
+There are 3 categories:
+1. [TEXT]
+2. [TEXT]
+3. [TEXT]
+
+Give one category as an answer.
+What is [Content] where [Index1] = 2 classified as:
+#+END_SRC
+** Example
+#+BEGIN_SRC
+There is 3 paragraph with syntax [Index1]: [Content]:
+1: "lion is a cat"
+2: "cable tv is 2020 technology."
+3: "economy in 2008 is bad"
+4. "Dickmao is a brother of Anak"
+
+There are 4 categories:
+1. economic
+2. Cat
+3. cable industry
+4. I don't know
+
+Give one category as an answer.
+What is [Content] where [Index1] = 4 classified as:
+
+I don't know.
+#+END_SRC
+
+* Self referential
+#+BEGIN_SRC
+Your name is [TEXT] You are [TEXT].
+What is your name and who are you:
+#+END_SRC
+** Example
+#+BEGIN_SRC
+Your name is GPT-3. You are language model AI.
+What is your name and who are you:
+
+My name is GPT-3 and I am a language model AI.
+#+END_SRC
+* Pointer
+#+BEGIN_SRC
+There are 3 paragraphs with syntax [Index]: [TEXT]
+
+1: [TEXT]
+2: [TEXT]
+3: [TEXT]
+
+Give [TEXT] of Index 1:
+#+END_SRC
+** Example
+#+BEGIN_SRC
+There are 3 paragraphs with syntax [Index]: [Content]
+
+1: I am a lover not a fighter.
+2: How can you be a figher and not a lover?
+3: You can eat corn dog. It's not made of real dogs.
+
+Give [Content] of Index 1:
+
+"I am a lover not a fighter."
+#+END_SRC
+* Multiple Option
+** No Additional Context
+#+BEGIN_SRC
+There are 3 options with syntax [TEXT]: [TEXT]
+1. [TEXT]: [TEXT]
+2. [TEXT]: [TEXT]
+3. [TEXT]: [TEXT]
+Provide answer as [TEXT] only.
+Give the name of the above options you think [TEXT]:
+#+END_SRC
+
+*** Example
+#+BEGIN_SRC
+There are 3 options with syntax [Name]: [Career]
+1. Adam: lawyer
+2. Scott: chef
+3. John: truck drive.
+Provide answer as [Name] only.
+Give the name of the above options you think make the most money:
+
+Adam
+#+END_SRC
+* Type Conversion
+** Text to Number
+#+BEGIN_SRC
+There are 3 data point with syntax [Index]: [Content]
+1: word
+2: exponential
+3: Kim Kay
+Give [Content] of index 3:
+
+Kim Kay
+#+END_SRC
+
+Given that the answer is "Kim Kay"
+#+BEGIN_SRC
+How many character does "Kim Kay" has?
+Give number as answer:
+
+7
+#+END_SRC
+* Summarization
+#+BEGIN_SRC
+There is 1 paragraph with syntax [Index]: [Content]:
+
+1: "In 1997, everyone thought the cable industry was dead.
+
+The cable companies had invested extraordinary sums building high-speed electrical piping into homes around the country. The cable industry had been promising "interactive TV" for years, but it wasn't really coming. Cable had already been installed in more than 90% of homes, but the additional infrastructure required for interactive TV turned out more difficult and expensive than expected. Cable stocks were at an all-time low, and an unpredictable regulatory context made matters even worse."
+
+What is summary of [Content] where [Index] =  1:
+
+The cable industry was in trouble in 1997 due to high costs and regulatory uncertainty.
+#+END_SRC
+* Give Title
+#+BEGIN_SRC
+There is 1 paragraph with syntax [Index]: [Content]:
+
+1: "In 1997, everyone thought the cable industry was dead.
+
+The cable companies had invested extraordinary sums building high-speed electrical piping into homes around the country. The cable industry had been promising "interactive TV" for years, but it wasn't really coming. Cable had already been installed in more than 90% of homes, but the additional infrastructure required for interactive TV turned out more difficult and expensive than expected. Cable stocks were at an all-time low, and an unpredictable regulatory context made matters even worse."
+
+What is a good title of [Content] where [Index] =  1:
+
+"The Cable Industry's Revival"
+#+END_SRC
+* Give Historical Content
+:PROPERTIES:
+:ID:       95f43ef4-60c0-4f6e-8f0e-1380aa848711
+:END:
+#+BEGIN_SRC
+There is 1 paragraph with syntax [Index]: [Content]:
+
+1: "The Cable Industry's Revival"
+
+Expands historical content of an article that has a title of [Content] where [Index] = 1:
+
+1: "The Cable Industry's Revival"
+
+The cable industry has seen a resurgence in recent years, thanks in part to the rise of streaming services like Netflix and Hulu.
+
+Historically, the cable industry has been in decline. cord-cutting has been a major issue for cable companies, as consumers have increasingly opted for cheaper, streaming alternatives.
+
+However, the industry has made a comeback in recent years. The rise of streaming services like Netflix and Hulu has actually been a boon for cable companies, as many consumers now subscribe to both cable and streaming services.
+
+Cable companies have also been investing in new technology and features, such as cloud DVR and 4K content, to make their services more appealing to consumers.
+
+As a result, the cable industry is once again thriving.
+#+END_SRC
+* Creating Characters
+#+BEGIN_SRC
+There are 3 characters with syntax [Name]: [Characteristic]
+1. Anak: a fat kid who love to eat
+2. Bill: well manner young man who inherits wealth from family
+3. John: a chef who is passionate and love spending time with his family.
+
+Give a [Name] as an answer:
+Which character made the best food:
+#+END_SRC
+* Other
+** Branching Condition
+*** If statement
+#+BEGIN_SRC
+Provide answer as yes or no.
+Should I buy bitcoin today:
+No
+#+END_SRC
+
+Given the answer is no the previous prompt next prompt is the following
+#+BEGIN_SRC
+Explain your reason of why I shouldn't buy bitcoin today:
+
+The value of bitcoin is incredibly volatile, and buying bitcoin today could mean that its value plummets tomorrow.
+#+END_SRC
+** Loop
+*** Example
+**** 1
+#+BEGIN_SRC
+There are 3 data point with syntax [Index]: [Content]
+1: word
+2: exponential
+3: Kim Kay
+Give [Content] of index 3 as an answer:
+
+Kim Kay
+
+If answer is "Kim Kay", Give [Content] of index 2 as an answer otherwise give "Done" as an answer:
+
+Exponential
+
+If answer is "exponential", Give [Content] of index 1 as an answer otherwise give "Done" as an answer:
+
+Word
+
+If answer is "word," give "Done" as an answer:
+
+Done#+END_SRC
+**** 2
+#+BEGIN_SRC
+There are 3 data point with syntax [Index]: [Content]
+1: word
+2: exponential
+3: Kim Kay
+Give [Content] of index 3 as an answer:
+
+Kim Kay
+
+If answer is "Kim Kayy", Give [Content] of index 2 as an answer otherwise give "Done" as an answer:
+
+Done
+#+END_SRC
